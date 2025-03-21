@@ -17,7 +17,7 @@
 	* HTML
 	* CSS
 	* Creazione di un server: node.js, express.js
-		* [[../BDD/Basi di Dati|Database]]: PostGres, PGAdmin
+		* [[BDD/Basi di Dati|Database]]: PostGres, PGAdmin
 	* Programmazione client side: JS, Vue
 * L'IDE utilizzato è Visual Studio Code, con l'estensione Live Preview
 #### Struttura delle lezioni

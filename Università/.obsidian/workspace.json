@@ -8,49 +8,119 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e58e6cb9627514a5",
+            "id": "68db9bb0d421ef83",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FPW/Fondamenti di Programmazione Web.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Fondamenti di Programmazione Web"
-            }
-          },
-          {
-            "id": "c5471b61b4750c33",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FPW/Laboratorio/HTML e CSS.md",
+                "file": "SO/Modulo II/Bash/Terminale di Linux - cheatsheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTML e CSS"
+              "title": "Terminale di Linux - cheatsheet"
             }
           },
           {
-            "id": "f5d06056479c010b",
+            "id": "efc86d407630dfdc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FPW/Fondamenti di Programmazione Web.md",
-                "mode": "preview",
+                "file": "SO/Modulo II/Linux/File.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fondamenti di Programmazione Web"
+              "title": "File"
             }
           },
           {
-            "id": "68db9bb0d421ef83",
+            "id": "9e493541fa6e1646",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SO/Modulo II/Linux/Introduzione al terminale.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Introduzione al terminale"
+            }
+          },
+          {
+            "id": "024a09b6dd5955ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Comune/Regex.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Regex"
+            }
+          },
+          {
+            "id": "6ab66cd78bcb96af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ALF/Automi e Linguaggi Formali.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Automi e Linguaggi Formali"
+            }
+          },
+          {
+            "id": "b09949dd7b03806e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sistemi Operativi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sistemi Operativi"
+            }
+          },
+          {
+            "id": "184f7015cd243ef5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SO/Modulo II/C/Tutto C SO.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tutto C SO"
+            }
+          },
+          {
+            "id": "a206c328515b8d66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SO/Modulo II/Altro/Socket.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Socket"
+            }
+          },
+          {
+            "id": "4486e80be22aa3ba",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -60,21 +130,21 @@
             }
           },
           {
-            "id": "7e0dc4c85d69a710",
+            "id": "866cc30693c351b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FPW/Laboratorio/HTML e CSS.md",
+                "file": "SO/Modulo II/Linux/Linux - Cenni storici.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTML e CSS"
+              "title": "Linux - Cenni storici"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -221,22 +291,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "68db9bb0d421ef83",
+  "active": "4486e80be22aa3ba",
   "lastOpenFiles": [
+    "PR1/Modulo I/Programmazione - Cenni storici.md",
+    "Sistemi Operativi.md",
+    "SO/Modulo II/Linux/Linux - Cenni storici.md",
+    "SO/Modulo II/C/Tutto C SO.md",
+    "SO/Modulo II/Linux/Processi, thread e job.md",
+    "SO/Modulo II/Sistemi Operativi - Modulo II.md",
+    "SO/Modulo II/C/Socket in C.md",
+    "SO/Modulo II/Altro/Socket.md",
+    "SO/Modulo II/Altro",
+    "SO/Modulo II/C",
+    "SO/Modulo II/Bash",
+    "SO/Modulo II/Linux/Introduzione al terminale.md",
+    "SO/Modulo II/Linux/Virtual machine.md",
+    "ALF/Automi e Linguaggi Formali.md",
+    "SO/Modulo II/Linux/File.md",
+    "Comune/Regex.md",
+    "ALF",
+    "Comune/Algoritmo di Euclide.md",
+    "SO/Modulo II/Bash/Terminale di Linux - cheatsheet.md",
+    "SO/Modulo II/Linux",
+    "FPW/Laboratorio/Introduzione a Vue.md",
+    "FDI/Fondamenti di Informatica.md",
+    "ASD",
+    "BDD/Basi di Dati.md",
+    "FPW/Fondamenti di Programmazione Web.md",
+    "BDD",
+    "PR1/Programmazione 1.md",
     "FPW/Laboratorio/File.zip",
     "FPW/Laboratorio/File/File.zip",
     "FPW/Laboratorio/File/HTML e CSS.zip",
     "FPW/Teoria/HTTP.md",
-    "FPW/Fondamenti di Programmazione Web.md",
-    "FPW/Laboratorio/Introduzione a Vue.md",
-    "FPW/Teoria",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/api/app.d.ts",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/api/util.js",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/api/util.d.ts",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/api/index.js",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/api/index.d.ts",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/api/hooks.js",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/api/hooks.d.ts",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/devtools-core/node_modules/nanoid/README.md",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-inspect/dist/client/favicon.svg",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/npm-run-path/node_modules/path-key/readme.md",
@@ -245,23 +332,6 @@
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@jridgewell/trace-mapping/README.md",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@babel/helper-string-parser/README.md",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/shared/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/runtime-core/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/reactivity/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/server-renderer/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/runtime-dom/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/devtools-kit/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/devtools-shared/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@babel/plugin-syntax-decorators/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/devtools-core/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/compiler-ssr/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/devtools-api/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/compiler-sfc/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/compiler-core/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/compiler-dom/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/babel-plugin-resolve-type/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/babel-helper-vue-transform-on/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vue/babel-plugin-jsx/README.md",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/@vitejs/plugin-vue/README.md",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",
     "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png",
     "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",

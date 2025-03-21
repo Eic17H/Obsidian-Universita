@@ -8,7 +8,7 @@ Così è già una classe completa ma vuota.
 Esiste anche `public class`, per ora lasciamo perdere.
 Per salvare, Ctrl+S.
 Controlliamo di aver salvato con `cat Monitor.java`.
-(Si suppone si sia seguito [[../../SO/Modulo II/Terminale di Linux|SO]] prima di PR2).
+(Si suppone si sia seguito [[Terminale di Linux - cheatsheet|SO]] prima di PR2).
 
 Proviamo a fare `javac Monitor.java`, ci crea `Monitor.class`, lì c'è il bytecode.
 * Non c'è molto dentro, modella una `classe Monitor` in cui non c'è nessun attributo e nessun metodo.

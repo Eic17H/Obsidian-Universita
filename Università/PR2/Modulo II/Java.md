@@ -1,6 +1,6 @@
 ## Installazione
 
-Useremo [[Terminale di Linux|Ubuntu]], Java e GEdit.
+Useremo [[Terminale di Linux - cheatsheet|Ubuntu]], Java e GEdit.
 * Ci serve JVM (Java Virtual Machine), e quindi dobbiamo scaricare il pacchetto da JRE (Java Runtime Edition). Con questo si esegue Java già compilato.
 * Per sviluppare ci serve anche il compilatore, il JDK (Java Development Kit).
 
