@@ -116,4 +116,4 @@ $72,6 = 01001000,1001 = 72,5625$.
 Con questo sistema, la precisione è di, per esempio, $0,25$, usando due bit dopo la virgola.
 E questa precisione è costante per tutti i numeri.
 Però, $0,25$ è troppo impreciso per i numeri piccoli, e troppo preciso per quelli grandi.
-La soluzione è la rappresentazione in [[virgola mobile]].
+La soluzione è la rappresentazione in [[Virgola mobile]].

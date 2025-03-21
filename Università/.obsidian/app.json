@@ -1,1 +1,5 @@
-{}
+{
+  "alwaysUpdateLinks": true,
+  "readableLineLength": true,
+  "showLineNumber": false
+}
