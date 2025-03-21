@@ -1,1 +1,5 @@
-{}
+{
+  "enabledCssSnippets": [
+    "notation-colour-blocks"
+  ]
+}
