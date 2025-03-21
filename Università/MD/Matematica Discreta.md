@@ -3,5 +3,7 @@
 * [[Funzione φ]]
 * [[Criteri di divisibilità]]
 * [[RSA]]
-* [[Cambio di base]]
+* [[Cambio di base#Mossa|Cambio di base]]
 * [[Matrici]]
+
+#materia
