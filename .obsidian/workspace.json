@@ -135,12 +135,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ALF/Automi e Linguaggi Formali.md",
+                "file": "RDC/File/Non so in che categoria vada.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Automi e Linguaggi Formali"
+              "title": "Non so in che categoria vada"
             }
           },
           {
@@ -316,9 +316,13 @@
   },
   "active": "a5128feef6fc627b",
   "lastOpenFiles": [
+    "FPW/FPW Teoria.md",
+    "FPW/Fondamenti di Programmazione Web.md",
     "Indice.md",
-    "SO/Modulo II/C/Tutto C SO.md",
+    "Basi di Dati.md",
+    "README.md",
     "ALF/Automi e Linguaggi Formali.md",
+    "SO/Modulo II/C/Tutto C SO.md",
     "ALF/File/OCaml.md",
     "ALF/File/Logica dei predicati.md",
     "ALF/File/Logica proposizionale classica.md",
@@ -342,10 +346,6 @@
     "FDI/File/!Fondamenti di Informatica.md",
     "RDC/File",
     "RDC",
-    "PR2/Modulo II/Classi.md",
-    "SO/SO Lab.md",
-    "SO/Modulo II/Altro/Socket.md",
-    "PR2/PR2 Lab.md",
     "PR2/Modulo I",
     "ALF",
     "RDC",

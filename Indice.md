@@ -28,3 +28,12 @@
 * [[Fondamenti di Programmazione Web]]
 * [[Reti di Calcolatori]]
 * [[Calcolo Scientifico e Metodi Numerici]]
+
+# Anno 3
+
+## Semestre 1
+* [[Basi di Dati]]
+* [[Interazione Uomo Macchina]]
+* [[Linguaggi di Programmazione]]
+## Semestre 2
+* [[Ingegneria del Software]]
