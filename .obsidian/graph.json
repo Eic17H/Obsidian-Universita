@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "file:Indice",
@@ -154,10 +154,10 @@
   "nodeSizeMultiplier": 1.17664359861592,
   "lineSizeMultiplier": 2.80432525951557,
   "collapse-forces": false,
-  "centerStrength": 0.852941176470588,
+  "centerStrength": 0.79757785467128,
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.8310297032297989,
+  "scale": 0.7560118214910909,
   "close": false
 }
