@@ -1,18 +1,5 @@
-# Modulo II
-## Indice
-#### Linux
-* [[Linux - Cenni storici]]
-* [[Virtual machine]]
-* [[Introduzione al terminale]]
-* [[File]]
-* [[Regex]]
-* [[Processi, thread e job]]
-#### Bash
-* [[Terminale di Linux - cheatsheet]]
-#### C
-* [[Tutto C SO]]
-* [[Socket in C]]
-#### Altro
-* [[Socket]]
+## [[SO/Sistemi Operativi - Modulo I|Modulo I]]
+## [[SO/Sistemi Operativi - Modulo II|Modulo II]]
+
 
 #materia

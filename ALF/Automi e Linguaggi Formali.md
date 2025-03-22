@@ -1,4 +1,0 @@
-## Indice
-* [[Regex]]
-
-#materia

@@ -1,12 +1,19 @@
 {
   "collapse-filter": false,
-  "search": "",
+  "search": "-file:Indice",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": false,
   "collapse-color-groups": false,
   "colorGroups": [
+    {
+      "query": "file:Indice",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    },
     {
       "query": "tag:#materia",
       "color": {
@@ -76,18 +83,81 @@
         "a": 1,
         "rgb": 14701233
       }
+    },
+    {
+      "query": "path:ALF",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "path:AM ",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:ASD ",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
+    },
+    {
+      "query": "path:ARE  ",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
+    },
+    {
+      "query": "path:FeMS  ",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
+      "query": "path:EED  ",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
+      "query": "path:DEM  ",
+      "color": {
+        "a": 1,
+        "rgb": 5395121
+      }
+    },
+    {
+      "query": "path:CSMN  ",
+      "color": {
+        "a": 1,
+        "rgb": 10421252
+      }
+    },
+    {
+      "query": "path:RDC  ",
+      "color": {
+        "a": 1,
+        "rgb": 15833374
+      }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": true,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1.01875,
-  "lineSizeMultiplier": 1.9375,
+  "textFadeMultiplier": -0.9,
+  "nodeSizeMultiplier": 1.17664359861592,
+  "lineSizeMultiplier": 2.80432525951557,
   "collapse-forces": false,
-  "centerStrength": 1,
+  "centerStrength": 0.852941176470588,
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.8673071129326403,
-  "close": true
+  "scale": 0.8310297032297989,
+  "close": false
 }
