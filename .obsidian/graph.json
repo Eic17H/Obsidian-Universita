@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "file:Indice",
@@ -95,7 +95,7 @@
       "query": "path:ALF",
       "color": {
         "a": 1,
-        "rgb": 11657298
+        "rgb": 11331382
       }
     },
     {
@@ -165,6 +165,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.5302110014994014,
-  "close": false
+  "scale": 0.6341943581813472,
+  "close": true
 }
