@@ -1,14 +1,7 @@
-# Teoria
+# [[FPW Teoria|Teoria]]
 
-## Indice
+# [[FPW Lab|Laboratorio]]
 
-* [[HTTP]]
-
-# Laboratorio
-## Indice
-
-* [[HTML e CSS]]
-* [[Introduzione a Vue]]
 ## Informazioni
 
 #### Obiettivi:

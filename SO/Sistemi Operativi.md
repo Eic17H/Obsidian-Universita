@@ -1,5 +1,5 @@
-## [[SO/Sistemi Operativi - Modulo I|Modulo I]]
-## [[SO/Sistemi Operativi - Modulo II|Modulo II]]
+## [[SO Teoria|Modulo I]]
+## [[SO Lab|Modulo II]]
 
 
 #materia

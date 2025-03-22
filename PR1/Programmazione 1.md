@@ -3,6 +3,6 @@
 * [[Termini]]
 * [[Programmazione - Cenni storici]]
 * [[Algoritmi]]
-* [[Linguaggio]]
+* [[PR1/Modulo I/Linguaggio|Linguaggio]]
 
 #materia

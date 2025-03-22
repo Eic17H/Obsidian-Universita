@@ -1,3 +1,5 @@
+## Comandi
+
 * `man` - Apri il manuale di un comando.
 * `help` - Visualizza tutti i comandi disponibili.
 * `whatis` - Sapere in breve cosa fa un comando.
@@ -26,7 +28,8 @@
 * `mount` - Monta un dispositivo come directory.
 * `alias` - Crea essenzialmente delle macro per il terminale.
 * `unalias` - Annulla un `alias`.
-* #directory
+## Directory
+
 * `/bin` - Per i programmi fondamentali del sistema, usabili da tutti gli utenti ordinari.
 * `/boot` - Con i file essenziali per l’avvio del sistema, come l’immagine del kernel.
 * `/cdrom` - Per accedere ai CD, ma il device (file in /dev) deve essere prima “montato”.
@@ -41,7 +44,8 @@
 * `/tmp` - Luogo dei file temporanei e può, di norma, essere scritta da tutti gli utenti.
 * `/usr` - Per la documentazione, gli eseguibili, librerie e molto altro.
 * `/var` - Per file variabili, come file di spool (stampa, email, ecc.), i PID dei processi, etc.
-* #variabili
+## Variabili
+
 * `GROUPS` - Un array contenente i numeri GID di cui l'utente è membro.
 * `HOSTTYPE` -  Il nome del tipo di computer.
 * `OSTYPE` -  Il nome del sistema operativo.
@@ -55,7 +59,8 @@
 * `CDPATH` -  Il percorso di ricerca per il comando `cd`.
 * `PS1` -  Il prompt primario.
 * `PS2` -  Il prompt secondario.
-* #scorciatoie
+## Scorciatoie
+
 * `~` - La tua home.
 * `/` - La root.
 * `.` - La cartella corrente.
