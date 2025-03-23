@@ -30,31 +30,31 @@ Una domanda sarà su questo.
 Stessa cosa già vista con Puglisi.
 
 Per convertire in base 10, moltiplica ogni cifra per una potenza della base, poi somma.
-$\color{#7DC8EA}ABC,DEF_{11} = A×11^2 + B×11 + C + D×11^{-1} + E×11^{-2} + F×11^{-3}$.
+$ABC,DEF_{11} = A×11^2 + B×11 + C + D×11^{-1} + E×11^{-2} + F×11^{-3}$.
 
 Per convertire dalla base 10, ci vogliono più passaggi.
 * Separa la parte intera da quella decimale.
 * Dividi la parte intera per la nuova base, ripetutamente.
 * Il resto ottenuto ogni volta è una cifra, si parte dalle unità.
 * Il quoziente intero è il nuovo numero che sarà diviso.
-* Continua finché non arrivi a $\color{#7DC8EA}0$.
-* La parte decimale, che sarà qualcosa del tipo “$\color{#7DC8EA}0,32776$”, va invece moltiplicata.
-* La nuova cifra delle unità, anche se è $\color{#7DC8EA}0$, è la prossima cifra nella sequenza.
-* Se non è $\color{#7DC8EA}0$, rendila $\color{#7DC8EA}0$ prima di continuare.
-* Continua finché non hai le cifre richieste o non arrivi a $\color{#7DC8EA}0$.
+* Continua finché non arrivi a $0$.
+* La parte decimale, che sarà qualcosa del tipo “$0,32776$”, va invece moltiplicata.
+* La nuova cifra delle unità, anche se è $0$, è la prossima cifra nella sequenza.
+* Se non è $0$, rendila $0$ prima di continuare.
+* Continua finché non hai le cifre richieste o non arrivi a $0$.
 
 Esempio:
 
-$\color{red}15$$,$$\color{pink}4375$ in base $\color{lightblue}2$:
+$\color{red}15$$\color{white},$$\color{pink}4375$ in base $\color{lightblue}2$:
 
-$\color{red}15$$/$$\color{lightblue}2$ = $\color{orange}7$$r$$\color{blue}1$
-$\color{orange}7$$/$$\color{lightblue}2$ = $\color{yellow}3$$r$$\color{blue}1$
-$\color{yellow}3$$/$$\color{lightblue}2$ = $\color{lightgreen}1$$r$$\color{blue}1$
-$\color{lightgreen}1$$/$$\color{lightblue}2$ = 0$r$$\color{blue}1$
+$\color{red}15$$\color{white}/$$\color{lightblue}2$ $\color{white}=$ $\color{orange}7$$\color{white}r$$\color{blue}1$
+$\color{orange}7$$\color{white}/$$\color{lightblue}2$ $\color{white}=$ $\color{yellow}3$$\color{white}r$$\color{blue}1$
+$\color{yellow}3$$\color{white}/$$\color{lightblue}2$ $\color{white}=$ $\color{lightgreen}1$$\color{white}r$$\color{blue}1$
+$\color{lightgreen}1$$\color{white}/$$\color{lightblue}2$ $\color{white}=$ 0$\color{white}r$$\color{blue}1$
 
-$0,$$\color{pink}4375$$×$$\color{lightblue}2$ = $\color{blue}0$$,$$\color{lightorange}8750$
-$0,$$\color{lightorange}8759$$×$$\color{lightblue}2$ = $\color{blue}1$$,$$\color{lightyellow}750$
-$0,$$\color{lightyellow}75$$×$$\color{lightblue}2$ = $\color{blue}1$$,$$\color{lightgreen}50$
-$0,$$\color{lightgreen}5$$×$$\color{lightblue}2$ = $\color{blue}1$$,$$0$
+$\color{white}0,$$\color{pink}4375$$\color{white}×$$\color{lightblue}2$ $\color{white}=$ $\color{blue}0$$\color{white},$$\color{lightorange}8750$
+$\color{white}0,$$\color{lightorange}8759$$\color{white}×$$\color{lightblue}2$ $\color{white}=$ $\color{blue}1$$\color{white},$$\color{lightyellow}750$
+$\color{white}0,$$\color{lightyellow}75$$\color{white}×$$\color{lightblue}2$ $\color{white}=$ $\color{blue}1$$\color{white},$$\color{lightgreen}50$
+$\color{white}0,$$\color{lightgreen}5$$\color{white}×$$\color{lightblue}2$ $\color{white}=$ $\color{blue}1$$\color{white},$$\color{white}0$
 
-$\color{blue}1111$$,$$\color{blue}0111$
+$\color{blue}1111$$\color{white},$$\color{blue}0111$

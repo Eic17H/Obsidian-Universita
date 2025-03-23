@@ -1,5 +1,7 @@
 {
   "enabledCssSnippets": [
-    "notation-colour-blocks"
-  ]
+    "notation-colour-blocks",
+    "stile"
+  ],
+  "theme": "system"
 }

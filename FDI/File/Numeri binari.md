@@ -24,7 +24,7 @@ Che graficamente equivale alle cifre originali ($b_n…$) seguito da k zeri ($0�
 Come in base 10, mi chiedo se il divisore è contenuto nel dividendo.
 In base 10, può essere contenuto sì, no o un po'.
 In base 2 è contenuto o no, non ci sono altre opzioni.
-$1001:11. 100:11=1R11, 11:11=1R0, 1001:11= 11$.
+$1001:11;\ 100:11=1R11;\ 11:11=1R0;\ 1001:11= 11$.
 
 ## Numeri negativi
 
@@ -58,10 +58,10 @@ Il complemento a $B$ di $N$ si indica con $CB(N)$.
 
 Usiamo il complemento a 10 per fare una sottrazione:
 $72-41=31$;
-$72+C10(41) = 72+59 = 131; 131-100 = 31$.
+$72+C_{10}(41) = 72+59 = 131; 131-100 = 31$.
 Funziona.
 Perché funziona?
-Il complemento di $x$ è $10k-x$. Perciò $y+C10(x)=y+10k-x=y-x+10k$.
+Il complemento di $x$ è $10k-x$. Perciò $y+C_{10}(x)=y+10k-x=y-x+10k$.
 Quindi basta togliere $10k$ per avere $y-x$.
 
 # Overflow
@@ -116,4 +116,4 @@ $72,6 = 01001000,1001 = 72,5625$.
 Con questo sistema, la precisione è di, per esempio, $0,25$, usando due bit dopo la virgola.
 E questa precisione è costante per tutti i numeri.
 Però, $0,25$ è troppo impreciso per i numeri piccoli, e troppo preciso per quelli grandi.
-La soluzione è la rappresentazione in [[Virgola mobile]].
+La soluzione è la rappresentazione in [[virgola mobile]].

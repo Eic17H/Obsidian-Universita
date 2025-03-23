@@ -22,7 +22,7 @@ Ridurre il ragionamento al puro calcolo tramite la logica.
 Aveva cominciato Aristotele, ma l'ha generalizzato Leibniz. E poi arrivò Boole.
 
 Usiamo delle <span class="blue">variabili</span>, o <span class="blue"><i>lettere proposizionali</i></span>. #termine 
-Ne abbiamo infinite: $p$, $q$, $r$, $p'$, $q$<sub>7</sub>, $r$<sub>r<sub>r<sub>r<sub>r<sub>r</sub></sub></sub></sub></sub>.
+Ne abbiamo infinite: $p$, $q$, $r$, $p'$, $q_7$, $r_{r_{r_{r_{r_{r_{r}}}}}}$.
 L'insieme delle formule proposizionali è definito dalle seguenti regole:
 1) Tutte le <span class="blue">lettere proposizionali</span> sono formule;
 2) Se $P$ e $Q$ sono <span class="blue">FP</span>, $(P⋆Q)$ è una <span class="blue">FP</span>, $∀⋆ | ⋆$ è un connettore.

@@ -7,7 +7,7 @@ Rappresentazione digitale: la grandezza può assumere solo un numero discreto di
 La rappresentazione digitale è meno fedele, ma più robusta e affidabile.
 Lo è in particolare quella binaria, robusta e affidabile ma con meno potere rappresentativo.
 Servono più “slot” nella memoria per avere pari stati diversi.
-Se mi servono x valori diversi, mi servono n slot tale che x<2^n.
+Se mi servono $x$ valori diversi, mi servono n slot tale che $x<2^n$.
 
 | Siamo partiti con un metodo semplicissimo               | $IIIIIIIIII$ | $IIIII$ | $III$ |
 | ------------------------------------------------------- | :----------: | :-----: | :---: |

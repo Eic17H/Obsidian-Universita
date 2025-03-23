@@ -135,12 +135,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RDC/File/Non so in che categoria vada.md",
+                "file": "ALF/File/Logica proposizionale classica.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Non so in che categoria vada"
+              "title": "Logica proposizionale classica"
             }
           },
           {
@@ -231,6 +231,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Comune/Cambio di base.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -240,7 +241,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Cambio di base"
             }
           },
           {
@@ -295,8 +296,7 @@
               "title": "Plugin no longer active"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -316,34 +316,34 @@
   },
   "active": "a5128feef6fc627b",
   "lastOpenFiles": [
+    "ALF/Automi e Linguaggi Formali.md",
+    "SO/Modulo II/C/Tutto C SO.md",
+    "SO/SO Lab.md",
+    "SO/Modulo II/Linux/Processi, thread e job.md",
+    "RDC/Reti di Calcolatori.md",
+    "MD/Matematica Discreta.md",
+    "FDI/Fondamenti di Informatica.md",
+    "Comune/Cambio di base.md",
+    "MD/File/Criteri di divisibilità.md",
+    "Comune/Algoritmo di Euclide.md",
+    "Comune/Regex.md",
+    "RDC/File/Storia di internet.md",
+    "MD/File/Classi di resto.md",
+    "FDI/File/Virgola mobile.md",
+    "FDI/File/Numeri binari.md",
+    "FDI/File/Basi numeriche.md",
+    "PR1/Modulo I/Algoritmi.md",
+    "FDI/File/Mappe di Karnaugh.md",
+    "ALF/File/OCaml.md",
+    "ALF/File/Logica dei predicati.md",
+    "ALF/File/Logica proposizionale classica.md",
+    "RDC/File/Non so in che categoria vada.md",
     "FPW/FPW Teoria.md",
     "FPW/Fondamenti di Programmazione Web.md",
     "Indice.md",
     "Basi di Dati.md",
-    "README.md",
-    "ALF/Automi e Linguaggi Formali.md",
-    "SO/Modulo II/C/Tutto C SO.md",
-    "ALF/File/OCaml.md",
-    "ALF/File/Logica dei predicati.md",
-    "ALF/File/Logica proposizionale classica.md",
-    "Comune/Regex.md",
-    "ALF/File/Introduzione.md",
-    "ALF/File/Grep.md",
-    "ALF/File/Espressioni regolari.md",
     "ALF/File/IMG_0858.png",
     "ALF/File",
-    "RDC/File/Storia di internet.md",
-    "RDC/File/Protocolli di rete.md",
-    "RDC/File/Applicazioni e reti.md",
-    "RDC/File/Non so in che categoria vada.md",
-    "RDC/Reti di Calcolatori.md",
-    "SO/Modulo II/Bash/Terminale di Linux - cheatsheet.md",
-    "Comune/Cambio di base.md",
-    "MD/Matematica Discreta.md",
-    "FDI/File/Basi numeriche.md",
-    "MD/File/Criteri di divisibilità.md",
-    "MD/File/Classi di resto.md",
-    "FDI/File/!Fondamenti di Informatica.md",
     "RDC/File",
     "RDC",
     "PR2/Modulo I",

@@ -1,0 +1,12 @@
+.theme-dark {
+    --matematica: #7DC8EA;
+}
+
+.theme-light {
+    --matematica: #156082;
+}
+
+.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
+.math {
+  color: var(--matematica);
+}

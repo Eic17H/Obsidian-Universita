@@ -1,5 +1,5 @@
 ## Indice
-* [[Algoritmo di Euclide]]
+* [[Algoritmo di Euclide#Puglisi|Algoritmo di Euclide]]
 * [[Basi numeriche]]
 * [[Numeri binari]]
 * [[Virgola mobile]]
