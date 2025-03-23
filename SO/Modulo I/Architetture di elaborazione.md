@@ -90,3 +90,9 @@ Nacquero i computer IBM-compatible, che costavano meno.
 Il professor Carta ne aveva uno. C'era anche gente in Sardegna che li costruiva. <span class="pink">Bruttini</span>.
 Retrocompatibilità = compatibilità con Intel = x86 = <span class="orange">CISC</span>.
 Però Apple e ARM usano <span class="orange">RISC</span>.
+ARM ha avuto fortuna lavorando con Nokia.
+
+Gli elettroni non sono istantanei, la velocità di clock dipende da quanti gate ci sono.
+Anche se devi fare più operazioni, magari sono più veloci.
+Se ho 7000 percorsi, di cui 6999 veloci e 1 lento, il percorso critico rallenta tutto.
+Spesso decompili CISC e ricompili RISC per essere più veloce.

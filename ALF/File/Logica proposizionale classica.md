@@ -36,7 +36,7 @@ $P←Q$ non esiste secondo la logica che abbiamo definito.
 
 $P$ e $Q$ sono <span class="termine">variabili</span>, come in matematica.
 In matematica, puoi assegnare valori numerici alle variabili.
-A $P$ e $Q$ cosa assegnamo? $0$ e $1$, sono *valori di verità*.
+A $P$ e $Q$ cosa assegniamo? $0$ e $1$, sono *valori di verità*.
 
 #definizione 
 Sia $v$ una funzione da lettere proposizionali a $\{0, 1\}$.

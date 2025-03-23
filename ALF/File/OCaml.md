@@ -76,4 +76,4 @@ Può sembrare strano ma è in realtà una sorta di `switch/case` del C.
 # let imp a b = match (a,b) with
 | (true, false) -> false
 | _ -> true;;
-```-
+```

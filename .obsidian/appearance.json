@@ -3,5 +3,8 @@
     "notation-colour-blocks",
     "stile"
   ],
-  "theme": "system"
+  "theme": "obsidian",
+  "textFontFamily": "",
+  "baseFontSizeAction": false,
+  "baseFontSize": 16
 }

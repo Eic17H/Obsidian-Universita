@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Indice.md",
-                "mode": "source",
+                "file": "ALF/File/OCaml.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Indice"
+              "title": "OCaml"
             }
           }
         ]
@@ -174,11 +174,23 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "publish:Publish changes...": false
     }
   },
   "active": "e3e58812f3b9ccd9",
   "lastOpenFiles": [
+    "ALF/Automi e Linguaggi Formali.md",
+    "Indice.md",
+    "ALF/File/Logica dei predicati.md",
+    "ALF/File/Logica proposizionale classica.md",
+    "ALF/File/OCaml.md",
+    "SO/Modulo I/Architetture di elaborazione.md",
+    "SO/SO Teoria.md",
+    "SO/Sistemi Operativi.md",
+    "README.md",
+    "SO/SO Lab.md",
+    "SO/Modulo II/C/Tutto C SO.md",
     "RDC/File/Storia di internet.md",
     "PR2/PR2 Teoria.md",
     "PR2/Programmazione 2.md",
@@ -187,24 +199,13 @@
     "FPW/Fondamenti di Programmazione Web.md",
     "FPW/Teoria/HTML e form.md",
     "SO/Modulo II/Altro/Socket.md",
-    "SO/Modulo I/Architetture di elaborazione.md",
-    "SO/SO Teoria.md",
-    "SO/SO Lab.md",
     "SO/Modulo I/CISC e RISC.md",
     "SO/Modulo I/Sistemi Operativi - Modulo I.md",
     "SO/Modulo I/Introduzione.md",
-    "SO/Sistemi Operativi.md",
     "FPW/Laboratorio/HTML e CSS.md",
     "FPW/Laboratorio/Introduzione a Vue.md",
-    "ALF/File/OCaml.md",
-    "ALF/File/Logica proposizionale classica.md",
-    "ALF/Automi e Linguaggi Formali.md",
     "Comune/Cambio di base.md",
     "FDI/File/Basi numeriche.md",
-    "SO/Modulo II/Sistemi Operativi - Modulo II.md",
-    "SO/Modulo II/Linux/Linux - Cenni storici.md",
-    "SO/Modulo II/Linux/Virtual machine.md",
-    "SO/Modulo II/C/Tutto C SO.md",
     "ALF/File/IMG_0858.png",
     "ALF/File",
     "RDC/File",
