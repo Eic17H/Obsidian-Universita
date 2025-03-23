@@ -18,9 +18,9 @@ Ed è proprio la successione di cifre che cerchiamo.
 Quindi possiamo controllare la cifra delle unità, poi cambiare qual è quella delle unità.
 L'algoritmo che segue da questa logica è:
 * Considero solo la parte decimale;
-* Moltiplico per 2;
-* Se è maggiore di 1, la cifra è 1, altrimenti è 0;
-* Ricomincio finché il numero non è 0.
+* Moltiplico per $2$;
+* Se è maggiore di $1$, la cifra è $1$, altrimenti è $0$;
+* Ricomincio finché il numero non è $0$.
 Appunto, non tutti terminano.
 $0,78125_{10} = 0,1101_2; 0,9_{10} = 0,1(1100)_2$.
 ## Mossa
@@ -50,7 +50,7 @@ $\color{red}15$$\color{white},$$\color{pink}4375$ in base $\color{lightblue}2$:
 $\color{red}15$$\color{white}/$$\color{lightblue}2$ $\color{white}=$ $\color{orange}7$$\color{white}r$$\color{blue}1$
 $\color{orange}7$$\color{white}/$$\color{lightblue}2$ $\color{white}=$ $\color{yellow}3$$\color{white}r$$\color{blue}1$
 $\color{yellow}3$$\color{white}/$$\color{lightblue}2$ $\color{white}=$ $\color{lightgreen}1$$\color{white}r$$\color{blue}1$
-$\color{lightgreen}1$$\color{white}/$$\color{lightblue}2$ $\color{white}=$ 0$\color{white}r$$\color{blue}1$
+$\color{lightgreen}1$$\color{white}/$$\color{lightblue}2$ $\color{white}=$ $\color{white}0$$\color{white}r$$\color{blue}1$
 
 $\color{white}0,$$\color{pink}4375$$\color{white}×$$\color{lightblue}2$ $\color{white}=$ $\color{blue}0$$\color{white},$$\color{lightorange}8750$
 $\color{white}0,$$\color{lightorange}8759$$\color{white}×$$\color{lightblue}2$ $\color{white}=$ $\color{blue}1$$\color{white},$$\color{lightyellow}750$
