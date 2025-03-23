@@ -1,5 +1,5 @@
 {
-  "collapse-filter": false,
+  "collapse-filter": true,
   "search": "-file:Indice",
   "showTags": false,
   "showAttachments": false,
@@ -165,6 +165,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.4807212797763146,
-  "close": false
+  "scale": 0.3911832859903926,
+  "close": true
 }
