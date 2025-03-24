@@ -801,6 +801,191 @@ La risposta alla domanda dopo è i: 3, 4; j: 3, 2.
 Per i += --i * j++, quale side effect accade prima? += o --?
 Boh, dipende. Dato il risultato, dimmi la logica imprevedibile che ha portato a quel calcolo.
 
+
+
+
+## Settimana 13
+
+#boh
+
+C: il linguaggio di programmazione ha solo cose semplici (kernel compatto), le cose complesse sono lasciate alle librerie.
+Il C tratta il testo in modo molto semplice:
+Non esistono stringhe, solo semplici array di char;
+Non ci sono istruzioni del linguaggio che hanno a che vedere con le stringhe.
+Molte librerie sono fatte dai progettatori del linguaggio.
+Senza librerie non si fa nulla in C. Pensa a stdlib, praticamente un’appendice del linguaggio.
+
+strcpy() sostituisce l’assegnazione di stringhe.
+
+Ipotesi, C con supporto testo:
+
+
+string a = “Ciao”;
+string b;
+b = a; // overloading
+
+Realtà:
+
+
+char a[10], b[10];
+// inizializzazione di a
+for(...) b[i]=a[i];
+// oppure:
+strcpy(b, a);
+
+
+Il C non è progettato per lavorare con le stringhe.
+Ci sono anche operazioni proprie delle stringhe, come la concatenazione e la ricerca.
+
+Gli array di stringhe sono matrici.
+Quando dichiari una matrice, ci sono le parentesi graffe annidate, ma non quando dichiari un array di stringhe. Perché?
+Zucchero sintattico. Per le stringhe, si usa “” anziché {,,,\0} .
+
+Quando dichiaro una matrice, posso omettere la prima dimensione, ma non la seconda.
+Per forza days[][10]. Perché? ti chiederai. E la risposta è…
+Non lo so.
+
+[strano disegno che ti toccherà vedere dalle slide]
+Record.
+Collegare un solo nome a un insieme di dati tutti dello stesso tipo: array.
+Collegare un solo nome a un insieme di dati di tipi diversi: record.
+In C i record si chiamano struct.
+
+Il nome legale di una persona, la sua data di nascita, il codice fiscale.
+Tutti sotto un solo identificatore.
+Questa necessità ha portato alla creazione dei database.
+In OOP, le i record sono rimpiazzati dalle classi, ma in C++ ci sono entrambi, strano.
+
+Usiamo un esempio diverso dallo studente universitario, l’elemento chimico.
+Un elemento chimico ha un nome, un numero atomico, un peso, e se è metallo o no.
+Un elemento all’interno della struct si chiama campo.
+
+Nei linguaggi di programmazione normali, una struct è un nuovo tipo del linguaggio.
+In C no, devi usare typedef.
+Se dichiari una struct in un typedef, non dare serve un nome alla struct, solo al tipo.
+Questo presenta tre stranezze in una:
+Le struct non sono tipi, ma una variabile può essere di tipo struct Element;
+Devi dare un nome al tipo e alla struct;
+Se li metti insieme però no.
+Puoi assegnare struct… una struct sì ma un array no.
+In realtà è perché due array corrispondenti degli struct sono della stessa lunghezza.
+
+Element (nel nostro esempio) si dice tipo strutturato.
+
+Una funzione può restituire un tipo struct.
+Quindi puoi restituire due valori insieme, tipo min e max.
+
+Array di tipo strutturato. Sottoliste di inizializzazione. Un valore dentro la lista di inizializzazione può essere esso stesso una lista.
+
+[] e . sono operatori. L’ordine delle operazioni è (((class[0]).name).first).
+
+E ci fai i puntatori. student * best = &class[1]
+* ha priorità bassa, quindi servono le parentesi per (*best).name.first.
+Altrimenti fa prima best.name. Ma best non è una struct, non ha campi.
+Errore? No, fa l’operazione.
+	best.name: ???
+	???.first: ???
+	*???: ???
+Non ha senso.
+I progettatori se ne sono accorti subito che sarebbe stato un bagno di sangue, ecco quindi l’operatore freccia: best->name.first.
+Aumentiamo ancora un po’ di più la complessità.
+
+Un puntatore è un contenitore che contiene un indirizzo. Ha senso? Sì, no, non ci importa.
+Può puntare a un int, a un float… a un puntatore.
+È come una caccia al tesoro. Quante volte? 1, 2, 3, quante vuole il compilatore.
+Mettiamoci in mezzo le struct. Come può avere senso? Coordinates, vedi slide.
+
+In tutto questo, il C non fa controlli. Se poi fai *p=25; boh. Le regole di compatibilità sono le più slabbrate che ci possano essere.
+Tipi ricorsivi.
+Utilissimo argomento che tocchiamo di sfuggita così per gusto.
+Gusto di Scateni, non degli studenti, si intende.
+
+Alberi binari.
+Parent/child, neutrale in inglese, diventa padre/figlio in italiano, nonostante “variabile” sia femminile. Avrebbe più senso madre/figlia.
+
+
+Lasciamo perdere il codice in Pascal perché sarebbe troppo figo.
+
+A livello di codice, una variabile in un albero binario ha i dati, un campo lchild e un campo rchild: figlio sinistro e figlio destro.
+Complessità.
+
+Un programma complesso può andare bene per un insieme di dati piccolo, ma per quelli grandi essere troppo lento.
+
+Il caso medio si denota con O(n), il caso ottimo con Ω(n) e il caso pessimo con Θ(n), dove n è la dimensione dei dati.
+A noi interessa O(n).
+
+O(f(n)) è la classe di complessità.
+Leggendo la definizione formale avete il diritto di non capirci niente.
+Aiuto ci sono i logaritmi perché? Aaa.
+
+Esempio: n²+2n+4 ∋ O(n²) ∴ Ǝ n, c | boh vedi slide.
+n² asintoticamente esprime n²+2n+4.
+lim(n->∞) n²+2n+4 = lim(n->∞) n² = ∞².
+
+Le classi di complessità più comuni sono:
+
+
+
+
+
+
+
+
+😇
+O(1)
+Ci mette sempre la stessa quantità di tempo. Scordatelo.
+O(log(n))
+Tempo ∝ log(n). Tipicamente log₂.
+log8=3, log1024=10.
+La differenza tra 8 e 1024 è molta, quella tra 3 e 10 no.
+Molto efficiente.
+Caratteristico della ricerca in set ordinati. Pagine gialle dato il nome.
+O(n)
+Lineare. Caratteristico della ricerca in set disordinati. Pagine gialle dato il numero di telefono.
+O(n log(n))
+Linearitmico, poco più che lineare.
+Ancora molto accettabile. Caratteristico dell’ordinamento.
+
+
+
+😈
+O(n²)
+O(n³)
+O(2ⁿ)
+Quadratica, cubica, esponenziale, fattoriale.
+Questi sono pessimi.
+O(n!)
+Esplorazione combinatorica di uno spazio di soluzioni.
+Hai n oggetti, di cui vuoi trovare la combinazione ideale guardandole una per volta. Processo estremamente lungo.
+
+
+Vedi la tabella nelle slide.
+L’universo ha 10¹⁴ anni. Il “>>” nella significa “più di 10²⁵ anni”. Il punto separa le migliaia.
+Google deve cercare tra milioni di risultati. La complessità dell’algoritmo di ricerca è molto importante.
+La radice è poco più del logaritmo.
+Nel grafico, n! è praticamente verticale.
+
+Ω(n): Meglio di così non si può fare, lower bound.
+Se Ω(n)=nlogn e tu mi dici che il tuo O(n) è √n mi stai dicendo una bugia.
+Θ(n): Peggio di così non si può fare, se ci riesci sei un caprone puzzolente.
+
+La O(n) andrebbe calcolata sull’algoritmo, noi lo facciamo sulla sua traduzione in linguaggio di programmazione, è equivalente.
+Complessità di alcune operazioni.
+
+L’assegnazione è O(1). Che stia assegnando 5 o 1000000 ci vuole la stessa quantità di tempo. Anche le operazioni aritmetiche sono a tempo fisso: ci sono circuiti dedicati.
+Lo stesso vale per i confronti: < > = <= >=.
+
+Quando nei rami di un blocco di scelta ci sono complessità diverse, considero la peggiore.
+Mi prendo il sicuro.
+Per il for, la condizione, l’incremento e le istruzioni si ripetono, quindi si moltiplicano (credo).
+Insomma, vedi le slide, c’è tutto.
+
+Per combinare insieme le complessità dei singoli pezzi del programma, funziona un po’ come i limiti.
+Nelle addizioni, rimuovi la componente più piccola. Nelle moltiplicazioni, si tengono entrambe, ma O(1) è l’elemento neutro.
+Si scrive g(n)∈O(n), non g(n)=O(n).
+Se non conosco una funzione la lascio esplicita, tipo O(n∙g(n)).
+
+CORSO FINITO.
 ## Settimana 14
 Esercitazione
 
