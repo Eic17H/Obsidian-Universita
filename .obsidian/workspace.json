@@ -4,39 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5cc9a4f7e2c7e98d",
+        "id": "f5680c340bf79a5c",
         "type": "tabs",
         "children": [
           {
-            "id": "e3e58812f3b9ccd9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Indice.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Indice"
-            }
-          },
-          {
-            "id": "f13816fcdce140fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR1/Modulo I/Programmazione 1 - Modulo I.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Programmazione 1 - Modulo I"
-            }
-          },
-          {
-            "id": "e45d65a2c658afd7",
+            "id": "faf598d28e8a77dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -50,77 +22,63 @@
             }
           },
           {
-            "id": "078f8b3f6aac7b71",
+            "id": "75436b31c8dc20ce",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PR1/Modulo I/Inferno.md",
+                "file": "PR1/Modulo I/Test/Linguaggio.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Inferno"
+              "title": "Linguaggio"
             }
           },
           {
-            "id": "d83c50eee5153da9",
+            "id": "2d7e665cf83a8804",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PR1/Modulo I/Scope.md",
+                "file": "PR1/Modulo I/Test/Termini.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Scope"
+              "title": "Termini"
             }
           },
           {
-            "id": "aae0bea51c6bcc81",
+            "id": "95d67cd5f207f5de",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PR1/Modulo I/Ricorsione.md",
+                "file": "PR1/Modulo I/Test/Algoritmi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ricorsione"
+              "title": "Algoritmi"
             }
           },
           {
-            "id": "a7fbb8d75706bec5",
+            "id": "093b172eacb7c114",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PR1/Modulo I/Subroutine e librerie.md",
+                "file": "SO/Modulo I/Architetture di elaborazione.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Subroutine e librerie"
-            }
-          },
-          {
-            "id": "c6fb0504c5c35522",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR1/Modulo I/Tipi.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Tipi"
+              "title": "Architetture di elaborazione"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -193,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Comune/Cambio di base.md",
+                "file": "SO/Modulo I/Architetture di elaborazione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +161,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Cambio di base"
+              "title": "Backlinks for Architetture di elaborazione"
             }
           },
           {
@@ -276,52 +234,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e45d65a2c658afd7",
+  "active": "093b172eacb7c114",
   "lastOpenFiles": [
-    "PR1/Modulo I/Inferno.md",
-    "PR1/Modulo I/PR1I prov.md",
-    "PR1/Modulo I/Scope.md",
-    "PR1/Modulo I/Ricorsione.md",
-    "PR1/Modulo I/Subroutine e librerie.md",
-    "PR1/Modulo I/Tipi.md",
-    "PR1/Modulo I/Programmazione 1 - Modulo I.md",
-    "PR1/Modulo I/Termini.md",
-    "PR1/Modulo I/Algoritmi.md",
-    "PR1/Modulo I/Programmazione - Cenni storici.md",
-    "PR1/Programmazione 1.md",
-    "MD/File/Matrici.md",
-    "ALF/Automi e Linguaggi Formali.md",
-    "Comune/Algoritmo di Euclide.md",
-    "Comune/Regex.md",
-    "Comune/Cambio di base.md",
-    "Comune/Git.md",
-    "Indice.md",
-    "README.md",
-    "ALF/File/Logica proposizionale classica.md",
-    "ALF/File/OCaml.md",
-    "ALF/File/Logica dei predicati.md",
-    "SO/Modulo I/Architetture di elaborazione.md",
     "SO/SO Teoria.md",
     "SO/Sistemi Operativi.md",
     "SO/SO Lab.md",
+    "Comune/Regex.md",
+    "SO/Modulo II/Linux/Linux - Cenni storici.md",
+    "PR1/Programmazione 1.md",
+    "PR1/Modulo I/Test/Storia.md",
+    "PR1/Modulo I/Test/Algoritmi.md",
+    "PR1/Modulo I/Test/Termini.md",
+    "PR1/Modulo I/Test/Linguaggio.md",
+    "PR1/Modulo I/PR1I prov.md",
+    "PR1/Modulo I/Test/Boh.md",
+    "PR1/Modulo I/Test",
+    "PR1/Modulo I/Programmazione 1 - Modulo I.md",
+    "ASD/ASD Lab.md",
+    "ASD/Modulo II/Strutture dati/Alberi.md",
+    "ASD/Algoritmi e Strutture Dati.md",
+    "ASD/Modulo II/Algoritmi.md",
+    "ASD/Modulo II/Algoritmi/Heapsort.md",
+    "ASD/Modulo II/Strutture Dati.md",
+    "PR1/Modulo I/Algoritmi.md",
+    "ASD/Modulo II/Strutture dati/Stack.md",
+    "ASD/Modulo II/Strutture dati/Coda.md",
+    "ASD/Modulo II/Strutture dati",
+    "ASD/Modulo II/Algoritmi",
+    "Comune/Algoritmo di Euclide.md",
+    "PR1/Modulo I/Tipi.md",
+    "ASD/Modulo II/Algoritmi/Selection Sort.md",
+    "ASD/Modulo II/Strutture dati/Grafi.md",
+    "ASD/Modulo II",
+    "ASD/Raw",
+    "ASD",
+    "Pasted image 20250324190527.png",
+    "Pasted image 20250324190528.png",
     "ALF/File/IMG_0858.png",
     "ALF/File",
     "RDC/File",
     "RDC",
     "PR2/Modulo I",
-    "ALF",
-    "RDC",
-    "CSMN",
-    "EED",
-    "DEM",
-    "FeMS",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-inspect/dist/client/favicon.svg",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",
     "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png",
     "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",
-    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg",
-    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-inspect/dist/client/favicon.svg"
+    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg"
   ]
 }
