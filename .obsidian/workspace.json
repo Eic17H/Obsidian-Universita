@@ -8,13 +8,27 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e3e58812f3b9ccd9",
+            "id": "e45d65a2c658afd7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PR1/Programmazione 1.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Programmazione 1"
+            }
+          },
+          {
+            "id": "3320c96149931ee4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Indice.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -22,91 +36,7 @@
             }
           },
           {
-            "id": "f13816fcdce140fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR1/Modulo I/Programmazione 1 - Modulo I.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Programmazione 1 - Modulo I"
-            }
-          },
-          {
-            "id": "e45d65a2c658afd7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR1/Modulo I/PR1I prov.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "PR1I prov"
-            }
-          },
-          {
             "id": "078f8b3f6aac7b71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR1/Modulo I/Inferno.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Inferno"
-            }
-          },
-          {
-            "id": "d83c50eee5153da9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR1/Modulo I/Scope.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Scope"
-            }
-          },
-          {
-            "id": "aae0bea51c6bcc81",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR1/Modulo I/Ricorsione.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ricorsione"
-            }
-          },
-          {
-            "id": "a7fbb8d75706bec5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR1/Modulo I/Subroutine e librerie.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Subroutine e librerie"
-            }
-          },
-          {
-            "id": "c6fb0504c5c35522",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -118,9 +48,23 @@
               "icon": "lucide-file",
               "title": "Tipi"
             }
+          },
+          {
+            "id": "abe9795af9d70b08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Comune/Algoritmo di Euclide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Algoritmo di Euclide"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -276,34 +220,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e45d65a2c658afd7",
+  "active": "3320c96149931ee4",
   "lastOpenFiles": [
-    "PR1/Modulo I/Inferno.md",
+    "Pasted image 20250324190527.png",
+    "PR1/Modulo I/Complessità.md",
+    "PR1/Programmazione 1.md",
     "PR1/Modulo I/PR1I prov.md",
+    "PR1/Modulo I/Tipi.md",
+    "FPW/Laboratorio/HTML e CSS.md",
+    "FPW/Teoria/HTML e form.md",
+    "Pasted image 20250324190528.png",
+    "Comune/Algoritmo di Euclide.md",
+    "PR1/Modulo I/Inferno.md",
+    "PR2/Modulo II/Override.md",
+    "PR2/Modulo II/Ereditarietà.md",
+    "FDI/Fondamenti di Informatica.md",
+    "FDI/File/Virgola mobile.md",
+    "PR1/Modulo I/Algoritmi.md",
+    "FDI/File/Basi numeriche.md",
+    "PR1/Modulo I/Subroutine e librerie.md",
     "PR1/Modulo I/Scope.md",
     "PR1/Modulo I/Ricorsione.md",
-    "PR1/Modulo I/Subroutine e librerie.md",
-    "PR1/Modulo I/Tipi.md",
     "PR1/Modulo I/Programmazione 1 - Modulo I.md",
-    "PR1/Modulo I/Termini.md",
-    "PR1/Modulo I/Algoritmi.md",
     "PR1/Modulo I/Programmazione - Cenni storici.md",
-    "PR1/Programmazione 1.md",
+    "PR1/Modulo I/Linguaggio.md",
+    "PR1/Modulo I/Termini.md",
+    "Indice.md",
     "MD/File/Matrici.md",
     "ALF/Automi e Linguaggi Formali.md",
-    "Comune/Algoritmo di Euclide.md",
     "Comune/Regex.md",
-    "Comune/Cambio di base.md",
-    "Comune/Git.md",
-    "Indice.md",
-    "README.md",
-    "ALF/File/Logica proposizionale classica.md",
-    "ALF/File/OCaml.md",
-    "ALF/File/Logica dei predicati.md",
-    "SO/Modulo I/Architetture di elaborazione.md",
-    "SO/SO Teoria.md",
-    "SO/Sistemi Operativi.md",
-    "SO/SO Lab.md",
     "ALF/File/IMG_0858.png",
     "ALF/File",
     "RDC/File",
@@ -321,7 +266,6 @@
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",
     "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png",
     "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",
-    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg",
-    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-inspect/dist/client/favicon.svg"
+    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg"
   ]
 }

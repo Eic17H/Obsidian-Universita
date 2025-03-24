@@ -1,22 +1,15 @@
-## Settimana 12
+## Call stack
 
-Bene. (benino)
-
-Ultima lezione del 2023. La prossima sarà l’8 Gennaio 2024, seguita da altre due.
-Il 15 ci sarà un’esercitazione, e il 16 il terzo compito, alle 15:00 a Monserrato.
-
-Passiamo all’argomento di oggi.
-Call stack.
 Dentro la funzione iterativa ci sono invocazioni alla funzione stessa
 Lo scope definisce qual è l’ambito di visibilità degli identificatori.
-a=fib(3); Prima cosa da valutare: rvalue.
+`a=fib(3);` Prima cosa da valutare: rvalue.
 [orrendi grafici sul quaderno che non ricreerò]
 L’insieme di funzioni invocate si può visualizzare come una pila di invocazioni, una call stack in cui una funzione che ne invoca un’altra la mette sopra sé stessa. L’unica funzione attiva è quella in cima, l’ultima chiamata, quelle sotto sono in pausa, congelate.
-Si chiama freeze/thaw, congelare/scongelare.
+Si chiama *freeze/thaw*, congelare/scongelare.
 
 Quello che abbiamo visto sulla gestione dei simboli:
-	Statica: stanze
-	Stack: cassette della frutta
+* Statica: stanze
+* Stack: cassette della frutta
 
 Contesto: set di identificatori visibili adesso.
 Si parla di context switch.
@@ -26,10 +19,17 @@ Tutti questi cambiamenti di contesto non esistono nel linguaggio macchina.
 Il debugger ci dice in quale punto della call stack siamo.
 Non tutti i linguaggi hanno la call stack. Alcuni hanno solo binding statico e globale.
 
-Stack overflow: chiamo fib(2450), non c’è spazio per nuovi processi sullo stack.
+Stack overflow: chiamo `fib(2450)`, non c’è spazio per nuovi processi sullo stack.
 
-La memoria è divisa in 4: program (sezione speciale), static, heap e call stack. Static, heap e call stack sono collettivamente detti data. Non sono necessariamente tutte della stessa dimensione, ma hanno una dimensione.
-Modelli di gestione.
+La memoria è divisa in 4:
+* Program (sezione speciale)
+* Static,
+* Heap
+* Call stack
+
+Static, heap e call stack sono collettivamente detti data. Non sono necessariamente tutte della stessa dimensione, ma hanno una dimensione.
+
+## Modelli di gestione
 
 Non dovrebbe mai arrivare il momento di parlare di gestione di memoria quando si parla di linguaggi ad alto livello, quindi perché è arrivato?
 Aveva senso quando si avevano kB di memoria, ma ora siamo 6 ordini di grandezza sopra.
@@ -47,20 +47,21 @@ Heap, mucchio, pagliaio. Ammasso disordinato, prendi quanto vuoi.
 Memoria ammuntonata.
 
 Ci sono due modi per gestire l’heap.
-	Bello: come lo stack, implicitamente, automaticamente, al runtime.
-	Brutto: esplicitamente, a scelta del programmatore.
+* Bello: come lo stack, implicitamente, automaticamente, al runtime.
+* Brutto: esplicitamente, a scelta del programmatore.
 Si applica sia ad allocare memoria che a rilasciarla.
 L’ambiente a runtime non commette errori. Neanche Michele commette errori, ma qualche altro programmatore di sicuro sì.
-Programmatore, prendi, sono tutti @tuoi!
+Programmatore, prendi, sono tutti `@tuoi`!
 Se lo fai bene bene, se no male.
-A carico del runtime: difficile, pesante, complesso.
-A carico del programmatore: facile, ci vuole meno, più errori.
+* A carico del runtime: difficile, pesante, complesso.
+* A carico del programmatore: facile, ci vuole meno, più errori.
 
 Il rilascio automatico è detto garbage collection.
 Un DeVizia passa per la memoria, trova memoria che non serve e la rende nuova.
 La garbage collection è caratteristica dei linguaggi progettati bene: C#, Java, non C.
 Costa.
 
+#vedioriginale
 
 Puntatori: nuova tipologia di simboli che, sinceramente, non vorremmo che esistessero, per un motivo molto semplice:
 Mondo
@@ -76,19 +77,15 @@ Macchina reale
 ):
 Registri, assembler, locazioni di memoria.
 
-&231
-1010000
+`&231`
+`1010000`
 Locazioni di memoria, ciascuna con un numero lunghissimo che mi devo ricordare.
-&232
-1010010
-&233
-0110001
-&234
-1001001
-
-
-
-
+`&232`
+`1010010`
+`&233`
+`0110001`
+`&234`
+`1001001`
 
 Torniamo a una cosmogonia classica. Grecia classica. C’erano il mondo e gli inferi, coi demoni. Dove avresti voluto vivere? Quanto ci ha messo Dante a raccontare cosa c’è all’inferno…
 Ci siamo svincolati dagli inferi, e poi, improvvisamente, chi arriva nel nostro mondo? I puntatori, gli emissari degli inferi, agenti delle potenze infernali.
@@ -111,10 +108,10 @@ I puntatori non sono mai necessari (quasi).
 
 Quando fai int\*p, int non serve a niente finché p non comincia a puntare.
 
-I progettisti del linguaggio, ‘ste merde, hanno reso possibili tutti questi modi (e altri) per dichiarare un puntatore: int\* p, int \*q, int\*r, int \* s…
+I progettisti del linguaggio, ‘ste merde, hanno reso possibili tutti questi modi (e altri) per dichiarare un puntatore: `int* p`, `int *q`, `int*r`, `int * s`…
 
 
-& è un operatore unario prefisso che…
+`&` è un operatore unario prefisso che…
 …pathos…
 …
 …
@@ -122,7 +119,7 @@ I progettisti del linguaggio, ‘ste merde, hanno reso possibili tutti questi mo
 restituisce l’indirizzo di una variabile.
 ??? Ma?
 La variabile vive nella macchina astratta.
-Ma &, Orfeo, che cerca Euridice all’inferno, ma è un fesso, ma il nostro &orfeo, lo chiamiamo così per amicizia, va negli inferi e ripesca un indirizzo.
+Ma `&`, Orfeo, che cerca Euridice all’inferno, ma è un fesso, ma il nostro `&orfeo`, lo chiamiamo così per amicizia, va negli inferi e ripesca un indirizzo.
 
 Il corso comincia separando i due mondi con i linguaggi ad alto livello, e ora ciò che abbiamo cacciato dalla porta rientra dalla finestra.
 

@@ -9,4 +9,7 @@ Avere un numero di passi finito è facile.
 Far sì che ogni passo sia completabile in un tempo finito è facile.  
 Assicurarsi che la sequenza di passi e stati sia finita, questa è la parte difficile.  
 Questo è il celebre halting problem, problema della terminazione.
-Un esempio di algoritmo che termina è l’[[Algoritmo di Euclide#Scateni|Algoritmo di Euclide]].
+Un esempio di algoritmo che termina è l’[[Algoritmo di Euclide]].
+
+![[Algoritmo di Euclide#^ba1718]]
+![[Algoritmo di Euclide#^dd4752]]
