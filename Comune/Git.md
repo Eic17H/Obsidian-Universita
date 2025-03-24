@@ -13,4 +13,4 @@ Quando scarichi una repository in locale sul tuo computer, si dice che la cloni 
 Git in locale si può usare da linea di comando, da GitHub Desktop, o con un'estensione di VSCode.
 Da mobile, c'è anche un plugin di Obsidian che lo integra ma non funziona benissimo.
 
-In questo corso ci sono alcuni progetti di gruppo per cui è molto utile.
+In questo corso di laurea ci sono alcuni progetti di gruppo per cui è molto utile.
