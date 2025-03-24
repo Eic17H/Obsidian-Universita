@@ -35,55 +35,14 @@ I voti dei parziali saranno visibili da Teams, quello dell’esame finale solo d
 In un algoritmo bisogna tenere conto dello stato corrente del sistema. Di solito, lo stato del sistema è la combinazione dei valori delle sue variabili.
 Un algoritmo deve avere un numero finito di stati e un numero finito di operazioni possibili per ogni stato.
 
-#algoritmi
-Il quesito dell’uovo tartufato può essere automatizzato tramite un algoritmo, che avrà come operazioni lo spostamento da un contenitore a un altro.
-Una possibile soluzione sarebbe fare ogni operazione possibile (ne hai 6) per ogni stato, e tornare indietro quando si è bloccati. Bisognerebbe tenere una cronologia per sapere per quali stati si è già passati, e prima o poi si arriva alla soluzione.
-Non tutti gli stati sono validi, nel nostro caso la somma deve essere sempre 80.
-L’obiettivo del nostro corso è imparare a risolvere problemi e acquisire un metodo.
-Parliamo di termini, definizioni, etimologie e storia.
 
-#storia
-Alla fine del ‘600 fu inventata la Pascalina, precursore dei computer.
 
-#termine 
-Computer: Dall’inglese, in origine la professione di fare calcoli per i censi. I macchinari hanno preso questo nome dopo un po’ di tempo dalla loro invenzione.
 
-#storia
-La macchina analitica di Babbage, l’analytical engine, fu inventata intorno al 1840 per risolvere problemi analitici, cioè matematici. Babbage ci spese l’equivalente di oltre 10 milioni di euro.
-Babbage si rese conto che questo nuovo tipo di macchina si poteva programmare, a differenza delle macchine precedenti, che potevano compiere un solo lavoro.
-La parola computer fu introdotta per questi macchinari negli anni ‘90.
 
-Un altro precursore dei computer era il telaio a schede perforate, che funzionava con lo stesso principio: diamo istruzioni alla macchina perché risolvano problemi per conto nostro.
-Inizialmente, questa era una professione stereotipicamente femminile.
-La prima programmatrice fu Ada Lovelace.
 
-Altre figure molto importanti furono Alonzo Church e Alan Turing.
-Church inventò il λ-calcolo.
-Turing ideò la macchina di Turing, che vedremo l’anno prossimo.
-Insieme, pubblicarono la tesi di Church-Turing.
-
-#termine
-Definizione di computer: Macchina elettronica che può svolgere diversi compiti a seconda delle istruzioni impartitele.
-
-#storia
-I Paesi principali della WWII furono il UK, gli US e la Germania, e furono proprio questi i Paesi dove furono inventati i primi computer.
-Due altre invenzioni aiutarono molto: la valvola termoionica e il transistor, invenzione degli anni ‘50-‘60 che rimpiazzò le valvole termoioniche.
 
 #boh
 L’esistenza dell’informatica non dipende dai computer. Senza computer, l’informatica sarebbe rimasta una disciplina sconosciuta, esoterica e presa in giro.
-
-#termine 
-Istruzione: Comando impartito a un computer che determina una variazione di stato.
-Bisogna sempre sapere qual è lo stato del sistema.
-
-Obiettivo della programmazione: Trovare una serie finita di istruzioni che ci fanno passare da uno stato iniziale a uno stato finale.
-
-Programma: Sequenza di istruzioni elementari che un computer è in grado di comprendere ed eseguire.
-I concetti di sequenza e di istruzione elementare sono parimente importanti.
-
-Programmare: Realizzare un programma per svolgere determinati compiti.
-Per imparare la programmazione bisogna conoscere un linguaggio.
-Differenza tra comunicazione verbale e scritta: prossemica.
 
 #generale
 Programmare un computer è come parlare a un bambino:
@@ -92,62 +51,10 @@ Devi spiegare esattamente tutti i dettagli, non sa inferire dal contesto;
 Non puoi dare niente per scontato.
 Le macchine si devono adeguare.
 
-#termine
-Informatica: Disciplina/scienza dell’informazione e della sua automazione.
-L’informatica, derivando dalla matematica, ha tutto il diritto di essere chiamata hard science.
-#algoritmi
-Serve un processo risolutivo, è fondamentale.
-La caratteristica fondamentale del processo risolutivo è la presenza di un algoritmo.
-Un po’ di #storia:
-900 d.C. (X secolo), impero Persiano, Al-Khwarizmi inventa Al-Jabr, l’algebra.
-Dal nome Al-Khwarizmi (e da arithmos, numero) deriva “algoritmo”.
-Un algoritmo è un insieme finito e ordinato di passi univoci eseguibili che definiscono un processo che termina.
 
-#algoritmi
-Avere un numero di passi finito è facile.
-Far sì che ogni passo sia completabile in un tempo finito è facile.
-Assicurarsi che la sequenza di passi e stati sia finita, questa è la parte difficile.
-Questo è il celebre halting problem, problema della terminazione.
-
-#algoritmi
-Un esempio di algoritmo che termina è l’algoritmo di Euclide.
 ## Settimana 2
 
-#algoritmi
-Massimo Comun Divisore: il metodo più semplice consiste nell’enumerare tutti i divisori del primo numero, tutti quelli del secondo, trovarne l’intersezione, e poi cercare lì il maggiore.
-Questo è un metodo di tipo bruteforce, a forza bruta.
-Funziona perché l’intersezione non è mai un insieme vuoto, contiene sempre 1.
-I metodi bruteforce sono spesso molto lenti e inefficienti, e sono la soluzione in casi disperati, o in certi casi specifici.
 
-Un metodo più efficiente è l’algoritmo di Euclide. È un algoritmo in quanto:
-Ha un numero finito di passi;
-È scritto in un linguaggio univoco, quello della matematica;
-Ogni passo si svolge in un tempo finito.
-Termina perché dopo ogni passo, si ottiene un valore strettamente minore del precedente, e lavoriamo con i numeri naturali. Tutte le serie discendenti di numeri naturali prima o poi terminano: non puoi scendere per sempre nei numeri interi senza andare sotto 0.
-Otteniamo la risposta giusta? Non lo sappiamo, ma almeno sappiamo che termina sempre.
-
-#linguaggio
-Tra l’altro, i simboli matematici sono un linguaggio formalizzato solo dal ‘600, e ancora oggi non sono 100% univoci: la moltiplicazione ha \*, •, ×, e il nulla, la divisione ha :, ÷, /, –.
-Prima si scriveva tutto a parole! Confrontiamo la lunghezza:
-∀i∈Dx, …
-Per ogni i divisore di x, …
-Quando si parla di un linguaggio formale, “univocamente interpretabile” è sottinteso.
-
-#termini
-Efficacia: Capacità dell’algoritmo di risolvere il problema.
-Efficienza: Quanto cresce il tempo di esecuzione al crescere dell’input.
-
-#storia
-Von Neumann apparteneva al gruppo dei marziani, un piccolo gruppo di persone che hanno rivoluzionato la scienza, nella zona di Budapest intorno al 1900. Tra questi, anche alcuni che hanno lavorato alla bomba atomica di Oppenheimer.
-
-Dovevano fare tanti calcoli, serviva un calcolatore programmabile per farli in poco tempo.
-
-Macchina di Von Neumann del ‘46:
-Nuovo concetto di calcolatore con memoria (per dati e programma), (pensavano in termini di funzioni matematiche)
-Esecutore programmabile di istruzioni = processore
-Oggi caratteristiche tutte banali.
-
-La prima memoria di massa mai inventata: tre fili ortogonali, intrecciati in un anello di ferrite magnetizzata: a seconda di come passa la corrente per i tre fili, l’anello è magnetizzato in senso orario o antiorario, bit 1 o 0. L’anello può cambiare dinamicamente, ma una volta cambiato senso, il nuovo senso rimane (immagazzinato).
 
 #storia #boh
 Era già stato introdotto un modello fondamentale: fetch, decode, execute, ripeti. Prende un po’ di dati codificati, li decodifica, esegue le istruzioni che contengono, e ricomincia. È talmente fondamentale che si usa ancora oggi.
@@ -161,9 +68,6 @@ Questo è legato al concetto moderno di natural interaction: per esempio, impara
 La soluzione fu l’invenzione dei linguaggi ad alto livello.
 Chomsky, importante linguista, divise le lingue in 4 gruppi, tra cui i linguaggi formali.
 
-#termine
-Automa: macchina che esegue istruzioni.
-A seconda del linguaggio ci sono automi diversi che comprendono linguaggi diversi.
 
 #linguaggio #termine
 Quindi, i linguaggi di programmazione, essendo veri linguaggi, possono essere tradotti.
@@ -171,31 +75,9 @@ Traduzione: Prendere il contenuto semantico di una frase ed esprimerlo in un’a
 Si tiene lo stesso contenuto semantico, ma si cambiano la costruzione della frase, l’ortografia, e le altre cose che caratterizzano un linguaggio.
 Traduttore (di lingue naturali): I.A. addestrata sulla traduzione.
 I traduttori di linguaggi di programmazione sono molto più semplici, in quanto non hanno bisogno di tenere conto di ambiguità (contrario di univocità).
-
-#linguaggio
-Molti termini dei linguaggi di programmazione sono presi da lingue naturali, perlopiù dall’inglese. È per questo che in C troviamo “if() else” e non “profl()”, semplicemente fa comodo a noi perché è una parola familiare.
-
-Ci sono linguaggi compilati e linguaggi interpretati.
-Nei linguaggi compilati, come il C, viene prima controllato il codice per vedere se ha un significato logico, poi viene tutto tradotto in linguaggio macchina, e poi viene eseguito.
-Nei linguaggi interpretati, si traduce, si esegue, traduci, esegui, sul momento.
-I linguaggi interpretati erano passati di moda, ma poi python li ha salvati.
 ## Settimana 3
 
-#linguaggio
-L’architettura dei computer di oggi non è quella di 70 anni fa.
-Abbiamo preferito adattare la programmazione ai nostri cervelli piuttosto che il contrario.
 
-Ci sono tre tipi di linguaggi:
-Linguaggi naturali: hanno circa 40mila parole, spesso di significato ambiguo, che è la parte difficile, ma la punteggiatura si può usare “a orecchio”;
-Linguaggi formali di alto livello: la parte difficile è che hanno regole strette, ma hanno circa 30 o 40 parole, e assecondano l’essere umano;
-Linguaggi formali di basso livello: hanno regole strette e poche parole, ma non assecondano l’essere umano e sono più simili al linguaggio macchina.
-Ci sono anche altri elementi, come l’ortografia, la sintassi e il lessico.
-
-In generale, i linguaggi umani hanno un lessico complesso ma sintassi semplice, mentre i linguaggi di programmazione hanno un lessico semplice, con pochissime parole chiave, e una sintassi complessa con regole strette.
-
-Un neonato conosce poche parole. Sa esprimere concetti, ma sono concetti semplici espressi in modo semplice.
-
-Si creano nuovi linguaggi di programmazione per adattarsi alle nuove caratteristiche delle macchine.
 
 #linguaggio #storia #generale #boh
 Turing: Può esserci una macchina ideale che può risolvere qualsiasi problema.
@@ -203,46 +85,6 @@ Macchina di Turing: Macchina con un foglio di carta infinitamente lungo.
 Se un linguaggio di programmazione permette di risolvere qualsiasi problema è Turing-compatibile.
 I primi programmi Turing-compatibili furono scritti in assembly.
 
-#linguaggio
-Quando programmiamo in un linguaggio di alto livello, creiamo un programma che da solo è inutilizzabile, in quanto non c’è una macchina che possa comprenderlo: non è il linguaggio macchina di nessuna macchina.
-Serve dunque un processo di traduzione.
-
-“int main() …” è comprensibile per un essere umano.
-“10110100101110100” è comprensibile per un computer.
-Dobbiamo trovare un codice in linguaggio macchina che sia equivalente, cioè che abbia lo stesso contenuto semantico, del nostro codice in linguaggio di alto livello.
-Se facciamo un programma in pascal, e facciamo un programma windows, un programma mac, e uno linux che siano equivalenti al nostro originale, e dunque, per proprietà transitiva, equivalenti tra di loro.
-
-Spesso bisogna aggiustare qualcosa nell’adattare un programma ad altri sistemi operativi, ma grazie ai linguaggi ad alto livello non bisogna cambiare molto.
-
-Ci sono due tipi di errore: un errore di compilazione è dovuto a un codice scritto male, un errore al runtime è dovuto a un ragionamento sbagliato.
-C’è un tipo di file, un programma oggetto (file.o), scritto in linguaggio macchina, che però non è eseguibile.
-
-#storia
-Java: ‘80-‘90.
-I processori stavano diventando sempre più piccoli, si cominciò a pensare di metterli negli elettrodomestici.
-Il codice in Java viene prima compilato in bytecode, linguaggio universale, che poi viene interpretato sul momento in linguaggio macchina, quasi parola per parola.
-Java si usa molto e funziona molto bene per cose programmabili che non sono esattamente computer, come le lavatrici e i navigatori.
-
-#linguaggio
-Grazie ai linguaggi di alto livello, non devo più sprecare tempo a capire il linguaggio macchina, basta risolvere il problema logico.
-Nuovo problema: come ragiona l’essere umano?
-Scomponiamo un problema in tanti problemi piccoli.
-Lo facciamo sempre istintivamente, la nostra mente funziona così.
-Scomponiamo un’azione in singoli passaggi, e i passaggi in piccoli movimenti.
-
-Per convenzione, qui si scrive da sinistra a destra.
-Se la programmazione fosse nata 1000 anni fa, quando i più colti erano gli arabi, programmeremmo da destra a sinistra.
-I programmatori arabi sanno adattarsi a scrivere sia un una direzione che nell’altra.
-
-Se ti dico “fai 12 passi”, non fai lo stesso passo 12 volte, ti “muovi”, perché cambi la condizione di partenza (lo stato del sistema).
-
-Un linguaggio di programmazione deve poter:
-Descrivere le istruzioni in modo ordinato;
-Selezionare tra due branche di codice secondo una condizione;
-Iterare dei comandi cambiando lo stato iniziale;
-Noi lo facciamo sempre, ma senza formalizzare questi passaggi.
-Nei linguaggi di programmazione introduci costrutti che fanno queste tre cose.
-I programmi hanno un punto di inizio e almeno uno di fine.
 
 #linguaggio #storia
 Una domanda non aveva risposta fino al ‘66: I linguaggi di alto livello hanno la stessa capacità espressiva che ha l’assembly?
@@ -250,7 +92,7 @@ Corrado Böhm (uno dei fondatori dell’informatica in Italia) e il laureando Ja
 Programmare sempre in assembly non è dunque obbligatorio.
 Programmazione strutturata.
 
-#linguaggio
+#linguaggio #boh
 
 1. Metodologia:
 Comprensione del problema
@@ -277,21 +119,12 @@ Prendiamo il programma
 Descriviamolo come una funzione
 Descriviamone la semantica funzionale
 
-#termine
-Programma: una serie ordinata di cambiamenti di stato, che porta dallo stato iniziale, costituito solo dai dati di ingresso, a uno stato finale costituito dai dati di uscita.
+
+#boh
 
 
 Prima dei linguaggi di programmazione, si conservavano valori direttamente in un indirizzo, ma quali dipendeva dall’architettura della macchina.
 Ora invece astraiamo, usiamo nomi, e il singolo computer deciderà cosa farne.
-
-#termine
-Tavola dei simboli: Associa i nomi delle variabili (astratte) a degli indirizzi di memoria. Associa il modo in cui sono memorizzati i valori nel codice a come sono immagazzinati nella RAM, la memoria ad accesso casuale.
-La tavola dei simboli è riempita dal compilatore, solo il compilatore sa com’è fatta.
-
-#storia
-Perché si chiama “ad accesso casuale”?
-Le prime memorie di massa erano nastri: se ti serve l’indirizzo 50, devi scorrere dall’inizio fino al 50. È molto lento, ma va bene per immagazzinare dati.
-Serve anche un modo per accedere ai dati velocemente, e la RAM può andare direttamente all’indirizzo 50 senza scorrere tutta la memoria, può leggere il valore appena mi serve.
 
 #boh #algoritmi
 Le variabili sono dentro una macchina astratta e sono esse stesse astratte.
@@ -304,40 +137,6 @@ Io, l’utente, conosco l’input, l’output, ma non conosco ciò che c’è in
 Fisicamente, le variabili sono immagazzinate in ordine casuale.
 Se dichiaro tre variabili x, y e z, può anche essere che si trovino agli indirizzi 679, 536 e 892.
 Un po’ di storia.
-
-#storia
-I primi linguaggi di programmazione furono:
-Fortran (formula translation): primo linguaggio con un compilatore;
-Lisp (list processor): primo linguaggio interpretato, circa ‘56. 
-
-#termine
-Sistema Operativo (OS): insieme di funzionalità di base per far funzionare un computer.
-
-#storia
-Il linguaggio C nasce alla fine degli anni ‘60, nel periodo dei primi tentativi di utilizzo di ARPAnet, alla Bell corporation: si sapeva già che le telecomunicazioni non erano destinate ad essere solo audio, ma anche altro.
-Volevano fare un OS unificato per tutte le macchine nuove.
-All’epoca sembrava impossibile programmare un OS con un linguaggio ad alto livello, venivano programmati sempre in assembly, ma fare un programma che si adatti a più macchine è esattamente lo scopo dei linguaggi ad alto livello.
-Serviva dunque un linguaggio di programmazione ad alto livello.
-Questo sembrava un progetto folle.
-A un linguaggio di programmazione di alto livello serve un compilatore, un programma molto più semplice di un sistema operativo. Basta dunque fare i diversi compilatori in assembly.
-
-Il prossimo passo è fare il linguaggio.
-C’era già chi stava lavorando a un linguaggio di programmazione alla Bell, si chiamava B.
-Hanno deciso di adattare B al compilatore, quindi potevano adattare anche il compilatore.
-Con grande fantasia, questa versione modificata di B venne chiamata C.
-
-I mainframe tennero i loro OS proprietari.
-
-Unix e C vennero sviluppati su PDP 11, un computer relativamente piccolo ed economico.
-L’idea era di usare C per fare Unix, e poi abbandonarlo.
-Però C piacque.
-C’erano molti sviluppatori di linguaggi a basso livello che si rifiutavano di passare a linguaggi ad alto livello, ma C era un’ottima via di mezzo tra i due, che offriva la comodità dell’alto livello ma la totale libertà dell’assembly.
-C, pur essendo ad alto livello, aveva bisogno della libertà dell’assembly perché, dovendo compilare un sistema operativo, doveva avere completo accesso alla macchina e a tutti gli elementi dell’OS.
-Questo fece incuriosire gli sviluppatori di assembly, che passarono a C.
-
-Ancora oggi, 51 anni dopo, C è uno dei linguaggi più utilizzati e per questo, sebbene sia uno strumento troppo potente per dei principianti, è quello utilizzato nell’istruzione.
-
-A dire il vero, professor Scateni preferisce Pascal come linguaggio per insegnare, ma nessuno conosce Pascal, e ancora meno persone lo usano.
 ## Settimana 4
 #standard #boh #storia
 Un linguaggio di programmazione è qualcosa che dovrebbe essere standardizzato.
@@ -352,28 +151,6 @@ Gli standard de facto sono come se, esempio assurdo, ci fossero tante marche di 
 Gli standard del C sono sempre più simili al precedente, perché sarebbe un disastro se qualcosa che funziona in un vecchio codice improvvisamente smettesse di funzionare.
 Un altro esempio di standard de facto è la posizione della leva della freccia a sinistra del volante: non c’è nessuna legge che lo impone, ma sarebbe orrendo se dovessi abituarti alla configurazione di ciascuna nuova macchina che guidi.
 Perciò i linguaggi derivati dal C hanno tenuto molti elementi del C: Java, Per, C++, C#, quindi se sai il C, puoi imparare facilmente i suoi derivati.
-
-#linguaggio
-Non esiste il concetto di “questo si può programmare solo in C/C++/C#/JS/Java/…”.
-Esiste “questo è più facile da programmare in C/…”. Al tuo datore di lavoro non importa.
-
-C ha caratteristiche dei linguaggi di basso livello che non ci aspettiamo da uno ad alto livello.
-C può accedere a certe parti dell’architettura della macchina che non dovrebbero essere accessibili ai linguaggi ad alto livello.
-Vi può accedere perché dovevano farci un sistema operativo.
-Ma per questo motivo, C non è 100% portabile.
-Il programmatore ha “troppo potere”, quindi C è più adatto agli esperti.
-C di base non può neanche gestire input e output, usa delle librerie per farlo.
-Eppure, è il primo linguaggio che si insegna, perché lo usano tutti.
-(Questo ci porta alla differenza tra istruzioni del linguaggio e istruzioni delle librerie, più tardi)
-
-Secondo il professor Scateni, Pascal è un ottimo linguaggio per uso didattico.
-C’è solo un problema con Pascal: è inutile.
-Non lo usa nessuno.
-C si usa perché è utile, è molto usato e lo sono anche i suoi derivati, è pieno di ottimi compilatori di C, quindi c’è poco da cambiare per il porting.
-
-#storia
-Linux è stato fatto praticamente da una persona, Linus Pauling, sulla base di Unix.
-L’idea: portare Unix ai personal computer (che ormai è una sottocategoria obsoleta)
 
 #linguaggio #boh #goodpractice
 Donald Knuth ha fatto TeC, da cui deriva LaTeC.
@@ -392,92 +169,11 @@ O manca qualcosa nel commento, quindi è incompleto;
 O il commento è innecessariamente lungo, quindi è ridondante.
 Il commento è completamente ignorato dal compilatore.
 
-Il compilatore capisce se la sintassi è giusta. Solo la sintassi.
 
-#linguaggio
-Si può descrivere la sintassi di un linguaggio naturale (vedi anche slide).
-Lo stesso si può fare per un linguaggio formale, e c’è una notazione specifica per farlo.
-BNF: Backus e Naur si sono resi conto che serviva un sistema.
-\<reale> e \<cifra> sono categorie sintattiche.
-“blu”, “ligneo”, “3” eccetera sono simboli terminali.
-Per esempio:
-\<attribuzione> ::= \<gruppo_nominale> è \<aggettivo>;
-\<aggettivo> ::= blu|rosso|basso|ligneo|…;
-Dove “::=“ significa “può essere” e “|” significa “o”, la congiunzione.
-L’insieme delle regole della sintassi di una lingua è detto grammatica.
-[Regole dalle slide]
-Per costruire una frase partiamo dal basso (voglio un reale) e andiamo in alto (32.21).
-
-|         3         |    2     |  .  |         2         |    1     |
-| :---------------: | :------: | :-: | :---------------: | :------: |
-|     \<cifra>      | \<cifra> |  .  |     \<cifra>      | \<cifra> |
-| \<sequenza_cifre> |    <     |  .  |     \<cifra>      | \<cifra> |
-| \<sequenza_cifre> |    <     |  .  | \<sequenza_cifre> |    <     |
-|     \<reale>      |    <     |  <  |         <         |    <     |
-
-
-12 non è un reale.
-È così che il compilatore decide come tradurre un numero da caratteri a linguaggio macchina (vedi FDI, rappresentazione dei numeri interi e razionali).
-Lessico: insieme dei simboli e dei termini.
-
-I modelli linguistici generativi generano linguaggio da:
-Sintassi;
-Vocabolario;
-Informazioni esterne.
-[Vedi slide col diagramma ad albero etc]
-G=(T, N, P, S)
-
-
-#vedioriginale
-Sintassi
-Semantica
-La tenda
-V
-V
-Lo tenda
-V
-X
-
-”Lo tenda” al compilatore va bene, siamo noi che dobbiamo controllare la semantica.
-Secondo la sintassi, “lo tenda” è giusto perché è “\<articolo> \<nome>”.
 
 ## Settimana 5
 
-#linguaggio
-Una frase di senso compiuto è una frase il cui significato è contenuti nella frase stessa.
-Abbiamo imparato il nostro linguaggio naturale copiando gli altri e poi imparando le regole.
-Per fortuna, per imparare i linguaggi di programmazione non si fa così, si studia prima tutta la parte formale, e poi si comincia a usarlo.
-Costruiamo una frase, che nei linguaggi di programmazione è un programma.
-Quando abbiamo solo simboli terminali abbiamo finito di costruire la frase.
-“La tenda” e “lo tenda” sono entrambi sintatticamente corretti.
-Ma, il secondo non ha senso semantico.
 
-Nella programmazione, la parte facile è correggere la sintassi, quella difficile è controllare che la semantica sia corretta, cioè ciò che voglio.
-Non c’è semantica oggettivamente corretta, dipende da cosa voglio che faccia.
-Alla sintassi ci pensa il compilatore.
-Come si fa per la semantica?
-Si controllano tutte le combinazioni input-output?
-Certo, ma no, questo metodo è solitamente impossibile.
-Inferno. Non c’è una risposta, mi dispiace.
-Il compito di un bravo compilatore è fare un programma che sia facile da testare.
-C’è tutto un ramo di studi per questa cosa.
-
-Per la sintassi, usiamo un grafo sintattico. [vedi slide]
-È ancora più facile imparare il lessico.
-È il contrario delle lingue naturali, dove la sintassi è semplice e il lessico è difficile.
-Gli identificatori, essendo stati scelti dai progettatori dei del linguaggio di programmazione, non possono essere usati dal programma stesso.
-Gli identificatori (o nomi) sono le parole del linguaggio. In C ce ne sono 33.
-Tutti i linguaggi di programmazione sono così. Quello con più parole è Ada, sviluppato negli anni ‘70 dalla difesa statunitense per essere il miglior linguaggio per la sicurezza. Oggi lo usano solo loro. È il linguaggio con più parole riservate e ne ha 110.
-Tra l’altro, in C ci sono più operatori che identificatori. Alcuni sono inutili per noi però.
-
-Quando il compilatore vede “/\*”, ignora tutto e cerca un “\*”. Se lo trova, se dopo c’è un “/“, riprende a compilare, altrimenti continua a ignorare.
-Questo testo, ignorato dal compilatore, racchiuso tra “/\*” e “\*/“, si chiama commento.
-
-{
-	etc…
-}
-
-Questo, racchiuso tra parentesi graffe, è un blocco di codice
 
 #boh #linguaggio
 C è particolare, in quanto non ha istruzioni proprie per l’input e l’output, deve invece usare istruzioni di librerie esterne. Il primo programma che si fa vedere agli studenti (Hello World), non ha funzioni del linguaggio C. (Diciamo, ci sono nella definizione di printf()).
@@ -523,18 +219,7 @@ Quando l’IA era ancora seria, senza media, senza Elon Musk, si usava Lisp.
 Se rappresenti dati e programmi nello stesso modo, allora puoi outputtare programmi (programmi in Lisp) e questo fu chiamato machine learning: un programma che può modificare sé stesso.
 ## Settimana 6
 
-#linguaggio
-Calx (sasso) -> calculus (sassolino) -> calcolo renale, calcolo (sassolino dell’abaco).
-Anche adesso, anche coi computer, calcolare è contare.
-“Il computer sa fare…” = La macchina è progettata per fare…
 
-Mettere gli operatori infissi non è legge, è convenzione.
-Se li mettessimo prefissi o postfissi, non servirebbero le parentesi, non servirebbe la precedenza degli operatori, si leggerebbe sempre da sinistra a destra.
-La precedenza degli operatori è una proprietà implicita.
-Se esiste, complichi la realizzazione del compilatore.
-
-Il C nasce per avere un compilatore semplice, eppure ha operatori infissi.
-Più si va avanti, più i linguaggi di programmazione si fanno simili al linguaggio umano.
 
 #boh
 Ricorda che la divisione tra interi ha due risultati, anche se lo dimentichiamo.
