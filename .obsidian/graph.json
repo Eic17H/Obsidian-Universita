@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "file:Indice",
@@ -29,126 +29,126 @@
       }
     },
     {
-      "query": "path:Comune ",
+      "query": "path:Comune/",
       "color": {
         "a": 1,
         "rgb": 8026746
       }
     },
     {
-      "query": "path:PR1  ",
+      "query": "path:PR1/",
       "color": {
         "a": 1,
         "rgb": 14725458
       }
     },
     {
-      "query": "path:FDI  ",
+      "query": "path:FDI/",
       "color": {
         "a": 1,
         "rgb": 11657298
       }
     },
     {
-      "query": "path:RDC  ",
+      "query": "path:RDC/",
       "color": {
         "a": 1,
         "rgb": 15833374
       }
     },
     {
-      "query": "path:SO  ",
+      "query": "path:SO/",
       "color": {
         "a": 1,
         "rgb": 5431378
       }
     },
     {
-      "query": "path:PR2  ",
+      "query": "path:PR2/",
       "color": {
         "a": 1,
         "rgb": 5431473
       }
     },
     {
-      "query": "path:FPW  ",
+      "query": "path:FPW/",
       "color": {
         "a": 1,
         "rgb": 5419488
       }
     },
     {
-      "query": "path:BDD  ",
+      "query": "path:BDD/",
       "color": {
         "a": 1,
         "rgb": 5395168
       }
     },
     {
-      "query": "path:ASD  ",
+      "query": "path:ASD/",
       "color": {
         "a": 1,
-        "rgb": 11621088
+        "rgb": 9868543
       }
     },
     {
-      "query": "path:ALF",
+      "query": "path:ALF/",
       "color": {
         "a": 1,
         "rgb": 11331382
       }
     },
     {
-      "query": "path:AM ",
+      "query": "path:AM/",
       "color": {
         "a": 1,
         "rgb": 5431378
       }
     },
     {
-      "query": "path:ASD ",
+      "query": "path:ASD/",
       "color": {
         "a": 1,
         "rgb": 5431473
       }
     },
     {
-      "query": "path:ARE  ",
+      "query": "path:ARE/",
       "color": {
         "a": 1,
         "rgb": 5419488
       }
     },
     {
-      "query": "path:FeMS  ",
+      "query": "path:FeMS/",
       "color": {
         "a": 1,
         "rgb": 5395168
       }
     },
     {
-      "query": "path:EED  ",
+      "query": "path:EED/",
       "color": {
         "a": 1,
         "rgb": 5395168
       }
     },
     {
-      "query": "path:DEM  ",
+      "query": "path:DEM/",
       "color": {
         "a": 1,
         "rgb": 5395121
       }
     },
     {
-      "query": "path:CSMN  ",
+      "query": "path:CSMN/",
       "color": {
         "a": 1,
         "rgb": 10421252
       }
     },
     {
-      "query": "path:MD",
+      "query": "path:MD/",
       "color": {
         "a": 1,
         "rgb": 14701233
@@ -161,10 +161,10 @@
   "nodeSizeMultiplier": 1.17664359861592,
   "lineSizeMultiplier": 2.80432525951557,
   "collapse-forces": false,
-  "centerStrength": 0.732848232848233,
-  "repelStrength": 14.7401247401247,
+  "centerStrength": 0.849272349272349,
+  "repelStrength": 16.4033264033264,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 1.229810218648292,
+  "scale": 0.44628259498503314,
   "close": false
 }

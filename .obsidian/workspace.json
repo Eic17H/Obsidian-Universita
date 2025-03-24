@@ -4,67 +4,63 @@
     "type": "split",
     "children": [
       {
-        "id": "5cc9a4f7e2c7e98d",
+        "id": "f5680c340bf79a5c",
         "type": "tabs",
         "children": [
           {
-            "id": "e45d65a2c658afd7",
+            "id": "087a47d0b6a47564",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PR1/Programmazione 1.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Programmazione 1"
-            }
-          },
-          {
-            "id": "3320c96149931ee4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Indice.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Indice"
-            }
-          },
-          {
-            "id": "078f8b3f6aac7b71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR1/Modulo I/Tipi.md",
+                "file": "ASD/Modulo II/Strutture dati/Alberi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tipi"
+              "title": "Alberi"
             }
           },
           {
-            "id": "abe9795af9d70b08",
+            "id": "6d05f5805da113f5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Comune/Algoritmo di Euclide.md",
+                "file": "ASD/ASD Lab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algoritmo di Euclide"
+              "title": "ASD Lab"
+            }
+          },
+          {
+            "id": "e4c5bcc4fb32ae36",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ASD/ASD Lab.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ASD Lab"
+            }
+          },
+          {
+            "id": "faf598d28e8a77dd",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -220,46 +216,47 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3320c96149931ee4",
+  "active": "faf598d28e8a77dd",
   "lastOpenFiles": [
-    "Pasted image 20250324190527.png",
-    "PR1/Modulo I/Complessità.md",
-    "PR1/Programmazione 1.md",
-    "PR1/Modulo I/PR1I prov.md",
-    "PR1/Modulo I/Tipi.md",
-    "FPW/Laboratorio/HTML e CSS.md",
-    "FPW/Teoria/HTML e form.md",
-    "Pasted image 20250324190528.png",
-    "Comune/Algoritmo di Euclide.md",
-    "PR1/Modulo I/Inferno.md",
-    "PR2/Modulo II/Override.md",
-    "PR2/Modulo II/Ereditarietà.md",
-    "FDI/Fondamenti di Informatica.md",
-    "FDI/File/Virgola mobile.md",
     "PR1/Modulo I/Algoritmi.md",
-    "FDI/File/Basi numeriche.md",
-    "PR1/Modulo I/Subroutine e librerie.md",
-    "PR1/Modulo I/Scope.md",
-    "PR1/Modulo I/Ricorsione.md",
-    "PR1/Modulo I/Programmazione 1 - Modulo I.md",
-    "PR1/Modulo I/Programmazione - Cenni storici.md",
-    "PR1/Modulo I/Linguaggio.md",
-    "PR1/Modulo I/Termini.md",
+    "ASD/Modulo II/Algoritmi.md",
+    "ASD/ASD Lab.md",
+    "ASD/Modulo II/Strutture Dati.md",
+    "ASD/Algoritmi e Strutture Dati.md",
+    "ASD/Modulo II/Strutture dati/Stack.md",
+    "ASD/Modulo II/Algoritmi/Heapsort.md",
+    "ASD/Modulo II/Strutture dati/Coda.md",
+    "ASD/Modulo II/Strutture dati/Alberi.md",
+    "ASD/Modulo II/Strutture dati",
+    "ASD/Modulo II/Algoritmi",
+    "Comune/Algoritmo di Euclide.md",
+    "PR1/Modulo I/Tipi.md",
+    "ASD/Modulo II/Algoritmi/Selection Sort.md",
+    "ASD/Modulo II/Strutture dati/Grafi.md",
+    "ASD/Raw/Appunti vari.md",
+    "ASD/Modulo II/Strutture dati/Heap.md",
+    "ASD/Raw/20240507.md",
+    "ASD/Raw/20240430.md",
+    "ASD/Raw/20240423.md",
+    "ASD/Modulo II/Strutture dati/Liste Lineari Doppiamente Concatenate.md",
+    "ASD/Raw/20240409.md",
+    "ASD/Raw/20240306.md",
+    "ASD/Raw/20240305.md",
+    "ASD/Modulo II/Algoritmi/Ricerca Binaria.md",
+    "ASD/Modulo II.md",
+    "ASD/Modulo II",
+    "FDI/File/Virgola mobile.md",
     "Indice.md",
-    "MD/File/Matrici.md",
-    "ALF/Automi e Linguaggi Formali.md",
-    "Comune/Regex.md",
+    "ASD/Raw",
+    "ASD",
+    "Pasted image 20250324190527.png",
+    "Pasted image 20250324190528.png",
     "ALF/File/IMG_0858.png",
     "ALF/File",
     "RDC/File",
     "RDC",
     "PR2/Modulo I",
     "ALF",
-    "RDC",
-    "CSMN",
-    "EED",
-    "DEM",
-    "FeMS",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-inspect/dist/client/favicon.svg",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg",
