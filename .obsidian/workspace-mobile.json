@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "85de64d2077a5030",
+    "id": "22b89f03bfc79654",
     "type": "split",
     "children": [
       {
-        "id": "8193cfda1b247446",
+        "id": "6560c4b9a4e6df4d",
         "type": "tabs",
         "children": [
           {
-            "id": "87e77ccf7d525997",
+            "id": "c67dfdd966a578b0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "New tab"
             }
           }
         ]
@@ -27,11 +23,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "2c549cc3cfdd24a0",
+    "id": "b2c4a2834b4e99a0",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "47c2d05c933de37c",
+        "id": "db5cd4786c01849f",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -44,7 +40,7 @@
         }
       },
       {
-        "id": "40fc2e225992d618",
+        "id": "d8579c202d779028",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -61,7 +57,7 @@
         }
       },
       {
-        "id": "3dd3e8c50c514560",
+        "id": "757791a8768cbba3",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -76,7 +72,7 @@
         }
       },
       {
-        "id": "f82848ccb1d78ffb",
+        "id": "9854cd0e183f9337",
         "type": "leaf",
         "state": {
           "type": "bookmarks",
@@ -89,16 +85,16 @@
     "currentTab": 0
   },
   "right": {
-    "id": "14ab0a47aaf7a817",
+    "id": "5f59bc2cb5988573",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "50bbe0394b66b32f",
+        "id": "9f527a7fc5d2780e",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "README.md",
+            "file": "Untitled.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -112,12 +108,12 @@
         }
       },
       {
-        "id": "99e9a6e28cfaf457",
+        "id": "cdc40fe4667d5f3a",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "SO/Modulo I/Sistemi Operativi - Modulo I.md",
+            "file": "Untitled.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -126,12 +122,12 @@
         }
       },
       {
-        "id": "5d6f972674995208",
+        "id": "e8c668b2f5322be5",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "SO/Modulo I/Sistemi Operativi - Modulo I.md",
+            "file": "Untitled.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -150,13 +146,21 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "87e77ccf7d525997",
+  "active": "c67dfdd966a578b0",
   "lastOpenFiles": [
-    "SO/Modulo I/Sistemi Operativi - Modulo I.md",
+    "README.md",
+    "Untitled.md",
+    "PR1/Programmazione 1.md",
+    "PR2/Programmazione 2.md",
+    "PR2/PR2 Lab.md",
+    "PR2/PR2 Teoria.md",
     "SO/Sistemi Operativi.md",
+    "SO/SO Teoria.md",
+    "SO/SO Lab.md",
     "SO/Modulo II/Sistemi Operativi - Modulo II.md",
     "SO/Modulo II/Linux/Virtual machine.md",
     "SO/Modulo II/Linux/Processi, thread e job.md",
@@ -167,22 +171,14 @@
     "SO/Modulo II/C/Socket in C.md",
     "SO/Modulo II/Bash/Terminale di Linux - cheatsheet.md",
     "SO/Modulo II/Altro/Socket.md",
-    "README.md",
-    "PR2/Programmazione 2.md",
-    "PR2/Modulo II/Override.md",
-    "PR2/Modulo II/Java.md",
-    "PR2/Modulo II/Ereditarietà.md",
-    "PR2/Modulo II/Classi.md",
-    "PR2/Modulo II/Casting.md",
-    "PR1/Programmazione 1.md",
-    "PR1/Modulo I/Termini.md",
-    "PR1/Modulo I/Programmazione 1 - Modulo I.md",
-    "PR1/Modulo I/Programmazione - Cenni storici.md",
-    "PR1/Modulo I/Linguaggio.md",
-    "PR1/Modulo I/Algoritmi.md",
-    "MD/Matematica Discreta.md",
+    "SO/Modulo I/Sistemi Operativi - Modulo I.md",
+    "SO/Modulo I/Introduzione.md",
+    "SO/Modulo I/Architetture di elaborazione.md",
+    "RDC/Reti di Calcolatori.md",
+    "RDC/File/Storia di internet.md",
+    "RDC/File/Protocolli di rete.md",
+    "RDC/File/Non so in che categoria vada.md",
     "FPW/about.html",
-    "FPW/Laboratorio/File.zip",
     "SO/Modulo II/Linux",
     "SO/Modulo II/C",
     "SO/Modulo II/Bash",
@@ -190,6 +186,7 @@
     "SO/Modulo II",
     "SO/Modulo I",
     "SO",
-    "PR2/Modulo II"
+    "RDC/File",
+    "RDC"
   ]
 }
