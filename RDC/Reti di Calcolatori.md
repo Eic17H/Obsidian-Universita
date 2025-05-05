@@ -21,4 +21,6 @@ Questo esame vale 9 cfu. È diviso in sezioni e avremo una domanda per sezione.
 
 Non inventarti schemi. Gli schemi presentati a lezione e presenti nei libri e nelle slide sono quelli che ti farà comodo sapere all'esame.
 
+Non c'è bisogno di prendere appunti. Ascolta la lezione, e leggi il pdf.
+
 #materia 
