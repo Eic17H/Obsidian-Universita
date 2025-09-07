@@ -27,5 +27,6 @@ Vai a lezione. Il professore e il tutor sono incomprensibili in modi diversi, ma
 Fai i parziali, e studia bene. Questa materia, insieme a FPW, è bene darla subito. I parziali che fallisci vengono accorpati all'orale.
 Tutti i materiali di studio ufficiali sono tremendi. Un ex studente ha fatto un libro migliore, trovi il PDF su Discord. Sostituisce ciò che sarebbe potuta essere questa guida, quindi anziché un riassunto degli appunti qui ci saranno concetti chiave per le domande a risposta aperta.
 Studia subito. Comincia a studiare il primo giorno disponibile.
+Non c'è bisogno di prendere appunti. Ascolta la lezione, e leggi il pdf.
 
 #materia 

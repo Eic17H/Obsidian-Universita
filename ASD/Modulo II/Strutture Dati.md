@@ -1,6 +1,6 @@
 * [[Coda]]
 * [[Stack]]
-* [[Liste Lineari Doppiamente Concatenate]]
+* [[Liste]]
 * [[Alberi]]
 * [[Heap]]
 * [[Grafi]]

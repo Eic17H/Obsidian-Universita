@@ -4,7 +4,7 @@ Abbiamo una classe `Studente` e una classe `Docente`.
 * Studente ha gli attributi `nome`, `cognome`, `età`, `matricola` e `anno di iscrizione`.
 * Docente ha gli attributi `nome`, `cognome`, `età` e `insegnamento`.
 
-Molti sono ripetuti. Anziché scriverli due volte, e dover fare tutte le funzioni due volte, e le modifiche, usiamo il <span class="pink">*polimorfismo*</span>.
+Molti sono ripetuti. Anziché scriverli due volte, e dover fare tutte le funzioni due volte, e le modifiche, usiamo il *<span class="pink"><i>polimorfismo</i></span>.
 Creiamo una classe `Persona`, che ha `nome`, `cognome` ed `età`, con i metodi `set()` e `get()` e facciamo *ereditare* tutto questo alle altre due classi.
 
 `Persona` è la superclasse, `Studente` e `Docente` sono sottoclassi.
