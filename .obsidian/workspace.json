@@ -11,13 +11,46 @@
             "id": "658397ea8f3ad4ca",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "SO/Modulo II/C/Tutto C SO.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Tutto C SO"
+            }
+          },
+          {
+            "id": "c40d3484178b32da",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IUM/Lab/20250929.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "20250929"
+            }
+          },
+          {
+            "id": "3953140577a6b679",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IUM/Lab/20250929.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "20250929"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -175,8 +208,12 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "658397ea8f3ad4ca",
+  "active": "3953140577a6b679",
   "lastOpenFiles": [
+    "SO/Modulo II/C/Tutto C SO.md",
+    "IUM/Lab/20250929.md",
+    "IUM/Lab",
+    "IUM",
     "FPW/Teoria/Search Engine Optimization.md",
     "FPW/Laboratorio/HTML e CSS.md",
     "ALF/File/OCaml.md",
@@ -202,8 +239,6 @@
     "FPW/Fondamenti di Programmazione Web.md",
     "FPW/FPW Lab.md",
     "FPW/FPW Teoria.md",
-    "FPW/Teoria/HTML e form.md",
-    "FPW/Teoria/HTTP.md",
     "FPW/Laboratorio/Indici",
     "FPW/Laboratorio/Express",
     "FPW/Laboratorio/HTML e CSS",
@@ -211,8 +246,6 @@
     "FPW/Laboratorio/SQL",
     "CSMN/Lab",
     "CSMN/Teoria",
-    "CSMN",
-    "PR1/Modulo I/Test",
     "Pasted image 20250324190527.png",
     "Pasted image 20250324190528.png",
     "ALF/File/IMG_0858.png",
