@@ -1,11 +1,11 @@
 {
-  "collapse-filter": false,
+  "collapse-filter": true,
   "search": "-file:Indice",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "file:Indice",
@@ -148,6 +148,13 @@
       }
     },
     {
+      "query": "path:IUM",
+      "color": {
+        "a": 1,
+        "rgb": 9649857
+      }
+    },
+    {
       "query": "path:MD",
       "color": {
         "a": 1,
@@ -165,6 +172,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.4807212797763146,
+  "scale": 0.5023077747525948,
   "close": false
 }

@@ -4,81 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5cc9a4f7e2c7e98d",
+        "id": "e4a7e01fe16cece4",
         "type": "tabs",
         "children": [
           {
-            "id": "1f0a8faadde21f64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SO/Modulo II/Altro/Socket.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Socket"
-            }
-          },
-          {
-            "id": "996faed8c9b3aa19",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FPW/Teoria/HTML e form.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "HTML e form"
-            }
-          },
-          {
-            "id": "23af8cf2d2b7103d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FPW/Fondamenti di Programmazione Web.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Fondamenti di Programmazione Web"
-            }
-          },
-          {
-            "id": "4d20f08fd2b20e0c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FPW/FPW Teoria.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "FPW Teoria"
-            }
-          },
-          {
-            "id": "682eefc20a96d5d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Comune/Regex.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Regex"
-            }
-          },
-          {
-            "id": "0a0db16be105e254",
+            "id": "c10e03a86cdd8405",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -92,21 +22,35 @@
             }
           },
           {
-            "id": "1ec38b68fa3d7a25",
+            "id": "65831fba7c89998f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PR2/PR2 Teoria.md",
+                "file": "IUM/Interazione Uomo-Macchina.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PR2 Teoria"
+              "title": "Interazione Uomo-Macchina"
             }
           },
           {
-            "id": "e3e58812f3b9ccd9",
+            "id": "42be4bf210ae6ed2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IUM/IUM Lab.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "IUM Lab"
+            }
+          },
+          {
+            "id": "bb9f8a9466f9fe49",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -114,65 +58,9 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
-          },
-          {
-            "id": "658ab1663e63af1d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RDC/File/Storia di internet.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Storia di internet"
-            }
-          },
-          {
-            "id": "a5128feef6fc627b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FDI/File/Basi numeriche.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Basi numeriche"
-            }
-          },
-          {
-            "id": "5c2f967a566d38d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Comune/Cambio di base.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cambio di base"
-            }
-          },
-          {
-            "id": "12573cf6cdbb3ec7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PR2/Modulo I/Oggetti e classi.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Oggetti e classi"
-            }
           }
         ],
-        "currentTab": 10
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -319,6 +207,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -328,8 +217,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5c2f967a566d38d4",
+  "active": "bb9f8a9466f9fe49",
   "lastOpenFiles": [
+    "IUM/IUM Lab.md",
+    "IUM/Interazione Uomo-Macchina.md",
+    "IUM/IUM Teoria.md",
+    "PR2/PR2 Lab.md",
+    "PR2/Programmazione 2.md",
+    "PR2/Modulo II/Override.md",
+    "PR2/Modulo II/Ereditarietà.md",
+    "PR2/Modulo II/Java.md",
+    "PR2/Modulo I/Oggetti e classi.md",
+    "PR2/PR2 Teoria.md",
+    "PR2/Modulo II/Classi.md",
+    "IUM/Lab/Introduzione ad Android Studio.md",
+    "Untitled.base",
+    "IUM/Lab",
+    "IUM",
+    "FPW/Teoria/HTML e form.md",
+    "Comune/Cambio di base.md",
     "FDI/File/Basi numeriche.md",
     "SO/Modulo II/Sistemi Operativi - Modulo II.md",
     "SO/Modulo II/Linux/Linux - Cenni storici.md",
@@ -342,20 +248,6 @@
     "SO/Modulo II/Linux/Processi, thread e job.md",
     "RDC/Reti di Calcolatori.md",
     "MD/Matematica Discreta.md",
-    "FDI/Fondamenti di Informatica.md",
-    "Comune/Cambio di base.md",
-    "MD/File/Criteri di divisibilità.md",
-    "Comune/Algoritmo di Euclide.md",
-    "Comune/Regex.md",
-    "RDC/File/Storia di internet.md",
-    "MD/File/Classi di resto.md",
-    "FDI/File/Virgola mobile.md",
-    "FDI/File/Numeri binari.md",
-    "PR1/Modulo I/Algoritmi.md",
-    "FDI/File/Mappe di Karnaugh.md",
-    "ALF/File/OCaml.md",
-    "ALF/File/Logica dei predicati.md",
-    "RDC/File/Non so in che categoria vada.md",
     "ALF/File/IMG_0858.png",
     "ALF/File",
     "RDC/File",
@@ -364,9 +256,6 @@
     "ALF",
     "RDC",
     "CSMN",
-    "EED",
-    "DEM",
-    "FeMS",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-inspect/dist/client/favicon.svg",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg",
