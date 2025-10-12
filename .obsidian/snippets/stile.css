@@ -1,12 +1,19 @@
 .theme-dark {
     --matematica: #7DC8EA;
+    --termine: #7085FF;
 }
 
 .theme-light {
     --matematica: #156082;
+    --termine: #00158F;
 }
 
 .app-container .markdown-preview-view pre.language-note-red code.language-note-red,
 .math {
   color: var(--matematica);
+}
+
+.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
+.termine {
+  color: var(--termine);
 }

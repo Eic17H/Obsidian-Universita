@@ -17,7 +17,7 @@ Programmeremo in aula, di venerdì. Un portatile per due persone.
 Materiale didattico: Elearning, scritti del professore.
 Esame scritto e open book.
 Programmi da 5 righe scritti a mano, senza portatile.
-Note, esercitazioni (Moodle e GitHub). Libro non necessario.
+Note, esercitazioni (Moodle e [[Git|GitHub]]). Libro non necessario.
 Non si fa niente a memoria, è tutto ragionamento.
 C'è un server Discord con il professore.
 

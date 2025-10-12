@@ -92,7 +92,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "clone",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -133,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Comune/Cambio di base.md",
+                "file": "FPW/Laboratorio/Express.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Cambio di base"
+              "title": "Backlinks for Express"
             }
           },
           {
@@ -214,7 +214,8 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "webpage-html-export:Export Vault to HTML": false
     }
   },
   "active": "bb9f8a9466f9fe49",
@@ -262,7 +263,6 @@
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",
     "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png",
     "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",
-    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg",
-    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-inspect/dist/client/favicon.svg"
+    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg"
   ]
 }

@@ -17,8 +17,16 @@ I parziali sono di sabato mattina, durano 20~25 minuti e il voto va da -5 a +10.
 
 Ci sono due libri di riferimento: il Tanenbaum si usa quasi tutto, e poi c'è quello scritto dal professore stesso che ovviamente si usa tutto. Le slide hanno solo informazioni generali. In realtà il Tanenbaum si basa su un contesto americano, ci sono cose che possono essere diverse qui e in quei casi il professore ci avverte.
 
-Questo esame vale 9 cfu. È diviso in sezioni e avremo una domanda per sezione.
+Questo esame vale 9 cfu. È diviso in sezioni e avremo una domanda per sezione. (?)
 
 Non inventarti schemi. Gli schemi presentati a lezione e presenti nei libri e nelle slide sono quelli che ti farà comodo sapere all'esame.
+
+## Consigli sul corso
+
+Vai a lezione. Il professore e il tutor sono incomprensibili in modi diversi, ma se segui entrambi capisci.
+Fai i parziali, e studia bene. Questa materia, insieme a FPW, è bene darla subito. I parziali che fallisci vengono accorpati all'orale.
+Tutti i materiali di studio ufficiali sono tremendi. Un ex studente ha fatto un libro migliore, trovi il PDF su Discord. Sostituisce ciò che sarebbe potuta essere questa guida, quindi anziché un riassunto degli appunti qui ci saranno concetti chiave per le domande a risposta aperta.
+Studia subito. Comincia a studiare il primo giorno disponibile.
+Non c'è bisogno di prendere appunti. Ascolta la lezione, e leggi il pdf.
 
 #materia 

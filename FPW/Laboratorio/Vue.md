@@ -10,7 +10,7 @@ Apri il prompt dei comandi
 * `node -v`
 * `npm -v`
 
-Se ti dà le versioni v22.14.0 e 10.9.2 ha funzionato. Altrimenti prova https://nodejs.org/en/download.
+Se ti dà le versioni v22.14.0 e 10.9.2 ha funzionato. Altrimenti prova [nodejs.org/en/download](https://nodejs.org/en/download).
 
 ## Estensioni di VSCode
 

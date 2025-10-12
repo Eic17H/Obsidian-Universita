@@ -4,6 +4,6 @@
 * [[Criteri di divisibilità]]
 * [[RSA]]
 * [[Cambio di base#Mossa|Cambio di base]]
-* [[Matrici]]
+* [[MD/File/Matrici]]
 
 #materia
