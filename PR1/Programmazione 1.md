@@ -1,6 +1,6 @@
 ## Modulo I
 ### Indice
-* [[PR1/Modulo I/Algoritmi]]
+* [[PR1/Modulo I/Algoritmi|Algoritmi]]
 * [[Tipi]]
 * [[Subroutine e librerie]]
 * [[Scope]]
