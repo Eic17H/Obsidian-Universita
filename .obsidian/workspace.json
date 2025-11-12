@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BD-20251028.md",
+                "file": "BD/Lab/20251111.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BD-20251028"
+              "title": "20251111"
             }
           }
         ],
@@ -196,9 +196,16 @@
   },
   "active": "d51c84187202348b",
   "lastOpenFiles": [
+    "BD/Teoria/20251111.md",
+    "BD/Lab/20251111.md",
+    "LiP-20251029.md",
+    "IUM-20251103.md",
+    "DB-20251028.md",
+    "BD-20251104.md",
+    "BD-20251029.md",
+    "BD-20251028.md",
     "PR1/Modulo I/Ricorsione.md",
     "PR1/Modulo I/Scope.md",
-    "BD-20251028.md",
     "Untitled 1.md",
     "LiP-20251022.md",
     "IUM-20251027.md",
@@ -216,15 +223,8 @@
     "IUM-20251015.md",
     "(appunti raw)/PR2-20250513.md",
     "(appunti raw)/PR2-20250512.md",
-    "(appunti raw)/FPW-20250515.md",
-    "BD/Lab/20250930.md",
-    "IUM/Lab/20250929.md",
-    "SO/Modulo II/C/Tutto C SO.md",
     "IUM/Lab",
     "IUM",
-    "FPW/Teoria/Search Engine Optimization.md",
-    "FPW/Laboratorio/HTML e CSS.md",
-    "ALF/File/OCaml.md",
     "(appunti raw)",
     "FPW/Laboratorio/Indici",
     "FPW/Laboratorio/Express",
