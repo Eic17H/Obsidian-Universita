@@ -71,3 +71,35 @@ In logica classica, che è la prima che vedremo, le uniche congiunzioni che meri
 Esistono in grammatica congiunzioni non verofunzionali? Sì. "Perché". "Giovanni ha i capelli bagnati perché piove". Oggi ha i capelli bagnati e piove, la proposizione è vera? Magari si è fatto la doccia, chissà. Non possiamo saperlo. Come ci poniamo di fronte a questa sfida? O ci inventiamo una logica che consente di trattare questi casi, o prendiamo queste congiunzioni e le escludiamo dalla logica. Noi adoperiamo il secondo metodo.
 
 Associatività. Una congiunzione ha due congiunti, mai tre. Però uno dei congiunti può esso stesso essere una congiunzione. "Piove e c'è freddo e c'è vento", "piove e c'è freddo" è un congiunto.
+
+"Piove, c'è freddo e c'è vento", la congiunzione è lessicalizzata con la virgola. "Piove, c'è freddo o c'è vento", la virgola invece lessicalizza la disgiunzione. "Giovanni e Maria sono italiani", velatamente anche qui c'è una congiunzione, "Giovanni è italiano e Maria è italiana". "Giovanni e Maria sono colleghi", qui "e" non lessicalizza alcun connettivo, non ce ne sono.
+
+Tornando a Frege, per questo motivo i padri della logica decisero di usare un linguaggio formale, per evitare quest'altro problema, l'ambiguità.
+
+# Principî
+
+I connettivi sono verofunzionali, se non è verofunzionale non è un connettivo. Principio di vfnznltà.
+
+Principio di bivalenza, implicito, esistono solo due valori di verità, vero e falso.
+
+Questi sono principi indipendenti, possiamo creare logiche con solo uno dei due o nessuno. La logica classica li accetta entrambi. Vedremo logiche solo verofunzionali. Logica trivalente, con il "non so", logiche infinitovalenti. Logiche non verofunzionali.
+
+In logica classica, con classico non si intende come in letteratura classica, non c'entrano i greci e i latini, non è logica antica, non studiamo Aristotele :(, semplicemente è la prima formale ma è moderna.
+
+# Altro
+
+Richard Montague. Fu allievo di Alfred Tarski. Creò una logica al limite tra la logica e la linguistica, o almeno un precursore, molto interessante. America degli anni 50, era omosessuale, fu assassinato in un night club e non fu fatta luce sul caso. Grammatica di Montague, una disciplina.
+
+# Formalizzazione
+
+Simboli. Inizialmente per abbreviare, poi per eliminare ambiguità e vaghezza.
+
+Per la congiunzione, la Λ che non ho nella tastiera. Disgiunzione V, implicazione ->, doppia implicazione \<->, negazione ¬.
+
+Con le lettere p e q possiamo indicare degli enunciati, e da lì "p V q" eccetera.
+
+E anche "¬ p v (p -> q)", non piove, o se piove c'è vento. Parentesi, come nell'algebra.
+
+# Mercoledì
+
+Preciseremo le condizioni di verità degli enunciati complessi (tavole di verità).i
