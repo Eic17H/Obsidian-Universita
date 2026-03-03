@@ -19,10 +19,9 @@
 
 * [[Sistemi Operativi]]
 * [[Automi e Linguaggi Formali]]
-* [[Dati e Modelli]]
+* [Dati e Modelli](https://midnight-orchid-79e.notion.site/Dati-e-modelli-6b9dfb9394644449a2d8574d71e7208c)
 * [[Diritto]]
 * [[Economia]]
-
 ## Semestre 2
 * [[Programmazione 2]]
 * [[Fondamenti di Programmazione Web]]

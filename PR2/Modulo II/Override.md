@@ -2,7 +2,7 @@ Facciamo l'override quando abbiamo un metodo generico nella [[Ereditarietà|supe
 
 Magari abbiamo una superclasse conto che ha un metodo `prelievo()`, e vogliamo che nella sottoclasse `contoCorrente` la stessa funzione faccia le stesse cose, con l'aggiunta del fatto che deve tenere traccia di quanti prelievi si fanno.
 
-In questo caso, si fa una classe con la stessa firma, si chiama il metodo `super.prelievo()`, e si aggiungono le istruzioni che servono.
+In questo caso, si fa una classe **con la stessa firma**, si chiama il metodo `super.prelievo()`, e si aggiungono le istruzioni che servono.
 
 Si aggiunge il decoratore `@Override`, così il compilatore ci avverte se non abbiamo dato la stessa firma al metodo della sottoclasse.
 

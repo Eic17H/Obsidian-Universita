@@ -35,7 +35,7 @@ Se non hai i permessi di eseguire script, prova come amministratore. Segui le is
 
 * `cd CineVUE`
 * `npm install`
-* `npm run format`
+* `npm run format` (se hai messo Prettier)
 * `npm run dev`
 
 Ci dà un url, http://localhost:5173/, che ci porta a una demo di Vue.

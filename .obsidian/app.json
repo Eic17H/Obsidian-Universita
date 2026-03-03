@@ -1,5 +1,12 @@
 {
   "alwaysUpdateLinks": true,
   "readableLineLength": true,
-  "showLineNumber": false
+  "showLineNumber": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }
