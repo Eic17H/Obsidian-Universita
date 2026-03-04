@@ -19,3 +19,5 @@ Waterfall aveva un po' di problemi di irreversibilità. Il modello a V tentò di
 I quadri sono dipinti in maniera iterativa. Gli affreschi sono, appunto, dipinti a fresco, e quindi si fanno in maniera incrementale. Vedi slide.
 
 Ho il tablet scarico le slide sufficiono.
+
+Modelli evolutivi: Prototyping.
