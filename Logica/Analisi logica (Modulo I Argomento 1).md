@@ -100,6 +100,115 @@ Con le lettere p e q possiamo indicare degli enunciati, e da lì "p V q" ecceter
 
 E anche "¬ p v (p -> q)", non piove, o se piove c'è vento. Parentesi, come nell'algebra.
 
-# Mercoledì
+# Ordine delle operazioni
 
-Preciseremo le condizioni di verità degli enunciati complessi (tavole di verità).i
+Ovviamente possiamo, come già visto, usare le parentesi per specificare l'ordine dei connettivi. Lo facciamo anche in algebra, ma in algebra c'è anche un ordine implicito, una convenzione secondo la quale alcuni operatori si applicano prima di altri. "3 + 2 x -5" è "3 + \[2 x (-5)\]".
+
+Allo stesso modo i connettivi logici hanno una simile convenzione.
+
+* L'operatore unario, come in algebra, lega più fortemente di tutti gli altri;
+* E viene prima di O
+* O viene prima di <->
+
+Questa convenzione permette a qualunque proposizione scritta in simboli di avere una sola interpretazione che non dipende dal contesto.
+
+# Tavole di verità
+
+Le tavole di verità descrivono il comportamento dei connettivi logici.
+
+## Negazione
+
+Se un valore è vero, "piove", allora la sua negazione, "non piove", è falso. Per un valore falso, "c'è il sole", la sua negazione è vera, "non c'è il sole". Indichiamo falso con 0 e vero con 1, per convenzione.
+
+| p   | ¬p  |
+| --- | --- |
+| 0   | 1   |
+| 1   | 0   |
+## Congiunzione
+
+Quando abbiamo due proposizioni, chiamiamole p e q. Avendo due proposizioni, ciascuna con due possibili valori, abbiamo quattro possibili combinazioni.
+
+"Piove e c'è vento". Se anche uno solo dei due congiunti è falso, allora l'intera congiunzione è falsa. La congiunzione è vera solo se sono veri entrambi i congiunti. Una singola congiunzione falsa è una sorta di mela marcia che rovina l'intera congiunzione.
+
+| p   | q   | p & q |
+| --- | --- | ----- |
+| 0   | 0   | 0     |
+| 0   | 1   | 0     |
+| 1   | 0   | 0     |
+| 1   | 1   | 0     |
+## Disgiunzione
+
+C'è una situazione un po' antipatica. La parola "o" in italiano, come in molte altre lingue, ha due significati: uno inclusivo e uno inclusivo.
+
+Per esempio, un menù fisso in un ristorante in cui si può prendere, incluso nel prezzo, "o la frutta o il dolce". Solo uno dei due, significato esclusivo. "Può prendere la pensione chi ha più di 65 anni o ha una disabilità", una persona che ha più di 65 anni e ha una disabilità può comunque prendere la pensione, significato inclusivo. In latino per esempio questi due sono distinti: "aut" e "vel".
+
+In questo corso consideriamo la disgiunzione inclusiva, vel.
+
+| p   | q   | p \| q |
+| --- | --- | ------ |
+| 0   | 0   | 0      |
+| 0   | 1   | 1      |
+| 1   | 0   | 1      |
+| 1   | 1   | 1      |
+
+## Implicazione
+
+Questa è più complicata.
+
+Il caso più semplice è il caso in cui l'antecedente è vero e il conseguente è falso. "Se piove allora prendo l'ombrello", poi succede che piove ma io non prendo l'ombrello. La mia implicazione è falsa, chiaramente, perché non la sto rispettando.
+
+Sugli altri tre casi potremmo stare a discutere per ore. Le condizioni di verità del "se/allora" nel linguaggio naturale sono talmente complesse che sin dall'antichità sono state discusse in modo talmente accese che Callimaco antico greco diceva che anche le cornacchie ne discutono.
+
+"Se apro la porta c'è un gatto", poi apro la porta e, per coincidenza, c'è un gatto. Possiamo dire che il "se/allora" si applichi alla situazione? Non è facile trovarsi d'accordo su una risposta univoca. Molti logici per questo motivo hanno sostenuto che non sia un connettivo verofunzionale, una posizione eretica rispetto alla logica classica, però vedremo che ci sono degli eretici, come i logici rilevanti.
+
+La logica classica semplifica: quel caso molto semplice è l'unico caso falso, in tutti gli altri casi è vera. Professor Paoli si trova in una situazione difficile in cui deve difendere una posizione in cui non crede. L'unico modo per smentire un'implicazione è mostrare un caso in cui l'antecedente è vero e il conseguente è falso.
+
+"Se oggi è martedì allora oggi è mercoledì". Questa è vera, perché oggi è mercoledì: antecedente falso, quindi l'implicazione è vera. Ma non ha senso.
+
+Secondo Paoli, la logica classica è una pessima formalizzazione del linguaggio naturale.
+
+Si bilanciano pregi e difetti. L'eleganza e la semplicità della logica classica hanno come compromesso la differenza dal linguaggio naturale.
+
+## Doppia implicazione
+
+Un'implicazione che va in entrambe le direzioni. p <-> q == (p -> q) & (q -> p).
+
+## Ridondanza
+
+In realtà 5 connettivi sono troppi. Alcuni connettivi si possono esprimere in termini di altri.
+
+p & q = ¬(¬p | ¬q)
+
+Tutti e 5 i connettivi logici, e ogni altra funzione booleana binaria, a partire da un unico connettivo. Questo fu osservato all'inizio del '900 da un americano di nome Sheffer. Inventò un connettivo, indicato con | (che non è il | che stavo usando come vel), il Sheffer's stroke; è vero quando p e q sono false, e permette di ottenere qualunque altro connettivo. Ma è estremamente scomodo.
+
+## Esempio composto
+
+p & (¬q <-> p v q). La tabella di verità è quella del connettivo principale, cioè il connettivo che sta fuori da tutte le parentesi, incluse quelle implicite. In questo caso è l'&.
+
+| p   | q   | p   | &   | (¬  | q   | <-> | p   | v   | q)  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0   | 0   | 0   | 0   | 1   | 0   | 0   | 0   | 0   | 0   |
+| 0   | 1   | 0   | 0   | 0   | 1   | 1   | 0   | 1   | 1   |
+| 1   | 0   | 1   | 1   | 1   | 0   | 1   | 1   | 1   | 0   |
+| 1   | 1   | 1   | 0   | 0   | 1   | 1   | 1   | 1   | 1   |
+La colonna che teniamo è quella dell'&.
+
+| p   | q   | p & (¬q <-> p v q) |
+| --- | --- | ------------------ |
+| 0   | 0   | 0                  |
+| 0   | 1   | 0                  |
+| 1   | 0   | 1                  |
+| 1   | 1   | 0                  |
+Questo è un algoritmo con complessità esponenziale, in funzione del numero di variabili. Chi trova un algoritmo polinomiale per questo processo trova una soluzione di p vs np, vince un milione, e sale nell'olimpo della matematica. Non si sa se esiste. Beh questo è un po' impreciso, ma il concetto è quello.
+
+Qualora la colonna sia composta solo da 1, significherebbe che il mio enunciato è vero indipendentemente dalle variabili. Sarebbe una tautologia, un enunciato vero in qualunque universo immaginabile. L'opposto è una contraddizione, sempre falsa.
+
+Wittgenstein, uno dei creatori della tavola di verità. Secondo lui, le tautologie e le contraddizioni non contengono alcuna informazione. "Piove o non piove" non mi dà nessuna informazione sul meteo. Enunciati con contenuto informativo zero.
+
+Un enunciato con almeno un 1 è soddisfacibile. Un enunciato con almeno uno 0 è falsificabile. Ogni tautologia è soddisfacibile, ogni contraddizione è falsificabile. Ma non valgono né gli inversi né i conversi.
+
+# Istanza di sostituzione
+
+p v (q -> p). Un'istanza di sostituzione di questa formula è un'altra formula che posso ottenere a partire da essa prendendo ciascuna sua variabile e sostituendole uniformemente con delle formule, usando la stessa formula per la stessa variabile ciascuna volta. Per esempio q & ¬r v (p -> q & ¬r).
+
+A cosa ci serve? Ci servirà più avanti coi calcoli logici, per ridurre una lista infinita di assiomi a una lista finita.
