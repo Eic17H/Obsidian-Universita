@@ -201,14 +201,21 @@ La colonna che teniamo è quella dell'&.
 | 1   | 1   | 0                  |
 Questo è un algoritmo con complessità esponenziale, in funzione del numero di variabili. Chi trova un algoritmo polinomiale per questo processo trova una soluzione di p vs np, vince un milione, e sale nell'olimpo della matematica. Non si sa se esiste. Beh questo è un po' impreciso, ma il concetto è quello.
 
-Qualora la colonna sia composta solo da 1, significherebbe che il mio enunciato è vero indipendentemente dalle variabili. Sarebbe una tautologia, un enunciato vero in qualunque universo immaginabile. L'opposto è una contraddizione, sempre falsa.
+Qualora la colonna sia composta solo da 1, significherebbe che il mio enunciato è vero indipendentemente dalle variabili. Sarebbe una tautologia, un enunciato vero in qualunque universo immaginabile. L'opposto è una contraddizione, sempre falsa. Queste sono proprietà universali, perché tutte le righe le devono rispettare.
 
 Wittgenstein, uno dei creatori della tavola di verità. Secondo lui, le tautologie e le contraddizioni non contengono alcuna informazione. "Piove o non piove" non mi dà nessuna informazione sul meteo. Enunciati con contenuto informativo zero.
 
-Un enunciato con almeno un 1 è soddisfacibile. Un enunciato con almeno uno 0 è falsificabile. Ogni tautologia è soddisfacibile, ogni contraddizione è falsificabile. Ma non valgono né gli inversi né i conversi.
+Un enunciato con almeno un 1 è soddisfacibile. Un enunciato con almeno uno 0 è falsificabile. Ogni tautologia è soddisfacibile, ogni contraddizione è falsificabile. Ma non valgono né gli inversi né i conversi. Sono proprietà esistenziali, basta una riga per farle valere.
 
 # Istanza di sostituzione
 
 p v (q -> p). Un'istanza di sostituzione di questa formula è un'altra formula che posso ottenere a partire da essa prendendo ciascuna sua variabile e sostituendole uniformemente con delle formule, usando la stessa formula per la stessa variabile ciascuna volta. Per esempio q & ¬r v (p -> q & ¬r).
 
 A cosa ci serve? Ci servirà più avanti coi calcoli logici, per ridurre una lista infinita di assiomi a una lista finita.
+
+Posso sostituire una variabile con sé stessa, o due variabili con la stessa espressione.
+
+Se riduco il numero di righe, le proprietà universali vengono mantenute, quelle esistenziali magari no.
+
+Esercizio:
+(p & q -> r) -> (p -> (q -> r))
