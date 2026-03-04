@@ -13,3 +13,7 @@ Una cascata casca solo in basso. La prima fase è l'analisi, finita quella l'acq
 I programmatori bravi all'inizio passavano tutti direttamente alla scrittura del codice, e lo facevano bene la prima volta, e funzionava perfettamente. Ma era codice difficile da mantenere perché non era organizzato come progetto; gli errori di codifica erano risolvibili, ma quelli di specifica no. Waterfall risolse questo problema.
 
 Waterfall aveva un po' di problemi di irreversibilità. Il modello a V tentò di risolverlo: comincia con una discesa a cascata, e poi ha un ramo di test che permette di tornare alla cascata. Sembra una V, vedi slide. Chiaramente anche con Waterfall si preferisce tornare indietro anziché buttare il progetto intero, infatti in un certo senso non è mai stato usato davvero.
+
+# Sviluppo iterativo e incrementale
+
+I quadri sono dipinti in maniera iterativa. Gli affreschi sono, appunto, dipinti a fresco, e quindi si fanno in maniera incrementale.
