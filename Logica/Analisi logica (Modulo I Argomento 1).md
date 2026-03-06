@@ -219,3 +219,86 @@ Se riduco il numero di righe, le proprietà universali vengono mantenute, quelle
 
 Esercizio:
 (p & q -> r) -> (p -> (q -> r))
+
+# Semplificazione dei calcoli
+
+In p&q->r, ogni volta che r è vero, non mi importa cosa c'è a sinistra, l'implicazione intera è vera, questo fa comodo facendo la tabella di verità. Stessa cosa se l'antecedente è falso.
+
+Ah stiamo facendo l'esercizio ok. dove ho messo la penna del'l'ipdad prima volta nella vita che mi srrve davvero vabbè.
+
+| p   | q   | r   | (p  | ->  | (q->r)) | ->  | (p&q | ->  | r)  |
+| --- | --- | --- | --- | --- | ------- | --- | ---- | --- | --- |
+| 0   | 0   | 0   | 0   | 1   | 1       | 1   | 0    | 1   | 0   |
+| 0   | 0   | 1   | 0   | 1   | 1       | 1   |      | 1   | 1   |
+| 0   | 1   | 0   | 0   | 1   | 1       | 1   | 0    | 1   | 0   |
+| 0   | 1   | 1   | 0   | 1   | 1       | 1   |      | 1   | 1   |
+| 1   | 0   | 0   | 1   | 1   | 1       | 1   | 0    | 1   | 0   |
+| 1   | 0   | 1   | 1   | 1   | 1       | 1   |      | 1   | 1   |
+| 1   | 1   | 0   | 1   | 0   | 0       | 1   | 1    | 0   | 0   |
+| 1   | 1   | 1   | 1   | 1   | 1       | 1   |      | 1   | 1   |
+Tautologia vedi tautologia
+
+Essenzialmente la logica è questa: short circuit. Vedi che non ho riempito tutte tutte le caselle? Vediamola ad albero, con la radice in alto, se io ho già risolto un nodo con la short circuit, smetto di calcolare tutti i suoi figli. Veramente io l'ho fatto perché sono arrivato in ritardo ma dopo un po' ho capito e ho smesso.
+
+Questa formula è la *conversa* di quella dell'esercizio, perché abbiamo scambiato l'antecedente con la conseguente. Termine preso dalla sillogistica aristotelica.
+
+# L'argomento più noioso di tutto il corso: principali leggi logiche enunciative (tipi di tautologie particolari)
+
+Non ci verrà chiesto di ripetere a memoria questa lista. Però sono tautologie e può essere utile esercitarci e fare i calcoli perché ci vengano tutti 1.
+
+Nelle slide le variabili sono lettere greche. Sono metavariabili. Le variabili le vediamo come enunciati semplici, le metavariabili le vediamo come enunciati qualunque, quindi anche composti.
+
+Scrivere α->(β->α) non è come scrivere p->(q->p), perché α e β potrebbero contenere dei connettivi, quindi se ti chiede quali ci sono, boh magari ce ne sono che non so dentro α e β.
+
+"A fortiori" significa "a maggior ragione". Si usa un po' anche in italiano. "Se mi trovo a Cagliari a fortiori mi trovo in Sardegna".
+
+La legge di Frege è una sorta di proprietà distributiva dell'implicazione su sé stessa.
+
+Se valgono sia α che β, allora... valgono sia α che β. α&β->α; α&β->β.
+
+Se è vero α e/o è vero β, allora è vero α e/o β. α->αvβ; β->αvβ.
+
+Le logiche rilevanti rifiutano l'a fortiori e l'attenuazione disgiuntiva. Ma per ora trattiamo solo della logica classica.
+
+La proprietà commutativa è evidente dalla tabella di verità: possiamo vedere gli input come matrice simmetrica 2x2. L'associatività mi permette di rimuovere le parentesi, se e solo se mi interessa solo il valore di verità e non l'aspetto semantico.
+
+"Piove e piove e piove e piove", letteralmente, mi dà le stesse informazioni di "piove", ma ovviamente pragmaticamente sottintende qualcosa di diverso. Comunque, in logica classica sono uguali, questa è la proprietà di idempotenza, una cosa impossibile in aritmetica normale: 3+3 non fa 3, ma p&p fa sempre p.
+
+La logica intuizionista fu il primo rivale della logica classica. L'olandese Brouwer propose una teoria fondazionale sulla matematica per mettere in piedi la quale occorreva ripensare alcune leggi classiche che secondo Brouwer valevano solo su domini finiti, mentre secondo lui la matematica necessitava di domini infiniti. E un suo collega Heyting continuò dicendo che la doppia negazione non vale, perché interpreta "non" non come "è falso che" ma come "è assurdo che". Se qualcosa è vero, allora è assurdo che sia assurdo, p->¬¬p. Però se qualcosa è assurdo che sia assurdo, non è detto che sia vero, quindi ¬(p->¬¬p). È assurdo pensare che sia assurdo che professor Paoli disdica una lezione, ¬¬"Paoli disdirà la prossima lezione". Ma non è che per forza disdirà la prossima lezione.
+
+La legge di Duns Scoto non fu scoperta da Duns Scoto, ma da qualcun altro di cui non si sa il nome, è soprannominato pseudo-Scoto. "Ex assurdo quod libet" una cosa del genere, dall'assurdo segue qualunque cosa. p&¬p->q (scrivo p e q perché mi viene male cambiare tastiera, sono sempre α e β), dove q è qualunque cosa. Se c'è lezione e non c'è lezione, gli asini volano. In logica classica è stata rifiutata. Facciamo un'IA che simuli un giudice in un processo partendo da tutti i dati che abbiamo; un testimone dice che l'imputato è stato osservato con una cravatta blu sulla scena del delitto, un altro testimone dice che quello è falso; sono testimoni, quindi sono entrambe vere, ergo ciò pertanto implica che tutto è vero, l'imputato è colpevole. La logica classica non è molto appropriata in questo caso.
+
+Augustus de Morgan fu un precursore di Boole, un po' a cavallo tra il sillogismo arricchito e l'algebra e logica moderne. De Morgan scrisse molto, ma non scrisse le leggi di de Morgan, che risalgono al medioevo. La disgiunzione può essere derivata da congiunzione e negazione, e viceversa, inoltre c'è una sorta di distribuzione.
+
+Le leggi di Filone e di Crisippo ci definiscono l'implicazione da negazione, disgiunzione e congiunzione. Ma anche viceversa.
+
+# Nozione di formula
+
+Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto informale?
+
+The return of the Pinna.
+
+ℒ$_0$, che scriverò L0 per ora. Il mio linguaggio L0 mi prende una stringa e mi dice se è grammaticalmente corretta nel mio linguaggio. In italiano, ho l'alfabeto, ma non tutte le stringhe di lettere sono espressioni ben formate: "ubwfiunefwiunweifunfoewniew" contiene solo lettere esistenti, ma non significa nulla, "Non sapevo che tu non voleva" contiene parole esistenti ma non è comunque grammaticalmente corretta. Quali stringhe di simboli io considero ben formate.
+
+L'alfabeto si divide in tre sottoclassi: logico, descrittivo, ausiliario. Io nel mio alfabeto devo includere tutti i simboli che mi servono.
+
+Quante variabili mi servono? Non voglio mettere un limite arbitrario, voglio essere capace di scrivere un numero arbitrario di proposizioni arbitrariamente nulle. Mi serve un numero infinito di simboli, ma un infinito numerabile, grande quanto in numeri naturali. Quindi formalmente diamo nomi usando i numeri naturali, ma nel pratico per comodità diciamo p q r eccetera.
+
+Similmente, ZUCCHERO SINTATTICO MENTIONED, magari uso parentesi quadre per comodità ma formalmente non esistono. Non ha davvero menziopnato lo zucchero sintattico ma lo sottintende.
+
+| Logico            | Descrittivo          | Ausiliario |
+| ----------------- | -------------------- | ---------- |
+| Connettivi logici | Variabili            | Disambigua |
+| Sono 5            | Infinito numerable   | Solo due   |
+| ¬, &, v, ->, <->  | $P_1, P_2, P_3, ...$ | (, )       |
+Immaginati un albero piuttosto che una tabella.
+
+Ok, abbiamo definito l'alfabeto, da qui come definiamo poi quali espressioni sono grammaticalmente corrette? Nei linguaggi naturali, non c'è un criterio matematico, c'è un dizionario. Definiamo per induzione.
+
+Definizione induttiva: parto da base e passo. Analisi Matematica menzionata. Episodio crossover, e ovviamente regole di inferenza di ALF. Parto da uno stock iniziale di elementi dell'insieme, che è la base, e definisco nel passo una funzione che mi espande a macchia d'olio l'insieme generando nuovi elementi.
+
+Per esempio, definisco i numeri naturali. La mia base è lo 0, il passo è l'operatore di successione. Quindi base: "lo 0 è un numero naturale", passo: "se N è un numero naturale, allora succ(N) è un numero naturale". Quindi, 3 è un numero naturale? Lo è se lo è 2, che lo è se lo è 1, che lo è se lo è 0, che lo è. Quindi vero -> 3 è un numero naturale.
+
+Per induzione abbiamo definito un insieme infinito a partire da un numero finito di oggetti. Condensiamo l'infinito nel finito. Molto potente, ma molto pericoloso: si avvicina molto alle definizioni circolari, che non sono valide. E qui, nella definizione di numero naturale, in particolare nel passo, uso i numeri naturali. Ma non è circolare, è ricorsiva. Possiamo dire meglio: se N è un numero naturale *già noto*, allora ...
+
+Ma lo prendiamo per vero, su che base? A chi studia filosofia, tutto questo può sembrare un po' naive. Ma se vedo che piove, piove davvero? I sensi ingannano, la nozione di verità e complessa e dibattuta. Uno studente di filosofia problematizza tutto. Ma noi, soprattutto chi l'ha preso come esame a scelta e si sta laureando in informatica, lasciamo perdere e diamo tutto questo per buono. Vedremo i dibattiti sulla definizione di verità più avanti.
