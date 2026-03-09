@@ -1,3 +1,5 @@
+# Analisi logica
+
 Questo argomento l'abbiamo già visto in realtà molto presto, alle elementari. Analisi logica. Ce ne sono due: analisi logica della proposizione, che analizza la singola proposizione, e analisi del periodo, che studia i collegamenti tra proposizioni semplici.
 
 Ovviamente non ripetiamo le elementari. Ci sono dei *falsi amici*, termini che in grammatica significano qualcosa e in logica significano qualcosa di leggermente o significativamente diverso.
@@ -302,3 +304,40 @@ Per esempio, definisco i numeri naturali. La mia base è lo 0, il passo è l'ope
 Per induzione abbiamo definito un insieme infinito a partire da un numero finito di oggetti. Condensiamo l'infinito nel finito. Molto potente, ma molto pericoloso: si avvicina molto alle definizioni circolari, che non sono valide. E qui, nella definizione di numero naturale, in particolare nel passo, uso i numeri naturali. Ma non è circolare, è ricorsiva. Possiamo dire meglio: se N è un numero naturale *già noto*, allora ...
 
 Ma lo prendiamo per vero, su che base? A chi studia filosofia, tutto questo può sembrare un po' naive. Ma se vedo che piove, piove davvero? I sensi ingannano, la nozione di verità e complessa e dibattuta. Uno studente di filosofia problematizza tutto. Ma noi, soprattutto chi l'ha preso come esame a scelta e si sta laureando in informatica, lasciamo perdere e diamo tutto questo per buono. Vedremo i dibattiti sulla definizione di verità più avanti.
+
+Comunque, definiamo il concetto di formula per induzione.
+
+* Base: ogni variabile proposizionale è una formula
+* Passo: se α è una formula, allora anche ¬α è una formula
+* Passo: se α e β sono formule, allora anche α&β è una formula
+* Passo: se α e β sono formule, allora anche αvβ è una formula
+* Passo: se α e β sono formule, allora anche α->β è una formula
+* Passo: se α e β sono formule, allora anche α<->β è una formula
+
+L'insieme delle formule è dunque *il più piccolo insieme che si può ottenere partendo dalle variabili proposizionali che è chiuso rispetto all'applicazione dei connettivi logici*.
+
+La definizione induttiva e questa qui sono equivalenti.
+
+Quante sono le formule di L0? Poiché le variabili sono un insieme infinito numerabile, L0 deve essere quantomeno infinito numerabile. È innumerabile? Allora, no perché puoi contare i connettivi eccetera che non faremo.
+
+Posso riconoscere se una qualche stringa di simboli è una formula nel mio linguaggio o no? Sì, applicando passo per passo la definizione induttiva di formula.
+
+p v (¬q -> r v q). Partiamo dall'interno.
+
+* p v (¬**q** -> r v q) - è una variabile
+* p v (**¬q** -> r v q) - è una negazione
+* p v (*¬q* -> **r** v **q**) - sono variabili
+* p v (*¬q* -> **r v q**) - è una disgiunzione
+* p v (**¬q -> r v q**) - è un'implicazione
+* **p** v *(¬q -> r v q)* - è una variabile
+* **p v (¬q -> r v q)** - è una disgiunzione
+
+Sì, è una formula
+
+ \[riprende da Keep\] ... poer la rpoima volta furono considerate le logiche polivalenti (con non solo vero e falso). grazie alla prewfiaaassaa possiamo fare a meno dell'alfabeto ausiliario, cioè le parentesei. il grosso svantaggii è che è molto complicata e poco intuitiva, è difficile da decifrare. #aggiustare
+
+Cos'abbiamo fatto? Analizzato una versione semplificata del linguaggio naturale tramite un linguaggio formale. Cosa non abbiamo fatto? Capito come usare gli enunciati per fare dei ragionamenti. Abbiamo studiato gli enunciati in maniera puramente strutturale, ora capiremo come combinare gli enunciati per vedere quali conclusioni possiamo ricavare a partire da quali premesse, per usarli nel ragionamento e nell'argomentazione.
+
+Ci servono dunque delle strutture più complesse dei semplici enunciati, strutture in cui gli enunciati possono avere il ruolo di premessa o il ruolo di conclusione.
+
+#slide
