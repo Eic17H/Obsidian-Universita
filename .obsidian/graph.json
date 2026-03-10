@@ -155,10 +155,17 @@
       }
     },
     {
+      "query": "path:Logica  ",
+      "color": {
+        "a": 1,
+        "rgb": 41432
+      }
+    },
+    {
       "query": "path:MD",
       "color": {
         "a": 1,
-        "rgb": 14701233
+        "rgb": 15088506
       }
     }
   ],
@@ -172,6 +179,6 @@
   "repelStrength": 13.3264033264033,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 1.424581859564094,
+  "scale": 0.7237505875723101,
   "close": true
 }

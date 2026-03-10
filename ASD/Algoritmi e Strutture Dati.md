@@ -1,4 +1,4 @@
 ## [[ASD Teoria|Modulo I]]
-## [[ASD Lab|Modulo II]]
+## [[ASD/Lab|Modulo II]]
 
 #materia
