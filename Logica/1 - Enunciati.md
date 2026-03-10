@@ -334,7 +334,11 @@ p v (¬q -> r v q). Partiamo dall'interno.
 
 Sì, è una formula
 
- \[riprende da Keep\] ... poer la rpoima volta furono considerate le logiche polivalenti (con non solo vero e falso). grazie alla prewfiaaassaa possiamo fare a meno dell'alfabeto ausiliario, cioè le parentesei. il grosso svantaggii è che è molto complicata e poco intuitiva, è difficile da decifrare. #aggiustare
+Quando una stringa non è una formula? )p→&qq(
+
+Ok p è una formula, q è una formula, e poi... Non ho altro
+
+Il modo in cui scriviamo i connettivi logici è un tipo di notazione detta infissa. Significa che i connettivi binari vengono scritti in mezzo ai due argomenti. Un'alternativa è la notazione prefissa, dove p&q diventa &pq. È detta prefissa o "polacca", perché fu usata per la prima volta dai logici polacchi, nelle grandi scuole logiche polacche in cui per la rpoima volta furono considerate le logiche polivalenti (con non solo vero e falso). grazie alla prewfiaaassaa possiamo fare a meno dell'alfabeto ausiliario, cioè le parentesei. il grosso svantaggii è che è molto complicata e poco intuitiva, è difficile da decifrare. #aggiustare
 
 Cos'abbiamo fatto? Analizzato una versione semplificata del linguaggio naturale tramite un linguaggio formale. Cosa non abbiamo fatto? Capito come usare gli enunciati per fare dei ragionamenti. Abbiamo studiato gli enunciati in maniera puramente strutturale, ora capiremo come combinare gli enunciati per vedere quali conclusioni possiamo ricavare a partire da quali premesse, per usarli nel ragionamento e nell'argomentazione.
 
