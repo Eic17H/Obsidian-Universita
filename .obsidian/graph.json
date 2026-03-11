@@ -1,11 +1,11 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "-file:Indice",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": true,
+  "hideUnresolved": false,
   "showOrphans": false,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "file:Indice",
@@ -158,7 +158,7 @@
       "query": "path:Logica  ",
       "color": {
         "a": 1,
-        "rgb": 41432
+        "rgb": 93839
       }
     },
     {
@@ -171,14 +171,14 @@
   ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -0.9,
-  "nodeSizeMultiplier": 1.17664359861592,
-  "lineSizeMultiplier": 2.80432525951557,
+  "textFadeMultiplier": -1.5,
+  "nodeSizeMultiplier": 1.36724137931034,
+  "lineSizeMultiplier": 4.01436781609195,
   "collapse-forces": false,
-  "centerStrength": 0.653846153846154,
-  "repelStrength": 13.3264033264033,
+  "centerStrength": 0.695402298850575,
+  "repelStrength": 17.5862068965517,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.7237505875723101,
-  "close": true
+  "scale": 1.7189769809570041,
+  "close": false
 }

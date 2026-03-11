@@ -20,6 +20,9 @@ Questo schema a destra è un sillogismo disgiuntivo, o principio del cane di Cri
 
 Le lettere greche possono formalizzare enunciati semplici o composti. Vedi slide. Nello schema 2 non si capisce che è un sillogismo disgiuntivo, non è uno schema valido. Lo stesso argomento può istanziare schemi validi o invalidi. Un argomento quindi è valido se istanzia almeno uno schema valido. Lo stesso schema può formalizzare argomenti diversi. Bisogna sempre sostituire/istanziare in modo uniforme però.
 
+# Distinguere argomenti buoni e cattivi
+
+Argomenti che adempiono allo scopo persuasivo o esplicativo che diamo loro, e argomenti che non sono efficaci e non stanno in piedi.
 
 Quali argomenti sono buoni? Quali sono tentativi di inganno? È una domanda sia naturale che formale. Il professore ha scritto in tal senso un manuale di autodifesa del cittadino, da usare contro politici, pubblicitari e venditori. Chiaramente il venditore può usare questo manuale per correggere i suoi metodi ed essere ancora più ingannevole.
 
@@ -29,6 +32,36 @@ Gli standard deduttivi sono talmente rigorosi che gli argomenti che passano il v
 
 Gli standard induttivi saranno un equilibrio tra attendibilità dell'argomento e informatività della conclusione. Giudizi sintetici a priori, Kant.
 
-Standard deduttivi.
+## Standard deduttivi
 
-Vedi slide. Argomento non minimamente persuasivo. Perché uno che viene decapitato non smette di essere umano. No, diamo per buone le premesse. L'argomento non è valido perché \[VEDI SLIDE\]. Domanda con più vittime all'orale, ricorda quella slide che ti dice se un argomento è valido o no
+Vedi slide. Argomento non minimamente persuasivo. Perché uno che viene decapitato non smette di essere umano. No, diamo per buone le premesse. L'argomento non è valido perché \[VEDI SLIDE\]. Domanda con più vittime all'orale, ricorda quella slide che ti dice se un argomento è valido o no.
+
+Il primo standard che vediamo è l'argomento valido.
+
+### Argomento valido
+
+Un argomento è valido se la sua conclusione è vera **ogniqualvolta** le sue premesse sono vere.
+
+Una definizione sbagliata è: un argomento è valido se la sua conclusione è vera **e** le sue premesse sono vere.
+
+Tutti i tavoli hanno le gambe. Questo tavolo ha le gambe. Quindi questo tavolo è un tavolo. Verissimo, ma se lo applico a un altro soggetto. Tutti i tavoli hanno le gambe. Io ho le gambe. Quindi io sono un tavolo.
+
+In formula, uno schema con premesse da α1 ad αn e conclusione β è valido se e solo se (&\[i=1:n] αi) -> β è una tautologia. Ossia, quando tutte le istanze dello schema di argomento sono valide. Quella formula e quella frase sono equivalenti.
+
+Attenzione, non diciamo che *lo schema è una tautologia*. La singola formula è una tautologia, e lo schema è un insieme di formule.
+
+Alcuni esempi di schemi di argomento validi sono il modus ponens (a->b, a | b), il modus tollens (a->b, ¬b | ¬a), e il sillogismo disgiuntivo (avb, ¬a, | b). Non sono *tutti* gli schemi validi, sono tre esempi. (come al solito sono alfa e beta ma non ho voglia). Quindi per esempio, #slide 
+
+Sono come delle ricette per produrre schemi validi. Quando li istanzio con enunciati del linguaggio naturale, gli argomenti che ne risultano sono necessariamente validi.
+
+### Argomenti formalmente validi
+
+Un altro standard deduttivo abbastanza simile.
+
+Un argomento è formalmente valido se istanzia almeno uno schema valido. Non è uguale a un argomento valido? Come fa un argomento ad essere valido senza esserlo formalmente? Dovrebbe essere uno schema valido che non istanzia nessuno schema valido. Mi sa che sto confondendo schema e argomento.
+
+"Un equino ha quattro zampe (α), quindi un equino è quadrupede (β)". È un argomento valido, perché è un argomento (in linguaggio naturale) in cui è impossibile che la premessa sia vera e la conclusione falsa. Però non è formalmente valido, perché istanzia solo lo schema invalido α|β, in linguaggio formale. Lo schema è invalido, ma l'argomento è valido.
+
+Vediamo un altro argomento. "Se Trump è francese, Trump è europeo. Trump è francese. Quindi Trump è europeo". È un argomento formalmente valido. Il problema è che una delle premesse è falsa: garbage in, garbage out, la conclusione è falsa. Però l'argomento è comunque valido.
+
+C'è una bella tabella nelle #slide.
