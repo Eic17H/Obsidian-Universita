@@ -1,7 +1,6 @@
 * [[ISW/Introduzione|Introduzione]]
-	* Corso
-	* Materia
-	* Storia
-* [[Open source]]
-* [[Paradigmi]]?
+* [[Software open source]]
+* [[ISW/Teoria/Paradigmi|Paradigmi]]?
 * [[LLM]]
+
+#materia

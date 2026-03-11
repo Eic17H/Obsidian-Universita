@@ -1,3 +1,11 @@
+# Storia
+
+Il termine software engineering viene coniato in una vedi slide e basta. Già 62 anni fa si parlava di crisi del software: hardware sempre più potente (si era passati ai transistor nei processori) e cheap, software sempre più complesso e costoso. Si sapevano costruire buoni programmi singoli, ma non buoni sistemi. In 30 ci sono stati molti insuccessi legati all'inabilità di sistemi.
+
+L'aeroporto di Denver è/era il più grande al mondo. Hanno consegnato un sistema che faceva meno di quello che doveva, enorme fallimento.
+
+Dio mio Ariane 5, anche a livello di percezione pubblica. Vediamo il codice ADA (linguaggio vecchiotto) nelle slide. La causa diretta era un problema nel software, ma non era colpa del programmatore che ha scritto quella riga di codice, c'era un problema fondamentale nella gestione del team di sviluppo, mancava comunicazione e organizzazione.
+
 # La rivoluzione degli LLM
 
 A fine 2025, i sistemi LLM come Claude e ChatGPT hanno fatto un enorme salto di qualità. L'ingegnere del software deve ancora più di prima saper usare questi strumenti e saper fare controlli di qualità sul codice generato, perché i sistemi possono essere molto complessi.
