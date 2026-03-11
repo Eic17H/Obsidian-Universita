@@ -65,3 +65,7 @@ Un argomento è formalmente valido se istanzia almeno uno schema valido. Non è 
 Vediamo un altro argomento. "Se Trump è francese, Trump è europeo. Trump è francese. Quindi Trump è europeo". È un argomento formalmente valido. Il problema è che una delle premesse è falsa: garbage in, garbage out, la conclusione è falsa. Però l'argomento è comunque valido.
 
 C'è una bella tabella nelle #slide.
+
+Adesso: "Briatore è un prete | Briatore è un sacerdote". È un argomento valido, però è formalmente invalido (α|β), inoltre è scorretto perché Briatore non è un prete! Quindi ci sono tre livelli: la verità (corretto), il linguaggio naturale (valido) e il linguaggio formale (formalmente valido).
+
+## Standard induttivi
