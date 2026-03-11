@@ -1,6 +1,6 @@
-# [[FPW Teoria|Teoria]]
+# [[FPW/Teoria|Teoria]]
 
-# [[FPW Lab|Laboratorio]]
+# [[FPW/Lab|Laboratorio]]
 
 ## Informazioni
 
