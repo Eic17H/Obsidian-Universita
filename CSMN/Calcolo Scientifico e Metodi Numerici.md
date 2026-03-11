@@ -1,4 +1,4 @@
-# [[CSMN/Teoria/Teoria|Teoria]]
-# [[CSMN/Lab/Lab|Laboratorio]]
+# [[CSMN/Teoria|Teoria]]
+# [[CSMN/Lab|Laboratorio]]
 
 #materia
