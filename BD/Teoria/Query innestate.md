@@ -1,7 +1,4 @@
-# Query innestate
-
 Query nidificate, cioè query la cui condizione è formulata usando il risultato di un'altra interrogazione (sub-query). Essenzialmente, possiamo dare un nome a una query, e usarla in un'altra query come se fosse una tabella.
-
 ## Operatori quantificati
 
 ### `ANY`
@@ -55,6 +52,6 @@ Una sub-query correlata è una sub-query che usa riferimenti a tabelle della que
 
 ## Scope
 
-Strumenti per la pulizia di pavimenti…? Scherzi a parte. Una sub-query vede lo scope della query al livello superiore, ma non il contrario. Quindi può servire invertire query e sub-query per usare lo scopo di una nell'altra.
+[[Scope|Strumenti per la pulizia di pavimenti…?]] Scherzi a parte. Una sub-query vede lo scope della query al livello superiore, ma non il contrario. Quindi può servire invertire query e sub-query per usare lo scopo di una nell'altra.
 
 All'esame potremo trovare sub-query dentro sub-query, o sub-query affiancate.
