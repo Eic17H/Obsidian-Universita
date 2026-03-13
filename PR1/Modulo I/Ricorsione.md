@@ -1,6 +1,6 @@
 ## Settimana 11
 
-[[Ricorsione]].
+Ricorsione.
 Una classe di studenti è una classe di studenti + uno studente, o uno studente da solo.
 classe = classe + studente | studente
 Se da una classe togli uno studente, o ne aggiungi uno, è ancora una classe.

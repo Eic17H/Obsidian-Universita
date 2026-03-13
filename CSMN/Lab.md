@@ -1,3 +1,3 @@
-* [[Introduzione a MatLab]]
+* [[Matrici in MatLab]]
 
 #modulo

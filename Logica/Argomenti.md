@@ -66,6 +66,88 @@ Vediamo un altro argomento. "Se Trump è francese, Trump è europeo. Trump è fr
 
 C'è una bella tabella nelle #slide.
 
-Adesso: "Briatore è un prete | Briatore è un sacerdote". È un argomento valido, però è formalmente invalido (α|β), inoltre è scorretto perché Briatore non è un prete! Quindi ci sono tre livelli: la verità (corretto), il linguaggio naturale (valido) e il linguaggio formale (formalmente valido).
+Adesso: "Briatore è un prete | Briatore è un sacerdote". È un argomento valido, però è formalmente invalido (α|β), inoltre è scorretto perché Briatore non è un prete! Quindi ci sono tre livelli: la verità (corretto), il linguaggio naturale (valido) e il linguaggio formale (formalmente valido). Non esiste uno *schema formalmente valido*, gli *argomenti* sono formalmente validi o invalidi. L'aspetto teorico, cioè formale, quindi le definizioni, è importante all'orale, più degli esercizi computazionali.
+
+### Argomenti corretti
+
+Appunto, un argomento è corretto quando è valido e le premesse sono vere (quindi anche la conclusione è vera).
+
+Però, certi libri possono avere terminologie diverse. Il libro "Logica da 0 a Goedel" con "ragionamento corretto" denota gli argomenti validi. Questo è spesso dovuto a una scelta di traduzione, per esempio dall'inglese "sound", che può essere corretto, valido, sensato.
 
 ## Standard induttivi
+
+Gli standard induttivi ci permettono di trovare gli argomenti forti: se le premesse sono vere, allora *molto probabilmente* la conclusione è vera. Quanto è alta questa probabilità? Il problema degli standard induttivi è proprio questa vaghezza. Non avrebbe senso neanche fissare una soglia ben precisa, perché farebbe violenza alla nostra nozione organica di argomento forte. Sarebbe come fissare per legge un limite minimo in centimetri per il concetto di "persona alta", si potrebbe fare, ma sarebbe una violenza alla comunicazione. Eppure per altre cose si fa, "gli anziani viaggiano gratis", c'è spesso un limite minimo di età, per esempio 65 anni; questo fa violenza all'uso linguistico, nella comunicazione naturale ci sono età in cui si è incerti quando si deve decidere se descrivere qualcuno come anziano o meno, e non dipende solo dal'età.
+
+### Argomenti forti
+
+"Paul ha sempre vissuto in Congo, quindi Paul non sa sciare". È molto probabile che sia così, ma è possibile ci sia un controesempio. Per esempio Paul potrebbe aver viaggiato all'estero, o potrebbe essersi esercitato ogni volta che nevicava su una montagna. In inglese diremmo che sono controesempi *far-fetched*.
+
+"Ieri Sebastiano è caduto dal terzo piano, sicuramente non vincerà la maratona". Tralasciando l'esistenza delle premesse implicite, non è un argomento valido, perché potrebbe essere caduto su un trampolino e poi su un materasso e non essersi fatto male. Ma è molto molto probabile che se la premessa è vera lo sia anche la conclusione.
+
+Gli argomenti validi sono argomenti forti? Sì, e perché? Boh non ho capito
+
+### Argomenti buoni
+
+Gli argomenti buoni sono argomenti forti con premesse *plausibili*. Se Sebastiano non è caduto dal terzo piano, l'argomento è forte ma non è buono, cioè è cattivo.
+
+"Il Lecce non ha una grande squadra e sta navigando in zona retrocessione, quindi l'anno prossimo il Lecce non vincerà lo scudetto" è un argomento invalido, ma buono. È molto probabile, ma non è sicuro. Non è impossibile che compri tutti i giocatori miglior delle altre squadre e vinca, ma è estremamente improbabile, quindi l'argomento è buono.
+
+Se le premesse sono vere ma l'argomento è debole, l'argomento non è comunque buono "Floriana ha i capelli bagnati, quindi è piovuto da poco", sembra un argomento buono, ma non è improbabile che abbia i capelli bagnati per qualunque altro motivo. Tipico esempio di argomento debole, argomento che non sta in piedi.
+
+### Fonti di argomenti forti
+
+#### Argomenti analogici
+
+Consideriamo il caso A e il caso B. Facciamo una premessa analogica: A e B hanno n caratteristiche in comune. Premessa attributiva: A ha inoltre la caratteristica x. Conclusione: anche B ha la caratteristica x.
+
+Gli argomenti analogici non sono quasi mai validi. Ma sono forti?
+
+Esempio: Ieri pioveva, c'era traffico, e ci abbiamo messo mezz'ora ad arrivare. Oggi piove e c'è traffico, quindi ci metteremo mezz'ora ad arrivare.
+
+Però, non ogni analogia è argomentativa. Quando Vasco Rossi dice "sei chiara come un'alba, sei fresca come l'aria", non continua con "quindi sei l'alba e sei l'aria, e quindi l'alba è l'aria".
+
+##### Analogie nella pubblicità
+
+Gli argomenti analogici sono usati spesso nelle pubblicità, sotto forma di testimonial: una celebrità bella, giovane, intelligente e/o in forma usa un certo prodotto. Anche tu sei bello, giovane, intelligente e/o in forma, quindi dovresti usare lo stesso prodotto. Se non sei bello, intelligente o in forma, vale nell'altra direzione: se tu usassi il prodotto, allora anche tu saresti bello, giovane, intelligente e/o in forma. Jannik Sinner non è un esperto di tecnologia, ma il suo consiglio non ha lo stesso impatto di qualcuno con la laurea magistrale in telecomunicazioni, quindi chiamano lui per le pubblicità della Vodafone o quello che è. Questa è una fallacia?
+
+##### Analogie nella giurisprudenza
+
+Le analogie vengono usate nella giurisprudenza, sotto forma di precedenti.
+
+Esempio: #slide.
+
+### Confutare l'analogia
+
+Per attaccare l'argomento, posso attaccare la premessa analogica o la premessa attributiva.
+
+#### Confutare la premessa analogica
+
+Attaccando la premessa analogica, posso attaccare la *pertinenza* delle caratteristiche comuni: "l'ultima volta che avevo scarpe nere, calze grigie, pantaloni blu e maglietta bianca ho trovato 5€ per terra, quindi se mi rimetto gli stessi vestiti troverò di nuovo 5€ per terra". Non è un argomento forte.
+
+#### Confutare la premessa attributiva
+
+#slide
+
+Dico che x non è vera essenzialmente.
+
+#### Confutare la premessa analogica
+
+#slide. Non è un episodio autobiografico del professore, sia chiaro.
+
+Le premesse attributive sono pertinenti, ma la premessa analo no guarda non ho capito #slide
+
+#### Confutare tramite controanalogia
+
+"Gli Stati Uniti hanno tagliato le tasse e l'economia è cresciuta, quindi se tagliamo le tasse in Italia l'economia crescerà anche qui". Controesempio: "l'Argentina ha tagliato le tasse e l'economia non è cresciuta, quindi se tagliamo le tasse in Italia l'economia non crescerà".
+
+Possiamo confutarla anche in altri modi, sia chiaro, potremmo dire che il taglio delle tasse era diverso negli USA, o dire che l'economia non è cresciuta.
+
+## Argomenti ad verecundiam
+
+Per controllare la veridicità delle premesse possiamo usare l'esperienza diretta (guardare fuori dalla finestra e vedere che piove) o l'autorità: accetto una premessa perché lo dice un esperto.
+
+*Ieri il Cagliari ha perso.* Come lo sai? *L'ho visto sul telefono*, non allo stadio. Come so che non è un filmato falso? *Beh DAZN spero proprio che non mi freghi.* In questo caso DAZN è l'autorità.
+
+L'allunaggio. Abbiamo visto dei filmati provenienti da fonti attendibili, che sono autorità, ma non l'abbiamo visto di persona.
+
+Non possiamo però rifiutare *tutta* la conoscenza autoritaria. Non potremmo mai attraversare un ponte perché non sapremmo se crollerà o no. Non potremmo fare nulla.

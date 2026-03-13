@@ -30,11 +30,17 @@ Allo stesso modo, l'ingegneria del software va incontro a difficoltà non solo t
 
 Sempre più sistemi sono controllati via software. Qualunque paese non in guerra, anche quelli stereotipicamente poveri, escluse le aree rurali trovi il software. Non esiste più il terzo mondo in un certo senso. Le economie dei Paesi ricchi (inclusa l'Italia) dipendono dal software. Nel 2025, il fatturato mondiale IT supera i 2500M€.
 
+# Storia
 
+Il termine software engineering viene coniato in una vedi slide e basta. Già 62 anni fa si parlava di crisi del software: hardware sempre più potente (si era passati ai transistor nei processori) e cheap, software sempre più complesso e costoso. Si sapevano costruire buoni programmi singoli, ma non buoni sistemi. In 30 ci sono stati molti insuccessi legati all'inabilità di sistemi.
+
+L'aeroporto di Denver è/era il più grande al mondo. Hanno consegnato un sistema che faceva meno di quello che doveva, enorme fallimento.
+
+Dio mio Ariane 5, anche a livello di percezione pubblica. Vediamo il codice ADA (linguaggio vecchiotto) nelle slide. La causa diretta era un problema nel software, ma non era colpa del programmatore che ha scritto quella riga di codice, c'era un problema fondamentale nella gestione del team di sviluppo, mancava comunicazione e organizzazione.
 
 # 10 temi dell'ISW
 
-Vedi #slide
+Vedi slide
 
 # Ruoli
 
