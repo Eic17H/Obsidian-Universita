@@ -18,112 +18,154 @@
       "query": "tag:#materia",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 16777215
       }
     },
     {
       "query": "tag:#modulo  ",
       "color": {
         "a": 1,
-        "rgb": 14711418
+        "rgb": 11382189
       }
     },
     {
       "query": "path:Comune/",
       "color": {
         "a": 1,
-        "rgb": 8026746
+        "rgb": 0
       }
     },
     {
-      "query": "path:PR1/",
+      "query": "path:IUM",
       "color": {
         "a": 1,
-        "rgb": 14725458
-      }
-    },
-    {
-      "query": "path:FDI/",
-      "color": {
-        "a": 1,
-        "rgb": 11657298
-      }
-    },
-    {
-      "query": "path:RDC/",
-      "color": {
-        "a": 1,
-        "rgb": 15833374
-      }
-    },
-    {
-      "query": "path:SO/",
-      "color": {
-        "a": 1,
-        "rgb": 5431378
-      }
-    },
-    {
-      "query": "path:PR2/",
-      "color": {
-        "a": 1,
-        "rgb": 5431473
+        "rgb": 5963352
       }
     },
     {
       "query": "path:FPW/",
       "color": {
         "a": 1,
-        "rgb": 5419488
+        "rgb": 4504408
       }
     },
     {
       "query": "path:BD/ ",
       "color": {
         "a": 1,
-        "rgb": 5395168
+        "rgb": 1987613
+      }
+    },
+    {
+      "query": "path:PR1/",
+      "color": {
+        "a": 1,
+        "rgb": 12103936
       }
     },
     {
       "query": "path:ASD/",
       "color": {
         "a": 1,
-        "rgb": 9868543
+        "rgb": 15662614
+      }
+    },
+    {
+      "query": "path:SO/",
+      "color": {
+        "a": 1,
+        "rgb": 16707134
+      }
+    },
+    {
+      "query": "path:PR2/",
+      "color": {
+        "a": 1,
+        "rgb": 16646010
+      }
+    },
+    {
+      "query": "path:FDI/",
+      "color": {
+        "a": 1,
+        "rgb": 262399
       }
     },
     {
       "query": "path:ALF/",
       "color": {
         "a": 1,
-        "rgb": 14707984
+        "rgb": 1725439
       }
     },
     {
-      "query": "path:AM/",
+      "query": "path:LiP/",
       "color": {
         "a": 1,
-        "rgb": 5431378
+        "rgb": 4426750
       }
     },
     {
-      "query": "path:ASD/",
+      "query": "path:Logica/",
       "color": {
         "a": 1,
-        "rgb": 5431473
+        "rgb": 8446463
+      }
+    },
+    {
+      "query": "path:RC/",
+      "color": {
+        "a": 1,
+        "rgb": 16029461
+      }
+    },
+    {
+      "query": "path:ISW/",
+      "color": {
+        "a": 1,
+        "rgb": 16750648
       }
     },
     {
       "query": "path:ARE/",
       "color": {
         "a": 1,
-        "rgb": 5419488
+        "rgb": 16690253
+      }
+    },
+    {
+      "query": "path:AM/",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
       }
     },
     {
       "query": "path:FeMS/",
       "color": {
         "a": 1,
-        "rgb": 5395168
+        "rgb": 16711705
+      }
+    },
+    {
+      "query": "path:DEM/",
+      "color": {
+        "a": 1,
+        "rgb": 16711718
+      }
+    },
+    {
+      "query": "path:CSMN/",
+      "color": {
+        "a": 1,
+        "rgb": 16711756
+      }
+    },
+    {
+      "query": "path:MD/",
+      "color": {
+        "a": 1,
+        "rgb": 16711791
       }
     },
     {
@@ -131,48 +173,6 @@
       "color": {
         "a": 1,
         "rgb": 5395168
-      }
-    },
-    {
-      "query": "path:DEM/",
-      "color": {
-        "a": 1,
-        "rgb": 5395121
-      }
-    },
-    {
-      "query": "path:CSMN/",
-      "color": {
-        "a": 1,
-        "rgb": 10421252
-      }
-    },
-    {
-      "query": "path:IUM",
-      "color": {
-        "a": 1,
-        "rgb": 9649857
-      }
-    },
-    {
-      "query": "path:ISW",
-      "color": {
-        "a": 1,
-        "rgb": 14793993
-      }
-    },
-    {
-      "query": "path:Logica  ",
-      "color": {
-        "a": 1,
-        "rgb": 93839
-      }
-    },
-    {
-      "query": "path:MD",
-      "color": {
-        "a": 1,
-        "rgb": 15088506
       }
     }
   ],
@@ -182,10 +182,10 @@
   "nodeSizeMultiplier": 1.67390852390852,
   "lineSizeMultiplier": 4.01436781609195,
   "collapse-forces": false,
-  "centerStrength": 0.188149688149688,
-  "repelStrength": 13.2432432432432,
+  "centerStrength": 0.337837837837838,
+  "repelStrength": 9.002079002079,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.2292013594174976,
+  "scale": 0.16348370567221268,
   "close": false
 }
