@@ -52,3 +52,67 @@ while i<=10
 	disp(i)
 end
 ```
+
+Il comando `format` prende un parametro per il formato della stampa dei numeri. `format short` ci dà 4 cifre decimali. `format shorte` ci dà 4 cifre in notazione scientifica, similmente `long` e `longe` per 10 cifre. Questo comando non cambia in alcun modo i calcoli, solo la visualizzazione. L'effetto dura da quando viene chiamato in poi.
+
+La funzione `fix()` tronca tutte le cifre decimali del parametro, quindi arrotonda verso 0. `floor()` arrotonda per difetto, verso -inf. `ceil()` arrotonda per eccesso. `round()` arrotonda all'intero più vicino; prende anche un secondo parametro opzionale, che specifica le cifre dopo la virgola; prende anche un terzo parametro, una stringa, se scrivi `"significant"` considera nel conteggio solo le cifre significative.
+
+Esercizio: script che ci permette di fare le operazioni su un insieme di numeri macchina.
+
+```
+% F(10,3,-12,12)
+
+a = input("Inserisci il valore di a\n");
+b = input("Inserisci il valore di b\n");
+c = input("Inserisci il valore di c\n");
+
+% calcolare (a+b)+c
+
+fla = round(a,3,"significant");
+flb = round(b,3,"significant");
+flc = round(c,3,"significant");
+
+temp = round(fla+flb, 3, "significant");
+r = round(temp+flc, 3, "significant");
+
+% calcoliamo l'errore relativo
+esatto = a+b+c;
+rho = abs(esatto-r)/abs(esatto)
+
+% calcolare a+(b+c)
+temp = round(flc+flb, 3, "significant");
+r2 = round(temp+fla, 3, "significant");
+% calcoliamo l'errore relativo
+rho2 = abs(esatto-r2)/abs(esatto)
+```
+
+Un algoritmo per trovare l'epsilon di macchina:
+```
+% e t.c. 1+e>1
+e = 1;
+while 1+e/2>1
+    e = e/2;
+end
+disp("L'epsilon di macchina è "+e)
+disp("L'epsilon secondo MatLab è "+eps)
+```
+
+Proviamo a fare un limite:
+```
+% lim x->0 di (1-cos(x))/x^2 = 1/2
+for i=-1:-1:-10
+    x = 10^i;
+    y = (1-cos(x))/x^2
+end
+```
+Ci dà 0. Perché? Per il cosiddetto *errore di cancellazione*. $1-cos(x)$ diventa talmente piccolo da diventare 0 come numero di macchina. La soluzione è di riformulare la formula per evitare quel numero piccolo.
+```
+% lim x->0 di (1-cos(x))/x^2 = 1/2
+% 1/2*(sin(x/2)/(x/2))^2
+for i=-1:-1:-10
+    x = 10^i;
+    y = 1/2*(sin(x/2)/(x/2))^2
+end
+```
+
+Sono formule matematicamente equivalenti, ma qua non raggiungiamo l'epsilon di macchina e quindi otteniamo il risultato corretto, `0.5`.
