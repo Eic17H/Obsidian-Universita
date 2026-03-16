@@ -1,1 +1,10 @@
-{}
+{
+  "enabledCssSnippets": [
+    "notation-colour-blocks",
+    "stile"
+  ],
+  "theme": "obsidian",
+  "textFontFamily": "",
+  "baseFontSizeAction": false,
+  "baseFontSize": 16
+}
