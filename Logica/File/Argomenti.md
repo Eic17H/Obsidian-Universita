@@ -1,3 +1,4 @@
+@ -1,71 +1,153 @@
 Un argomento è un insieme di enunciati che viene composto da un certo numero di premesse addotte a sostegno di una conclusione. Questa definizione definisce contestualmente premesse e conclusioni, senza che sia necessaria una definizione a parte. Sto etichettando un enunciato dell'insieme come conclusione, tutti gli altri implicitamente diventano premesse.
 
 Secondo il proponente dell'argomento, chi accetta la verità di tutte le premesse dovrebbe accettare la verità della conclusione.
@@ -66,8 +67,10 @@ Vediamo un altro argomento. "Se Trump è francese, Trump è europeo. Trump è fr
 
 C'è una bella tabella nelle #slide.
 
+Adesso: "Briatore è un prete | Briatore è un sacerdote". È un argomento valido, però è formalmente invalido (α|β), inoltre è scorretto perché Briatore non è un prete! Quindi ci sono tre livelli: la verità (corretto), il linguaggio naturale (valido) e il linguaggio formale (formalmente valido).
 Adesso: "Briatore è un prete | Briatore è un sacerdote". È un argomento valido, però è formalmente invalido (α|β), inoltre è scorretto perché Briatore non è un prete! Quindi ci sono tre livelli: la verità (corretto), il linguaggio naturale (valido) e il linguaggio formale (formalmente valido). Non esiste uno *schema formalmente valido*, gli *argomenti* sono formalmente validi o invalidi. L'aspetto teorico, cioè formale, quindi le definizioni, è importante all'orale, più degli esercizi computazionali.
 
+## Standard induttivi
 ### Argomenti corretti
 
 Appunto, un argomento è corretto quando è valido e le premesse sono vere (quindi anche la conclusione è vera).
