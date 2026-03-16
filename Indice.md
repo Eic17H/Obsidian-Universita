@@ -24,7 +24,6 @@
 * [[Economia]]
 ## Semestre 2
 * [[Programmazione 2]]
-* [[Fondamenti di Programmazione Web]]
 * [[Reti di Calcolatori]]
 * [[Calcolo Scientifico e Metodi Numerici]]
 
@@ -32,7 +31,13 @@
 
 ## Semestre 1
 * [[Basi di Dati]]
-* [[Interazione Uomo Macchina]]
+* [[Interazione Uomo-Macchina]]
 * [[Linguaggi di Programmazione]]
 ## Semestre 2
 * [[Ingegneria del Software]]
+
+# Esami a scelta
+
+## Semestre 2
+* [[Fondamenti di Programmazione Web]]
+* [[Istituzioni di Logica]]
