@@ -76,7 +76,7 @@ Però, certi libri possono avere terminologie diverse. Il libro "Logica da 0 a G
 
 ## Standard induttivi
 
-Gli standard induttivi ci permettono di trovare gli argomenti forti: se le premesse sono vere, allora *molto probabilmente* la conclusione è vera. Quanto è alta questa probabilità? Il problema degli standard induttivi è proprio questa vaghezza. Non avrebbe senso neanche fissare una soglia ben precisa, perché farebbe violenza alla nostra nozione organica di argomento forte. Sarebbe come fissare per legge un limite minimo in centimetri per il concetto di "persona alta", si potrebbe fare, ma sarebbe una violenza alla comunicazione. Eppure per altre cose si fa, "gli anziani viaggiano gratis", c'è spesso un limite minimo di età, per esempio 65 anni; questo fa violenza all'uso linguistico, nella comunicazione naturale ci sono età in cui si è incerti quando si deve decidere se descrivere qualcuno come anziano o meno, e non dipende solo dal'età.
+Gli standard induttivi ci permettono di trovare gli argomenti forti: se le premesse sono vere, allora *molto probabilmente* la conclusione è vera. Quanto è alta questa probabilità? Il problema degli standard induttivi è proprio questa vaghezza. Non avrebbe senso neanche fissare una soglia ben precisa, perché farebbe violenza all'uso linguistico del termine. Sarebbe come fissare per legge un limite minimo in centimetri per il concetto di "persona alta", si potrebbe fare, ma sarebbe una violenza alla comunicazione. Eppure per altre cose si fa, "gli anziani viaggiano gratis", c'è spesso un limite minimo di età, per esempio 65 anni; questo fa violenza all'uso linguistico, nella comunicazione naturale ci sono età in cui si è incerti quando si deve decidere se descrivere qualcuno come anziano o meno, e non dipende solo dall'età.
 
 ### Argomenti forti
 
@@ -112,7 +112,7 @@ Gli argomenti analogici sono usati spesso nelle pubblicità, sotto forma di test
 
 ##### Analogie nella giurisprudenza
 
-Le analogie vengono usate nella giurisprudenza, sotto forma di precedenti.
+Le analogie vengono usate nella giurisprudenza, sotto forma di precedenti. Caso di tribunale on condizioni e sentenza, caso di oggi con stesse condizioni -> stessa sentenza.
 
 Esempio: #slide.
 
@@ -120,17 +120,19 @@ Esempio: #slide.
 
 Per attaccare l'argomento, posso attaccare la premessa analogica o la premessa attributiva.
 
-#### Confutare la premessa analogica
+#### Attaccare la premessa analogica
 
 Attaccando la premessa analogica, posso attaccare la *pertinenza* delle caratteristiche comuni: "l'ultima volta che avevo scarpe nere, calze grigie, pantaloni blu e maglietta bianca ho trovato 5€ per terra, quindi se mi rimetto gli stessi vestiti troverò di nuovo 5€ per terra". Non è un argomento forte.
 
-#### Confutare la premessa attributiva
+"Hanno queste in comune, ma questa caratteristica più importante è diversa" è un altro modo.
+
+#### Attaccare la premessa attributiva
 
 #slide
 
 Dico che x non è vera essenzialmente.
 
-#### Confutare la premessa analogica
+#### Attaccare la premessa analogica
 
 #slide. Non è un episodio autobiografico del professore, sia chiaro.
 
@@ -151,3 +153,9 @@ Per controllare la veridicità delle premesse possiamo usare l'esperienza dirett
 L'allunaggio. Abbiamo visto dei filmati provenienti da fonti attendibili, che sono autorità, ma non l'abbiamo visto di persona.
 
 Non possiamo però rifiutare *tutta* la conoscenza autoritaria. Non potremmo mai attraversare un ponte perché non sapremmo se crollerà o no. Non potremmo fare nulla.
+
+# Quindi
+
+Gli argomenti per analogia sono un tipo di argomento forte. La premessa analogica è l'insieme di caratteristiche in comune, la premessa attributiva è la caratteristica aggiunta.
+
+È un ragionamento induttivo no? "Un coniglio vede che tutti i giorni gli danno da mangiare alla stessa ora". È possibile da questo estrarre una legge di natura? Evidentemente no, oggi a quell'ora l'hanno avvelenato. Ma le leggi scientifiche non si formano allo stesso modo? "Ho sempre visto che il rame è sempre un buon conduttore, quindi tutti i pezzi di rame passati presenti e futuri sono buoni conduttori". C'è una differenza. Questo è il problema di Hume: *non esiste nessun criterio logicamente fondato che giustifica le generalizzazioni scientifiche. L'induzione non ha nessuna base, e quindi la scienza, che si basa sull'induzione, non ha nessuna base*. Questo è uno dei problemi filosofici più importanti. Ci sono più opzioni da qui: Hume sbaglia, Hume ha ragione (scetticismo), l'induzione non ha basi ma la scienza ha qualcosa in più che la rende fondata.
