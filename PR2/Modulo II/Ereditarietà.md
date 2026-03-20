@@ -1,6 +1,6 @@
 ## Basi dell'ereditarietà
 
-Abbiamo una [[Classi|classe]] `Studente` e una classe `Docente`.
+Abbiamo una classe `Studente` e una classe `Docente`.
 * Studente ha gli attributi `nome`, `cognome`, `età`, `matricola` e `anno di iscrizione`.
 * Docente ha gli attributi `nome`, `cognome`, `età` e `insegnamento`.
 

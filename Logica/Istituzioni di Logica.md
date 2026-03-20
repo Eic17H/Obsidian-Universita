@@ -2,7 +2,5 @@
 * [[Enunciati]]
 * [[Argomenti]]
 * [[Fallacie]]
-* [[Logiche rilevanti]]
-* [[Calcolo logico]]
 
 #materia 

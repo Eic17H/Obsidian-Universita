@@ -1,4 +1,10 @@
 {
+  "enabledCssSnippets": [
+    "notation-colour-blocks",
+    "stile"
+  ],
   "theme": "obsidian",
-  "accentColor": ""
+  "textFontFamily": "",
+  "baseFontSizeAction": false,
+  "baseFontSize": 16
 }
