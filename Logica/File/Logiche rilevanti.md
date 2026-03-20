@@ -1,3 +1,4 @@
+@ -0,0 +1,97 @@
 # Schemi controintuitivi
 
 A fortiori, $α | β->α$. "Tre è dispari. Quindi, se tre è pari, tre è dispari". La nostra intuizione è che sia falsa, eppure è un argomento valido, poiché istanzia uno schema valido. Nella fisica, ci sono spesso cose che sono vere ma non hanno senso intuitivamente, il problema è che siamo ignoranti e non capiamo la fisica, la soluzione è imparare la fisica. È lo stesso con questo argomento?
