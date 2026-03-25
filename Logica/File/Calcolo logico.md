@@ -141,3 +141,11 @@ Avendolo dimostrato, possiamo scrivere $\models_{HK} α\rightarrowα$, ma con un
 Più complicato è dimostrarlo per la logica dei predicati, dove ci sono i quantificatori, l'ha dimostrato Goedel nel 1930 col teorema di completezza (Goedel ha anche un teorema di incompletezza).
 
 All'esame non produrremo dimostrazioni col calcolo HK, perché non è maneggevole per il calcolo delle dimostrazioni, "non lo saprei fare neanche io". Però ti chiederà di spiegare una dimostrazione già fatta. Questo calcolo è subottimale per la ricerca delle dimostrazioni, vedremo calcoli più efficienti.
+
+# Difetti
+
+Il processo di dimostrazione è molto macchinoso. Questi esempi semplici erano già unwieldy. Inoltre, come per primo disse il polacco Jaskowski, il calcolo alla Hilbert non rispetta in maniera fedele il modo di ragionare che abbiamo nelle dimostrazioni matematiche informali. Invece di solito ragioniamo a partire dalle ipotesi: supponiamo questo, e da questo deduciamo quello. In HK non possiamo avere assunzioni.
+
+Faremo quindi un upgrade, per ragionare ex hypotesi, per assunzioni. Se supponiamo di poter usare, come punti di partenza, non solo postulati ma anche assunzioni, diventa tutto più maneggevole.
+
+#todo: magari separare il calcolo logico in calcolo HK e calcolo per assunzione eccetera.
