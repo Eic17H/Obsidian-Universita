@@ -1,5 +1,5 @@
-## [[SO/Teoria|Modulo I]]
-## [[SO/Lab|Modulo II]]
+## [[SO/Teoria/Teoria|Modulo I]]
+## [[SO/Lab/Lab|Modulo II]]
 
 ## Informazioni
 

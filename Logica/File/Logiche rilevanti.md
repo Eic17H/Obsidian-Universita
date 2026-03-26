@@ -1,7 +1,6 @@
-@ -0,0 +1,97 @@
 # Schemi controintuitivi
 
-A fortiori, $α | β->α$. "Tre è dispari. Quindi, se tre è pari, tre è dispari". La nostra intuizione è che sia falsa, eppure è un argomento valido, poiché istanzia uno schema valido. Nella fisica, ci sono spesso cose che sono vere ma non hanno senso intuitivamente, il problema è che siamo ignoranti e non capiamo la fisica, la soluzione è imparare la fisica. È lo stesso con questo argomento?
+A fortiori, $\frac{α}{β→α}$. "Tre è dispari. Quindi, se tre è pari, tre è dispari". La nostra intuizione è che sia falsa, eppure è un argomento valido, poiché istanzia uno schema valido. Nella fisica, ci sono spesso cose che sono vere ma non hanno senso intuitivamente, il problema è che siamo ignoranti e non capiamo la fisica, la soluzione è imparare la fisica. È lo stesso con questo argomento?
 
 Pensa a Zenone, e il paradosso di Achille e la tartaruga. Diogene lo risolve facendogli vedere che cammina (solvitur ambulando), ma Zenone risponde dicendo che i sensi ingannano, e la conclusione raggiunta con il puro ragionamento è superiore e più vera rispetto all'intuizione dei sensi.
 

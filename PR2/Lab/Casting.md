@@ -1,4 +1,4 @@
-Partiamo dalle classi viste per l'[[ereditarietà]].
+Partiamo dalle classi viste per l'[[Ereditarietà]].
 ```
 class Docente extends Persona{}
 ...

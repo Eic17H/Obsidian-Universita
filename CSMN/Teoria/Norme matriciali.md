@@ -1,39 +1,49 @@
-Una norma è una funzione che va da uno spazio vettoriale ai reali positivi.
+$\newcommand{\vx}{\underline{x}}$$\newcommand{\vy}{\underline{y}}$$\newcommand{\vz}{\underline{0}}$$\newcommand{\sp}{\enspace}$$\newcommand{\R}{\mathbb{R}}$$\newcommand{\maxx}{\max\limits_}$$\newcommand{\inf}{\infty}$Una norma è una funzione che va da uno spazio vettoriale ai reali positivi.
+# Proprietà
 
-Le norme hanno tre proprietà:
+Le norme matriciali condividono le tre proprietà delle [[norme vettoriali]]:
 
-1. ||x°|| >= 0 e ||x°|| <|-|> x°=0° (con ° segno il sottolineato)
-2. ||ax*|| = |a| · ||x°||
-3. ||x°+y°|| <= ||x°||+||y°||
+1. $\|\vx\| \ge 0$ e $\|\vx\| ↔ \vx=\vz$
+2. $\|a\vx\| = |a| · \|\vx\|$
+3. $\|\vx+\vy\| \le \|\vx\|+\|\vy\|$
 
 Le norme matriciali hanno altre due proprietà
 
-4. Submoltiplicatività: ||AB|| <= ||A||·||B||
-5. Consistenza: Ax°=y°, ricorda la regola per sapere le dimensioni, quindi la norma di x° e la norma di y° sono norme in Rn con n diversi tra i due. Quindi se ho $||·||_\alpha in R^n$ e $||·||_\beta in R^m$ allora ||Ax||beta <= ||A|| \* ||x||alfa, vedi #slide (lavagna)
+4. Submoltiplicatività: $\|AB\| \leq \|A\|·\|B\|$
+5. Consistenza: $A\vx=\vy$, ricorda la regola per sapere le dimensioni, quindi la norma di $\vx$ e la norma di $\vy$ sono norme in $\R^n$ con $n$ diversi tra i due. Quindi se ho $\|·\|_\alpha \in \R^n$ e $\|·\|_\beta \in \R^m$ allora $\|A\vx\|_\beta \le \|A\|\cdot\|\vx\|_\alpha$.
 
-Esempio, norma di Frobenius che credo abbia detto sia la più comune, $$||A||_F = \sqrt{\sum_{i=1}^{m}{\sum_{j=1}^{n}{|a_{ij}|^2}}}$$
-Definizione: la norma indotta dalla norma vettoriale (senza pedice perché vale per tutte le norme) è data da $||A||$ ed è definita in due modi diversi: $max_{\underline{x}≠\underline{0}} \dfrac{||A\underline{x}||}{||\underline{x}||}$ oppure $max_{||\underline{x}||=1} ||A\underline{x}||$.
+# Norma di Frobenius
+
+Esempio, norma di Frobenius che credo abbia detto sia la più comune, $$\|A\|_F = \sqrt{\sum_{i=1}^{m}{\sum_{j=1}^{n}{|a_{ij}|^2}}}$$
+# Norme indotte
+## Definizione
+
+La norma indotta dal qualunque norma vettoriale $\|\cdot\|$ è data da $\|A\|$ ed è definita in due modi equivalenti:
+$$\maxx{\vx≠\vz} \dfrac{\|A\vx\|}{\|\vx\|} \qquad \maxx{\|\vx\|=1} \|A\vx\|$$
 
 Vedremo la norma a 1, a 2 e a infinito della norma indotta, così come abbiamo visto quelle per i vettori.
 
-Osservazione: per ogni norma indotta, $||I||=1$. $max_{\underline{x}≠\underline{0}} \dfrac{||I\underline{x}||}{||\underline{x}||}$, per esempio, ti rimane $\dfrac{||\underline{x}||}{||\underline{x}||}$ che è 1, ci torna. Per la norma di Frobenius invece, ti esce che $||I||=\sqrt{n}$, quindi non è una norma indotta.
+Osservazione: per ogni norma indotta, $\|I\|=1$: con $\maxx{\vx≠\vz} \dfrac{\|I\vx\|}{\|\vx\|}$, per esempio, ti rimane $\dfrac{\|\underline{x}\|}{\|\underline{x}\|}= 1$, ci torna. Per la norma di Frobenius invece, ti esce che $\|I\|=\sqrt{n}$, quindi non è una norma indotta.
 
-# Norma indotta dalla norma a infinito
+## Norma indotta dalla norma a infinito
 
-Teorema: La norma indotta dalla norma vettoriale infinita è:$$||A||_{\infty}=max_{i=1,...,m} \sum_{j=1}^{n}{|a_{ij}|}$$Vale a dire, il massimo delle somme riga.
+### Teorema
 
-Dimostrazione: $$||A||_{\infty}=max_{||\underline{x}||_{\infty}=1}||A\underline{x}||_{\infty}$$Questo lo sappiamo, è la definizione.$$||A\underline{x}||_{\infty}=max_{i=1,...,n}|(Ax)_i|$$Cosa significa però. $(Ax)_i$ sarebbe, in parole povere (sbagliate), "la riga i di A · vettore x", cioè $\sum_{j=1}^n a_{ij}x_j$. Sostituiamo: $$||A\underline{x}||_{\infty}=max_{i=1,...,n}|\sum_{j=1}^n a_{ij}x_j|$$Però sappiamo che il valore assoluto di una somma di prodotti è minore o uguale alla somma dei prodotti dei valori assoluti: $$||A\underline{x}||_{\infty}\le max_{i=1,...,n}\sum_{j=1}^n |a_{ij}||x_j|$$ Poi possiamo spostare il max $$||A\underline{x}||_{\infty}\le max_{i=1,...,n}\sum_{j=1}^n |a_{ij}|·max_{j=1,...,n}|x_j|$$
+La norma indotta dalla norma vettoriale infinita è:$$\|A\|_{\infty}=max_{i=1,...,m} \sum_{j=1}^{n}{|a_{ij}|}$$Vale a dire, il massimo delle somme riga.
+
+### Dimostrazione
+$$\|A\|_{\infty}=\maxx{\|\vx\|_{\infty}=1}\|A\vx\|_{\inf}$$Questo lo sappiamo, è la definizione.$$\|A\underline{x}\|_{\inf}=\maxx{i=1,...,m}|(Ax)_i|$$Cosa significa però. $(Ax)_i$ sarebbe, in parole povere (sbagliate), "la riga i di A · vettore x", cioè $\sum_{j=1}^n a_{ij}x_j$. Sostituiamo: $$\|A\vx\|_{\inf}=\maxx{i=1,...,m}|\sum_{j=1}^n a_{ij}x_j|$$Però sappiamo che il valore assoluto di una somma di prodotti è minore o uguale alla somma dei prodotti dei valori assoluti: $$\|A\vx\|_{\inf}\le \maxx{i=1,...,m}\sum_{j=1}^n |a_{ij}||x_j|$$ Poi possiamo spostare il max $$\|A\vx\|_{\inf}\le \maxx{i=1,...,m}\sum_{j=1}^n |a_{ij}|·\maxx{j=1,...,m}|x_j|$$
 Adesso abbiamo però una disuguaglianza, non un'uguaglianza. Per avere un'uguaglianza, considero $\underline{x}=(s_1,...,s_n)^T$, dove $s_j=sign(a_{ij})$, $i$ è l'indice massimo delle somme riga (somma dei valori assoluti degli elementi della riga). Quindi, prendo come riga di riferimento quella con la somma massima dei valori assoluti (somma riga massima). Se quella riga è $(2, 4, -7)$, allora il nostro $x$ sarà $(1,1,-1)$. Non si è capito nulla, ma questo fa sì che si faccia il valore assoluto. Vedi il libro sicuramente aiuterà.
 
-# Norma indotta dalla norma a 1
+## Norma indotta dalla norma a 1
 
 La simmetrica rispetto a quella a infinito. Facciamo le somme colonna e prendiamo il massimo. La dimostrazione è molto molto simile quindi la possiamo lasciare perdere. Da vedere cosa sono le norme vettoriali perché mancavo e l'anno scorso non ho seguito.
 
 Ah quindi è semplicemente il massimo delle somme colonna? E le somme colonna sono solo la somma dei valori assoluti degli elementi della colonna? Così è molto più semplice. Ok la parte difficile è la dimostrazione immagino
 
-# Norma indotta dalla norma a 2
+## Norma indotta dalla norma a 2
 
-$$||A||_2 = \sqrt{ρ(A^*A)}$$
+$$\|A\|_2 = \sqrt{ρ(A^*A)}$$
 Quanta roba che c'è in questa piccola piccola formula. E perché è così? Eh questa è brutta.
 
 Cose utili da ricordare: due proprietà di $A^TA$, che per i reali è uguale ad $A^*A$. È simmetrica, sempre, quindi $A^TA = (A^TA)^T$, perché $(A^TA)^T = ((A^T)^TA^T)^T = A^TA$,. È anche sempre definita positiva (altra cosa che ha spiegato quando non c'ero e ho gli incubi dall'esame perché non l'ho mai capito).
@@ -42,18 +52,18 @@ Definita positiva:
 $$\underline{x}^TA^TA\underline{x}>0$$
 $$\underline{x}^TA^TA\underline{x} = (A\underline{x})^TAx$$
 ridefiniamo $A\underline{x} = \underline{y}$
-$$(\underline{y})^T\underline{y} = ||\underline{y}||^2_2>0$$
+$$(\underline{y})^T\underline{y} = \|\underline{y}\|^2_2>0$$
 È maggiore di 0 essendo al quadrato. Eh? Eh sì, è così, vedi la norma vettoriale.
 
 Queste erano le proprietà di $A^TA$.
 
-Allora. Quel ||x|| 2 2 = <x,x> = <a1v1 + a2v2 + ..., a1v1 + la stessa cosa> (ha scomposto il vettore). Linearmente indipendenti. < a1v1,a1v1 > + < a1v1, a2v2 > + ...
+Allora. Quel \|x\| 2 2 = <x,x> = <a1v1 + a2v2 + ..., a1v1 + la stessa cosa> (ha scomposto il vettore). Linearmente indipendenti. < a1v1,a1v1 > + < a1v1, a2v2 > + ...
 
 Però essendo linearmente indipendenti, tutti questi prodotti scalari sono uguali a 0, tranne quelli che hanno lo stesso indice due volte. Ma < a1v1,a1v1 > = a1\^2. E quindi è la somma dei quadrati degli elementi di x.
 
 A noi. Cosa importa.
 
-Ah certo, $$||A\underline{x}||^2_2 = <A\underline{x},A\underline{x}> = (A\underline{x})^TA\underline{x} = \underline{x}^TA^TA\underline{x}$$
+Ah certo, $$\|A\underline{x}\|^2_2 = <A\underline{x},A\underline{x}> = (A\underline{x})^TA\underline{x} = \underline{x}^TA^TA\underline{x}$$
 Con questo? È uguale a $$\sum_{i=1}^n a_iv_i^TA^TA · \sum_{j=1}^na_jv_j$$
 
 E ha detto che abbiamo detto anche che $A^TA\underline{v}_j = λ_j\underline{v}_j$, perché è come $A\underline{x} = λ\underline{x}$. Ah sì? Ok
@@ -89,4 +99,4 @@ Poi, se è simmetrica, non devo calcolare il quadrato della matrice, cambio l'or
 
 Teorema:
 
-Se ||·|| è consistente e A è quadrata, allora rho(A)<=||A||. Cosa vuol dire? Se faccio la norma e faccio un cerchio che ha come raggio la norma ottengo un cerchio che contiene comunque tutti gli autovalori. Molto molto potente. Calcolare il raggio spettrale è molto lento, la norma a infinito è velocissima, la norma a 1 è velocissima, faccio quello.
+Se \|·\| è consistente e A è quadrata, allora rho(A)<=\|A\|. Cosa vuol dire? Se faccio la norma e faccio un cerchio che ha come raggio la norma ottengo un cerchio che contiene comunque tutti gli autovalori. Molto molto potente. Calcolare il raggio spettrale è molto lento, la norma a infinito è velocissima, la norma a 1 è velocissima, faccio quello.

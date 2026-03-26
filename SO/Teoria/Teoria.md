@@ -1,5 +1,5 @@
 ## Indice
-* [[SO/Modulo I/Introduzione]]
+* [[SO/Teoria/Introduzione]]
 * [[Architetture di elaborazione]]
 
 #modulo
