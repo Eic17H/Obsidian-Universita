@@ -1,5 +1,3 @@
-## Settimana 11
-
 Scope: strumenti per la pulizia di pavimenti…?
 No. In inglese significa ambito di influenza.
 
@@ -39,24 +37,26 @@ I corpi delle subroutine sono sottoambiti testuali.
 main() e foo() non possono essere in esecuzione contemporaneamente (per quanto ci riguarda in questo corso).
 
 Fare un programma del tipo:
+```
 int main(){
-	…
+	...
 	codice
-	…
+	...
 	int b;
-	…
+	...
 	{
-	int b;
+		int b;
 	}
-	…
+	...
 }
+```
 Non è un errore sintattico, ma non farlo.
 
-In questo caso, lo scope del primo b è solo una parte di main(), e questo rende il codice più difficile da mantenere. In particolare, va da int b a { e da } alla fine di main().
+In questo caso, lo scope del primo `b` è solo una parte di `main()`, e questo rende il codice più difficile da mantenere. In particolare, va da `int b` a `{` e da `}` alla fine di `main()`.
 
-Lo scope del secondo b invece è solo la parte racchiusa tra le graffe.
-Questo si chiama mascheramento ed è ancora più perverso dell’altro b.
-È ancora più perverso di for(int i=0;...;...), dove lo scope di i è solo il blocco for.
+Lo scope del secondo `b` invece è solo la parte racchiusa tra le graffe.
+Questo si chiama mascheramento ed è ancora più perverso dell’altro `b`.
+È ancora più perverso di `for(int i=0;...;...)`, dove lo scope di `i` è solo il blocco `for`.
 
 
 Variabili globali, file scope, definizione di simboli fuori da una subroutine.
