@@ -1,29 +1,4 @@
-## Puglisi
-
-### Algoritmo di conversione tra basi per i numeri interi
-
-Dato un numero $n$, e una base $B$;
-Fai $n/B$;
-Ti segni il resto;
-Il risultato è il nuovo $n$;
-Ricominci finché il risultato non è $0$.
-I resti, in ordine inverso, sono le cifre del numero convertito.
-Così come le cifre vanno da $0$ a $B-1$, anche i resti vanno da $0$ a $B-1$.
-
-### Conversione di numeri razionali
-
-$\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + ···$, se è una serie finita, sarà sempre minore di $1$.
-Può essere maggiore di $1$ solo se è $1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + ···$, cioè se la cifra delle unità in binario è $1$ e non $0$.
-Ed è proprio la successione di cifre che cerchiamo.
-Quindi possiamo controllare la cifra delle unità, poi cambiare qual è quella delle unità.
-L'algoritmo che segue da questa logica è:
-* Considero solo la parte decimale;
-* Moltiplico per $2$;
-* Se è maggiore di $1$, la cifra è $1$, altrimenti è $0$;
-* Ricomincio finché il numero non è $0$.
-Appunto, non tutti terminano.
-$0,78125_{10} = 0,1101_2; 0,9_{10} = 0,1(1100)_2$.
-## Mossa
+Lo stesso argomento: [[FDI/File/Basi numeriche|FDI]], [[CSMN/Teoria/Basi numeriche|CSMN]]
 
 Una domanda sarà su questo.
 

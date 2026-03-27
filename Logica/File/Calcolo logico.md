@@ -2,10 +2,6 @@ Abbiamo visto le tautologie, le abbiamo fatto a mano. Però, esiste un algoritmo
 
 # [[Logica/File/Calcolo logico/Storia|Storia]]
 
-Lo scopo del calcolo può essere anche un modo imparziale per risolvere conflitti, secondo Leibniz. Leibniz ci lavorò molto, ma il suo contributo sul calcolo logico moderno è ridotto; questo è anche perché molti dei suoi scritti non sono stati pubblicati mentre era in vita, furono scoperti secoli dopo da Couturat, quando ormai era già fondato.
-
-Torniamo ancora più indietro, possiamo vedere il calcolo logico come calcolo assiomatico, torniamo ad Euclide. Euclide, da cinque assiomi, o postulati, e da quelli che chiamava "assiomi comuni", cioè proprietà che valgono non solo per la geometria ma per tutto. In realtà, ci sono teoremi che sono validi ma che non si possono dimostrare a partire dai cinque postulati, quindi il sistema non è logicamente impeccabile, ma è il primo esempio di teoria assiomatica, e in quanto tale il modello per tutte le teorie assiomatiche arrivate dopo, inclusa quella moderna.
-
 # Linguaggio
 
 Vediamo il nostro linguaggio L0.
@@ -88,17 +84,7 @@ E poi c'è un'unica regola d'inferenza, che è uno schema di argomento, il modus
 
 Esistono un numero infinito di formule derivabili da questi postulati, perché $α$, $β$ e $γ$ sono sostituibili con qualunque formula, e un'istanza di sostituzione di un assioma è un assioma (forse intende tautologia?). Ogni assioma di questo calcolo è in realtà uno schema di assioma che ne compendia (raggruppa) infiniti altri. Quindi il calcolo HK ha infiniti assiomi che possono essere raggruppati in 11 schemi di assioma.
 
-Gli assiomi sono tautologie, questo lo verifichiamo facilmente. Tuttavia Hilbert era in qualche modo, la concezione di sistema assiomatico di Hilbert era molto diversa da quella di Euclide e Aristotele e degli altri inventori dell'assiomatica antica. Per Euclide e Aristotele, gli assiomi sono verità evidenti: per due punti passa una sola retta, per Euclide era impossibile da falsificare in quanto evidente e quindi non andava neanche dimostrata. Ettore Casari la chiamava concezione categorica epistemica. Categorica perché gli assiomi rappresentano verità: sono vere, e come lo so? Intuitivamente. Tutto il dibattito sul quinto postulato di Euclide, era considerato un postulato dubbio proprio perché non era del tutto intuitivo. Poi ci fu una rivoluzione del pensiero matematico, la nascita delle geometrie non euclidee, che considerano i postulati euclidei come qualcosa che scegliamo, e creano sistemi coerenti partendo da altri postulati. Il matematico ha la libertà di scegliere i postulati, purché lo faccia in modo non contraddittorio. Quindi Hilbert disse che, visto che lo scopo è di generare delle tautologie, Hilbert scelse tautologie come assiomi. Ma un assioma è solo qualcosa che viene arbitrariamente dichiarato vero.
-
-Cos'era una dimostrazione per Euclide e Aristotele? Una procedura che trasferisce l'evidenza dagli assiomi ai teoremi. Non è immediatamente evidente che un teorema sia vero, quindi trasferisco l'evidenza degli assiomi sui teoremi. Nell'antichità non venne messo in discussione. Aristotele lo trattò nel primo grande trattato scientifico della storia, gli Analitici Secondi. Per secoli questo fu accettato, fino anche al 1700. Poi all'inizio dell''800, un signore chiamato Bernard Bolzano (teorema di Bolzano-Weierstrass). Bolzano sacerdote boemo che diede contributi formali all'analisi matematica, e filosofo e metodologo della scienza, nel 1837 scrive un libro, Dottrina della Scienza (Wissenschaft Lehrer o simile) (dottrina come Fichte): se davvero le nozioni matematiche dovessero servire a trasferire... allora Euclide non avrebbe dimostrato che un triangolo isoscele ha angoli alla base uguali. Vediamo: certo è intuitivo, ma la dimostrazione di Euclide è molto tortuosa (pons asinorum), ma se il ruolo della dimostrazione è di trasferire l'evidenza dagli assiomi al teorema, il teorema era già ovvio, mica servono gli assiomi per renderlo ovvio. Secondo Bolzano, la dimostrazione serve a capire il motivo profondo.
-
-Poi Hilbert, ogni sistema di enti che ha proprietà codificate dagli assiomi ha proprietà codificate dai teoremi. Il tizio italiano menzionato ha detto che è intuitivo-qualcosaltro. Non dubito della verità degli assiomi, momentaneamente li assumo veri, e da lì prendo quello. Pessimi pessimi appunti. Più importante, ***nuova concezione degli assiomi***. Integra dalle #slide oggi digito lento. E dal libro probabilmente questi appunti sono messi talmente male che le slide non bastano.
-
-#todo: separare la storia in un altro file già predisposto
-
-E questo è il calcolo HK.
-
-Piccolo inciso: siamo sempre convinti che gli antichi siano ingenui e che il presente abbia tutta la verità oggettiva pronta finita fatta perfetta.
+Vedi anche la [[Logica/File/Calcolo logico/Storia|storia]]
 
 # Dimostrazione
 
@@ -146,6 +132,6 @@ All'esame non produrremo dimostrazioni col calcolo HK, perché non è maneggevol
 
 Il processo di dimostrazione è molto macchinoso. Questi esempi semplici erano già unwieldy. Inoltre, come per primo disse il polacco Jaskowski, il calcolo alla Hilbert non rispetta in maniera fedele il modo di ragionare che abbiamo nelle dimostrazioni matematiche informali. Invece di solito ragioniamo a partire dalle ipotesi: supponiamo questo, e da questo deduciamo quello. In HK non possiamo avere assunzioni.
 
-Faremo quindi un upgrade, per ragionare ex hypotesi, per assunzioni. Se supponiamo di poter usare, come punti di partenza, non solo postulati ma anche assunzioni, diventa tutto più maneggevole.
+Faremo quindi un upgrade, per ragionare ex hypothesi, per assunzioni. Se supponiamo di poter usare, come punti di partenza, non solo postulati ma anche assunzioni, diventa tutto più maneggevole.
 
 #todo: magari separare il calcolo logico in calcolo HK e calcolo per assunzione eccetera.

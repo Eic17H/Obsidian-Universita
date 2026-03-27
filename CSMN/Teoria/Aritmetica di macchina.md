@@ -4,7 +4,7 @@ Ci sono 6 macroargomenti, 3 per parziale. E poi c'è MatLab, che richiede la con
 
 # Aritmetica di macchina
 
-I numeri decimali non possono essere memorizzati sempre esattamente su un calcolatore. L'opzione migliore per risparmio di memoria è la [[virgola mobile]].
+I numeri decimali non possono essere memorizzati sempre esattamente su un calcolatore. L'opzione migliore per risparmio di memoria è la [[Numeri binari|virgola mobile]].
 
 Vediamo la memorizzazione di alcuni numeri.
 
