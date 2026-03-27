@@ -2,7 +2,7 @@
 
 * [[Logica proposizionale classica]]
 * [[Logica dei predicati]]
-* [[Regex#Bartoletti|Regex]]
+* [[ALF/File/Regex|Regex]]
 * [[OCaml]]
 
 ## Introduzione

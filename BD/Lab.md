@@ -1,2 +1,2 @@
-* [[SQL#BD]]
+* [[BD/Lab/SQL|SQL]]
 #modulo

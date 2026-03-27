@@ -3,7 +3,7 @@
 ## Semestre 1
 
 * [[Programmazione 1]]
-* [[Fondamenti di Informatica]]
+* [[Fondamenti|Fondamenti di Informatica]]
 * [[Analisi Matematica]]
 
 ## Semestre 2
@@ -25,7 +25,7 @@
 ## Semestre 2
 * [[Programmazione 2]]
 * [[Reti di Calcolatori]]
-* [[CSMN]]
+* [[CSMN|Calcolo Scientifico e Metodi Numerici]]
 
 # Anno 3
 
@@ -39,5 +39,5 @@
 # Esami a scelta
 
 ## Semestre 2
-* [[Fondamenti di Programmazione Web]]
+* [[FPW|Fondamenti di Programmazione Web]]
 * [[Istituzioni di Logica]]

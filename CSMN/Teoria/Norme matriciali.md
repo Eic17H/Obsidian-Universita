@@ -57,9 +57,9 @@ $$(\underline{y})^T\underline{y} = \|\underline{y}\|^2_2>0$$
 
 Queste erano le proprietà di $A^TA$.
 
-Allora. Quel \|x\| 2 2 = <x,x> = <a1v1 + a2v2 + ..., a1v1 + la stessa cosa> (ha scomposto il vettore). Linearmente indipendenti. < a1v1,a1v1 > + < a1v1, a2v2 > + ...
+Allora. Quel $\|x\|_2^2 = \langle x,x \rangle = \langle a_1v_1 + a_2v_2 + ..., a_1v_1 + ... \rangle$ (ha scomposto il vettore). Linearmente indipendenti. < a1v1,a1v1 > + < a1v1, a2v2 > + ...
 
-Però essendo linearmente indipendenti, tutti questi prodotti scalari sono uguali a 0, tranne quelli che hanno lo stesso indice due volte. Ma < a1v1,a1v1 > = a1\^2. E quindi è la somma dei quadrati degli elementi di x.
+Però essendo linearmente indipendenti, tutti questi prodotti scalari sono uguali a $0$, tranne quelli che hanno lo stesso indice due volte. Ma $\langle a_1v_1,a_1v_1 \rangle = a_1^2$. E quindi è la somma dei quadrati degli elementi di $x$.
 
 A noi. Cosa importa.
 

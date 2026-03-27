@@ -1,6 +1,6 @@
 * [[Aritmetica di macchina]]
 * [[Problema]]
-* [[Basi numeriche]]
+* [[CSMN/Teoria/Basi numeriche]]
 * [[Aritmetica di macchina]]
 * [[Norme vettoriali]]
 * [[Autovalori e autovettori]]
