@@ -4,5 +4,6 @@
 * [[Fallacie]]
 * [[Logiche rilevanti]]
 * [[Calcolo logico]]
+* [[Ragionamento ex hypotesi]]
 
 #materia 
