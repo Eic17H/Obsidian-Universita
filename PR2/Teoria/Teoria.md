@@ -1,6 +1,6 @@
 ## Indice
 
-* [[PR2/Modulo I/Linguaggio|Linguaggio]]
+* [[PR2/Teoria/Linguaggio|Linguaggio]]
 * [[Programmazione a oggetti]]
 * [[Oggetti e classi]]
 * [[Eccezioni]]

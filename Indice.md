@@ -25,7 +25,7 @@
 ## Semestre 2
 * [[Programmazione 2]]
 * [[Reti di Calcolatori]]
-* [[Calcolo Scientifico e Metodi Numerici]]
+* [[CSMN]]
 
 # Anno 3
 

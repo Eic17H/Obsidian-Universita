@@ -6,7 +6,7 @@ In questo caso, si fa una classe **con la stessa firma**, si chiama il metodo `s
 
 Si aggiunge il decoratore `@Override`, così il compilatore ci avverte se non abbiamo dato la stessa firma al metodo della sottoclasse.
 
-Riprendiamo l'esempio visto con l'[[ereditarietà]]:
+Riprendiamo l'esempio visto con l'[[Ereditarietà]]:
 
 #### Persona.java
 ```
