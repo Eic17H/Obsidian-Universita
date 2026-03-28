@@ -116,3 +116,20 @@ end
 ```
 
 Sono formule matematicamente equivalenti, ma qua non raggiungiamo l'epsilon di macchina e quindi otteniamo il risultato corretto, `0.5`.
+
+Esercizio: Generare un numero casuale n tra 10 e 30 finché non è divisibile per 5. Generare una matrice quadrata di dimensione n/5 x n/5 e popolarla con i numeri da 1 a n ordinati in riga.
+
+```
+n = randi([10,30])
+while(mod(n,5))
+    n = randi([10,30])
+end
+m = n/5;
+A = zeros(m);
+for i=1:(m*m-1)
+    A(floor(i/m)+1, mod(i,m)+1) = i+1;
+end
+A
+```
+
+Dopo che l'ho fatto, ha detto che è utile la funzione `reshape()`. Se gli passi un vettore 1x25 e poi la taglia 5x5, te lo avvolge in una matrice 5x5. Fallisce se le taglie sono incompatibili. Puoi anche appiattire una matrice in un vettore.

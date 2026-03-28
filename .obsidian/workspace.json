@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a5f9043353eb9546",
+        "id": "a6a1d49990a037d2",
         "type": "tabs",
         "children": [
           {
-            "id": "2dbd5401564b932f",
+            "id": "7742a6494445beb1",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista grafo"
+              "type": "markdown",
+              "state": {
+                "file": "CSMN/Teoria/CSMN 20260318.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CSMN 20260318"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "clone",
+                "query": "randi(",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Ricerca"
             }
           },
           {
@@ -90,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FPW/Laboratorio/Express.md",
+                "file": "ISW/Raw/Lab-20260324.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Express"
+              "title": "Riferimenti a Lab-20260324"
             }
           },
           {
@@ -151,11 +155,12 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -172,47 +177,48 @@
       "command-palette:Apri riquadro comandi": false,
       "bases:Crea nuova Base": false,
       "obsidian-git:Open Git source control": false,
-      "webpage-html-export:Export Vault to HTML": false
+      "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "e44f3dc6d4ef89e9",
+  "active": "7742a6494445beb1",
   "lastOpenFiles": [
-    "CSMN/Lab/Introduzione a MatLab.md",
-    "CSMN/Lab/Prima vera lezione.md",
-    "Logica/File/Argomenti.md",
-    "Logica/File/Introduzione.md",
-    "Logica/File/Enunciati.md",
-    "Logica/Istituzioni di Logica.md",
-    "Logica/File",
-    "CSMN/Teoria.md",
+    "CSMN/Teoria/20260311.md",
+    "CSMN/Teoria/CSMN 20260318.md",
     "CSMN/Teoria/Problema.md",
-    "CSMN/Teoria/CSMN 1.md",
-    "ISW/Ingegneria del Software.md",
-    "ISW/20260310.md",
-    "ISW/4 - Boh.md",
-    "ISW/La materia.md",
-    "ISW/1 - Cos'è l'ingegneria del software.md",
-    "ISW/Il corso.md",
-    "ISW/Cenni storici.md",
-    "ISW/1.5 - Storia.md",
-    "ISW/Software open source.md",
-    "ISW/0 - ISW introduzione.md",
-    "ISW/Introduzione.md",
-    "Untitled.md",
-    "IUM/Lab/20251013.md",
+    "CSMN/Teoria/Teoria.md",
+    "CSMN/Calcolo Scientifico e Metodi Numerici.md",
+    "ISW/Raw/20260317.md",
+    "ISW/Raw/Lab-20260324.md",
+    "FDI/File/Mappe di Karnaugh.md",
+    "MD/File/Matrici.md",
+    "PR2/Modulo II/Casting.md",
+    "SO/Modulo II/Linux/File.md",
+    "SO/Modulo II/Linux/Processi, thread e job.md",
+    "SO/Modulo II/Linux/Introduzione al terminale.md",
+    "SO/Modulo II/Linux/Virtual machine.md",
+    "FPW/Teoria/HTML e form.md",
+    "FPW/Teoria/Suddivisione di una pagina HTML.md",
+    "FPW/Teoria/Search Engine Optimization.md",
+    "PR1/Modulo I/Linguaggio.md",
+    "PR2/Modulo I/Linguaggio.md",
+    "PR2/Modulo I/Programmazione a oggetti.md",
+    "PR2/Modulo I/Oggetti e classi.md",
+    "SO/Modulo II/Altro/Socket.md",
+    "PR2/Modulo II/Classi.md",
     "FDI/File/!Fondamenti di Informatica.md",
-    "SO/Modulo II/Sistemi Operativi - Modulo II.md",
-    "SO/Modulo I/Sistemi Operativi - Modulo I.md",
-    "SO/Teoria.md",
+    "SO/Modulo II/Bash/Terminale di Linux - cheatsheet.md",
+    "RC/File/Applicazioni e reti.md",
+    "ISW/Raw",
+    "ISW/File",
+    "Immagini",
+    "Immagini/Pasted image 20260320122213.png",
+    "Logica/File",
     "[IUM",
     "Logica",
     "ISW",
     "BD/Teoria",
     "IUM/Lab",
     "IUM",
-    "(appunti raw)",
-    "FPW/Laboratorio/Indici",
-    "FPW/Laboratorio/Express",
     "Pasted image 20250324190527.png",
     "Pasted image 20250324190528.png",
     "ALF/File/IMG_0858.png",
@@ -221,7 +227,6 @@
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",
     "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png",
-    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg",
-    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg"
+    "FPW/Laboratorio/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg"
   ]
 }

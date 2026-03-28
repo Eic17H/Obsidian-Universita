@@ -31,4 +31,6 @@ oggi per l'appunto cominciamo il primo modulo.
 
 argomentazioni, fallacie logiche, connettivi, tavole di verità, filosofia della logica, e solo dopo calcoli.
 
-nel resto dell'Italia, non si impara così tanto nel corso di introduzione alla logica, ma a Cagliari sì, perché può essere utile e interessante, capire come ragiona un logico, magari occuparsi di logica per tutta la vita.
+nel resto dell'Italia, non si impara così tanto nel corso di introduzione alla logica, ma a Cagliari sì, perché può essere utile e interessante, capire come ragiona un logico, magari occuparsi di logica per tutta la vita.  
+
+La logica classica nasce nel 1800 btw, non nei tempi antichi.

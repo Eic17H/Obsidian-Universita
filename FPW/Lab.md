@@ -4,7 +4,7 @@
 	* [[HTML e CSS|Prima lezione]]
 	* Da ordinare
 * **SQL**
-	* [[SQL#FPW|Introduzione]]
+	* [[FPW/Laboratorio/SQL/SQL|Introduzione]]
 * **Vue**
 	* [[Vue|Introduzione]]
 * **Express**

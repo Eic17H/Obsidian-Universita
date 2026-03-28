@@ -1,3 +1,0 @@
-* [[Introduzione a MatLab]]
-
-#modulo
