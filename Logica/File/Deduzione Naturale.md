@@ -22,7 +22,6 @@ Proviamo a dimostrare che $α \vdash_{ND} α \land α$. L'albero sarà così: $^
 Proviamo l'altro pezzo dell'idempotenza, $α \land α \vdash_{ND} α$. Ancora più semplice, $\dfrac{α \land α}{α}Λ\text{-}E(a)$. Volendo potrebbe essere anche la regola b.
 
 Commutatività, $α \land β \vdash_{ND} β \land α$. Vogliamo smontare la congiunzione e rimontarla al rovescio. $$\dfrac{\dfrac{α \land β}{β}Λ\text{-}E(b) \enspace \enspace \enspace \dfrac{α \land β}{α}Λ\text{-}E(a)}{β \land α} Λ\text{-}I$$
-
 Associatività, $α \land (β \land γ) \vdash_{ND} (α \land β) \land γ$. Abbiamo due opzioni: lo stile top-down e lo stile bottom-up. Lo stile top-down è quello che abbiamo usato finora, ma per questione di gusti è possibile usare lo stile bottom-up: partiamo dalla conclusione e troviamo le premesse giuste. $$\dfrac{\dfrac{\dfrac{α \land (β\landγ)}{α}Λ\text{-}E(a) \enspace \enspace \enspace \dfrac{\dfrac{α \land (β\landγ)}{β\landγ}Λ\text{-}E(b)}{β}Λ\text{-}E(a)}{α \land β}Λ\text{-}I \enspace \enspace \enspace \dfrac{\dfrac{α \land (β\landγ)}{β\landγ}Λ\text{-}E(b)}{γ}Λ\text{-}E(b)}{(α \land β) \land γ}Λ\text{-}I$$
 Per controllare che sia giusto, basta controllare che ciascuna regola sia utilizzata correttamente. E lo sono.
 
@@ -36,41 +35,31 @@ Di nuovo abbiamo l'introduzione e l'eliminazione.
 
 Per eliminarla possiamo usare il modus ponens, questa è molto semplice. $\dfrac{α\rightarrowβ \enspace \enspace α}{β}\rightarrow\text{-}E$
 
-$$\dfrac{[α]_i \newline \vdots \newline β}{α\rightarrowβ}\rightarrow\text{-}I,i$$
+Vediamo della notazione molto strana:
+$$\dfrac{\begin{matrix}[α]_i \newline \vdots \newline β\end{matrix}}{α\rightarrowβ}\rightarrow\text{-}I,i$$
 
-I puntini verticali significano "supponiamo di aver già dimostrato β da α". Le parentesi quadre dicono che possiamo chiudere l'assunzione. La i è un indice, un numero, lo usiamo per indicare che al passaggio i chiudiamo quell'assunzione.
+I puntini verticali significano "supponiamo di aver già dimostrato $β$ da $α$". Le parentesi quadre dicono che possiamo chiudere l'assunzione. La $i$ è un indice, un numero, lo usiamo per indicare che al passaggio i chiudiamo quell'assunzione.
 
-|- nd (a>b) > ((b>g)>(a>g)). Senza precedenti. Come facciamo? Capiamo come arrivarci. Assunzioni: a>b, b>g, a, con questi possiamo fare modus ponens e arrivare alla fine, e da lì chiudiamo le assunzioni. Vediamo se questa è una strategia valida. $$\dfrac{\dfrac{α \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace β\rightarrowγ}{γ}\rightarrow\text{-}E$$
-Abbiamo ora una derivazione da α a γ: quindi chiudiamo.$$\dfrac{\dfrac{[α]_1 \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace β\rightarrowγ}{\dfrac{γ}{α\rightarrowγ}\rightarrow\text{-}I,i}\rightarrow\text{-}E$$
+$\vdash_{ND} (α\rightarrowβ)\rightarrow((β\rightarrowγ)\rightarrow(α\rightarrowγ))$. Senza precedenti. Come facciamo? Capiamo come arrivarci. Assunzioni: $α\rightarrowβ$, $β\rightarrowγ$, $α$, con questi possiamo fare modus ponens e arrivare alla fine, e da lì chiudiamo le assunzioni. Vediamo se questa è una strategia valida. $$\dfrac{\dfrac{α \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace β\rightarrowγ}{γ}\rightarrow\text{-}E$$
+Abbiamo ora una derivazione da α a γ: quindi chiudiamo.$$\dfrac{\dfrac{\dfrac{[α]_1 \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace β\rightarrowγ}{γ}\rightarrow\text{-}E}{α\rightarrowγ}\rightarrow\text{-}I,1$$
 
-Poi. $$\dfrac{\dfrac{\dfrac{[α]_1 \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace [β\rightarrowγ]_2}{\dfrac{γ}{α\rightarrowγ}\rightarrow\text{-}I,1}\rightarrow\text{-}E}{(β\rightarrowγ)\rightarrow(α\rightarrowγ)} \rightarrow\text{-}I,2$$
-Manca solo un'assunzione da chiudere. E quindi facciamolo.
-
-$$
+Poi.$$\dfrac{\dfrac{\dfrac{\dfrac{[α]_1 \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace [β\rightarrowγ]_2}{γ}\rightarrow\text{-}E}{α\rightarrowγ}\rightarrow\text{-}I,1}{(β\rightarrowγ)\rightarrow(α\rightarrowγ)} \rightarrow\text{-}I,2$$
+Manca solo un'assunzione da chiudere. E quindi facciamolo.$$
 \dfrac
-	{\dfrac
-		{\dfrac
-			{\dfrac
-				{[α]_1 \enspace \enspace [α\rightarrowβ]_3}
-				{β}
-			\rightarrow\text{-}E \enspace \enspace \enspace [β\rightarrowγ]_2}
-		{\dfrac{γ}
-			{α\rightarrowγ}
-		\rightarrow\text{-}I,1}
-	\rightarrow\text{-}E}
-	{(β\rightarrowγ)\rightarrow(α\rightarrowγ)}
-\rightarrow\text{-}I,2}
+	{\dfrac{\dfrac{\dfrac{\dfrac{[α]_1 \enspace \enspace [α\rightarrowβ]_3}{β} \rightarrow\text{-}E \enspace \enspace \enspace [β\rightarrowγ]_2}{γ}\rightarrow\text{-}E}{α\rightarrowγ}\rightarrow\text{-}I,1}{(β\rightarrowγ)\rightarrow(α\rightarrowγ)} \rightarrow\text{-}I,2}
 {(α\rightarrowβ)\rightarrow((β\rightarrowγ)\rightarrow(α\rightarrowγ))}\rightarrow\text{-}I,3$$
+
+
 
 È come giocare a pinnella: puoi prendere tutte le carte che vuoi, ma poi le devi scartare.
 
 Però, cosa ci dice che, chiudendo un'assunzione, il ragionamento non dipende più da essa? Perché chiudendo un'assunzione, la promuovo da assunzione a precedente.
 
-Non ho capito.
+Può essere difficile da accettare.
 
-Le assunzioni non sono più assunzioni perché ce le troviamo nella formula che dimostriamo. Non è un trucco quello di chiudere quelle assunzioni. Le ipotesi rimangono, erxrrtcyvgubhijnokmpl,è ho capito. Il fatto che γ dipenda da α, e da β->γ, e da α->β, non è più un'assunzione, e codificato nella formula che abbiamo derivato.
+Le assunzioni non sono più assunzioni perché ce le troviamo nella formula che dimostriamo. Non è un trucco quello di chiudere quelle assunzioni. Le ipotesi rimangono: il fatto che $γ$ dipenda da $α$, e da $β\rightarrowγ$, e da $α\rightarrowβ$, non è più un'assunzione, è codificato nella formula che abbiamo derivato.
 
-Proviamo a fare lo scambio dell'antecedente. $\vdash_{ND}(α\rightarrow(β\rightarrowγ))\rightarrow(β\rightarrow(α\rightarrowγ))$. Che assunzioni vogliamo? Prima di tutto l'antecedente dell'implicazione principale, $α\rightarrow(β\rightarrowγ)$, poi vediamo il suo conseguente e prendiamo il suo precedente, $β$, poi vediamo il suo conseguente e prendiamo il suo precedente, $α$, è ricorsiva.
+Proviamo a fare lo scambio dell'antecedente. $\vdash_{ND}(α\rightarrow(β\rightarrowγ))\rightarrow(β\rightarrow(α\rightarrowγ))$. Che assunzioni vogliamo? Prima di tutto l'antecedente dell'implicazione principale, $α\rightarrow(β\rightarrowγ)$, poi vediamo il suo conseguente e prendiamo il suo antecedente, $β$, poi vediamo il suo conseguente e prendiamo il suo antecedente, $α$, è ricorsiva.
 
-$$\dfrac{\dfrac{\dfrac{\dfrac{β \enspace \enspace \dfrac{[α]_1 \enspace \enspace [α\rightarrow(β\rightarrowγ)]_3}{β\rightarrowγ}\rightarrow\text{-}E}{γ}\rightarrow\text{-}E}{α \rightarrow γ}\rightarrow\text{-}I,1}{β\rightarrow(α \rightarrow γ)}\rightarrow\text{-}I,2}{(α\rightarrow(β\rightarrowγ))\rightarrow(β\rightarrow(α\rightarrowγ))
-}$$
+$$\dfrac{\dfrac{\dfrac{\dfrac{[β]_2 \enspace \enspace \dfrac{[α]_1 \enspace \enspace [α\rightarrow(β\rightarrowγ)]_3}{β\rightarrowγ}\rightarrow\text{-}E}{γ}\rightarrow\text{-}E}{α \rightarrow γ}\rightarrow\text{-}I,1}{β\rightarrow(α \rightarrow γ)}\rightarrow\text{-}I,2}{(α\rightarrow(β\rightarrowγ))\rightarrow(β\rightarrow(α\rightarrowγ))
+}\rightarrow\text{-}I,3$$
