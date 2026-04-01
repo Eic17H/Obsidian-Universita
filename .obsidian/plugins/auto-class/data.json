@@ -1,6 +1,41 @@
 {
   "matches": [
     {
+      "path": "FDI",
+      "scope": "Read & Edit",
+      "classes": [
+        "fdi"
+      ]
+    },
+    {
+      "path": "BD",
+      "scope": "Read & Edit",
+      "classes": [
+        "bd"
+      ]
+    },
+    {
+      "path": "ASD",
+      "scope": "Read & Edit",
+      "classes": [
+        "asd"
+      ]
+    },
+    {
+      "path": "ALF",
+      "scope": "Read & Edit",
+      "classes": [
+        "alf"
+      ]
+    },
+    {
+      "path": "MD",
+      "scope": "Read & Edit",
+      "classes": [
+        "md"
+      ]
+    },
+    {
       "path": "PR2",
       "scope": "Read & Edit",
       "classes": [

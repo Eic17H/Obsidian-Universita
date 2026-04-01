@@ -1,32 +1,58 @@
-.theme-dark {
-    --matematica: #7DC8EA;
-    --termine: #7085FF;
-    --link-color: var(--matematica);
-}
-
-.theme-light {
-    --matematica: #156082;
-    --termine: #00158F;
-}
-
 .csmn {
-  --matematica: #ff0065;
-    --link-color: var(--matematica);
+  --accent-light: #ff0065;
+  --accent-dark: #ff0065;
+  --link-color: #ff0065;
+}
+
+.md {
+  --accent-light: #ff0097;
+  --accent-dark: #ff0097;
+  --link-color: #ff0097;
 }
 
 .logica {
-  --matematica: #80e1ff;
-    --link-color: var(--matematica);
+  --accent-light: #80e1ff;
+  --accent-dark: #80e1ff;
 }
 
 .pr2 {
-  --matematica: #fdff85;
-    --link-color: var(--matematica);
+  --accent-light: #fdff85;
+  --accent-dark: #fdff85;
 }
 
-.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
+.alf {
+  --accent-light: #1a53ff;
+  --accent-dark: #1a53ff;
+}
+
+.fdi {
+  --accent-light: #A8A8FF;
+  --accent-dark: #0400ff;
+  --link-color: #A8A8FF;
+}
+
+.theme-dark {
+    --termine: #7085FF;
+}
+
+.theme-light {
+    --termine: #00158F;
+}
+
+.theme-dark, .accented {
+  color: var(--accent-dark);
+}
+.theme-light, .accented {
+  color: var(--accent-light);
+}
+
+.app-container .markdown-preview-view pre.language-note-red code.language-note-red, .theme-dark,
 .math {
-  color: var(--matematica);
+  color: var(--accent-dark);
+}
+.app-container .markdown-preview-view pre.language-note-red code.language-note-red, .theme-light,
+.math {
+  color: var(--accent-light);
 }
 
 .app-container .markdown-preview-view pre.language-note-red code.language-note-red,

@@ -1,4 +1,4 @@
-Lo stesso argomento: [[FDI/File/Basi numeriche|FDI]], [[CSMN/Teoria/Basi numeriche|CSMN]]
+Lo stesso argomento: <span class="fdi">[[FDI/File/Basi numeriche|FDI]]</span>, <span class="csmn">[[CSMN/Teoria/Basi numeriche|CSMN]]</span>
 
 Una domanda sarà su questo.
 

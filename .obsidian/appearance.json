@@ -6,5 +6,6 @@
   "theme": "obsidian",
   "textFontFamily": "",
   "baseFontSizeAction": false,
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "accentColor": ""
 }
