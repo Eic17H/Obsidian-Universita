@@ -7,3 +7,5 @@ DEM — Fai il "parziale" a dicembre.
 EDI — Fai i parziali perché i totali sono orali.
 
 RC — I parziali falliti o non dati potenziano l'orale. Non è bello. L'orale è molto esigente.
+
+ISW — Ho preso 24 al primo parziale senza studiare. È molto facile. Vai a lezione. (Se c'è ancora Marchesi).
