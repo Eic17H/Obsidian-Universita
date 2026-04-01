@@ -6,3 +6,5 @@
 * [[Autovalori e autovettori]]
 * [[Norme matriciali]]
 #modulo
+
+#todo: glossario qui

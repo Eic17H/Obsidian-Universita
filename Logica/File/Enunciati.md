@@ -275,6 +275,8 @@ Le leggi di Filone e di Crisippo ci definiscono l'implicazione da negazione, dis
 
 # Nozione di formula
 
+#todo: separare in un altro file e collegare a LiP
+
 Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto informale?
 
 The return of the Pinna.
