@@ -32,7 +32,7 @@
       "query": "path:Comune/",
       "color": {
         "a": 1,
-        "rgb": 855309
+        "rgb": 3355443
       }
     },
     {
@@ -186,6 +186,6 @@
   "repelStrength": 9.002079002079,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 1.4946928220975289,
-  "close": false
+  "scale": 1.135495578146218,
+  "close": true
 }
