@@ -74,14 +74,14 @@
       "query": "path:SO/",
       "color": {
         "a": 1,
-        "rgb": 16707134
+        "rgb": 16707173
       }
     },
     {
       "query": "path:PR2/",
       "color": {
         "a": 1,
-        "rgb": 16646010
+        "rgb": 16646021
       }
     },
     {
@@ -158,14 +158,14 @@
       "query": "path:CSMN/",
       "color": {
         "a": 1,
-        "rgb": 16711756
+        "rgb": 16711781
       }
     },
     {
       "query": "path:MD/",
       "color": {
         "a": 1,
-        "rgb": 16711791
+        "rgb": 16711831
       }
     },
     {
@@ -186,6 +186,6 @@
   "repelStrength": 9.002079002079,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 1.135495578146218,
-  "close": true
+  "scale": 0.3027640997744158,
+  "close": false
 }
