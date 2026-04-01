@@ -1,25 +1,25 @@
 {
   "matches": [
     {
+      "path": "PR2",
+      "scope": "Read & Edit",
+      "classes": [
+        "pr2"
+      ]
+    },
+    {
+      "path": "Logica",
+      "scope": "Read & Edit",
+      "classes": [
+        "logica"
+      ]
+    },
+    {
       "path": "CSMN",
       "scope": "Read & Edit",
       "classes": [
         "csmn"
       ]
-    },
-    {
-      "path": "Example Path/Subfolder/",
-      "classes": [
-        "example-class"
-      ],
-      "scope": "Read"
-    },
-    {
-      "tag": "#ExampleTag",
-      "classes": [
-        "another-class"
-      ],
-      "scope": "Edit"
     }
   ],
   "version": "2.3.0"

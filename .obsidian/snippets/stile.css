@@ -1,6 +1,7 @@
 .theme-dark {
     --matematica: #7DC8EA;
     --termine: #7085FF;
+    --link-color: var(--matematica);
 }
 
 .theme-light {
@@ -10,6 +11,17 @@
 
 .csmn {
   --matematica: #ff0065;
+    --link-color: var(--matematica);
+}
+
+.logica {
+  --matematica: #80e1ff;
+    --link-color: var(--matematica);
+}
+
+.pr2 {
+  --matematica: #fdff85;
+    --link-color: var(--matematica);
 }
 
 .app-container .markdown-preview-view pre.language-note-red code.language-note-red,
