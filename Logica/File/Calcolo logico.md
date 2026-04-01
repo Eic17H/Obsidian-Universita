@@ -7,7 +7,7 @@ Abbiamo visto le tautologie, le abbiamo fatto a mano. Però, esiste un algoritmo
 Vediamo il nostro linguaggio L0.
 
 * Alfabeto
-	* Logico: ¬ & v -> (togliamo il <-> perché si può definire da & e ->)
+	* Logico: $¬ \land \lor \rightarrow$ (togliamo il $\leftrightarrow$ perché si può definire da $\land$ e $\rightarrow$)
 	* Descrittivo: $p_1, p_2, p_3, ...$ (variabili proposizionali)
 	* Ausiliario: ( )
 
