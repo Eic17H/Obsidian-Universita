@@ -8,6 +8,10 @@
     --termine: #00158F;
 }
 
+.csmn {
+  --matematica: #ff0065;
+}
+
 .app-container .markdown-preview-view pre.language-note-red code.language-note-red,
 .math {
   color: var(--matematica);
