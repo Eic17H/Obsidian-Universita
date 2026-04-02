@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Noi vediamo come funzionano i connettivi tramite il contesto, ma non abbiamo una regola fissa che possiamo capire isolatamente. Sarebbe invece utile avere connettivi che possono essere definiti e appresi indipendentemente.
 
 Vediamo ora il calcolo della Deduzione Naturale (ND).

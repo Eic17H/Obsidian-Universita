@@ -1,7 +1,8 @@
 {
   "enabledCssSnippets": [
     "notation-colour-blocks",
-    "stile"
+    "stile",
+    "hide-properties"
   ],
   "theme": "obsidian",
   "textFontFamily": "",
