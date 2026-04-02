@@ -5,6 +5,7 @@
 * [[Norme vettoriali]]
 * [[Autovalori e autovettori]]
 * [[Norme matriciali]]
+* [[Sistemi lineari]]
 #modulo
 
 #todo: glossario qui

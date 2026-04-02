@@ -1,4 +1,4 @@
-Lo stesso argomento: [[SO/Lab/Regex|SO]]
+Lo stesso argomento: [[Espressioni regolari|LiP]], [[SO/Lab/Regex|SO]]
 
 Su Linux, usiamo egrep per usare Regex.
 ```bash
