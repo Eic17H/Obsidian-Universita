@@ -1,34 +1,163 @@
-.csmn {
-  --accent-light: #ff0065;
-  --accent-dark: #ff0065;
-  --link-color: #ff0065;
-}
 
-.md {
-  --accent-light: #ff0097;
-  --accent-dark: #ff0097;
-  --link-color: #ff0097;
+.theme-dark .am {
+  --accent: #b94738;
+  --link-color: #b94738;
 }
-
-.logica {
-  --accent-light: #80e1ff;
-  --accent-dark: #80e1ff;
+.theme-light .am {
+  --accent: #760000;
+  --link-color: #760000;
 }
-
-.pr2 {
-  --accent-light: #fdff85;
-  --accent-dark: #fdff85;
+.theme-dark .fems {
+  --accent: #c14c56;
+  --link-color: #c14c56;
 }
-
-.alf {
-  --accent-light: #1a53ff;
-  --accent-dark: #1a53ff;
+.theme-light .fems {
+  --accent: #7d0020;
+  --link-color: #7d0020;
 }
-
-.fdi {
-  --accent-light: #A8A8FF;
-  --accent-dark: #0400ff;
-  --link-color: #A8A8FF;
+.theme-dark .dem {
+  --accent: #c85371;
+  --link-color: #c85371;
+}
+.theme-light .dem {
+  --accent: #840e39;
+  --link-color: #840e39;
+}
+.theme-dark .csmn {
+  --accent: #cc5c8b;
+  --link-color: #cc5c8b;
+}
+.theme-light .csmn {
+  --accent: #881b51;
+  --link-color: #881b51;
+}
+.theme-dark .md {
+  --accent: #ce65a4;
+  --link-color: #ce65a4;
+}
+.theme-light .md {
+  --accent: #8b2768;
+  --link-color: #8b2768;
+}
+.theme-dark .rc {
+  --accent: #ab5a00;
+  --link-color: #ab5a00;
+}
+.theme-light .rc {
+  --accent: #6b1d00;
+  --link-color: #6b1d00;
+}
+.theme-dark .isw {
+  --accent: #cb6d09;
+  --link-color: #cb6d09;
+}
+.theme-light .isw {
+  --accent: #893000;
+  --link-color: #893000;
+}
+.theme-dark .are {
+  --accent: #eb8241;
+  --link-color: #eb8241;
+}
+.theme-light .are {
+  --accent: #a64400;
+  --link-color: #a64400;
+}
+.theme-dark .pr1 {
+  --accent: #a19300;
+  --link-color: #a19300;
+}
+.theme-light .pr1 {
+  --accent: #665600;
+  --link-color: #665600;
+}
+.theme-dark .asd {
+  --accent: #aea200;
+  --link-color: #aea200;
+}
+.theme-light .asd {
+  --accent: #726500;
+  --link-color: #726500;
+}
+.theme-dark .so {
+  --accent: #bcb236;
+  --link-color: #bcb236;
+}
+.theme-light .so {
+  --accent: #7f7400;
+  --link-color: #7f7400;
+}
+.theme-dark .pr2 {
+  --accent: #c9c261;
+  --link-color: #c9c261;
+}
+.theme-light .pr2 {
+  --accent: #8b8317;
+  --link-color: #8b8317;
+}
+.theme-dark .bd {
+  --accent: #05893e;
+  --link-color: #05893e;
+}
+.theme-light .bd {
+  --accent: #004d00;
+  --link-color: #004d00;
+}
+.theme-dark .fpw {
+  --accent: #52ae59;
+  --link-color: #52ae59;
+}
+.theme-light .fpw {
+  --accent: #00701a;
+  --link-color: #00701a;
+}
+.theme-dark .ium {
+  --accent: #87d576;
+  --link-color: #87d576;
+}
+.theme-light .ium {
+  --accent: #499537;
+  --link-color: #499537;
+}
+.theme-dark .fdi {
+  --accent: #2365d2;
+  --link-color: #2365d2;
+}
+.theme-light .fdi {
+  --accent: #00258f;
+  --link-color: #00258f;
+}
+.theme-dark .alf {
+  --accent: #007ed1;
+  --link-color: #007ed1;
+}
+.theme-light .alf {
+  --accent: #00418f;
+  --link-color: #00418f;
+}
+.theme-dark .lip {
+  --accent: #0093cd;
+  --link-color: #0093cd;
+}
+.theme-light .lip {
+  --accent: #00568d;
+  --link-color: #00568d;
+}
+.theme-dark .logica {
+  --accent: #0ea6c8;
+  --link-color: #0ea6c8;
+}
+.theme-light .logica {
+  --accent: #006889;
+  --link-color: #006889;
+}
+.theme-dark .eed {
+  --accent: #7072d7;
+  --link-color: #7072d7;
+}
+.theme-light .eed {
+  --accent: #3c3695;
+  --link-color: #3c3695;
 }
 
 .theme-dark {
@@ -39,23 +168,16 @@
     --termine: #00158F;
 }
 
-.theme-dark, .accented {
-  color: var(--accent-dark);
-}
-.theme-light, .accented {
-  color: var(--accent-light);
+.accented {
+  color: var(--accent);
 }
 
-.app-container .markdown-preview-view pre.language-note-red code.language-note-red, .theme-dark,
+.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
 .math {
-  color: var(--accent-dark);
-}
-.app-container .markdown-preview-view pre.language-note-red code.language-note-red, .theme-light,
-.math {
-  color: var(--accent-light);
+  color: var(--accent);
 }
 
 .app-container .markdown-preview-view pre.language-note-red code.language-note-red,
 .termine {
-  color: var(--termine);
+  color: var(--accent);
 }

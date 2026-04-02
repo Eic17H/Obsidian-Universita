@@ -1,61 +1,146 @@
 {
   "matches": [
-    {
-      "path": "FDI",
-      "scope": "Read & Edit",
-      "classes": [
-        "fdi"
-      ]
-    },
-    {
-      "path": "BD",
-      "scope": "Read & Edit",
-      "classes": [
-        "bd"
-      ]
-    },
-    {
-      "path": "ASD",
-      "scope": "Read & Edit",
-      "classes": [
-        "asd"
-      ]
-    },
-    {
-      "path": "ALF",
-      "scope": "Read & Edit",
-      "classes": [
-        "alf"
-      ]
-    },
-    {
-      "path": "MD",
-      "scope": "Read & Edit",
-      "classes": [
-        "md"
-      ]
-    },
-    {
-      "path": "PR2",
-      "scope": "Read & Edit",
-      "classes": [
-        "pr2"
-      ]
-    },
-    {
-      "path": "Logica",
-      "scope": "Read & Edit",
-      "classes": [
-        "logica"
-      ]
-    },
-    {
-      "path": "CSMN",
-      "scope": "Read & Edit",
-      "classes": [
-        "csmn"
-      ]
-    }
+    
+{
+    "path": "AM",
+    "scope": "Read & Edit",
+    "classes": [
+    "am"
+    ]
+},
+{
+    "path": "FeMS",
+    "scope": "Read & Edit",
+    "classes": [
+    "fems"
+    ]
+},
+{
+    "path": "DEM",
+    "scope": "Read & Edit",
+    "classes": [
+    "dem"
+    ]
+},
+{
+    "path": "CSMN",
+    "scope": "Read & Edit",
+    "classes": [
+    "csmn"
+    ]
+},
+{
+    "path": "MD",
+    "scope": "Read & Edit",
+    "classes": [
+    "md"
+    ]
+},
+{
+    "path": "RC",
+    "scope": "Read & Edit",
+    "classes": [
+    "rc"
+    ]
+},
+{
+    "path": "ISW",
+    "scope": "Read & Edit",
+    "classes": [
+    "isw"
+    ]
+},
+{
+    "path": "ARE",
+    "scope": "Read & Edit",
+    "classes": [
+    "are"
+    ]
+},
+{
+    "path": "PR1",
+    "scope": "Read & Edit",
+    "classes": [
+    "pr1"
+    ]
+},
+{
+    "path": "ASD",
+    "scope": "Read & Edit",
+    "classes": [
+    "asd"
+    ]
+},
+{
+    "path": "SO",
+    "scope": "Read & Edit",
+    "classes": [
+    "so"
+    ]
+},
+{
+    "path": "PR2",
+    "scope": "Read & Edit",
+    "classes": [
+    "pr2"
+    ]
+},
+{
+    "path": "BD",
+    "scope": "Read & Edit",
+    "classes": [
+    "bd"
+    ]
+},
+{
+    "path": "FPW",
+    "scope": "Read & Edit",
+    "classes": [
+    "fpw"
+    ]
+},
+{
+    "path": "IUM",
+    "scope": "Read & Edit",
+    "classes": [
+    "ium"
+    ]
+},
+{
+    "path": "FDI",
+    "scope": "Read & Edit",
+    "classes": [
+    "fdi"
+    ]
+},
+{
+    "path": "ALF",
+    "scope": "Read & Edit",
+    "classes": [
+    "alf"
+    ]
+},
+{
+    "path": "LiP",
+    "scope": "Read & Edit",
+    "classes": [
+    "lip"
+    ]
+},
+{
+    "path": "Logica",
+    "scope": "Read & Edit",
+    "classes": [
+    "logica"
+    ]
+},
+{
+    "path": "EED",
+    "scope": "Read & Edit",
+    "classes": [
+    "eed"
+    ]
+}
   ],
   "version": "2.3.0"
 }
