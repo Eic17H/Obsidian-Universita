@@ -1,4 +1,106 @@
-// taken from https://gist.github.com/dkaraush/65d19d61396f5f3cd8ba7d1b4b3c9432, itself from https://github.com/color-js/color.js/blob/main/src/spaces/oklch.js
+/*
+==================
+    HOW TO USE
+==================
+
+Install the AutoClass plugin
+Group your notes in folders
+Group your folders in groups
+Define those groups in "groups"
+    Each element of "groups" is an array containing strings that are the names of those folders
+Define the color parameters in "colors"
+    Each element of "colors" is an object with the same name as one of the groups
+    Those objects contain the color parameters
+
+Update .obsidian/plugins/auto-class/data.json every time group list changes - the output is the content of "matches": [], you may have more data beside it
+Update .obsidian/snippes/whatever.css every time parameters or group list change - the output is normal CSS, you may have more classes beside it
+Update .obsidian/graph.json every time parameters or group list change - the output is the content of "colorGroups": [], you may have more data beside it
+
+*/
+
+// Parameters:
+
+let groups = {
+    red: ["AM", "FeMS", "DEM", "CSMN", "MD"],
+    orange: ["RC", "ISW", "ARE"],
+    yellow: ["PR1", "ASD", "SO", "PR2"],
+    green: ["BD", "FPW", "IUM"],
+    blue: ["FDI", "ALF", "LiP", "Logica"],
+    purple: ["EED"]
+}
+
+/*
+    This object defines the gradients in the OKLCH color space
+    minL and maxL are the starting and ending luminance (brightness)
+    minC and maxC are the starting and ending chroma (saturation)
+    minH and maxH are the starting and ending hue
+    Since hue loops, the color gradient can go in either direction, so you need to specify using signH
+        +1: red->orange->yellow->green->blue->purple->red
+        -1: red->purple->blue->green->yellow->orange->red
+*/
+let colors = {
+    red : {
+        minL: 0.5,
+        maxL: 0.6,
+        minC: 0.15,
+        maxC: 0.15,
+        minH: 30,
+        maxH: 345,
+        signH: -1
+    },
+    orange : {
+        minL: 0.5,
+        maxL: 0.66,
+        minC: 0.15,
+        maxC: 0.15,
+        minH: 65,
+        maxH: 50,
+        signH: -1
+    },
+    yellow : {
+        minL: 0.60,
+        maxL: 0.75,
+        minC: 0.18,
+        maxC: 0.12,
+        minH: 105,
+        maxH: 105,
+        signH: -1
+    },
+    green : {
+        minL: 0.5,
+        maxL: 0.75,
+        minC: 0.15,
+        maxC: 0.15,
+        minH: 150,
+        maxH: 140,
+        signH: -1
+    },
+    blue : {
+        minL: 0.48,
+        maxL: 0.62,
+        minC: 0.18,
+        maxC: 0.12,
+        minH: 260,
+        maxH: 220,
+        signH: -1
+    },
+    purple : {
+        minL: 0.55,
+        maxL: 0.55,
+        minC: 0.15,
+        maxC: 0.15,
+        minH: 280,
+        maxH: 280,
+        signH: -1
+    }
+}
+
+
+
+
+
+
+// this section is taken from https://gist.github.com/dkaraush/65d19d61396f5f3cd8ba7d1b4b3c9432, itself from https://github.com/color-js/color.js/blob/main/src/spaces/oklch.js
 
 const multiplyMatrices = (A, B) => {
     return [
@@ -98,6 +200,9 @@ Number.prototype.clamp = function(min, max) {
 
 // my code starts here
 
+for(let i in colors)
+    colors[i].n = groups[i].length
+
 class Color {
     constructor(L, C, H) {
         this.L = L
@@ -112,77 +217,6 @@ class Color {
     toArray() {
         return [this.L, this.C, this.H]
     }
-}
-let colori = {
-    rossi : {
-        n: 5,
-        minL: 0.5,
-        maxL: 0.6,
-        minC: 0.15,
-        maxC: 0.15,
-        minH: 30,
-        maxH: 345,
-        signH: -1
-    },
-    arancioni : {
-        n: 3,
-        minL: 0.5,
-        maxL: 0.66,
-        minC: 0.15,
-        maxC: 0.15,
-        minH: 65,
-        maxH: 50,
-        signH: -1
-    },
-    gialli : {
-        n: 4,
-        minL: 0.60,
-        maxL: 0.75,
-        minC: 0.18,
-        maxC: 0.12,
-        minH: 105,
-        maxH: 105,
-        signH: -1
-    },
-    verdi : {
-        n: 3,
-        minL: 0.5,
-        maxL: 0.75,
-        minC: 0.15,
-        maxC: 0.15,
-        minH: 150,
-        maxH: 140,
-        signH: -1
-    },
-    blu : {
-        n: 4,
-        minL: 0.48,
-        maxL: 0.62,
-        minC: 0.18,
-        maxC: 0.12,
-        minH: 260,
-        maxH: 220,
-        signH: -1
-    },
-    viola : {
-        n: 1,
-        minL: 0.55,
-        maxL: 0.55,
-        minC: 0.15,
-        maxC: 0.15,
-        minH: 280,
-        maxH: 280,
-        signH: -1
-    }
-}
-
-let materie = {
-    rossi: ["AM", "FeMS", "DEM", "CSMN", "MD"],
-    arancioni: ["RC", "ISW", "ARE"],
-    gialli: ["PR1", "ASD", "SO", "PR2"],
-    verdi: ["BD", "FPW", "IUM"],
-    blu: ["FDI", "ALF", "LiP", "Logica"],
-    viola: ["EED"]
 }
 
 function generate(n, minL, maxL, minC, maxC, minH, maxH, signH) {
@@ -235,13 +269,13 @@ function oneFolderStringGraph(folder, color) {return `{
 `}
 
 function oneIndexStringGraph(group, index) {
-    return oneFolderStringGraph(materie[group][index], rgbArrayToDec(oklch2rgb(generateFromSettings(colori[group], "graph")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255))))
+    return oneFolderStringGraph(groups[group][index], rgbArrayToDec(oklch2rgb(generateFromSettings(colors[group], "graph")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255))))
 }
 
 function generateAllGroupsGraph() {
     let out = ""
-    for(let i in materie)
-        for(let j in materie[i])
+    for(let i in groups)
+        for(let j in groups[i])
             out += oneIndexStringGraph(i, j)
     return out
 }
@@ -249,47 +283,59 @@ function generateAllGroupsGraph() {
 function oneIndexStringAutoClass(group, index) {
     return `
 {
-    "path": "${materie[group][index]}",
+    "path": "${groups[group][index]}",
     "scope": "Read & Edit",
     "classes": [
-    "${materie[group][index].toLowerCase()}"
+    "${groups[group][index].toLowerCase()}"
     ]
 },`
 }
 
 function generateAllAutoClassClasses() {
     let out = ""
-    for(let i in materie)
-        for(let j in materie[i])
+    for(let i in groups)
+        for(let j in groups[i])
             out += oneIndexStringAutoClass(i, j)
     return out
 }
 
 function oneIndexStringCss(group, index) {
     return `
-.theme-dark .${materie[group][index].toLowerCase()} {
-  --accent: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colori[group], "dark")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
-  --link-color: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colori[group], "dark")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
+.theme-dark .${groups[group][index].toLowerCase()} {
+  --accent: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "dark")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
+  --link-color: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "dark")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
 }
-.theme-light .${materie[group][index].toLowerCase()} {
-  --accent: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colori[group], "light")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
-  --link-color: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colori[group], "light")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
+.theme-light .${groups[group][index].toLowerCase()} {
+  --accent: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "light")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
+  --link-color: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "light")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
 }`
 }
 
 function generateAllCssClasses() {
     let out = ""
-    for(let i in materie)
-        for(let j in materie[i])
+    for(let i in groups)
+        for(let j in groups[i])
             out += oneIndexStringCss(i, j)
     return out
 }
 
 // Update .obsidian/plugins/auto-class/data.json every time group list changes
+console.log(`
+======================================
+.obsidian/plugins/auto-class/data.json
+======================================`)
 console.log(generateAllAutoClassClasses())
 
 // Update .obsidian/snippes/whatever.css every time parameters or group list change
+console.log(`
+==============================
+.obsidian/snippes/whatever.css
+==============================`)
 console.log(generateAllCssClasses())
 
 // Update .obsidian/graph.json every time parameters or group list change
+console.log(`
+====================
+.obsidian/graph.json
+====================`)
 console.log(generateAllGroupsGraph())
