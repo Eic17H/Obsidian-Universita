@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 Programmare un computer è come parlare a un bambino:  
 Prende tutto alla lettera;  
 Devi spiegare esattamente tutti i dettagli, non sa inferire dal contesto;  

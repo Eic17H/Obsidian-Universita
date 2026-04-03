@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - alf
+---
 ## Indice
 
 * [[Logica proposizionale classica]]

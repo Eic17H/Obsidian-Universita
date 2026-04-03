@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - lip
+---
 Lo stesso argomento: [[ALF/File/Regex|ALF]], [[SO/Lab/Regex|SO]]
 
 ## Definizione

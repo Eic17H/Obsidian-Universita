@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 # Definizione
 $\newcommand{\R}{\mathbb{R}}$$\newcommand{\-}{\text{-}}$
 Uno **spazio lineare** o **spazio vettoriale** è un insieme $V$ dove sono definiti l'operatore $+$ (somma) e l'operatore $\cdot$ (prodotto), con queste proprietà:

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 # Concetti base:
 #comandi 
 `man` - Apri il manuale di un comando.

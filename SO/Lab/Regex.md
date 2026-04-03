@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 Lo stesso argomento: [[ALF/File/Regex|ALF]], [[Espressioni regolari|LiP]]
 
 Le espressioni regolari (regex) possono essere molto utili. Permettono di cercare del testo tramite il pattern matching, cioè trovare segmenti di testo che hanno la stessa struttura. Così come ci sono molti linguaggi di programmazione, ci sono molti linguaggi per le regex. Ecco le basi:

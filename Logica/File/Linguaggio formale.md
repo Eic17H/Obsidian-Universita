@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Lo stesso argomento: [[Linguaggi|LiP]]
 
 Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto informale?

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 VM o dual boot
 Dual boot: bootloader, partizione, grub
 Mount point, nel caso di Linux è la root, "/"

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 Scope: strumenti per la pulizia di pavimenti…?
 No. In inglese significa ambito di influenza.
 

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 * [[Aritmetica di macchina]]
 * [[Problema]]
 * [[CSMN/Teoria/Basi numeriche]]

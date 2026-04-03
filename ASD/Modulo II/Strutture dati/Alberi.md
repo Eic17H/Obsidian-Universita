@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - asd
+---
  * Gli alberi sono strutture dati molto potenti.
  * Vediamo anche heap e coda con priorità, tipi di alberi.
  * L'heap si può usare per ordinare in nlogn (il meglio per l'ordinamento): heap sort.

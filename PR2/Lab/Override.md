@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr2
+---
 Facciamo l'override quando abbiamo un metodo generico nella [[Ereditarietà|superclasse]], e vogliamo renderlo specifico in una sottoclasse.
 
 Magari abbiamo una superclasse conto che ha un metodo `prelievo()`, e vogliamo che nella sottoclasse `contoCorrente` la stessa funzione faccia le stesse cose, con l'aggiunta del fatto che deve tenere traccia di quanti prelievi si fanno.

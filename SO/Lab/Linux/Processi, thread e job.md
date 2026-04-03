@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 ## Processi e job
 
 I processi creano altri processi.

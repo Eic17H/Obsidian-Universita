@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 # Scienza
 
 La scienza è la caratteristica principale di questa epoca storica. Si divide in scienze formali, scienze naturali e scienze di progetto. Vedi le slide, la tabella.

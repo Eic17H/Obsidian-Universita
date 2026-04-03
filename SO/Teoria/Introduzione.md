@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 Il regolamento esiste per rispondere a dubbi e domande.
 Se fai una domanda che non è nel regolamento, viene risposta e aggiunta al regolamento.
 

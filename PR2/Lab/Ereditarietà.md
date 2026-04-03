@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr2
+---
 ## Basi dell'ereditarietà
 
 Abbiamo una [[Classi|classe]] `Studente` e una classe `Docente`.

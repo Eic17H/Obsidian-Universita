@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 A Lab faremo MatLab e faremo anche esercitazioni di teoria. Di MatLab usiamo la versione R2023b, ma se non è proprio la stessa diciamo che va bene comunque, basta sia recente.
 
 MatLab sta per Matrix Laboratory, si usa per fare calcoli con le matrici. Faremo live script, che possiamo salvare come file con estensione `.m`.

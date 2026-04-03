@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - alf
+---
 Lo stesso argomento: [[Espressioni regolari|LiP]], [[SO/Lab/Regex|SO]]
 
 Su Linux, usiamo egrep per usare Regex.

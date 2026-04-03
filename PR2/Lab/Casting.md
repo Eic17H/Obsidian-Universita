@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr2
+---
 Partiamo dalle classi viste per l'[[Ereditarietà]].
 ```
 class Docente extends Persona{}

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 ## Iterazione nelle [[Prototipi|prototipazioni]]
 
 Si fa un disegno che spesso non coinvolge tutte le parti del progetto, ma quella che vogliamo cambiare. Si itera facendo più disegni, scartando i progetti che non vanno bene e facendo piccole migliorie alle iterazioni tenute. Poi si realizza un prodotto a bassa fedeltà, con lo stesso medium del prodotto finale ma materiali un po' diversi, per dimostrare la funzionalità del prototipo, e poi se ne realizza una versione pronta ad essere introdotta al mercato.

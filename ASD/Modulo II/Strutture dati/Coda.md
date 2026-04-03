@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - asd
+---
 * === CODA ===
      * FIFO, first in first out. Il primo che entra è il primo che esce.
      * push (inserire), pop (uscire), create, isEmpty, isFull, etc.

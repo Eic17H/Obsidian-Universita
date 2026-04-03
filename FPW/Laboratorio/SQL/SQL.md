@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fpw
+---
 Lo stesso argomento: [[BD/Lab/SQL|BD]]
 
 Oggi vedremo cos'è PGAdmin, come si fanno le tabelle, come si fanno collegamenti 1:1 o molti:1, quindi chiavi esterne, inserire ed estrapolare i dati.

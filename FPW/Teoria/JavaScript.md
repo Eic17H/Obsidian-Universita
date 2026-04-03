@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fpw
+---
 JavaScript è un linguaggio:
 * Ad alto livello - come il C;
 * Interpretato - a differenza del C;

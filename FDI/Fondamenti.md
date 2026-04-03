@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fdi
+---
 # Fondamenti di Informatica
 ## Indice
 * [[FDI/File/Algoritmo di Euclide|Algoritmo di Euclide]]

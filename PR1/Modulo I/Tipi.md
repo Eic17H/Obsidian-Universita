@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 ## Tipi equivalenti, tipi compatibili, operandi
 
 Il nome del tipo può cambiare da un linguaggio a un altro.

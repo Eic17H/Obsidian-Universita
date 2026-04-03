@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - md
+---
 Dati due numeri reali $a$ e $c$, e un numero intero $b$, se `a%b==c%b`, possiamo scrivere:
 
 * $[a]_b = [c]_b$

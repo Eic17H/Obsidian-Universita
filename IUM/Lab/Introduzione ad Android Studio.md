@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 Le slide ti danno il link al download di Android Studio. La versione che ci troverai è diversa da quella che hanno usato per gli screenshot nelle slide, quindi non potrai seguire le loro istruzioni. Anche avendo la stessa versione, le loro istruzioni non ti dicono dov'è ciascun riquadro che ti dicono di usare. Mancano anche molti passaggi.
 
 Questo documento si riferisce alla versione Narwhal 4.

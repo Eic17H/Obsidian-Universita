@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - asd
+---
 /**
  * Eulero ha dato la scintilla che ha iniziato la teoria dei grafi.
  * Nato dal problema dei ponti di Koenigsberg.

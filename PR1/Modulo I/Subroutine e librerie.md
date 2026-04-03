@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 ## SUB-ROUTINE
 
 Com- nellalalah… Beh, forse nella vita di tutti i giorni non si usa… Avere una routine significa fare la stessa cosa nello stresso ordine nello stesso modo ogni volta. È la definizione di programma.

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 # Analisi logica
 
 Questo argomento l'abbiamo già visto in realtà molto presto, alle elementari. Analisi logica. Ce ne sono due: analisi logica della proposizione, che analizza la singola proposizione, e analisi del periodo, che studia i collegamenti tra proposizioni semplici.

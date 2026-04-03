@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fdi
+---
 Lo stesso argomento: <span class="pr1">[[PR1/Modulo I/Algoritmo di Euclide|PR1]]</span>
 
 * Input: due numeri naturali

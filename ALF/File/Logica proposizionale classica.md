@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - alf
+---
 La LPC studia le proposizioni che possono essere <span class="green">vere</span> o <span class="red">false</span>.
 
 **Frase**: "Joker è un nemico di Batman"

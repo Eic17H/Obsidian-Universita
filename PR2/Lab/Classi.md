@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr2
+---
 ## Creazione di una classe in Java
 
 Creiamo il file `Monitor.java`.

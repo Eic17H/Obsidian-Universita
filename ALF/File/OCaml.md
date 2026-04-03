@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - alf
+---
 Questo linguaggio è sia interpretato che compilato. Lo useremo come linguaggio interpretato. Si può usare anche con un ambiente di sviluppo online: [try.ocamlpro.com](https://try.ocamlpro.com).
 
 ## Tipi

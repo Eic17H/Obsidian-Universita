@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 Ci sono due componenti principali: la retina (il sensore) e il cervello (l'elaboratore), studiati rispettivamente da fisiologi e psicologi. Quindi noi non vediamo direttamente quello che sensiamo, ma le sensazioni già elaborate dal cervello.
 
 L'occhio somiglia un po' a una telecamera. La pupilla è un buco, non è una parte vera e propria, che controlla l'apertura. C'è una lente che permette di mettere a fuoco oggetti a diverse distanze. E altro boh questo professore è disordinato. La luce converge sulla retina causa lente, la retina è connessa al nervo ottico, che è un cavo. L'impulso luminoso viene chimicamente trasformato in segnale. Sulla "socket" del cavo non ci sono ricettori del segnale. È il nostro punto cieco. Noi però non vediamo un buco: entra in gioco il cervello. Il cervello compensa il buco nei dati del sensore.

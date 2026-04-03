@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 ## Indice
 #### Linux
 * [[Linux - Cenni storici]]

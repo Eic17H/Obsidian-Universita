@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Abbiamo visto le tautologie, le abbiamo fatto a mano. Però, esiste un algoritmo che permette di ottenere *tutte* le tautologie a partire da un piccolo insieme di tautologie? Possiamo chiedere lo stesso per gli schemi di argomento validi. Questa è proprio la nozione di calcolo logico.
 
 # [[Logica/File/Calcolo logico/Storia|Storia]]

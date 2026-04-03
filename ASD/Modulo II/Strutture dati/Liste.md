@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - asd
+---
 // LISTE LINEARI DOPPIAMENTE CONCATENATE (utile per PR1)
     /**
      * Insieme di nodi tutti collegati

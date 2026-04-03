@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fdi
+---
 Lo stesso argomento: <span class="csmn">[[CSMN/Teoria/Basi numeriche|CSMN]]</span>, <span class="md">[[Cambio di base|MD]]</span>
 ## Rappresentazione dell'informazione.
 

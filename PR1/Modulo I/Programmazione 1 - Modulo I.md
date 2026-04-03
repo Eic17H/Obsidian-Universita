@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 (nel processo di aggiungere tag e poi separare non cronologicamente ma per argomento)
 Ci sarà bisogno di dividere Linguaggio in tipo "Linguaggio generale", "Linguaggio matematico"...
 In realtà forse viene troppo male dividere in argomenti

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - md
+---
 ## Indice
 * [[Classi di resto]]
 * [[Funzione φ]]

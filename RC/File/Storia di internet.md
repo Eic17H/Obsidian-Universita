@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - rc
+---
 Prima c'era IPv4, ora IPv6. IPv5 che fine ha fatto? C'era, ma prima che facesse in tempo ad essere implementato è arrivato IPv6 che era migliore.
 
 C'è un po' un paradosso. Il protocollo ISO-OSI è stato progettato per essere perfetto, ma sono stati soldi buttati perché tutti usano TCPIP che è peggiore ed è famoso solo per la sua fama.

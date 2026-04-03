@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 Lo stesso argomento: <span class="fdi">[[FDI/File/Algoritmo di Euclide|FDI]]</span>
 
 Massimo Comun Divisore: il metodo più semplice consiste nell’enumerare tutti i divisori del primo numero, tutti quelli del secondo, trovarne l’intersezione, e poi cercare lì il maggiore.  
