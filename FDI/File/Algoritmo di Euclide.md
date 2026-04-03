@@ -14,12 +14,14 @@ Calcolando l'MCD di 20 e 24 per enumerazione (come alle elementari) otteniamo:
 * $D24 = \{1, 2, 3, 4, 6, 8, 12, 24\}$
 * In comune: $\{1, 2, 4\}$
 * Maggiore: $4$
+
 Ma è un processo lento.
 Alle medie impariamo un algoritmo:
 * $20 = 2²·5$
 * $24 = 2³·3$
 * Fattori comuni: $2$, minor esponente: $2$
 * $2² = 4$
+
 Ma anche questo è comunque molto inefficiente per i numeri molto grandi.
 
 Euclide ha ideato un algoritmo che non usa la scomposizione in fattori:

@@ -5,5 +5,6 @@ cssclasses:
 * [[Selection Sort]]
 * [[Heapsort]]
 * [[Ricerca Binaria]]
+* [[Dijkstra]]
 
 #modulo

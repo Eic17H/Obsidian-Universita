@@ -11,7 +11,7 @@ Due frasi diverse che corrispondono alla stessa preposizione, in questo caso <sp
 "Professor Bartoletti è Batman", "la congettura di Goldman è vera".
 Possono essere <span class="green">vere</span> o <span class="red">false</span>, ma non sappiamo quale siano.
 Alcune proposizioni si possono scomporre, altre no: **proposizioni atomiche**. #termine 
-Da proposizioni atomiche e connettivi logici puoi creare "molecole logiche".
+Da proposizioni atomiche e <span class="logica">[[Enunciati#Connettivi logici|connettivi logici]]</span> puoi creare "molecole logiche".
 $∧$, $∨$, $¬$, $→$. $And$, $or$, $not$, $pertanto$.
 
 Il $pertanto$ ti frega. Pertanto, dunque, se-allora.
@@ -42,13 +42,13 @@ $P$ e $Q$ sono <span class="termine">variabili</span>, come in matematica.
 In matematica, puoi assegnare valori numerici alle variabili.
 A $P$ e $Q$ cosa assegniamo? $0$ e $1$, sono *valori di verità*.
 
-#definizione 
-Sia $v$ una funzione da lettere proposizionali a $\{0, 1\}$.
-Diciamo che $v$ è un'<span class="termine"><i>interpretazione</i></span> se:
-* $v(¬A) = 1-v(A)$
-* $v(A∧B)=min(v(A),v(B))$
-* $v(A∨B)=max(v(A),v(B))$
-* $v(A→B)=max(1-v(A),v(B))$
+> **Interpretazioni**
+> Sia $v$ una funzione da lettere proposizionali a $\{0, 1\}$.
+> Diciamo che $v$ è un'<span class="termine"><i>interpretazione</i></span> se:
+> * $v(¬A) = 1-v(A)$
+> * $v(A∧B)=min(v(A),v(B))$
+> * $v(A∨B)=max(v(A),v(B))$
+> * $v(A→B)=max(1-v(A),v(B))$
 
 Avrei potuto definirla per casi, ma ho preferito trasformarla in numeri.
 Continuiamo questo giochetto.
@@ -64,11 +64,10 @@ Continuiamo questo giochetto.
 
 Questo è un conto stupido, ma è bello vedere quanto sia stupido, perché vuol dire che un computer lo fa bene. Queste cose le sappiamo fare, e le sappiamo fare bene, con definizioni rigorose, a macchina.
 
-#definizione 
-Una formula $A$ è:
-* <span class="termine">soddisfacibile</span> se: esiste un'interpretazione $v$ valida tale che $v(A)=1$
-* <span class="termine">insoddisfacibile</span> se: non è soddisfacibile
-* <span class="termine">tautologica</span> se: $∀v, v(A)=1$
+> Una formula $A$ è:
+> * **soddisfacibile** se: esiste un'interpretazione $v$ valida tale che $v(A)=1$
+> * **insoddisfacibile** se: non è soddisfacibile
+> * **tautologica** se: $∀v, v(A)=1$
 
 Per esempio, $P∨¬P$ è una tautologia.
 Sembra ovvio, ma è molto importante che sia una tautologia.

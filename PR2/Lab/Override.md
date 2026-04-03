@@ -13,7 +13,7 @@ Si aggiunge il decoratore `@Override`, così il compilatore ci avverte se non ab
 Riprendiamo l'esempio visto con l'[[Ereditarietà]]:
 
 #### Persona.java
-```
+```java
 public class Persona{
     private String nome;
     private String cognome;
@@ -30,7 +30,7 @@ public class Persona{
 ```
 
 #### Studente.java
-```
+```java
 public class Studente extends Persona{
     private int matricola;
     private int annoIscrizione;
@@ -48,7 +48,7 @@ public class Studente extends Persona{
 
 #### Docente.java
 
-```
+```java
 public class Docente extends Persona{
     private String insegnamento;
 
@@ -66,7 +66,7 @@ public class Docente extends Persona{
 Facciamo l'override del metodo `toString()` per queste classi:
 
 #### Persona.java
-```
+```java
 @Override
     public String toString(){
         String s = new String("");
@@ -76,7 +76,7 @@ Facciamo l'override del metodo `toString()` per queste classi:
 ```
 
 #### Studente.java
-```
+```java
 @Override
     public String toString(){
         String s = new String("");
@@ -87,7 +87,7 @@ Facciamo l'override del metodo `toString()` per queste classi:
 
 #### Docente.java
 
-```
+```java
 @Override
     public String toString(){
         String s = new String("");

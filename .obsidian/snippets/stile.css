@@ -101,3 +101,9 @@
 .math {
   color: var(--accent);
 }
+ul .list-bullet::after { 
+background-color: var(--accent);
+}
+* {
+  --code-background: color-mix(in srgb, var(--accent) 20%, transparent);
+}
