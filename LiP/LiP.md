@@ -8,5 +8,6 @@ Le lezioni di Pinna sono difficili da seguire, questi sono riassunti del libro d
 * [[LiP/Appunti dal libro/Storia|Storia]]
 ### Capitolo 2
 * [[Linguaggi|Linguaggi]]
+* [[Automi]]
 
 #materia

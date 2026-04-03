@@ -32,7 +32,9 @@ Per esempio:
 * 4: $(\mathcal{L}(0) \cup \mathcal{L}(1))^*$
 * 3: $(\{0\} \cup \{1\})^* = \{0,1\}^*$
 
-Un linguaggio $\mathcal{L}$ è un ***linguaggio regolare*** se esiste un'e.r. $r$ tale che $\mathcal{L}(r) = \mathcal{L}$. Un linguaggio regolare potrebbe essere associato a più di un'espressione regolare, e in tal caso quelle espressioni regolari sono ***equivalenti***.
+> Un linguaggio $\mathcal{L}$ è un ***linguaggio regolare*** se esiste un'e.r. $r$ tale che $\mathcal{L}(r) = \mathcal{L}$.
+
+Un linguaggio regolare potrebbe essere associato a più di un'espressione regolare, e in tal caso quelle espressioni regolari sono ***equivalenti***.
 
 ## Equivalenza
 
