@@ -331,7 +331,9 @@ function generateAllCssClasses() {
     --blockquote-border-color: var(--accent);
     --text-selection: var(--accent-inverse);
 }
-.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
+::spelling-error {
+  text-decoration: wavy var(--accent) underline;
+}
 .math {
   color: var(--accent);
 }`
