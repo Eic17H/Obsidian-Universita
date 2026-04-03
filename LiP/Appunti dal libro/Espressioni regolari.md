@@ -2,7 +2,7 @@
 cssclasses:
   - lip
 ---
-Lo stesso argomento: [[ALF/File/Regex|ALF]], [[SO/Lab/Regex|SO]]
+Lo stesso argomento: <span class="alf">[[ALF/File/Regex|ALF]]</span>, <span class="so">[[SO/Lab/Regex|SO]]</span>
 
 ## Definizione
 

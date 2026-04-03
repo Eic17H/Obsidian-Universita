@@ -2,7 +2,7 @@
 cssclasses:
   - so
 ---
-Lo stesso argomento: [[ALF/File/Regex|ALF]], [[Espressioni regolari|LiP]]
+Lo stesso argomento: <span class="alf">[[ALF/File/Regex|ALF]]</span>, <span class="lip">[[Espressioni regolari|LiP]]</span>
 
 Le espressioni regolari (regex) possono essere molto utili. Permettono di cercare del testo tramite il pattern matching, cioè trovare segmenti di testo che hanno la stessa struttura. Così come ci sono molti linguaggi di programmazione, ci sono molti linguaggi per le regex. Ecco le basi:
 Quale carattere:
@@ -24,6 +24,6 @@ Quanti caratteri:
 * `{n,m}` Minimo $n$ e massimo $m$
 
 Per usare le regex su Linux, si usa il comando `grep` (general regular expression print). Con le pipeline puoi mettere insieme le regex e gli altri comandi.
-```
+```bash
 $ echo "la battaglia di magenta" | grep a
 ```

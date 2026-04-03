@@ -300,14 +300,12 @@ function generateAllAutoClassClasses() {
 }
 
 function oneIndexStringCss(group, index) {
+    let dark = rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "dark")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))
+    let light = rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "light")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))
     return `
-.theme-dark .${groups[group][index].toLowerCase()} {
-  --accent: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "dark")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
-  --link-color: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "dark")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
-}
-.theme-light .${groups[group][index].toLowerCase()} {
-  --accent: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "light")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
-  --link-color: ${rgbArrayToHexString(oklch2rgb(generateFromSettings(colors[group], "light")[index].toArray()).map(i => Math.floor(i*256).clamp(0,255)))};
+.${groups[group][index].toLowerCase()} {
+  --accent-dark: ${dark};
+  --accent-light: ${light};
 }`
 }
 
@@ -316,6 +314,27 @@ function generateAllCssClasses() {
     for(let i in groups)
         for(let j in groups[i])
             out += oneIndexStringCss(i, j)
+    out += `
+.theme-dark * {
+    --accent: var(--accent-dark);
+    --accent-inverse: var(--accent-light);
+}
+.theme-light * {
+    --accent: var(--accent-light);
+    --accent-inverse: var(--accent-dark);
+}
+* {
+    --link-color: var(--accent);
+    --text-accent: var(--accent);
+    --link-color: var(--accent);
+    --caret-color: var(--accent);
+    --blockquote-border-color: var(--accent);
+    --text-selection: var(--accent-inverse);
+}
+.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
+.math {
+  color: var(--accent);
+}`
     return out
 }
 
