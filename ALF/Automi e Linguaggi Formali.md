@@ -6,8 +6,17 @@ cssclasses:
 
 * [[Logica proposizionale classica]]
 * [[Logica dei predicati]]
-* [[ALF/File/Regex|Regex]]
 * [[OCaml]]
+* [[Insiemi]]
+* [[Funzioni]]
+* [[Regole di inferenza]]
+* [[ALF/File/Ricorsione|Ricorsione]]
+* [[Passaggi di stato]]
+* [[Linguaggi formali]]
+* [[ALF/File/Automi|Automi]]
+* [[ALF/File/Regex|Regex]]
+* [[Macchine di Turing]]
+* [[Non-computabilità]]
 
 ## Introduzione
 
