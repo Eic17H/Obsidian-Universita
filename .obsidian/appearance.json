@@ -2,7 +2,8 @@
   "enabledCssSnippets": [
     "notation-colour-blocks",
     "stile",
-    "hide-properties"
+    "hide-properties",
+    "images"
   ],
   "theme": "obsidian",
   "textFontFamily": "",

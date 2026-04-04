@@ -9,5 +9,6 @@ Le lezioni di Pinna sono difficili da seguire, questi sono riassunti del libro d
 ### Capitolo 2
 * [[Linguaggi|Linguaggi]]
 * [[Automi]]
+* [[Grammatica]]
 
 #materia

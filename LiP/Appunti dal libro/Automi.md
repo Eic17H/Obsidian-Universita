@@ -1,8 +1,10 @@
 ---
 cssclasses:
   - lip
+aliases:
 ---
 Per riconoscere un linguaggio regolare si usa un **automa a stati finiti** (FA, finite automaton). Questi si dividono in *deterministici* (DFA) e *non-deterministici* (NFA).
+
 ## DFA
 
 > Un **automa a stati finiti deterministico** è una quintupla $\mathcal{A}=(Q,A,\delta,q_0,F)$
@@ -22,6 +24,8 @@ Estendiamo dunque $\delta$ in $\delta^*$, con dominio $Q \times A^*$, in modo ri
 * Passo base: $\delta^*(q,ε) = q$
 * Passo ricorsivo: $\delta^*(q, aw) = \delta^*(\delta(q,a),w)$
 
+$\delta^*(q,w)$ quindi sarebbe lo stato a cui arrivi se applichi a $\delta$ su $q$ e il primo simbolo di $w$, poi al risultato e al secondo simbolo e così via finché non finisci i simboli.
+
 > Il **linguaggio $\mathcal{L}$ accettato dal DFA $\mathcal{A}$** è $\{w \in A^* | \delta^*(q_0,w) \in F\}$, l'insieme delle parole che sono input validi di $A$, cioè che portano l'automa a uno stato finale.
 
 ## NFA
@@ -31,7 +35,7 @@ Estendiamo dunque $\delta$ in $\delta^*$, con dominio $Q \times A^*$, in modo ri
 Dove:
 * $Q$ è un insieme finito di stati;
 * $A$ è un alfabeto;
-* $\delta$ è la funzione di transizione, $Q \times A \rightarrow 2^Q$;
+* $\delta$ è la funzione di transizione, $Q \times A \rightarrow 2^Q$, dove $2^Q$ è l'insieme delle parti (insieme dei sottoinsiemi) di $Q$;
 * $q_0 \in Q$ è lo stato iniziale;
 * $F \subseteq Q$ è l'insieme degli stati finali.
 
@@ -59,3 +63,33 @@ Vediamo come dimostrarlo.
 Nel libro c'è anche una frase interessante, "il non-determinismo non aggiunge potere espressivo".
 
 ## Espressioni regolari
+
+Come si collegano gli FA alle espressioni regolari? Con un teorema e un corollario.
+
+> Sia $r$ un'e.r., sia $L(r)$ il linguaggio associato. Esiste un DFA $\mathcal{A}$ tale che $\mathcal{L}(\mathcal{A})=L(r)$.
+
+> Sia $\mathcal{A}$ un DFA, sia $\mathcal{L}(\mathcal{A})$ il linguaggio associato. Esiste un'e.r. $r$ tale che $\mathcal{L}(\mathcal{A})=L(r)$.
+
+Per esempio:$$\mathcal{L} = \{w \in 0,1^* | w \text{ termina con } 1\} = \{0,1\}^* \cdot \{1\}$$Cerchiamo un'e.r. che descriva questo linguaggio. Proviamo con $r = (0|1)^*1$. Usiamo le proprietà per vedere se corrispondono.
+
+* $L((0|1)^*1)$
+* $L((0|1)^*) \cdot L(1)$
+* $(L(0) \cup L(1))^* \cdot L(1)$
+* $(L(0)^* \cup L(1)^*) \cdot L(1)$
+* $(\{0\}^* \cup \{1\}^*) \cdot \{1\}$
+* $\{0,1\}^* \cdot \{1\}$
+
+Quindi l'uguaglianza è vera. Il DFA che descrive il linguaggio ha questa funzione di transizione:
+* $\delta(q_0,0)=q_0$
+* $\delta(q_0,1)=q_1$
+* $\delta(q_1,0)=q_0$
+* $\delta(q_1,1)=q_1$
+
+## Pallogrammi
+
+C'è un modo migliore per rappresentare i DFA? Sì. Il ritorno dei pallogrammi. Quello dell'esempio si rappresenta così:
+
+`.invert`
+![[Pasted image 20260404115105.png]]
+
+Test.
