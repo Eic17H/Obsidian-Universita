@@ -2,8 +2,6 @@
 cssclasses:
   - pr1
 ---
-## Settimana 11
-
 [[Ricorsione]].
 Una classe di studenti è una classe di studenti + uno studente, o uno studente da solo.
 classe = classe + studente | studente
