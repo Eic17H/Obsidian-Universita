@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 Stavamo parlando del **[[IUM/Teoria/Lettura|processo di lettura]]**. Gli errori di battitura possono go unnoticed con certi layout, grandezze del carattere, colore, e **font**. Parliamo proprio di font:
 
 # Font

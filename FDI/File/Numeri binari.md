@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fdi
+---
 ## Aritmetica binaria (per gli interi positivi)
 Ci sono solo due cifre, quindi cominciamo definendo le operazioni a singola cifra.
 

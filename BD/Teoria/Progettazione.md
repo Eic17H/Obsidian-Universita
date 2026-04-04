@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - bd
+---
 Prima si capisce se il progetto è fattibile e utile, poi si capisce cosa serve per farlo, poi si progetta concettualmente la struttura, la si realizza, la si valida e collauda tramite QA e ricerca dei bug, e così si raggiunge uno stato che funziona. Se un passo fallisce, si può passare al passo precedente e risolvere dei problemi. In un mondo ideale in cui tutto è perfetto, si andrebbe sempre solo al prossimo passo.
 
 * Le specifiche: scritte e tabelle su un foglio

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 # Analisi logica
 
 Questo argomento l'abbiamo già visto in realtà molto presto, alle elementari. Analisi logica. Ce ne sono due: analisi logica della proposizione, che analizza la singola proposizione, e analisi del periodo, che studia i collegamenti tra proposizioni semplici.
@@ -22,9 +26,9 @@ Ci sono due categorie di enunciato: semplice e composto.
 
 ## Categorie di enunciato
 
-> Enunciato semplice: non contiene altri enunciati quando non contiene altri enunciati come sue parti proprie.
+> **Enunciato semplice**: non contiene altri enunciati quando non contiene altri enunciati come sue parti proprie.
 
-> Enunciato composto: non è semplice.
+> **Enunciato composto**: non è semplice.
 
 "Piove" è un enunciato che consiste di un'unica parola, non contiene altri enunciati, quindi è semplice.
 
@@ -81,7 +85,7 @@ Tornando a Frege, per questo motivo i padri della logica decisero di usare un li
 
 I connettivi sono verofunzionali, se non è verofunzionale non è un connettivo. Principio di vfnznltà.
 
-Principio di bivalenza, implicito, esistono solo due valori di verità, vero e falso.
+Principio di bivalenza, implicito, esistono solo due valori di verità, $\text{vero}$ e $\text{falso}$.
 
 Questi sono principi indipendenti, possiamo creare logiche con solo uno dei due o nessuno. La logica classica li accetta entrambi. Vedremo logiche solo verofunzionali. Logica trivalente, con il "non so", logiche infinitovalenti. Logiche non verofunzionali.
 
@@ -95,21 +99,21 @@ Richard Montague. Fu allievo di Alfred Tarski. Creò una logica al limite tra la
 
 Simboli. Inizialmente per abbreviare, poi per eliminare ambiguità e vaghezza.
 
-Per la congiunzione, la Λ che non ho nella tastiera. Disgiunzione V, implicazione ->, doppia implicazione \<->, negazione ¬.
+Per la congiunzione, la $\land$ che non ho nella tastiera. Disgiunzione $\lor$, implicazione $\rightarrow$, doppia implicazione $\leftrightarrow$, negazione $¬$.
 
-Con le lettere p e q possiamo indicare degli enunciati, e da lì "p V q" eccetera.
+Con le lettere $p$ e $q$ possiamo indicare degli enunciati, e da lì "$p \lor q$" eccetera.
 
-E anche "¬ p v (p -> q)", non piove, o se piove c'è vento. Parentesi, come nell'algebra.
+E anche "$¬ p \lor (p \rightarrow q)$", non piove, o se piove c'è vento. Parentesi, come nell'algebra.
 
 # Ordine delle operazioni
 
-Ovviamente possiamo, come già visto, usare le parentesi per specificare l'ordine dei connettivi. Lo facciamo anche in algebra, ma in algebra c'è anche un ordine implicito, una convenzione secondo la quale alcuni operatori si applicano prima di altri. "3 + 2 x -5" è "3 + \[2 x (-5)\]".
+Ovviamente possiamo, come già visto, usare le parentesi per specificare l'ordine dei connettivi. Lo facciamo anche in algebra, ma in algebra c'è anche un ordine implicito, una convenzione secondo la quale alcuni operatori si applicano prima di altri. "$3 + 2 \cdot \text{-}5$" è "$3 + [2 \cdot (\text{-}5)]$".
 
 Allo stesso modo i connettivi logici hanno una simile convenzione.
 
-* L'operatore unario, come in algebra, lega più fortemente di tutti gli altri;
-* E viene prima di O
-* O viene prima di <->
+* L'operatore unario $\lnot$, come in algebra, lega più fortemente di tutti gli altri;
+* $\land$ viene prima di $\lor$
+* $\lor$ viene prima di $\leftrightarrow$
 
 Questa convenzione permette a qualunque proposizione scritta in simboli di avere una sola interpretazione che non dipende dal contesto.
 
@@ -119,44 +123,44 @@ Le tavole di verità descrivono il comportamento dei connettivi logici.
 
 ## Negazione
 
-Se un valore è vero, "piove", allora la sua negazione, "non piove", è falso. Per un valore falso, "c'è il sole", la sua negazione è vera, "non c'è il sole". Indichiamo falso con 0 e vero con 1, per convenzione.
+Se un valore è $\text{vero}$, "piove", allora la sua negazione, "non piove", è $\text{falso}$. Per un valore $\text{falso}$, "c'è il sole", la sua negazione è $\text{vera}$, "non c'è il sole". Indichiamo $\text{falso}$ con $0$ e $\text{vero}$ con $1$, per convenzione.
 
-| p   | ¬p  |
-| --- | --- |
-| 0   | 1   |
-| 1   | 0   |
+| $p$ | $¬p$ |
+| --- | ---- |
+| $0$ | $1$  |
+| $1$ | $0$  |
 ## Congiunzione
 
 Quando abbiamo due proposizioni, chiamiamole p e q. Avendo due proposizioni, ciascuna con due possibili valori, abbiamo quattro possibili combinazioni.
 
-"Piove e c'è vento". Se anche uno solo dei due congiunti è falso, allora l'intera congiunzione è falsa. La congiunzione è vera solo se sono veri entrambi i congiunti. Una singola congiunzione falsa è una sorta di mela marcia che rovina l'intera congiunzione.
+"Piove e c'è vento". Se anche uno solo dei due congiunti è falso, allora l'intera congiunzione è falsa. La congiunzione è vera solo se sono veri entrambi i congiunti. Un singolo congiunto falso è una sorta di mela marcia che rovina l'intera congiunzione.
 
-| p   | q   | p & q |
-| --- | --- | ----- |
-| 0   | 0   | 0     |
-| 0   | 1   | 0     |
-| 1   | 0   | 0     |
-| 1   | 1   | 0     |
+| $p$ | $q$ | $p \land q$ |
+| --- | --- | ----------- |
+| $0$ | $0$ | $0$         |
+| $0$ | $1$ | $0$         |
+| $1$ | $0$ | $0$         |
+| $1$ | $1$ | $0$         |
 ## Disgiunzione
 
 C'è una situazione un po' antipatica. La parola "o" in italiano, come in molte altre lingue, ha due significati: uno inclusivo e uno inclusivo.
 
-Per esempio, un menù fisso in un ristorante in cui si può prendere, incluso nel prezzo, "o la frutta o il dolce". Solo uno dei due, significato esclusivo. "Può prendere la pensione chi ha più di 65 anni o ha una disabilità", una persona che ha più di 65 anni e ha una disabilità può comunque prendere la pensione, significato inclusivo. In latino per esempio questi due sono distinti: "aut" e "vel".
+Per esempio, un menù fisso in un ristorante in cui si può prendere, incluso nel prezzo, "o la frutta o il dolce". Solo uno dei due, significato esclusivo. "Può prendere la pensione chi ha più di 65 anni o ha una disabilità", una persona che ha più di 65 anni e ha una disabilità può comunque prendere la pensione, significato inclusivo. In latino per esempio questi due sono distinti: "$\text{aut}$" e "$\text{vel}$".
 
-In questo corso consideriamo la disgiunzione inclusiva, vel.
+In questo corso consideriamo la disgiunzione inclusiva, $\text{vel}$.
 
-| p   | q   | p \| q |
-| --- | --- | ------ |
-| 0   | 0   | 0      |
-| 0   | 1   | 1      |
-| 1   | 0   | 1      |
-| 1   | 1   | 1      |
+| $p$ | $q$ | $p \lor q$ |
+| --- | --- | ---------- |
+| $0$ | $0$ | $0$        |
+| $0$ | $1$ | $1$        |
+| $1$ | $0$ | $1$        |
+| $1$ | $1$ | $1$        |
 
 ## Implicazione
 
 Questa è più complicata.
 
-Il caso più semplice è il caso in cui l'antecedente è vero e il conseguente è falso. "Se piove allora prendo l'ombrello", poi succede che piove ma io non prendo l'ombrello. La mia implicazione è falsa, chiaramente, perché non la sto rispettando.
+Il caso più semplice è il caso in cui l'antecedente è $\text{vero}$ e il conseguente è $\text{falso}$. "Se piove allora prendo l'ombrello", poi succede che piove ma io non prendo l'ombrello. La mia implicazione è $\text{falsa}$, chiaramente, perché non la sto rispettando.
 
 Sugli altri tre casi potremmo stare a discutere per ore. Le condizioni di verità del "se/allora" nel linguaggio naturale sono talmente complesse che sin dall'antichità sono state discusse in modo talmente accese che Callimaco antico greco diceva che anche le cornacchie ne discutono.
 
@@ -164,7 +168,7 @@ Sugli altri tre casi potremmo stare a discutere per ore. Le condizioni di verit�
 
 La logica classica semplifica: quel caso molto semplice è l'unico caso falso, in tutti gli altri casi è vera. Professor Paoli si trova in una situazione difficile in cui deve difendere una posizione in cui non crede. L'unico modo per smentire un'implicazione è mostrare un caso in cui l'antecedente è vero e il conseguente è falso.
 
-"Se oggi è martedì allora oggi è mercoledì". Questa è vera, perché oggi è mercoledì: antecedente falso, quindi l'implicazione è vera. Ma non ha senso.
+"Se oggi è martedì allora oggi è mercoledì". Questa è vera, perché oggi è mercoledì: antecedente $\text{falso}$, quindi l'implicazione è vera. Ma non ha senso.
 
 Secondo Paoli, la logica classica è una pessima formalizzazione del linguaggio naturale.
 
@@ -172,45 +176,45 @@ Si bilanciano pregi e difetti. L'eleganza e la semplicità della logica classica
 
 ## Doppia implicazione
 
-Un'implicazione che va in entrambe le direzioni. p <-> q == (p -> q) & (q -> p).
+Un'implicazione che va in entrambe le direzioni. $p \leftrightarrow q = (p \rightarrow q) \land (q \rightarrow p)$.
 
 ## Ridondanza
 
 In realtà 5 connettivi sono troppi. Alcuni connettivi si possono esprimere in termini di altri.
 
-p & q = ¬(¬p | ¬q)
+$p \land q = ¬(¬p \lor ¬q)$
 
-Tutti e 5 i connettivi logici, e ogni altra funzione booleana binaria, a partire da un unico connettivo. Questo fu osservato all'inizio del '900 da un americano di nome Sheffer. Inventò un connettivo, indicato con | (che non è il | che stavo usando come vel), il Sheffer's stroke; è vero quando p e q sono false, e permette di ottenere qualunque altro connettivo. Ma è estremamente scomodo.
+Tutti e 5 i connettivi logici, e ogni altra funzione booleana binaria, a partire da un unico connettivo. Questo fu osservato all'inizio del '900 da un americano di nome Sheffer. Inventò un connettivo, indicato con $|$, il Sheffer's stroke; è $\text{vero}$ quando $p$ e $q$ sono $\text{false}$, e permette di ottenere qualunque altro connettivo. Ma è estremamente scomodo.
 
 ## Esempio composto
 
-p & (¬q <-> p v q). La tabella di verità è quella del connettivo principale, cioè il connettivo che sta fuori da tutte le parentesi, incluse quelle implicite. In questo caso è l'&.
+$p \land (¬q \leftrightarrow p \lor q)$. La tabella di verità è quella del connettivo principale, cioè il connettivo che sta fuori da tutte le parentesi, incluse quelle implicite. In questo caso è l'\land.
 
-| p   | q   | p   | &   | (¬  | q   | <-> | p   | v   | q)  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0   | 0   | 0   | 0   | 1   | 0   | 0   | 0   | 0   | 0   |
-| 0   | 1   | 0   | 0   | 0   | 1   | 1   | 0   | 1   | 1   |
-| 1   | 0   | 1   | 1   | 1   | 0   | 1   | 1   | 1   | 0   |
-| 1   | 1   | 1   | 0   | 0   | 1   | 1   | 1   | 1   | 1   |
-La colonna che teniamo è quella dell'&.
+| $p$ | $q$ | $p$ | $\land$ | $(¬$ | $q$ | $\leftrightarrow$ | $p$ | $\lor$ | $q$) |
+| --- | --- | --- | ------- | ---- | --- | ----------------- | --- | ------ | ---- |
+| $0$ | $0$ | $0$ | $0$     | $1$  | $0$ | $0$               | $0$ | $0$    | $0$  |
+| $0$ | $1$ | $0$ | $0$     | $0$  | $1$ | $1$               | $0$ | $1$    | $1$  |
+| $1$ | $0$ | $1$ | $1$     | $1$  | $0$ | $1$               | $1$ | $1$    | $0$  |
+| $1$ | $1$ | $1$ | $0$     | $0$  | $1$ | $1$               | $1$ | $1$    | $1$  |
+La colonna che teniamo è quella dell'\land.
 
-| p   | q   | p & (¬q <-> p v q) |
+| $p$   | $q$   | $p \land (¬q \leftrightarrow p \lor q)$ |
 | --- | --- | ------------------ |
-| 0   | 0   | 0                  |
-| 0   | 1   | 0                  |
-| 1   | 0   | 1                  |
-| 1   | 1   | 0                  |
+| $0$   | $0$   | $0$                  |
+| $0$   | $1$   | $0$                  |
+| $1$   | $0$   | $1$                  |
+| $1$   | $1$   | $0$                  |
 Questo è un algoritmo con complessità esponenziale, in funzione del numero di variabili. Chi trova un algoritmo polinomiale per questo processo trova una soluzione di p vs np, vince un milione, e sale nell'olimpo della matematica. Non si sa se esiste. Beh questo è un po' impreciso, ma il concetto è quello.
 
-Qualora la colonna sia composta solo da 1, significherebbe che il mio enunciato è vero indipendentemente dalle variabili. Sarebbe una tautologia, un enunciato vero in qualunque universo immaginabile. L'opposto è una contraddizione, sempre falsa. Queste sono proprietà universali, perché tutte le righe le devono rispettare.
+Qualora la colonna sia composta solo da $1$, significherebbe che il mio enunciato è $\text{vero}$ indipendentemente dalle variabili. Sarebbe una tautologia, un enunciato vero in qualunque universo immaginabile. L'opposto è una contraddizione, sempre $\text{falsa}$. Queste sono proprietà universali, perché tutte le righe le devono rispettare.
 
 Wittgenstein, uno dei creatori della tavola di verità. Secondo lui, le tautologie e le contraddizioni non contengono alcuna informazione. "Piove o non piove" non mi dà nessuna informazione sul meteo. Enunciati con contenuto informativo zero.
 
-Un enunciato con almeno un 1 è soddisfacibile. Un enunciato con almeno uno 0 è falsificabile. Ogni tautologia è soddisfacibile, ogni contraddizione è falsificabile. Ma non valgono né gli inversi né i conversi. Sono proprietà esistenziali, basta una riga per farle valere.
+Un enunciato con almeno un $1$ è soddisfacibile. Un enunciato con almeno uno $0$ è falsificabile. Ogni tautologia è soddisfacibile, ogni contraddizione è falsificabile. Ma non valgono né gli inversi né i conversi. Sono proprietà esistenziali, basta una riga per farle valere.
 
 # Istanza di sostituzione
 
-p v (q -> p). Un'istanza di sostituzione di questa formula è un'altra formula che posso ottenere a partire da essa prendendo ciascuna sua variabile e sostituendole uniformemente con delle formule, usando la stessa formula per la stessa variabile ciascuna volta. Per esempio q & ¬r v (p -> q & ¬r).
+$p \lor (q \rightarrow p)$. Un'istanza di sostituzione di questa formula è un'altra formula che posso ottenere a partire da essa prendendo ciascuna sua variabile e sostituendole uniformemente con delle formule, usando la stessa formula per la stessa variabile ciascuna volta. Per esempio $q \land ¬r \lor (p \rightarrow q \land ¬r)$.
 
 A cosa ci serve? Ci servirà più avanti coi calcoli logici, per ridurre una lista infinita di assiomi a una lista finita.
 
@@ -219,25 +223,23 @@ Posso sostituire una variabile con sé stessa, o due variabili con la stessa esp
 Se riduco il numero di righe, le proprietà universali vengono mantenute, quelle esistenziali magari no.
 
 Esercizio:
-(p & q -> r) -> (p -> (q -> r))
+$(p \land q \rightarrow r) \rightarrow (p \rightarrow (q \rightarrow r))$
 
 # Semplificazione dei calcoli
 
-In p&q->r, ogni volta che r è vero, non mi importa cosa c'è a sinistra, l'implicazione intera è vera, questo fa comodo facendo la tabella di verità. Stessa cosa se l'antecedente è falso.
+In $p\land q\rightarrow r$, ogni volta che $r$ è $\text{vero}$, non mi importa cosa c'è a sinistra, l'implicazione intera è $\text{vera}$, questo fa comodo facendo la tabella di verità. Stessa cosa se l'antecedente è $\text{falso}$.
 
-Ah stiamo facendo l'esercizio ok. dove ho messo la penna del'l'ipdad prima volta nella vita che mi srrve davvero vabbè.
-
-| p   | q   | r   | (p  | ->  | (q->r)) | ->  | (p&q | ->  | r)  |
-| --- | --- | --- | --- | --- | ------- | --- | ---- | --- | --- |
-| 0   | 0   | 0   | 0   | 1   | 1       | 1   | 0    | 1   | 0   |
-| 0   | 0   | 1   | 0   | 1   | 1       | 1   |      | 1   | 1   |
-| 0   | 1   | 0   | 0   | 1   | 1       | 1   | 0    | 1   | 0   |
-| 0   | 1   | 1   | 0   | 1   | 1       | 1   |      | 1   | 1   |
-| 1   | 0   | 0   | 1   | 1   | 1       | 1   | 0    | 1   | 0   |
-| 1   | 0   | 1   | 1   | 1   | 1       | 1   |      | 1   | 1   |
-| 1   | 1   | 0   | 1   | 0   | 0       | 1   | 1    | 0   | 0   |
-| 1   | 1   | 1   | 1   | 1   | 1       | 1   |      | 1   | 1   |
-Tautologia vedi tautologia
+| $p$ | $q$ | $r$ | $(p$ | $\rightarrow$ | $(q\rightarrow r))$ | $\rightarrow$ | $(p\land q$ | $\rightarrow$ | $r$) |
+| --- | --- | --- | ---- | ------------- | ------------------- | ------------- | ----------- | ------------- | ---- |
+| $0$ | $0$ | $0$ | $0$  | $1$           | $1$                 | $1$           | $0$         | $1$           | $0$  |
+| $0$ | $0$ | $1$ | $0$  | $1$           | $1$                 | $1$           |             | $1$           | $1$  |
+| $0$ | $1$ | $0$ | $0$  | $1$           | $1$                 | $1$           | $0$         | $1$           | $0$  |
+| $0$ | $1$ | $1$ | $0$  | $1$           | $1$                 | $1$           |             | $1$           | $1$  |
+| $1$ | $0$ | $0$ | $1$  | $1$           | $1$                 | $1$           | $0$         | $1$           | $0$  |
+| $1$ | $0$ | $1$ | $1$  | $1$           | $1$                 | $1$           |             | $1$           | $1$  |
+| $1$ | $1$ | $0$ | $1$  | $0$           | $0$                 | $1$           | $1$         | $0$           | $0$  |
+| $1$ | $1$ | $1$ | $1$  | $1$           | $1$                 | $1$           |             | $1$           | $1$  |
+Ecco, è una tautologia.
 
 Essenzialmente la logica è questa: short circuit. Vedi che non ho riempito tutte tutte le caselle? Vediamola ad albero, con la radice in alto, se io ho già risolto un nodo con la short circuit, smetto di calcolare tutti i suoi figli. Veramente io l'ho fatto perché sono arrivato in ritardo ma dopo un po' ho capito e ho smesso.
 
@@ -245,29 +247,29 @@ Questa formula è la *conversa* di quella dell'esercizio, perché abbiamo scambi
 
 # L'argomento più noioso di tutto il corso: principali leggi logiche enunciative (tipi di tautologie particolari)
 
-Non ci verrà chiesto di ripetere a memoria questa lista. Però sono tautologie e può essere utile esercitarci e fare i calcoli perché ci vengano tutti 1.
+Non ci verrà chiesto di ripetere a memoria questa lista. Però sono tautologie e può essere utile esercitarci e fare i calcoli perché ci vengano tutti $1$.
 
 Nelle slide le variabili sono lettere greche. Sono metavariabili. Le variabili le vediamo come enunciati semplici, le metavariabili le vediamo come enunciati qualunque, quindi anche composti.
 
-Scrivere α->(β->α) non è come scrivere p->(q->p), perché α e β potrebbero contenere dei connettivi, quindi se ti chiede quali ci sono, boh magari ce ne sono che non so dentro α e β.
+Scrivere $α\rightarrow(β\rightarrowα)$ non è come scrivere $p\rightarrow(q\rightarrow p)$, perché $α$ e $β$ potrebbero contenere dei connettivi, quindi se ti chiede quali ci sono, boh magari ce ne sono che non so dentro $α$ e $β$.
 
 "A fortiori" significa "a maggior ragione". Si usa un po' anche in italiano. "Se mi trovo a Cagliari a fortiori mi trovo in Sardegna".
 
 La legge di Frege è una sorta di proprietà distributiva dell'implicazione su sé stessa.
 
-Se valgono sia α che β, allora... valgono sia α che β. α&β->α; α&β->β.
+Se valgono sia $α$ che $β$, allora... valgono sia $α$ che $β$. $α\landβ\rightarrowα; α\landβ\rightarrowβ$.
 
-Se è vero α e/o è vero β, allora è vero α e/o β. α->αvβ; β->αvβ.
+Se è vero $α$ e/o è vero $β$, allora è vero $α$ e/o $β$. $α\rightarrowα\lorβ; β\rightarrowα\lorβ$.
 
 Le logiche rilevanti rifiutano l'a fortiori e l'attenuazione disgiuntiva. Ma per ora trattiamo solo della logica classica.
 
 La proprietà commutativa è evidente dalla tabella di verità: possiamo vedere gli input come matrice simmetrica 2x2. L'associatività mi permette di rimuovere le parentesi, se e solo se mi interessa solo il valore di verità e non l'aspetto semantico.
 
-"Piove e piove e piove e piove", letteralmente, mi dà le stesse informazioni di "piove", ma ovviamente pragmaticamente sottintende qualcosa di diverso. Comunque, in logica classica sono uguali, questa è la proprietà di idempotenza, una cosa impossibile in aritmetica normale: 3+3 non fa 3, ma p&p fa sempre p.
+"Piove e piove e piove e piove", letteralmente, mi dà le stesse informazioni di "piove", ma ovviamente pragmaticamente sottintende qualcosa di diverso. Comunque, in logica classica sono uguali, questa è la proprietà di idempotenza, una cosa impossibile in aritmetica normale: $3+3$ non fa $3$, ma $p\land p$ fa sempre $p$.
 
-La logica intuizionista fu il primo rivale della logica classica. L'olandese Brouwer propose una teoria fondazionale sulla matematica per mettere in piedi la quale occorreva ripensare alcune leggi classiche che secondo Brouwer valevano solo su domini finiti, mentre secondo lui la matematica necessitava di domini infiniti. E un suo collega Heyting continuò dicendo che la doppia negazione non vale, perché interpreta "non" non come "è falso che" ma come "è assurdo che". Se qualcosa è vero, allora è assurdo che sia assurdo, p->¬¬p. Però se qualcosa è assurdo che sia assurdo, non è detto che sia vero, quindi ¬(p->¬¬p). È assurdo pensare che sia assurdo che professor Paoli disdica una lezione, ¬¬"Paoli disdirà la prossima lezione". Ma non è che per forza disdirà la prossima lezione.
+La logica intuizionista fu il primo rivale della logica classica. L'olandese Brouwer propose una teoria fondazionale sulla matematica per mettere in piedi la quale occorreva ripensare alcune leggi classiche che secondo Brouwer valevano solo su domini finiti, mentre secondo lui la matematica necessitava di domini infiniti. E un suo collega Heyting continuò dicendo che la doppia negazione non vale, perché interpreta "$\text{non}$" non come "è falso che" ma come "è assurdo che". Se qualcosa è vero, allora è assurdo che sia assurdo, $p\rightarrow¬¬p$. Però se qualcosa è assurdo che sia assurdo, non è detto che sia vero, quindi $¬(p\rightarrow¬¬p)$. È assurdo pensare che sia assurdo che professor Paoli disdica una lezione, $¬¬\text{"Paoli disdirà la prossima lezione"}$. Ma non è che per forza disdirà la prossima lezione.
 
-La legge di Duns Scoto non fu scoperta da Duns Scoto, ma da qualcun altro di cui non si sa il nome, è soprannominato pseudo-Scoto. "Ex assurdo quod libet" una cosa del genere, dall'assurdo segue qualunque cosa. p&¬p->q (scrivo p e q perché mi viene male cambiare tastiera, sono sempre α e β), dove q è qualunque cosa. Se c'è lezione e non c'è lezione, gli asini volano. In logica classica è stata rifiutata. Facciamo un'IA che simuli un giudice in un processo partendo da tutti i dati che abbiamo; un testimone dice che l'imputato è stato osservato con una cravatta blu sulla scena del delitto, un altro testimone dice che quello è falso; sono testimoni, quindi sono entrambe vere, ergo ciò pertanto implica che tutto è vero, l'imputato è colpevole. La logica classica non è molto appropriata in questo caso.
+La legge di Duns Scoto non fu scoperta da Duns Scoto, ma da qualcun altro di cui non si sa il nome, è soprannominato pseudo-Scoto. "Ex assurdo quod libet" una cosa del genere, dall'assurdo segue qualunque cosa. $α\land¬α\rightarrow β$, dove $α$ è qualunque cosa. Se c'è lezione e non c'è lezione, gli asini volano. In logica classica è stata rifiutata. Facciamo un'IA che simuli un giudice in un processo partendo da tutti i dati che abbiamo; un testimone dice che l'imputato è stato osservato con una cravatta blu sulla scena del delitto, un altro testimone dice che quello è falso; sono testimoni, quindi sono entrambe vere, ergo ciò pertanto implica che tutto è vero, l'imputato è colpevole. La logica classica non è molto appropriata in questo caso.
 
 Augustus de Morgan fu un precursore di Boole, un po' a cavallo tra il sillogismo arricchito e l'algebra e logica moderne. De Morgan scrisse molto, ma non scrisse le leggi di de Morgan, che risalgono al medioevo. La disgiunzione può essere derivata da congiunzione e negazione, e viceversa, inoltre c'è una sorta di distribuzione.
 

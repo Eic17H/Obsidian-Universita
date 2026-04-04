@@ -1,4 +1,8 @@
-Lo stesso argomento: [[Espressioni regolari|LiP]], [[SO/Lab/Regex|SO]]
+---
+cssclasses:
+  - alf
+---
+Lo stesso argomento: <span class="lip">[[Espressioni regolari|LiP]]</span>, <span class="so">[[SO/Lab/Regex|SO]]</span>
 
 Su Linux, usiamo egrep per usare Regex.
 ```bash

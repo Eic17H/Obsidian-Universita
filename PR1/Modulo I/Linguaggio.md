@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 Tra l’altro, i simboli matematici sono un linguaggio formalizzato solo dal ‘600, e ancora oggi non sono 100% univoci: la moltiplicazione ha $*$, $•$, $×$, e il nulla, la divisione ha $:$, $÷$, $/$, $–$.  
 Prima si scriveva tutto a parole! Confrontiamo la lunghezza:  
 $∀i∈Dx$, …  

@@ -1,4 +1,7 @@
-# Definizione
+---
+cssclasses:
+  - csmn
+---
 $\newcommand{\R}{\mathbb{R}}$$\newcommand{\-}{\text{-}}$
 Uno **spazio lineare** o **spazio vettoriale** è un insieme $V$ dove sono definiti l'operatore $+$ (somma) e l'operatore $\cdot$ (prodotto), con queste proprietà:
 * $\forall x, y \in V, \enspace x+y \in V$
@@ -13,3 +16,7 @@ Uno **spazio lineare** o **spazio vettoriale** è un insieme $V$ dove sono defin
 * $\forall x \in V, \enspace \exists \; \-x \ | \ x+(\-x)=0$ - Opposto
 
 Per esempio: $\R$ soddisfa queste proprietà? Sì. Allora $\R$ è uno spazio lineare.
+
+L'insieme dei [[numeri complessi]] è uno spazio lineare?
+
+Gli spazi lineari possono anche essere [[norme vettoriali|normati]].

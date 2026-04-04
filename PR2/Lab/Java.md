@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr2
+---
 ## Installazione
 
 Useremo [[Terminale di Linux - cheatsheet|Ubuntu]], Java e GEdit.

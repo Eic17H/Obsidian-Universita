@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 * [[Introduzione a MatLab]]
 * [[Branching]]
 * [[Output]]

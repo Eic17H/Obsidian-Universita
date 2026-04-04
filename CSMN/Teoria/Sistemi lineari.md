@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 # Sistemi lineari "facili"
 
 Ricordiamo che consideriamo solo quelli quadrati: stesso numero di equazioni e variabili.

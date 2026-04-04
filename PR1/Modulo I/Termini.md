@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 * Computer: Dall’inglese, in origine la professione di fare calcoli per i censi. I macchinari hanno preso questo nome dopo un po’ di tempo dalla loro invenzione.
 * Istruzione: Comando impartito a un computer che determina una variazione di stato. Bisogna sempre sapere qual è lo stato del sistema.
 * Obiettivo della programmazione: Trovare una serie finita di istruzioni che ci fanno passare da uno stato iniziale a uno stato finale.

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 # Spazio normato
 
 ## Definizione

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 900 d.C. (X secolo), impero Persiano, Al-Khwarizmi inventa Al-Jabr, l’algebra.  
 Dal nome Al-Khwarizmi (e da arithmos, numero) deriva “algoritmo”.  
 Un algoritmo è un insieme finito e ordinato di passi univoci eseguibili che definiscono un processo che termina.

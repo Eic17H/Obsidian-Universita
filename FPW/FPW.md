@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fpw
+---
 # Fondamenti di Programmazione Web
 # [[FPW/Teoria|Teoria]]
 

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - bd
+---
 ## Tempi di accesso
 
 Tempi di accesso alla memoria. Quello della memoria secondaria è 4 ordini di grandezza più grande di quella principale, quindi quella principale è trascurabile quando si considera il costo di un'operazione del DBMS. L'hard disk è meno dispendioso se si accede in modo sequenziale, la RAM invece può accedere in qualunque punto allo stesso costo (random access).

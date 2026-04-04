@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Lo stesso argomento: [[Linguaggi|LiP]]
 
 Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto informale?
@@ -12,20 +16,20 @@ Quante variabili mi servono? Non voglio mettere un limite arbitrario, voglio ess
 
 Similmente, ZUCCHERO SINTATTICO MENTIONED, magari uso parentesi quadre per comodità ma formalmente non esistono. Non ha davvero menziopnato lo zucchero sintattico ma lo sottintende.
 
-| Logico                                                 | Descrittivo               | Ausiliario |
-| ------------------------------------------------------ | ------------------------- | ---------- |
-| Connettivi logici                                      | Variabili                 | Disambigua |
-| Sono 5                                                 | Infinito numerable        | Solo due   |
-| $¬$, $\land$, $\lor$, $\rightarrow$, $\leftrightarrow$ | $P_1$, $P_2$, $P_3$, ...$ | $($, $)$   |
+| Logico                                                 | Descrittivo              | Ausiliario |
+| ------------------------------------------------------ | ------------------------ | ---------- |
+| Connettivi logici                                      | Variabili                | Disambigua |
+| Sono 5                                                 | Infinito numerable       | Solo due   |
+| $¬$, $\land$, $\lor$, $\rightarrow$, $\leftrightarrow$ | $P_1$, $P_2$, $P_3$, ... | $($, $)$   |
 Immaginati un albero piuttosto che una tabella.
 
 Ok, abbiamo definito l'alfabeto, da qui come definiamo poi quali espressioni sono grammaticalmente corrette? Nei linguaggi naturali, non c'è un criterio matematico, c'è un dizionario. Definiamo per induzione.
 
 Definizione induttiva: parto da base e passo. Analisi Matematica menzionata. Episodio crossover, e ovviamente regole di inferenza di ALF. Parto da uno stock iniziale di elementi dell'insieme, che è la base, e definisco nel passo una funzione che mi espande a macchia d'olio l'insieme generando nuovi elementi.
 
-Per esempio, definisco i numeri naturali. La mia base è lo 0, il passo è l'operatore di successione. Quindi base: "lo 0 è un numero naturale", passo: "se N è un numero naturale, allora succ(N) è un numero naturale". Quindi, 3 è un numero naturale? Lo è se lo è 2, che lo è se lo è 1, che lo è se lo è 0, che lo è. Quindi vero: 3 è un numero naturale.
+Per esempio, definisco i numeri naturali. La mia base è lo $0$, il passo è l'operatore di successione. Quindi base: "lo $0$ è un numero naturale", passo: "se $N$ è un numero naturale, allora $succ(N)$ è un numero naturale". Quindi, $3$ è un numero naturale? Lo è se lo è $2$, che lo è se lo è $1$, che lo è se lo è $0$, che lo è. Quindi vero: $3$ è un numero naturale.
 
-Per induzione abbiamo definito un insieme infinito a partire da un numero finito di oggetti. Condensiamo l'infinito nel finito. Molto potente, ma molto pericoloso: si avvicina molto alle definizioni circolari, che non sono valide. E qui, nella definizione di numero naturale, in particolare nel passo, uso i numeri naturali. Ma non è circolare, è ricorsiva. Possiamo dire meglio: se N è un numero naturale *già noto*, allora ...
+Per induzione abbiamo definito un insieme infinito a partire da un numero finito di oggetti. Condensiamo l'infinito nel finito. Molto potente, ma molto pericoloso: si avvicina molto alle definizioni circolari, che non sono valide. E qui, nella definizione di numero naturale, in particolare nel passo, uso i numeri naturali. Ma non è circolare, è ricorsiva. Possiamo dire meglio: se $N$ è un numero naturale *già noto*, allora ...
 
 Ma lo prendiamo per vero, su che base? A chi studia filosofia, tutto questo può sembrare un po' naive. Ma se vedo che piove, piove davvero? I sensi ingannano, la nozione di verità e complessa e dibattuta. Uno studente di filosofia problematizza tutto. Ma noi, soprattutto chi l'ha preso come esame a scelta e si sta laureando in informatica, lasciamo perdere e diamo tutto questo per buono. Vedremo i dibattiti sulla definizione di verità più avanti.
 

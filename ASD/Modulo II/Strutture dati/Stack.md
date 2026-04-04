@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - asd
+---
 * === STACK ===
      * LIFO, last in first out. L'ultimo entrato è il primo che esce.
      * push: nuovo che punta a top, top ora punta a lui.

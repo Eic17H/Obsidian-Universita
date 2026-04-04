@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 ## Modulo I
 ### Indice
 * [[PR1/Modulo I/Algoritmi|Algoritmi]]

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - bd
+---
 * [[Viste]]
 * [[BD/Teoria/Memoria|Memoria]]
 * [[Hashing]]

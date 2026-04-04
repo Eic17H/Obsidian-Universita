@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr2
+---
 # [[PR2/Teoria/Teoria|Modulo I]]
 # [[PR2/Lab/Lab|Modulo II]]
 

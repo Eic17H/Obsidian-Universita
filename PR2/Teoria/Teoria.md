@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr2
+---
 ## Indice
 
 * [[PR2/Teoria/Linguaggio|Linguaggio]]

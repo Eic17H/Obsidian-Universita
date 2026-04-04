@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - lip
+---
 I primi linguaggi di programmazione nacquero con la macchina di Von Neumann. I programmi sono dati memorizzati, e caricando dati diversi si possono eseguire programmi diversi. Il programma è "scritto" nei dati tramite un codice numerico, un "linguaggio macchina".
 
 ## Anni '50

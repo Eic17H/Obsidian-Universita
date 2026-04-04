@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr2
+---
 ## Indice
 * [[Java]]
 * [[Classi]]

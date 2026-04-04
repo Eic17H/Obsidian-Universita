@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 $\newcommand{\vx}{\underline{x}}$$\newcommand{\vy}{\underline{y}}$$\newcommand{\vz}{\underline{0}}$$\newcommand{\sp}{\enspace}$$\newcommand{\R}{\mathbb{R}}$$\newcommand{\maxx}{\max\limits_}$$\newcommand{\inf}{\infty}$Una norma è una funzione che va da uno spazio vettoriale ai reali positivi.
 # Proprietà
 

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - lip
+---
 Lo stesso argomento: [[Linguaggio formale|Logica]]
 ## Lettura
 

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - lip
+---
 Un programma è, in un certo senso, una funzione che ha come variabili gli input del programma e come risultato il suo output. I linguaggi di programmazione possono operare matematicamente o ingegneristicamente.
 
 La macchina di Turing fu il primo modello di una macchina che, leggendo e modificando dati, può descrivere tutti gli algoritmi. Qualunque linguaggio dotato di costrutti di scelta e iterazione è Turing-equivalente, cioè ha **lo stesso potere espressivo**. Differiscono però nel *livello di astrazione*: più è astratto, meno è evidente il processo interno alla macchina ma più è evidente il calcolo matematico che rappresenta.

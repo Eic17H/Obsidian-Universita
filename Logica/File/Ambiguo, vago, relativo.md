@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 L'ambiguità un fenomeno linguistico proprio del linguaggio naturale che fa riferimento alla pluralità dei significati. Ci sono anche singole parole ambigue, come "banco", che può essere un oggetto in legno su cui posso appoggiare borsa e computer, ma anche a un istituto di credito. La parola "cellulare" si può riferire a un telefonino, ma anche a un veicolo blindato della polizia, anche se quest'ultimo uso sta cadendo in disuso, però vedi la battuta, "Dov'è Tizio? Lo stanno scaricando dal cellulare".
 
 Della vaghezza abbiamo già parlato, un termine è vago quando esistono dei casi limite di applicazione, come "alto", che non ha una soglia numerica ben definita, anche sapendo con precisione infinita l'altezza di ciò che stiamo descrivendo e conoscendo perfettamente la lingua italiana. L'ambiguità è propria della parola, la vaghezza può essere vista come una mancanza di informazioni, per altri è semantica, per altri è ontologica, cioè propria del concetto a cui la parola si riferisce. Può esistere ambiguità senza vaghezza e può esistere vaghezza senza ambiguità.
