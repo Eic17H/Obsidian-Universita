@@ -3,5 +3,6 @@
   "obsidian-git",
   "webpage-html-export",
   "auto-class",
-  "custom-classes"
+  "custom-classes",
+  "shiki-highlighter"
 ]
