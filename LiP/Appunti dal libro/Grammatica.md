@@ -18,7 +18,7 @@ Noi vedremo solo casi in cui $|α|=1$, quindi riscriviamo un solo simbolo.
 # Esempio
 
 $$G = (\{S\}, \{0,1\},\{S \rightarrow0S0, S\rightarrow1S1,S\rightarrowε\},S)$$
-Abbiamo detto che la grammatica si usa per derivare delle parole. Come deriviamo la parola $011110$?
+Abbiamo detto che la grammatica si usa per [[Derivazione|derivare]] delle parole. Come deriviamo la parola $011110$?
 * Dobbiamo partire dal simbolo iniziale, $S$;
 * Lo riscriviamo con la prima produzione, $0S0$;
 * Poi con la seconda, $01S10$;

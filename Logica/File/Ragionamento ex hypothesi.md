@@ -2,7 +2,7 @@
 cssclasses:
   - logica
 ---
-Cos'è una derivazione in HK? Una successione finita di formule in $\mathcal{L}_0$ ognuna delle quali o è un assioma o è ottenuta da formule precedenti attraverso il modus ponens, oppure *è una formula arbitraria etichettata come assunzione*. La terza è nuova.
+Cos'è una [[derivazione]] in HK? Una successione finita di formule in $\mathcal{L}_0$ ognuna delle quali o è un assioma o è ottenuta da formule precedenti attraverso il modus ponens, oppure *è una formula arbitraria etichettata come assunzione*. La terza è nuova.
 
 Quindi, se dico $Γ \vdash_{HK} α$, dico che α è derivabile come conclusione prendendo come ipotesi le formule in $Γ$, quindi in $Γ$ ci sono le assunzioni.
 
