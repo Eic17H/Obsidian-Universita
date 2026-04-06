@@ -46,7 +46,7 @@ A differenza del prodotto, la somma algebrica di reali può essere **mal condizi
 Le prestazioni di un algoritmo (sequenza finita e univoca di operazioni) si valutano su tre parametri critici:
 
 1. **Stabilità**: Capacità dell'algoritmo di non amplificare gli errori di arrotondamento introdotti durante i vari passaggi computazionali.
-2. **[[Complessità]] in termini di tempo**: Il numero di operazioni richieste. È fondamentale avere una complessità polinomiale e non esponenziale.
+2. <b><span class="pr1">[[PR1/Modulo I/Complessità|Complessità]]</span> in termini di tempo**: Il numero di operazioni richieste. È fondamentale avere una complessità polinomiale e non esponenziale.
     * *L'esempio del foglio di carta:* Piegare un foglio di spessore **$10^{-4}$ m** per 50 volte segue la legge di crescita esponenziale $10^{-4} \cdot 2^n$. Con $n=10$ abbiamo **$10^{-1}$ m**, ma arrivati a $n=50$ raggiungiamo dimensioni astronomiche oltre il concepibile fisico, dimostrando l'insostenibilità pratica degli algoritmi esponenziali.
 3. **Occupazione della memoria**: Efficienza delle strutture dati utilizzate (fondamentale per matrici molto grandi).
 
