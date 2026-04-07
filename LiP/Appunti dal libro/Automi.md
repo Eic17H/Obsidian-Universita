@@ -64,7 +64,7 @@ Nel libro c'è anche una frase interessante, "il non-determinismo non aggiunge p
 
 ## Espressioni regolari
 
-Come si collegano gli FA alle espressioni regolari? Con un teorema e un corollario.
+Come si collegano gli FA alle [[espressioni regolari]]? Con un teorema e un corollario.
 
 > Sia $r$ un'e.r., sia $L(r)$ il linguaggio associato. Esiste un DFA $\mathcal{A}$ tale che $\mathcal{L}(\mathcal{A})=L(r)$.
 
@@ -90,6 +90,5 @@ Quindi l'uguaglianza è vera. Il DFA che descrive il linguaggio ha questa funzio
 C'è un modo migliore per rappresentare i DFA? Sì. Il ritorno dei pallogrammi. Quello dell'esempio si rappresenta così:
 
 `.invert`
-![[Pasted image 20260404115105.png]]
 
-Test.
+![[Pasted image 20260404115105.png]]

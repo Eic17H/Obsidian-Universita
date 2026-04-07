@@ -107,3 +107,7 @@ background-color: var(--accent);
 * {
   --code-background: color-mix(in srgb, var(--accent) 20%, transparent);
 }
+body {
+  --accent-light: #000000;
+  --accent-dark: #ffffff;
+}

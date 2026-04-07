@@ -44,7 +44,7 @@ Vediamo della notazione molto strana:$$\dfrac{\begin{matrix}[α]_i \newline \vdo
 I puntini verticali significano "supponiamo di aver già dimostrato $β$ da $α$". Le parentesi quadre dicono che possiamo chiudere l'assunzione. La $i$ è un indice, un numero, lo usiamo per indicare che al passaggio i chiudiamo quell'assunzione.
 
 $\vdash_{ND} (α\rightarrowβ)\rightarrow((β\rightarrowγ)\rightarrow(α\rightarrowγ))$. Senza precedenti. Come facciamo? Capiamo come arrivarci. Assunzioni: $α\rightarrowβ$, $β\rightarrowγ$, $α$, con questi possiamo fare modus ponens e arrivare alla fine, e da lì chiudiamo le assunzioni. Vediamo se questa è una strategia valida.$$\dfrac{\dfrac{α \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace β\rightarrowγ}{γ}\rightarrow\text{-}E$$
-Abbiamo ora una derivazione da α a γ: quindi chiudiamo.$$\dfrac{\dfrac{\dfrac{[α]_1 \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace β\rightarrowγ}{γ}\rightarrow\text{-}E}{α\rightarrowγ}\rightarrow\text{-}I,1$$
+Abbiamo ora una [[derivazione]] da α a γ: quindi chiudiamo.$$\dfrac{\dfrac{\dfrac{[α]_1 \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace β\rightarrowγ}{γ}\rightarrow\text{-}E}{α\rightarrowγ}\rightarrow\text{-}I,1$$
 
 Poi.$$\dfrac{\dfrac{\dfrac{\dfrac{[α]_1 \enspace \enspace α\rightarrowβ}{β} \rightarrow\text{-}E \enspace \enspace \enspace [β\rightarrowγ]_2}{γ}\rightarrow\text{-}E}{α\rightarrowγ}\rightarrow\text{-}I,1}{(β\rightarrowγ)\rightarrow(α\rightarrowγ)} \rightarrow\text{-}I,2$$
 Manca solo un'assunzione da chiudere. E quindi facciamolo.$$
