@@ -100,7 +100,7 @@ var import_state = require("@codemirror/state");
 var import_view = require("@codemirror/view");
 
 // src/utils.ts
-var ccBlockRegex = /` *((class|cls): *|\.)([a-zA-Z\-_]+[a-zA-Z\-_0-9]*( *\, *)?)+ *`/;
+var ccBlockRegex = /` *((class|cls): *|§ç)([a-zA-Z\-_]+[a-zA-Z\-_0-9]*( *\, *)?)+ *`/;
 var ccBlockRegexGlob = new RegExp(ccBlockRegex.source, "g");
 function isCustomClassBlock(codeEl) {
   if (!codeEl)
