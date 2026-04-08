@@ -109,7 +109,7 @@ function isCustomClassBlock(codeEl) {
   return ccBlockRegex.test(mdCodeBlock);
 }
 function retrieveCustomClasses(ccBlockText) {
-  return ccBlockText.replaceAll("`", "").replaceAll(" ", "").replaceAll("\n", "").replace("class:", "").replace("cls:", "").replace(".", "").split(",");
+  return ccBlockText.replaceAll("`", "").replaceAll(" ", "").replaceAll("\n", "").replace("class:", "").replace("cls:", "").replace("§ç", "").split(",");
 }
 
 // src/md-line.ts
