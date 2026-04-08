@@ -39,7 +39,7 @@ Quindi la valutazione del linguaggio è una funzione che assegna alle variabili 
 
 Definiamo la nozione di conseguenza logica, che è una precisazione della nozione di schema di argomento valido.
 
-$α \in For(\L_0) \land Γ \subseteq For(\L0)$ (α è una formula, Γ è un insieme di formule), allora diciamo che α è conseguenza logica in HK (diciamo che HK è la logica classica per ora) di Γ, e scriviamo in simboli $Γ \models_{HK} α$ quando per ogni valutazione V in L0 se V(γ)=1 per ogni γ in Γ, allora V(α)=1 (cioè non ha controesempi).
+$α \in For(\L_0) \land Γ \subseteq For(\L_0)$ (α è una formula, Γ è un insieme di formule), allora diciamo che α è conseguenza logica in HK (diciamo che HK è la logica classica per ora) di Γ, e scriviamo in simboli $Γ \models_{HK} α$ quando per ogni valutazione V in L0 se V(γ)=1 per ogni γ in Γ, allora V(α)=1 (cioè non ha controesempi).
 
 Quindi abbiamo tutti i nostri γ, che sono $γ_1,γ_2,γ_3,...$, e nella tavola di verità abbiamo tante righe. Concentriamoci su una riga, cos'è una riga della tavola di verità? Una funzione che assegna 0 o 1 a ciascun γ, arbitrariamente, e ad α secondo le regole dei connettivi logici. Ma non è altro che una valutazione! Quindi implicitamente, informalmente, abbiamo già usato la nozione di valutazione nella nozione di schema di argomento valido, perché lì stavamo usando una riga con 1 dappertutto. La differenza è che Γ può essere infinito.
 
