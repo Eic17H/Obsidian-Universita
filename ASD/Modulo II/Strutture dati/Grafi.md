@@ -13,6 +13,8 @@ I grafi non orientati sono come grafi dove per ogni `(a, b)` esiste `(b, a)`, do
 
 Se `(a, b)`, `a` e `b` sono adiacenti. Il lato `(a, b)` è *incidente* da `a` a `b`.
 
+I nodi contengono i dati. Gli archi possono anche contenere un numero ciascuno, che rappresenta il "peso" (costo o distanza) dell'arco.
+
 ## Implementazioni
 
 Vediamo le implementazioni. Ce ne sono tante, vediamo la più "didattica".

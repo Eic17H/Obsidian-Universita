@@ -2,5 +2,6 @@
 cssclasses:
   - ium
 ---
-* [[Introduzione ad Android Studio]]
+* [[Figma]]
+* [[Android Studio]]
 #modulo
