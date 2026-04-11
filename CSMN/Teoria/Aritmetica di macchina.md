@@ -2,30 +2,32 @@
 cssclasses:
   - csmn
 ---
-Anche chi è al terzo anno può fare i parziali. Le presenze sono obbligatorie per il secondo parziale. Su elearning sta caricando direttamente le whiteboards.
-
-Ci sono 6 macroargomenti, 3 per parziale. E poi c'è MatLab, che richiede la consegna di una relazione e non ha a che fare con parziali e totali. Scadenza febbraio 2027. Il secondo parziale corrisponde con il primo totale.
-
-# Aritmetica di macchina
-
-I numeri decimali non possono essere memorizzati sempre esattamente su un calcolatore. L'opzione migliore per risparmio di memoria è la [[Numeri binari|virgola mobile]].
+I numeri decimali non possono essere memorizzati sempre esattamente su un calcolatore. L'opzione migliore per risparmio di memoria è la <span class="fdi">[[Numeri binari|virgola mobile]]</span>.
 
 Vediamo la memorizzazione di alcuni numeri.
 
-Prima di tutto, voglio sapere quali sono il più piccolo e il più grande rappresentabile. Se richiedo la normalizzazione di un numero (0.d1d2dt... con d1!=0)\_beta\*beta\^p, allora beta\^-1<=m<=beta\^-tau, dove m è la mantissa. Quindi beta\^(p-1)<=|x|<=beta\^(p-tau).
+Prima di tutto, voglio sapere quali sono il più piccolo e il più grande rappresentabile. Se richiedo la normalizzazione di un numero $0.d_1d_2d_t..._\beta\beta^p$ con $d_1\neq0$, allora $\beta^{-1}\leq m\leq\beta^{-\tau}$, dove $m$ è la mantissa. Quindi $\beta^{p-1}\leq|x|\leq\beta^{p-\tau}$.
 
-Cosa significa lavorare con dei numeri su un calcolatore. Significa formalmente rimpiazzare il numero x con una sua rappresentazione. Visto che l'abbiamo chiamata rappresentazione floating point, la chiamiamo fl(x). Cioè, la funzione fl() prende un numero reale e mi fornisce la sua rappresentazione su un computer. R -> F, x |-> fl(x). Ci sono più casi:
+Cosa significa lavorare con dei numeri su un calcolatore? Significa formalmente rimpiazzare il numero $x$ con una sua rappresentazione. Visto che l'abbiamo chiamata *rappresentazione floating point*, la chiamiamo $fl(x)$. Cioè, la funzione $fl()$ prende un numero reale e mi fornisce la sua rappresentazione su un computer. $\mathbb{R} \rightarrow \mathbb{F}, x \rightarrowtail fl(x)$. Ci sono più casi:
 
-* |x| è compreso in F -|> x = fl(x)
-* |x| <= beta\^(L-1) -|> x=(tre lineette)0, flush to zero, underflow. possiamo anche avere gradual underflow, cioè abbandoniamo la normalizzazione per rappresentare numeri più piccoli, quindi il numero minore rappresentabile diventa b\^(L-t), scrive τ ma forse è la t nella sua scrittura, da capire
-* |x| >= beta\^U -|> x\=\=\=inf, overflow
-* caso più interessante, beta\^(L-1) <= |x| <= beta\^U ma x non è in F, cioè ha più cifre significative di quante ne consente la memorizzazione. quindi x = (0.d1d2...dtdt+1dt+2...)bbp
+* $|x| \in \mathbb{F}$: $x = fl(x)$
+* $|x| \leq \beta^{L-1}$: $x \equiv 0$, flush to zero, underflow. Possiamo anche avere gradual underflow, cioè abbandoniamo la normalizzazione per rappresentare numeri più piccoli, quindi il numero minore rappresentabile diventa $b^{L-t}$, scrive $τ$ ma forse è la $t$ nella sua scrittura, da capire
+* $|x| \geq \beta^U$: $x\equiv\infty$, overflow.
+* Caso più interessante, $\beta^{L-1} \leq |x| \leq \beta^U$ ma $x \notin \mathbb{F}$, cioè ha più cifre significative di quante ne consente la memorizzazione. quindi $x = (0.d_1d_2...d_td_{t+1}d_{t+2}...)_\beta\beta^p$
 
 MatLab non dà errore né con underflow né con overflow, vanno controllati con tecniche di programmazione per produrre warning o errori. inf come valore non darà mai errore.
 
 Comunque nel quarto caso ci sono due opzioni: troncamento e arrotondamento.
 
-* Troncamento: fl(x) = Trunc(x) = (0.d1d2...dt)bbp. l'errore assoluto ε=|x-fl(x)|, cioè x con d1...dt=0. qual è il numero più grande di quel tipo? quello dove dt+1...=9, che sicuramente è minore di x con d1...dt-1=0, dt=1, d1+t...=0. ma cos'è? proprio $β^{(p-t)}$, quindi epsilon è sicuramente minore di quello. però fl(x) sarà sempre minore di x (nel quarto caso!!!). essenzialmente la distanza tra due numeri macchina succrssivi è lo stesso dell'errore, perché diciamo che se x si avvicina infinitamente al prpossimo numero viene comunque troncato e mandato a quello precedente. essenzialmente. diciamo che si capsice. l'errore relativo invece? terza elementare. ho 2/3. come posso trovare una funzione più grande di questa? aumentando il numeratore o diminuendo il denominatore, quindi 4/3 o 2/2. 2/3<4/3<4/2. quindi, e = |x-fl(x)|/|x|. |x| abbiamo detto che è sicuramente più grande di b\^(p-1), e quello sopra abbiamo detto che è b\^(p-t) a quanto pare non so mi fido, facciamo la frazione bp-t/bp-1 che quindi è b\^(1-t), da riscrivere bene. quindi l'errore dipende solo dal numero di cifre significative, cioè t, cioè la precisione, e non dal numero in sé. il problema è che fl(x)<=x, sempre. quindi l'errore è sempre 0 o negativo, anche se x è infinitamente vicino al successivo numero macchina. quindi è meglio arrotondare, dimentichiamo tutta questa cavolata del troncamento perché non ha senso farla quasndo esiste l'arrotondamento.
+## Troncamento
+
+$fl(x)=Trunc(x)=(0.d_1d_2...d_t)_\beta\beta^p$
+
+L'errore assoluto $ε = |x-fl(x)|$, cioè $x$ con $d_1...d_t=0$. Qual è il numero grande di quel tipo? Quello dove $d_i=9 \forall 1 \leq i \leq t$, che sicuramente è minore di $x$ con $d_i=0\forall 1 \leq i \neq t$. Ma quello lì cos'è? Proprio $\beta^{p-t}$, quindi $ε$ è sicuramente minore di quello. Però $fl(x)$ sarà sempre minore di $x$, siamo nel quarto caso.
+
+Essenzialmente la distanza tra due numeri macchina successivi è lo stesso dell'errore, perché diciamo che se $x$ si avvicina infinitamente al prossimo numero viene comunque troncato e mandato a quello precedente, essenzialmente, intuitivamente.
+
+* l'errore relativo invece? terza elementare. ho 2/3. come posso trovare una funzione più grande di questa? aumentando il numeratore o diminuendo il denominatore, quindi 4/3 o 2/2. 2/3<4/3<4/2. quindi, e = |x-fl(x)|/|x|. |x| abbiamo detto che è sicuramente più grande di b\^(p-1), e quello sopra abbiamo detto che è b\^(p-t) a quanto pare non so mi fido, facciamo la frazione bp-t/bp-1 che quindi è b\^(1-t), da riscrivere bene. quindi l'errore dipende solo dal numero di cifre significative, cioè t, cioè la precisione, e non dal numero in sé. il problema è che fl(x)<=x, sempre. quindi l'errore è sempre 0 o negativo, anche se x è infinitamente vicino al successivo numero macchina. quindi è meglio arrotondare, dimentichiamo tutta questa cavolata del troncamento perché non ha senso farla quasndo esiste l'arrotondamento.
 * fl(x) = (0.d1d2...dt)bbp ma il dt ha un trattino sopra, #slide. dt trattino = {dt se d(t+1)<β/2, dt+1 se dt+1>=β/2}. per esempio, 0.1245, 4 diventa 5; 0.1244, 4 resta 4. il 5 si approssima per eccesso !!!!!! quindi l'errore che si commette è la metà di quello di prima, perché a metà tra un numero macchina e l'altro, il suo valore assoluto comincia a diminuire anziché continuare ad aumentare. questa quantità ha un nome particolare: $u=1/2 β^{1-t}$, e si chiama errore unitario, il massimo errore che si commette quando si memorizza un numero in un computer. il doppio di questo, epsilon subscript emme, è la precisione di macchina (machine epsilon). su matlab se ne ottiene il valore dalla variabile predefinita `eps`. una definizione alternativa di em è "il più piccolo numero che sommato a 1 mi dà un numero diverso da 1", che chiaramente con precisione infinita dei reali non esiste, ma nella precisione finita esiste. epsilon sub m = min {epsilon | trunc(1+epsilon)>1}. in un certo intuitivo senso è il più piccolo numero diverso da 0, ma questa definizione lascia un po' il tempo che trova per altri motivi, ma intuitivamente diciamo che in un certo senso possiamo dire che la possiamo vedere così.
 
 i calcolarorei moderni usano la precisione doppiam, ma è possibile usare la sinbgola precisione. la sp usa come inasiem e F(2,24,-126,128) e alloca 32 bit per numero (1 segno, 8 esponente, 23 mantissa, +1 sottinteso per la mantissa perché d1 è sempre 1). in matlab si usano con single(x), di default doppia precisione F(2,53,-1022,1024), 64 bit (1 segno, 11 esponente, 52+1 mantissa). epsilonm ≈ 2\*10\^-16. per controllare se un numero è nullo, controlliamo se è vicino a em, perché non ti uscirà mai che è =0, a meno che non gliel'abbia assegnaot.

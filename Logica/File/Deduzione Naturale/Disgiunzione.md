@@ -4,7 +4,7 @@
 
 $α \lor β \vdash_{ND} β \lor α$. Abbiamo una disgiunzione già pronta, l'unico modo per usarla è eliminarla.
 
-Assunzioni. Assumiamo $α\lorβ$. Abbiamo due casi: vale $α$ o vale $β$, quindi assumiamo quei due e poi li dobbiamo chiudere. Ma con l'introduzuione, posso derivare la mia conclusione da entrambe, che mi permette di chiudere le assunzioni aggiunte e tenere solo quella che mi serviva.$$\dfrac{\begin{matrix}α\lorβ & \dfrac{[α]_1}{β\lorα}VI(b) & \dfrac{[β]_2}{β\lorα}VI(a)\end{matrix}}{β\lorα}VE_{1,2}$$
+Assunzioni. Assumiamo $α\lorβ$. Abbiamo due casi: vale $α$ o vale $β$, quindi assumiamo quei due e poi li dobbiamo chiudere. Ma con l'introduzione, posso derivare la mia conclusione da entrambe, che mi permette di chiudere le assunzioni aggiunte e tenere solo quella che mi serviva.$$\dfrac{\begin{matrix}α\lorβ & \dfrac{[α]_1}{β\lorα}VI(b) & \dfrac{[β]_2}{β\lorα}VI(a)\end{matrix}}{β\lorα}VE_{1,2}$$
 
 ## Associatività
 

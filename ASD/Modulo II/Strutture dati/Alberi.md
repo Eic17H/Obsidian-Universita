@@ -8,7 +8,7 @@ Gli heap e le code con priorità sono tipi di alberi. L'heap si può usare per o
 
 # Termini
 
-> **Nodo** - 
+> **Nodo** - Un elemento che contiene un dato.
 > **Grado** - Numero di figli di un nodo.
 > **Radice** - Il nodo senza padre.
 > **Foglia** - Un nodo senza figli.

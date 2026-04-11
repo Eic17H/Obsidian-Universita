@@ -10,7 +10,7 @@ Pensa a Zenone, e il paradosso di Achille e la tartaruga. Diogene lo risolve fac
 
 Cosa succede? Succede che la logica classica non è adeguata alla corrispondenza col linguaggio naturale.
 
-Prendiamo per esempio l'ex absurdo quodlibet: "L'imputato aveva una cravatta blu, l'imputato non aveva una cravatta blu, ergo l'imputato e colpevole", due testimoni e un giudice.
+Prendiamo per esempio l'ex absurdo quodlibet: "L'imputato aveva una cravatta blu, l'imputato non aveva una cravatta blu, ergo l'imputato è colpevole", due testimoni e un giudice.
 
 Questa è la logica classica, prendere o lasciare. Bella, verofunzionale, eppure ci dà questo. Ci sono delle alternative? **Sì.** C'è qualcosa che trova l'errore in questo argomento, la *logica rilevante*.
 
@@ -30,7 +30,7 @@ Come verifico la rilevanza? La verofunzionalità è semplice, ma la rilevanza? C
 
 Sintattico: tutte le premesse sono necessarie per ricavare la conclusione.
 
-Semantico: uno schema classicamente valido è accettabile quando la forma logica di premesse e conclusione abbiano una parte di significato comune, cioè parlino della stessa cosa. Vale a dire, quando vado a formalizzare in L0, le premesse e le conclusioni devono avere almeno una variabile in comune, ed è qui che l'ex absurdo quodlibet fallisce.
+Semantico: uno schema classicamente valido è accettabile quando la forma logica di premesse e conclusione abbiano una parte di significato comune, cioè parlino della stessa cosa. Vale a dire, quando vado a formalizzare in $\mathcal{L}_0$, le premesse e le conclusioni devono avere almeno una variabile in comune, ed è qui che l'ex absurdo quodlibet fallisce.
 
 L'errore è attaccare un dogmatismo e sostituirlo con un altro dogmatismo.
 
@@ -40,7 +40,7 @@ Nel 1932 esce un libro importante per la storia della logica, Symbolic Logic, un
 
 Lewis era un critico della logica classica, fu il primo a mettere in discussione gli schemi controintuitivi. La sua proposta riforma la logica in modo moderato, salvando certi schemi paradossali.
 
-L'ex absurdo quodlibet a noi *sembra* contrintuitivo, ma non lo è. Siamo obbligati ad accettarlo purché accettiamo due schemi insospettabili: il sillogismo disgiuntivo e l'attenuazione disgiuntiva. Scrivo male immagina alfa e beta. Alfa è vero, ¬alfa è vero, alfa -> alva v beta. ¬alfa & (alfa v beta) -> beta. Ergo, ex absurdo quodlibet.
+L'ex absurdo quodlibet a noi *sembra* contrintuitivo, ma non lo è. Siamo obbligati ad accettarlo purché accettiamo due schemi insospettabili: il sillogismo disgiuntivo e l'attenuazione disgiuntiva. $a$ è vero, $¬a$ è vero, $α\rightarrowα\lorβ$. $¬α\land(α\lorβ)\rightarrowβ$. Ergo, ex absurdo quodlibet.
 
 La soluzione è di rinunciare al sillogismo disgiuntivo. Qui termina il fascino della logica rilevante, ma come, ma come devo rinunciare al sillogismo disgiuntivo?
 
@@ -52,15 +52,11 @@ Con la disgiunzione verofunzionale vale l'attenuazione disgiuntiva ma non il sil
 
 "O è stato il maggiordomo o è stato il giardiniere". Non è verofunzionale (se non è stato il maggiordomo ne deduco che è stato il giardiniere, sillogismo disgiuntivo). Ma sapendo che è stato il maggiordomo non deduco che è stato il maggiordomo o il giardiniere.
 
-Quindi, quell'αvβ nell'ex absurdo quodlibet è una sorta di termine medio con due significati, e quindi diventa una quaternia terminorum.
+Quindi, quell'$α\lorβ$ nell'ex absurdo quodlibet è una sorta di termine medio con due significati, e quindi diventa una [[Fallacie#Quaternia terminorum|quaternia terminorum]].
 
 Quindi perché il cane di Crisippo sa di usare il sillogismo disgiuntivo? Perché nella maggior parte dei casi la disgiunzione non è verofunzionale, quindi immaginiamo valga sempre. Un po' come la fisica newtoniana, che è valida per tutto ciò che facciamo ma non è valida sempre (ci sono cose che non facciamo).
 
-Potremmo lamentarci del fatto che stanno dando al vel due significati. Quindi Routley e Routley nel 1972 #slide.
-
-Richard Routley, neozelandese all'università di Camberra, molto anticonformista, ha riportato alla luce Mainong (?), i problemi che nascono dal supporre che esistano quadrati rotondi, e fu uno dei primi autori ad interessarsi alla filosofia ambientalista, ha denunciato aspramente le pratiche dell'industria australiana del legname, e queste aziende l'avevano preso di mira (avevano il controllo della facoltà di agraria e lo bandirono dalla libreria, e bandirono anche i suoi studenti che gli prestavano i libri). Morì esplorando la giungla in Indonesia col machete e gli venne un attacco di cuore. Fece all'università di Camberra un'hub per tutti i filosofi folli, e quello era il suo gruppo, andavano tutti lì da lui.
-
-Valerie Routley, sua moglie ai tempi del libro (dopo il divorzio cambiarono entrambi il cognome, lui Sylvan, per la sua passione per la giungla, lei Clambut o qualcosa del genere). Fondatrice della logica femminista; nell'epistemologia femminista dei tempi la logica veniva condannata, in quanto contrapponeva vero e falso, con 1 dominante e 0 sottomesso, che dovrebbe rispecchiare la società che la usa. La Routley in poche parole introdusse una logica con più valori oltre al vero e al falso, lunga storia.
+Potremmo lamentarci del fatto che stanno dando al vel due significati. Quindi [[Routley e Routley]] nel 1972 #slide.
 
 Niente dicevamo, se noi sappiamo che nelle nostre premesse non c'è pericolo di avere una contraddizione, sillogismo disgiuntivo tutto OK. Se le premesse possono essere contraddittorie, sillogismo disgiuntivo da evitare. E il vel tiene un solo significato. Posizione che fu poi condivisa da Belnap (Anderson era morto addirittura prima della pubblicazione di Entailment).
 

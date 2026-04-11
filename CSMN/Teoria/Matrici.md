@@ -2,7 +2,7 @@
 cssclasses:
   - csmn
 ---
-Lo stesso argomento: <span class="md">[[MD/File/Matrici|Matrici]]</span>
+Lo stesso argomento: <span class="md">[[MD/File/Matrici|MD]]</span>
 
 Oggi non c'è il proiettore quindi niente pdf della lavagna.
 
