@@ -8,7 +8,7 @@ Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto inform
 
 The return of the Pinna.
 
-$\mathcal{L}_0$, che scriverò $\mathcal{L}_0$ per ora. Il mio linguaggio $\mathcal{L}_0$ mi prende una stringa e mi dice se è grammaticalmente corretta nel mio linguaggio. In italiano, ho l'alfabeto, ma non tutte le stringhe di lettere sono espressioni ben formate: "ubwfiunefwiunweifunfoewniew" contiene solo lettere esistenti, ma non significa nulla, "Non sapevo che tu non voleva" contiene parole esistenti ma non è comunque grammaticalmente corretta. Quali stringhe di simboli io considero ben formate.
+Il mio linguaggio $\mathcal{L}_0$ mi prende una stringa e mi dice se è grammaticalmente corretta nel mio linguaggio. In italiano, ho l'alfabeto, ma non tutte le stringhe di lettere sono espressioni ben formate: "ubwfiunefwiunweifunfoewniew" contiene solo lettere esistenti, ma non significa nulla, "Non sapevo che tu non voleva" contiene parole esistenti ma non è comunque grammaticalmente corretta. Quali stringhe di simboli io considero ben formate.
 
 L'alfabeto si divide in tre sottoclassi: logico, descrittivo, ausiliario. Io nel mio alfabeto devo includere tutti i simboli che mi servono.
 

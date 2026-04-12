@@ -4,12 +4,14 @@ cssclasses:
 ---
 * [[Aritmetica di macchina]]
 * [[Problema]]
-* [[CSMN/Teoria/Basi numeriche]]
-* [[Aritmetica di macchina]]
+* [[CSMN/Teoria/Basi numeriche|Basi numeriche]]
 * [[Norme vettoriali]]
+* [[CSMN/Teoria/Matrici|Matrici]]
 * [[Autovalori e autovettori]]
 * [[Norme matriciali]]
 * [[Sistemi lineari]]
+* [[Fattorizzazione triangolare]]
+
 #modulo
 
 #todo: glossario qui

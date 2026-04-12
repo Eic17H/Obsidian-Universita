@@ -47,7 +47,7 @@ Un sacco di simboli, ma cosa significano? Non sono sicuro, ma credo significhino
 > * $α$ che è una stringa di simboli, con $V_i$ in mezzo da qualche parte.
 > * $γ$ come $α$ ma con $α_i$ al posto di $V_i$.
 
-È possibile che abbia scritto per sbaglio $a$ anziché $α$.
+È possibile che Dessì abbia scritto per sbaglio $a$ anziché $α$.
 
 Vediamo per esempio $0S0 \xrightarrow{S\rightarrow1S1} 01S10$ di prima:
 * $α = 0S0 = βVδ$
@@ -72,7 +72,7 @@ Adesso possiamo finalmente collegare i linguaggi e le grammatiche usando questi 
 
 ## Nozione di albero
 
-Un `.asd` [[ASD/Modulo II/Strutture dati/Alberi|albero]] è un tipo di grafo. Gli alberi sintattici sono un'alternativa alla derivazione.
+Un <span class="asd">[[ASD/Modulo II/Strutture dati/Alberi|albero]]</span> è un tipo di grafo. Gli alberi sintattici sono un'alternativa alla derivazione.
 
 Definiamo un grafo in termini di LiP:
 

@@ -2,8 +2,9 @@
 cssclasses:
   - logica
 ---
+
+## [[Logica/File/Introduzione|Introduzione]]
 ## [[Modulo I]]
-* Introduzione
 * Enunciati
 * Argomenti
 * Fallacie
