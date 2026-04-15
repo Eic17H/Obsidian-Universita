@@ -122,7 +122,7 @@ Un’etichetta si dichiara così. Il cursore può passarci attraverso e non ci i
 
 # Equivalenti di cose che già conosci
 
-  
+E il ragionamento che ti serve per arrivarci da solo.
 
 ## `if`
 

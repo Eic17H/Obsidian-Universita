@@ -2,7 +2,7 @@
 cssclasses:
   - lip
 ---
-Lo stesso argomento: [[Linguaggio formale|Logica]]
+Lo stesso argomento: [[Linguaggio formale|Logica]], <span class="alf">[[Linguaggi formali|ALF]]</span>, <span class="pr2">[[PR2/Teoria/Linguaggio|PR2]]</span>
 ## Lettura
 
 Un programma è scritto con un determinato *alfabeto*, rappresentato dalla lettera $Σ$. Ci sono due modi per leggere questo alfabeto e tradurlo in linguaggio macchina:
