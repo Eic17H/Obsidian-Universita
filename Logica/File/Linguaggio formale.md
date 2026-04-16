@@ -2,7 +2,7 @@
 cssclasses:
   - logica
 ---
-Lo stesso argomento: [[Linguaggi|LiP]]
+Lo stesso argomento: <span class="lip">[[Linguaggi|LiP]]</span>, <span class="alf">[[Linguaggi formali|ALF]]</span>, <span class="pr2">[[PR2/Teoria/Linguaggio|PR2]]</span>
 
 Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto informale?
 
