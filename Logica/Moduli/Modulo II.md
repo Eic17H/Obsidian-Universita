@@ -6,5 +6,6 @@ cssclasses:
 * [[Ragionamento ex hypothesi]]
 * [[Deduzione Naturale]]
 * [[Filosofia del linguaggio]]
+* [[Calcolo dei Sequenti]]
 
 #modulo

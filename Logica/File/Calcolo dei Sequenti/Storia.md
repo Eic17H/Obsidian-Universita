@@ -1,0 +1,7 @@
+Così come la deduzione naturale, il calcolo delle sequenze nasce negli anni 30, in particolare nel 1934, con Gentzen, allievo di Hilbert. Scuola tedesca di logica della prima metà del 1900, gli allievi di Hilbert, tutte queste logiche.
+
+Gentzen introduce nello stesso trattato sia ND che Seq.
+
+L'obiettivo, come con Hilbert, era la formazione della matematica: dimostrare che il calcolo formale dell'aritmetica non può portare a contraddizioni. E usa il calcolo delle sequenze per dimostrare la non-contradditorietà dell'aritmetica. Non vedremo questa dimostrazione perché dovremmo introdurre la logica dei predicati, che invece non facciamo.
+
+Cenni biografici di Gentzen, dopo aver studiato con Hilbert, diventa per qualche anno suo assistente, e negli anni 30, fresco di dottorato, comincia una promettente carriera nel dipartimento di matematica di Goettingen, e pubblica opere importanti. Guerra mondiale, viene chiamato a combattere, viene fatto prigioniero e muore in un campo di prigionia russo, una fine comune a molti logici, come quelli polacchi sotto attacco nazista. La seconda guerra mondiale sterminò un'intera generazione di padri fondatori della logica, eccezion fatta per quelli che riuscirono a fuggire in America, come Tarski. Certo poi il fascismo portò in Italia a un calo della scuola di Beano, altro logico importante, ma non entriamo più nei dettagli.
