@@ -79,6 +79,7 @@ Se ho due formule che differiscono solo per la posizione di una formula, cioè s
 Come funziona? Vediamo un esempio con formule singole.$$\dfrac{B\Rightarrow C,A \enspace \enspace A,B\Rightarrow C}{B\Rightarrow C}cut$$
 La prima ci dice che se $B$ è vera, allora $C$ o $A$ è vera. Nel primo caso, sappiamo che $B \Rightarrow C$ è vera. Nel secondo caso, allora sappiamo che sono vere sia $A$ che $B$, quindi per $A,B \Rightarrow C$ lo è anche $C$, e quindi $B \Rightarrow C$ è vera.
 
+La cesura è un po' scomoda. C'è [[Cesura modificata|una variante]], che possiamo chiamare $cut*$.
 ## Regole operazionali
 
 Abbiamo solo introduzione, quindi vedremo connettivi solo al piano di sotto, ma potenzialmente sia a sinistra che a destra.
@@ -92,7 +93,7 @@ Perché valgono? Essenzialmente De Morgan.
 
 $$\dfrac{Γ,A,B \Rightarrow Δ}{Γ, A \land B \Rightarrow Δ}Λs \qquad \dfrac{Γ \Rightarrow A,Δ \qquad Γ \Rightarrow B,Δ}{Γ \Rightarrow A \land B, Δ}Λd$$
 
-A sinistra, sto traducendo la nozione metalinguistica della virgola in una nozione in $\mathcal{L}_0$ della congiunzione.
+A sinistra, sto traducendo la nozione metalinguistica della virgola in una nozione in $\mathcal{L}_0$ della congiunzione. Anche questa regola assume una [[Congiunzione modificata|variante]].
 
 A destra, parto da due sequenze, e congiungo l'elemento non in comune. Perché se l'elemento in comune non è vero, allora con il terzo escluso so che sono veri quelli non in comune.
 

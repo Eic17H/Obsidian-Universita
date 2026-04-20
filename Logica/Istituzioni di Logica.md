@@ -12,7 +12,9 @@ cssclasses:
 ## [[Modulo II]]
 * Calcolo logico
 * Ragionamento ex hypothesi
+* Deduzione naturale
 * Filosofia del linguaggio
 * Calcolo dei sequenti
+* Equivalenza dei calcoli
 
 #materia 

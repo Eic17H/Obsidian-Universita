@@ -7,5 +7,6 @@ cssclasses:
 * [[Deduzione Naturale]]
 * [[Filosofia del linguaggio]]
 * [[Calcolo dei Sequenti]]
+* [[Equivalenza dei calcoli]]
 
 #modulo
