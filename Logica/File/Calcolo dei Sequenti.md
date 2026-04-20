@@ -112,6 +112,8 @@ Supponiamo che Gamma e Delta siano vuoti. Ci dice che se B segue da A, allora B 
 
 Quella a sinistra è più difficile da capire intuitivamente quindi per ora la diamo per vera.
 
+Nota personale alle 3 del mattino: Noi da sotto sappiamo che valgono $Γ$ e $Σ$, e che se vale $A$ vale anche $B$. Perché sia valido deve quindi valere o $Δ$ o $Π$. Guardiamo a sinistra: noi sappiamo che $Γ$ vale, quindi o vale $A$ o vale $Δ$. Se vale $Δ$, allora la parte di sotto vale. Se invece vale $A$, allora vale anche $B$, e visto che vale anche $Σ$ deve valere $Π$, che comunque verifica la parte di sotto. Confonde perlopiù perché stiamo guardando le regole in top-down ma poi facciamo gli esercizi in bottom-up.
+
 # Particolarità
 
 Gli alberi come nodi non hanno formule ma sequenze, quindi ciò che voglio derivare non sono formule ma sequenze. Inoltre, alle foglie posso avere assiomi, visto che adesso ne esiste uno. Di nuovo, se alle foglie non ho assunzioni, ho di nuovo un teorema, $\vdash_{PK}Γ\RightarrowΔ$.
