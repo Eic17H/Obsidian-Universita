@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 paoli@unica.it
 
 web.unica.it/unica/page eccetera è il sito ufficiale del corso come al solito, lì ci sono le slide

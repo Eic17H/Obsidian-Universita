@@ -1,3 +1,9 @@
+---
+cssclasses:
+  - pr1
+---
+Lo stesso argomento: <span class="asd">[[ASD/Modulo II/Algoritmi/Complessità|ASD]]</span>
+
 Un programma complesso può andare bene per un insieme di dati piccolo, ma per quelli grandi essere troppo lento.
 
 Il caso medio si denota con $O(n)$, il caso ottimo con $Ω(n)$ e il caso pessimo con $Θ(n)$, dove $n$ è la dimensione dei dati.

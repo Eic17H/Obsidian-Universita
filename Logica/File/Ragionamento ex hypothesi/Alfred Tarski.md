@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Tarski era importantissimo, per la logica, la matematica, la filosofia del linguaggio (definizione tarskiana di verità). Era un po' la caratteristica della scuola polacca della logica di 100 anni fa, era molto interdisciplinare, filosofi e matematici coesistevano.
 
 Tarski fu il cognome cambiato per eludere le persecuzioni contro gli ebrei. Si laureò a Varsavia, come molti dei primi logici non classici. La scuola polacca di logica fu decimata dall'invasione nazista. Tarski si spostò negli Stati Uniti e ottenne una cattedra a Berkley, in California. In quel periodo, le università statunitensi erano un polo di attrazione per gli studiosi in fuga dall'Europa, creando una fioritura di studi, i cui effetti si sentirono fino alla seconda metà del '900 (l'opposto di ciò che succede oggi).

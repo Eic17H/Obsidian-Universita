@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - md
+---
 La funzione $φ$ (fi) di Eulero, o toziente, ha tre proprietà principali.
 
 • $φ(n)$ è il numero di numeri coprìmi con $n$ più piccoli di $n$;

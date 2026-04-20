@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 ## [[SO/Teoria/Teoria|Modulo I]]
 ## [[SO/Lab/Lab|Modulo II]]
 

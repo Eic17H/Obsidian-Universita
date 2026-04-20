@@ -1,4 +1,7 @@
-* [[Logica/File/Introduzione|Introduzione]]
+---
+cssclasses:
+  - logica
+---
 * [[Enunciati]]
 * [[Argomenti]]
 * [[Fallacie]]

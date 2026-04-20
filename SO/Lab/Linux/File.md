@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 ## Permessi
 
 Con il comando `ls` del terminale, possiamo visualizzare la lista dei file in una directory. Ha tre opzioni:

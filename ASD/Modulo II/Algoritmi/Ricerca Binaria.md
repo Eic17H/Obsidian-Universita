@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - asd
+---
 /** Ricerca binaria
      * Algoritmo più semplice per la ricerca: controllo tutto
      * Algoritmo migliore per un array ordinato:

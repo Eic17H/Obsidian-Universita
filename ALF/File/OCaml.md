@@ -1,9 +1,13 @@
+---
+cssclasses:
+  - alf
+---
 Questo linguaggio è sia interpretato che compilato. Lo useremo come linguaggio interpretato. Si può usare anche con un ambiente di sviluppo online: [try.ocamlpro.com](https://try.ocamlpro.com).
 
 ## Tipi
 
 Per cominciare, inseriamo espressioni da valutare. `#` è l'utente, `- :` è il computer.
-```
+```ocaml
 # 2+2;;
 - : int = 4
 # true;;
@@ -12,14 +16,14 @@ Per cominciare, inseriamo espressioni da valutare. `#` è l'utente, `- :` è il 
 Capisce da solo il tipo, evita che tu faccia errori.
 Python se gli dai `2+true` te lo valida a `3`, OCaml ti avverte.
 `int` e `float` sono tipi diversi, e hanno operatori diversi:
-```
+```ocaml
 # 2.1 + 2.2;;
 Error: This expression has type float but an expression was expected of type int
 # 2.1 +. 2.2;;
 - : float = 4.30000000000000071
 ```
 `int` e `float` non possono essere usati insieme, però per esempio `1.0` si può abbreviare a `1.`.
-```
+```ocaml
 # 1 + 2.3;;
 Error: This expression has type float but an expression was expected of type int
 # 1 +. 2.3;;
@@ -30,7 +34,7 @@ Error: This expression has type int but an expression was expected of type float
 ```
 
 ## Funzioni
-```
+```ocaml
 # let imp(a,b) = (not a)||b;;
 val imp : bool * bool -> bool = <fun>
 ```
@@ -40,7 +44,7 @@ Notiamo già un po' di cose:
 * `-> bool` - l'output è un bool
 
 Dichiarare le funzioni in questo modo si può fare, ma di solito si fa così:
-```
+```ocaml
 # let imp a b = (not a)||b;;
 val imp : bool -> bool -> bool = <fun>
 ```
@@ -62,7 +66,7 @@ In OCaml appunto non ci sono procedure. Questo `if A then B else C`, in cui tutt
 ## Pattern matching
 
 Questo è un po' strano.
-```
+```ocaml
 # let imp a b = match (a,b) with
 | (false, false) -> true
 | (false, true) -> true
@@ -72,7 +76,7 @@ Questo è un po' strano.
 Può sembrare strano ma è in realtà una sorta di `switch/case` del C.
 
 È anche possibile usare una wildcard. Equivale al `default` del C.
-```
+```ocaml
 # let imp a b = match (a,b) with
 | (true, false) -> false
 | _ -> true;;

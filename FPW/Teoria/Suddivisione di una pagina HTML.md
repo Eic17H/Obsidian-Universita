@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fpw
+---
 I modi più vecchi per suddividere una pagina HTML sono i `<div>` e gli `<span>`. I primi sono necessariamente uno sopra l'altro, i secondi possono essere affiancati.
 
 | `<div>Ciao</div><div>Salve</div><div>Come va</div>`            | `<span>Ciao</span><span>Salve</span><span>Come va</span>`            |

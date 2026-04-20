@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fpw
+---
 ### Argomenti
 * Faremo il primo progetto in VSCode
 * Cose semplici in HTML

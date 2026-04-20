@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Lo scopo del calcolo può essere anche un modo imparziale per risolvere conflitti, secondo Leibniz. Leibniz ci lavorò molto, ma il suo contributo sul calcolo logico moderno è ridotto; questo è anche perché molti dei suoi scritti non sono stati pubblicati mentre era in vita, furono scoperti secoli dopo da Couturat, quando ormai era già fondato.
 
 Torniamo ancora più indietro, possiamo vedere il calcolo logico come calcolo assiomatico, torniamo ad Euclide. Euclide, da cinque assiomi, o postulati, e da quelli che chiamava "assiomi comuni", cioè proprietà che valgono non solo per la geometria ma per tutto. In realtà, ci sono teoremi che sono validi ma che non si possono dimostrare a partire dai cinque postulati, quindi il sistema non è logicamente impeccabile, ma è il primo esempio di teoria assiomatica, e in quanto tale il modello per tutte le teorie assiomatiche arrivate dopo, inclusa quella moderna.

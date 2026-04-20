@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fdi
+---
 # Settimana 1
 
 I test saranno a risposta aperta e multipla.

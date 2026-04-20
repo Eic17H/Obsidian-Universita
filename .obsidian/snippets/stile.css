@@ -1,19 +1,113 @@
-.theme-dark {
-    --matematica: #7DC8EA;
-    --termine: #7085FF;
-}
 
-.theme-light {
-    --matematica: #156082;
-    --termine: #00158F;
+.am {
+  --accent-dark: #b94738;
+  --accent-light: #760000;
 }
-
-.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
+.fems {
+  --accent-dark: #c14c56;
+  --accent-light: #7d0020;
+}
+.dem {
+  --accent-dark: #c85371;
+  --accent-light: #840e39;
+}
+.csmn {
+  --accent-dark: #cc5c8b;
+  --accent-light: #881b51;
+}
+.md {
+  --accent-dark: #ce65a4;
+  --accent-light: #8b2768;
+}
+.rc {
+  --accent-dark: #ab5a00;
+  --accent-light: #6b1d00;
+}
+.isw {
+  --accent-dark: #cb6d09;
+  --accent-light: #893000;
+}
+.are {
+  --accent-dark: #eb8241;
+  --accent-light: #a64400;
+}
+.pr1 {
+  --accent-dark: #a19300;
+  --accent-light: #665600;
+}
+.asd {
+  --accent-dark: #aea200;
+  --accent-light: #726500;
+}
+.so {
+  --accent-dark: #bcb236;
+  --accent-light: #7f7400;
+}
+.pr2 {
+  --accent-dark: #c9c261;
+  --accent-light: #8b8317;
+}
+.bd {
+  --accent-dark: #05893e;
+  --accent-light: #004d00;
+}
+.fpw {
+  --accent-dark: #52ae59;
+  --accent-light: #00701a;
+}
+.ium {
+  --accent-dark: #87d576;
+  --accent-light: #499537;
+}
+.fdi {
+  --accent-dark: #2365d2;
+  --accent-light: #00258f;
+}
+.alf {
+  --accent-dark: #007ed1;
+  --accent-light: #00418f;
+}
+.lip {
+  --accent-dark: #0093cd;
+  --accent-light: #00568d;
+}
+.logica {
+  --accent-dark: #0ea6c8;
+  --accent-light: #006889;
+}
+.eed {
+  --accent-dark: #7072d7;
+  --accent-light: #3c3695;
+}
+.theme-dark * {
+    --accent: var(--accent-dark);
+    --accent-inverse: var(--accent-light);
+}
+.theme-light * {
+    --accent: var(--accent-light);
+    --accent-inverse: var(--accent-dark);
+}
+* {
+    --link-color: var(--accent);
+    --text-accent: var(--accent);
+    --link-color: var(--accent);
+    --caret-color: var(--accent);
+    --blockquote-border-color: var(--accent);
+    --text-selection: var(--accent-inverse);
+}
+::spelling-error {
+  text-decoration: wavy var(--accent) underline;
+}
 .math {
-  color: var(--matematica);
+  color: var(--accent);
 }
-
-.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
-.termine {
-  color: var(--termine);
+ul .list-bullet::after { 
+background-color: var(--accent);
+}
+* {
+  --code-background: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+body {
+  --accent-light: #000000;
+  --accent-dark: #ffffff;
 }

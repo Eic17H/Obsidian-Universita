@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fpw
+---
 Ebbene sì, oggi creiamo un server che collegheremo al sito e al database che abbiamo fatto nelle lezioni precedenti.
 
 ## Installazione dei tool

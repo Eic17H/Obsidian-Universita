@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 La lezione di ieri ha introdotto i modelli di rete
     Non c'ero, ma le slide si capiscono mi dicono
 Oggi, socket

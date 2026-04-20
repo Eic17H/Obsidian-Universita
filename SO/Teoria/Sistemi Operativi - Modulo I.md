@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 # Settimana 1
 
 Il regolamento esiste per rispondere a dubbi e domande.

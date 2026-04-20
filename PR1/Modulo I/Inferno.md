@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 ## Call stack
 
 Dentro la funzione iterativa ci sono invocazioni alla funzione stessa
@@ -106,7 +110,7 @@ Poi te la dimentichi e usi solo il nome.
 
 I puntatori non sono mai necessari (quasi).
 
-Quando fai int\*p, int non serve a niente finché p non comincia a puntare.
+Quando fai `int *p`, `int` non serve a niente finché `p` non comincia a puntare.
 
 I progettisti del linguaggio, ‘ste merde, hanno reso possibili tutti questi modi (e altri) per dichiarare un puntatore: `int* p`, `int *q`, `int*r`, `int * s`…
 

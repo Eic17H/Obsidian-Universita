@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - asd
+---
 * [[ASD/Modulo II/Algoritmi|Algoritmi]]
 * [[Strutture Dati]]
 

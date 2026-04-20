@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 Per creare interfacce è necessario tener presente come funziona la memoria delle persone, sia per facilitare il reperimento delle informazioni che per evitare gli errori tipici.
 
 ## Cos'è la memoria?

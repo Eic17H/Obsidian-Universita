@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - pr2
+---
+Lo stesso argomento: <span class="lip">[[Linguaggi|LiP]]</span>, <span class="alf">[[Linguaggi formali|ALF]]</span>, <span class="logica">[[Linguaggio formale|Logica]]</span>
 ## Cos'è un linguaggio?
 
 Esempi di linguaggio: italiano, C, LIS, del corpo. Cos'hanno in comune? Comunicano, trasmettono informazioni. Certi linguaggi sono più adatti per certe cose. L'inglese per la scienza.

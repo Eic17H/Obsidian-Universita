@@ -1,8 +1,14 @@
+---
+cssclasses:
+  - csmn
+---
+Lo stesso argomento: <span class="md">[[MD/File/Matrici|MD]]</span>
+
 Oggi non c'è il proiettore quindi niente pdf della lavagna.
 
-Abbiamo visto il prodotto e la norma indotta da un prodotto. No io no non c'ero.
+Abbiamo visto il prodotto e la norma indotta da un prodotto.
 
-Una combinazione lineare è il vettore che si ottiene facendo la somma di certi vettori moltiplicati per degli scalari. Quindi x sottolineato ) a1 x sottolineato 1 + a2 x\_ 2 + ..., dato {x1, x2, ... xk} tutti sottolineati. Grazie a questa nozione posso definire due cose: il sottospazio generato (span). Lo span di {x1...xk} è lo spazio dei vettori che posso ottenere facendo variare gli alfa, che non sono a sono alfa, nonostante la sua calligrafia.
+Una combinazione lineare è il vettore che si ottiene facendo la somma di certi vettori moltiplicati per degli scalari. Quindi $\underline{x} = a_1 \underline{x}_1 + a_2 \underline{x}_2 + ...$, dato ${\underline{x}_1, \underline{x}_2, ... \underline{x}_k}$. Grazie a questa nozione posso definire due cose: il sottospazio generato (span). Lo span di {x1...xk} è lo spazio dei vettori che posso ottenere facendo variare gli alfa, che non sono a sono alfa, nonostante la sua calligrafia.
 
 $$
 \{\underline{x}_1, \underline{x}_2, ... \underline{x}_k\}

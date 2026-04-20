@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 Pensando a Linux, si pensa a Unix
 All'inizio non c'erano OS, c'erano grosse macchine che eseguivano un programma alla volta
 Poi hanno fatto i primi OS, scritti in assembly, quindi 1 OS per macchina

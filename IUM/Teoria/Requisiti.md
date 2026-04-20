@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 I **requisiti** possono aiutarci a capire cosa dobbiamo fare, li definiamo perché vogliamo creare un'applicazione che gli utenti vogliono utilizzare.
 
 Le **personas** e gli **scenari** ci aiutano a immaginare il modo in cui gli utenti useranno il nostro prodotto.

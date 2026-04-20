@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr2
+---
 ## Basi dell'ereditarietà
 
 Abbiamo una [[Classi|classe]] `Studente` e una classe `Docente`.
@@ -20,7 +24,7 @@ Se un attributo è private, la sottoclasse non ci può comunque accedere, usi `s
 
 #### Persona.java
 
-```
+```Java
 public class Persona {
     private String nome;
     private String cognome;
@@ -62,7 +66,7 @@ public class Persona {
 
 #### Studente.java
 
-```
+```Java
 public class Studente extends Persona {
     private int matricola;
     private int annoIscrizione;
@@ -115,7 +119,7 @@ public class Studente extends Persona {
 
 #### Docente.java
 
-```
+```Java
 public class Docente extends Persona {
     private String insegnamento;
 

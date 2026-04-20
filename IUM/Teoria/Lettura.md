@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 Ok percezione visiva. Nelle interfacce la usiamo per leggere. Ci sono più stadi.
 
 * Percezione del pattern visuale: leggiamo parola per parola, riconoscendone la forma.

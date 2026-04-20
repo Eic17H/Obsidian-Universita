@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 Cominciamo da Figma. Si usa per creare immagini, lo useremo per fare prototipi.
 Crea un nuovo *Design*, poi seleziona Frame (tasto F) e a destra seleziona Android Compact. Premi R per creare una forma, in questo caso un rettangolo grigio, poi premi T per metterci del testo. Questo è un modo per rappresentare un pulsante.
 
@@ -6,7 +10,3 @@ Possiamo raggruppare più elementi dell'interfaccia per poterli gestire e ridime
 Nel menù a sinistra vedi che ci sono dei Layer. Seleziona il layer e premi Ctrl+D per duplicarlo. Useremo i layer per rappresentare stati diversi dell'interfaccia, come "prima di aver premuto il pulsante" e "dopo averlo premuto".
 
 Definiamo dei passaggi di stato. Attiva la modalità Prototype dal menù a destra. Passa il mouse sul finto pulsante Accedi. Compare un + su un lato. Trascina da lì al secondo layer, e ora diventa un pulsante che ti fa passare al secondo layer. Ci sono diverse opzioni per l'interazione. C'è un pulsante play in alto a destra per provare il design.
-
-Android Studio: vedi le slide. Non riesco a scaricarlo, è troppo lento.
-
-Android Studio usa il linguaggio Kotlin, che è un derivato di Java. Un paio di caratteristiche: ha la Null Safety, cioè gestisce i valori null, e ovviamente è orientato a oggetti.

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fpw
+---
 ## Installazione
 
 Installiamo tutti node.js, fondamentale per Vue.

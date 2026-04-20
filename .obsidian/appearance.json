@@ -1,10 +1,13 @@
 {
   "enabledCssSnippets": [
     "notation-colour-blocks",
-    "stile"
+    "stile",
+    "hide-properties",
+    "images"
   ],
   "theme": "obsidian",
   "textFontFamily": "",
   "baseFontSizeAction": false,
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "accentColor": ""
 }

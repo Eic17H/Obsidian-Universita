@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 ## Comandi
 
 * `man` - Apri il manuale di un comando.

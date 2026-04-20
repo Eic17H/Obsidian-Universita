@@ -1,5 +1,10 @@
+---
+cssclasses:
+  - logica
+---
+
+## [[Logica/Moduli/Introduzione|Introduzione]]
 ## [[Modulo I]]
-* Introduzione
 * Enunciati
 * Argomenti
 * Fallacie
@@ -7,5 +12,7 @@
 ## [[Modulo II]]
 * Calcolo logico
 * Ragionamento ex hypothesi
+* Filosofia del linguaggio
+* Calcolo dei sequenti
 
 #materia 

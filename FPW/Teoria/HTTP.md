@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fpw
+---
 Ci sono app web statiche e dinamiche.
 Se mi collego a un sito, sto semplicemente chiedendo al server di mandarmi pagine web, che sono file (tipicamente file .html) nel suo file system.
 Un sito statico, ogni volta che vi accedi ti manda lo stesso file html. Puoi vederlo come un file in una cartella, e poi ti sposti di file e di cartella.

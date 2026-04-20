@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 # Storia
 
 Il termine software engineering viene coniato in una vedi slide e basta. Già 62 anni fa si parlava di crisi del software: hardware sempre più potente (si era passati ai transistor nei processori) e cheap, software sempre più complesso e costoso. Si sapevano costruire buoni programmi singoli, ma non buoni sistemi. In 30 ci sono stati molti insuccessi legati all'inabilità di sistemi.

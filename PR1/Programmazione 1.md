@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - pr1
+---
 ## Modulo I
 ### Indice
 * [[PR1/Modulo I/Algoritmi|Algoritmi]]
@@ -6,7 +10,7 @@
 * [[Scope]]
 * [[Ricorsione]]
 * [[Inferno]]
-* [[Complessità]]
+* [[PR1/Modulo I/Complessità]]
 
 ## Introduzione
 

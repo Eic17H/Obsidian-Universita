@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - bd
+---
 Query nidificate, cioè query la cui condizione è formulata usando il risultato di un'altra interrogazione (sub-query). Essenzialmente, possiamo dare un nome a una query, e usarla in un'altra query come se fosse una tabella.
 ## Operatori quantificati
 

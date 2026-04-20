@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - asd
+---
 Guardo l'array, trovo il minimo, lo metto all'inizio, ripeto considerando solo il resto
 Divito l'array in "zona da ordinare" e "zona ordinata"
 All'inizio è tutto ZDO

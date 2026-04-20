@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - rc
+---
 Protocollo: programma che si occupa di mettere in colloquio due nodi di livello pari (slide 41). Ci sono due vantaggi ad essere di livello pari:
 * Stessa lunghezza (?), chiedere servizi a livelli superiori cedere servizi a livelli inferiori;
 * Se modifico un livello, lo modifico su tutte le macchine

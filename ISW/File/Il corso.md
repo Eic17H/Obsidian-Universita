@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 Quest'anno il corso cambia completamente. L'anno scorso c'è stata l'esplosione degli LLM, e sta cambiando tutto. Conviene cambiare anche il corso a questo punto, sarà abbastanza interattivo.
 
 Python!

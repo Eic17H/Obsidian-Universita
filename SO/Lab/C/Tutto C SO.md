@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 ## Prima lezione
 
 Cominciamo col C

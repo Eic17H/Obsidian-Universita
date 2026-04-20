@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - fdi
+---
 ### Condizioni di indifferenza
 
 Certe volte una funzione ha degli input che non compariranno mai, e che quindi non ha degli output corrispondenti. Quando semplifichi la formula, puoi far finta che ciascuno di quegli output a cui sei indifferente sia 1 o 0 a seconda di quale ti permette di semplificarla di più.

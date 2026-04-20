@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 Architetture di elaborazione. Partiamo dal basso.
 Cos'è un <span class="blue">processore</span>?  #termine
 Macchina sequenziale che esegue esclusivamente operazioni della propria ISA.

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - md
+---
 Una domanda sarà su questo.
 
 Un numero $n$ è divisibile per $m$ se $n=mk$, cioè $[m]_n=0$. Si scrive $m|n$, “m divide n”.

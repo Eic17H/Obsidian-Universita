@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 ## Prototipi a bassa fedeltà
 
 Usano un medium diverso da quello del prodotto finale. Per esempio carta e penna, quando il prodotto finale è digitale o di metallo. Possono essere modificati velocemente.

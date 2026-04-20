@@ -1,21 +1,25 @@
-Lo stesso argomento: [[SO/Lab/Regex|SO]]
+---
+cssclasses:
+  - alf
+---
+Lo stesso argomento: <span class="lip">[[Espressioni regolari|LiP]]</span>, <span class="so">[[SO/Lab/Regex|SO]]</span>
 
 Su Linux, usiamo egrep per usare Regex.
-```
+```bash
 egrep $pattern $source
 ```
 `egrep` può prendere in input non una banale stringa ma una stringa che descrive una Regex.
 Se qualcosa matcha, ti ristampa la stringa con la parte matchata evidenziata.
 
 L'esempio dell'altra volta:
-```
+```bash
 egrep -x "(0|1)*01"
 ```
 `-x` sta per *exact* e indica che l'intera stringa deve matchare.
 Eseguire quel comando ti fa entrare in una modalità dove ti valuta tutti gli input successivi.
 Senza `-x` cerca le sottostringhe. Qui segno gli input con `>` ma nel terminale la differenza è il colore.
 
-```
+```bash
 $ egrep -x "(0|1)*01"
 > 0
 > 1
@@ -34,7 +38,7 @@ $ egrep -x "(0|1)*01"
 ```
 
 L'opzione `-v` matcha ciò che non matcha l'espressione regolare fornita.
-```
+```bash
 egrep -v "00|11"
 ```
 Questa qui sopra matcha ciò che non contiene le sottostringhe 00 e 11.

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 Socket in C
 
 Librerie: sys/types.h, sys/socket.h, netinet/in.h

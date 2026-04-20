@@ -1,5 +1,8 @@
 [
   "sheets",
   "obsidian-git",
-  "webpage-html-export"
+  "webpage-html-export",
+  "auto-class",
+  "custom-classes",
+  "shiki-highlighter"
 ]

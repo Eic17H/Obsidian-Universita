@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - rc
+---
 ## Indice
 
 * [[Applicazioni e reti]]

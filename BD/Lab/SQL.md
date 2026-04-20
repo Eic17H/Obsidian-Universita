@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - bd
+---
 Lo stesso argomento: [[FPW/Laboratorio/SQL/SQL|FPW]]
 
 SQL. Di nuovo. Sì da FPW.

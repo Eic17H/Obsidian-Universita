@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - so
+---
 ### Prima lezione
 
 Alcuni comandi del terminale hanno argomenti e opzioni

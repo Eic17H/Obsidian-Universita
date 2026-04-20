@@ -1,4 +1,8 @@
-Lo stesso argomento: [[CSMN/Teoria/Basi numeriche|CSMN]], [[Cambio di base|MD]]
+---
+cssclasses:
+  - fdi
+---
+Lo stesso argomento: <span class="csmn">[[CSMN/Teoria/Basi numeriche|CSMN]]</span>, <span class="md">[[Cambio di base|MD]]</span>
 ## Rappresentazione dell'informazione.
 
 Le grandezze sono relative al mezzo fisico che usiamo: per adesso usiamo gli elettroni.
