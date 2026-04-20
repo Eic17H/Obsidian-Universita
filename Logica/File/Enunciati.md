@@ -44,7 +44,7 @@ Torniamo a noi.
 
 A noi interessa il livello degli enunciati complessi. Capire se il valore di verità di un enunciato composto dipende da quello degli enunciati da cui è composto, e come. Dobbiamo capire qual è la colla degli enunciati.
 
-In grammatica a scuola, che dicevamo? Usiamo le congiunzioni. Congiunzioni coordinanti, subordinanti, per esempio "e", "o", "se/allora", "quando", "mentre", "perché", "benché", "quantunque", "ma". Sono troppe. Ci limiteremo a studiare cinque congiunzioni, che chiamiamo *[[Logica proposizionale classica|connettivi logici]]*.
+In grammatica a scuola, che dicevamo? Usiamo le congiunzioni. Congiunzioni coordinanti, subordinanti, per esempio "e", "o", "se/allora", "quando", "mentre", "perché", "benché", "quantunque", "ma". Sono troppe. Ci limiteremo a studiare cinque congiunzioni, che chiamiamo <span class="alf"><i>[[Logica proposizionale classica|connettivi logici]]</i></span>.
 # Connettivi logici
 
 * Congiunzione: e
@@ -277,4 +277,4 @@ Le leggi di Filone e di Crisippo ci definiscono l'implicazione da negazione, dis
 
 # Nozione di formula
 
-Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto informale? Con questi simboli con significati che abbiamo capito senza che ci venissero spiegati? È un [[linguaggio formale]].
+Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto informale? Con questi simboli con significati che abbiamo capito senza che ci venissero spiegati? È un [[Linguaggio formale]].

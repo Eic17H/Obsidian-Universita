@@ -3,7 +3,7 @@ cssclasses:
   - logica
 ---
 
-## [[Logica/File/Introduzione|Introduzione]]
+## [[Logica/Moduli/Introduzione|Introduzione]]
 ## [[Modulo I]]
 * Enunciati
 * Argomenti
@@ -12,5 +12,7 @@ cssclasses:
 ## [[Modulo II]]
 * Calcolo logico
 * Ragionamento ex hypothesi
+* Filosofia del linguaggio
+* Calcolo dei sequenti
 
 #materia 
