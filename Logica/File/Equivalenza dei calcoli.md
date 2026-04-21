@@ -51,6 +51,8 @@ Lavoriamo per induzione, ma in modo diverso da ciò che abbiamo già visto. Il n
 Passo base:
 
 Quindi, se $α \in Y$, allora $α$ sarà anche da qualche parte in $Γ_Y$. Questo vuole dire che la sequenza da dimostrare in PK sarà della forma $α, \ldots \Rightarrow α$, che posso dimostrare tramite una serie di indebolimenti e di scambi in modo abbastanza banale, facendola risalire al teorema di eliminazione dell'identità.$$\dfrac{α \xRightarrow{\times} α}{α,Π \Rightarrow α}is,ss$$Passo induttivo:
+
+Impostiamolo. Cos'è? Il teorema è un'implicazione, quindi anche l'ipotesi induttiva deve essere un'implicazione.
 ## Da PK a ND
 
 > Sia $Γ$ una successione finita o vuota di formule di $\mathcal{L}_0$, e sia $α$ una singola formula di $\mathcal{L}_0$. Allora, se $\vdash_{PK}Γ\Rightarrowα$, allora $|Γ| \vdash_{ND} α$.
