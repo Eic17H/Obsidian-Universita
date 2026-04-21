@@ -1,10 +1,6 @@
-Ultimi argomenti del parziale
-Entro il 10 iscrizione al parziale
-Venerdì e martedì esercitazione, mercoledì non c'è lezione, e il venerdì dopo parziale
-
 Dicevamo, Gauss, pivoting, scambiare la riga attuale con quello dove si trova il massimo in modulo.
 
-Invece oggi, fattorizzazione $A=LU$ e $PA=LU$. Da non soprannominare Alu e Palu. Fattorizzazione, no? Sappiamo che $15 = 3 \cdot 15$, stessa cosa.
+Invece oggi, fattorizzazione $A=LU$ e $PA=LU$. Da non soprannominare Alu e Palu. Fattorizzazione, no? Sappiamo che $15 = 3 \cdot 15$, stessa cosa. Fattorizzazione triangolare.
 
 # Fattorizzazione Alu
 

@@ -2,7 +2,7 @@
 cssclasses:
   - md
 ---
-Lo stesso argomento: <span class="fdi">[[FDI/File/Basi numeriche|FDI]]</span>, <span class="csmn">[[CSMN/Teoria/Basi numeriche|CSMN]]</span>
+Lo stesso argomento: <span class="fdi">[[FDI/File/Basi numeriche|FDI]]</span>, <span class="csmn">[[CSMN/Teoria/Rappresentazione dei numeri/Basi numeriche|CSMN]]</span>
 
 Una domanda sarà su questo.
 

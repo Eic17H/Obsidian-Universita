@@ -1,0 +1,3 @@
+Scrivendo i numeri, noi usiamo un sistema che si chiama *sistema posizionale in base dieci*, ma ci sono tante altre possibili [[CSMN/Teoria/Rappresentazione dei numeri/Basi numeriche|basi numeriche]].
+
+I computer per esempio usano la base 2. Hanno anche delle caratteristiche un po' diverse dal modo in cui li rappresentiamo di solito, infatti l'[[Aritmetica di macchina|aritmetica di macchina]] ha regole diverse da quella normale.

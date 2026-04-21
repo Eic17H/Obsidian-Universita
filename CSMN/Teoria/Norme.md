@@ -1,0 +1,1 @@
+Possiamo parlare di norme [[Norme vettoriali|vettoriali]] e [[Norme matriciali|matriciali]].

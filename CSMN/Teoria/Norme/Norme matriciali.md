@@ -5,7 +5,7 @@ cssclasses:
 $\newcommand{\vx}{\underline{x}}$$\newcommand{\vy}{\underline{y}}$$\newcommand{\vz}{\underline{0}}$$\newcommand{\sp}{\enspace}$$\newcommand{\R}{\mathbb{R}}$$\newcommand{\maxx}{\max\limits_}$$\newcommand{\inf}{\infty}$Una norma è una funzione che va da uno spazio vettoriale ai reali positivi.
 # Proprietà
 
-Le norme matriciali condividono le tre proprietà delle [[norme vettoriali]]:
+Le norme matriciali condividono le tre proprietà delle [[Norme vettoriali|norme vettoriali]]:
 
 1. $\|\vx\| \ge 0$ e $\|\vx\| ↔ \vx=\vz$
 2. $\|a\vx\| = |a| · \|\vx\|$

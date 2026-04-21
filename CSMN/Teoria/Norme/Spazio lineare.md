@@ -17,6 +17,6 @@ Uno **spazio lineare** o **spazio vettoriale** è un insieme $V$ dove sono defin
 
 Per esempio: $\R$ soddisfa queste proprietà? Sì. Allora $\R$ è uno spazio lineare.
 
-L'insieme dei [[numeri complessi]] è uno spazio lineare?
+L'insieme dei [[Numeri complessi]] è uno spazio lineare?
 
-Gli spazi lineari possono anche essere [[norme vettoriali|normati]].
+Gli spazi lineari possono anche essere [[Norme vettoriali|normati]].

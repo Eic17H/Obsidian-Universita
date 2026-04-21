@@ -6,7 +6,7 @@ cssclasses:
 
 ## Definizione
 
-Lo [[spazio lineare]] $V$ è detto *spazio normato* se esiste una funzione $\|\cdot\|:V→\mathbb{R}_+$, che diciamo *norma*, con le seguenti proprietà:
+Lo [[Spazio lineare]] $V$ è detto *spazio normato* se esiste una funzione $\|\cdot\|:V→\mathbb{R}_+$, che diciamo *norma*, con le seguenti proprietà:
 * $\|x\|\ge0$, e $\|x\|=0 ↔ x=0$ - Positività
 * $\|ax\|=|a|\cdot\|x\|$ - Omogeneità
 * $\|x+y\| \le \|x\|+\|y\|$ - Disuguaglianza triangolare
