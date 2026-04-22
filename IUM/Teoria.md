@@ -8,6 +8,6 @@ cssclasses:
 * [[Architettura dell'Informazione]]
 * [[Componente umana]]
 * [[Testo]]
-* [[Test]]
+* [[IUM/Teoria/Test]]
 
 #modulo

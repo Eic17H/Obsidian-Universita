@@ -10,7 +10,8 @@ cssclasses:
 * [[Scope]]
 * [[Ricorsione]]
 * [[Inferno]]
-* [[PR1/Modulo I/Complessità]]
+* [[PR1/Modulo I/Complessità|Complessità]]
+* [[PR1/Modulo II/Lab|I pochi appunti di laboratorio che lascio per completezza]]
 
 ## Introduzione
 

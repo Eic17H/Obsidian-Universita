@@ -2,15 +2,26 @@
 cssclasses:
   - csmn
 ---
-* [[Problema]]
-* [[CSMN/Teoria/Basi numeriche|Basi numeriche]]
-* [[Aritmetica di macchina]] (fare esercizio)
-* [[Norme vettoriali]]
-* [[Autovalori e autovettori]] (fare documento)
+* [[Problema|Problema]]
+* [[Rappresentazione dei numeri]]
+	* Basi numeriche
+	* Aritmetica di macchina
+* [[Vettori]]
 * [[CSMN/Teoria/Matrici|Matrici]]
-* [[Norme matriciali]]
-* [[Sistemi lineari]]
-* [[Fattorizzazione triangolare]]
+* [[Norme]]
+	* Vettoriali
+	* Matriciali
+* [[Autovalori e autovettori|Autovalori e autovettori]]
+* [[Sistemi lineari|Sistemi lineari]]
+	* Metodi diretti
+		* Diagonali
+		* Ortogonali
+		* Triangolari
+		* Gauss
+		* Inversione
+	* Metodi iterativi
+		* Jacobi
+		* Gauss-Siedel
 
 #modulo
 
