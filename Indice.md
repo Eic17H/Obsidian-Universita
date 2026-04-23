@@ -32,7 +32,7 @@
 ## Semestre 1
 * <span class="bd">[[Basi di Dati]]</span>
 * <span class="ium">[[Interazione Uomo-Macchina]]</span>
-* <span class="lip">[[LiP|Linguaggi di Programmazione]]</span>
+* <span class="lip">[[Linguaggi di Programmazione|Linguaggi di Programmazione]]</span>
 ## Semestre 2
 * <span class="isw">[[Ingegneria del Software]]</span>
 

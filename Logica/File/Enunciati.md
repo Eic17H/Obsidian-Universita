@@ -83,17 +83,17 @@ Tornando a Frege, per questo motivo i padri della logica decisero di usare un li
 
 # Principî
 
-I connettivi sono verofunzionali, se non è verofunzionale non è un connettivo. Principio di vfnznltà.
+I connettivi sono verofunzionali, se non è verofunzionale non è un connettivo. Principio di verofunzionalità.
 
 Principio di bivalenza, implicito, esistono solo due valori di verità, $\text{vero}$ e $\text{falso}$.
 
 Questi sono principi indipendenti, possiamo creare logiche con solo uno dei due o nessuno. La logica classica li accetta entrambi. Vedremo logiche solo verofunzionali. Logica trivalente, con il "non so", logiche infinitovalenti. Logiche non verofunzionali.
 
-In logica classica, con classico non si intende come in letteratura classica, non c'entrano i greci e i latini, non è logica antica, non studiamo Aristotele :(, semplicemente è la prima formale ma è moderna.
+In logica classica, con classico non si intende come in letteratura classica, non c'entrano i greci e i latini, non è logica antica, non studiamo Aristotele :(, semplicemente è la prima logica formale mai esistita, ma è moderna.
 
 # Altro
 
-Richard Montague. Fu allievo di Alfred Tarski. Creò una logica al limite tra la logica e la linguistica, o almeno un precursore, molto interessante. America degli anni 50, era omosessuale, fu assassinato in un night club e non fu fatta luce sul caso. Grammatica di Montague, una disciplina.
+Richard Montague (*Mòntaghiu*). Fu allievo di Alfred Tarski. Creò una logica al limite tra la logica e la linguistica, o almeno un precursore, molto interessante. America degli anni 50, era omosessuale, fu assassinato in un night club e non fu fatta luce sul caso. Grammatica di Montague, una disciplina.
 
 # Formalizzazione
 
@@ -113,7 +113,7 @@ Allo stesso modo i connettivi logici hanno una simile convenzione.
 
 * L'operatore unario $\lnot$, come in algebra, lega più fortemente di tutti gli altri;
 * $\land$ viene prima di $\lor$
-* $\lor$ viene prima di $\leftrightarrow$
+* $\lor$ viene prima di $\rightarrow$ e $\leftrightarrow$
 
 Questa convenzione permette a qualunque proposizione scritta in simboli di avere una sola interpretazione che non dipende dal contesto.
 
