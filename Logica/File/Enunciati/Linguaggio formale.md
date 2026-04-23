@@ -50,15 +50,15 @@ Quante sono le formule di $\mathcal{L}_0$? Poiché le variabili sono un insieme 
 
 Posso riconoscere se una qualche stringa di simboli è una formula nel mio linguaggio o no? Sì, applicando passo per passo la definizione induttiva di formula.
 
-$p \lor (¬q \rightarrow r \lor q)$. Partiamo dall'interno.
+$p \lor (¬q \rightarrow r \lor q)$. Partiamo dall'interno. $\newcommand{\b}{\boldsymbol} \newcommand{\i}{\mathit}$
 
-* p v (¬**q** -> r v q) - è una variabile
-* p v (**¬q** -> r v q) - è una negazione
-* p v (*¬q* -> **r** v **q**) - sono variabili
-* p v (*¬q* -> **r v q**) - è una disgiunzione
-* p v (**¬q -> r v q**) - è un'implicazione
-* **p** v *(¬q -> r v q)* - è una variabile
-* **p v (¬q -> r v q)** - è una disgiunzione
+* $p \lor (¬ \b q \rightarrow r \lor q)$ - è una variabile
+* $p \lor (\b {¬q} \rightarrow r \lor q)$ - è una negazione
+* $p \lor (\i {¬q} \rightarrow \b r \lor \b q)$ - sono variabili
+* $p \lor (\i {¬q} \rightarrow \b {r \lor q})$ - è una disgiunzione
+* $p \lor (\b {¬q \rightarrow r \lor q})$ - è un'implicazione
+* $\b p \lor \i {(¬q \rightarrow r \lor q)}$ - è una variabile
+* $\b {p \lor (¬q \rightarrow r \lor q)}$ - è una disgiunzione
 
 Sì, è una formula
 
@@ -66,8 +66,8 @@ Quando una stringa non è una formula? $)p→\land qq($
 
 Ok $p$ è una formula, $q$ è una formula, e poi... Non ho altro
 
-Il modo in cui scriviamo i connettivi logici è un tipo di notazione detta infissa. Significa che i connettivi binari vengono scritti in mezzo ai due argomenti. Un'alternativa è la notazione prefissa, dove $p\land q$ diventa $\land pq$. È detta prefissa o "polacca", perché fu usata per la prima volta dai logici polacchi, nelle grandi scuole logiche polacche in cui per la prima volta furono considerate le logiche polivalenti (con non solo vero e falso). grazie alla notazione prefissa possiamo fare a meno dell'alfabeto ausiliario, cioè le parentesi. il grosso svantaggi è che è molto complicata e poco intuitiva, è difficile da decifrare. #aggiustare
+Il modo in cui scriviamo i connettivi logici è un tipo di notazione detta infissa. Significa che i connettivi binari vengono scritti in mezzo ai due argomenti. Un'alternativa è la notazione prefissa, dove $p\land q$ diventa $\land pq$. È detta prefissa o "polacca", perché fu usata per la prima volta dai logici polacchi, nelle grandi scuole logiche polacche in cui per la prima volta furono considerate le logiche polivalenti (con non solo vero e falso). Grazie alla notazione prefissa possiamo fare a meno dell'alfabeto ausiliario, cioè le parentesi. Il grosso svantaggi è che è molto complicata e poco intuitiva, è difficile da decifrare.
 
-Cos'abbiamo fatto? Analizzato una versione semplificata del linguaggio naturale tramite un linguaggio formale. Cosa non abbiamo fatto? Capito come usare gli enunciati per fare dei ragionamenti. Abbiamo studiato gli enunciati in maniera puramente strutturale, ora capiremo come combinare gli enunciati per vedere quali conclusioni possiamo ricavare a partire da quali premesse, per usarli nel ragionamento e nell'argomentazione.
+**Cos'abbiamo fatto?** Analizzato una versione semplificata del linguaggio naturale tramite un linguaggio formale. **Cosa non abbiamo fatto?** Capito come usare gli enunciati per fare dei ragionamenti. Abbiamo studiato gli enunciati in maniera puramente strutturale, ora capiremo come combinare gli enunciati per vedere quali conclusioni possiamo ricavare a partire da quali premesse, per usarli nel ragionamento e nell'argomentazione.
 
 Ci servono dunque delle strutture più complesse dei semplici enunciati, strutture in cui gli enunciati possono avere il ruolo di premessa o il ruolo di conclusione.

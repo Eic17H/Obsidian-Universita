@@ -1,0 +1,1 @@
+Complessità $O(n^2)$.
