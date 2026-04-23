@@ -2,10 +2,9 @@
 cssclasses:
   - csmn
 ---
-$\newcommand{\vx}{\underline{x}}$$\newcommand{\vy}{\underline{y}}$$\newcommand{\vz}{\underline{0}}$$\newcommand{\sp}{\enspace}$$\newcommand{\R}{\mathbb{R}}$$\newcommand{\maxx}{\max\limits_}$$\newcommand{\inf}{\infty}$Una norma è una funzione che va da uno spazio vettoriale ai reali positivi.
-# Proprietà
+## Proprietà
 
-Le norme matriciali condividono le tre proprietà delle [[Norme vettoriali|norme vettoriali]]:
+$\newcommand{\vx}{\underline{x}}$$\newcommand{\vy}{\underline{y}}$$\newcommand{\vz}{\underline{0}}$$\newcommand{\sp}{\enspace}$$\newcommand{\R}{\mathbb{R}}$$\newcommand{\maxx}{\max\limits_}$$\newcommand{\inf}{\infty}$Le norme matriciali condividono le tre proprietà delle [[Norme vettoriali|norme vettoriali]]:
 
 1. $\|\vx\| \ge 0$ e $\|\vx\| ↔ \vx=\vz$
 2. $\|a\vx\| = |a| · \|\vx\|$
@@ -16,11 +15,11 @@ Le norme matriciali hanno altre due proprietà
 4. Submoltiplicatività: $\|AB\| \leq \|A\|·\|B\|$
 5. Consistenza: $A\vx=\vy$, ricorda la regola per sapere le dimensioni, quindi la norma di $\vx$ e la norma di $\vy$ sono norme in $\R^n$ con $n$ diversi tra i due. Quindi se ho $\|·\|_\alpha \in \R^n$ e $\|·\|_\beta \in \R^m$ allora $\|A\vx\|_\beta \le \|A\|\cdot\|\vx\|_\alpha$.
 
-# Norma di Frobenius
+## Norma di Frobenius
 
 Esempio, norma di Frobenius che credo abbia detto sia la più comune, $$\|A\|_F = \sqrt{\sum_{i=1}^{m}{\sum_{j=1}^{n}{|a_{ij}|^2}}}$$
-# Norme indotte
-## Definizione
+## Norme indotte
+### Definizione
 
 La norma indotta dal qualunque norma vettoriale $\|\cdot\|$ è data da $\|A\|$ ed è definita in due modi equivalenti:
 $$\maxx{\vx≠\vz} \dfrac{\|A\vx\|}{\|\vx\|} \qquad \maxx{\|\vx\|=1} \|A\vx\|$$
@@ -29,23 +28,23 @@ Vedremo la norma a 1, a 2 e a infinito della norma indotta, così come abbiamo v
 
 Osservazione: per ogni norma indotta, $\|I\|=1$: con $\maxx{\vx≠\vz} \dfrac{\|I\vx\|}{\|\vx\|}$, per esempio, ti rimane $\dfrac{\|\underline{x}\|}{\|\underline{x}\|}= 1$, ci torna. Per la norma di Frobenius invece, ti esce che $\|I\|=\sqrt{n}$, quindi non è una norma indotta.
 
-## Norma indotta dalla norma a infinito
+### Norma indotta dalla norma a infinito
 
-### Teorema
+#### Teorema
 
 La norma indotta dalla norma vettoriale infinita è:$$\|A\|_{\infty}=max_{i=1,...,m} \sum_{j=1}^{n}{|a_{ij}|}$$Vale a dire, il massimo delle somme riga.
 
-### Dimostrazione
+#### Dimostrazione
 $$\|A\|_{\infty}=\maxx{\|\vx\|_{\infty}=1}\|A\vx\|_{\inf}$$Questo lo sappiamo, è la definizione.$$\|A\underline{x}\|_{\inf}=\maxx{i=1,...,m}|(Ax)_i|$$Cosa significa però. $(Ax)_i$ sarebbe, in parole povere (sbagliate), "la riga i di A · vettore x", cioè $\sum_{j=1}^n a_{ij}x_j$. Sostituiamo: $$\|A\vx\|_{\inf}=\maxx{i=1,...,m}|\sum_{j=1}^n a_{ij}x_j|$$Però sappiamo che il valore assoluto di una somma di prodotti è minore o uguale alla somma dei prodotti dei valori assoluti: $$\|A\vx\|_{\inf}\le \maxx{i=1,...,m}\sum_{j=1}^n |a_{ij}||x_j|$$ Poi possiamo spostare il max $$\|A\vx\|_{\inf}\le \maxx{i=1,...,m}\sum_{j=1}^n |a_{ij}|·\maxx{j=1,...,m}|x_j|$$
 Adesso abbiamo però una disuguaglianza, non un'uguaglianza. Per avere un'uguaglianza, considero $\underline{x}=(s_1,...,s_n)^T$, dove $s_j=sign(a_{ij})$, $i$ è l'indice massimo delle somme riga (somma dei valori assoluti degli elementi della riga). Quindi, prendo come riga di riferimento quella con la somma massima dei valori assoluti (somma riga massima). Se quella riga è $(2, 4, -7)$, allora il nostro $x$ sarà $(1,1,-1)$. Non si è capito nulla, ma questo fa sì che si faccia il valore assoluto. Vedi il libro sicuramente aiuterà.
 
-## Norma indotta dalla norma a 1
+### Norma indotta dalla norma a 1
 
 La simmetrica rispetto a quella a infinito. Facciamo le somme colonna e prendiamo il massimo. La dimostrazione è molto molto simile quindi la possiamo lasciare perdere. Da vedere cosa sono le norme vettoriali perché mancavo e l'anno scorso non ho seguito.
 
 Ah quindi è semplicemente il massimo delle somme colonna? E le somme colonna sono solo la somma dei valori assoluti degli elementi della colonna? Così è molto più semplice. Ok la parte difficile è la dimostrazione immagino
 
-## Norma indotta dalla norma a 2
+### Norma indotta dalla norma a 2
 
 $$\|A\|_2 = \sqrt{ρ(A^*A)}$$
 Quanta roba che c'è in questa piccola piccola formula. E perché è così? Eh questa è brutta.
@@ -85,9 +84,9 @@ Eh... Boh. Quindi boh. Ha detto, annunciato, che è uguale al massimo degli auto
 
 aaaaaaaaa
 
-# Ora.
+## Ora.
 
-# Corollario
+## Corollario
 
 Cosa succede se A è simmetrica? La formula generica mi dice che radice quadrata di ro per ata. Però se A è simmetrica, AT=A, e quindi ATA = A\^2. Gli autovalori del quadrato di una matrice sono i quadrati degli autovalori della matrice. Quindi rho(A2) = rho(A)2, e quindi la radice si semplifica e quindi quando la matrice è simmetrica la norma a 2 è uguale al raggio spettrale. woah
 

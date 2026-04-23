@@ -49,8 +49,6 @@ Vediamo che $p$ è una variabile proposizionale, non è come $α$ e $β$, non co
 
 ### Scambio sinistro e destro:
 
-Vedi dal libro (Fazio, Ledda, Perco..., pagina 141).
-
 $$\dfrac{Γ,A,B,Π \Rightarrow Δ}{Γ,B,A,Π \Rightarrow Δ}ss \enspace \enspace \enspace\dfrac{Γ \Rightarrow Δ,A,B,Π}{Γ \Rightarrow Δ,B,A,Π}sd$$
 $Π$ può anche essere vuoto, cioè non esistere.
 

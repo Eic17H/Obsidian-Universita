@@ -55,19 +55,3 @@ Supponiamo che Δ consista di un'unica formula, $Δ={δ}$. La mia ipotesi è che
 Tecnica dell'innesto di derivazioni: creo una nuova derivazione che al passaggio n arriva a $δ$, e partendo da $\delta$ arriva ad $\alpha$ al passaggio m+n, che consiste nella concatenazione delle due derivazioni di prima.
 
 È finita, perché è l'unione di due insiemi finiti. Ho usato solo assunzioni di $Γ$? Magari ho usato $δ$. E qui ci sono due casi: o $δ \in Γ$, e in quel caso va bene, oppure $Γ \vdash_{HK} δ$, come troviamo nella sezione dal passo 1 al passo n.
-
-# Alternative al calcolo alla Hilbert
-
-## Perché
-
-Il calcolo alla Hilbert è macchinoso nella ricerca delle dimostrazioni.
-
-Più filosoficamente:
-
-Gli assiomi di Euclide miravano a codificare delle verità riscontrate da un ambiente preesistente che si provava a descrivere. Invece il concetto moderno di assioma, con Hilbert, gli assiomi sono cose che decidiamo, e non descrivono necessariamente enti che esistono; gli assiomi della geometria di Hilbert sono, in un certo senso, un modo per assegnare un significato ai concetti astratti, quindi non esistenti davvero, di punto, retta e piano: non sto creando termini per descrivere qualcosa, sto creando concetti a partire dalle definizioni dei termini. (non ho capito). Niente il criterio che decide se la teoria vale o no è l'insieme delle relazioni tra gli enti, che potrebbero anche non essere punto retta piano.
-
-Hilbert la pensava allo stesso modo riguardo la logica. Al posto degli enti, la logica ha i connettivi. I connettivi logici non esistono fisicamente fuori dal calcolo, non sono entità che provo a descrivere, secondo Hilbert. Il sistema di assiomi è una definizione implicita dei connettivi logici.
-
-Però c'è un difetto. Quando apprendiamo un linguaggio, impariamo il significato dei termini sentendoli usare. Ci sono due teorie a riguardo. La teoria olistica ci dice che impariamo tutte le parole simultaneamente, sentendole usare insieme, quindi quando ne imparo una imparo quelle con cui è usata, l'uso è contestuale. La teoria molecolaristica sostiene che l'apprendimento avviene quando si verificano le condizioni in cui ciascun termine viene usato di per sé, in isolamento, quando si ha modo di comprendere quando la parola si può usare indipendentemente dalle altre.
-
-I connettivi logici si apprendono in modo contestuale. Secondo i molecolaristi, tra cui Michael Dummet, questo non ci permette davvero di comprendere i connettivi logici, perché non si trovano mai in isolamento (non ho capito). Il calcolo della deduzione naturale affronta questo problema.

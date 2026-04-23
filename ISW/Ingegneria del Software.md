@@ -4,8 +4,8 @@ cssclasses:
 ---
 * [[ISW/File/Introduzione|Introduzione]]
 * [[Software open source]]
-* [[ISW/Teoria/Paradigmi|Paradigmi]]?
-* [[LLM]]
-* [[Requisiti]]
+* [[ISW/Teoria/Paradigmi|Paradigmi]]
+* [[Prompt engineering]]
+* [[ISW/File/Requisiti|Requisiti]]
 
 #materia

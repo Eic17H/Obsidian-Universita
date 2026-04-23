@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"7fc8f22a2fc8baec","type":"text","text":"![[Enunciati#Negazione]]","x":-125,"y":159,"width":325,"height":361,"color":"1"},
+		{"id":"d8b93a8c9b5e3e88","type":"text","text":"![[Enunciati#Congiunzione]]","x":240,"y":159,"width":340,"height":361,"color":"1"},
+		{"id":"2221eedd7f294080","type":"text","text":"![[Enunciati#Disgiunzione]]","x":620,"y":159,"width":340,"height":361,"color":"1"},
+		{"id":"f7cc89cc6875dd9f","type":"text","text":"![[Enunciati#Implicazione]]","x":1000,"y":159,"width":340,"height":361,"color":"1"},
+		{"id":"09b0569cd3fa89b0","type":"text","text":"![[Assiomi]]","x":-125,"y":560,"width":1465,"height":340,"color":"2"},
+		{"id":"4a6a7bc33c61ab23","type":"text","text":"![[Deduzione Naturale#Negazione]]","x":-125,"y":960,"width":325,"height":280,"color":"3"},
+		{"id":"2bce14a03f2ba8ee","type":"text","text":"![[Deduzione Naturale#Congiunzione]]","x":240,"y":960,"width":340,"height":280,"color":"3"},
+		{"id":"20485a42a85d17f2","type":"text","text":"![[Deduzione Naturale#Disgiunzione]]","x":620,"y":960,"width":340,"height":280,"color":"3"},
+		{"id":"3d30c2b12bf7394c","type":"text","text":"![[Deduzione Naturale#Implicazione]]","x":1000,"y":960,"width":340,"height":280,"color":"3"},
+		{"id":"399ae678a9156de7","type":"text","text":"![[Calcolo dei Sequenti#Negazione]]","x":-125,"y":1280,"width":325,"height":260,"color":"4"},
+		{"id":"110e933b14427726","type":"text","text":"![[Calcolo dei Sequenti#Congiunzione]]","x":240,"y":1280,"width":340,"height":260,"color":"4"},
+		{"id":"8415d7a7edd164b8","type":"text","text":"![[Calcolo dei Sequenti#Disgiunzione]]","x":620,"y":1280,"width":340,"height":260,"color":"4"},
+		{"id":"5a9da3a9f0b6746e","type":"text","text":"![[Calcolo dei Sequenti#Implicazione]]","x":1000,"y":1280,"width":340,"height":260,"color":"4"},
+		{"id":"c9fa287b825b4c80","type":"text","text":"![[Calcolo dei Sequenti#Regole strutturali]]","x":1380,"y":1280,"width":300,"height":260,"color":"4"},
+		{"id":"7cbb09c606ba0505","type":"text","text":"## Regola di inferenza\n\n![[Calcolo alla Hilbert#^1]]","x":-400,"y":560,"width":240,"height":340,"color":"2"},
+		{"id":"ae0b5ac57cc1f2b6","type":"text","text":"![[Calcolo dei Sequenti#Assiomi]]","x":-400,"y":1280,"width":240,"height":260,"color":"4"},
+		{"id":"0e4d3895f05d1f05","x":-660,"y":159,"width":220,"height":361,"color":"1","type":"text","text":"# Tavole di verità"},
+		{"id":"f6f14c5f6e2135ae","x":-660,"y":560,"width":220,"height":340,"color":"2","type":"text","text":"# Calcolo alla Hilbert"},
+		{"id":"69e0364a89051b14","x":-660,"y":960,"width":220,"height":280,"color":"3","type":"text","text":"# Deduzione Naturale"},
+		{"id":"b59fd49740019fe2","x":-660,"y":1280,"width":220,"height":260,"color":"4","type":"text","text":"# Calcolo delle Sequenze"},
+		{"id":"96827cedf61b5e2d","x":-125,"y":60,"width":325,"height":60,"type":"text","text":"# Negazione"},
+		{"id":"18d4a8e881f4185f","x":240,"y":60,"width":340,"height":60,"type":"text","text":"# Congiunzione"},
+		{"id":"d3f32778b6d0d9b1","x":620,"y":60,"width":340,"height":60,"type":"text","text":"# Disgiunzione"},
+		{"id":"b85a6237a8e151db","x":1000,"y":60,"width":340,"height":60,"type":"text","text":"# Implicazione"}
+	],
+	"edges":[]
+}
