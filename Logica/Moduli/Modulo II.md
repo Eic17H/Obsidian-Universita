@@ -2,11 +2,14 @@
 cssclasses:
   - logica
 ---
+Questo modulo riguarda perlopiù il calcolo logico:
 * [[Calcolo logico]]
-* [[Ragionamento ex hypothesi]]
+* [[Calcolo alla Hilbert]]
 * [[Deduzione Naturale]]
-* [[Filosofia del linguaggio]]
 * [[Calcolo dei Sequenti]]
 * [[Equivalenza dei calcoli]]
+
+C'è stata anche una lezione sulla filosofia del linguaggio:
+* [[Filosofia del linguaggio]]
 
 #modulo

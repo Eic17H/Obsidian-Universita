@@ -4,7 +4,7 @@ cssclasses:
 ---
 Qui a Cagliari l'utilizzo di Linux e dell'open source è molto elevato, lo era anche in tempi in cui era molto meno diffuso.
 
-La proprietà intellettuale si protegge in tre modi: diritto d'autore, brevetto e marchio. Vedi slide.
+La proprietà intellettuale si protegge in tre modi: <span class="eed">[[diritto d'autore]], [[brevetto]] e marchio</span>. Vedi slide.
 
 Il copyright permette anche agli eredi di fruire. Il diritto morale è l'autore, ma il diritto economico si può cedere, magari alla ditta per cui lavora. Il codice e l'eseguibile non possono essere copiati senza il permesso del detentore del diritto economico. Ma l'ispirazione va bene, per esempio OpenOffice e MS Office.
 

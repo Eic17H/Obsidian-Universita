@@ -11,10 +11,10 @@ cssclasses:
 * Logiche rilevanti
 ## [[Modulo II]]
 * Calcolo logico
-* Ragionamento ex hypothesi
+* Calcolo alla Hilbert
 * Deduzione naturale
-* Filosofia del linguaggio
 * Calcolo dei sequenti
 * Equivalenza dei calcoli
+* Filosofia del linguaggio
 
 #materia 
