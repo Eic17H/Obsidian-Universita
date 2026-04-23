@@ -17,4 +17,7 @@ cssclasses:
 * Equivalenza dei calcoli
 * Filosofia del linguaggio
 
+## Schemi:
+* [[Connettivi logici.canvas|Confronto dei connettivi logici]]
+
 #materia 
