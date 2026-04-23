@@ -4,8 +4,10 @@ cssclasses:
 ---
 * [[Introduzione a MatLab]]
 * [[Branching]]
-* [[Output]]
+* [[Stampa]]
 * [[Operazioni semplici]]
 * [[Operazioni matriciali]]
+* [[Grafici]]
+* [[Risoluzione di sistemi]]
 
 #modulo
