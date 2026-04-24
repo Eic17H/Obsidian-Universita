@@ -46,38 +46,12 @@ Poi non so quale sia il bang e quale sia il buck lì, ma ha detto che te lo puoi
 
 Non ho davvero capito il senso. Credo che nelle #slide si capisca.
 
-# Esercizio
+Ricorda dall'altra lezione
+Hai una curva dove, al variare del Lavoro, varia il Kapitale, tenendo la Qproduzione costante.
+Poi ci sono rette isocoste, con pendenza negativa.
+I punti di coincidenza sono valide combinazioni L-K-C.
+Il punto di tangenza minimizza il costo (C).
 
-(α,β)=(1/2,1/2)
-r=2$ - costo del capitale
-w=8$ - costo del lavoro
-Qtarget=100 - target produttivo
+C'è scritto che α+β=1, ma non so se vale sempre.
 
-A sistema:
-	MPK/w = MPL/r
-	100 = sqrt(KL)
-Sempre:
-	MPK = ∂Q/∂K = sqrt(L)/2sqrt(K)
-	MPL = ∂Q/∂L = sqrt(K)/2sqrt(L)
-Quindi:
-	sqrt(L)/w2sqrt(K) = sqrt(K)/r2sqrt(L)
-	100 = sqrt(KL)
-Quindi:
-	r2L = w2K; rL = wK; 2L=8K; K=4L;
-	100 = sqrt(KL) = sqrt(4L^2) = 2L;
-Quindi
-	L = 50;
-	K = 200;
-E quindi è facile. Come?
-Comunque questa è la combinazione ottimale. Vediamo i costi totali.
-
-#formula cT = wL + rK
-cT =8\*50 + 2\*200 = 400+400 = 800
-(nota che sono uguali perché ommioddio è un rettangolo con area massima e perimetro minimo)
-(sono uguali dopo che moltiplichi w r perché è come se scalassi gli assi se slope-i la retta)
-(oh magari è una coincidenza eh, dopo glielo chiedo)
-
-Comunque ci sono esercizi con "target in termini di budget", devi usare l'isocosto
-A sistema:
-	MPK/w = MPL/r
-	budget = wL + rK
+Ha scritto di nuovo dK/dL=-MPL/MPK, sembra molto importante allora.
