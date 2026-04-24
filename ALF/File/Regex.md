@@ -12,46 +12,56 @@ Definiamo una sintassi e una semantica.
 
 ## Sintassi
 
-Metavariabili, rappresentano due linguaggi generici
-	$E$, $E'$
-Linguaggio che non contiene nessuna parola
-	$\emptyset$
-Linguaggio che contiene esattamente una parola, la parola vuota
-	$ε$ (può rappresentare sia il linguaggio che la parola vuota)
-Unione tra due linguaggi, $E$ ed $E'$
-	$E+E'$
-Concatenazione tra due linguaggi
-	$EE'$
-Concatenazione di un linguaggio con sé stesso $N$ volte
-	$E^N$
-Concatenazione di un linguaggio con sé stesso $N$ volte, dove $N$ è qualunque numero da $0$ in su
-	$E^*$ (stella di Kleene)
+> **Metavariabili**, rappresentano due linguaggi generici
+> $E$, $E'$
+
+> **Linguaggio vuoto**, che non contiene nessuna parola
+>$\emptyset$
+
+> Linguaggio che contiene esattamente una parola, la **parola vuota**
+> $ε$ (può rappresentare sia il linguaggio che la parola vuota)
+
+> **Unione** tra due linguaggi, $E$ ed $E'$
+> $E+E'$
+
+> **Concatenazione** tra due linguaggi
+> $EE'$
+
+> **Concatenazione** di un linguaggio con sé stesso $N$ volte
+> $E^N$
+
+> **Concatenazione** di un linguaggio con sé stesso $N$ volte, dove $N$ è qualunque numero da $0$ in su
+> $E^*$ (stella di Kleene)
 
 La stella di Kleene ci sblocca i linguaggi infiniti.
 
 ## Semantica
 
 Diciamo che $\mathcal{L}(E)$ è il linguaggio del regex E.
-	$\mathcal{L}(Ø) = Ø$
-	$\mathcal{L}(ε) = {ε}$
-	$\mathcal{L}(a) = {a}$
-	$\mathcal{L}(E+E') = \mathcal{L}(E) \cup \mathcal{L}(E')$
-	$ℒ(EE') = ℒ(E)ℒ(E')$, dove $LL' = \{w w'\;|\; w\in L, w'\in L'\}$
-	$\mathcal{L}(E^*) = L(E)^* = \bigcup\limits_{i=0}^{\infty} L^i$
+> $\mathcal{L}(Ø) = Ø$
+> $\mathcal{L}(ε) = {ε}$
+> $\mathcal{L}(a) = {a}$
+> $\mathcal{L}(E+E') = \mathcal{L}(E) \cup \mathcal{L}(E')$
+> $\mathcal{L}(EE') = \mathcal{L}(E)\mathcal{L}(E')$, dove $LL' = \{w w'\;|\; w\in L, w'\in L'\}$
+> $\mathcal{L}(E^*) = L(E)^* = \bigcup\limits_{i=0}^{\infty} L^i$
 
 Volendo definire la potenza in modo più rigoroso per essere sicuri che abbia senso,
-	$L^1 = L, L^2 = LL, L^xL^y = L^{x+y}$
-	$L^1L^0 = L$
-	Cosa può essere $L^0$? Se fosse $\emptyset$ avremmo che $L^1L^0 = \emptyset$ (devo prendere un elemento da ciascuno, ma il secondo non ha elementi, quindi non posso prendere niente).
-	Se $L^0$ è $ε$, allora posso prendere un solo elemento, che è vuoto, quindi a ogni elemento di $L^1$ segue lo stesso elemento seguito da niente, quindi non ho cambiato niente.
-	$L^0 = ε$
+> $L^1 = L, L^2 = LL, L^xL^y = L^{x+y}$
+> $L^1L^0 = L$
+
+
+Cosa può essere $L^0$? Se fosse $\emptyset$ avremmo che $L^1L^0 = \emptyset$ (devo prendere un elemento da ciascuno, ma il secondo non ha elementi, quindi non posso prendere niente).
+
+Se $L^0$ è $ε$, allora posso prendere un solo elemento, che è vuoto, quindi a ogni elemento di $L^1$ segue lo stesso elemento seguito da niente, quindi non ho cambiato niente.
+
+> $L^0 = ε$
 
 Osserviamo anche che
-	$\emptyset$ è l'elemento assorbente della concatenazione
-	$ε$ è l'elemento neutro della concatenazione
+> $\emptyset$ è l'elemento assorbente della concatenazione
+> $ε$ è l'elemento neutro della concatenazione
 
 Definiamo formalmente la stella di Kleene già che ci siamo
-	$\bigcup\limits_{i=0}^{\infty}L^i$
+> $L^* = \bigcup\limits_{i=0}^{\infty}L^i$
 # Grep
 
 Su Linux, usiamo egrep per usare Regex.
