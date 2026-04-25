@@ -1,0 +1,1 @@
+Lo stesso argomento: <span class="lip">[[LiP/Appunti dal libro/Automi|LIP]]</span>
