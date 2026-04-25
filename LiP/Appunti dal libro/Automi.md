@@ -3,6 +3,8 @@ cssclasses:
   - lip
 aliases:
 ---
+Lo stesso argomento: <span class=alf>[[ALF/File/Automi|ALF]]</span>
+
 Per riconoscere un linguaggio regolare si usa un **automa a stati finiti** (FA, finite automaton). Questi si dividono in *deterministici* (DFA) e *non-deterministici* (NFA).
 
 ## DFA
