@@ -95,6 +95,16 @@
     --blockquote-border-color: var(--accent);
     --text-selection: var(--accent-inverse);
 }
+
+.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
+    background-color: transparent;
+    color: var(--accent);
+}
+.markdown-preview-view mark {
+    background-color: transparent;
+    color: var(--accent);
+}
+
 ::spelling-error {
   text-decoration: wavy var(--accent) underline;
 }
@@ -105,7 +115,7 @@ ul .list-bullet::after {
 background-color: var(--accent);
 }
 * {
-  --code-background: color-mix(in srgb, var(--accent) 20%, transparent);
+  --code-background: color-mix(in srgb, var(--accent-inverse) 20%, transparent);
 }
 body {
   --accent-light: #000000;

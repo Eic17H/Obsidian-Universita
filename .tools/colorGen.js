@@ -336,6 +336,24 @@ function generateAllCssClasses() {
 }
 .math {
   color: var(--accent);
+}
+.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
+    background-color: transparent;
+    color: var(--accent);
+}
+.markdown-preview-view mark {
+    background-color: transparent;
+    color: var(--accent);
+}
+ul .list-bullet::after { 
+background-color: var(--accent);
+}
+* {
+  --code-background: color-mix(in srgb, var(--accent-inverse) 20%, transparent);
+}
+body {
+  --accent-light: #000000;
+  --accent-dark: #ffffff;
 }`
     return out
 }
