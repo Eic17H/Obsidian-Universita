@@ -22,6 +22,7 @@ cssclasses:
 	* Metodi iterativi
 		* Jacobi
 		* Gauss-Siedel
+* [[Equazioni non lineari]]
 
 #modulo
 

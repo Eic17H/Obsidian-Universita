@@ -16,7 +16,8 @@ cssclasses:
 * Calcolo dei sequenti
 * Equivalenza dei calcoli
 * Filosofia del linguaggio
-
+## [[Modulo III]]
+* Teorema di correttezza
 ## Schemi:
 * [[Connettivi logici.canvas|Confronto dei connettivi logici]]
 

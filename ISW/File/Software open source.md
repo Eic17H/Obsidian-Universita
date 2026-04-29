@@ -4,13 +4,30 @@ cssclasses:
 ---
 Qui a Cagliari l'utilizzo di Linux e dell'open source è molto elevato, lo era anche in tempi in cui era molto meno diffuso.
 
-La proprietà intellettuale si protegge in tre modi: <span class="eed">[[diritto d'autore]], [[brevetto]] e marchio</span>. Vedi slide.
+## Aspetti generali
 
-Il copyright permette anche agli eredi di fruire. Il diritto morale è l'autore, ma il diritto economico si può cedere, magari alla ditta per cui lavora. Il codice e l'eseguibile non possono essere copiati senza il permesso del detentore del diritto economico. Ma l'ispirazione va bene, per esempio OpenOffice e MS Office.
+La proprietà intellettuale si protegge in tre modi: <span class="eed">[[diritto d'autore]], [[brevetto]] e marchio</span>.
+* Diritto d'autore: opere d'arte, scritte, musica e filmati, scade 75 anni dopo la morte dell'autore;
+* Brevetto: invenzioni industriali, si applica previa descrizione dettagliata e dura 20 anni;
+* Marchio: nomi e loghi delle ditte e dei prodotti, vale finché il marchio è usato.
+
+Il copyright permette anche agli eredi di fruire. Il diritto morale rimane all'autore, ma il diritto economico si può cedere o vendere, magari alla ditta per cui lavora. Il codice e l'eseguibile non possono essere copiati senza il permesso del detentore del diritto economico. Ma l'ispirazione va bene, per esempio OpenOffice e MS Office.
 
 Se stampo un pdf di Montalbano ovviamente ovviamentissimo è infrazione di copyright. Ma anche se scrivo completamente da zero un libro di Montalbano, e comunque il personaggio non è mio e non posso. Ma se faccio il commissario Montenero che viene da un paesino sardo, questo lo posso fare. OpenOffice è Montenero.
 
-Agli inizi, la cosa che costava era l'hardware, e il software si scriveva per un computer individuale. Con l'arrivo dei mini computer e dei personal computer, si cominciarono a fare software rivendibili a più utenti. Così il software fu *chiuso*, cioè si crearono modi per evitare che il software venisse ridistribuito gratis. In risposta, Free Software Foundation, vedi slide.
+## Software
+
+Il software, essendo opera dell'ingegno, è protetto dal diritto d'autore. Sono protetti sia il codice sorgente che gli aspetti grafici. In Europa non si può brevettare, ma in America sì.
+
+Il software proprietario di solito, è dato in licenza con certe condizioni. Licenza d'uso non esclusiva, perpetua o temporanea. Non lo si può cedere, non lo si può duplicare, e non si può fare reverse engineering. E l'utente assume la responsabilità del suo utilizzo.
+
+Si può copiare il funzionamento di un software senza infrangere il copyright, per esempio OpenOffice.
+
+### Cenni storici
+
+Agli inizi, la cosa che costava era l'hardware, e il software si scriveva per un computer individuale. Con l'arrivo dei mini computer e dei personal computer, si cominciarono a fare software rivendibili a più utenti. Così il software fu *chiuso*, cioè si crearono modi per evitare che il software venisse ridistribuito gratis. In risposta, la Free Software Foundation introdusse il concetto di software libero e open source.
+
+# Free Software
 
 GPL, gnu public license. LGPL permette di usare librerie open in software chiuso: librerie grafiche in un videogioco vendibile. Invece AGPL tiene conto del cloud e del software as a service.
 
@@ -20,7 +37,20 @@ Ah e se io faccio software open di entrambi i tipi non sono responsabile di come
 
 Per usare una licenza devo mettere la licenza all'inizio del codice sorgente.
 
+Ci sono 4 libertà fondamentali del software libero:
+0. Eseguire il programma per qualsiasi scopo;
+1. Studiare e modificare il programma;
+2. Copiare il programma per aiutare il prossimo;
+3. Migliorare il programma e distribuire pubblicamente i miglioramenti per beneficio pubblico.
+Valgono comunque le protezioni del diritto d'autore.
+
 # I progetti Open Source
+
+Il software open source è distribuito con una licenza che permette di distribuirlo come codice sorgente, e permette di modificarlo e distribuire le versioni modificate, anche a pagamento.
+
+La Open Source Initiative lo definisce e fornisce il marchio "**OSI** certified".
+
+OSI e FSF non dicono la stessa cosa, ma simile.
 
 Certo, il concetto è nato prima, ma un progetto OS di qualità industriale può esistere solo grazie a internet. Quelli importanti sono gestiti da fondazioni o da società private (più raro). Le fondazioni nascono per caso, per esempio Linux, quando creano un progetto e il loro progetto diventa uno di successo, e sorge spontaneamente il lato economico, e quindi può vendere istruzione e altre cose intorno al progetto e può pagare gli sviluppatori.
 

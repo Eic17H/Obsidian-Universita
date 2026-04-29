@@ -68,4 +68,4 @@ Introduzione di una definizione che servirà più avanti:
 È impossibile che ci sia un pivot nullo se la matrice è di uno di questi due tipi (strutture):
 
 * Simmetrica definita positiva: nessun pivot sarà nullo
-* Diagonalmente dominante (per righe o per colonne): se $|a_{ii}| \geq \sum_{j=1, j≠i}^n|a_{ij}|$ è per righe, al rovescio per colonne.
+* Diagonalmente dominante (per righe o per colonne): se $|a_{ii}| \geq \sum\limits_{j=1, j≠i}^n|a_{ij}|$ è per righe, al rovescio per colonne.
