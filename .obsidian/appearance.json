@@ -3,7 +3,8 @@
     "notation-colour-blocks",
     "stile",
     "hide-properties",
-    "images"
+    "images",
+    "font"
   ],
   "theme": "obsidian",
   "textFontFamily": "",

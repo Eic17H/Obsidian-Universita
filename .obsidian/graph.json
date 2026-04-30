@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:Indice",
+  "search": "-file:Indice -path:.canvas",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
