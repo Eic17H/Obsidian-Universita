@@ -2,7 +2,7 @@
 cssclasses:
   - pr1
 ---
-[[Ricorsione]].
+[[PR1/Modulo I/Ricorsione|Ricorsione]].
 Una classe di studenti è una classe di studenti + uno studente, o uno studente da solo.
 classe = classe + studente | studente
 Se da una classe togli uno studente, o ne aggiungi uno, è ancora una classe.
@@ -10,7 +10,7 @@ Il concetto di ricorsione è legato al concetto di oggetto autosimile.
 Pensa alla scatola del Droste, la cui illustrazione contiene una scatola del Droste.
 Guardi nella foto e dentro c’è la stessa foto, in cui c’è la stessa foto, in cui c’è la stessa foto, ma non puoi zoommare all’infinito, a un certo punto devi trovare la tipa che ti fa 🖕.
 Vedi anche i frattali, e il triangolo di Sierpiński, che è formato da tre triangoli di Sierpiński.
-Se cerchi “recursion” su Google, ti chiede se intendevi scrivere “recursion”.
+Se cerchi “<span class="alf">[[ALF/File/Ricorsione|recursion]]</span>” su Google, ti chiede se intendevi scrivere “<span class="am">[[AM/File/Relazioni e funzioni/Ricorsione|recursion]]</span>”.
 A noi programmatori fa ridere, a qualcun altro sembriamo imbecilli, e forse hanno ragione.
 
 ℕ, successore e precedente, utile. Fattoriale.

@@ -5,9 +5,9 @@ cssclasses:
 ## Indice
 
 * [[Logica proposizionale classica]]
-* [[Logica dei predicati]]
+* [[ALF/File/Logica dei predicati|Logica dei predicati]]
 * [[OCaml]]
-* [[Insiemi]]
+* [[ALF/File/Insiemi|Insiemi]]
 * [[Funzioni]]
 * [[Regole di inferenza]]
 * [[ALF/File/Ricorsione|Ricorsione]]
