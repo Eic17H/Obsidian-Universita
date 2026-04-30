@@ -43,7 +43,7 @@ L'unico assioma è:$$p \Rightarrow p$$Dove $p$ è una variabile proposizionale.
 
 Una sorta di principio di identità, quindi è anche detto assioma di identità: ogni variabile può essere derivata da sé stessa.
 
-Vediamo che $p$ è una variabile proposizionale, non è come $α$ e $β$, non contiene connettivi. Quindi qualcosa come $r \lor q \Rightarrow r \lor q$ non è un assioma. È un problema? In realtà no, perché si dimostra che tali schemi sono veri con il [[Eliminazione dell'identità||teorema di eliminazione dell'identità]].
+Vediamo che $p$ è una variabile proposizionale, non è come $α$ e $β$, non contiene connettivi. Quindi qualcosa come $r \lor q \Rightarrow r \lor q$ non è un assioma. È un problema? In realtà no, perché si dimostra che tali schemi sono veri con il [[Eliminazione dell'identità|teorema di eliminazione dell'identità]].
 
 ## Regole strutturali
 

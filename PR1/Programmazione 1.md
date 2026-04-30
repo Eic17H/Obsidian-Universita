@@ -8,7 +8,7 @@ cssclasses:
 * [[Tipi]]
 * [[Subroutine e librerie]]
 * [[Scope]]
-* [[Ricorsione]]
+* [[PR1/Modulo I/Ricorsione]]
 * [[Inferno]]
 * [[PR1/Modulo I/Complessità|Complessità]]
 * [[PR1/Modulo II/Lab|I pochi appunti di laboratorio che lascio per completezza]]
