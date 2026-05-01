@@ -10,8 +10,8 @@
 
 * <span class="asd">[[Algoritmi e Strutture Dati]]</span>
 * <span class="are">[[Architettura degli Elaboratori]]</span>
-* <span class="fems">[[Fisica e Metodo Scientifico]]</span> (Probabilmente mai)
 * <span class="md">[[Matematica Discreta]]</span>
+* <span class="fems">==Fisica e Metodo Scientifico==</span> è cambiato dopo che l'ho fatto
 
 # Anno 2
 

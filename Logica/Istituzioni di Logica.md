@@ -18,6 +18,7 @@ cssclasses:
 * Filosofia del linguaggio
 ## [[Modulo III]]
 * Teorema di correttezza
+* Teorema di completezza
 ## Schemi:
 * [[Connettivi logici.canvas|Confronto dei connettivi logici]]
 

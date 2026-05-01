@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": false,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "file:Indice",
@@ -43,24 +43,17 @@
       }
     },
     {
-      "query": "path:FeMS/",
-      "color": {
-        "a": 1,
-        "rgb": 11549768
-      }
-    },
-    {
       "query": "path:DEM/",
       "color": {
         "a": 1,
-        "rgb": 11944802
+        "rgb": 11747152
       }
     },
     {
       "query": "path:CSMN/",
       "color": {
         "a": 1,
-        "rgb": 12274812
+        "rgb": 12208499
       }
     },
     {
@@ -182,10 +175,10 @@
   "nodeSizeMultiplier": 1.67390852390852,
   "lineSizeMultiplier": 4.01436781609195,
   "collapse-forces": false,
-  "centerStrength": 0.346153846153846,
-  "repelStrength": 11.0810810810811,
+  "centerStrength": 0,
+  "repelStrength": 10.1084430673896,
   "linkStrength": 1,
-  "linkDistance": 202,
-  "scale": 0.5359795996226197,
+  "linkDistance": 30,
+  "scale": 0.1105176426447196,
   "close": false
 }

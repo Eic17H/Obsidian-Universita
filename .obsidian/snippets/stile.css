@@ -3,17 +3,13 @@
   --accent-dark: #b94738;
   --accent-light: #760000;
 }
-.fems {
-  --accent-dark: #c14c56;
-  --accent-light: #7d0020;
-}
 .dem {
-  --accent-dark: #c85371;
-  --accent-light: #840e39;
+  --accent-dark: #c44e5e;
+  --accent-light: #800428;
 }
 .csmn {
-  --accent-dark: #cc5c8b;
-  --accent-light: #881b51;
+  --accent-dark: #cb5881;
+  --accent-light: #871749;
 }
 .md {
   --accent-dark: #ce65a4;
@@ -95,7 +91,12 @@
     --blockquote-border-color: var(--accent);
     --text-selection: var(--accent-inverse);
 }
-
+::spelling-error {
+  text-decoration: wavy var(--accent) underline;
+}
+.math {
+  color: var(--accent);
+}
 .cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
     background-color: transparent;
     color: var(--accent);
@@ -103,13 +104,6 @@
 .markdown-preview-view mark {
     background-color: transparent;
     color: var(--accent);
-}
-
-::spelling-error {
-  text-decoration: wavy var(--accent) underline;
-}
-.math {
-  color: var(--accent);
 }
 ul .list-bullet::after { 
 background-color: var(--accent);
