@@ -1,8 +1,9 @@
 [
-  "sheets",
   "obsidian-git",
   "webpage-html-export",
-  "auto-class",
   "custom-classes",
-  "shiki-highlighter"
+  "auto-class",
+  "sheets",
+  "obsidian-desmos",
+  "sync-graph-settings"
 ]
