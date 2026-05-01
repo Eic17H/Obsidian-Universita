@@ -21,7 +21,7 @@ Update .obsidian/graph.json every time parameters or group list change - the out
 // Parameters:
 
 let groups = {
-    red: ["AM", "FeMS", "DEM", "CSMN", "MD"],
+    red: ["AM", "DEM", "MD", "CSMN"],
     orange: ["RC", "ISW", "ARE"],
     yellow: ["PR1", "ASD", "SO", "PR2"],
     green: ["BD", "FPW", "IUM"],

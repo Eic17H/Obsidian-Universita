@@ -116,7 +116,8 @@ Sostiene anzi che sapendo la regola di introduzione posso ottenere algoritmicame
 
 Per esempio, immaginiamo di introdurre e subito eliminare il connettivo, come lì sopra. Posso ottenere la conseguenza senza passare per il connettivo? Sì, guarda, la conseguenza $α$ è anche una premessa.
 
-Vediamo invece l'implicazione:$$\dfrac{\begin{matrix}[α]_i\\\vdots\\\dfrac{β}{α\rightarrowβ}\rightarrow I_i & α\end{matrix}}{}$$ fubewonimopnj oernifpwomnojr insomma sotto c'è beta, e posso ricavarlo senza introdurre la cosa cosa? sììì, posso, l'ho fatto sopra coi puntini!!! ecco qua fatto finito ecco vedi.
+Vediamo invece l'implicazione:$$\dfrac{\dfrac{\begin{matrix}[α]_i\\\vdots\\β\end{matrix}}{α\rightarrowβ}\rightarrow I_i \qquad α}{β}\rightarrow E$$
+Posso ricavare $β$ senza introdurre ed eliminare l'implicazione? Sì, è quello che ho fatto fino al passaggio $i-1$.
 
 Il calcolo classico non è estensione conservativa del suo frammento senza la negazione? Perché? Perché ci sono derivazioni le cui premesse e conseguenze non includono la negazione ma il cui svolgimdeto la include. La negazione è qundi una sorta di tonk, è un'aggiunta creativa, che permette di fare nuove defivazinoi.
 
