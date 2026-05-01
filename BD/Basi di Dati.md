@@ -2,7 +2,7 @@
 cssclasses:
   - bd
 ---
-[[BD/Teoria.md]]
-[[BD/Lab.md]]
+[[BD/Teoria.md|Teoria]]
+[[BD/Lab.md|Lab]]
 
 #materia
