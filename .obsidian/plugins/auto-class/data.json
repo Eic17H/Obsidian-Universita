@@ -1,18 +1,12 @@
 {
   "matches": [
     
+
 {
     "path": "AM",
     "scope": "Read & Edit",
     "classes": [
     "am"
-    ]
-},
-{
-    "path": "FeMS",
-    "scope": "Read & Edit",
-    "classes": [
-    "fems"
     ]
 },
 {
