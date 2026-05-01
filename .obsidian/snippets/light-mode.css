@@ -1,0 +1,47 @@
+.theme-light * {
+    font-family: serif;
+
+    --paper-white-0: #f3f0ee;
+    --paper-white-1: #EAE7E5;
+    --paper-white-2: #E0DDDB;
+
+    --background-primary: var(--paper-white-0);
+    --background-secondary: var(--paper-white-1);
+    --ribbon-background: var(--paper-white-1);
+
+    --ribbon-background: var(--paper-white-2);
+    --ribbon-background-collapsed: var(--paper-white-2);
+
+    --scrollbar-bg: var(--paper-white-2);
+    --scrollbar-thumb-bg: var(--paper-white-2);
+    --scrollbar-active-thumb-bg: var(--paper-white-2);
+
+    --status-bar-background: var(--paper-white-2);
+    /*--status-bar-border-color: blue;*/
+    /*--status-bar-border-width: blue;*/
+    /*--status-bar-font-size: blue;*/
+    /*--status-bar-text-color: blue;*/
+    /*--status-bar-position: blue;*/
+    /*--status-bar-radius: blue;*/
+    /*--status-bar-scroll-padding: blue;*/
+
+    --titlebar-background: var(--paper-white-2);
+    --titlebar-background-focused: var(--paper-white-2);
+    /*--titlebar-border-width: yellow;*/
+    /*--titlebar-border-color: yellow;*/
+    /*--titlebar-text-color: yellow;*/
+    /*--titlebar-text-color-focused: yellow;*/
+
+    /*--workspace-background-translucent: orange;
+
+    --divider-color: purple;
+    --divider-color-hover: purple;
+    --divider-width: purple;
+    --divider-width-hover: purple;
+    --divider-vertical-height: purple;*/
+    
+    --tab-background-active: var(--paper-white-1);
+    --file-header-background: var(--paper-white-1);
+    --file-header-background-active: var(--paper-white-1);
+    --file-header-background-focused: var(--paper-white-1);
+}
