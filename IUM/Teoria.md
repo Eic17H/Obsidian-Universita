@@ -7,6 +7,7 @@ cssclasses:
 * [[Prototipi]]
 * [[Architettura dell'Informazione]]
 * [[Componente umana]]
+* [[Errori]]
 * [[Testo]]
 * [[IUM/Teoria/Test]]
 
