@@ -1,4 +1,4 @@
-Vediamo due metodi: quello di [[Jacobi]] e quello di [[Gauss-Siedel]].
+Vediamo due metodi: quello di [[Jacobi]] e quello di [[Gauss-Seidel]].
 
 Da riordinare.
 # Metodi iterativi per la risoluzione dei sistemi lineari
