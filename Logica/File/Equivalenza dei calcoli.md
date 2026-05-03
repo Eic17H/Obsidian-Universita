@@ -1,6 +1,6 @@
 ---
 cssclasses:
-- Logica
+ - logica
 ---
 Abbiamo detto che HK, ND e PK sono equivalenti, ma non abbiamo detto come. Con HK ed ND ce lo possiamo immaginare, abbiamo una nozione di derivabilità.
 
