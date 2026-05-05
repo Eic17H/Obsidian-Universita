@@ -3,7 +3,7 @@ cssclasses:
   - asd
 ---
 * [[ASD/Modulo II/Algoritmi|Algoritmi]]
-* [[Strutture Dati]]
+* [[ASD/Modulo II/Strutture Dati]]
 
 PR1 ci ha dato i mattoncini, con ASD cominciamo a costruire.
 Concetti astratti, priorità agli algoritmi rispetto alla pulizia del codice.

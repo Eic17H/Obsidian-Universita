@@ -8,7 +8,7 @@ cssclasses:
 * [[ALF/File/Logica dei predicati|Logica dei predicati]]
 * [[OCaml]]
 * [[ALF/File/Insiemi|Insiemi]]
-* [[Funzioni]]
+* [[ALF/File/Funzioni]]
 * [[Regole di inferenza]]
 * [[ALF/File/Ricorsione|Ricorsione]]
 * [[Passaggi di stato]]
