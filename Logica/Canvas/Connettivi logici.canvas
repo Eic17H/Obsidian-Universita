@@ -16,14 +16,14 @@
 		{"id":"c9fa287b825b4c80","type":"text","text":"![[Calcolo dei Sequenti#Regole strutturali]]","x":1380,"y":1280,"width":300,"height":260,"color":"4"},
 		{"id":"7cbb09c606ba0505","type":"text","text":"## Regola di inferenza\n\n![[Calcolo alla Hilbert#^1]]","x":-400,"y":560,"width":240,"height":340,"color":"2"},
 		{"id":"ae0b5ac57cc1f2b6","type":"text","text":"![[Calcolo dei Sequenti#Assiomi]]","x":-400,"y":1280,"width":240,"height":260,"color":"4"},
-		{"id":"0e4d3895f05d1f05","x":-660,"y":159,"width":220,"height":361,"color":"1","type":"text","text":"# Tavole di verità"},
-		{"id":"f6f14c5f6e2135ae","x":-660,"y":560,"width":220,"height":340,"color":"2","type":"text","text":"# Calcolo alla Hilbert"},
-		{"id":"69e0364a89051b14","x":-660,"y":960,"width":220,"height":280,"color":"3","type":"text","text":"# Deduzione Naturale"},
-		{"id":"b59fd49740019fe2","x":-660,"y":1280,"width":220,"height":260,"color":"4","type":"text","text":"# Calcolo delle Sequenze"},
-		{"id":"96827cedf61b5e2d","x":-125,"y":60,"width":325,"height":60,"type":"text","text":"# Negazione"},
-		{"id":"18d4a8e881f4185f","x":240,"y":60,"width":340,"height":60,"type":"text","text":"# Congiunzione"},
-		{"id":"d3f32778b6d0d9b1","x":620,"y":60,"width":340,"height":60,"type":"text","text":"# Disgiunzione"},
-		{"id":"b85a6237a8e151db","x":1000,"y":60,"width":340,"height":60,"type":"text","text":"# Implicazione"}
+		{"id":"0e4d3895f05d1f05","type":"text","text":"# Tavole di verità","x":-660,"y":159,"width":220,"height":361,"color":"1"},
+		{"id":"f6f14c5f6e2135ae","type":"text","text":"# Calcolo alla Hilbert","x":-660,"y":560,"width":220,"height":340,"color":"2"},
+		{"id":"69e0364a89051b14","type":"text","text":"# Deduzione Naturale","x":-660,"y":960,"width":220,"height":280,"color":"3"},
+		{"id":"b59fd49740019fe2","type":"text","text":"# Calcolo delle Sequenze","x":-660,"y":1280,"width":220,"height":260,"color":"4"},
+		{"id":"96827cedf61b5e2d","type":"text","text":"# Negazione","x":-125,"y":60,"width":325,"height":60},
+		{"id":"18d4a8e881f4185f","type":"text","text":"# Congiunzione","x":240,"y":60,"width":340,"height":60},
+		{"id":"d3f32778b6d0d9b1","type":"text","text":"# Disgiunzione","x":620,"y":60,"width":340,"height":60},
+		{"id":"b85a6237a8e151db","type":"text","text":"# Implicazione","x":1000,"y":60,"width":340,"height":60}
 	],
 	"edges":[]
 }

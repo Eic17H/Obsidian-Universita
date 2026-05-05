@@ -21,8 +21,7 @@ Argomenti del secondo parziale:
 	* Scrum
 	* Lean/Kanban
 * [[Dev-Ops]]
-* [[Debito tecnico]]
-* [[Refactoring]]
+* [[Refactoring]] e debito tecnico
 * Python:
 	* Dizionari
 	* Set

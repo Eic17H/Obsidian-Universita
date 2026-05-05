@@ -94,6 +94,41 @@ Fase importante e permanente, permette di trovare problemi di versioni specifich
 * Metriche e statistiche di produzione.
 
 Con queste informazioni, si passa al Plan del ciclo successivo e si riparte.
-## Confronto con Kanban
+## Kanban
 
+Usando Kanban, di base il tabellone finisce al passo "Done", ma così si perdono d'occhio i rilasci, il deploy e altri concetti importanti che abbiamo visto. In DevOps, si estende il tabellone agli stadi Ops, essenzialmente: ready, dev, review, test, deploy, observe.
+
+## Metriche
+
+* **==Lead time==**: Tempo totale da richiesta a disponibilità in produzione.
+* ==**Cycle time**==: Tempo tra inizio effettivo e completamento del lavoro.
+* ==**Throughput**==: Numero di elementi completati nell’unità di tempo.
+* ==**Change failure rate**==: Percentuale di rilasci che causano incidenti o rollback.
+* ==**MTTR**==: Tempo medio di ripristino dopo un problema.
 ## Esempio
+
+### Progetto
+
+* **Scenario**: Sviluppo di una piccola webapp con Node.js e React.
+* **Obiettivo**: Automatizzare sviluppo, test, rilascio e monitoraggio.
+
+### Stack usato
+
+* GitHub: versionamento;
+* GitHub Actions: CI/CD automation;
+* Docker: containerizzazione;
+* Heroku/Render/Vercel: deploy automatico;
+* Prometheus+Grafana: monitoraggio base (opzionale);
+* Slack: notifiche.
+
+### Flusso semplificato
+
+1) Il ==dev== scrive il codice e lo pusha su GitHub;
+2) ==CI== (integrazione continua) con GitHub Actions, si attiva una pipeline automatica:
+	1) Installa dipendenze: `npm install`;
+	2) Test: `npm test`;
+	3) Builda l'app: `npm run build`;
+	4) Crea un'immagine docker: `docker build`;
+3) ==CD== (deploy continuo): se i test passano, si fa il deploy automatico o si pusha l'immagine su Docker Hub;
+4) ==Monitoraggio==: una semplice health-check API permette a uno script a un bot di controllare se il servizio è disponibile, in caso il bot invia una notifica su Slack;
+5) ==Feedback==: se ci sono errori nel test o nel deploy, GitHub Actions fallisce e invia una notifica Slack o un'email, e da lì si può correggere e pushare.
