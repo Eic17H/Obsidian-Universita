@@ -11,7 +11,10 @@
     "displayProgress": true,
     "inlineHTML": false,
     "exportPath": "C:\\Users\\H\\Desktop\\htmltest",
-    "filesToExport": [],
+    "filesToExport": [
+      "ALF/File/Logica proposizionale classica.md",
+      "Logica"
+    ],
     "useFallbackRenderer": false,
     "addBodyClasses": true,
     "addMathjaxStyles": true,
@@ -214,7 +217,12 @@
     "siteName": "Obsidian-Universita",
     "iconEmojiStyle": "Native",
     "exportRoot": "",
-    "includePluginCss": [],
+    "includePluginCss": [
+      "sheets",
+      "obsidian-git",
+      "auto-class",
+      "shiki-highlighter"
+    ],
     "includeStyleCssIds": [],
     "autoDisposeWebpages": true
   },

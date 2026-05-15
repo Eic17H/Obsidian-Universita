@@ -8,7 +8,7 @@
   ],
   "theme": "moonstone",
   "textFontFamily": "",
-  "baseFontSizeAction": false,
-  "baseFontSize": 16,
+  "baseFontSizeAction": true,
+  "baseFontSize": 19,
   "accentColor": ""
 }
