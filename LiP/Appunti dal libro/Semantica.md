@@ -8,6 +8,8 @@ Il libro descrive quattro definizioni della semantica (algebrica, assiomatica, o
 * **Operazionale**: si definisce un interprete del linguaggio su una macchina ospite le cui componenti si descrivono matematicamente; lo stato descrive il sistema, la transizione descrive un passo di computazione che modifica lo stato e/o il programma, una computazione è una serie di transizioni di stato; utile perché dà un modello di implementazione.
 * **Denotazionale**: una funzione dagli input agli output del programma, si concentra sulla trasformazione sugli stati indotta dal programma, su qual è la trasformazione, non su come avviene.
 
+A dire il vero, poi li definisce di nuovo: vedi [[stili di semantica]].
+
 Come si può intuire dalla descrizione più lunga, noi ci concentriamo sulla semantica operazionale (e infatti, avendo fatto il progetto prima dello scritto, mi è familiare). Prima però, dobbiamo dare la nozione di paradigma.
 
 ## Paradigma di programmazione

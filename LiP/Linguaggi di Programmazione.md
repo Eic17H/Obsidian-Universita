@@ -14,7 +14,7 @@ Le lezioni di Pinna sono difficili da seguire, questi sono perlopiù riassunti d
 * [[Semantica]]
 ### Capitolo 4
 * [[Aritmetica non tipizzata]]
-* [[Valutazione]]
+* [[Stili di semantica]]
 ### Capitolo 5
 * [[λ-calcolo]]
 ### Capitolo 6
