@@ -30,7 +30,7 @@ Sarebbe un minimo più leggibile se avessimo definito anche delle parentesi. Not
 
 Ho detto che ci dice che sono espressioni valide. Questo metalinguaggio accetta cose come `succ true` e `if 0 then 0 else 0`, che non hanno senso. Certo, sono valide perché le accetta, e le accetta perché sono valide, per definizione, ma non è detto che questa nozione di validità sia utile. Vedremo come evitare questi problemi, che sarà ancora più utile una volta introdotti i tipi.
 
-### Sintassi
+### Termini
 
 Definiamo <span class="am">[[assiomi e induzione|induttivamente]]</span> la sintassi del nostro linguaggio, definendo la nozione di termine.
 
@@ -113,3 +113,34 @@ Esempio immondo:$$\dfrac{\dfrac{\dfrac{}{\text{if true then false else false} \r
 Questo è un albero di derivazione. Che razza di albero è? Non ha rami, ha solo un tronco. Diciamo che è un albero unario. Non abbiamo ancora visto regole che ramificano, le vedremo più avanti. Insomma, il termine più in basso è la radice, e il termine più in alto è la foglia. Per una volta scriviamo gli alberi dritti, quando molto spesso nella teoria dei grafi li scriviamo sottosopra.
 
 Questa dimostrazione che fa uso di alberi è utile perché possiamo fare *dimostrazioni per induzione su derivazioni*: il parametro dell'induzione è il numero di nodi dell'albero, abbiamo un passo base che è un albero molto semplice e un passo induttivo che consiste nell'aggiungere nodi, tenendo conto di tutti i possibili modi di aggiungere nodi.
+
+### Determinazione
+
+Vediamo quindi un teorema, e dimostriamolo per induzione.
+
+> **Teorema della determinazione della valutazione one-step** - Se $t \rightarrow t'$ e $t \rightarrow t''$ allora $t' = t''$.
+
+Questo ci dice che lo stesso termine sarà valutato nello stesso valore ogni volta che viene valutato. Stiamo lavorando su un solo passo di valutazione, infatti il parametro di induzione è il numero di nodi nell'albero, cioè il numero di passaggi di derivazione.
+
+Assumiamo che il teorema valga per ogni albero con al più $n$ nodi, cioè con al più $n$ regole. Quella è la base dell'induzione. Dimostriamo che, se è vero quello, allora è vero anche che il teorema vale per ogni albero con al più $n+1$ nodi.
+
+Come otteniamo un tale albero? Applicando una regola, e per ora abbiamo solo tre opzioni per quale regola può essere. Vogliamo appunto dimostrare che la regola $n+1$esima è uguale sia per la derivazione di $t \rightarrow t'$ che per la derivazione di $t \rightarrow t''$. Vediamo i tre casi del passo induttivo:
+* L'ultima regola della derivazione di $t \rightarrow t'$ è $\text{E-IfTrue}$. Se questo è vero, allora sappiamo che $t$ è della forma $\text{if }true\text{ then }t'\text{ else }t_3$. E se *quello* è vero, allora necessariamente l'ultima regola di $t \rightarrow t''$ deve necessariamente essere $\text{E-IfTrue}$, perché il primo argomento del termine a sinistra della freccia è $true$, quindi non può essere $\text{E-IfFalse}$, e il termine è della forma sbagliata per $\text{E-If}$, perché $\text{E-If}$ richiede che il primo termine si possa valutare, ma $true$ non si può valutare.
+* L'ultima regola della derivazione di $t \rightarrow t'$ è $\text{E-IfFalse}$. Stessa logica, $t$ è della forma $\text{if }false\text{ then }t_2\text{ else }t'$, e quindi $t \rightarrow t''$ deve terminare con $\text{E-IfFalse}$.
+* L'ultima regola della derivazione di $t \rightarrow t'$ è $\text{E-If}$, allora, per lo stesso ragionamento, $t$ deve essere della forma $\text{if }t_1\text{ then }t_2\text{ else }t_3$, dove esiste $t'_1$ tale che $t_1 \rightarrow t'_1$. Come prima, ma al contrario, se $t_1$ può essere valutato, non può essere né $true$ né $false$, quindi la regola, per esclusione, può essere solo $\text{E-If}$. Questa volta non abbiamo finito qui. Sappiamo che finiscono con la stessa regola, ma nella derivazione di $t \rightarrow t''$ potremmo avere un $t_1$ che viene valutato in un certo altro valore $t_1''$ diverso da $t_1'$. Si risolve subito: le derivazioni $t_1 \rightarrow t_1'$ e $t_1 \rightarrow t_1''$ hanno al più $n$ nodi, e quindi $t_1'=t_1''$.
+
+### Forma finale
+
+Abbiamo visto come una macchina astratta si sposta da uno stato all'altro valutando un termine, ma ci interessa di più il risultato, il valore, cioè quello che abbiamo quando abbiamo finito di spostarci. Questa è detta forma normale.
+
+> **Forma normale** - Un termine $t$ è in *forma normale* se non esistono regole di valutazione che ci si possono applicare. $t$ è in forma normale se e solo se $!\exists t' \;|\; t \rightarrow t'$.
+
+Nel nostro sistema, $true$ e $false$ sono in forma normale, perché non esiste una regola il cui lato sinistro ha come *costruttore più esterno* $true$ o $false$, solo $if$. Possiamo quindi generalizzare:
+
+> **Teorema** - Ogni valore è in forma normale.
+
+Quando arricchiremo il sistema, lo faremo assicurandoci che questo teorema rimanga sempre valido, perché fa parte del modo in cui concettualizziamo i valori.
+
+Nei linguaggi semplici come quello che abbiamo definito per ora, vale anche il teorema converso, anche se lo invalideremo molto presto:
+
+> **Teorema** (momentaneo) - Se $t$ è in forma normale, allora $t$ è un valore.
