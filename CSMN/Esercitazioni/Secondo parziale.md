@@ -99,3 +99,10 @@ Assumendo che non ci sia il $-$, $x^{(2)}=\left[-\dfrac{5}{16},\;-\dfrac{1}{8},\
 Sì.
 
 Per $β=-6$, prima abbiamo visto i valori per cui la matrice dei coefficienti è strettamente diagonalmente dominante. $-6$ rientra tra quei valori, e questa è una condizione sufficiente per la convergenza del metodo di Jacobi.
+
+# Appunto successivo: cosa ripassare
+
+* Criteri di convergenza
+* Ordini di convergenza
+* Come invertire una matrice usando $e$
+* Metodo delle secanti non ho capito nulla

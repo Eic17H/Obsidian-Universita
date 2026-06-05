@@ -145,36 +145,8 @@ Dimenticare il $-$ di $E$ ed $F$.
 
 # Esempio
 
-$$\left\{
-\begin{matrix}
-2x_1 & -3x_2 & + x_3 & =1\\
-x_1 & +2x_2 & - x_3 & =0\\
-x_1 & -3x_2 & + 2x_3 & =1\\
-\end{matrix}
-\right.$$Vale a dire $$A=\begin{bmatrix}
-2 & -3 & 1 \\
-1 & 2 & -1 \\
-1 & -3 & 2 \\
-\end{bmatrix}
-\quad
-D=\begin{bmatrix}
-2 & 0 & 0 \\
-0 & 2 & 0 \\
-0 & 0 & 2 \\
-\end{bmatrix}
-\quad
-E=\begin{bmatrix}
-0 & 0 & 0 \\
--1 & 0 & 0 \\
--1 & 3 & 0 \\
-\end{bmatrix}
-\quad
-F=\begin{bmatrix}
-0 & 3 & -1 \\
-0 & 0 & 1 \\
-0 & 0 & 0 \\
-\end{bmatrix}
-$$
+$$\left\{\begin{matrix}2x_1 & -3x_2 & + x_3 & =1\\x_1 & +2x_2 & - x_3 & =0\\x_1 & -3x_2 & + 2x_3 & =1\\\end{matrix}\right.$$Vale a dire $$A=\begin{bmatrix}2 & -3 & 1 \\1 & 2 & -1 \\1 & -3 & 2 \\\end{bmatrix}\quad D=\begin{bmatrix}2 & 0 & 0 \\0 & 2 & 0 \\0 & 0 & 2 \\\end{bmatrix}\quad E=\begin{bmatrix}0 & 0 & 0 \\-1 & 0 & 0 \\-1 & 3 & 0 \\\end{bmatrix}\quad F=\begin{bmatrix}0 & 3 & -1 \\0 & 0 & 1 \\
+0 & 0 & 0 \\\end{bmatrix}$$
 L'inversa di una matrice diagonale è molto semplice, basta fare gli inversi di tutti gli elementi. $$B_J=D^{-1}(E+F)=\begin{bmatrix} \dfrac{1}{2} & 0 & 0 \\ 0 & \dfrac{1}{2} & 0 \\ 0 & 0 & \dfrac{1}{2} \\ \end{bmatrix} \begin{bmatrix} 0 & \dfrac32 & - \dfrac12 \\ - \dfrac 12 & 0 & \dfrac12 \\ - \dfrac 12 & \dfrac 32 & 0 \end{bmatrix}$$
 $$\u f = D^{-1} \u b = \begin{bmatrix}
 \dfrac{1}{2} & 0 & 0 \\
