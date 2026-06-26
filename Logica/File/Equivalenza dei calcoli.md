@@ -37,6 +37,7 @@ Essenzialmente prendiamo un ordine qualunque, tanto esiste un ordine, ed esiston
 # Teoremi
 
 Possiamo finalmente cominciare a vedere qualche teorema.
+
 ## Da ND a PK
 
 > Sia $Y$ un insieme finito o vuoto di formule di $\mathcal{L}_0$, e sia $α$ una singola formula di $\mathcal{L}_0$. Allora, se $Y \vdash_{ND} α$, allora, $\forall Γ_Y$, $\vdash_{PK} Γ_Y \Rightarrow α$.
