@@ -33,4 +33,5 @@ Argomenti del secondo parziale:
 	* Moduli e package
 	* Lamba expression
 	* Regex
+Consigli per il terzo parziale: Studia bene i diagrammi, sono incomprensibili, il resto puoi andare un po' a logica
 #materia

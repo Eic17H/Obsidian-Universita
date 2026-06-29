@@ -37,6 +37,7 @@ Essenzialmente prendiamo un ordine qualunque, tanto esiste un ordine, ed esiston
 # Teoremi
 
 Possiamo finalmente cominciare a vedere qualche teorema.
+
 ## Da ND a PK
 
 > Sia $Y$ un insieme finito o vuoto di formule di $\mathcal{L}_0$, e sia $α$ una singola formula di $\mathcal{L}_0$. Allora, se $Y \vdash_{ND} α$, allora, $\forall Γ_Y$, $\vdash_{PK} Γ_Y \Rightarrow α$.
@@ -74,12 +75,13 @@ Cos'abbiamo fatto? Abbiamo ipotizzato che un albero con al più $m$ nodi si può
 
 #### Eliminazione della congiunzione parte a
 
-Vediamo poi il caso con $Λ\text{-}E(a)$. Il mio albero è così:$$\dfrac{\begin{matrix}Y\\\vdots\\β\landγ\end{matrix}}{β}$$L'albero $D$ ha $m+1$ nodi, e in questo caso $D'$ ha *esattamente* $m$ nodi. Grazie all'ipotesi, so che $D'$ è quindi dimostrabile. Ci serve quindi questo in PK:$$\begin{matrix}Γ_Y \Rightarrow β\landγ\\\vdots\\Γ_Y\Rightarrowβ\end{matrix}$$Ma in PK non esistono regole di eliminazione, possiamo solo complicare scendendo. Qual è l'unica regola che mi permette di distruggere l'informazione? Il $cut$. In questo caso il $cut*$.$$\dfrac{\begin{matrix}Γ_Y \Rightarrow β\landγ\\\vdots\\Γ_Y\Rightarrowβ\landγ \qquad β\landγ\Rightarrowβ\end{matrix}}{Γ_Y\Rightarrowβ}cut*$$A destra si può procedere in due modi. Il metodo che *non* usano le dispense è (bottom-up) con $Λs$ e poi $ss,is$. Il ramo a sinistra è quello che esiste per ipotesi.$$\dfrac{\begin{matrix}Y\\\vdots\\Γ_Y\Rightarrowβ\landγ\end{matrix} \qquad \dfrac{\dfrac{β\Rightarrowβ}{β,γ\Rightarrowβ}ss,is}{β\landγ\Rightarrowβ}Λs}{Γ_Y\Rightarrowβ}cut*$$Non riesco ad allinearlo. Notiamo come la regola destra corrisponde alla regola di introduzione, e la regola sinistra corrisponde alla regola di eliminazione. E ci torna, perché se introduciamo qualcosa la stiamo mettendo nella conclusione.
+Vediamo poi il caso con $Λ\text{-}E(a)$. Il mio albero è così: $$\dfrac{\begin{matrix}Y\\\vdots\\β\landγ\end{matrix}}{β}$$ L'albero $D$ ha $m+1$ nodi, e in questo caso $D'$ ha *esattamente* $m$ nodi. Grazie all'ipotesi, so che $D'$ è quindi dimostrabile. Ci serve quindi questo in PK: $$\begin{matrix}Γ_Y \Rightarrow β\landγ\\\vdots\\Γ_Y\Rightarrowβ\end{matrix}$$Ma in PK non esistono regole di eliminazione, possiamo solo complicare scendendo. Qual è l'unica regola che mi permette di distruggere l'informazione? Il $cut$. In questo caso il $cut*$.$$\dfrac{\begin{matrix}Γ_Y \Rightarrow β\landγ\\\vdots\\Γ_Y\Rightarrowβ\landγ \qquad β\landγ\Rightarrowβ\end{matrix}}{Γ_Y\Rightarrowβ}cut*$$A destra si può procedere in due modi. Il metodo che *non* usano le dispense è (bottom-up) con $Λs$ e poi $ss,is$. Il ramo a sinistra è quello che esiste per ipotesi. $$\dfrac{\begin{matrix}Y\\\vdots\\Γ_Y\Rightarrowβ\landγ\end{matrix} \qquad \dfrac{\dfrac{β\Rightarrowβ}{β,γ\Rightarrowβ}ss,is}{β\landγ\Rightarrowβ}Λs}{Γ_Y\Rightarrowβ}cut*$$ Non riesco ad allinearlo. Notiamo come la regola destra corrisponde alla regola di introduzione, e la regola sinistra corrisponde alla regola di eliminazione. E ci torna, perché se introduciamo qualcosa la stiamo mettendo nella conclusione.
+
 #### Eliminazione della disgiunzione
 
-Vediamo la chiusura di un'assunzione. $D$ è fatto così:$$\dfrac{\begin{matrix}Y&[β]\\&\vdots\\&γ\end{matrix}}{β\rightarrowγ}\rightarrow I$$E capiamoci. Quando faccio $\rightarrow I$, sto cambiando l'insieme di assunzioni aperte. Se $β\rightarrowγ$ segue dall'insieme di assunzioni $Y$, invece $γ$ segue dall'insieme di assunzioni $Y \cup \{β\}$, cioè $\vdash_{PK}β,\;Γ_Y \Rightarrow γ$.
+Vediamo la chiusura di un'assunzione. $D$ è fatto così: $$\dfrac{\begin{matrix}Y&[β]\\&\vdots\\&γ\end{matrix}}{β\rightarrowγ}\rightarrow I$$ E capiamoci. Quando faccio $\rightarrow I$, sto cambiando l'insieme di assunzioni aperte. Se $β\rightarrowγ$ segue dall'insieme di assunzioni $Y$, invece $γ$ segue dall'insieme di assunzioni $Y \cup \{β\}$, cioè $\vdash_{PK}β,\;Γ_Y \Rightarrow γ$.
 
-All'esame ciò che importa non è il calcolone logico di derivazione a mano, è capire *perché* e cosa significa che aggiungiamo quel $β$ alle assunzioni. L'albero da qui è semplice in realtà:$$\dfrac{β,\;Γ_Y\Rightarrowγ}{Γ_Y\Rightarrowβ\rightarrowγ}\rightarrow d$$
+All'esame ciò che importa non è il calcolone logico di derivazione a mano, è capire *perché* e cosa significa che aggiungiamo quel $β$ alle assunzioni. L'albero da qui è semplice in realtà: $$\dfrac{β,\;Γ_Y\Rightarrowγ}{Γ_Y\Rightarrowβ\rightarrowγ}\rightarrow d$$
 Abbiamo adesso dimostrato (per alcuni casi) la conversione da ND a PK, il primo teorema.
 ## Da PK a ND
 
