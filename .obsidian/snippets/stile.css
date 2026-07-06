@@ -101,6 +101,10 @@
     background-color: transparent;
     color: var(--accent);
 }
+.markdown-rendered mark {
+    background-color: transparent;
+    color: var(--accent);
+}
 .markdown-preview-view mark {
     background-color: transparent;
     color: var(--accent);

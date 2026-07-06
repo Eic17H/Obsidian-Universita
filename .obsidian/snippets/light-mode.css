@@ -1,5 +1,6 @@
-.theme-light * {
-    font-family: serif;
+* .theme-light {
+    --font-text-theme: serif;
+    --font-interface-theme: serif;
 
     --paper-white-0: #f3f0ee;
     --paper-white-1: #EAE7E5;
