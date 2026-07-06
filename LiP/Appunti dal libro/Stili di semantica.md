@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - lip
+aliases:
+---
 Ci sono tre approcci per formalizzare la semantica:
 ## Operazionale
 

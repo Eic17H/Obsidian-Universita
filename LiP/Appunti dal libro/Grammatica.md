@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - lip
+aliases:
+---
 # Grammatica
 
 ## Concetto

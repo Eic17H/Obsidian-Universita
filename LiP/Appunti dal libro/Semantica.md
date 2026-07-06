@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - lip
+aliases:
+---
 La grammatica descrive la struttura di un linguaggio, ma non ci dice cosa significa. "Come" è una sequenza di simboli accettata sia dall'italiano che dall'inglese, ma ha un significato diverso nelle due lingue. La differenza tra le due si trova non nella grammatica ma nella **semantica**.
 
 Per quanto ci riguarda, la semantica definisce *cosa fa* un programma sintatticamente corretto. Permette di sviluppare tecniche di ottimizzazione e di debugging, di verificare la correttezza, di tradurre tra formalismi diversi.

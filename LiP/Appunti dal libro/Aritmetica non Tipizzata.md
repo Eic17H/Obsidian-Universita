@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - lip
+aliases:
+---
 Introduciamo gli aspetti basilari dei linguaggi di programmazione. Per semplicità, li vediamo prima senza tipi.
 
 Come linguaggio esempio, ne usiamo uno che tratta solo di numeri e booleani. Vediamo i concetti di *sintassi astratta*, *definizioni*, *dimostrazioni induttive*, *valutazione* ed *errori di runtime*.
