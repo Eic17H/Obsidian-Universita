@@ -14,14 +14,14 @@ Una fallacia formale è uno schema di argomento invalido ma che può essere scam
 
 *Se abbiamo un'implicazione e sappiamo che il precedente è falso, allora sappiamo che il conseguente è falso.*
 
-Sarebbe ((α->β) Λ ¬α) -> ¬β. Vediamo la tabella:
+Sarebbe $((α\rightarrowβ)\land\lnotα)\rightarrow\lnotβ$. Vediamo la tabella:
 
-| α   | ->  | β   | Λ   | ¬   | α   | ->  | ¬   | β   |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0   | 1   | 0   | 1   | 1   | 0   | 1   | 1   | 0   |
-| 0   | 1   | 1   | 1   | 1   | 0   | 0   | 0   | 1   |
-| 1   | 0   | 0   | 0   | 0   | 1   | 1   | 1   | 0   |
-| 1   | 1   | 1   |     | 0   | 1   | 1   | 0   | 1   |
+| $α$ | $\rightarrow$ | $β$ | $\land$ | $\lnot$ | $α$ | $\rightarrow$ | $\lnot$ | $β$ |
+| --- | ------------- | --- | ------- | ------- | --- | ------------- | ------- | --- |
+| 0   | 1             | 0   | 1       | 1       | 0   | 1             | 1       | 0   |
+| 0   | 1             | 1   | 1       | 1       | 0   | 0             | 0       | 1   |
+| 1   | 0             | 0   | 0       | 0       | 1   | 1             | 1       | 0   |
+| 1   | 1             | 1   | 0       | 0       | 1   | 1             | 0       | 1   |
 Non è una tautologia, quindi non è uno schema valido. Alla seconda riga ho un antecedente vero e un conseguente falso.
 
 Istanziamolo e vediamo che succede: *Se il bambino fa i capricci allora i genitori gli requisiscono la PlayStation. Il bambino non fa i capricci, allora i genitori non li requisiscono la PlayStation.* Ci torna? Sembra di sì. Eppure potrebbero esserci altri motivi. Infatti se *i genitori gli requisiscono la PlayStation in ogni situazione*, è possibile che l'antecedente dello schema sia vero, ma il conseguente sia falso.
