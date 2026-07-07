@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 La cesura è scomoda. Vediamo una modifica.
 
 Supponiamo di avere una regola in cui si possiamo fare una cesura di questo tipo:$$\dfrac{Γ\RightarrowΔ,a \qquad a,Π\RightarrowΣ}{Γ,Π \Rightarrow Δ,Σ}cut*$$

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Finora abbiamo visto teoremi, che sono enunciati *in* $\mathcal{L}_0$ e ci dicono cose riguardo alla logica. L'eliminazione dell'identità però *riguarda* $\mathcal{L}_0$, e quindi è enunciato in linguaggio naturale. Lo chiameremo teorema, ma è in realtà un *metateorema*, un teorema di metalogica.
 
 Ricordiamo che una derivazione senza assunzioni è detta dimostrazione.

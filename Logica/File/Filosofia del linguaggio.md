@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Vediamo due gradi di libertà ortogonali.
 # Significato delle parole
 ## Teoria composizionale

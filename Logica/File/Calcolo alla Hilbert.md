@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 $\newcommand{\L}{\mathcal{L}}$$\Gamma \models _{HK} \alpha$. Il nostro sistema sarà un sistema meccanico per generare algoritmicamente schemi di argomento validi, cioè tautologie, cioè $\alpha$ tali che $\emptyset \models _{HK} \alpha$.
 
 Hilbert: generare tautologie da un piccolo numero di postulati (assiomi), che includono particolari formule che sceglierò come assiomi e che saranno tautologie e un certo numero di schemi di argomento valido a partire dai quali tutti gli altri possono essere generati. Piccolo numero di postulati, cioè assiomi e regole di inferenza, e da lì generiamo tutti gli altri.

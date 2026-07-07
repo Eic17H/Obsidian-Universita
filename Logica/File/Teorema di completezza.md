@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 $Γ\models_{HK}α \rightarrow Γ\vdash_{HK}α$, e anche $\models_{HK}α \rightarrow \;\vdash_{HK}α$. Tutti i teoremi possono essere dimostrati.
 
 ## Contesto

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 ## Condizione sufficiente
 
 > Sia $Γ\subseteq For(\mathcal L_0)$. $Γ$ si dice ==inconsistente== se per ogni formula $β$ si ha $Γ\vdash_{HK}β$.

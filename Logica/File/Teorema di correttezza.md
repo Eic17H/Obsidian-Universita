@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 $Γ\vdash_{HK}α \rightarrow Γ\models_{HK}α$, e anche $\vdash_{HK}α \rightarrow \;\models_{HK}α$. Tutto ciò che si può dimostrare è un teorema. Questo ci dice che il nostro calcolo non è stupido, dimostro solo cose vere.
 
 Per ogni $Γ \subseteq For(\mathcal L _0)$ e per ogni $α \in For(\mathcal L _0)$, se $Γ\vdash_{HK}α$, allora $Γ\models_{HK}α$.

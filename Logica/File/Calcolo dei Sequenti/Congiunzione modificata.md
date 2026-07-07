@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Vediamo una modifica della regola di congiunzione sinistra.
 
 Quella che conosciamo è così:$$\dfrac{A,B,Γ \Rightarrow Δ}{A \land B,Γ \Rightarrow Δ}Λs$$Quella modificata è in realtà divisa in due regole:$$\dfrac{A,Γ \Rightarrow Δ}{A \land B,Γ \Rightarrow Δ}Λs(a) \qquad \dfrac{B,Γ \Rightarrow Δ}{A \land B,Γ \Rightarrow Δ}Λs(b)$$

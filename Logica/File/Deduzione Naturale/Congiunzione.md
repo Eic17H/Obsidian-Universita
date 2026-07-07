@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 # Proprietà
 
 ## Commutatività

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 Così come la deduzione naturale, il calcolo delle sequenze nasce negli anni 30, in particolare nel 1934, con Gentzen, allievo di Hilbert. Scuola tedesca di logica della prima metà del 1900, gli allievi di Hilbert, tutte queste logiche.
 
 Gentzen introduce nello stesso trattato sia ND che Seq.

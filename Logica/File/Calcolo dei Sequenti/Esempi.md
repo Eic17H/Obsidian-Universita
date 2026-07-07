@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - logica
+---
 # De Morgan
 
 $\vdash_{PK} \; \Rightarrow ¬(p \lor q) \rightarrow ¬p \land ¬q$
