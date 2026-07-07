@@ -1,0 +1,1 @@
+Non capisco gli strani simboli trovati nel libro.

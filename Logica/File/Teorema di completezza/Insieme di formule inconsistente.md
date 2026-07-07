@@ -6,13 +6,7 @@ Un insieme di formule è inconsistente se da esso posso derivare tutto.
 
 > Un insieme di formule si dice ==consistente== quando *non è* inconsistente, cioè esiste una formula che non si può derivare da esso.
 
-Per esempio, $Γ=\{α,¬α\}$. Semplice esempio di insieme inconsistente: ex absurdo quodlibet.$$\begin{matrix}
-1. & α & \text{assunzione} \\
-2. & ¬α & \text{assunzione} \\
-3. & α\rightarrow(¬α\rightarrowβ) & A10 \\
-4. & ¬α\rightarrowβ&R1, 1, 3 \\
-5. & β & R1,2,4
-\end{matrix}$$Non è però condizione necessaria perché sia inconsistente. Potrei non avere una contraddizione esplicita nelle assunzioni, ma potrei ricavarmela tramite modus ponens.
+Per esempio, $Γ=\{α,¬α\}$. Semplice esempio di insieme inconsistente: ex absurdo quodlibet. $$\begin{matrix*} [l] 1. & α & \text{assunzione} \\2. & ¬α & \text{assunzione} \\3. & α\rightarrow(¬α\rightarrowβ) & A10 \\4. & ¬α\rightarrowβ&R1, 1, 3 \\5. & β & R1,2,4\end{matrix*}$$Non è però condizione necessaria perché sia inconsistente. Potrei non avere una contraddizione esplicita nelle assunzioni, ma potrei ricavarmela tramite modus ponens.
 
 ## Condizione necessaria e sufficiente
 
@@ -24,7 +18,7 @@ Questa è una condizione necessaria e sufficiente.
 
 Facciamo entrambe le direzioni per contrapposizione.
 
-> $Γ$ è un insieme inconsistente sse esiste $β\in For(\mathcal L_0)$ tale che $Γ\vdash_{HK}β$ e $Γ\vdash_{HK}¬β$.
+> $Γ$ è un insieme inconsistente ==sse== esiste $β\in For(\mathcal L_0)$ tale che $Γ\vdash_{HK}β$ e $Γ\vdash_{HK}¬β$.
 
 ### Da sinistra verso destra (se)
 
