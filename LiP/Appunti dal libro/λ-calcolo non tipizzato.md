@@ -74,28 +74,28 @@ La valutazione è una relazione da termini a termini. Con tutte le strategie tra
 Qualunque redex si può ridurre in qualunque momento. Ad ogni passaggio possiamo scegliere un redex qualunque e riscriverlo.
 
 Per esempio: $$(λx.x)\ ((λx.x)\ (λz.(λx.x)\ z))= id\ (id\ (λz.id\ z))$$Ci sono tre redex, quelli sottolineati:
-* $\u {id\ (id\ (λz.id\ z))}$
-* $id\ \u {(id\ (λz.id\ z))}$
-* $id\ (id\ (λz.\u{id\ z}))$
+* $\underline {id\ (id\ (λz.id\ z))}$
+* $id\ \underline  {(id\ (λz.id\ z))}$
+* $id\ (id\ (λz.\underline {id\ z}))$
 
-Con la beta-riduzione piena, li possiamo fare in qualunque ordine: $$\begin{matrix*}[l] &id\ (id\ (λz.\u{id\ z}))\\
-\rightarrow&\u{id\ (id\ (λz.z))}\\
-\rightarrow&\u{id\ (λz.z)}\\
+Con la beta-riduzione piena, li possiamo fare in qualunque ordine: $$\begin{matrix*}[l] &id\ (id\ (λz.\underline {id\ z}))\\
+\rightarrow&\underline {id\ (id\ (λz.z))}\\
+\rightarrow&\underline {id\ (λz.z)}\\
 \rightarrow&(λz.z)\\
 \nrightarrow\end{matrix*}$$
 #### Ordine normale
 
-Riduciamo sempre per primo il redex più a sinistra e più esterno. $$\begin{matrix*}[l] &\u{id\ (id\ (λz.id\ z))}
-\\\rightarrow& \u{id\ (λz.id\ z)}
-\\\rightarrow& λz.\u{id\ z}
+Riduciamo sempre per primo il redex più a sinistra e più esterno. $$\begin{matrix*}[l] &\underline {id\ (id\ (λz.id\ z))}
+\\\rightarrow& \underline {id\ (λz.id\ z)}
+\\\rightarrow& λz.\underline {id\ z}
 \\\rightarrow& λz.z
 \\\nrightarrow
 \end{matrix*}$$
 
 #### Chiamata per nome
 
-*Call by name*. Come l'ordine normale ma non sono permesse riduzioni all'interno delle astrazioni. $$\begin{matrix*}[l] &\u{id\ (id\ (λz.id\ z))}
-\\\rightarrow& \u{id\ (λz.id\ z)}
+*Call by name*. Come l'ordine normale ma non sono permesse riduzioni all'interno delle astrazioni. $$\begin{matrix*}[l] &\underline {id\ (id\ (λz.id\ z))}
+\\\rightarrow& \underline {id\ (λz.id\ z)}
 \\\rightarrow& λz.id\ z
 \\\nrightarrow
 \end{matrix*}$$Varianti di questa strategia sono state usate in Algol e Haskell. Quella di Haskell è la chiamata per necessità, *call by need*: quando si valuta un termine, lo si sovrascrive in tutte le sue occorrenze, in modo condiviso, usando grafi anziché alberi di sintassi.
@@ -104,8 +104,8 @@ Questa strategia e le sue varianti sono *lazy*, cioè valutano un termine solo q
 #### Chiamata per valore
 
 La maggior parte dei linguaggi usa questa strategia, *call by value*: si riducono solo i redex più esterni, considerando solo quelli il cui lato destro è già un valore. La valutazione avviene in modo *rigoroso*, l'opposto di lazy, cioè si valutano sempre anche se non vengono usati. $$\begin{matrix*}[l]
-&id\ \u{(id\ (λz.id\ z))}
-\\\rightarrow& \u{id\ (λz.id\ z)}
+&id\ \underline {(id\ (λz.id\ z))}
+\\\rightarrow& \underline {id\ (λz.id\ z)}
 \\\rightarrow& λz.id\ z
 \\\nrightarrow
 \end{matrix*}$$Noi useremo questa strategia, anche se non fa molta differenza nella discussione dei sistemi di tipo.
