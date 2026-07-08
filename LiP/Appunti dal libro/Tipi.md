@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - lip
+---
 ## A cosa servono i tipi
 
 Abbiamo visto questi termini: $$\begin{matrix*}[l]
@@ -35,7 +39,7 @@ Quando ci limitiamo alla sintassi senza entrare nella valutazione, non possiamo 
 
 Scopriamo il tipo di un termine tramite le regole di inferenza.
 
-I nostri assiomi sono: $$\dfrac{}{0:Nat}(\text{T-Zero})\qquad\dfrac{}{true:Bool}(\text{T-True})\qquad\dfrac{}{false:bool}(\text{T-False})$$
+I nostri assiomi sono: $$\dfrac{}{0:Nat}(\text{T-Zero})\qquad\dfrac{}{true:Bool}(\text{T-True})\qquad\dfrac{}{false:Bool}(\text{T-False})$$
 Inferiamo poi: $$\begin{matrix}\dfrac{t1:Bool \qquad t2:T \\ t3:T}{if\ t1\ then \ t2 \ else \ t3:T}(\text{T-If}) \\ \dfrac{t:Nat}{succ\ t:Nat}(\text{T-Succ}) \\ \dfrac{t:Nat}{pred\ t:Nat}(\text{T-Pred}) \\ \dfrac{t:Nat}{iszero\ t:Bool}(\text{T-Iszero})\end{matrix}$$
 
 Adesso, una definizione dalla struttura familiare:
