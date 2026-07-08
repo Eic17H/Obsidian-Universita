@@ -40,7 +40,7 @@ Quando ci limitiamo alla sintassi senza entrare nella valutazione, non possiamo 
 Scopriamo il tipo di un termine tramite le regole di inferenza.
 
 I nostri assiomi sono: $$\dfrac{}{0:Nat}(\text{T-Zero})\qquad\dfrac{}{true:Bool}(\text{T-True})\qquad\dfrac{}{false:Bool}(\text{T-False})$$
-Inferiamo poi: $$\begin{matrix}\dfrac{t1:Bool \qquad t2:T \\ t3:T}{if\ t1\ then \ t2 \ else \ t3:T}(\text{T-If}) \\ \dfrac{t:Nat}{succ\ t:Nat}(\text{T-Succ}) \\ \dfrac{t:Nat}{pred\ t:Nat}(\text{T-Pred}) \\ \dfrac{t:Nat}{iszero\ t:Bool}(\text{T-Iszero})\end{matrix}$$
+Inferiamo poi: $$\begin{matrix}\dfrac{t1:Bool \qquad t2:T \\ t3:T}{if\ t1\ then \ t2 \ else \ t3:T}(\text{T-If}) \\ \dfrac{t:Nat}{succ\ t:Nat}(\text{T-Succ}) \qquad \dfrac{t:Nat}{pred\ t:Nat}(\text{T-Pred}) \\ \dfrac{t:Nat}{iszero\ t:Bool}(\text{T-Iszero})\end{matrix}$$
 
 Adesso, una definizione dalla struttura familiare:
 
@@ -52,7 +52,7 @@ C'è una parte che non ho capito concretamente ma credo si riferisca praticament
 
 > **==Teorema dell'unicità dei tipi==**: ogni termine $t$ ha al massimo un tipo, e c'è solo una possibile derivazione costruibile dalle regole di inferenza.
 
-Questo teorema vale... Nel nostro linguaggio molto semplice. Con la sottotipizzazione (che non vedremo), il tipo può non essere unico, e la derivazione può non essere unica.
+Questo teorema vale... nel nostro linguaggio molto semplice. Con la sottotipizzazione (che non vedremo), il tipo può non essere unico, e la derivazione può non essere unica.
 
 ## Correttezza
 
