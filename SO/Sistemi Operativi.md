@@ -5,6 +5,9 @@ cssclasses:
 ## [[SO/Teoria/Teoria|Modulo I]]
 ## [[SO/Lab/Lab|Modulo II]]
 
+## Avvertenze
+
+Questi appunti sono perlopiù orrendi, ma ci sono quindi li tengo.
 ## Informazioni
 
 Il regolamento esiste per rispondere a dubbi e domande. Se fai una domanda che non è nel regolamento, la risposta viene aggiunta al regolamento.

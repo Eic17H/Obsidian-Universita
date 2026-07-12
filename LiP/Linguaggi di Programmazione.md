@@ -2,29 +2,43 @@
 cssclasses:
   - lip
 ---
-Le lezioni di Pinna sono difficili da seguire, questi sono perlopiù riassunti del libro di Leonardo Dessì, Erica Corda, Matteo Dessì e Simone Giuffrida. Gli esempi sono ridotti, alcuni passaggi sono allungati per essere più chiari, e alcune parti difficili o scritte male sono integrate con informazioni trovate online.
-### Capitolo 1
-* [[LiP/Appunti dal libro/Introduzione|Introduzione]]
-* [[LiP/Appunti dal libro/Storia|Storia]]
-### Capitolo 2
-* [[Linguaggi|Linguaggi]]
-* [[Automi]]
-* [[Grammatica]]
-### Capitolo 3
-* [[Semantica]]
-### Capitolo 4
-* [[Aritmetica non tipizzata]]
-* [[Stili di semantica]]
-### Capitolo 5
-* [[λ-calcolo non tipizzato]]
-### Capitolo 6
-* [[Macchina SECD]]
-### Capitolo 7
-* [[LiP/Appunti dal libro/Tipi|Tipi]]
-### Capitolo 7
-* [[λ-calcolo tipizzato]]
+## La materia
+
+Questa materia riguarda le scelte di design dietro i linguaggi di programmazione, le fondamenta matematiche dei linguaggi formali, e come viene definito il comportamento dei linguaggi funzionali e imperativi. Vedi anche [[LiP/Appunti dal libro/Introduzione|l'introduzione e la storia]].
+
+LiP è una sorta di ALF 2. Inoltre, è più facile se si è anche seguito Istituzioni di Logica.
+
+C'è anche il [[λ-calcolo non tipizzato|λ-calcolo]], molto importante in generale ma completamente inutile per l'esame.
+## Esame scritto
+
+L'esame scritto contiene quattro categorie di esercizi. Non è necessario conoscere tutta la teoria per fare lo scritto, ma è utile in generale, e rende più facile capire cosa stai facendo. In generale, bisogna saper fare gli esercizi.
+
+Il voto massimo dello scritto è 16.
+
+### [[LiP/Categorie/Linguaggi|Linguaggi]]
+
+1 punto.
+
+Dato un linguaggio, si deve scrivere una grammatica o un pallogramma equivalente.
+### [[Valutazione|Valutazione]]
+
+6 punti.
+
+Vengono date le regole di inferenza big-step e small-step per la valutazione di un linguaggio imperativo, e viene dato un termine. Si chiede di valutare quel termine, sia con la semantica big-step che con la semantica small-step.
+### [[Tipizzazione|Tipizzazione]]
+
+3 punti.
+
+Vengono date le regole di inferenza di tipo di un linguaggio imperativo, e viene dato un tipo. Si chiede di scrivere un termine con quel tipo, e di inferirne il tipo.
+### [[Binding|Binding]]
+
+6 punti.
+
+Ci sono diversi modi in cui un linguaggio di programmazione può gestire lo scope e il passaggio di parametri. All'esame, viene fornito del codice e viene chiesto come varia il valore di certe variabili dopo la sua esecuzione al variare di questa gestione.
 
 ## Termini
+
+Lista di termini un po' abbandonata. Per ora la tengo.
 
 **Lexer** - Legge il codice carattere per carattere e li raggruppa in token. Genera un errore se trova una serie vietata di caratteri.
 **Parser** - Legge il codice token per token e identifica i token. Genera un errore se trova una serie vietata di token.

@@ -10,7 +10,7 @@
     "postProcess": true,
     "displayProgress": true,
     "inlineHTML": false,
-    "exportPath": "C:\\Users\\H\\Desktop\\htmltest",
+    "exportPath": "C:\\GitHub\\eic17h.github.io\\appunti-universita",
     "filesToExport": [
       "ALF/File/Logica proposizionale classica.md",
       "Logica"
@@ -90,8 +90,8 @@
     },
     "searchOptions": {
       "featureId": "search",
-      "enabled": false,
-      "unavailable": true,
+      "enabled": true,
+      "unavailable": false,
       "alwaysEnabled": false,
       "hideSettingsButton": false,
       "featurePlacement": {
@@ -185,8 +185,8 @@
     },
     "rssOptions": {
       "featureId": "rss",
-      "enabled": false,
-      "unavailable": true,
+      "enabled": true,
+      "unavailable": false,
       "alwaysEnabled": false,
       "hideSettingsButton": false,
       "siteUrl": "",
@@ -199,15 +199,15 @@
       "alwaysEnabled": false,
       "hideSettingsButton": true
     },
-    "relativeHeaderLinks": false,
+    "relativeHeaderLinks": true,
     "includeJS": true,
     "includeCSS": true,
-    "inlineMedia": true,
-    "inlineCSS": true,
-    "inlineJS": true,
-    "inlineFonts": true,
-    "inlineOther": true,
-    "combineAsSingleFile": true,
+    "inlineMedia": false,
+    "inlineCSS": false,
+    "inlineJS": false,
+    "inlineFonts": false,
+    "inlineOther": false,
+    "combineAsSingleFile": false,
     "offlineResources": false,
     "themeName": "",
     "slugifyPaths": true,
@@ -231,7 +231,7 @@
   "rssDateProperty": "date",
   "onlyExportModified": true,
   "deleteOldFiles": true,
-  "exportPreset": "local",
+  "exportPreset": "online",
   "openAfterExport": false,
   "filePickerBlacklist": [
     "(^|\\/)node_modules\\/",

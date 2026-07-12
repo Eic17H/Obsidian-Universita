@@ -2,7 +2,6 @@
 cssclasses:
   - logica
 ---
-
 ## [[Logica/Moduli/Introduzione|Introduzione]]
 ## [[Modulo I]]
 * Enunciati

@@ -8,6 +8,6 @@ cssclasses:
 * [[Criteri di divisibilità]]
 * [[RSA]]
 * [[Cambio di base#Mossa|Cambio di base]]
-* [[MD/File/Matrici]]
+* [[MD/File/Matrici|Matrici]]
 
 #materia
