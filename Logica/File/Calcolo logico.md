@@ -25,7 +25,7 @@ Altro problema. L'insieme delle premesse abbiamo detto che deve essere un insiem
 
 # Valutazione del linguaggio $\mathcal{L}_0$
 $\newcommand{\L}{\mathcal{L}}$
-La valutazione è una funzione $\mathcal{V}:For(\L_0)->{0,1}$ tale che per ogni $α$, $β$ in $For(\mathcal L_0)$:
+La valutazione è una funzione $\mathcal{V}:For(\L_0)\rightarrow{0,1}$ tale che per ogni $α$, $β$ in $For(\mathcal L_0)$:
 * $\mathcal{V}(¬α)=1$ se e solo se $\mathcal{V}(α)=0$
 * $\mathcal V (α \land β) = 1$ se e solo se $\mathcal V (α) = 1$ e $\mathcal V (β) = 1$
 * $\mathcal V (α \lor β) = 1$ se e solo se $\mathcal V (α) = 1$, o $\mathcal V (β) = 1$, o entrambi

@@ -1,1 +1,0 @@
-[[ALF/File/Logica dei predicati|Logica dei predicati]]

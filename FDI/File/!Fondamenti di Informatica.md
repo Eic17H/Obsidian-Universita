@@ -165,10 +165,10 @@ Se sono discordi però, devo comunque fare una sottrazione per fare un'addizione
 C'è un altro metodo di rappresentazione, quella in complemento.
 Partiamo dalla base 10, e facciamo il cosiddetto complemento a 9.
 Prendiamo ogni singola cifra e la sottraiamo da $9$.
-$0123456789$ -> $9876543210$, $41$->$58$, $123$->$876$.
+$0123456789 \rightarrow 9876543210$, $41 \rightarrow 58$, $123 \rightarrow 876$.
 Visto che non c'è riporto, è come fare $99-41=58$, $999-123=876$.
 Il complemento a 10 è il complemento a 9, con un'aggiunta di $+1$.
-$41$->$59$, $123$->$877$.
+$41 \rightarrow 59$, $123 \rightarrow 877$.
 Notiamo che, $41+59=100$, $123+877=1000$.
 Il complemento a 10 di un numero $N$ con $n$ cifre sarà uguale a $10n-N$.
 Il complemento a $B$ di $N$ si indica con $CB(N)$.

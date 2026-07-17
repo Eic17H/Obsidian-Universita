@@ -9,4 +9,8 @@ cssclasses:
 * [[Numeri binari]]
 * [[Mappe di Karnaugh]]
 
+## Introduzione
+
+Questi appunti sono molto incompleti.
+
 #materia

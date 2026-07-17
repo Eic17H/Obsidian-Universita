@@ -14,11 +14,11 @@ E poi c'è un'unica regola d'inferenza, che è uno schema di argomento, il modus
 
 Esistono un numero infinito di formule derivabili da questi postulati, perché $α$, $β$ e $γ$ sono sostituibili con qualunque formula, e un'istanza di sostituzione di un assioma è un assioma. Ogni assioma di questo calcolo è in realtà uno schema di assioma che ne compendia (raggruppa) infiniti altri. Quindi il calcolo HK ha infiniti assiomi che possono essere raggruppati in 11 schemi di assioma.
 
-Vedi anche la [[Logica/File/Calcolo alla Hilbert/Storia|storia]]
+Vedi anche la [[Logica/File/Calcolo alla Hilbert/Storia|storia]].
 
 # Dimostrazione
 
-Quindi cos'è la dimostrazione in calcolo HK? Una successione finita di formule in L0 ognuna delle quali o è un assioma o è ottenuta da formule precedenti (nella successione) ottenuta dall'unica regola di inferenza, ossia il modus ponens.
+Quindi cos'è la dimostrazione in calcolo HK? Una successione finita di formule in $\mathcal L _0$ ognuna delle quali o è un assioma o è ottenuta da formule precedenti (nella successione) ottenuta dall'unica regola di inferenza, ossia il modus ponens.
 
 Metamatematica. La matematica si occupa di numeri e geometria eccetera. La metamatematica si occupa di dimostrazioni matematiche nelle teorie assiomatiche formali. Per questo Hilbert voleva che i suoi assiomi fossero matematicamente definiti per farci sopra delle dimostrazioni metamatematiche. (Non so se sono scemo io o se ha menzionato Peano perché ho visto stamattina un video su Peano e sulla metamatematica e sono ancora mezzo addormentato).
 

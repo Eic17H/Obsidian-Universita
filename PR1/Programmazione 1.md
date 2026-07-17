@@ -2,8 +2,7 @@
 cssclasses:
   - pr1
 ---
-## Modulo I
-### Indice
+## Indice
 * [[PR1/Modulo I/Algoritmi|Algoritmi]]
 * [[Tipi]]
 * [[Subroutine e librerie]]

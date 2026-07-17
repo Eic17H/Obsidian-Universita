@@ -25,7 +25,7 @@ Immaginati un albero piuttosto che una tabella.
 
 Ok, abbiamo definito l'alfabeto, da qui come definiamo poi quali espressioni sono grammaticalmente corrette? Nei linguaggi naturali, non c'è un criterio matematico, c'è un dizionario. Definiamo per induzione.
 
-Definizione induttiva: parto da base e passo. Analisi Matematica menzionata. Episodio crossover, e ovviamente regole di inferenza di ALF. Parto da uno stock iniziale di elementi dell'insieme, che è la base, e definisco nel passo una funzione che mi espande a macchia d'olio l'insieme generando nuovi elementi.
+<span class="am">[[Assiomi e induzione|Definizione induttiva]]</span>: parto da base e passo. Analisi Matematica menzionata. Episodio crossover, e ovviamente regole di inferenza di ALF. Parto da uno stock iniziale di elementi dell'insieme, che è la base, e definisco nel passo una funzione che mi espande a macchia d'olio l'insieme generando nuovi elementi.
 
 Per esempio, definisco i numeri naturali. La mia base è lo $0$, il passo è l'operatore di successione. Quindi base: "lo $0$ è un numero naturale", passo: "se $N$ è un numero naturale, allora $succ(N)$ è un numero naturale". Quindi, $3$ è un numero naturale? Lo è se lo è $2$, che lo è se lo è $1$, che lo è se lo è $0$, che lo è. Quindi vero: $3$ è un numero naturale.
 
@@ -46,7 +46,7 @@ L'insieme delle formule è dunque *il più piccolo insieme che si può ottenere 
 
 La definizione induttiva e questa qui sono equivalenti.
 
-Quante sono le formule di $\mathcal{L}_0$? Poiché le variabili sono un insieme infinito numerabile, L0 deve essere quantomeno infinito numerabile. È innumerabile? Allora, no perché puoi contare i connettivi eccetera che non faremo.
+Quante sono le formule di $\mathcal{L}_0$? Poiché le variabili sono un insieme infinito numerabile, $\mathcal{L}_0$ deve essere quantomeno infinito numerabile. È innumerabile? Allora, no perché puoi contare i connettivi eccetera che non faremo.
 
 Posso riconoscere se una qualche stringa di simboli è una formula nel mio linguaggio o no? Sì, applicando passo per passo la definizione induttiva di formula.
 

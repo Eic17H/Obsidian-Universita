@@ -1,9 +1,9 @@
 {
   "collapse-filter": false,
-  "search": "-file:Indice -path:.canvas",
+  "search": "-file:Indice -path:.canvas -tag:hidden -path:AM/",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": false,
   "collapse-color-groups": true,
   "colorGroups": [
@@ -175,10 +175,10 @@
   "nodeSizeMultiplier": 1.52310518518519,
   "lineSizeMultiplier": 3.49297777777778,
   "collapse-forces": false,
-  "centerStrength": 0.389037037037037,
-  "repelStrength": 20,
-  "linkStrength": 1,
+  "centerStrength": 0.351704105344694,
+  "repelStrength": 12.6359411309063,
+  "linkStrength": 0.728466305189775,
   "linkDistance": 30,
-  "scale": 0.5825505935649646,
+  "scale": 0.05649814830083502,
   "close": false
 }

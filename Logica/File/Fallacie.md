@@ -4,7 +4,7 @@ cssclasses:
 ---
 Due classi fallacie: fallaci formali e informali.
 
-Quelle formali sono schemi di argomento (L0, insiemi di formule), quelle informali sono argomenti (linguaggio naturale).
+Quelle formali sono schemi di argomento ($\mathcal L _0$, insiemi di formule), quelle informali sono argomenti (linguaggio naturale).
 
 ## Fallacie formali
 

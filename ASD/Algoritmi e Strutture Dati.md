@@ -2,8 +2,13 @@
 cssclasses:
   - asd
 ---
-* [[ASD/Modulo II/Algoritmi|Algoritmi]]
-* [[ASD/Modulo II/Strutture Dati]]
+## Indice
+
+## [[ASD/Modulo II/Algoritmi|Algoritmi]]
+
+## [[ASD/Modulo II/Strutture Dati|Strutture Dati]]
+
+## Introduzione
 
 PR1 ci ha dato i mattoncini, con ASD cominciamo a costruire.
 Concetti astratti, priorità agli algoritmi rispetto alla pulizia del codice.
@@ -13,6 +18,6 @@ Non importa come implementi internamente una struttura dati, basta che l'utente 
 
 Il primo passo di ASD è capire lo pseudocodice.
 
-#modulo
+Questi appunti sono in realtà estremamente disordinati per ora perché non ne ho presi molti.
 
 #materia

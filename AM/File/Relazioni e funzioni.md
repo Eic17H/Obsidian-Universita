@@ -1,3 +1,6 @@
+---
+cssclasses: am
+---
 [[Discontinuità]]
 [[Ricorsione]]
 [[Equazioni]]

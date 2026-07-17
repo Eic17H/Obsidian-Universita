@@ -50,11 +50,11 @@ Una definizione sbagliata è: un argomento è valido se la sua conclusione è ve
 
 Tutti i tavoli hanno le gambe. Questo tavolo ha le gambe. Quindi questo tavolo è un tavolo. Verissimo, ma se lo applico a un altro soggetto. Tutti i tavoli hanno le gambe. Io ho le gambe. Quindi io sono un tavolo.
 
-In formula, uno schema con premesse da α1 ad αn e conclusione β è valido se e solo se (&\[i=1:n] αi) -> β è una tautologia. Ossia, quando tutte le istanze dello schema di argomento sono valide. Quella formula e quella frase sono equivalenti.
+In formula, uno schema con premesse da $α_1$ ad $α_n$ e conclusione $β$ è valido se e solo se $\left(\bigcap\limits_{i=1\rightarrow n} α_i\right)\rightarrowβ$ è una tautologia. Ossia, quando tutte le istanze dello schema di argomento sono valide. Quella formula e quella frase sono equivalenti.
 
 Attenzione, non diciamo che *lo schema è una tautologia*. La singola formula è una tautologia, e lo schema è un insieme di formule.
 
-Alcuni esempi di schemi di argomento validi sono il modus ponens (a->b, a | b), il modus tollens (a->b, ¬b | ¬a), e il sillogismo disgiuntivo (avb, ¬a, | b). Non sono *tutti* gli schemi validi, sono tre esempi. (come al solito sono alfa e beta ma non ho voglia). Quindi per esempio, #slide 
+Alcuni esempi di schemi di argomento validi sono il modus ponens $\dfrac{α\rightarrowβ\quad α}{β}$, il modus tollens $\dfrac{α\rightarrowβ\quad \lnotβ}{\lnotα}$, e il sillogismo disgiuntivo $\dfrac{α\lorβ\quad \lnotα}{β}$. Non sono *tutti* gli schemi validi, sono tre esempi. Quindi per esempio, #slide 
 
 Sono come delle ricette per produrre schemi validi. Quando li istanzio con enunciati del linguaggio naturale, gli argomenti che ne risultano sono necessariamente validi.
 
