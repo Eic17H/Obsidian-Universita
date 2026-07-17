@@ -14,3 +14,13 @@ List.fold_left f "ciao" [1;2;3;4] restituisce "ciaociao", perché i passaggi son
 * f ciaocia 4 → ciaociao
 
 Io l'avevo capita al contrario e infatti non sapevo fare quello che c'era all'esame
+
+Algoritmo equivalente in codice pseudo-C:
+```C
+function foldLeft(function f, atype v, btype l[]) {
+	for(i in l) {
+		v = f(v, l[i]);
+	}
+	return v;
+}
+```

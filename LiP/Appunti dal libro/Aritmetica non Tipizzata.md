@@ -37,7 +37,7 @@ Ho detto che ci dice che sono espressioni valide. Questo metalinguaggio accetta 
 
 ### Termini
 
-Definiamo <span class="am">[[assiomi e induzione|induttivamente]]</span> la sintassi del nostro linguaggio, definendo la nozione di termine.
+Definiamo <span class="am">[[Dimostrazioni|induttivamente]]</span> la sintassi del nostro linguaggio, definendo la nozione di termine.
 
 > **Termine** - L'insieme dei *termini* è il più piccolo insieme $\mathcal T$ tale che:
 > 1. $\{$`true`$,\;$`false`$,\;$`0`$\} \subseteq \mathcal T$;

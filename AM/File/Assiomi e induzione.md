@@ -1,4 +1,0 @@
----
-cssclasses: am
----
-[[Derivazione]]

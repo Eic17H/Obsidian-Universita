@@ -62,3 +62,14 @@ Quanti connettivi binari ci sono? Dati due valori di verità in input, e uno in 
 * ==Implicazione doppia==: $p \leftrightarrow q$, "p se e solo se q", vera se sono entrambe vere o entrambe false. $p$ è *condizione necessaria e sufficiente* di $q$. Qualcosa è un triangolo *se e solo se* ha tre lati.
 
 Rappresentando due numeri in binario, e trattando ciascun bit come proposizione, è possibile calcolare la loro somma con solo ==and== e ==xor==.
+
+Possiamo vedere i connettivi logici come tabelle di verità. Abbiamo due colonne per l'input e una per l'output. Indichiamo vero con $1$ e falso con $0$.
+
+| $p$ | $q$ | $p \land q$ | $p \lor q$ | $p \oplus q$ | $p \rightarrow q$ | $p \leftarrow q$ | $p \leftrightarrow q$ |
+| --- | --- | ----------- | ---------- | ------------ | ----------------- | ---------------- | --------------------- |
+| $0$ | $0$ | $0$         | $0$        | $0$          | $1$               | $1$              | $1$                   |
+| $0$ | $1$ | $0$         | $1$        | $1$          | $1$               | $0$              | $0$                   |
+| $1$ | $0$ | $0$         | $1$        | $1$          | $0$               | $1$              | $0$                   |
+| $1$ | $1$ | $1$         | $1$        | $0$          | $1$               | $1$              | $1$                   |
+
+In realtà tutti i connettivi si possono derivare da uno solo, $p|q$, detto "nand" o "operatore di Sheffer", equivalente a $\lnot(p \land q)$.

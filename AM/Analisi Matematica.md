@@ -5,8 +5,8 @@ cssclasses: am
 
 * [[Logica proposizionale]]
 * [[AM/File/Logica dei predicati|Logica dei predicati]]
-* [[Assiomi e induzione]]
-* [[AM/File/Insiemi|Insiemi]]
+* [[Dimostrazioni]]
+* [[Teoria degli Insiemi|Teoria degli Insiemi]]
 * [[Topologia della retta]]
 * [[Relazioni e funzioni]]
 * [[Calcolo infinitesimale]]
@@ -14,6 +14,6 @@ cssclasses: am
 
 ## Introduzione
 
-Non li ho ancora trascritti, ma per ora li ho predisposti.
+Li sto ancora trascrivendo.
 
 #materia
