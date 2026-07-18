@@ -115,7 +115,7 @@ Nota personale alle 3 del mattino: Noi da sotto sappiamo che valgono $Γ$ e $Σ$
 
 # Particolarità
 
-Gli alberi come nodi non hanno formule ma sequenze, quindi ciò che voglio derivare non sono formule ma sequenze. Inoltre, alle foglie posso avere assiomi, visto che adesso ne esiste uno. Di nuovo, se alle foglie non ho assunzioni, ho di nuovo un teorema, $\vdash_{PK}Γ\RightarrowΔ$.
+I nodi degli alberi non sono formule ma sequenze, quindi ciò che voglio derivare non sono formule ma sequenze. Inoltre, alle foglie posso avere assiomi, visto che adesso ne esiste uno. Di nuovo, se alle foglie non ho assunzioni, ho di nuovo un teorema, $\vdash_{PK}Γ\RightarrowΔ$. Noi lavoriamo solo coi teoremi (ma vedremo che il lato sinistro del freccione si comporterà un po' come le assunzioni di ND)
 
 # Dimostrazioni
 
@@ -134,16 +134,18 @@ Vediamo il fondo: $\Rightarrow p \land (p \rightarrow q) \rightarrow q$. Come l'
 Qual è il connettivo principale? L'implicazione. Regola di implicazione destra. Sposto l'antecedente a sinistra.$$\dfrac{p \land (p \rightarrow q) \Rightarrow q}{\Rightarrow p \land (p \rightarrow q) \rightarrow q}\rightarrow d$$
 Abbiamo fatto un passettino.
 
-Abbiamo un'altra sequenza. Come l'abbiamo ottenuta? Sì, tutto da capo. Potremmo vedere le regole strutturali, ma prima smontiamo tutti i connettivi logici. Congiunzione, vediamo l'introduzione della congiunzione.$$\dfrac{\dfrac{p, \; p\rightarrow q \Rightarrow q}{p \land (p \rightarrow q) \Rightarrow q}}{{\Rightarrow p \land (p \rightarrow q) \rightarrow q}\rightarrow d} \land s$$
-Rimane l'implicazione, ma non è in posizione attiva.
-
-Sto facendo un casino, da rifare, il modo in cui digito funziona solo top down.
-
-Scambo sinistro, ora è in posizione attiva.
-
-Implicazione sinistra, si divide in due. Il contesto, che sono le formule che ci sono ma non stiamo usando, dobbiamo ricopiarle su entrambi i rami. ss, con A=p, B=q, Gamma=successione il cui unico elemento è p, Delta = succession il cui unico elemento è q.
-
-Adesso a sinistra abbiamo un quasi assioma. C'è quella q che mi ferma. E come la togliamo? C'è in realtà una sorta di De Vizia, l'indebolimento. Vedo una formula che non voglio (deve essere in posizione attiva), e con l'indebolimento destro la tolgo. Siamo arrivati a sinistra a una foglia $p \Rightarrow p$, che è un assioma, e lui ha scritto $p \xRightarrow{\times} p$ per chiuderla. Facciamo la stessa cosa a destra, ma con scambio sinistro e indebolimento sinistro, ottenendo $q \xRightarrow{\times} q$.
+Abbiamo un'altra sequenza. Come l'abbiamo ottenuta? Sì, tutto da capo. Potremmo vedere le regole strutturali, ma prima smontiamo tutti i connettivi logici. Congiunzione, vediamo l'introduzione della congiunzione.$$\dfrac{\dfrac{p, \; p\rightarrow q \Rightarrow q}{p \land (p \rightarrow q) \Rightarrow q}Λs}{{\Rightarrow p \land (p \rightarrow q) \rightarrow q}\rightarrow d} \to d$$
+Rimane l'implicazione, ma non è in posizione attiva. La portiamo in posizione attiva con uno scambio.$$\dfrac{\dfrac{\dfrac{p\rightarrow q,\;p \Rightarrow q}{p, \; p\rightarrow q \Rightarrow q}ss}{p \land (p \rightarrow q) \Rightarrow q}Λs}{{\Rightarrow p \land (p \rightarrow q) \rightarrow q}\rightarrow d} \to d$$
+Ora che abbiamo il connettivo in posizione attiva, usiamo la regola dell'implicazione sinistra, che ramifica. Il contesto, che sono le formule che ci sono ma non stiamo usando, va ricopiato su entrambi i rami.$$\dfrac{\dfrac{\dfrac{
+\dfrac
+{p \Rightarrow p,\;q \qquad p,\;q \Rightarrow q}
+{p\rightarrow q,\;p \Rightarrow q}\to s
+}{p, \; p\rightarrow q \Rightarrow q}ss}{p \land (p \rightarrow q) \Rightarrow q}Λs}{{\Rightarrow p \land (p \rightarrow q) \rightarrow q}\rightarrow d} \to d$$
+Adesso a sinistra abbiamo un quasi assioma. C'è quella $q$ che mi ferma. E come la togliamo? C'è in realtà una sorta di De Vizia, l'indebolimento. Vedo una formula che non voglio (deve essere in posizione attiva), e con l'indebolimento destro la tolgo. Siamo arrivati a sinistra a una foglia $p \Rightarrow p$, che è un assioma, e e per chiuderla scriviamo $p \xRightarrow{\times} p$. Facciamo la stessa cosa a destra, ma l'indebolimento sinistro, ottenendo $q \xRightarrow{\times} q$.$$\dfrac{\dfrac{\dfrac{
+\dfrac
+{\dfrac{p \xRightarrow{\times} p}{p \Rightarrow p,\;q}id \qquad \dfrac{q \xRightarrow{\times} q}{p,\;q \Rightarrow q}is}
+{p\rightarrow q,\;p \Rightarrow q}\to s
+}{p, \; p\rightarrow q \Rightarrow q}ss}{p \land (p \rightarrow q) \Rightarrow q}Λs}{{\Rightarrow p \land (p \rightarrow q) \rightarrow q}\rightarrow d} \to d$$
 
 Se ci blocchiamo, visto che dobbiamo fare scelte, si fa *backtracking* e si fa un'altra scelta. Quindi non è un processo poi così algoritmico.
 
