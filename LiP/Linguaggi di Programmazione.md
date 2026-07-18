@@ -19,7 +19,7 @@ Il voto massimo dello scritto è 16.
 
 1 punto.
 
-Dato un linguaggio, si deve scrivere una grammatica o un pallogramma equivalente.
+Dato un linguaggio, si deve scrivere una grammatica o un automa equivalente.
 ### [[Valutazione|Valutazione]]
 
 6 punti.

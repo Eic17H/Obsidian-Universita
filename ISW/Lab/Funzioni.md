@@ -1,6 +1,6 @@
 Sequenze di comandi a cui diamo un nome, argomenti, e forse un valore di ritorno.
 
-```
+```Python
 def nome_funzione(param1, param2=10):
 	istruzioni
 	[return]

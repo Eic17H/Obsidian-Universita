@@ -17,7 +17,7 @@ Una ==grammatica== invece è un insieme $G = (\mathbf{V},A,\mathcal{P},\mathcal{
 
 Si parte da una stringa composta da $\mathcal S$, si applica una sostituzione di $\mathcal P$, e si ottiene un'altra stringa che può essere vuota o può contenere simboli presi da $\mathbf V$ o da $A$. Si ha "finito" quando non sono più presenti simboli di $\mathbf V$. Una stringa vuota si indica con $ε$.
 
-L'obiettivo degli esercizi è, dato un linguaggio, scrivere una grammatica che generi tutte e solo le stringhe riconosciute dal linguaggio. Certe volte propone di farlo con un pallogramma ma non lo consiglio. In realtà non ho capito se parla di un pallogramma perché sia un collega che Deepseek hanno parlato di "push down automaton" che non conosco.
+L'obiettivo degli esercizi è, dato un linguaggio, scrivere una grammatica che generi tutte e solo le stringhe riconosciute dal linguaggio. Certe volte propone di farlo con un automa ma non l'ho capito.
 
 Le regole di sostituzione si chiamano produzioni.
 ## Esercizi

@@ -2,7 +2,7 @@
 
 Il solito che conosciamo, ma al posto di `else if` c'è `elif`. In C, `else if` termina il primo blocco e ne inizia un altro, invece in Python `elif` continua lo stesso blocco con altre condizioni.
 
-```
+```Python
 if condizione:
 	istruzioni
 elif condizione2:
@@ -15,7 +15,7 @@ else:
 
 Ci permette di iterare su tutti gli elementi di un iterabile (liste, tuple, set, dizionari, etc).
 
-```
+```Python
 for variabile in iterabile:
 	istruzioni(variabile)
 ```
@@ -26,7 +26,7 @@ A ogni ciclo, `variabile` si riferirà all'elemento corrente dell'iterabile.
 
 Semplicissimo.
 
-```
+```Python
 while condizione:
 	istruzioni
 ```

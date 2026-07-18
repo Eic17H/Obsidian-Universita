@@ -13,26 +13,36 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AM/Analisi Matematica.md",
-                "mode": "source",
+                "file": "Indice.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Analisi Matematica"
+              "title": "Indice"
             }
           },
           {
-            "id": "eacfe68a7b74f82e",
+            "id": "c1e7b3e0f8eb71a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AM/File/Logica proposizionale.md",
+                "file": "ISW/Lab/Oggetti.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Logica proposizionale"
+              "title": "Oggetti"
+            }
+          },
+          {
+            "id": "89191a0b7d02d26f",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
@@ -68,7 +78,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sinn",
+                "query": "tag:#hidden",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +99,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -196,34 +207,34 @@
       "edge-tts:Read note aloud": false
     }
   },
-  "active": "eacfe68a7b74f82e",
+  "active": "c1e7b3e0f8eb71a1",
   "lastOpenFiles": [
-    "AM/File/Teoria degli Insiemi.md",
-    "AM/Analisi Matematica.md",
-    "AM/File/Logica proposizionale.md",
-    "Logica/File/Filosofia del linguaggio.md",
-    "Comune/Fold left in ocaml.md",
-    "LiP/Appunti dal libro/Aritmetica non Tipizzata.md",
-    "Logica/File/Enunciati/Linguaggio formale.md",
-    "Comune/Derivazione.md",
-    "AM/File/Dimostrazioni.md",
-    "AM/File/Logica dei predicati.md",
-    "ALF/File/Insiemi.md",
-    "Logica/File/Enunciati.md",
-    "Logica/File/Argomenti.md",
-    "Logica/File/Fallacie/Ambiguo, vago, relativo.md",
-    "Comune/Git.md",
-    "Comune/Regole di inferenza.md",
-    "Logica/File/Calcolo alla Hilbert/Assiomi.md",
-    "AM/File/Topologia della retta.md",
-    "AM/File/Relazioni e funzioni.md",
-    "AM/File/Calcolo infinitesimale.md",
-    "AM/File/3D.md",
-    "ALF/File/Logica dei predicati.md",
-    "AM/File/Insiemi/Insiemi numerici.md",
-    "AM/File/Calcolo infinitesimale/Derivate.md",
-    "AM/File/Calcolo infinitesimale/Integrali.md",
+    "ISW/Lab/Funzioni.md",
+    "ISW/Lab/Branching.md",
     "AM/File/Calcolo infinitesimale/Serie di Taylor.md",
+    "AM/File/Relazioni e funzioni/Equazioni.md",
+    "AM/File/Relazioni e funzioni/Ricorsione.md",
+    "LiP/Linguaggi di Programmazione.md",
+    "LiP/Categorie/Linguaggi.md",
+    "Indice.md",
+    "AM/Analisi Matematica.md",
+    "AM/File/Calcolo infinitesimale.md",
+    "ISW/Lab/Python.md",
+    "ISW/Lab/Strutture dati.md",
+    "ISW/Lab/Oggetti.md",
+    "PR2/Programmazione 2.md",
+    "RC/Reti di Calcolatori.md",
+    "RC/File/Non so in che categoria vada.md",
+    "RC/File/Protocolli di rete.md",
+    "IUM/Interazione Uomo-Macchina.md",
+    "BD/Basi di Dati.md",
+    "BD/Lab.md",
+    "BD/Lab/SQL.md",
+    "BD/Teoria.md",
+    "BD/Teoria/Paradigmi.md",
+    "ISW/Ingegneria del Software.md",
+    "FPW/FPW.md",
+    "SO/Sistemi Operativi.md",
     "Logica/Canvas/Connettivi logici.canvas",
     "LiP/Categorie",
     "LiP/Raw",

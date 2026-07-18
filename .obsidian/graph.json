@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:Indice -path:.canvas -tag:hidden -path:AM/",
+  "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -175,10 +175,10 @@
   "nodeSizeMultiplier": 1.52310518518519,
   "lineSizeMultiplier": 3.49297777777778,
   "collapse-forces": false,
-  "centerStrength": 0.351704105344694,
-  "repelStrength": 12.6359411309063,
-  "linkStrength": 0.728466305189775,
+  "centerStrength": 0.423625096824167,
+  "repelStrength": 12.0914020139427,
+  "linkStrength": 0.857397366382649,
   "linkDistance": 30,
-  "scale": 0.05649814830083502,
+  "scale": 0.30601860212169124,
   "close": false
 }
