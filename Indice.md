@@ -1,4 +1,6 @@
 Non tutti gli appunti sono fatti bene. Le materie quantomeno decenti (o che lo saranno più avanti) sono indicate da un ✓.
+
+Vedi anche [[altri indici]] con raggruppamenti diversi.
 # Anno 1
 
 ## Semestre 1

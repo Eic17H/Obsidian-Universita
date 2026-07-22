@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty",
+  "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -179,6 +179,6 @@
   "repelStrength": 12.0914020139427,
   "linkStrength": 0.857397366382649,
   "linkDistance": 30,
-  "scale": 0.30601860212169124,
-  "close": false
+  "scale": 0.9306276576852734,
+  "close": true
 }
