@@ -4,11 +4,19 @@ cssclasses:
 ---
 ## Indice
 
-* [[Applicazioni e reti]]
-* [[Storia di internet]]
-* [[Protocolli di rete]]
-* [[Non so in che categoria vada]]
+* [[BGP]]
+* [[IPv4]]
+* [[IPv6]]
+* [[Link State Routing]]
+* [[SLA]]
+* [[ARP]]
+* [[Sliding Window]]
+* [[CIDR]]
+* [[NAT]]
+* [[RED]]
+## Introduzione agli appunti
 
+Non ho preso praticamente appunti, e quelli che ho preso sono un po' inutili. Ho invece fatto dei riassunti su alcuni argomenti della terza parte, quella esclusiva dell'orale.
 ## Introduzione al corso
 
 Si comunica tramite Teams. Il professore tiene moltissimo a questo corso, e ci tiene che si segua in presenza. Ci sono due parziali intermedi, se non li fai te ne penti. Preferisce essere odiato adesso, ma che nessuno ci mangi la pasta asciutta in testa. Vuole finire il corso entro la terza settimana di Maggio.
