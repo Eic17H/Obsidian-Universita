@@ -9,6 +9,8 @@ Questa materia riguarda le scelte di design dietro i linguaggi di programmazione
 LiP è una sorta di ALF 2. Inoltre, è più facile se si è anche seguito Istituzioni di Logica.
 
 C'è anche il [[λ-calcolo non tipizzato|λ-calcolo]], molto importante in generale ma completamente inutile per l'esame.
+
+Ah e il [[progetto]].
 ## Esame scritto
 
 L'esame scritto contiene quattro categorie di esercizi. Non è necessario conoscere tutta la teoria per fare lo scritto, ma è utile in generale, e rende più facile capire cosa stai facendo. In generale, bisogna saper fare gli esercizi.

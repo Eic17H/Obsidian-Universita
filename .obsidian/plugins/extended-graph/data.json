@@ -1,0 +1,817 @@
+{
+  "enableFeatures": {
+    "graph": {
+      "auto-enabled": true,
+      "tags": false,
+      "properties": false,
+      "property-key": false,
+      "links": false,
+      "linksSameColorAsNode": false,
+      "folders": false,
+      "imagesFromProperty": false,
+      "imagesFromEmbeds": false,
+      "imagesForAttachments": false,
+      "focus": true,
+      "shapes": true,
+      "elements-stats": true,
+      "names": false,
+      "icons": false,
+      "arrows": false,
+      "layers": false
+    },
+    "localgraph": {
+      "auto-enabled": true,
+      "tags": false,
+      "properties": false,
+      "property-key": false,
+      "links": false,
+      "linksSameColorAsNode": false,
+      "folders": false,
+      "imagesFromProperty": false,
+      "imagesFromEmbeds": false,
+      "imagesForAttachments": false,
+      "focus": true,
+      "shapes": true,
+      "elements-stats": true,
+      "names": false,
+      "icons": false,
+      "arrows": false,
+      "layers": false
+    }
+  },
+  "interactiveSettings": {
+    "tag": {
+      "colormap": "hsv",
+      "colors": [],
+      "unselected": [],
+      "excludeRegex": {
+        "regex": "",
+        "flags": ""
+      },
+      "noneType": "none",
+      "showOnGraph": true,
+      "enableByDefault": true
+    },
+    "link": {
+      "colormap": "rainbow",
+      "colors": [],
+      "unselected": [],
+      "excludeRegex": {
+        "regex": "",
+        "flags": ""
+      },
+      "noneType": "none",
+      "showOnGraph": true,
+      "enableByDefault": true
+    },
+    "folder": {
+      "colormap": "winter",
+      "colors": [],
+      "unselected": [
+        "/",
+        "Comune",
+        "Immagini",
+        "A scelta/Semestre 2/FPW",
+        "A scelta/Semestre 2/FPW/Laboratorio",
+        "A scelta/Semestre 2/FPW/Laboratorio/SQL",
+        "A scelta/Semestre 2/FPW/Raw",
+        "A scelta/Semestre 2/FPW/Teoria",
+        "A scelta/Semestre 2/Logica",
+        "A scelta/Semestre 2/Logica/Canvas",
+        "A scelta/Semestre 2/Logica/Esercitazioni",
+        "A scelta/Semestre 2/Logica/File",
+        "A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert",
+        "A scelta/Semestre 2/Logica/File/Calcolo dei Sequenti",
+        "A scelta/Semestre 2/Logica/File/Deduzione Naturale",
+        "A scelta/Semestre 2/Logica/File/Enunciati",
+        "A scelta/Semestre 2/Logica/File/Fallacie",
+        "A scelta/Semestre 2/Logica/File/Logiche rilevanti",
+        "A scelta/Semestre 2/Logica/File/Ragionamento ex hypothesi",
+        "A scelta/Semestre 2/Logica/File/Teorema di completezza",
+        "A scelta/Semestre 2/Logica/Moduli",
+        "Anno 1/Semestre 1/AM",
+        "Anno 1/Semestre 1/AM/File",
+        "Anno 1/Semestre 1/AM/File/Calcolo infinitesimale",
+        "Anno 1/Semestre 1/AM/File/Insiemi",
+        "Anno 1/Semestre 1/AM/File/Relazioni e funzioni",
+        "Anno 1/Semestre 1/FDI",
+        "Anno 1/Semestre 1/PR1",
+        "Anno 1/Semestre 1/FDI/File",
+        "Anno 1/Semestre 1/PR1/Modulo I",
+        "Anno 1/Semestre 1/PR1/Modulo II",
+        "Anno 1/Semestre 1/PR1/Modulo I/Test",
+        "Anno 1/Semestre 2/ARE",
+        "Anno 1/Semestre 2/ASD",
+        "Anno 1/Semestre 2/ARE/File",
+        "Anno 1/Semestre 2/ASD/Modulo II",
+        "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi",
+        "Anno 1/Semestre 2/ASD/Modulo II/Strutture dati",
+        "Anno 1/Semestre 2/MD",
+        "Anno 1/Semestre 2/MD/File",
+        "Anno 2/Semestre 1/ALF/File",
+        "Anno 2/Semestre 1/ALF",
+        "Anno 2/Semestre 1/EED/Diritto/File",
+        "Anno 2/Semestre 1/EED/Diritto",
+        "Anno 2/Semestre 1/EED/Economia",
+        "Anno 2/Semestre 1/EED/Economia/File",
+        "Anno 2/Semestre 1/EED/Economia/Raw",
+        "Anno 2/Semestre 1/SO",
+        "Anno 2/Semestre 1/SO/Lab/Altro",
+        "Anno 2/Semestre 1/SO/Lab",
+        "Anno 2/Semestre 1/SO/Lab/Bash",
+        "Anno 2/Semestre 1/SO/Lab/C",
+        "Anno 2/Semestre 1/SO/Teoria",
+        "Anno 2/Semestre 1/SO/Lab/Linux",
+        "Anno 2/Semestre 2/CSMN",
+        "Anno 2/Semestre 2/CSMN/Esercitazioni",
+        "Anno 2/Semestre 2/CSMN/Lab",
+        "Anno 2/Semestre 2/CSMN/Teoria",
+        "Anno 2/Semestre 2/CSMN/Teoria/Equazioni non lineari",
+        "Anno 2/Semestre 2/CSMN/Teoria/Norme",
+        "Anno 2/Semestre 2/CSMN/Teoria/Rappresentazione dei numeri",
+        "Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari",
+        "Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi diretti",
+        "Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi",
+        "Anno 2/Semestre 2/PR2",
+        "Anno 2/Semestre 2/PR2/Lab",
+        "Anno 2/Semestre 2/PR2/Raw",
+        "Anno 2/Semestre 2/RC/File/Parte III",
+        "Anno 2/Semestre 2/PR2/Teoria",
+        "Anno 2/Semestre 2/RC",
+        "Anno 2/Semestre 2/RC/Vecchi/File",
+        "Anno 2/Semestre 2/RC/Vecchi/Raw",
+        "Anno 3/Semestre 1/BD",
+        "Anno 3/Semestre 1/BD/Teoria",
+        "Anno 3/Semestre 1/BD/Lab",
+        "Anno 3/Semestre 1/IUM",
+        "Anno 3/Semestre 1/IUM/Android Studio",
+        "Anno 3/Semestre 1/IUM/Lab new",
+        "Anno 3/Semestre 1/IUM/Lab",
+        "Anno 3/Semestre 1/IUM/Teoria",
+        "Anno 3/Semestre 1/LiP",
+        "Anno 3/Semestre 1/LiP/Appunti dal libro",
+        "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo",
+        "Anno 3/Semestre 1/LiP/Progetto",
+        "Anno 3/Semestre 1/LiP/Categorie",
+        "Anno 3/Semestre 2/ISW/Teoria/Testing",
+        "Anno 3/Semestre 2/ISW/Teoria/Requisiti",
+        "Anno 3/Semestre 2/ISW/Teoria/Metodologie",
+        "Anno 3/Semestre 2/ISW/Teoria/Introduzione",
+        "Anno 3/Semestre 2/ISW/Lab",
+        "Anno 3/Semestre 2/ISW/Teoria",
+        "Anno 3/Semestre 1/LiP/Raw",
+        "Anno 3/Semestre 2/ISW",
+        "Anno 3/Semestre 2/ISW/Raw"
+      ],
+      "excludeRegex": {
+        "regex": "",
+        "flags": ""
+      },
+      "noneType": "/",
+      "showOnGraph": true,
+      "enableByDefault": false
+    }
+  },
+  "additionalProperties": {},
+  "backupGraphOptions": {
+    "collapse-filter": false,
+    "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": true,
+    "showOrphans": false,
+    "collapse-color-groups": true,
+    "colorGroups": [
+      {
+        "query": "file:Indice",
+        "color": {
+          "a": 1,
+          "rgb": 16777215
+        }
+      },
+      {
+        "query": "tag:#materia",
+        "color": {
+          "a": 1,
+          "rgb": 16777215
+        }
+      },
+      {
+        "query": "tag:#modulo",
+        "color": {
+          "a": 1,
+          "rgb": 11382189
+        }
+      },
+      {
+        "query": "path:Comune/",
+        "color": {
+          "a": 1,
+          "rgb": 1710618
+        }
+      },
+      {
+        "query": "path:AM/",
+        "color": {
+          "a": 1,
+          "rgb": 11024170
+        }
+      },
+      {
+        "query": "path:DEM/",
+        "color": {
+          "a": 1,
+          "rgb": 11747152
+        }
+      },
+      {
+        "query": "path:CSMN/",
+        "color": {
+          "a": 1,
+          "rgb": 12208499
+        }
+      },
+      {
+        "query": "path:MD/",
+        "color": {
+          "a": 1,
+          "rgb": 12408469
+        }
+      },
+      {
+        "query": "path:RC/",
+        "color": {
+          "a": 1,
+          "rgb": 10177024
+        }
+      },
+      {
+        "query": "path:ISW/",
+        "color": {
+          "a": 1,
+          "rgb": 12213760
+        }
+      },
+      {
+        "query": "path:ARE/",
+        "color": {
+          "a": 1,
+          "rgb": 14250543
+        }
+      },
+      {
+        "query": "path:PR1/",
+        "color": {
+          "a": 1,
+          "rgb": 9601792
+        }
+      },
+      {
+        "query": "path:ASD/",
+        "color": {
+          "a": 1,
+          "rgb": 10457856
+        }
+      },
+      {
+        "query": "path:SO/",
+        "color": {
+          "a": 1,
+          "rgb": 11313951
+        }
+      },
+      {
+        "query": "path:PR2/",
+        "color": {
+          "a": 1,
+          "rgb": 12235344
+        }
+      },
+      {
+        "query": "path:BD/",
+        "color": {
+          "a": 1,
+          "rgb": 31023
+        }
+      },
+      {
+        "query": "path:FPW/",
+        "color": {
+          "a": 1,
+          "rgb": 4366154
+        }
+      },
+      {
+        "query": "path:IUM/",
+        "color": {
+          "a": 1,
+          "rgb": 7849318
+        }
+      },
+      {
+        "query": "path:FDI/",
+        "color": {
+          "a": 1,
+          "rgb": 1136321
+        }
+      },
+      {
+        "query": "path:ALF/",
+        "color": {
+          "a": 1,
+          "rgb": 28608
+        }
+      },
+      {
+        "query": "path:LiP/",
+        "color": {
+          "a": 1,
+          "rgb": 33981
+        }
+      },
+      {
+        "query": "path:Logica/",
+        "color": {
+          "a": 1,
+          "rgb": 38584
+        }
+      },
+      {
+        "query": "path:EED/",
+        "color": {
+          "a": 1,
+          "rgb": 6513606
+        }
+      }
+    ],
+    "collapse-display": false,
+    "showArrow": false,
+    "textFadeMultiplier": -1.2,
+    "nodeSizeMultiplier": 1.52310518518519,
+    "lineSizeMultiplier": 3.49297777777778,
+    "collapse-forces": false,
+    "centerStrength": 0.423625096824167,
+    "repelStrength": 12.0914020139427,
+    "linkStrength": 0.857397366382649,
+    "linkDistance": 30,
+    "scale": 0.22769209064247248,
+    "close": true
+  },
+  "openInNewTab": true,
+  "canonicalizePropertiesWithDataview": true,
+  "states": [
+    {
+      "id": "default-vault",
+      "name": "Default state",
+      "engineOptions": {
+        "colorGroups": [
+          {
+            "query": "file:Indice",
+            "color": {
+              "a": 1,
+              "rgb": 16777215
+            }
+          },
+          {
+            "query": "tag:#materia",
+            "color": {
+              "a": 1,
+              "rgb": 16777215
+            }
+          },
+          {
+            "query": "tag:#modulo",
+            "color": {
+              "a": 1,
+              "rgb": 11382189
+            }
+          },
+          {
+            "query": "path:Comune/",
+            "color": {
+              "a": 1,
+              "rgb": 1710618
+            }
+          },
+          {
+            "query": "path:AM/",
+            "color": {
+              "a": 1,
+              "rgb": 11024170
+            }
+          },
+          {
+            "query": "path:DEM/",
+            "color": {
+              "a": 1,
+              "rgb": 11747152
+            }
+          },
+          {
+            "query": "path:CSMN/",
+            "color": {
+              "a": 1,
+              "rgb": 12208499
+            }
+          },
+          {
+            "query": "path:MD/",
+            "color": {
+              "a": 1,
+              "rgb": 12408469
+            }
+          },
+          {
+            "query": "path:RC/",
+            "color": {
+              "a": 1,
+              "rgb": 10177024
+            }
+          },
+          {
+            "query": "path:ISW/",
+            "color": {
+              "a": 1,
+              "rgb": 12213760
+            }
+          },
+          {
+            "query": "path:ARE/",
+            "color": {
+              "a": 1,
+              "rgb": 14250543
+            }
+          },
+          {
+            "query": "path:PR1/",
+            "color": {
+              "a": 1,
+              "rgb": 9601792
+            }
+          },
+          {
+            "query": "path:ASD/",
+            "color": {
+              "a": 1,
+              "rgb": 10457856
+            }
+          },
+          {
+            "query": "path:SO/",
+            "color": {
+              "a": 1,
+              "rgb": 11313951
+            }
+          },
+          {
+            "query": "path:PR2/",
+            "color": {
+              "a": 1,
+              "rgb": 12235344
+            }
+          },
+          {
+            "query": "path:BD/",
+            "color": {
+              "a": 1,
+              "rgb": 31023
+            }
+          },
+          {
+            "query": "path:FPW/",
+            "color": {
+              "a": 1,
+              "rgb": 4366154
+            }
+          },
+          {
+            "query": "path:IUM/",
+            "color": {
+              "a": 1,
+              "rgb": 7849318
+            }
+          },
+          {
+            "query": "path:FDI/",
+            "color": {
+              "a": 1,
+              "rgb": 1136321
+            }
+          },
+          {
+            "query": "path:ALF/",
+            "color": {
+              "a": 1,
+              "rgb": 28608
+            }
+          },
+          {
+            "query": "path:LiP/",
+            "color": {
+              "a": 1,
+              "rgb": 33981
+            }
+          },
+          {
+            "query": "path:Logica/",
+            "color": {
+              "a": 1,
+              "rgb": 38584
+            }
+          },
+          {
+            "query": "path:EED/",
+            "color": {
+              "a": 1,
+              "rgb": 6513606
+            }
+          }
+        ],
+        "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice",
+        "hideUnresolved": true,
+        "showAttachments": false,
+        "showOrphans": false,
+        "showTags": false,
+        "lineSizeMultiplier": 3.49297777777778,
+        "nodeSizeMultiplier": 1.52310518518519,
+        "showArrow": false,
+        "textFadeMultiplier": -1.2,
+        "centerStrength": 0.423625096824167,
+        "linkDistance": 30,
+        "linkStrength": 0.857397366382649,
+        "repelStrength": 12.0914020139427
+      },
+      "toggleTypes": {
+        "tag": [],
+        "link": [],
+        "folder": []
+      },
+      "logicTypes": {
+        "tag": "OR",
+        "link": "OR",
+        "folder": "OR"
+      },
+      "enableLayers": false,
+      "currentLayerLevel": 0,
+      "pinNodes": {},
+      "hiddenLegendRows": [],
+      "collapsedLegendRows": []
+    }
+  ],
+  "startingStateID": "default-vault",
+  "syncDefaultState": true,
+  "saveConfigsWithState": false,
+  "customColorMaps": {},
+  "imageProperties": [
+    "image"
+  ],
+  "borderFactor": 0.06,
+  "allowExternalImages": false,
+  "allowExternalLocalImages": false,
+  "nodesSizeProperties": [
+    ""
+  ],
+  "nodesSizeFunction": "constant",
+  "nodesSizeRange": {
+    "min": 0.5,
+    "max": 1.5
+  },
+  "nodesColorColormap": "Greys",
+  "nodesColorFunction": "default",
+  "graphStatsDirection": "normal",
+  "linksSizeFunction": "default",
+  "linksColorColormap": "Greys",
+  "linksColorFunction": "default",
+  "recomputeStatsOnGraphChange": false,
+  "zoomFactor": 2,
+  "focusScaleFactor": 1.8,
+  "highlightOpenNodes": true,
+  "highlightSearchResults": true,
+  "maxNodes": 500,
+  "delay": 500,
+  "revertAction": false,
+  "enableCSS": false,
+  "cssSnippetFilename": "",
+  "shapeQueries": {
+    "circle": {
+      "combinationLogic": "AND",
+      "index": 0,
+      "rules": [
+        {
+          "source": "folder",
+          "property": "",
+          "value": "Anno 1",
+          "logic": "contains"
+        }
+      ]
+    },
+    "square": {
+      "combinationLogic": "AND",
+      "index": 1,
+      "rules": []
+    },
+    "triangle": {
+      "combinationLogic": "AND",
+      "index": 2,
+      "rules": []
+    },
+    "diamond": {
+      "combinationLogic": "AND",
+      "index": 3,
+      "rules": [
+        {
+          "source": "folder",
+          "property": "",
+          "value": "Anno 2",
+          "logic": "contains"
+        }
+      ]
+    },
+    "pentagon": {
+      "combinationLogic": "AND",
+      "index": 4,
+      "rules": []
+    },
+    "hexagon": {
+      "combinationLogic": "AND",
+      "index": 5,
+      "rules": [
+        {
+          "source": "folder",
+          "property": "",
+          "value": "Anno 3",
+          "logic": "contains"
+        }
+      ]
+    },
+    "octagon": {
+      "combinationLogic": "AND",
+      "index": 6,
+      "rules": []
+    },
+    "decagon": {
+      "combinationLogic": "AND",
+      "index": 7,
+      "rules": []
+    },
+    "star4": {
+      "combinationLogic": "OR",
+      "index": 8,
+      "rules": [
+        {
+          "source": "folder",
+          "property": "",
+          "value": "A scelta",
+          "logic": "contains"
+        },
+        {
+          "source": "folder",
+          "property": "",
+          "value": "Comune",
+          "logic": "contains"
+        }
+      ]
+    },
+    "star5": {
+      "combinationLogic": "AND",
+      "index": 9,
+      "rules": []
+    },
+    "star6": {
+      "combinationLogic": "AND",
+      "index": 10,
+      "rules": []
+    },
+    "star8": {
+      "combinationLogic": "AND",
+      "index": 11,
+      "rules": []
+    },
+    "star10": {
+      "combinationLogic": "AND",
+      "index": 12,
+      "rules": []
+    }
+  },
+  "colorBasedOnDepth": false,
+  "depthColormap": "rainbow",
+  "currentNode": {
+    "useColor": false,
+    "color": "#000000",
+    "size": 100,
+    "shape": "circle"
+  },
+  "fadeOnDisable": false,
+  "borderUnresolved": "",
+  "spreadArcs": false,
+  "weightArcs": false,
+  "animateDotsOnLinks": false,
+  "animationSpeedForDots": 1,
+  "interactivesBrightness": {
+    "light": 1,
+    "dark": 1
+  },
+  "fadeInElements": false,
+  "externalLinks": "none",
+  "externalLinksProperties": [
+    "url"
+  ],
+  "externalLinkOpenMode": "note",
+  "showPinIcon": true,
+  "allowMultipleLinkTypes": false,
+  "disableSource": false,
+  "disableTarget": false,
+  "excludedSourcesFolder": [],
+  "excludedTargetsFolder": [],
+  "curvedLinks": false,
+  "curvedFactor": 1,
+  "outlineLinks": false,
+  "displayLinkTypeLabel": false,
+  "colorLinkTypeLabel": false,
+  "noLineHighlight": false,
+  "folderShowFullPath": true,
+  "invertArrows": false,
+  "flatArrows": false,
+  "opaqueArrowsButKeepFading": false,
+  "alwaysOpaqueArrows": false,
+  "arrowScale": 1,
+  "arrowFixedSize": false,
+  "arrowColorBool": false,
+  "arrowColor": "",
+  "numberOfCharacters": null,
+  "ellipsis": "…",
+  "showOnlyFileName": false,
+  "noExtension": false,
+  "usePropertiesForName": [],
+  "addBackgroundToName": false,
+  "nameVerticalOffset": 0,
+  "dynamicVerticalOffset": false,
+  "showNamesWhenNeighborHighlighted": false,
+  "iconProperties": [
+    ""
+  ],
+  "usePluginForIcon": true,
+  "usePluginForIconColor": true,
+  "useParentIcon": false,
+  "backgroundOpacityWithIcon": 0,
+  "useIconColorForBackgroud": true,
+  "borderWidthWithIcon": 0,
+  "layerProperties": [
+    "layer"
+  ],
+  "numberOfActiveLayers": 4,
+  "layersOrder": "ASC",
+  "displayLabelsInUI": true,
+  "nodesWithoutLayerOpacity": 0,
+  "useLayerCustomOpacity": true,
+  "layersCustomOpacity": {},
+  "layersLevels": {},
+  "defaultLevelForLayers": 0,
+  "horizontalLegend": false,
+  "useRadialMenu": false,
+  "radialMenuModifier": "Shift",
+  "pinNodeModifier": "Alt",
+  "useLeftClickToSelect": true,
+  "selectNodeModifier": "Shift",
+  "filterAbstractFiles": [],
+  "ignoreInlineLinks": false,
+  "collapseState": true,
+  "collapseLegend": true,
+  "resetAfterChanges": false,
+  "collapsedSettings": {
+    "automation": true,
+    "tags": true,
+    "properties": true,
+    "links": true,
+    "arrows": true,
+    "folders": true,
+    "images": true,
+    "icons": false,
+    "focus": true,
+    "shapes": false,
+    "layers": true,
+    "elements-stats": true,
+    "names": true,
+    "zoom": true,
+    "local-graph": false,
+    "display": true,
+    "filter": true,
+    "inputs": true,
+    "performances": false,
+    "beta": true
+  },
+  "selectionMode": "replace",
+  "exportSVGOptions": {
+    "asImage": true,
+    "onlyVisibleArea": false,
+    "showNodeNames": true,
+    "useCurvedLinks": false,
+    "useModifiedArrows": true,
+    "useNodesShapes": false,
+    "showArcs": false,
+    "showFolders": true,
+    "useModifiedNames": true,
+    "showIcons": false
+  },
+  "multipleNodesData": {}
+}
