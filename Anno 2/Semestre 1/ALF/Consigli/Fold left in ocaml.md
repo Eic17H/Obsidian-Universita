@@ -1,3 +1,6 @@
+---
+cssclasses: alf
+---
 Una cosa che non avevo capito finché non l'ho trovata nell'esame è fold_left quindi te lo dico in caso
 Perché pensavo funzionasse in modo completamente diverso da come funziona
 

@@ -2,14 +2,24 @@
 cssclasses:
   - alf
 ---
-## Indice
+## In che condizioni versano gli appunti
+
+In realtà ho pochi appunti digitali, il che è un peccato perché si collega molto ad altre materie. Ma comunque certe volte mi vengono in mente modi per capire certi concetti strani, quindi li aggiungo come file a parte.
+
+I link in questo documento sono trasandati e alcuni sono stati rinominati automaticamente, prima o poi li aggiusterò.
+
+## Spiegazioni
+
+* [[Fold left in OCaml]]
+* [[Funzioni di secondo ordine]]
+## Appunti veri e propri
 
 * [[Logica proposizionale classica]]
 * [[Anno 2/Semestre 1/ALF/File/Logica dei predicati|Logica dei predicati]]
 * [[OCaml]]
 * [[Insiemi|Insiemi]]
 * [[Anno 2/Semestre 1/ALF/File/Funzioni]]
-* [[Regole di inferenza]]
+* [[Comune/Regole di inferenza]]
 * [[ALF/File/Ricorsione|Ricorsione]]
 * [[Passaggi di stato]]
 * [[Linguaggi formali]]

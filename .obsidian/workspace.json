@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5ca916c098f851bd",
+        "id": "6463a6077b12ce48",
         "type": "tabs",
         "children": [
           {
-            "id": "427910e21603aa46",
+            "id": "f233b55215bd43e6",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -37,7 +37,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -49,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#hidden",
+                "query": "newcommand",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AM/File/Logica/Logica dei predicati.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +101,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Logica dei predicati"
+              "title": "Backlinks"
             }
           },
           {
@@ -160,8 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,35 +177,38 @@
       "edge-tts:Read note aloud": false
     }
   },
-  "active": "427910e21603aa46",
+  "active": "f233b55215bd43e6",
   "lastOpenFiles": [
-    "A scelta/Semestre 2/Logica/File/Filosofia del linguaggio.md",
-    "Anno 2/Semestre 2/CSMN/Lab/Lab.md",
-    "Anno 3/Semestre 1/LiP/Progetto/Progetto.md",
-    "Anno 3/Semestre 1/LiP/Linguaggi di Programmazione.md",
+    "A scelta/Semestre 2/FPW/Teoria/Suddivisione di una pagina HTML.md",
+    "A scelta/Semestre 2/FPW/Raw/FPW-20250515.md",
+    "A scelta/Semestre 2/FPW/Teoria/HTTP.md",
+    "A scelta/Semestre 2/FPW/Teoria/JavaScript.md",
+    "A scelta/Semestre 2/FPW/Laboratorio/Vue.md",
+    "A scelta/Semestre 2/FPW/Laboratorio/Express.md",
+    "A scelta/Semestre 2/FPW/Laboratorio/HTML e CSS.md",
+    "Anno 1/Semestre 1/FDI/File/Mappe di Karnaugh.md",
+    "Anno 1/Semestre 1/FDI/File/Numeri binari.md",
+    "Anno 2/Semestre 1/EED/Economia/Raw/20241129.md.md",
+    "Anno 2/Semestre 1/EED/Economia/Raw/20241209.md.md",
+    "Anno 2/Semestre 1/EED/Economia/File/Funzione di produzione.md",
+    "Anno 2/Semestre 1/EED/Economia/File/Oligopolio.md",
+    "Anno 2/Semestre 1/EED/Economia/File/Bilanciare due beni.md",
+    "Anno 2/Semestre 1/EED/Economia/Economia.md",
+    "Anno 2/Semestre 1/EED/Diritto/File/Diritto d'autore.md",
+    "Anno 2/Semestre 1/EED/Diritto/File/Software.md",
+    "Anno 2/Semestre 1/EED/Diritto/File/Brevetto.md",
+    "Anno 2/Semestre 1/EED/Diritto/Diritto.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Rappresentazione dei numeri/Aritmetica di macchina.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Spazio lineare.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Norme matriciali.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Norme vettoriali.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Numeri complessi.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Autovalori e autovettori.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Norme.md",
+    "Anno 2/Semestre 1/ALF/Consigli",
+    "Immagini/Pasted image 20260729012212.png",
+    "Immagini/Pasted image 20260729012202.png",
     "Anno 3/Semestre 1/LiP/Progetto",
-    "A scelta/Semestre 2/Logica/File/Deduzione Naturale.md",
-    "A scelta/Semestre 2/Logica/Moduli/Modulo II.md",
-    "A scelta/Semestre 2/Logica/Istituzioni di Logica.md",
-    "Indice.md",
-    "Anno 2/Semestre 2/RC/Reti di Calcolatori.md",
-    "Anno 2/Semestre 2/RC/Vecchi/File/Storia di internet.md",
-    "Anno 2/Semestre 2/RC/Vecchi/File/Protocolli di rete.md",
-    "Anno 2/Semestre 2/RC/Vecchi/File/Non so in che categoria vada.md",
-    "Anno 2/Semestre 2/RC/Vecchi/File/Applicazioni e reti.md",
-    "Anno 2/Semestre 2/RC/Vecchi/Raw/RC-20250508.md",
-    "Anno 2/Semestre 2/RC/Vecchi/Raw/RC-20250505.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/RED.md",
-    "Anno 1/Semestre 2/ARE/File/8088.md",
-    "Anno 1/Semestre 2/ARE/Architettura degli Elaboratori.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/NAT.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/CIDR.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/Sliding Window.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/ARP.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/Link State Routing.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/SLA.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/IPv4.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/IPv6.md",
     "Anno 2/Semestre 2/RC/File/Parte III",
     "Anno 2/Semestre 2/RC/File",
     "Anno 2/Semestre 2/RC/Vecchi",
@@ -214,7 +217,6 @@
     "Anno 2/Semestre 2",
     "Anno 2/Semestre 1",
     "Anno 1/Semestre 2",
-    "Anno 1/Semestre 1",
     "A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
     "Immagini/Pasted image 20260709130359.png",
     "Immagini/Pasted image 20260707221309.png",
@@ -224,8 +226,6 @@
     "Pasted image 20250324190528.png",
     "ALF/File/IMG_0858.png",
     "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-inspect/dist/client/favicon.svg",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-vue-devtools/client/logo.svg",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/logo.svg"
+    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/src/assets/png/logo.png"
   ]
 }

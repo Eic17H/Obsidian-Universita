@@ -48,7 +48,7 @@ Vediamo cosa significa. Ci dà tre espressioni semplici presenti in $\mathcal T$
 
 E le parentesi? Le parentesi in realtà non ci sono, perché nuovamente non formalizziamo stringhe, ma alberi. Le parentesi servono solo a rendere più chiara la rappresentazione in stringa di questi alberi.
 
-Rendiamo quindi più evidenti questi alberi, definendo i termini con le [[regole di inferenza]]:
+Rendiamo quindi più evidenti questi alberi, definendo i termini con le [[Comune/Regole di inferenza|regole di inferenza]]:
 
 > **Termine** - L'insieme dei termini è definito da queste regole di inferenza:
 > $$true \in \mathcal T \qquad false \in \mathcal T \qquad 0 \in \mathcal T$$

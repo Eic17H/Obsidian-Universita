@@ -657,6 +657,11 @@
     "star4": {
       "combinationLogic": "OR",
       "index": 8,
+      "rules": []
+    },
+    "star5": {
+      "combinationLogic": "OR",
+      "index": 9,
       "rules": [
         {
           "source": "folder",
@@ -671,11 +676,6 @@
           "logic": "contains"
         }
       ]
-    },
-    "star5": {
-      "combinationLogic": "AND",
-      "index": 9,
-      "rules": []
     },
     "star6": {
       "combinationLogic": "AND",
