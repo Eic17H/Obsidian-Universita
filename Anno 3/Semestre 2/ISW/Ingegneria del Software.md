@@ -2,6 +2,10 @@
 cssclasses:
   - isw
 ---
+Ho preso 24 al primo parziale senza studiare. È molto facile. Vai a lezione. (Se c'è ancora Marchesi).
+
+Questi appunti sono estremamente disordinati, anche perché non ho avuto tanto bisogno di studiare.
+
 Argomenti del primo parziale:
 * [[Anno 3/Semestre 2/ISW/Teoria/Introduzione|Introduzione]]
 * [[Software open source]]
@@ -22,7 +26,7 @@ Argomenti del secondo parziale:
 	* Lean/Kanban
 * [[Dev-Ops]]
 * [[Refactoring]] e debito tecnico
-* Python:
+* [[Python]]:
 	* Dizionari
 	* Set
 	* Tuple

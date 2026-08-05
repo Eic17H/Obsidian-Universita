@@ -4,7 +4,7 @@ cssclasses:
 ---
 ## Indice
 * [[Anno 1/Semestre 1/PR1/Modulo I/Algoritmi|Algoritmi]]
-* [[Anno 1/Semestre 1/PR1/Modulo I/Tipi]]
+* [[Anno 1/Semestre 1/PR1/Modulo I/Tipi|Tipi]]
 * [[Subroutine e librerie]]
 * [[Scope]]
 * [[Anno 1/Semestre 1/PR1/Modulo I/Ricorsione|Ricorsione]]

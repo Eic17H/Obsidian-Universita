@@ -39,7 +39,7 @@ Non c'è bisogno di prendere seriamente appunti. Ascolta la lezione col pdf dava
 Vai a lezione. Il professore e il tutor sono incomprensibili in modi diversi, ma se segui entrambi capisci.
 Fai i parziali, e studia bene. Questa materia, insieme a FPW, è bene darla subito. I parziali che fallisci vengono accorpati all'orale.
 Tutti i materiali di studio ufficiali sono tremendi. Un ex studente ha fatto un libro migliore, trovi il PDF su Discord. Sostituisce ciò che sarebbe potuta essere questa guida, quindi anziché un riassunto degli appunti qui ci saranno concetti chiave per le domande a risposta aperta.
-Studia subito. Comincia a studiare il primo giorno disponibile.
+Studia subito. Comincia a studiare il primo giorno disponibile, all'inizio del semestre se non all'inizio del semestre precedente.
 Non c'è bisogno di prendere appunti. Ascolta la lezione, e leggi il pdf.
 
 #materia 

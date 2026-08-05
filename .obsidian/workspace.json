@@ -11,13 +11,56 @@
             "id": "f233b55215bd43e6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Anno 1/Semestre 2/ARE/File/IJVM.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "IJVM"
+            }
+          },
+          {
+            "id": "49bd716f8c312327",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Filtri per il grafo.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Filtri per il grafo"
+            }
+          },
+          {
+            "id": "cf2eb595558073f5",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "6f2c9a9c8c548eba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 1/Semestre 2/ARE/File/8088.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "8088"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -161,7 +204,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,34 +221,35 @@
       "edge-tts:Read note aloud": false
     }
   },
-  "active": "f233b55215bd43e6",
+  "active": "6f2c9a9c8c548eba",
   "lastOpenFiles": [
-    "A scelta/Semestre 2/FPW/Teoria/Suddivisione di una pagina HTML.md",
-    "A scelta/Semestre 2/FPW/Raw/FPW-20250515.md",
-    "A scelta/Semestre 2/FPW/Teoria/HTTP.md",
-    "A scelta/Semestre 2/FPW/Teoria/JavaScript.md",
-    "A scelta/Semestre 2/FPW/Laboratorio/Vue.md",
-    "A scelta/Semestre 2/FPW/Laboratorio/Express.md",
-    "A scelta/Semestre 2/FPW/Laboratorio/HTML e CSS.md",
-    "Anno 1/Semestre 1/FDI/File/Mappe di Karnaugh.md",
-    "Anno 1/Semestre 1/FDI/File/Numeri binari.md",
-    "Anno 2/Semestre 1/EED/Economia/Raw/20241129.md.md",
-    "Anno 2/Semestre 1/EED/Economia/Raw/20241209.md.md",
-    "Anno 2/Semestre 1/EED/Economia/File/Funzione di produzione.md",
-    "Anno 2/Semestre 1/EED/Economia/File/Oligopolio.md",
-    "Anno 2/Semestre 1/EED/Economia/File/Bilanciare due beni.md",
-    "Anno 2/Semestre 1/EED/Economia/Economia.md",
-    "Anno 2/Semestre 1/EED/Diritto/File/Diritto d'autore.md",
-    "Anno 2/Semestre 1/EED/Diritto/File/Software.md",
-    "Anno 2/Semestre 1/EED/Diritto/File/Brevetto.md",
-    "Anno 2/Semestre 1/EED/Diritto/Diritto.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Rappresentazione dei numeri/Aritmetica di macchina.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Spazio lineare.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Norme matriciali.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Norme vettoriali.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Numeri complessi.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Autovalori e autovettori.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Norme.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo.md",
+    "Anno 1/Semestre 1/PR1/Programmazione 1.md",
+    "Anno 2/Semestre 2/RC/Reti di Calcolatori.md",
+    "Anno 3/Semestre 2/ISW/Ingegneria del Software.md",
+    "Indice.md",
+    "Anno 1/Semestre 2/ARE/Architettura degli Elaboratori.md",
+    "Anno 1/Semestre 2/ARE/File/8088.md",
+    "Anno 3/Semestre 2/ISW/Teoria/Metodologie/Agile.md",
+    "Anno 3/Semestre 2/ISW/Teoria/Metodologie/XP.md",
+    "Anno 3/Semestre 2/ISW/Teoria/Metodologie/Scrum.md",
+    "Anno 3/Semestre 2/ISW/Teoria/Metodologie/Lean-Kanban.md",
+    "Indici/Per gruppo.md",
+    "Indici/Per anno e semestre.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo tipizzato.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo/Formalità.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Indice.md",
+    "Anno 3/Semestre 1/LiP/Linguaggi di Programmazione.md",
+    "Anno 3/Semestre 1/LiP/Progetto/Progetto.md",
+    "Filtri per il grafo.md",
+    "Anno 1/Semestre 2/ARE/File/IJVM.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Introduzione.md",
+    "Anno 3/Semestre 2/ISW/Lab/Python.md",
+    "Anno 3/Semestre 2/ISW/Lab/Oggetti.md",
+    "Anno 3/Semestre 2/ISW/Lab/Strutture dati.md",
+    "Anno 3/Semestre 2/ISW/Lab/Funzioni.md",
+    "Anno 3/Semestre 2/ISW/Lab/Branching.md",
+    "Indici",
     "Anno 2/Semestre 1/ALF/Consigli",
     "Immagini/Pasted image 20260729012212.png",
     "Immagini/Pasted image 20260729012202.png",
@@ -216,7 +261,6 @@
     "Anno 3/Semestre 1",
     "Anno 2/Semestre 2",
     "Anno 2/Semestre 1",
-    "Anno 1/Semestre 2",
     "A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
     "Immagini/Pasted image 20260709130359.png",
     "Immagini/Pasted image 20260707221309.png",

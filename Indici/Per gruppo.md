@@ -1,26 +1,15 @@
-## Appunti fatti bene
-
-* <span class="pr1">[[Programmazione 1]]</span>
-* <span class="am">[[Analisi Matematica]]</span>
-* <span class="md">[[Matematica Discreta]]</span>
-* <span class="csmn">[[CSMN|Calcolo Scientifico e Metodi Numerici]]</span>
-* <span class="fdi">[[Fondamenti|Fondamenti di Informatica]]</span>
-* <span class="lip">[[Linguaggi di Programmazione]]</span>
-* <span class="logica">[[Istituzioni di Logica]]</span>
-## Gruppi di materie
-
-### Matematica
+## Matematica
 * <span class="am">[[Analisi Matematica]]</span>
 * <span class="md">[[Matematica Discreta]]</span>
 * <span class="csmn">[[CSMN|Calcolo Scientifico e Metodi Numerici]]</span>
 
-### Booleani e linguaggi
+## Booleani e linguaggi
 * <span class="fdi">[[Fondamenti|Fondamenti di Informatica]]</span>
 * <span class="alf">[[Automi e Linguaggi Formali]]</span>
 * <span class="lip">[[Linguaggi di Programmazione]]</span>
 * <span class="logica">[[Istituzioni di Logica]]</span>
 
-### Programmazione
+## Programmazione
 
 * <span class="asd">[[Algoritmi e Strutture Dati]]</span>
 * <span class="so">[[Anno 2/Semestre 1/SO/Lab/Lab|Sistemi Operativi]]</span>

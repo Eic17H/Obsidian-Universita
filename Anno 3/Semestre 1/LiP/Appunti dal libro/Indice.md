@@ -12,7 +12,7 @@ Le lezioni di Pinna sono difficili da seguire, questi sono perlopiù riassunti d
 * [[Aritmetica non Tipizzata]]
 * [[Stili di semantica]]
 ### Capitolo 5
-* [[λ-calcolo non tipizzato]]
+* [[λ-calcolo]]
 ### Capitolo 6
 * [[Macchina SECD]]
 ### Capitolo 7
