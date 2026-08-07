@@ -17,6 +17,8 @@ L'esame scritto contiene quattro categorie di esercizi. Non è necessario conosc
 
 Il voto massimo dello scritto è 16.
 
+A dire il vero oltre agli argomenti che ho scritto qui potrebbe essercene un altro che semplicemente non mi è capitato all'esame, devo chiedere.
+
 ### [[Anno 3/Semestre 1/LiP/Categorie/Linguaggi|Linguaggi]]
 
 1 punto.
@@ -32,7 +34,7 @@ Vengono date le regole di inferenza big-step e small-step per la valutazione di 
 3 punti.
 
 Vengono date le regole di inferenza di tipo di un linguaggio imperativo, e viene dato un tipo. Si chiede di scrivere un termine con quel tipo, e di inferirne il tipo.
-### [[Binding|Binding]]
+### [[Anno 3/Semestre 1/LiP/Categorie/Scope|Scope]]
 
 6 punti.
 

@@ -25,6 +25,14 @@ Questo ci permette di fare dimostrazioni *per induzione*: se so che $\exists x \
 
 Facciamo un esempio. Vediamo della notazione per la *sommatoria di ==espressione== con ==variabile== che va da ==valore== a ==valore==*, cioè la somma di tutte le iterazioni di un certo loop. $$\sum\limits_{n=1}^n n = \dfrac{n(n+1)}{2}$$Come sappiamo che questa uguaglianza è vera per ogni numero naturale $n$? Com'è possibile? A sinistra c'è una somma di ==interi== ma a destra c'è una frazione.
 
-Dimostriamolo per induzione. Passo base, $n=1$:$$n=1 \qquad 1=\dfrac{1(1+1)}{2}=1\qquad \text{vero}$$Il passo base va bene. Vediamo il passo induttivo. Immaginiamo che ci sia un valore $m$ qualsiasi, e ipotizziamo che la proposizione valga per $n=m$. Questa è la nostra ipotesi, la diamo per vera.
+Dimostriamolo per induzione.
 
-Passo induttivo, dimostriamo che se questo predicato è vero per un certo $m$, allora è necessariamente vero per $m+1$.$$1+2+\ldots+m\mathbf{+(m+1)}=\dfrac{m(m+1)}{2}\mathbf{+(m+1)}$$Qui abbiamo solo aggiunto $\mathbf{+(m+1)}$ al predicato applicato a $m$, da entrambi i lati. A sinistra, abbiamo ottenuto la sommatoria corretta per $m+1$. Adesso vediamo che a destra, facendo i calcoli, otteniamo la forma corretta della frazione per $m+1$, che dovrebbe essere $\dfrac{(m+1)(m+2)}{2}$:$$\dfrac{m(m+1)}{2}+(m+1)=\dfrac{\mathbf{m}(m+1)\mathbf{+2}(m+1)}{2}=\dfrac{(m+1)\mathbf{(m+2)}}{2}$$Come volevasi dimostrare.
+> Passo base, $n=1$:$$n=1 \qquad 1=\dfrac{1(1+1)}{2}=1\qquad \text{vero}$$
+
+Il passo base va bene. Vediamo il passo induttivo. Immaginiamo che ci sia un valore $m$ qualsiasi, e ipotizziamo che la proposizione valga per $n=m$. Questa è la nostra ipotesi, la diamo per vera.
+
+> Passo induttivo, dimostriamo che se questo predicato è vero per un certo $m$, allora è necessariamente vero per $m+1$.$$1+2+\ldots+m\mathbf{+(m+1)}=\dfrac{m(m+1)}{2}\mathbf{+(m+1)}$$
+ 
+> Qui abbiamo solo aggiunto $\mathbf{+(m+1)}$ al predicato applicato a $m$, da entrambi i lati. A sinistra, abbiamo ottenuto la sommatoria corretta per $m+1$. Adesso vediamo che a destra, facendo i calcoli, otteniamo la forma corretta della frazione per $m+1$, che dovrebbe essere $\dfrac{(m+1)(m+2)}{2}$:$$\dfrac{m(m+1)}{2}+(m+1)=\dfrac{\mathbf{m}(m+1)\mathbf{+2}(m+1)}{2}=\dfrac{(m+1)\mathbf{(m+2)}}{2}$$
+ 
+Come volevasi dimostrare.

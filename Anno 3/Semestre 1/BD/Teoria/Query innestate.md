@@ -56,6 +56,6 @@ Una sub-query correlata è una sub-query che usa riferimenti a tabelle della que
 
 ## Scope
 
-[[Scope|Strumenti per la pulizia di pavimenti…?]] Scherzi a parte. Una sub-query vede lo scope della query al livello superiore, ma non il contrario. Quindi può servire invertire query e sub-query per usare lo scopo di una nell'altra.
+[[Anno 1/Semestre 1/PR1/Modulo I/Scope|Strumenti per la pulizia di pavimenti…?]] Scherzi a parte. Una sub-query vede lo scope della query al livello superiore, ma non il contrario. Quindi può servire invertire query e sub-query per usare lo scopo di una nell'altra.
 
 All'esame potremo trovare sub-query dentro sub-query, o sub-query affiancate.

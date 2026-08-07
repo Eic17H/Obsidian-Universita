@@ -15,3 +15,10 @@ Una derivazione è tale quando non puoi più salire. Quando succede? Ci sono cer
 Le regole di inferenza hanno spesso dei nomi, che si scrivono di fianco.
 
 Di nuovo un esempio con la divisibilità. Diciamo che l'assioma e le regole di inferenza sono: $$\dfrac{}{3|0}\text{Zero} \qquad \dfrac{3|x}{3|kx}\text{Mult}_k \qquad \dfrac{3|x}{3|(x+3k)}\text{Sum}_k \qquad \forall k \in \mathbb{Z}$$Per semplicità, non aggiungo il $2$ e il $6$. Deriviamo $756|3$: $$\dfrac{\dfrac{\dfrac{\dfrac{\dfrac{}{3|0}\text{Zero}}{3|18}\text{Sum}_6}{3|180}\text{Mult}_{10}}{3|189}\text{Sum}_{3}}{3|756}\text{Mult}_4$$
+## Approfondimenti
+
+Gli <span class="logica">[[Argomenti|argomenti]]</span> sono una versione semplificata del concetto di regola di inferenza, poi ripreso sotto forma di vere e proprie regole di inferenza dal calcolo logico <span class="logica">[[Calcolo alla Hilbert|alla Hilbert]]</span>, quello della <span class="logica">[[Deduzione Naturale|deduzione naturale]]</span>, e quello dei <span class="logica">[[Calcolo dei Sequenti|sequenti]]</span>.
+
+Sono utilizzate per la <span class="lip">[[Semantica|semantica]]</span>, la <span class="lip">[[Anno 3/Semestre 1/LiP/Appunti dal libro/Tipi|tipizzazione]]</span> e la <span class="lip">[[Valutazione|valutazione]]</span> dei linguaggi di programmazione.
+
+Vedi anche le [[derivazione|derivazioni]].

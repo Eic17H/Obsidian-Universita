@@ -51,7 +51,7 @@ In questo caso, sto *parlando di* una parola soprannominandola "Gianni". "Gianni
 
 ### Scope (o ambiente)
 
-Scope. <span class="pr1">[[Scope|Strumenti per la pulizia dei pavimenti...?]]</span> No. Lo scope, o ambiente, riguarda il modo in cui ciascuna variabile compare nell'espressione.
+Scope: <span class="pr1">[[Anno 1/Semestre 1/PR1/Modulo I/Scope|strumenti per la pulizia di pavimenti...?]]</span> No. Lo scope, o ambiente, riguarda il modo in cui ciascuna variabile compare nell'espressione.
 * Un'occorrenza della variabile $x$ è ==*vincolata (bound)*== dall'astrazione $λx.t$ quando è presente nel suo corpo $t$, e $λx$ si dice un *legante (binder)* il cui ambiente è $t$.
 * Un'occorrenza di $x$ è ==*libera (free)*== se non è vincolata. Per esempio $x$ non è vincolata in $λy.x\ y$, in parole povere perché non è un parametro.
 
