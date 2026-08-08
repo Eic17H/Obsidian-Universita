@@ -1,12 +1,12 @@
 ---
 cssclasses: lip
 ---
+Questo quesito ha un'altra variante, vedi [[SECD]].
 ## Teoria
 
 * [[Semantica]]
 * [[Aritmetica non Tipizzata]]
 * [[Stili di semantica]]
-* [[Macchina SECD]]
 * [[Linguaggio imperativo]]
 
 ## Concetto semplificato
