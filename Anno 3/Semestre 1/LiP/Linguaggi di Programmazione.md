@@ -29,6 +29,8 @@ Dato un linguaggio, si deve scrivere una grammatica o un automa equivalente.
 6 punti.
 
 Vengono date le regole di inferenza big-step e small-step per la valutazione di un linguaggio imperativo, e viene dato un termine. Si chiede di valutare quel termine, sia con la semantica big-step che con la semantica small-step.
+
+In alternativa, bisogna valutare un termine della macchina SECD.
 ### [[Tipizzazione|Tipizzazione]]
 
 3 punti.

@@ -4,63 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "6463a6077b12ce48",
+        "id": "af3587888eb0a523",
         "type": "tabs",
         "children": [
           {
-            "id": "f233b55215bd43e6",
+            "id": "3d96c41eeb7eb85b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Anno 1/Semestre 2/ARE/File/IJVM.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "IJVM"
-            }
-          },
-          {
-            "id": "49bd716f8c312327",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Filtri per il grafo.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Filtri per il grafo"
-            }
-          },
-          {
-            "id": "cf2eb595558073f5",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "6f2c9a9c8c548eba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 1/Semestre 2/ARE/File/8088.md",
+                "file": "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8088"
+              "title": "λ-calcolo"
+            }
+          },
+          {
+            "id": "820883bd78750d87",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 3/Semestre 1/LiP/Categorie/SECD.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SECD"
+            }
+          },
+          {
+            "id": "d339c9abfd0bf293",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 3/Semestre 1/LiP/Appunti dal libro/Macchina SECD.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Macchina SECD"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "newcommand",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -119,7 +109,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209.5110321044922
+    "width": 209.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "1feb8741361685ad",
@@ -135,6 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Anno 3/Semestre 1/LiP/Categorie/SECD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,34 +213,34 @@
       "edge-tts:Read note aloud": false
     }
   },
-  "active": "6f2c9a9c8c548eba",
+  "active": "d339c9abfd0bf293",
   "lastOpenFiles": [
-    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo.md",
-    "Anno 1/Semestre 1/PR1/Programmazione 1.md",
-    "Anno 2/Semestre 2/RC/Reti di Calcolatori.md",
-    "Anno 3/Semestre 2/ISW/Ingegneria del Software.md",
-    "Indice.md",
-    "Anno 1/Semestre 2/ARE/Architettura degli Elaboratori.md",
-    "Anno 1/Semestre 2/ARE/File/8088.md",
-    "Anno 3/Semestre 2/ISW/Teoria/Metodologie/Agile.md",
-    "Anno 3/Semestre 2/ISW/Teoria/Metodologie/XP.md",
-    "Anno 3/Semestre 2/ISW/Teoria/Metodologie/Scrum.md",
-    "Anno 3/Semestre 2/ISW/Teoria/Metodologie/Lean-Kanban.md",
-    "Indici/Per gruppo.md",
-    "Indici/Per anno e semestre.md",
-    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo tipizzato.md",
-    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo/Formalità.md",
-    "Anno 3/Semestre 1/LiP/Appunti dal libro/Indice.md",
     "Anno 3/Semestre 1/LiP/Linguaggi di Programmazione.md",
-    "Anno 3/Semestre 1/LiP/Progetto/Progetto.md",
-    "Filtri per il grafo.md",
-    "Anno 1/Semestre 2/ARE/File/IJVM.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Macchina SECD.md",
+    "Anno 3/Semestre 1/LiP/Categorie/SECD.md",
+    "Anno 3/Semestre 1/LiP/Categorie/Valutazione.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Linguaggio imperativo.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Linguaggi.md",
+    "Anno 3/Semestre 1/LiP/Categorie/Linguaggi.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Espressioni regolari.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Automi.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Aritmetica non Tipizzata.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo tipizzato.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Tipi.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Semantica.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Stili di semantica.md",
     "Anno 3/Semestre 1/LiP/Appunti dal libro/Introduzione.md",
-    "Anno 3/Semestre 2/ISW/Lab/Python.md",
-    "Anno 3/Semestre 2/ISW/Lab/Oggetti.md",
-    "Anno 3/Semestre 2/ISW/Lab/Strutture dati.md",
-    "Anno 3/Semestre 2/ISW/Lab/Funzioni.md",
-    "Anno 3/Semestre 2/ISW/Lab/Branching.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Indice.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Grammatica.md",
+    "Untitled 1.md",
+    "Untitled.md",
+    "Indice.md",
+    "Anno 3/Semestre 1/LiP/Categorie/Scope.md",
+    "Anno 1/Semestre 1/PR1/Modulo I/Programmazione 1 - Modulo I.md",
+    "Anno 1/Semestre 2/ARE/File/IJVM.md",
+    "Anno 1/Semestre 1/PR1/Modulo I/Inferno.md",
+    "Anno 3/Semestre 2/ISW/Raw/20260428.md",
     "Indici",
     "Anno 2/Semestre 1/ALF/Consigli",
     "Immagini/Pasted image 20260729012212.png",
