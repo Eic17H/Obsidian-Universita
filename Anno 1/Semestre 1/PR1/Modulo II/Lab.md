@@ -1,3 +1,6 @@
+---
+cssclasses: pr1
+---
 PR1 costituisce il 50% del voto finale.
 
 Ci saranno tre prove intermedie.
@@ -64,3 +67,58 @@ Contro:
   
 
 L’IDE che useremo è CLion: abbiamo una licenza education, gratuita per gli studenti.
+
+* [[Introduzione al C]]
+* [[Input e output]]
+* [[Operazioni aritmetiche]]
+* [[Tipi primitivi]]
+* [[Cast]]
+* [[Operatori]]
+* [[Librerie]]
+* [[Selezione e iterazione]]
+* [[Leggibilità]]
+* [[Random]]
+* [[Salto]]
+* [[Array]]
+* [[Definizione di tipi]]
+* [[Puntatori]]
+* [[Allocazione dinamica]]
+
+ho ritrovato gli appunti di laboratorio, comincio a organizzarmeli:
+conviene controllare solo i file "lezione"
+* printf
+* scambio di variabili
+* operazioni aritmetiche
+	* calcolo della media
+	* conversione da °F a °C
+	* conversione tra € e £
+	* calcolo dell'iva
+	* polinomio
+* scanf
+* cast implicito ed esplicito
+* scambio in-place
+* conversione C F come esempio di scanf
+* il tipo char, putchar
+* calcolo della media come esempio di scanf
+* stessa cosa ma con una macro
+* pseudo-cast implicito tra char e int
+* strani esempi di cast
+* ++ e undefined behavior
+* math.h
+* di nuovo ++
+* pitagora
+* area del cerchio
+* costrutti di selezione
+* divisione di float
+* esercizi con costrutti di selezione
+* leggibilità e blocchi
+* rand
+* loop
+* esercizi con loop e scelte
+* φ
+* goto
+* array
+* enum e struct e typedef
+* puntatori (mancante)
+
+#modulo

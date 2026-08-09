@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 I metodi diretti basati su strutture che abbiamo visto si usano *sempre* se il testo ti dice che la matrice ha una struttura particolare. Altrimenti, si usa l'\[title card]
 # Algoritmo di Gauss
 

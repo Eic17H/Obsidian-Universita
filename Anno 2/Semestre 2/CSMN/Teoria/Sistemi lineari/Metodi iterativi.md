@@ -1,4 +1,8 @@
-Vediamo due metodi: quello di [[Jacobi]] e quello di [[Gauss-Seidel]].
+---
+cssclasses:
+  - csmn
+---
+Vediamo due metodi: quello di [[Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Jacobi|Jacobi]] e quello di [[Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Gauss-Seidel|Gauss-Seidel]].
 
 Da riordinare.
 # Metodi iterativi per la risoluzione dei sistemi lineari

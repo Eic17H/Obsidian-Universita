@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 Abbiamo delle coppie $(x_i,y_i)$ per un certo $i=0,\ldots,n$. Sappiamo che questi sono punti che appartengono a una funzione che però non conosciamo esattamente. Approssimiamo questa funzione con una che passa per quei punti e, si spera, è vicina a quella vera in altri punti.
 
 ## Interpolazione polinomiale

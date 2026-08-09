@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice",
+  "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -file:Lavoro.md",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -172,13 +172,13 @@
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": -1.2,
-  "nodeSizeMultiplier": 1.52310518518519,
-  "lineSizeMultiplier": 3.49297777777778,
+  "nodeSizeMultiplier": 1.94428429423459,
+  "lineSizeMultiplier": 1.12042743538767,
   "collapse-forces": false,
-  "centerStrength": 0.423625096824167,
-  "repelStrength": 12.0914020139427,
-  "linkStrength": 0.857397366382649,
-  "linkDistance": 30,
-  "scale": 0.22769209064247248,
-  "close": true
+  "centerStrength": 0,
+  "repelStrength": 11.1403118040089,
+  "linkStrength": 1,
+  "linkDistance": 500,
+  "scale": 0.04870372436490692,
+  "close": false
 }

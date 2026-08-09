@@ -4,68 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "af3587888eb0a523",
+        "id": "071c499fb646e3f1",
         "type": "tabs",
-        "dimension": 32.64907135874878,
         "children": [
           {
-            "id": "3d96c41eeb7eb85b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "λ-calcolo"
-            }
-          },
-          {
-            "id": "820883bd78750d87",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Indici/Test hub/Matematica.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Matematica"
-            }
-          },
-          {
-            "id": "37b072c334235215",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Indici/Test hub/Programmazione.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Programmazione"
-            }
-          },
-          {
-            "id": "2559483985a1d7dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 1/Semestre 1/AM/Analisi Matematica.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Analisi Matematica"
-            }
-          },
-          {
-            "id": "c9326f20e5e6cbd3",
+            "id": "fbbe85fe32a5bc12",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -75,49 +18,7 @@
             }
           },
           {
-            "id": "83f6eb18a3489399",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "53cd30073c090cf8",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "80e4ce84d86ca5bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Indici/Test hub/Logica.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Logica"
-            }
-          }
-        ],
-        "currentTab": 6
-      },
-      {
-        "id": "f16100469d6d144f",
-        "type": "tabs",
-        "dimension": 33.62658846529814,
-        "children": [
-          {
-            "id": "12b3672f219753bc",
+            "id": "5c1249505b7f02aa",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -126,24 +27,8 @@
               "title": "Graph view"
             }
           }
-        ]
-      },
-      {
-        "id": "cbfe28ce1b099441",
-        "type": "tabs",
-        "dimension": 33.724340175953074,
-        "children": [
-          {
-            "id": "4be4919207fe3273",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -202,8 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.7291717529297,
-    "collapsed": true
+    "width": 334.7291717529297
   },
   "right": {
     "id": "1feb8741361685ad",
@@ -219,7 +103,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Anno 3/Semestre 1/LiP/Categorie/SECD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -289,8 +172,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -306,55 +188,55 @@
       "edge-tts:Read note aloud": false
     }
   },
-  "active": "4be4919207fe3273",
+  "active": "5c1249505b7f02aa",
   "lastOpenFiles": [
-    "Indici/Test hub/Programmazione.md",
-    "Anno 3/Semestre 2/ISW/Lab/Python.md",
-    "Indici/Test hub/Logica.md",
-    "Anno 1/Semestre 1/PR1/Modulo II/Lab.md",
     "Filtri per il grafo.md",
-    "Indici/Test hub/Matematica.md",
-    "Indice.md",
-    "Anno 1/Semestre 1/AM/Analisi Matematica.md",
+    "Indici/Linguaggi di programmazione/C.md",
+    "Indici/Categorie/Programmazione.md",
+    "Stampa.md",
+    "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Heapsort.md",
+    "Anno 1/Semestre 1/PR1/Modulo II/Librerie.md",
+    "Indici/Categorie/Matematica.md",
+    "Indici/Linguaggi di programmazione/OCaml.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari.md",
     "Anno 2/Semestre 2/CSMN/Lab/Metodi iterativi.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi diretti/Inversione.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi diretti/Ortogonali.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Rappresentazione dei numeri/Aritmetica di macchina.md",
-    "Anno 1/Semestre 1/FDI/File/Basi numeriche.md",
-    "Anno 2/Semestre 2/CSMN/CSMN.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Teoria.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Rappresentazione dei numeri.md",
-    "Anno 1/Semestre 2/MD/Matematica Discreta.md",
-    "Anno 1/Semestre 1/PR1/Modulo I/Algoritmo di Euclide.md",
-    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo.md",
-    "Anno 2/Semestre 1/ALF/File/Logica dei predicati.md",
-    "Anno 1/Semestre 1/AM/File/Logica proposizionale.md",
-    "Indici/Test hub",
-    "Anno 3/Semestre 1/LiP/Categorie/SECD.md",
-    "Anno 3/Semestre 1/LiP/Appunti dal libro/Macchina SECD.md",
-    "Anno 1/Semestre 1/PR1/Modulo I/Scope.md",
-    "Anno 3/Semestre 1/LiP/Linguaggi di Programmazione.md",
-    "Immagini/Pasted image 20260809014932.png",
-    "Anno 3/Semestre 1/LiP/Categorie/Valutazione.md",
+    "Anno 3/Semestre 2/ISW/Lab/Python.md",
+    "Anno 1/Semestre 1/PR1/Modulo II/Salto.md",
+    "Indici/Linguaggi di programmazione/MatLab.md",
+    "Indici/Linguaggi di programmazione/Icone/MatLab.png",
+    "Indici/Linguaggi di programmazione/Java.md",
+    "Indici/Linguaggi di programmazione/Icone/Java.png",
+    "Indici/Linguaggi di programmazione/Icone/OCaml.png",
+    "Indici/Linguaggi di programmazione/Python.md",
+    "Indici/Linguaggi di programmazione/Icone/Python.png",
+    "Indici/Linguaggi di programmazione/Icone/C.png",
+    "Immagini/Pasted image 20260729012212.png",
+    "Immagini/Pasted image 20260810002545.png",
+    "Immagini/Pasted image 20260729012202.png",
+    "Immagini/Pasted image 20260707221309.png",
+    "Immagini/Pasted image 20260629163530.png",
+    "Anno 1/Semestre 1/PR1/Modulo II/Introduzione al C.md",
+    "Indici/Linguaggi di programmazione/Icone",
+    "Indici/Categorie/Lavoro.md",
+    "Anno 3/Semestre 1/IUM/Teoria/Errori.md",
+    "Anno 3/Semestre 1/IUM/Teoria/Iterazione.md",
+    "Anno 3/Semestre 2/ISW/Teoria/Testing.md",
+    "Anno 2/Semestre 1/ALF/File/OCaml.md",
+    "Anno 2/Semestre 1/EED/Diritto/File/Brevetto.md",
+    "Anno 3/Semestre 1/IUM/Teoria/Test.md",
+    "Anno 2/Semestre 2/PR2/Teoria/Linguaggio.md",
+    "Anno 2/Semestre 2/PR2/Teoria/Oggetti e classi.md",
+    "Anno 2/Semestre 2/PR2/Teoria/Teoria.md",
+    "Anno 2/Semestre 2/CSMN/Lab/Relazione.pdf",
+    "Indici/Linguaggi di programmazione",
+    "Anno 2/Semestre 2/CSMN/Lab/Algoritmi",
+    "Indici/Categorie",
     "Indici",
     "Anno 2/Semestre 1/ALF/Consigli",
-    "Immagini/Pasted image 20260729012212.png",
-    "Immagini/Pasted image 20260729012202.png",
     "Anno 3/Semestre 1/LiP/Progetto",
     "Anno 2/Semestre 2/RC/File/Parte III",
     "Anno 2/Semestre 2/RC/File",
-    "Anno 2/Semestre 2/RC/Vecchi",
-    "Anno 3/Semestre 2",
-    "Anno 3/Semestre 1",
-    "Anno 2/Semestre 2",
     "A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
-    "Immagini/Pasted image 20260709130359.png",
-    "Immagini/Pasted image 20260707221309.png",
-    "Untitled.canvas",
-    "Immagini/Pasted image 20260320122213.png",
-    "Pasted image 20250324190527.png",
-    "Pasted image 20250324190528.png",
-    "ALF/File/IMG_0858.png",
-    "FPW/Laboratorio/File/Introduzione a Vue/CineVUE/CineVUE/node_modules/vite-plugin-inspect/dist/client/favicon.svg"
+    "Untitled.canvas"
   ]
 }

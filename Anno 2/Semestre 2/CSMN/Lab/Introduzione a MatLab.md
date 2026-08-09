@@ -8,29 +8,34 @@ MatLab sta per Matrix Laboratory, si usa per fare calcoli con le matrici. Faremo
 
 ## Variabili
 
-Per dichiarare una variabile possiamo scrivere, per esempio, `x = 10;`, e questa variabile viene salvata nel workspace, che è l'insieme delle variabili finora dichiarate, insieme ai loro valori. Questo è un linguaggio non fortemente tipato, il tipo viene dedotto automaticamente. Di default, tutte le variabili sono matrici. Quella `x` è una matrice 1x1. Infatti, `size(x)` dà `1 1`.
+Per dichiarare una variabile possiamo scrivere, per esempio, `x = 10;`, e questa variabile viene salvata nel workspace, che è l'insieme delle variabili finora dichiarate, insieme ai loro valori. Questo è un linguaggio non fortemente tipato, il tipo viene dedotto automaticamente. Di default, tutte le variabili sono matrici. Quella `x` è una matrice di taglia $1\times1$. Infatti, `size(x)` restituisce `1 1`.
 
 Se chiamiamo `size(x)` senza assegnarlo a una variabile, il valore viene assegnato alla variabile `ans`. Possiamo eliminare tutte le variabili con `clear`, e mostrarle tutte con `whos`. Per vederne una sola, per esempio `x`, scriviamo `whos x`.
 
 ## Salvare
 
-Una funzionalità molto utile è quella di salvataggio del workspace, usando la funzione `save()`, che prende in input una stringa che sarà il nome del file, per esempio `save("ws1.mat")`. Potremo usare quel file per ripristinare il workspace.
+Una funzionalità molto utile è quella di salvataggio del workspace, usando la funzione `save()`, che prende in input una stringa che sarà il nome del file, per esempio `save("workspace.mat")`. Potremo usare quel file per ripristinare il workspace con `load("workspace.mat")`.
 
-Un'altra funzione utile è il diary, che permette di salvare tutto ciò che è successo nella sessione, quindi tutti i comandi eseguiti, come file di testo. `diary("lab0.txt")`. Possiamo sospendere la registrazione con `diary off`, riprenderla con `diary on`.
+Un'altra funzione utile è il *diary*, che permette di salvare tutto ciò che è successo nella sessione, quindi tutti i comandi eseguiti, sotto forma di file di testo. Il nome del file viene passato come parametro: `diary("diario.txt")`. Possiamo sospendere la registrazione con `diary off` e riprenderla con `diary on`.
 
-## Operazioni e comandi
+## Stampa e input
 
-Possiamo fare il modulo con `mod(,)`.
+Il `;` non è obbligatorio alla fine di una riga. Di default i comandi stampano il risultato, il punto e virgola serve a impedire la stampa. Si impedisce perché è computazionalmente lenta. Non è l'unica opzione.
 
-Ci sono due comandi, `tic` e `toc`, che avviano e terminano un timer, che ci permette di sapere quanto ci ha impiegato il computer a fare certi calcoli.
+`disp()` permette di stampare il valore di singole variabili, come `disp(x)`, o di aggiungere una stringa, come `disp("Il valore di x è "+x)`.
 
-`help` è un manuale. Si può anche usare qualcosa come `help disp`.
+La stampa formattata simile al C si fa con `fprintf()`: `fprintf("x = %d", x)`. `%d %f \n`.
+
+Per prendere valori in input si usa `input()`: `x = input("Inserisci un valore");`.
+
+## Polimorfismo
 
 Certe funzioni sono polimorfiche, cioè cambiano il comportamento a seconda di come le chiamiamo. Per esempio, `eig(A)` restituisce lo spettro di $A$ se assegnata a un vettore, e restituisce autovettori e autovalori in diagonale se assegnata a una coppia di matrici.
+## Comandi utili
 
-Le funzioni per valori singoli, se applicate a matrici, sono applicate elemento per elemento.
+Il comando `help` permette di consultare il manuale. Può prendere come parametro un comando, come `help diary`, e in quel caso stamperà la sezione che riguarda quel comando. Senza un parametro, fornisce una guida e un link alla documentazione.
 
-L'operatore not si fa con la tilde, `~`. Su Windows, si digita con `Alt+126`. Altrove, potrebbe essere `AltGr+ì`.
+`clc` elimina la cronologia della finestra dell'interfaccia a riga di comando.
 ## Blocchi
 
 Il delimitatore di blocco in MatLab è `end`, non ci sono parentesi quanto in C.
@@ -45,11 +50,20 @@ else
 end
 ```
 
+## Timer
+
+È possibile utilizzare un timer per misurare il tempo di esecuzione di una porzione di codice, per esempio per confrontare la scalabilità di due algoritmi.
+
+Il comando `tic` avvia il timer, e il comando `toc` lo ferma.
+
+`toc` è polimorfico. Chiamato da solo, stamperà, per esempio, `Elapsed time is 0.002274 seconds.`, e non restituirà nessun valore da assegnare ad `ans`. Altrimenti può essere assegnato a una variabile, come in `x = toc`, e in quel caso non stamperà niente.
 ## Formati numerici
 
 Il comando `format` prende un parametro per il formato della stampa dei numeri. `format short` ci dà 4 cifre decimali. `format shorte` ci dà 4 cifre in notazione scientifica, similmente `long` e `longe` per 10 cifre. Questo comando non cambia in alcun modo i calcoli, solo la visualizzazione. L'effetto dura da quando viene chiamato in poi.
 
-La funzione `fix()` tronca tutte le cifre decimali del parametro, quindi arrotonda verso 0. `floor()` arrotonda per difetto, verso -inf. `ceil()` arrotonda per eccesso. `round()` arrotonda all'intero più vicino; prende anche un secondo parametro opzionale, che specifica le cifre dopo la virgola; prende anche un terzo parametro, una stringa, se scrivi `"significant"` considera nel conteggio solo le cifre significative.
+La funzione `fix()` tronca tutte le cifre decimali del parametro, quindi arrotonda verso $0$. `floor()` arrotonda per difetto, verso $-\infty$. `ceil()` arrotonda per eccesso, verso $+\infty$.
+
+`round()` arrotonda all'intero più vicino, e ha due parametri opzionali: il primo specifica la quantità di cifre dopo la virgola, e il secondo può solo essere una stringa, `"significant"`, che indica che deve considerare nel conteggio solo le cifre significative.
 
 Esercizio: script che ci permette di fare le operazioni su un insieme di numeri macchina.
 

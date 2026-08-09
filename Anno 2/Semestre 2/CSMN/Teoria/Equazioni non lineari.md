@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 Abbiamo visto finora i sistemi lineari: compaiono variabili al primo grado.
 
 Non vedremo sistemi di equazioni non lineari, ma solo equazioni singole. Le variabili che compaiono sono o elevate con esponenti diversi da $1$, o usate in altre funzioni.

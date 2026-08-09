@@ -16,7 +16,7 @@ I link in questo documento sono trasandati e alcuni sono stati rinominati automa
 
 * [[Logica proposizionale classica]]
 * [[Anno 2/Semestre 1/ALF/File/Logica dei predicati|Logica dei predicati]]
-* [[OCaml]]
+* [[Anno 2/Semestre 1/ALF/File/OCaml]]
 * [[Insiemi|Insiemi]]
 * [[Anno 2/Semestre 1/ALF/File/Funzioni]]
 * [[Comune/Regole di inferenza]]

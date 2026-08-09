@@ -26,7 +26,7 @@ Argomenti del secondo parziale:
 	* Lean/Kanban
 * [[Dev-Ops]]
 * [[Refactoring]] e debito tecnico
-* [[Python]]:
+* [[Anno 3/Semestre 2/ISW/Lab/Python]]:
 	* Dizionari
 	* Set
 	* Tuple

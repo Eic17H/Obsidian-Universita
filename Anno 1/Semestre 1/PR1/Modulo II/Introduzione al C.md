@@ -1,0 +1,1 @@
+Struttura base di un programma, creazione di variabili intere

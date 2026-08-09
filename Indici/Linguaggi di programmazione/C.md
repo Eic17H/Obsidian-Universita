@@ -1,0 +1,46 @@
+---
+icon: C.png
+---
+
+#hub 
+
+* [[Introduzione al C]]
+* [[Input e output]]
+* [[Operazioni aritmetiche]]
+* [[Tipi primitivi]]
+* [[Cast]]
+* [[Operatori]]
+* [[Librerie]]
+* [[Selezione e iterazione]]
+* [[Leggibilità]]
+* [[Random]]
+* [[Salto]]
+* [[Array]]
+* [[Definizione di tipi]]
+* [[Puntatori]]
+* [[Allocazione dinamica]]
+
+[[Sistemi Operativi - Modulo II]]
+[[Socket]]
+[[Terminale di Linux - cheatsheet]]
+[[Socket in C]]
+[[Tutto C SO]]
+[[File]]
+[[Introduzione al terminale]]
+[[Linux - Cenni storici]]
+[[Processi, thread e job]]
+[[Virtual machine]]
+[[Anno 2/Semestre 1/SO/Lab/Lab]]
+[[Anno 2/Semestre 1/SO/Lab/Regex]]
+
+[[Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Complessità]]
+[[Dijkstra]]
+[[Heapsort]]
+[[Ricerca Binaria]]
+[[Selection Sort]]
+[[Stack]]
+[[Alberi]]
+[[Coda]]
+[[Grafi]]
+[[Heap]]
+[[Liste]]

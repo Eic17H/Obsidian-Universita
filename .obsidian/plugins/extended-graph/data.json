@@ -8,7 +8,7 @@
       "links": false,
       "linksSameColorAsNode": false,
       "folders": false,
-      "imagesFromProperty": false,
+      "imagesFromProperty": true,
       "imagesFromEmbeds": false,
       "imagesForAttachments": false,
       "focus": true,
@@ -27,7 +27,7 @@
       "links": false,
       "linksSameColorAsNode": false,
       "folders": false,
-      "imagesFromProperty": false,
+      "imagesFromProperty": true,
       "imagesFromEmbeds": false,
       "imagesForAttachments": false,
       "focus": true,
@@ -175,7 +175,7 @@
   "additionalProperties": {},
   "backupGraphOptions": {
     "collapse-filter": false,
-    "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice",
+    "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -file:Lavoro.md",
     "showTags": false,
     "showAttachments": false,
     "hideUnresolved": true,
@@ -347,15 +347,15 @@
     "collapse-display": false,
     "showArrow": false,
     "textFadeMultiplier": -1.2,
-    "nodeSizeMultiplier": 1.52310518518519,
-    "lineSizeMultiplier": 3.49297777777778,
+    "nodeSizeMultiplier": 1.94428429423459,
+    "lineSizeMultiplier": 1.12042743538767,
     "collapse-forces": false,
-    "centerStrength": 0.423625096824167,
-    "repelStrength": 12.0914020139427,
-    "linkStrength": 0.857397366382649,
-    "linkDistance": 30,
-    "scale": 0.22769209064247248,
-    "close": true
+    "centerStrength": 0,
+    "repelStrength": 11.1403118040089,
+    "linkStrength": 1,
+    "linkDistance": 500,
+    "scale": 0.04870372436490692,
+    "close": false
   },
   "openInNewTab": true,
   "canonicalizePropertiesWithDataview": true,
@@ -527,19 +527,19 @@
             }
           }
         ],
-        "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice",
+        "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -file:Lavoro.md",
         "hideUnresolved": true,
         "showAttachments": false,
         "showOrphans": false,
         "showTags": false,
-        "lineSizeMultiplier": 3.49297777777778,
-        "nodeSizeMultiplier": 1.52310518518519,
+        "lineSizeMultiplier": 1.12042743538767,
+        "nodeSizeMultiplier": 1.94428429423459,
         "showArrow": false,
         "textFadeMultiplier": -1.2,
-        "centerStrength": 0.423625096824167,
-        "linkDistance": 30,
-        "linkStrength": 0.857397366382649,
-        "repelStrength": 12.0914020139427
+        "centerStrength": 0,
+        "linkDistance": 500,
+        "linkStrength": 1,
+        "repelStrength": 11.1403118040089
       },
       "toggleTypes": {
         "tag": [],
@@ -563,7 +563,7 @@
   "saveConfigsWithState": false,
   "customColorMaps": {},
   "imageProperties": [
-    "image"
+    "icon"
   ],
   "borderFactor": 0.06,
   "allowExternalImages": false,
@@ -571,7 +571,7 @@
   "nodesSizeProperties": [
     ""
   ],
-  "nodesSizeFunction": "constant",
+  "nodesSizeFunction": "default",
   "nodesSizeRange": {
     "min": 0.5,
     "max": 1.5
@@ -596,14 +596,7 @@
     "circle": {
       "combinationLogic": "AND",
       "index": 0,
-      "rules": [
-        {
-          "source": "folder",
-          "property": "",
-          "value": "Anno 1",
-          "logic": "contains"
-        }
-      ]
+      "rules": []
     },
     "square": {
       "combinationLogic": "AND",
@@ -622,7 +615,7 @@
         {
           "source": "folder",
           "property": "",
-          "value": "Anno 2",
+          "value": "Indici/Categorie",
           "logic": "contains"
         }
       ]
@@ -639,7 +632,7 @@
         {
           "source": "folder",
           "property": "",
-          "value": "Anno 3",
+          "value": "Indici/Linguaggi di programmazione",
           "logic": "contains"
         }
       ]
@@ -662,20 +655,7 @@
     "star5": {
       "combinationLogic": "OR",
       "index": 9,
-      "rules": [
-        {
-          "source": "folder",
-          "property": "",
-          "value": "A scelta",
-          "logic": "contains"
-        },
-        {
-          "source": "folder",
-          "property": "",
-          "value": "Comune",
-          "logic": "contains"
-        }
-      ]
+      "rules": []
     },
     "star6": {
       "combinationLogic": "AND",
@@ -785,12 +765,12 @@
     "links": true,
     "arrows": true,
     "folders": true,
-    "images": true,
-    "icons": false,
-    "focus": false,
+    "images": false,
+    "icons": true,
+    "focus": true,
     "shapes": false,
     "layers": true,
-    "elements-stats": true,
+    "elements-stats": false,
     "names": true,
     "zoom": true,
     "local-graph": false,
@@ -813,5 +793,25 @@
     "useModifiedNames": true,
     "showIcons": false
   },
-  "multipleNodesData": {}
+  "multipleNodesData": {
+    "shapeData": {
+      "type": "grid",
+      "center": {
+        "x": 0,
+        "y": 0
+      },
+      "step": 100
+    },
+    "queryData": {
+      "combinationLogic": "AND",
+      "rules": [
+        {
+          "source": "all",
+          "property": "",
+          "value": "",
+          "logic": ""
+        }
+      ]
+    }
+  }
 }

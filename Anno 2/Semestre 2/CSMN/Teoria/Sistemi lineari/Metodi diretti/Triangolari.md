@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 Dicevamo, Gauss, pivoting, scambiare la riga attuale con quello dove si trova il massimo in modulo.
 
 Invece oggi, fattorizzazione $A=LU$ e $PA=LU$. Da non soprannominare Alu e Palu. Fattorizzazione, no? Sappiamo che $15 = 3 \cdot 15$, stessa cosa. Fattorizzazione triangolare.

@@ -1,3 +1,6 @@
+---
+cssclasses: csmn
+---
 `plot(x,y)`: vettore ascisse, vettore ordinate.
 
 Esempio:
@@ -28,5 +31,20 @@ plot(...)
 Possiamo anche mettere un titolo e una legenda:
 ```MatLab
 title("Funzioni seno e coseno")
-legend("coseno, seno)
+legend("coseno", "seno")
 ```
+
+<div style="break-after: page;"></div>
+
+Quindi, con questo codice:
+```MatLab
+x = 0:0.1:10;
+y = cos(x);
+plot(x,y, "LineWidth",3, "Color",[1,0.5,0.1], "LineStyle","--")
+hold on
+plot(x,sin(x),x,cos(x))
+title("Funzioni seno e coseno")
+legend("coseno", "seno")
+```
+Otteniamo questo grafico:
+![[Pasted image 20260629163530.png]]

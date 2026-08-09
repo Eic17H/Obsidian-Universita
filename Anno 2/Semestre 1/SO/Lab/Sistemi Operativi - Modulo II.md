@@ -82,6 +82,8 @@ specificato.
 `AltGr + ‘` - Permette di inserire un backtick (  \` ).
 `*` - Una qualunque stringa.
 `?` - Un qualunque carattere.
+
+#modulo
 # 30 Settembre 2024
 
 Ci saranno due parziali: uno a novembre e uno intorno alle vacanze di Natale.
