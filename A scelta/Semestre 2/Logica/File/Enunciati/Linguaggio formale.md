@@ -2,7 +2,7 @@
 cssclasses:
   - logica
 ---
-Lo stesso argomento: <span class="lip">[[Anno 3/Semestre 1/LiP/Appunti dal libro/Linguaggi|LiP]]</span>, <span class="alf">[[Linguaggi formali|ALF]]</span>, <span class="pr2">[[Anno 2/Semestre 2/PR2/Teoria/Linguaggio|PR2]]</span>
+Lo stesso argomento: <span class="lip">[[Anno 3/Semestre 1/LiP/Appunti dal libro/Linguaggi|LiP]]</span>, <span class="alf">[[Anno 2/Semestre 1/ALF/File/Linguaggi formali|ALF]]</span>, <span class="pr2">[[Anno 2/Semestre 2/PR2/Teoria/Linguaggio|PR2]]</span>
 
 Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto informale?
 

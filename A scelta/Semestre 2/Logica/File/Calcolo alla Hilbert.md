@@ -6,9 +6,9 @@ $\newcommand{\L}{\mathcal{L}}$$\Gamma \models _{HK} \alpha$. Il nostro sistema s
 
 Hilbert: generare tautologie da un piccolo numero di postulati (assiomi), che includono particolari formule che sceglierò come assiomi e che saranno tautologie e un certo numero di schemi di argomento valido a partire dai quali tutti gli altri possono essere generati. Piccolo numero di postulati, cioè assiomi e regole di inferenza, e da lì generiamo tutti gli altri.
 
-Quindi vediamo questo calcolo, il calcolo HK: H per Hilbert, K per klassische (classico).
+Quindi vediamo questo [[calcolo logico|calcolo]], il calcolo HK: H per Hilbert, K per klassische (classico).
 
-Gli [[Assiomi]], ce ne sono 11, sono formule del linguaggio $\L_0$. Alcuni li conosciamo: A1 è l'a fortiori, A2 è la legge di Frege, A3 A4 A5 sono già viste per la congiunzione, A6 A7 A8 disgiunzione, A9 è nuova, A10 è l'ex absurdo quodlibet, A11 è la doppia negazione. 11 tautologie.
+Gli [[Assiomi]], ce ne sono 11, sono formule del linguaggio $\L_0$. Alcuni li conosciamo: $A1$ è l'a fortiori, $A2$ è la legge di Frege, $A3$, $A4$ e $A5$ sono già viste per la congiunzione, $A6$, $A7$ e $A8$ disgiunzione, $A9$ è nuova, $A10$ è l'ex absurdo quodlibet, $A11$ è la doppia negazione. 11 tautologie.
 
 E poi c'è un'unica regola d'inferenza, che è uno schema di argomento, il modus ponens: $\dfrac{\alpha \enspace \alpha \rightarrow \beta}{\beta}$. ^1
 

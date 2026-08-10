@@ -16,7 +16,6 @@
 [[Alfred Tarski]]
 [[Routley e Routley]]
 [[Ambiguo, vago, relativo]]
-[[Linguaggio formale]]
 [[Congiunzione]]
 [[Disgiunzione]]
 [[Implicazione]]

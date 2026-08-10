@@ -4,21 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "071c499fb646e3f1",
+        "id": "166262b552d22825",
         "type": "tabs",
         "children": [
           {
-            "id": "fbbe85fe32a5bc12",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "5c1249505b7f02aa",
+            "id": "fba964c7fb691cab",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -27,8 +17,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,7 +72,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -188,45 +178,44 @@
       "edge-tts:Read note aloud": false
     }
   },
-  "active": "5c1249505b7f02aa",
+  "active": "fba964c7fb691cab",
   "lastOpenFiles": [
-    "Filtri per il grafo.md",
-    "Indici/Linguaggi di programmazione/C.md",
-    "Indici/Categorie/Programmazione.md",
-    "Stampa.md",
-    "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Heapsort.md",
-    "Anno 1/Semestre 1/PR1/Modulo II/Librerie.md",
+    "Immagini/Pasted image 20260629163530.png",
+    "Indici/Categorie/Linguaggi formali.md",
+    "A scelta/Semestre 2/Logica/File/Enunciati/Linguaggio formale.md",
+    "Indici/Categorie/Logica.md",
     "Indici/Categorie/Matematica.md",
-    "Indici/Linguaggi di programmazione/OCaml.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari.md",
-    "Anno 2/Semestre 2/CSMN/Lab/Metodi iterativi.md",
-    "Anno 3/Semestre 2/ISW/Lab/Python.md",
-    "Anno 1/Semestre 1/PR1/Modulo II/Salto.md",
-    "Indici/Linguaggi di programmazione/MatLab.md",
+    "Anno 2/Semestre 1/ALF/File/Funzioni.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo.md",
+    "Indici/Categorie/Programmazione.md",
+    "Comune/Derivazione.md",
+    "Comune/Regole di inferenza.md",
+    "Anno 3/Semestre 1/LiP/Categorie/Valutazione.md",
+    "Anno 3/Semestre 1/LiP/Categorie/Tipizzazione.md",
+    "Anno 3/Semestre 1/LiP/Categorie/SECD.md",
+    "Anno 3/Semestre 1/LiP/Categorie/Scope.md",
+    "Anno 3/Semestre 1/LiP/Categorie/Linguaggi.md",
+    "A scelta/Semestre 2/Logica/Esercitazioni/20260401.md",
+    "A scelta/Semestre 2/Logica/File/Equivalenza dei calcoli.md",
+    "A scelta/Semestre 2/Logica/File/Teorema di completezza.md",
+    "Indici/Linguaggi di programmazione/C.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Autovalori e autovettori.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Norme vettoriali.md",
+    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Spazio lineare.md",
+    "Anno 2/Semestre 1/SO/Lab/Altro/Socket.md",
+    "Anno 2/Semestre 1/SO/Lab/Sistemi Operativi - Modulo II.md",
+    "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Complessità.md",
+    "Anno 2/Semestre 1/SO/Lab/Regex.md",
     "Indici/Linguaggi di programmazione/Icone/MatLab.png",
-    "Indici/Linguaggi di programmazione/Java.md",
     "Indici/Linguaggi di programmazione/Icone/Java.png",
     "Indici/Linguaggi di programmazione/Icone/OCaml.png",
-    "Indici/Linguaggi di programmazione/Python.md",
     "Indici/Linguaggi di programmazione/Icone/Python.png",
     "Indici/Linguaggi di programmazione/Icone/C.png",
     "Immagini/Pasted image 20260729012212.png",
     "Immagini/Pasted image 20260810002545.png",
     "Immagini/Pasted image 20260729012202.png",
     "Immagini/Pasted image 20260707221309.png",
-    "Immagini/Pasted image 20260629163530.png",
-    "Anno 1/Semestre 1/PR1/Modulo II/Introduzione al C.md",
     "Indici/Linguaggi di programmazione/Icone",
-    "Indici/Categorie/Lavoro.md",
-    "Anno 3/Semestre 1/IUM/Teoria/Errori.md",
-    "Anno 3/Semestre 1/IUM/Teoria/Iterazione.md",
-    "Anno 3/Semestre 2/ISW/Teoria/Testing.md",
-    "Anno 2/Semestre 1/ALF/File/OCaml.md",
-    "Anno 2/Semestre 1/EED/Diritto/File/Brevetto.md",
-    "Anno 3/Semestre 1/IUM/Teoria/Test.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Linguaggio.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Oggetti e classi.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Teoria.md",
     "Anno 2/Semestre 2/CSMN/Lab/Relazione.pdf",
     "Indici/Linguaggi di programmazione",
     "Anno 2/Semestre 2/CSMN/Lab/Algoritmi",

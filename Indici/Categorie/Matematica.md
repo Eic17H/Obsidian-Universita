@@ -54,8 +54,6 @@
 [[Rappresentazione dei numeri]]
 [[Sistemi lineari]]
 [[Vettori]]
-[[λ-calcolo]]
-[[λ-calcolo tipizzato]]
 [[Anno 2/Semestre 1/ALF/File/Funzioni]]
 [[Insiemi]]
 

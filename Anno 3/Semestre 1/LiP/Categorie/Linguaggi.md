@@ -61,4 +61,3 @@ Capiamo le regole una alla volta:
 * $K$ aggiunge le $a$ e le $c$ nella stessa quantità;
 * $B$ rimane al centro e aggiunge $bbb$.
 
-#modulo

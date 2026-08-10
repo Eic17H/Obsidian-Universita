@@ -14,7 +14,7 @@ In una lezione particolare crossover con la filosofia del linguaggio vedremo l'i
 
 ## Differenze con HK
 
-HK ha tanti assiomi e una regola di inferenza. ND non ha assiomi, ma ha molte regole di inferenza. Qual è quindi il punto di partenza? Le assunzioni. Però, in HK potevamo derivare qualcosa dalle assunzioni, $Γ \vdash_{HK} α$, o dimostrare teoremi che non derivano da nessuna assunzione, $\emptyset \vdash_{HK} α$. Sarebbe una grande limitazione non poterlo fare anche in ND, e infatti si può: ci sono delle regole che ci permettono di *chiudere delle assunzioni*, cioè ragioniamo a partire da assunzioni, e raggiunta la conclusione rimuoviamo una a una quelle assunzioni.
+[[calcolo alla hilbert|HK]] ha tanti assiomi e una regola di inferenza. ND non ha assiomi, ma ha molte regole di inferenza. Qual è quindi il punto di partenza? Le assunzioni. Però, in HK potevamo derivare qualcosa dalle assunzioni, $Γ \vdash_{HK} α$, o dimostrare teoremi che non derivano da nessuna assunzione, $\emptyset \vdash_{HK} α$. Sarebbe una grande limitazione non poterlo fare anche in ND, e infatti si può: ci sono delle regole che ci permettono di *chiudere delle assunzioni*, cioè ragioniamo a partire da assunzioni, e raggiunta la conclusione rimuoviamo una a una quelle assunzioni.
 
 Le derivazioni sono diverse. In HK sono successioni finite di formule eccetera. Qua invece non vedremo la definizione rigorosa, ma concettualmente saranno fatte ad albero: partiremo da assunzioni, le combineremo usando queste regole, arrivando a un nodo singolo, la radice, che è la conclusione. Quindi se $Γ \vdash_{ND} α$, vuol dire che esiste una deduzione ad albero la cui radice è $α$ e in cui ogni foglia è un elemento di $Γ$.
 
@@ -145,4 +145,4 @@ Era una congiunzione "virtuale", c'era una congiunzione ma potrebbe essere qualu
 
 Il calcolo alla Hilbert non rendeva facile fare derivazioni, dovevi tirare un po' a casaccio. Il calcolo delle sequenze permette di farle in modo estremamente algoritmico. Questa è una via di mezzo.
 
-C'è anche il calcolo tableau, sintattico ma vicino alla semantica, ma secondo il professore è orrendo, soprattutto didatticamente. Invece nessuno usa il calcolo delle sequenze.
+C'è anche il calcolo tableau, sintattico ma vicino alla semantica, ma secondo il professore è orrendo, soprattutto didatticamente. Invece nessuno usa il [[calcolo dei sequenti|calcolo delle sequenze]].

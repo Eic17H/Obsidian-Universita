@@ -7,4 +7,3 @@ cssclasses: lip
 
 ## Esercizi
 
-#modulo

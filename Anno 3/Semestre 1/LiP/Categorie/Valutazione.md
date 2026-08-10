@@ -144,4 +144,3 @@ Perché al secondo passaggio non posso usare la $(10)$? Perché richiederebbe pi
 
 CE L'HO FATTA. È identica a quella del prof. Dai non è così male. Lo so che questi dovrebbero essere appunti da cui studiare per quelli degli anni dopo ma questa è letteralmente la prima volta che provo a fare questo tipo di esercizio.
 
-#modulo 

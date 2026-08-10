@@ -22,7 +22,7 @@ I link in questo documento sono trasandati e alcuni sono stati rinominati automa
 * [[Comune/Regole di inferenza]]
 * [[ALF/File/Ricorsione|Ricorsione]]
 * [[Passaggi di stato]]
-* [[Linguaggi formali]]
+* [[Anno 2/Semestre 1/ALF/File/Linguaggi formali]]
 * [[Anno 2/Semestre 1/ALF/File/Automi|Automi]]
 * [[Anno 2/Semestre 1/ALF/File/Regex|Regex]]
 * [[Macchine di Turing]]

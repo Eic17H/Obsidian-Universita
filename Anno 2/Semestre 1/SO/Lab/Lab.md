@@ -7,7 +7,7 @@ cssclasses:
 * [[Linux - Cenni storici]]
 * [[Virtual machine]]
 * [[Introduzione al terminale]]
-* [[File]]
+* [[Anno 2/Semestre 1/SO/Lab/Linux/File]]
 * [[Anno 2/Semestre 1/SO/Lab/Regex|Regex]]
 * [[Processi, thread e job]]
 #### Bash

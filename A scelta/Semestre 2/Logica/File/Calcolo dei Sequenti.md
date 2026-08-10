@@ -2,7 +2,7 @@
 cssclasses:
 - logica
 ---
-Hilbert è bello perché è sistematico, si presta bene a dimostrare teoremi metateorici, vedremo nel terzo modulo il teorema di completezza. Nella deduzione naturale viene bene lavorare dentro.
+[[calcolo alla hilbert|Hilbert]] è bello perché è sistematico, si presta bene a dimostrare teoremi metateorici, vedremo nel terzo modulo il teorema di completezza. Nella [[Deduzione Naturale|deduzione naturale]] viene bene lavorare dentro.
 
 Nel calcolo delle sequenze, avremo dal punto di vista della gestione della derivazione qualcosa di ancora più amichevole e semplice. Il prezzo da pagare in questo caso è una maggiore complessità degli oggetti formali su cui andremo a lavorare, non formule ma sequenze.
 

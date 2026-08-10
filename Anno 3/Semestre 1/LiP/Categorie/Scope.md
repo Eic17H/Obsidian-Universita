@@ -94,4 +94,3 @@ Diciamo che si chiama "deep binding" perché $g$ resta legato al suo $\Delta$ fi
 
 ## Esercizi
 
-#modulo

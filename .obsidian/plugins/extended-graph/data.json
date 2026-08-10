@@ -5,7 +5,7 @@
       "tags": false,
       "properties": false,
       "property-key": false,
-      "links": false,
+      "links": true,
       "linksSameColorAsNode": false,
       "folders": false,
       "imagesFromProperty": true,
@@ -20,11 +20,11 @@
       "layers": false
     },
     "localgraph": {
-      "auto-enabled": true,
+      "auto-enabled": false,
       "tags": false,
       "properties": false,
       "property-key": false,
-      "links": false,
+      "links": true,
       "linksSameColorAsNode": false,
       "folders": false,
       "imagesFromProperty": true,
@@ -180,7 +180,7 @@
     "showAttachments": false,
     "hideUnresolved": true,
     "showOrphans": false,
-    "collapse-color-groups": true,
+    "collapse-color-groups": false,
     "colorGroups": [
       {
         "query": "file:Indice",
@@ -207,7 +207,7 @@
         "query": "path:Comune/",
         "color": {
           "a": 1,
-          "rgb": 1710618
+          "rgb": 6710886
         }
       },
       {
@@ -354,7 +354,7 @@
     "repelStrength": 11.1403118040089,
     "linkStrength": 1,
     "linkDistance": 500,
-    "scale": 0.04870372436490692,
+    "scale": 0.12286654214410998,
     "close": false
   },
   "openInNewTab": true,
@@ -390,7 +390,7 @@
             "query": "path:Comune/",
             "color": {
               "a": 1,
-              "rgb": 1710618
+              "rgb": 6710886
             }
           },
           {
@@ -697,7 +697,7 @@
     "url"
   ],
   "externalLinkOpenMode": "note",
-  "showPinIcon": true,
+  "showPinIcon": false,
   "allowMultipleLinkTypes": false,
   "disableSource": false,
   "disableTarget": false,
@@ -725,7 +725,7 @@
   "usePropertiesForName": [],
   "addBackgroundToName": false,
   "nameVerticalOffset": 0,
-  "dynamicVerticalOffset": false,
+  "dynamicVerticalOffset": true,
   "showNamesWhenNeighborHighlighted": true,
   "iconProperties": [
     ""
@@ -759,25 +759,25 @@
   "collapseLegend": true,
   "resetAfterChanges": false,
   "collapsedSettings": {
-    "automation": true,
+    "automation": false,
     "tags": true,
     "properties": true,
-    "links": true,
+    "links": false,
     "arrows": true,
     "folders": true,
-    "images": false,
+    "images": true,
     "icons": true,
     "focus": true,
-    "shapes": false,
+    "shapes": true,
     "layers": true,
     "elements-stats": false,
     "names": true,
     "zoom": true,
-    "local-graph": false,
+    "local-graph": true,
     "display": false,
     "filter": true,
-    "inputs": true,
-    "performances": false,
+    "inputs": false,
+    "performances": true,
     "beta": true
   },
   "selectionMode": "replace",

@@ -2,7 +2,7 @@
 cssclasses:
  - logica
 ---
-Abbiamo detto che HK, ND e PK sono equivalenti, ma non abbiamo detto come. Con HK ed ND ce lo possiamo immaginare, abbiamo una nozione di derivabilità.
+Abbiamo detto che [[Calcolo alla Hilbert|HK]], [[Deduzione Naturale|ND]] e [[Calcolo dei Sequenti|PK]] sono equivalenti, ma non abbiamo detto come. Con HK ed ND ce lo possiamo immaginare, abbiamo una nozione di derivabilità.
 
 Cosa stiamo dicendo? Essenzialmente $Γ \vdash_{HK} α \leftrightarrow Γ \vdash_{ND} α$. Non lo dimostriamo, ma sul libro c'è, per i curiosi. A noi interessa far vedere che il calcolo ND e il calcolo PK sono equivalenti, che è sorprendente: uno opera sulle formule, l'altro opera su sequenti, `formula` e `pair<list<list<formula>>>`.
 

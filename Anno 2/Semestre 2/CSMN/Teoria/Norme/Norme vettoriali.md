@@ -13,7 +13,7 @@ Lo [[Spazio lineare]] $V$ è detto *spazio normato* se esiste una funzione $\|\c
 
 ## Esempi di norme
 
-La "norma a p di x", indicata con $\|x\|_p$, si calcola con la seguente formula:$$\|x\|_p = (\sum_{i=1}^{n} |x_i|^p)^{\frac{1}{p}}$$
+La "norma a p del [[Vettori|vettore]] x", indicata con $\|x\|_p$, si calcola con la seguente formula:$$\|x\|_p = (\sum_{i=1}^{n} |x_i|^p)^{\frac{1}{p}}$$
 ### Norma euclidea ($p=2$)
 
 $\|x\|_2 = \sqrt{(x_1)^2+(x_2)^2+...+(x_n)^2}$
