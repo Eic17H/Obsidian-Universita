@@ -4,8 +4,7 @@ cssclasses:
 ---
 Una domanda sarà su questo.
 Acronimo dei cognomi degli inventori: Rivest, Shamir, Adleman.
-Permette di usare il modulo e il toziente per avere una chiave con cui è facile criptare dei dati, ma difficile
-decriptare se non si hanno altre informazioni sulla chiave.
+Permette di usare il [[Classi di resto|modulo]] e il [[Funzione φ|toziente]] per avere una chiave con cui è facile criptare dei dati, ma difficile decriptare se non si hanno altre informazioni sulla chiave.
 
 Il mittente vuole inviare un numero $x$.
 

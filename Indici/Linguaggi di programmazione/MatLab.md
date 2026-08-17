@@ -1,7 +1,7 @@
 ---
 icon: MatLab.png
 ---
-
+Vedi [[Anno 2/Semestre 2/CSMN/Lab/Lab|CSMN]]
 
 
 [[Secanti]]

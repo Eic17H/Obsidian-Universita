@@ -18,3 +18,5 @@ Dato $[a]_N$, $[a]_N^{-1}$ è un numero tale che $[a]_N×[a]_N^{-1} = 1$.
 Per esempio, $[3]_{11}×[4]_{11}=[12]_{11}=[1]_{11}$, quindi $[3]_{11}^{-1} = [4]_{11}$.
 L’inverso moltiplicativo esiste solo se $a$ ed $N$ sono coprimi.
 Inoltre, $[-2]_{11}=[9]_{11}$. Come l’orario, se l’orario finisce con “:50” sono le “meno 10”, in modulo 60.
+
+Se $[a]_b=0$, $a$ è [[Criteri di divisibilità|divisibile]] per $b$.

@@ -1,7 +1,7 @@
 ---
 icon: Java.png
 ---
-
+Vedi [[Anno 2/Semestre 2/PR2/Lab/Lab|PR2]]
 
 
 [[Anno 2/Semestre 2/PR2/Lab/Override]]

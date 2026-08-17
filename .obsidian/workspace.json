@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "76511d0bc53e4506",
+        "id": "8a13ec31351f7575",
         "type": "tabs",
         "children": [
           {
-            "id": "64fe03fe1566bc1f",
+            "id": "73c5fac27cffa6a6",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -16,79 +16,8 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
-          },
-          {
-            "id": "c11075b248c148d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Eccezioni"
-            }
-          },
-          {
-            "id": "4525375ac9c0f6d7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 2/Semestre 2/PR2/Lab/Ereditarietà.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ereditarietà"
-            }
-          },
-          {
-            "id": "c2214535f7155f70",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 2/Semestre 2/PR2/Lab/Classi e oggetti.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Classi e oggetti"
-            }
-          },
-          {
-            "id": "95ed7bfed99dbebc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 2/Semestre 2/PR2/Lab/Espressioni lambda.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Espressioni lambda"
-            }
-          },
-          {
-            "id": "fd1fb01dd1f1519e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 2/Semestre 2/PR2/Lab/Stream.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Stream"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -143,13 +72,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 331.42295837402344,
-    "collapsed": true
+    "width": 331.42295837402344
   },
   "right": {
     "id": "1feb8741361685ad",
@@ -241,34 +168,34 @@
       "edge-tts:Read note aloud": false
     }
   },
-  "active": "c11075b248c148d6",
+  "active": "73c5fac27cffa6a6",
   "lastOpenFiles": [
-    "Anno 2/Semestre 2/PR2/Lab/Ereditarietà.md",
-    "Anno 2/Semestre 2/PR2/Lab/Classi e oggetti.md",
-    "Anno 2/Semestre 2/PR2/Lab/Lab.md",
-    "Anno 2/Semestre 2/PR2/Lab/Introduzione a Java.md",
-    "Anno 2/Semestre 2/PR2/Lab/Espressioni lambda.md",
-    "Anno 2/Semestre 2/PR2/Lab/Stream.md",
-    "Anno 3/Semestre 2/ISW/Lab/Python.md",
-    "Anno 3/Semestre 1/LiP/Progetto/Progetto.md",
-    "Anno 2/Semestre 1/ALF/File/OCaml.md",
-    "A scelta/Semestre 2/FPW/Teoria/Suddivisione di una pagina HTML.md",
-    "Indici/Linguaggi di programmazione/C.md",
-    "Anno 1/Semestre 1/PR1/Modulo II/Random.md",
-    "Anno 3/Semestre 2/ISW/Teoria/Testing.md",
-    "Anno 2/Semestre 2/PR2/Lab/Varargs.md",
-    "Anno 2/Semestre 2/PR2/Lab/Static.md",
-    "Anno 2/Semestre 2/PR2/Lab/Override.md",
-    "Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
+    "Indici/Categorie/Logica.md",
     "Indici/Categorie/Programmazione.md",
-    "Indici/Linguaggi di programmazione/Java.md",
-    "Anno 2/Semestre 2/PR2/Lab/Classi innestate.md",
-    "Anno 2/Semestre 2/PR2/Lab/Classi astratte.md",
-    "Anno 2/Semestre 2/PR2/Lab/Classi anonime.md",
-    "Anno 2/Semestre 2/PR2/Lab/Inline.md",
-    "Anno 1/Semestre 1/AM/Analisi Matematica.md",
-    "Anno 1/Semestre 2/ASD/Algoritmi e Strutture Dati.md",
-    "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi.md",
+    "Anno 3/Semestre 1/IUM/Lab/Android Studio.md",
+    "A scelta/Semestre 2/FPW/Laboratorio/Vue.md",
+    "Anno 3/Semestre 1/LiP/Appunti dal libro/Espressioni regolari.md",
+    "Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
+    "Anno 3/Semestre 1/LiP/Progetto/Progetto.md",
+    "Indici/Categorie/Matematica.md",
+    "Anno 1/Semestre 1/PR1/Modulo I/Programmazione 1 - Modulo I.md",
+    "Anno 1/Semestre 1/PR1/Modulo I/PR1I prov.md",
+    "Comune/MCD.md",
+    "Anno 1/Semestre 1/PR1/Modulo I/Algoritmo di Euclide.md",
+    "Anno 1/Semestre 1/PR1/Modulo I/Test/Algoritmi.md",
+    "Anno 1/Semestre 1/FDI/File/Algoritmo di Euclide.md",
+    "Anno 1/Semestre 1/FDI/File/!Fondamenti di Informatica.md",
+    "Anno 1/Semestre 2/MD/File/Funzione φ.md",
+    "Anno 1/Semestre 2/MD/File/Cambio di base.md",
+    "Anno 1/Semestre 2/MD/File/Classi di resto.md",
+    "Anno 1/Semestre 2/MD/File/RSA.md",
+    "Anno 1/Semestre 2/MD/File/Criteri di divisibilità.md",
+    "Indici/Linguaggi di programmazione/C.md",
+    "Anno 2/Semestre 1/EED/Economia/File/Funzione di produzione.md",
+    "Anno 1/Semestre 1/PR1/Modulo I/Complessità.md",
+    "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Complessità.md",
+    "Anno 1/Semestre 1/PR1/Modulo I/Programmazione - Cenni storici.md",
+    "Anno 2/Semestre 1/SO/Lab/Linux/File.md",
     "A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
     "Anno 2/Semestre 2/PR2/Lab",
     "Anno 2/Semestre 2/PR2/Lab",

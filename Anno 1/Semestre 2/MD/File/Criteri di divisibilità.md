@@ -4,7 +4,7 @@ cssclasses:
 ---
 Una domanda sarà su questo.
 
-Un numero $n$ è divisibile per $m$ se $n=mk$, cioè $[m]_n=0$. Si scrive $m|n$, “m divide n”.
+Un numero $n$ è divisibile per $m$ se $n=mk$, cioè come [[Classi di resto|classe di resto]] $[m]_n=0$. Si scrive $m|n$, “m divide n”.
 Se $n$ è $4736$, questo è uguale a $4×10^3+7×10^2+3×10+6$.
 In generale, $x = a_k×10^k+a_{k-1}×10^{k-1}+…+a_1×10+a_0$.
 Possiamo distribuire il modulo.

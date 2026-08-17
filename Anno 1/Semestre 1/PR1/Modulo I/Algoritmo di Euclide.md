@@ -4,7 +4,7 @@ cssclasses:
 ---
 Lo stesso argomento: <span class="fdi">[[Anno 1/Semestre 1/FDI/File/Algoritmo di Euclide|FDI]]</span>
 
-Massimo Comun Divisore: il metodo più semplice consiste nell’enumerare tutti i divisori del primo numero, tutti quelli del secondo, trovarne l’intersezione, e poi cercare lì il maggiore.  
+[[MCD|Massimo comun divisore]]: il metodo più semplice consiste nell’enumerare tutti i divisori del primo numero, tutti quelli del secondo, trovarne l’intersezione, e poi cercare lì il maggiore.  
 Questo è un metodo di tipo bruteforce, a forza bruta.  
 Funziona perché l’intersezione non è mai un insieme vuoto, contiene sempre $1$.  
 I metodi bruteforce sono spesso molto lenti e inefficienti, e sono la soluzione in casi disperati, o in certi casi specifici.

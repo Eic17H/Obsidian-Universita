@@ -5,7 +5,7 @@ cssclasses:
 Lo stesso argomento: <span class="pr1">[[Anno 1/Semestre 1/PR1/Modulo I/Algoritmo di Euclide|PR1]]</span>
 
 * Input: due numeri naturali
-* Output: il loro MCD
+* Output: il loro [[MCD|MCD]]
 La divisione di Euclide ha due input naturali $a,b$ e due output naturali: quoziente e resto.
 Il resto è sempre compreso tra $0$ e $b$.
 

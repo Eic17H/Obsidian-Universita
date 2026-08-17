@@ -1,6 +1,11 @@
 ---
 cssclasses:
   - md
+aliases:
+  - Toziente
+  - Funzione toziente
+  - Funzione fi
+  - Funzione phi
 ---
 La funzione $φ$ (fi) di Eulero, o toziente, ha tre proprietà principali.
 
@@ -8,7 +13,7 @@ La funzione $φ$ (fi) di Eulero, o toziente, ha tre proprietà principali.
 * Con un esempio, $24=22×32$, $φ(24)=22-1×(2-1)×32-1×(3-1)$;
 *  Per qualsiasi $x$, $[xφ(N)]_N=1$;
 
-Due numeri sono coprimi se il loro MCD è $1$.
+Due numeri sono coprimi se il loro [[MCD|MCD]] è $1$.
 Per qualsiasi numero primo $p$, $φ(p)=p-1$.
 $φ(a×b)=φ(a)×φ(b)$.
 

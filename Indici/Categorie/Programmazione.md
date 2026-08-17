@@ -3,6 +3,7 @@
 [[Anno 2/Semestre 2/PR2/Teoria/Interfacce]]
 #hub
 [[Processi, thread e job]]
+[[Fold left in ocaml]]
 * [[Introduzione a Java]]
 * [[Classi e oggetti]]
 * [[Ereditarietà]]

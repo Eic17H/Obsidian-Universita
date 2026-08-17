@@ -1,9 +1,11 @@
 ---
 icon: C.png
 ---
+Vedi [[Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]], [[Algoritmi e Strutture Dati|ASD]], [[Sistemi Operativi - Modulo II|SO]]
 
 #hub 
-
+[[Subroutine e librerie]]
+[[Anno 1/Semestre 1/PR1/Modulo I/Tipi|Tipi]]
 * [[Introduzione al C]]
 * [[Input e output]]
 * [[Operatori]]
@@ -24,7 +26,6 @@ icon: C.png
 [[Tutto C SO]]
 [[Processi, thread e job]]
 
-[[Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Complessità]]
 [[Dijkstra]]
 [[Heapsort]]
 [[Ricerca Binaria]]
