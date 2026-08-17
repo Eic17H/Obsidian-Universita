@@ -49,3 +49,41 @@ Stream *potenzialmente* infinito di elementi. Potenzialmente infinito perché se
 IntStream è una sottoclasse di Stream. Parentesi. In Python non c'è il ciclo for del C, si usa quello vero di cui parlava Scateni. Il for del C è un while, il for vero scorre gli indici in un range, tutto qui, l'elemento iniziale è sempre incluso e quello finale è sempre escluso. `IntStream.range(1,5).forEach(System.out::println);` stampa 1 2 3 4.
 
 Tra l'altro, quei `::`. Lo rendono equivalente a una lambda: `e -> System.out.println(e)`.
+
+## Esempio
+
+Prendiamo una collection, la rendiamo una stream, facciamo cose con la stream e la facciamo tornare una collection.
+
+```Java
+import java.util.List;
+import java.util.Arrays;
+import static java.util.stream.Collectors.toList;
+
+
+public class TestStream {
+
+    public static void main(String[] args) {
+
+        List<String> miaCollection = Arrays.asList("My", "name", "is", "Mario", "Rossi");
+        System.out.println("Collezione iniziale:");
+        System.out.println(miaCollection.toString());
+
+
+        List<String> collectionMaiuscola = miaCollection.stream()
+            .map(String::toUpperCase)
+            .collect(toList());
+        
+        System.out.println("Collezione maiuscola:");
+        System.out.println(collectionMaiuscola.toString());
+
+
+        List<String> collectionBrevi = miaCollection.stream()
+            .filter(e -> e.length()<=4)
+            .collect(toList());
+
+
+        System.out.println("Collezione con le parole di massimo 4 lettere:");
+        System.out.println(collectionBrevi.toString());
+    }
+}
+```

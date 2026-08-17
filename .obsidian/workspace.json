@@ -8,20 +8,87 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ae11dce667140f7d",
+            "id": "64fe03fe1566bc1f",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "c11075b248c148d6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Anno 3/Semestre 2/ISW/Teoria/Testing.md",
+                "file": "Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Eccezioni"
+            }
+          },
+          {
+            "id": "4525375ac9c0f6d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 2/Semestre 2/PR2/Lab/Ereditarietà.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Testing"
+              "title": "Ereditarietà"
+            }
+          },
+          {
+            "id": "c2214535f7155f70",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 2/Semestre 2/PR2/Lab/Classi e oggetti.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Classi e oggetti"
+            }
+          },
+          {
+            "id": "95ed7bfed99dbebc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 2/Semestre 2/PR2/Lab/Espressioni lambda.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Espressioni lambda"
+            }
+          },
+          {
+            "id": "fd1fb01dd1f1519e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 2/Semestre 2/PR2/Lab/Stream.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stream"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -55,7 +122,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"interfacce]]\"",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,7 +148,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 331.42295837402344
+    "width": 331.42295837402344,
+    "collapsed": true
   },
   "right": {
     "id": "1feb8741361685ad",
@@ -97,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Anno 3/Semestre 2/ISW/Teoria/Testing.md",
+                "file": "Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +225,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -172,35 +241,35 @@
       "edge-tts:Read note aloud": false
     }
   },
-  "active": "ae11dce667140f7d",
+  "active": "c11075b248c148d6",
   "lastOpenFiles": [
     "Anno 2/Semestre 2/PR2/Lab/Ereditarietà.md",
-    "Anno 2/Semestre 2/PR2/Lab/Varargs.md",
+    "Anno 2/Semestre 2/PR2/Lab/Classi e oggetti.md",
+    "Anno 2/Semestre 2/PR2/Lab/Lab.md",
+    "Anno 2/Semestre 2/PR2/Lab/Introduzione a Java.md",
+    "Anno 2/Semestre 2/PR2/Lab/Espressioni lambda.md",
     "Anno 2/Semestre 2/PR2/Lab/Stream.md",
+    "Anno 3/Semestre 2/ISW/Lab/Python.md",
+    "Anno 3/Semestre 1/LiP/Progetto/Progetto.md",
+    "Anno 2/Semestre 1/ALF/File/OCaml.md",
+    "A scelta/Semestre 2/FPW/Teoria/Suddivisione di una pagina HTML.md",
+    "Indici/Linguaggi di programmazione/C.md",
+    "Anno 1/Semestre 1/PR1/Modulo II/Random.md",
+    "Anno 3/Semestre 2/ISW/Teoria/Testing.md",
+    "Anno 2/Semestre 2/PR2/Lab/Varargs.md",
     "Anno 2/Semestre 2/PR2/Lab/Static.md",
     "Anno 2/Semestre 2/PR2/Lab/Override.md",
     "Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
     "Indici/Categorie/Programmazione.md",
     "Indici/Linguaggi di programmazione/Java.md",
     "Anno 2/Semestre 2/PR2/Lab/Classi innestate.md",
-    "Anno 2/Semestre 2/PR2/Lab/Classi e oggetti.md",
     "Anno 2/Semestre 2/PR2/Lab/Classi astratte.md",
     "Anno 2/Semestre 2/PR2/Lab/Classi anonime.md",
     "Anno 2/Semestre 2/PR2/Lab/Inline.md",
     "Anno 1/Semestre 1/AM/Analisi Matematica.md",
     "Anno 1/Semestre 2/ASD/Algoritmi e Strutture Dati.md",
     "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi.md",
-    "Anno 1/Semestre 1/PR1/Modulo I/Algoritmi.md",
-    "Anno 2/Semestre 2/PR2/Lab/Espressioni lambda.md",
-    "Anno 2/Semestre 2/PR2/Lab/Lab.md",
     "A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
-    "A scelta/Semestre 2/Logica/Istituzioni di Logica.md",
-    "Anno 2/Semestre 2/PR2/Programmazione 2.md",
-    "Anno 2/Semestre 1/SO/Lab/Linux/File.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Eccezioni.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Interfacce.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Lettura dei file in Java.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Linguaggio.md",
     "Anno 2/Semestre 2/PR2/Lab",
     "Anno 2/Semestre 2/PR2/Lab",
     "Immagini/Pasted image 20260629163530.png",

@@ -144,3 +144,37 @@ Prima abbiamo provato e ha funzionato, diciamo, perché?
 Java mette a disposizione un costruttore di default. Tutte le classi [[Ereditarietà|ereditano]] da una classe che si chiama Object.
 	Object mette a disposizione un costruttore default a tutti gli oggetti.
 Questo costruttore smette di esistere appena definisci un costruttore vero e proprio per la classe.
+
+## Esempio intero
+
+```Java title="Monitor.java"
+class Monitor{
+	int risOriz;
+	int risVert;
+	String colore;
+	boolean acceso;
+	
+	Monitor(int risOriz, int risVert, String colore){
+		this.risOriz = risOriz;
+		this.risVert = risVert;
+		this.colore = colore;
+		this.acceso = false;
+	}
+	
+	void tastoPower() {
+		this.acceso = !(this.acceso);
+	}
+}
+```
+
+```Java title="Programma.java"
+class Programma{
+	public static void main(String[] args){
+		System.out.println("esecuzione del mio primo programma Java");
+		String s = new String("nero");
+		System.out.println(s);
+		Monitor monitor1 = new Monitor(1920, 1080, s);
+		System.out.println("Il monitor ha risoluzione " + monitor1.risOriz + "x" + monitor1.risVert + " ed è " + s + ".");
+	}
+}
+```
