@@ -1,8 +1,7 @@
 ---
-cssclasses:
-  - pr2
+cssclasses: pr2
 ---
-Facciamo l'override quando abbiamo un metodo generico nella [[Ereditarietà|superclasse]], e vogliamo renderlo specifico in una sottoclasse.
+Facciamo l'override quando abbiamo un metodo generico nella [[Anno 2/Semestre 2/PR2/Lab/Ereditarietà|superclasse]], e vogliamo renderlo specifico in una sottoclasse.
 
 Magari abbiamo una superclasse conto che ha un metodo `prelievo()`, e vogliamo che nella sottoclasse `contoCorrente` la stessa funzione faccia le stesse cose, con l'aggiunta del fatto che deve tenere traccia di quanti prelievi si fanno.
 
@@ -10,7 +9,7 @@ In questo caso, si fa una classe **con la stessa firma**, si chiama il metodo `s
 
 Si aggiunge il decoratore `@Override`, così il compilatore ci avverte se non abbiamo dato la stessa firma al metodo della sottoclasse.
 
-Riprendiamo l'esempio visto con l'[[Ereditarietà]]:
+Riprendiamo l'esempio visto con l'[[Anno 2/Semestre 2/PR2/Lab/Ereditarietà|ereditarietà]]:
 
 #### Persona.java
 ```java

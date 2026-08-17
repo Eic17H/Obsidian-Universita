@@ -18,6 +18,8 @@ t:==
 \\ & |\ \apply(t_1,t_2) & \text{Applicazione di funzione}
 \end{matrix*}$$
 ## Regole di inferenza
+
+### Big-step semantics
 $$\begin{matrix*}[l]
 \text{Input} && \text{Output} & \text{Nome regola} & \text{Condizioni}\\
 (S,E,op_i(t_1,\ldots,t_{a_i})::C)::D &\mapsto& (S,E,t_1::\cdots::t_{a_i}::Prim(op_i)::C)::D & \text{Implementazione operatore} \\
@@ -32,3 +34,6 @@ $$\begin{matrix*}[l]
 (v::S,E,If::t_2::t_3::C)::D &\mapsto& (S,E,t_2::C)::D & \text{Valutazione \if true} & v=\true \\
 (v::S,E,If::t_2::t_3::C)::D &\mapsto& (S,E,t_3::C)::D & \text{Valutazione \if true} & v=\false \\
 \end{matrix*}$$
+### Small-step semantics
+
+Potrebbe non essere accurato.

@@ -1,6 +1,5 @@
 ---
-cssclasses:
-  - pr2
+cssclasses: pr2
 ---
 ## Basi dell'ereditarietà
 
@@ -11,7 +10,7 @@ Abbiamo una [[Anno 2/Semestre 2/PR2/Lab/Classi|classe]] `Studente` e una classe 
 Molti sono ripetuti. Anziché scriverli due volte, e dover fare tutte le funzioni due volte, e le modifiche, usiamo il <span class="pink"><i>polimorfismo</i></span>.
 Creiamo una classe `Persona`, che ha `nome`, `cognome` ed `età`, con i metodi `set()` e `get()` e facciamo *ereditare* tutto questo alle altre due classi.
 
-`Persona` è la superclasse, `Studente` e `Docente` sono sottoclassi.
+`Persona` è la superclasse, `Studente` e `Docente` sono sottoclassi, che ereditano i suoi metodi e attributi ma ne hanno anche di nuovi.
 
 Alla classe `Studente` aggiungiamo `matricola` e `anno di iscrizione`, alla classe `Docente` aggiungiamo `insegnamento`.
 
@@ -167,4 +166,66 @@ Di default, tutte le classi estendono `Object`, e ne ereditano tre metodi:
 * `toString()` - converte l'oggetto in una stringa
 * `equals()` - controlla se due oggetti sono "uguali", secondo una certa definizione
 * `clone()` - restituisce una copia dello stesso oggetto
-Può essere utile fare l'[[Override]] del metodo `toString()`, per avere un formato predefinito per la stampa degli oggetti.
+Può essere utile fare l'[[Anno 2/Semestre 2/PR2/Lab/Override|override]] del metodo `toString()`, per avere un formato predefinito per la stampa degli oggetti.
+
+### Il metodo `equals()`
+
+`class Persona` ha implicito `extends Object`.
+`Object` has i metodi `toString()`, `equals()` e `clone()`.
+* `toString()` di default restituisce il nome della classe seguito dall'indirizzo, ma di solito si fa l'override per mostrare gli attributi.
+* `equals()` è l'equivalente in C di `==`. La differenza è che permette di confrontare due oggetti della stessa classe, concetti non presenti in C. Deve rispettare certe proprietà:
+    * Riflessività - `x.equals(x)`
+    * Simmetrie - `x.equals(y)` → `y.equals(x)`
+    * Transitività - `x.equals(y) && y.equals(z)` → `x.equals(z)`
+    * `!x.equals(null)`
+
+Anche in questo caso può essere utile l'override.
+# Casting
+
+Partiamo dalle classi viste per l'Ereditarietà.
+```Java
+class Docente extends Persona{}
+...
+Persona persona = new Docente();
+```
+Si può fare? Sì, si chiama *upcast*. Quando si fa, però, si possono usare solo i metodi e gli attributi della classe `Persona`, nonostante stiamo istanziando un oggetto di classe `Docente`.
+
+L'operazione inversa è detta *downcast*:
+```Java
+Docente docente = (Docente) persona;
+```
+Castando l'oggetto di prima alla classe `Docente` posso adesso usare tutti i metodi della classe `Docente` e anche quelli di `Persona`.
+
+Per controllare se un oggetto appartiene a una classe, uso la keyword `instanceof`
+```Java
+if(persona instanceof Docente){
+	Docente docentePersona = (Docente) persona;
+}
+```
+
+Usiamo il casting, e vediamo come interagisce con l'[[Anno 2/Semestre 2/PR2/Lab/Override|override]].
+
+```Java
+public class Main{
+    public static void main(String[] args){
+        Persona persona = new Studente("Aldo", "Baglio", 20, 66123, 1999);
+        System.out.println(persona.calcolaCostoBiglietto(100));
+        Studente studente = (Studente) persona;
+        System.out.println(studente.calcolaCostoBiglietto(100));
+    }
+}
+```
+Eseguendolo, l'output è:
+```Java
+0.0
+0.0
+```
+In entrambi i casi, viene chiamato il metodo della classe `Studente`. A Java non interessa il tipo che c'è a sinistra, vede quello che c'è a destra e si basa su quello.
+
+
+
+Vedi le #slide per le varie cose insomma si capisce.
+
+## Approfondimenti
+
+[[Classi astratte|Classi astratte]], [[Anno 2/Semestre 2/PR2/Lab/Interfacce|interfacce]], [[Override|override]].

@@ -15,7 +15,7 @@ Come IDE si possono usare PySharp e VSCode. Il progetto verrà spiegato con PySh
 * [[Anno 3/Semestre 2/ISW/Lab/Branching|Branching]]
 * [[Anno 3/Semestre 2/ISW/Lab/Funzioni|Funzioni]]
 * [[Anno 3/Semestre 2/ISW/Lab/Strutture dati|Strutture dati]]
-* [[Oggetti]]
+* [[Anno 3/Semestre 2/ISW/Lab/Oggetti]]
 ## Output su terminale
 
 Lo strumento principale di debugging. Si fa con `print()`.

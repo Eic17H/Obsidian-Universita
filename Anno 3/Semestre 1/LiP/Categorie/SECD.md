@@ -1,7 +1,7 @@
 ---
 cssclasses: lip
 ---
-## Teoria$\newcommand{\apply}{\textbf{apply}}\newcommand{\fun}{\textbf{fun}}\newcommand{\if}{\textbf{if}}\newcommand{\true}{\textbf{true}}\newcommand{\false}{\textbf{false}}$
+## Teoria$\newcommand{\apply}{\textbf{apply}}\newcommand{\funblock}{\textbf{funblock}}\newcommand{\fun}{\textbf{fun}}\newcommand{\if}{\textbf{if}}\newcommand{\true}{\textbf{true}}\newcommand{\false}{\textbf{false}}$
 
 * [[λ-calcolo]]
 * [[Macchina SECD]]
@@ -10,7 +10,7 @@ cssclasses: lip
 
 ### Notazione
 
-Visto il concetto di stack/pila, useremo sia la notazione intuitiva $\underset{\underset C B} A$, sia la notazione corretta $A::B::C$.
+Visto il concetto di stack/pila, useremo sia la notazione intuitiva $\underset{\underset C B} A$, sia la notazione corretta $A::B::C$.$\newcommand{\llangle}{⟪}\newcommand{\rrangle}{⟫}$
 
 Quella da usare negli esercizi è ovviamente la seconda, la prima sarà usata nelle spiegazioni per introdurre i concetti base.
 
@@ -27,6 +27,10 @@ La macchina in sé è fatta di due pile. Quella principale è la pila $\underset
 La vedi quella cosa che ho detto di $D$? Onestamente non l'ho capita, io non la uso e gli esercizi mi escono giusti. Non lo vedo usato neanche nel libro. Inoltre, la notazione non mi sembra corrispondere alla definizione: semmai, mi sembra che la macchina intera sia $D$, che contiene la pila che ho chiamato "principale". Non credo proprio che questo dettaglio della teoria sia poi così importante, ma secondo me il libro si è sbagliato. Quindi, vedendo lo stack di terne $(S,E,C)$, e vedendo come sono scritti gli esercizi, direi che $D$ è tutto lo stack tranne l'elemento in cima, che sarebbe appunto il resto del nome "SECD".
 
 ### Regole di inferenza
+
+Non ho capito bene. Sento parlare di regole big-step e small-step per la SECD, ma il libro di Dessì non menziona quelle small-step, e il libro di Pinna è poco chiaro: presenta le regole big-step della SECD, e poi *delle* regole small-step dicendo vagamente che non riguardano la SECD, ma un altro linguaggio. Credo però siano quelle.
+
+#### Big-step
 
 Questa doveva essere una spiegazione informale, ma più vai avanti più diventa impossibile evitare i simboli veri e propri. Trovi le regole scritte bene nella teoria.
 
@@ -59,6 +63,23 @@ Questa doveva essere una spiegazione informale, ma più vai avanti più diventa 
 	* se $v=\true$, pusha $t_2$ su $C$;
 	* se $v=\false$, pusha $t_3$ su $C$.
 
+#### Small-step
+
+$\Delta$ è la pila degli ambienti, $top(\Delta)$ è l'ambiente corrente e lo chiamerò $\delta$ solo per rendere la notazione più intuitiva.
+
+* Una variabile $x$ viene valutata come $\delta(x)$; 
+* Un'operazione che ha solo valori come operandi viene valutata a un valore;
+* Se un'operazione ha almeno un termine non valutato tra gli operandi, valuti il primo;
+* If true then il primo, if false then il secondo;
+* If (termine non valutato), valutalo;
+* $apply(fun(x,t),v)$, pushi x=v su $\Delta$;
+* $apply(a,b)$ ma $a$ non è valutato, lo valuti, altrimenti se $b$ non è valutato, lo valuti;
+* $\funblock(t)$ ma $t$ non è valutato, lo valuti;
+* $\funblock(v)$ e $v$ è un valore, semplicemente vale $v$;
+* let x = t in ..., valuta $t$ se non è valutato;
+* let x = v in t, diventa $\funblock(t)$ e pushi x=v su $\Delta$.
+
+Valutare qualcosa può avere side effects che cambiano $\Delta$.
 ## Esercizi
 
 ### Esempio 6.1 di Dessì
@@ -71,6 +92,11 @@ $$\begin{matrix*}[l]
 (3::[],\bot,[])::[]
 \end{matrix*}$$
 
+$$\begin{matrix*}[l]
+\llangle add(1,2),\bot \rrangle & \rightsquigarrow\\
+\llangle 3,\bot \rrangle
+\end{matrix*}$$
+Forse questa è un po' troppo semplice con la small step.
 ### Esempio 6.2 di Dessì
 
 $$\begin{matrix*}[l]
@@ -81,6 +107,12 @@ $$\begin{matrix*}[l]
 ([],\bot[id/\fun(id,x,x)][x/3],x::[])::([],\bot,[])::[] & \mapsto & \text{Valutazione variabile} \\
 (3::[],\bot[id/\fun(id,x,x)][x/3],[])::([],\bot,[])::[] & \mapsto & \text{Valutazione terminale} \\
 (3::[],\bot,[])::[]
+\end{matrix*}$$
+$$\begin{matrix*}[l]
+\llangle \apply(\fun(id,x,x),3),\bot \rrangle & \rightsquigarrow\\
+\llangle \funblock(x),\bot[x/3]::\bot \rrangle & \rightsquigarrow\\
+\llangle \funblock(3),\bot[x/3]::\bot \rrangle & \rightsquigarrow\\
+\llangle 3,\bot \rrangle
 \end{matrix*}$$
 
 ### Esercizio 6.1 di Dessì
@@ -115,3 +147,17 @@ Mi dà 6. Gemini dice che è giusto.
 Ci sono anche degli errori di battitura, certe volte ho chiamato la funzione $f$ anche se aveva un altro nome, ma funziona lo stesso perché questo codice non è molto complesso.
 
 Inoltre, altro errore che non ha influito sul risultato, quando chiamo una funzione parto sempre dall'ambiente vuoto $\bot$. Questo è sbagliato, bisognerebbe invece partire copiando l'ambiente della funzione chiamante.
+
+Provo small-step.
+$$\begin{matrix*}[l]
+\llangle \apply(\fun(f,x,\apply(x,\apply(\fun(g,y,mul(y,2)),1))),\fun(h,z,sub(8,z))),\bot \rrangle & \rightsquigarrow\\
+\llangle \llangle\funblock(\apply(x,\apply(\fun(g,y,mul(y,2)),1))),\bot[x/\fun(h,z,sub(8,z))]::\bot \rrangle & \rightsquigarrow\\
+\llangle\funblock(\apply(\fun(h,z,sub(8,z)),\apply(\fun(g,y,mul(y,2)),1))),\bot[x/\fun(h,z,sub(8,z))]::\bot \rrangle & \rightsquigarrow\\
+\llangle\funblock(\apply(\fun(h,z,sub(8,z)),2)),\bot[x/\fun(h,z,sub(8,z))]::\bot \rrangle & \rightsquigarrow\\
+\llangle\funblock(\funblock(sub(8,z)),\bot[x/\fun(h,z,sub(8,z))][z/2]::\bot[x/\fun(h,z,sub(8,z))]::\bot \rrangle & \rightsquigarrow\\
+\llangle\funblock(\funblock(sub(8,2)),\bot[x/\fun(h,z,sub(8,z))][z/2]::\bot[x/\fun(h,z,sub(8,z))]::\bot \rrangle & \rightsquigarrow\\
+\llangle\funblock(\funblock(6)),\bot[x/\fun(h,z,sub(8,z))][z/2]::\bot[x/\fun(h,z,sub(8,z))]::\bot \rrangle & \rightsquigarrow\\
+\llangle\funblock(6),\bot[x/\fun(h,z,sub(8,z))]::\bot \rrangle & \rightsquigarrow\\
+\llangle6,\bot \rrangle
+\end{matrix*}$$
+Ci sono stati errori di copia-incolla e non ho giustificato il passaggio che richiedeva una giustificazione ma ci siamo.

@@ -9,5 +9,5 @@ icon: python.png
 [[Anno 3/Semestre 2/ISW/Lab/Strutture dati]]
 [[Anno 3/Semestre 2/ISW/Lab/Classi]]
 [[Anno 3/Semestre 2/ISW/Lab/Funzioni]]
-[[Oggetti]]
+[[Anno 3/Semestre 2/ISW/Lab/Oggetti]]
 [[Anno 3/Semestre 2/ISW/Lab/Python]]

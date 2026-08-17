@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 Il testing è un processo sistematico che esegue del software per trovarne i difetti. Il software in questione è detto SUT, System Under Test.
 
 Vedi anche il [[Agile testing|testing in contesto agile]] nello specifico.
@@ -97,7 +100,7 @@ Descrivono il livello tecnico o il *focal point*del test.
 #### Unit
 Testing di singole unità HW o SW. L'*unità* (che può essere una funzione, una classe, o altri elementi semplici così) si testa isolatamente dal resto del codice, per quanto possibile. Si usa uno stub/mock object, oggetti fittizi che simulano un contesto reale. White-box, automatizzabile. [[Unit testing con LLM||Si possono fare anche con gli LLM]].
 #### Integration
-Si testano le interazioni tra più componenti: comunicazione, scambio di informazioni. Di solito si trovano errori nelle <span class="pr2">[[Interfacce]]</span>, per esempio sbagliando l'ordine dei parametri. Può essere sua white box che black box.
+Si testano le interazioni tra più componenti: comunicazione, scambio di informazioni. Di solito si trovano errori nelle <span class="pr2">[[Anno 2/Semestre 2/PR2/Teoria/Interfacce|interfacce]]</span>, per esempio sbagliando l'ordine dei parametri. Può essere sua white box che black box.
 #### Functional
 Garantisce che si rispettino le funzionalità richieste dalle specifiche. Si può usare su singole funzioni, su moduli integrati, o su interi sistemi. Essendo funzionale, è black box.
 #### System

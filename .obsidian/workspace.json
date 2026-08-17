@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "166262b552d22825",
+        "id": "76511d0bc53e4506",
         "type": "tabs",
         "children": [
           {
-            "id": "fba964c7fb691cab",
+            "id": "ae11dce667140f7d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Anno 3/Semestre 2/ISW/Teoria/Testing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Testing"
             }
           }
         ]
@@ -51,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"interfacce]]\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.7291717529297
+    "width": 331.42295837402344
   },
   "right": {
     "id": "1feb8741361685ad",
@@ -93,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Anno 3/Semestre 2/ISW/Teoria/Testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,16 +152,6 @@
               "icon": "lucide-list",
               "title": "Outline of Deduzione Naturale"
             }
-          },
-          {
-            "id": "dbe12f976b0e8a2a",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
         ]
       }
@@ -174,38 +169,41 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false,
       "edge-tts:Read note aloud": false
     }
   },
-  "active": "fba964c7fb691cab",
+  "active": "ae11dce667140f7d",
   "lastOpenFiles": [
-    "Immagini/Pasted image 20260629163530.png",
-    "Indici/Categorie/Linguaggi formali.md",
-    "A scelta/Semestre 2/Logica/File/Enunciati/Linguaggio formale.md",
-    "Indici/Categorie/Logica.md",
-    "Indici/Categorie/Matematica.md",
-    "Anno 2/Semestre 1/ALF/File/Funzioni.md",
-    "Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo.md",
+    "Anno 2/Semestre 2/PR2/Lab/Ereditarietà.md",
+    "Anno 2/Semestre 2/PR2/Lab/Varargs.md",
+    "Anno 2/Semestre 2/PR2/Lab/Stream.md",
+    "Anno 2/Semestre 2/PR2/Lab/Static.md",
+    "Anno 2/Semestre 2/PR2/Lab/Override.md",
+    "Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
     "Indici/Categorie/Programmazione.md",
-    "Comune/Derivazione.md",
-    "Comune/Regole di inferenza.md",
-    "Anno 3/Semestre 1/LiP/Categorie/Valutazione.md",
-    "Anno 3/Semestre 1/LiP/Categorie/Tipizzazione.md",
-    "Anno 3/Semestre 1/LiP/Categorie/SECD.md",
-    "Anno 3/Semestre 1/LiP/Categorie/Scope.md",
-    "Anno 3/Semestre 1/LiP/Categorie/Linguaggi.md",
-    "A scelta/Semestre 2/Logica/Esercitazioni/20260401.md",
-    "A scelta/Semestre 2/Logica/File/Equivalenza dei calcoli.md",
-    "A scelta/Semestre 2/Logica/File/Teorema di completezza.md",
-    "Indici/Linguaggi di programmazione/C.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Autovalori e autovettori.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Norme vettoriali.md",
-    "Anno 2/Semestre 2/CSMN/Teoria/Norme/Spazio lineare.md",
-    "Anno 2/Semestre 1/SO/Lab/Altro/Socket.md",
-    "Anno 2/Semestre 1/SO/Lab/Sistemi Operativi - Modulo II.md",
-    "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Complessità.md",
-    "Anno 2/Semestre 1/SO/Lab/Regex.md",
+    "Indici/Linguaggi di programmazione/Java.md",
+    "Anno 2/Semestre 2/PR2/Lab/Classi innestate.md",
+    "Anno 2/Semestre 2/PR2/Lab/Classi e oggetti.md",
+    "Anno 2/Semestre 2/PR2/Lab/Classi astratte.md",
+    "Anno 2/Semestre 2/PR2/Lab/Classi anonime.md",
+    "Anno 2/Semestre 2/PR2/Lab/Inline.md",
+    "Anno 1/Semestre 1/AM/Analisi Matematica.md",
+    "Anno 1/Semestre 2/ASD/Algoritmi e Strutture Dati.md",
+    "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi.md",
+    "Anno 1/Semestre 1/PR1/Modulo I/Algoritmi.md",
+    "Anno 2/Semestre 2/PR2/Lab/Espressioni lambda.md",
+    "Anno 2/Semestre 2/PR2/Lab/Lab.md",
+    "A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
+    "A scelta/Semestre 2/Logica/Istituzioni di Logica.md",
+    "Anno 2/Semestre 2/PR2/Programmazione 2.md",
+    "Anno 2/Semestre 1/SO/Lab/Linux/File.md",
+    "Anno 2/Semestre 2/PR2/Teoria/Eccezioni.md",
+    "Anno 2/Semestre 2/PR2/Teoria/Interfacce.md",
+    "Anno 2/Semestre 2/PR2/Teoria/Lettura dei file in Java.md",
+    "Anno 2/Semestre 2/PR2/Teoria/Linguaggio.md",
+    "Anno 2/Semestre 2/PR2/Lab",
+    "Anno 2/Semestre 2/PR2/Lab",
+    "Immagini/Pasted image 20260629163530.png",
     "Indici/Linguaggi di programmazione/Icone/MatLab.png",
     "Indici/Linguaggi di programmazione/Icone/Java.png",
     "Indici/Linguaggi di programmazione/Icone/OCaml.png",
@@ -223,9 +221,6 @@
     "Indici",
     "Anno 2/Semestre 1/ALF/Consigli",
     "Anno 3/Semestre 1/LiP/Progetto",
-    "Anno 2/Semestre 2/RC/File/Parte III",
-    "Anno 2/Semestre 2/RC/File",
-    "A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
     "Untitled.canvas"
   ]
 }
