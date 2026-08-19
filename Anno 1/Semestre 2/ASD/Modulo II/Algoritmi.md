@@ -3,9 +3,9 @@ cssclasses:
   - asd
 ---
 * [[Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Complessità|Complessità]]
-* [[Selection Sort]]
+* [[Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Selection Sort]]
 * [[Heapsort]]
-* [[Ricerca Binaria]]
-* [[Dijkstra]]
+* [[Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Ricerca Binaria]]
+* [[Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Dijkstra]]
 
 #modulo

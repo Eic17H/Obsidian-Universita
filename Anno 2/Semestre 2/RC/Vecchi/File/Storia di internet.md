@@ -2,9 +2,9 @@
 cssclasses:
   - rc
 ---
-Prima c'era IPv4, ora IPv6. IPv5 che fine ha fatto? C'era, ma prima che facesse in tempo ad essere implementato è arrivato IPv6 che era migliore.
+Prima c'era [[IPv4]], ora [[IPv6]]. IPv5 che fine ha fatto? C'era, ma prima che facesse in tempo ad essere implementato è arrivato IPv6 che era migliore.
 
-C'è un po' un paradosso. Il protocollo ISO-OSI è stato progettato per essere perfetto, ma sono stati soldi buttati perché tutti usano TCPIP che è peggiore ed è famoso solo per la sua fama.
+C'è un po' un paradosso. Il protocollo [[ISO-OSI]] è stato progettato per essere perfetto, ma sono stati soldi buttati perché tutti usano [[TCP-IP|TCP/IP]] che è peggiore ed è famoso solo per la sua fama.
 
 Un passo indietro. Arpanet. I missili balistici hanno una sola traiettoria una volta lanciati. Tramite una rete, comunichi da lontano, trovi la traiettoria. Serve che sia molto veloce, quindi fu creata Arpanet, che poi divenne l'IP. Inviare dati essenziali velocemente, arriva anche se un nodo va giù.
 

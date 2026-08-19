@@ -2,7 +2,7 @@
 cssclasses:
   - pr1
 ---
-Lo stesso argomento: <span class="asd">[[Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Complessità|ASD]]</span>
+Lo stesso argomento: <span class="asd">[[Anno 1/Semestre 2/ASD/New/Complessità|ASD]]</span>
 
 Un programma complesso può andare bene per un insieme di dati piccolo, ma per quelli grandi essere troppo lento.
 

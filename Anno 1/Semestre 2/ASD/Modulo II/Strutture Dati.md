@@ -2,11 +2,11 @@
 cssclasses:
   - asd
 ---
-* [[Coda]]
-* [[Stack]]
-* [[Liste]]
-* [[Alberi]]
-* [[Heap]]
-* [[Grafi]]
+* [[Anno 1/Semestre 2/ASD/Modulo II/Strutture dati/Coda]]
+* [[Anno 1/Semestre 2/ASD/Modulo II/Strutture dati/Stack]]
+* [[Anno 1/Semestre 2/ASD/Modulo II/Strutture dati/Liste]]
+* [[Anno 1/Semestre 2/ASD/Modulo II/Strutture dati/Alberi]]
+* [[Anno 1/Semestre 2/ASD/Modulo II/Strutture dati/Heap]]
+* [[Anno 1/Semestre 2/ASD/Modulo II/Strutture dati/Grafi]]
 
 #modulo

@@ -77,7 +77,7 @@ Adesso possiamo finalmente collegare i linguaggi e le grammatiche usando questi 
 
 ## Nozione di albero
 
-Un <span class="asd">[[Alberi|albero]]</span> è un tipo di grafo. Gli alberi sintattici sono un'alternativa alla derivazione.
+Un <span class="asd">[[Anno 1/Semestre 2/ASD/New/Alberi|albero]]</span> è un tipo di grafo. Gli alberi sintattici sono un'alternativa alla derivazione.
 
 Definiamo un grafo in termini di LiP:
 

@@ -38,7 +38,7 @@ Facciamo finta che non esistano.
 
 ## Liste di adiacenza concatenate
  
-```
+```C
  typedef struct node{
     int vertex_id;
     struct node* link;
@@ -79,13 +79,11 @@ Per esempio:
 *      3: 4. `push 4`.
 *      Pop di tutti: 0 1 3 2 4.
 
-```
+```C
 int main() {
-
 	Node* grafo[MAX_VERTICI];
-
     return 0;
 }
 ```
 
-Vedi anche l'[[Dijkstra|algoritmo di Dijkstra]].
+Vedi anche l'[[Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Dijkstra|algoritmo di Dijkstra]].

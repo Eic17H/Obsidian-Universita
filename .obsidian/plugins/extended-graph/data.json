@@ -762,7 +762,7 @@
     "automation": false,
     "tags": true,
     "properties": true,
-    "links": true,
+    "links": false,
     "arrows": true,
     "folders": true,
     "images": true,

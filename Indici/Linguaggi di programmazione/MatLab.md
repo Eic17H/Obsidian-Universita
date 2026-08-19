@@ -32,4 +32,4 @@ Vedi [[Anno 2/Semestre 2/CSMN/Lab/Lab|CSMN]]
 [[Risoluzione di sistemi]]
 [[Sistemi non lineari]]
 
-#hub
+#hub #hublvl2
