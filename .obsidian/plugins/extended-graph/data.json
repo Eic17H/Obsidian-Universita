@@ -175,7 +175,7 @@
   "additionalProperties": {},
   "backupGraphOptions": {
     "collapse-filter": false,
-    "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -file:Lavoro.md",
+    "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub",
     "showTags": false,
     "showAttachments": false,
     "hideUnresolved": true,
@@ -347,7 +347,7 @@
     "repelStrength": 11.1403118040089,
     "linkStrength": 1,
     "linkDistance": 500,
-    "scale": 0.12286654214410998,
+    "scale": 0.06630088526946137,
     "close": false
   },
   "openInNewTab": true,
@@ -513,7 +513,7 @@
             }
           }
         ],
-        "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -file:Lavoro.md",
+        "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub",
         "hideUnresolved": true,
         "showAttachments": false,
         "showOrphans": false,

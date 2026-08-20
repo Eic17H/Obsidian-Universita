@@ -11,56 +11,17 @@
             "id": "da36fbe035fb822a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "f436f09172a460c3",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Indici/Linguaggi di programmazione/C.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "C"
-            }
-          },
-          {
-            "id": "47dc01bb1461553f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Interpolazione.md",
+                "file": "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Timer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Interpolazione"
-            }
-          },
-          {
-            "id": "7fd66e7ffa3612bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Anno 2/Semestre 2/CSMN/Lab/Lab.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lab"
+              "title": "Timer"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -135,7 +96,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Anno 2/Semestre 2/CSMN/Lab/Lab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -200,7 +160,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "webpage-html-export:Export as HTML": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -208,37 +167,40 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "edge-tts:Read note aloud": false
+      "webpage-html-export:Export as HTML": false,
+      "edge-tts:Read note aloud": false,
+      "improved-random-note:Open improved random note": false
     }
   },
-  "active": "7fd66e7ffa3612bf",
+  "active": "da36fbe035fb822a",
   "lastOpenFiles": [
-    "Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Interpolazione.md",
-    "Anno 2/Semestre 1/SO/Lab/Bash/Bash.md",
-    "Anno 3/Semestre 2/ISW/Lab/Python.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Teoria.md",
-    "Anno 2/Semestre 2/PR2/Lab/Classi astratte.md",
-    "Anno 2/Semestre 2/PR2/Lab/Varargs.md",
-    "Anno 2/Semestre 2/PR2/Lab/Interfacce.md",
-    "Anno 2/Semestre 2/PR2/Lab/Classi anonime.md",
-    "Anno 2/Semestre 2/PR2/Lab/Classi innestate.md",
-    "Anno 2/Semestre 2/PR2/Lab/Introduzione a Java.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Programmazione a oggetti.md",
-    "Anno 2/Semestre 2/PR2/Raw/PR2-20052025.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Oggetti e classi.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Lettura dei file in Java.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Interfacce.md",
-    "Anno 2/Semestre 2/PR2/Teoria/Eccezioni.md",
-    "Anno 2/Semestre 2/PR2/Programmazione 2.md",
-    "Anno 2/Semestre 2/PR2/Lab/Ereditarietà.md",
-    "Anno 2/Semestre 2/PR2/Lab/Static.md",
-    "Anno 2/Semestre 2/PR2/Lab/Lab.md",
-    "Anno 2/Semestre 2/PR2/Lab/Inline.md",
-    "Anno 1/Semestre 1/AM/Analisi Matematica.md",
-    "Anno 2/Semestre 2/PR2/Lab/Override.md",
-    "Anno 3/Semestre 2/ISW/Teoria/Testing.md",
-    "Anno 1/Semestre 1/PR1/Modulo II/Random.md",
-    "Anno 2/Semestre 2/PR2/Lab/Stream.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Stub.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/SRTT.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/RSVP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/RPF.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/MPLS.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Lunghezza media coda.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/KPI.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/ICMP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/DHCP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Delayed time.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Crash.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Congestione al livello di trasporto.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Clark.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Buffer di trasporto.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Berkeley Socket.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Algoritmo di Nagle.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/ACK cumulativi.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Domande/Sliding Window.md",
+    "Indici/Categorie/Reti.md",
+    "Indici/Categorie/Linguaggi formali.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Domande/SLA.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Domande/ARP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Domande/Link State Routing.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Timer.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Supporto/Data Link.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi",
+    "Anno 2/Semestre 2/RC/File/Parte III/Novi.md",
     "Anno 1/Semestre 2/ASD/New",
     "Anno 2/Semestre 2/RC/File/Parte III/Vecchi",
     "Immagini/Pasted image 20260819190440.png",
@@ -259,7 +221,6 @@
     "Immagini/Pasted image 20260729012202.png",
     "Indici/Linguaggi di programmazione/Icone",
     "Anno 2/Semestre 2/CSMN/Lab/Relazione.pdf",
-    "Indici/Linguaggi di programmazione",
     "Untitled.canvas"
   ]
 }
