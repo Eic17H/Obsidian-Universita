@@ -3,7 +3,7 @@ cssclasses: csmn
 ---
 Per convenzione, sia in che fuori MatLab, le matrici si chiamano con le lettere maiuscole e i vettori con le lettere minuscole.
 
-Teoria: [[Vettori]], [[Anno 2/Semestre 2/CSMN/Teoria/Matrici]]
+Teoria: [[Vettori]], [[Anno 2/Semestre 2/CSMN/Teoria/Matrici|Matrici]]
 ## Creare matrici
 
 ### Letterali

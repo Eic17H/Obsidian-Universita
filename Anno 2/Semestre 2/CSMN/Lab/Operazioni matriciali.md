@@ -1,7 +1,6 @@
 ---
 cssclasses: csmn
 ---
-
 ## Operazioni
 
 ### Operazioni semplici

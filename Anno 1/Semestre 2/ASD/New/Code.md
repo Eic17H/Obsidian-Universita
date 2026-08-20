@@ -2,4 +2,4 @@
 cssclasses:
   - asd
 ---
-[[Coda con priorità]]
+[[Code con priorità]]

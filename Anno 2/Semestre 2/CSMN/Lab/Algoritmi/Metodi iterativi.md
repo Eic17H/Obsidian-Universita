@@ -2,7 +2,7 @@
 cssclasses:
   - csmn
 ---
-Teoria: [[Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi]]
+Teoria: [[Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi|Metodi iterativi]]
 
 Ne vediamo due: [[Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Gauss-Seidel|Gauss-Seidel]] e [[Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Jacobi|Jacobi]]
 

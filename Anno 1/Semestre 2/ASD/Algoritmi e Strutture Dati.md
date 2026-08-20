@@ -4,10 +4,10 @@ cssclasses:
 ---
 ## Indice
 
-## [[Anno 1/Semestre 2/ASD/Modulo II/Algoritmi|Algoritmi]]
-
-## [[Anno 1/Semestre 2/ASD/Modulo II/Strutture Dati|Strutture Dati]]
-
+* [[Strutture dati]]
+* [[Ordinamento|Algoritmi di ordinamento]]
+* [[Anno 1/Semestre 2/ASD/New/Algoritmi|Altri algoritmi]]
+* [[Anno 1/Semestre 2/ASD/New/Complessità|Complessità]]
 ## Introduzione
 
 PR1 ci ha dato i mattoncini, con ASD cominciamo a costruire.

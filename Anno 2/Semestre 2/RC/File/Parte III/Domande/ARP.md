@@ -13,7 +13,7 @@ L'ARP "converte" tra indirizzi IP e indirizzi data link.
 
 ![[Pasted image 20260819190440.png]]
 
-Abbiamo 4 host, ciascuno con un indirizzo IP e un indirizzo Ethernet. L'host 1 ha indirizzo IP1 ed E1, 2 IP2 E2, 3 IP3 E5, 4 IP4 E6. 1 e 2 sono collegati allo stesso switch ethernet nella rete CS, e 3 e 4 sono collegati allo stesso swtich ethernet nella rete EE. La rete CS ed EE sono collegati allo stesso router tramite IP. Il router ha due interfacce Ethernet con indirizzi E3 ed E4 (e anche degli indirizzi IP). CS ha il suo prefisso IP, e lo stesso vale per EE.
+Abbiamo 4 host, ciascuno con un indirizzo IP e un indirizzo Ethernet. L'host 1 ha indirizzo IP1 ed E1, 2 IP2 E2, 3 IP3 E5, 4 IP4 E6. 1 e 2 sono collegati allo stesso switch ethernet nella rete CS, e 3 e 4 sono collegati allo stesso swtich ethernet nella rete EE. La rete CS ed EE sono collegati allo stesso router tramite IP. Il router ha due interfacce Ethernet con indirizzi E3 ed E4 (e anche degli indirizzi IP). CS ha il suo [[cidr|prefisso IP]], e lo stesso vale per EE.
 
 1 vuole inviare un pacchetto a 2 conoscendone il nome di dominio. Sono entrambi in CS, quindi va inviato via Ethernet, quindi deve conoscere l'indirizzo Eth di 2.
 Primo passo:

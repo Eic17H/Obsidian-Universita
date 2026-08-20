@@ -1,0 +1,160 @@
+{
+  "filters": {
+    "doShowOrphans": true,
+    "doShowAttachments": false
+  },
+  "groups": {
+    "groups": [
+      {
+        "query": "file:Indice",
+        "color": {
+          "a": 1,
+          "rgb": 16777215
+        }
+      },
+      {
+        "query": "tag:#materia",
+        "color": {
+          "a": 1,
+          "rgb": 16777215
+        }
+      },
+      {
+        "query": "tag:#modulo",
+        "color": {
+          "a": 1,
+          "rgb": 11382189
+        }
+      },
+      {
+        "query": "path:Comune/",
+        "color": {
+          "a": 1,
+          "rgb": 6710886
+        }
+      },
+      {
+        "query": "path:AM/",
+        "color": "#ff0000"
+      },
+      {
+        "query": "path:DEM/",
+        "color": "#d70f0f"
+      },
+      {
+        "query": "path:CSMN/",
+        "color": "#ff388e"
+      },
+      {
+        "query": "path:MD/",
+        "color": "#e12d84"
+      },
+      {
+        "query": "path:RC/",
+        "color": "#b9690e"
+      },
+      {
+        "query": "path:\"ISW/\"",
+        "color": "#d88818"
+      },
+      {
+        "query": "path:ARE/",
+        "color": "#d36d0d"
+      },
+      {
+        "query": "path:PR1/",
+        "color": {
+          "a": 1,
+          "rgb": 9601792
+        }
+      },
+      {
+        "query": "path:ASD/",
+        "color": {
+          "a": 1,
+          "rgb": 15531868
+        }
+      },
+      {
+        "query": "path:SO/",
+        "color": {
+          "a": 1,
+          "rgb": 11313951
+        }
+      },
+      {
+        "query": "path:PR2/",
+        "color": {
+          "a": 1,
+          "rgb": 12235344
+        }
+      },
+      {
+        "query": "path:BD/",
+        "color": {
+          "a": 1,
+          "rgb": 31023
+        }
+      },
+      {
+        "query": "path:FPW/",
+        "color": {
+          "a": 1,
+          "rgb": 4366154
+        }
+      },
+      {
+        "query": "path:IUM/",
+        "color": {
+          "a": 1,
+          "rgb": 7849318
+        }
+      },
+      {
+        "query": "path:FDI/",
+        "color": {
+          "a": 1,
+          "rgb": 1136321
+        }
+      },
+      {
+        "query": "path:ALF/",
+        "color": {
+          "a": 1,
+          "rgb": 28608
+        }
+      },
+      {
+        "query": "path:LiP/",
+        "color": {
+          "a": 1,
+          "rgb": 33981
+        }
+      },
+      {
+        "query": "path:Logica/",
+        "color": {
+          "a": 1,
+          "rgb": 38584
+        }
+      },
+      {
+        "query": "path:EED/",
+        "color": {
+          "a": 1,
+          "rgb": 6513606
+        }
+      },
+      {
+        "query": "",
+        "color": "#ca1c1c"
+      }
+    ]
+  },
+  "display": {
+    "nodeSize": 4,
+    "linkThickness": 5,
+    "particleSize": 9,
+    "particleCount": 20
+  }
+}

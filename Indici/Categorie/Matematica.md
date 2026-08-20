@@ -33,7 +33,7 @@
 		* [[Triangolari]]
 		* [[Gauss]]
 		* [[Inversione]]
-	* [[Metodi iterativi]]
+	* [[Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi|Metodi iterativi]]
 		* [[Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Jacobi]]
 		* [[Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Gauss-Seidel]]
 * [[Anno 2/Semestre 2/CSMN/Teoria/Equazioni non lineari]]

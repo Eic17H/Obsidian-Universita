@@ -21,7 +21,7 @@ Update .obsidian/graph.json every time parameters or group list change - the out
 // Parameters:
 
 let groups = {
-    red: ["AM", "DEM", "MD", "CSMN"],
+    red: ["AM", "MD", "CSMN"],
     orange: ["RC", "ISW", "ARE"],
     yellow: ["PR1", "ASD", "SO", "PR2"],
     green: ["BD", "FPW", "IUM"],
@@ -49,22 +49,22 @@ let colors = {
         signH: -1
     },
     orange : {
-        minL: 0.5,
-        maxL: 0.66,
+        minL: 0.6689,
+        maxL: 0.7372,
         minC: 0.15,
         maxC: 0.15,
         minH: 65,
-        maxH: 50,
+        maxH: 45,
         signH: -1
     },
     yellow : {
-        minL: 0.60,
-        maxL: 0.75,
-        minC: 0.18,
-        maxC: 0.12,
-        minH: 105,
-        maxH: 105,
-        signH: -1
+        minL: 0.5855,
+        maxL: 0.91,
+        minC: 0.123,
+        maxC: 0.108,
+        minH: 103,
+        maxH: 109.5,
+        signH: 1
     },
     green : {
         minL: 0.5,
@@ -358,12 +358,14 @@ body {
     return out
 }
 
+/*
 // Update .obsidian/plugins/auto-class/data.json every time group list changes
 console.log(`
 ======================================
 .obsidian/plugins/auto-class/data.json
 ======================================`)
 console.log(generateAllAutoClassClasses())
+*/
 
 // Update .obsidian/snippes/whatever.css every time parameters or group list change
 console.log(`

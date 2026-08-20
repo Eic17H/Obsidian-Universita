@@ -17,6 +17,7 @@ Algoritmi:
 * [[Fattorizzazione ALU]]
 * [[Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Metodi iterativi|Metodi iterativi]]
 * [[Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Equazioni non lineari|Equazioni non lineari]]
+* [[Interpolazione]]
 
 Tutto è contenuto nella [[Relazione]].
 

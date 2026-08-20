@@ -43,21 +43,14 @@
       }
     },
     {
-      "query": "path:DEM/",
+      "query": "path:MD/",
       "color": {
         "a": 1,
-        "rgb": 11747152
+        "rgb": 11944802
       }
     },
     {
       "query": "path:CSMN/",
-      "color": {
-        "a": 1,
-        "rgb": 12208499
-      }
-    },
-    {
-      "query": "path:MD/",
       "color": {
         "a": 1,
         "rgb": 12408469
@@ -67,49 +60,49 @@
       "query": "path:RC/",
       "color": {
         "a": 1,
-        "rgb": 10177024
+        "rgb": 13860352
       }
     },
     {
       "query": "path:ISW/",
       "color": {
         "a": 1,
-        "rgb": 12213760
+        "rgb": 15041332
       }
     },
     {
       "query": "path:ARE/",
       "color": {
         "a": 1,
-        "rgb": 14250543
+        "rgb": 16156756
       }
     },
     {
       "query": "path:PR1/",
       "color": {
         "a": 1,
-        "rgb": 9601792
+        "rgb": 9076224
       }
     },
     {
       "query": "path:ASD/",
       "color": {
         "a": 1,
-        "rgb": 10457856
+        "rgb": 11051071
       }
     },
     {
       "query": "path:SO/",
       "color": {
         "a": 1,
-        "rgb": 11313951
+        "rgb": 13091945
       }
     },
     {
       "query": "path:PR2/",
       "color": {
         "a": 1,
-        "rgb": 12235344
+        "rgb": 15198354
       }
     },
     {
