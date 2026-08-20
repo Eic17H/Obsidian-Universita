@@ -6,3 +6,5 @@ Network Address Translation. Una mappatura da uno spazio di [[Indirizzo IP|indir
 Lo scopo originale è di evitare di assegnare un nuovo indirizzo a ogni host quando si sposta la rete.
 
 Adesso, tramite il NAT uno:molti, è utile anche perché stanno finendo gli indirizzi [[IPv4]], perché un indirizzo IPv4 può corrispondere a più indirizzi privati.
+
+![[Pasted image 20260820210321.png]]

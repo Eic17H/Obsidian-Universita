@@ -47,7 +47,7 @@ cssclasses: rc
 [[DHCP]]
 [[ICMP]]
 [[KPI]]
-[[Lunghezza media coda]]
+[[AQL]]
 [[MPLS]]
 [[RPF]]
 [[RSVP]]

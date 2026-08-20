@@ -46,7 +46,7 @@ Visualizza il contenuto
 
 Per esempio:
 
-```
+```XML
 <TextView
 	android:layout width="match parent"
 	android:layout height="match_parent"

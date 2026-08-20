@@ -13,7 +13,7 @@ Differenza tcp utp roba del genere:
     UDP - tollera che si perda informazione, meno controlli, streaming
 
 Slide 32 - socket
-Comunicazione interprocesso
+Comunicazione inter[[Processi e job|processo]]
 Le pipe sono un buffer di memoria che risiede nel kernel
 Per il socket locale si usa uno spazio nel file system
 Locale, stessa macchina, socket di rete, anche via rete, assurdo

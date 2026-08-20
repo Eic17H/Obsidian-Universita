@@ -20,31 +20,31 @@ Vantaggi:
 * Ogni elemento viene visitato una sola volta e non si tiene conto dei risultati intermedi, questo significa anche che non puoi controllare la situazione a metà strada per risolvere gli errori
 
 Operazioni intermedie utili:
-* map: per ogni elemento, ne rende uno corrispondente
-* filter: rende l'elemento in input, ma solo se soddisfa una condizione
-* concat: accoda due stream
-* distinct: rimuove i duplicati, è un caso specifico della filter
+* `map`: per ogni elemento, ne rende uno corrispondente
+* `filter`: rende l'elemento in input, ma solo se soddisfa una condizione
+* `concat`: accoda due stream
+* `distinct`: rimuove i duplicati, è un caso specifico della filter
 
 Operazioni terminali utili:
-* count: rende il numero di elementi, la più comune negli esami
-* forEach: applica una funzione con side effect a ciascun elemento
-* collect: riconverte la stream in una collezione
+* `count`: rende il numero di elementi, la più comune negli esami
+* `forEach`: applica una funzione con side effect a ciascun elemento
+* `collect`: riconverte la stream in una collezione
 
 Come generare stream:
-* Collection::stream()
-* Arrays.stream(Object[]) (gli array sono un po' come delle collections)
-* BufferedReader.lines() (come la lettura dei file in C)
+* `Collection::stream()`
+* `Arrays.stream(Object[])` (gli array sono un po' come delle collections)
+* `BufferedReader.lines()` (come la lettura dei file in C)
 * Metodi statici degli stream:
-    * Stream.iterate()
-    * IntStream.range()
+    * `Stream.iterate()`
+    * `IntStream.range()`
 
 La documentazione degli ultimi due è pessima.
 
-## Stream.iterate()
+## `Stream.iterate()`
 
 Stream *potenzialmente* infinito di elementi. Potenzialmente infinito perché se non stai attento non smette più. Prende in input il primo elemento e una funzione che dato l'n-esimo elemento rende l'n+1-esimo. Questo concetto si usa nel machine learning per ottenere una serie pseudo-random di valori che, dato lo stesso seed, genera la stessa sequenza. Esempio: `Stream.iterate(0, n -> n+1)` genera la sequenza 0, 1, 2, 3, 4, ...
 
-## IntStream.range()
+## `IntStream.range()`
 
 IntStream è una sottoclasse di Stream. Parentesi. In Python non c'è il ciclo for del C, si usa quello vero di cui parlava Scateni. Il for del C è un while, il for vero scorre gli indici in un range, tutto qui, l'elemento iniziale è sempre incluso e quello finale è sempre escluso. `IntStream.range(1,5).forEach(System.out::println);` stampa 1 2 3 4.
 

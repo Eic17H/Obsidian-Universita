@@ -4,10 +4,12 @@ cssclasses:
 ---
 Vedi anche [[Anno 2/Semestre 1/SO/Lab v2/Socket]].
 
-Librerie: sys/types.h, sys/socket.h, netinet/in.h
-    types: tipi usati per le syscall
-    socket: socket
-    in: costanti e strutture per indirizzi di dominio internet
+Un altro modo per far comunicare [[processi]].
+
+Librerie: `sys/types.h`, `sys/socket.h`, `netinet/in.h`
+    `types`: tipi usati per le syscall
+    `socket`: socket
+    `in`: costanti e strutture per indirizzi di dominio internet
 
 Ci sono alcune macro che usiamo da queste librerie, perlopiù da types in realtà
 
