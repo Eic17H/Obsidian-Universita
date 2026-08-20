@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/QoS.md",
+                "file": "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Crash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "QoS"
+              "title": "Crash"
             }
           }
         ],
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/QoS.md",
+                "file": "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Crash.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,10 +189,17 @@
   },
   "active": "9501524ddd87439d",
   "lastOpenFiles": [
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Congestione al livello di trasporto.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Crash.md",
     "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Clark.md",
     "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Delayed time.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/DHCP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Supporto/ECHO.md",
     "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/QoS.md",
+    "Immagini/Pasted image 20260820230432.png",
+    "Immagini/Pasted image 20260820230420.png",
+    "Immagini/Pasted image 20260820230407.png",
+    "Anno 2/Semestre 2/RC/File/Parte III/Supporto/ISO-OSI.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/DHCP.md",
     "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/MPLS.md",
     "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Timer.md",
     "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Stub.md",
@@ -214,17 +221,10 @@
     "Anno 1/Semestre 1/PR1/Modulo I/Programmazione - Cenni storici.md",
     "Anno 2/Semestre 2/RC/File/Parte III/Domande/RED.md",
     "Anno 2/Semestre 2/RC/File/Parte III/Supporto/Finestra ACK.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/SRTT.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/Supporto/Round trip time.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/Domande/NAT.md",
-    "Anno 2/Semestre 2/RC/File/Parte III/Supporto/IGP.md",
     "Immagini/Pasted image 20260820210543.png",
     "Immagini/Pasted image 20260820210456.png",
     "Immagini/Pasted image 20260820210432.png",
     "Immagini/Pasted image 20260820210349.png",
-    "Immagini/Pasted image 20260820210336.png",
-    "Immagini/Pasted image 20260820210321.png",
-    "Immagini/Pasted image 20260820210306.png",
     "Anno 2/Semestre 1/SO/Lab v2",
     "Anno 2/Semestre 1/ALF/OCaml",
     "Anno 2/Semestre 2/RC/File/Parte III/Nuovi",
