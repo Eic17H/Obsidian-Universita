@@ -17,11 +17,7 @@ Astraiamo. Non abbiamo il controllo su ogni singola istruzione, abbiamo il contr
 Dal più concreto al più astratto, ci sono il linguaggio macchina, gli HLL, e l’istruzione gigante.
 Le azioni giganti non sono definite dal linguaggio, ma dalle subroutine.
 
-#mettiimmagine
-NON COME, MA COSA
-DAL 20 AL 26 NOVEMBRE 
-UNICASTORES
-SCONTI DEL BLACK BOX
+![[non come ma cosa v3.png]]
 
 Per un neofita (bella parola, neofita), non c’è distinzione tra istruzioni del linguaggio e subroutine, ma in realtà la differenza è enorme.
 
@@ -42,17 +38,17 @@ Nei nostri programmi, anche se non compare nel nostro codice, questa funzione è
 
 I file `.h` che includiamo sono dei file header, che contengono le dichiarazioni in C, mentre il vero codice è in assembly ed è contenuto nell’associato file `.o`.
 “`math.h` è una libreria” è una stronzata colossale, `math.h` è solo l’intestazione (header).
-I file header sono a corredo della libreria.
+I file header sono *a corredo* della libreria.
 
 `double sqrt(double)` è una signature. Non ci possono essere due subroutine con la stessa signature, ma possono essercene con lo stesso nome e signature diverse.
 
 Le funzioni sono praticamente operatori prefissi.
 `3+4` è come `add(3,4)`.
 
-Le procedure si dichiarano come void foo(int, int).
-Si introduce questo tipo fasullo void. Cos’è?
-Nelle header c’è typedef void int. È l’ennesimo tipo intero!
-Però il compilatore ti impedirà comunque di returnare se una subroutine è void.
+Le procedure si dichiarano come `void foo(int, int)`.
+Si introduce questo tipo fasullo `void`. Cos’è?
+Nelle header c’è `typedef void int`. È l’ennesimo tipo intero!
+Però il compilatore ti impedirà comunque di returnare se una subroutine è `void`.
 
 Tra l’altro le subroutine sono belle perché posso scrivere il programma invocando quante volte voglio la subroutine `funzioneFondamentalissima()` senza aver ancora progettato la subroutine stessa, magari mentre aspetto che lo faccia qualcun altro.
 
@@ -61,4 +57,4 @@ Per prassi, quando si fa una libreria, il file `.c` e il file `.h` hanno lo stes
 I nomi dei parametri all’interno della subroutine sono da essere utilizzati come variabili.
 Vedi le slide, comunque i parametri sono equivalenti a delle variabili.
 
-return restituisce il valore al programma chiamante.
+`return` restituisce il valore al programma chiamante.

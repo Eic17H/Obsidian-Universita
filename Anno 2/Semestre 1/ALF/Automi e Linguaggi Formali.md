@@ -10,7 +10,7 @@ I link in questo documento sono trasandati e alcuni sono stati rinominati automa
 
 ## Spiegazioni
 
-* [[Fold left in OCaml]]
+* [[Fold left]]
 * [[Funzioni di secondo ordine]]
 ## Appunti veri e propri
 

@@ -33,7 +33,7 @@ cssclasses: rc
 [[Categorie di applicazioni]]
 [[Categorie di reti]]
 [[Applicazioni e reti]]
-[[Non so in che categoria vada]]
+[[Boh]]
 [[Protocolli di rete]]
 [[Timer]]
 [[ACK cumulativi]]
@@ -54,4 +54,6 @@ cssclasses: rc
 [[SRTT]]
 [[Stub]]
 
-#hub 
+[[Anno 2/Semestre 1/SO/Lab v2/Socket]]
+
+#hub

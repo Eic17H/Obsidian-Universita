@@ -70,7 +70,7 @@ Ripensiamo alle regole della congiunzione, introduzione $\frac{α\;β}{α\landβ
 
 La deduzione naturale non è neutrale in questo rispetto, non ha un punto di vista verofunzionale ma inferenzialista.
 
-Questo è uno dei motivi per cui Dummet sostiene che la logica intuizionista sia superiore a quella classica. Le regole del calcolo della deduzione naturale intuizionista corrisponde bene al bohhhhh. Invece in logica classica, le regole della negazione sono ad hoc e non di introduzione ed eliminazione.
+Questo è uno dei motivi per cui Dummet sostiene che la logica intuizionista sia superiore a quella classica. Le regole del calcolo della deduzione naturale intuizionista corrispondono bene al bohhhhh. Invece in logica classica, le regole della negazione sono ad hoc e non di introduzione ed eliminazione.
 
 Dummet propone alla fine degli anni '50 questa teoria inferenzialista, che si appoggia pesantemente al calcolo della deduzione naturale. Molto promettente, la gente comincia a studiarla. Condizioni di asseribilità e non di verità, questo comincia a circolare.
 
@@ -102,17 +102,17 @@ Perché la congiunzione e la disgiunzione hanno senso ma tonk no? Si basa sugli 
 
 Tonk non esiste nel linguaggio naturale? Beh, neanche $α\lor(β\rightarrowα)$, ma possiamo definire un nuovo connettivo logico che corrisponde a quella combinazione.
 
-Prior mette il dito nella piaga. La definizione ingenua dell'inferenzialismo formulata prima di questo articolo, non andava bene. Anche se un connettivo logico ha una regola di introduzione e di eliminazione, non vuol dire che abbia un significato coerente. Dobbiamo mettere dei limiti. Non è detto che una data regola di introduzione vada bene con una data regola di eliminazione.
+Prior mette il dito nella piaga. La definizione ingenua dell'inferenzialismo formulata prima di questo articolo non andava bene. Anche se un connettivo logico ha una regola di introduzione e di eliminazione, non vuol dire che abbia un significato coerente. Dobbiamo mettere dei limiti. Non è detto che una data regola di introduzione vada bene con una data regola di eliminazione.
 
 La soluzione è data da Belnap, che sulla rivista Analysis pubblica *"Tonk, plonk e plink"*, uno degli articoli più citati su Google Scholar. Sostiene che serva un check ulteriore, quello di *estensione conservativa*. Cosa significa che ampliando il linguaggio con nuovi termini ottengo un'estensione conservativa del linguaggio? Significa che aggiungendo termini non devo introdurre inferenze che non era possibile fare prima. Quella di $tonk$ invece è una *definizione creativa*, che sono cattive definizioni.
 
-"La parte tonk-free, senza tonk, mi deve restare uguale".
+> "La parte $tonk$-free, senza $tonk$, mi deve restare uguale".
 
 Prior stava sottolineando un paradosso, non sostenendo $tonk$. Prior criticava l'inferenzialismo, Belnap lo salva dicendo che quello da criticare è l'inferenzialismo ingenuo.
 
 E cosa ne pensa Dummet, il protagonista? Accetta la risposta di Belnap, la trova sostanzialmente corretta, però la considera parziale perché è un criterio che funziona *in pratica*, ma non ci dice il motivo vero profondo per cui quella coppia di regole non funziona.
 
-Dummet introduce quindi la nozione di *armonia*. La regola di introduzione e la regola di eliminazione di un connettivo devono essere *in armonia tra di loro*: mediante la regola di eliminazione posso estrarre né più né meno di quello che ci ho messo con l'introduzione.
+Dummet introduce quindi la nozione di *==armonia==*. La regola di introduzione e la regola di eliminazione di un connettivo devono essere ==*in armonia tra di loro*==: mediante la regola di eliminazione posso estrarre né più né meno di quello che ci ho messo con l'introduzione.
 
 Esempio con la congiunzione:$$\dfrac{\dfrac{α\enspaceβ}{α\landβ}}{α}\enspace\dfrac{\dfrac{α\enspaceβ}{α\landβ}}{β}$$
 
@@ -123,6 +123,6 @@ Per esempio, immaginiamo di introdurre e subito eliminare il connettivo, come l�
 Vediamo invece l'implicazione:$$\dfrac{\dfrac{\begin{matrix}[α]_i\\\vdots\\β\end{matrix}}{α\rightarrowβ}\rightarrow I_i \qquad α}{β}\rightarrow E$$
 Posso ricavare $β$ senza introdurre ed eliminare l'implicazione? Sì, è quello che ho fatto fino al passaggio $i-1$.
 
-Il calcolo classico non è estensione conservativa del suo frammento senza la negazione? Perché? Perché ci sono derivazioni le cui premesse e conseguenze non includono la negazione ma il cui svolgimdeto la include. La negazione è qundi una sorta di tonk, è un'aggiunta creativa, che permette di fare nuove defivazinoi.
+Il calcolo classico non è estensione conservativa del suo frammento senza la negazione? Perché? Perché ci sono derivazioni le cui premesse e conseguenze non includono la negazione ma il cui svolgimento la include. La negazione è quindi una sorta di $tonk$, è un'aggiunta creativa, che permette di fare nuove derivazioni.
 
-Ma Paoli lo critica. Questa creatività della negazione dipende dal calcolo, perché con un calcolo multiconseguenza o come si chiama, la negazione non è creativa. Quindi il fatto è che la deduzione naturale è fatta su misura per la loigca infeirenzionsita. inferenizlaista. Ancora oggi la inferenzilist c'è anocra si pratica, proof theoretics semantics, ci sono seminari online. Ma oggi non si usa per dimostrare la superiorità, ma quando è conveniente non sto capendo mi sto perdendo metà delle parole ho sonno. Vediamo diversi approcci, qual è il setting più naturale per la loigca clasdica per wurlla inferenziznzinsta eccetera. Meno polemica pggi, prima uso polemico ora ono. uso nel senso di utilizzo.
+Ma Paoli lo critica. Questa creatività della negazione dipende dal calcolo, perché con un calcolo multiconseguenza o come si chiama, la negazione non è creativa. Quindi il fatto è che la deduzione naturale è fatta su misura per la logica inferenzialista. Ancora oggi si pratica la logica inferenzialista, proof theoretics semantics, ci sono seminari online. Ma oggi non si usa per dimostrare la superiorità, ma quando è conveniente non sto capendo mi sto perdendo metà delle parole ho sonno. Vediamo diversi approcci, qual è il setting più naturale per la logica classica, o per la logica inferenzialista, eccetera. Meno polemica oggi, prima c'era un uso polemico ma ora non più.

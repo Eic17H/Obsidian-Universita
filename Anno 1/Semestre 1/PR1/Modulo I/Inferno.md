@@ -4,9 +4,9 @@ cssclasses:
 ---
 ## Call stack
 
-Dentro la funzione iterativa ci sono invocazioni alla funzione stessa
-Lo scope definisce qual è l’ambito di visibilità degli identificatori.
-`a=fib(3);` Prima cosa da valutare: rvalue.
+Dentro la funzione [[Anno 1/Semestre 1/PR1/Modulo I/Ricorsione|ricorsiva]] ci sono invocazioni alla funzione stessa.
+Lo [[Anno 1/Semestre 1/PR1/Modulo I/Scope|scope]] definisce qual è l’ambito di visibilità degli identificatori.
+`a=fib(3);` Prima cosa da valutare: ==rvalue==.
 [orrendi grafici sul quaderno che non ricreerò]
 L’insieme di funzioni invocate si può visualizzare come una pila di invocazioni, una call stack in cui una funzione che ne invoca un’altra la mette sopra sé stessa. L’unica funzione attiva è quella in cima, l’ultima chiamata, quelle sotto sono in pausa, congelate.
 Si chiama *freeze/thaw*, congelare/scongelare.
@@ -65,40 +65,26 @@ Un DeVizia passa per la memoria, trova memoria che non serve e la rende nuova.
 La garbage collection è caratteristica dei linguaggi progettati bene: C#, Java, non C.
 Costa.
 
-#vedioriginale
+## Puntatori
 
 Puntatori: nuova tipologia di simboli che, sinceramente, non vorremmo che esistessero, per un motivo molto semplice:
-Mondo
-Macchina astratta
-:)
-Si vive bene, non c’è bisogno di conoscere tutto sul computer.
 
-⊡ Questo è Gianfranceso, la mia variabile con un nome e un valore.
-
-😈 E questo è un puntatore.
-Inferi
-Macchina reale
-):
-Registri, assembler, locazioni di memoria.
-
-`&231`
-`1010000`
-Locazioni di memoria, ciascuna con un numero lunghissimo che mi devo ricordare.
-`&232`
-`1010010`
-`&233`
-`0110001`
-`&234`
-`1001001`
+| Mondo                                                              | Inferi                                                                          |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| Macchina astratta                                                  | Macchina reale                                                                  |
+| :)                                                                 | :(                                                                              |
+| Si vive bene, non c'è bisogno di conoscere tutto sul computer.     | Registri, assembler, locazioni di memoria.                                      |
+| ⊡ Questo è Gianfranceso, la mia variabile con un nome e un valore. | Locazioni di memoria, ciascuna con un numero lunghissimo che mi devo ricordare. |
+| 😈 E questo è un puntatore.                                        | `&231 1010000`<br>`&232 1010010`<br>`&233 0110001`<br>`&234 1001001`            |
 
 Torniamo a una cosmogonia classica. Grecia classica. C’erano il mondo e gli inferi, coi demoni. Dove avresti voluto vivere? Quanto ci ha messo Dante a raccontare cosa c’è all’inferno…
 Ci siamo svincolati dagli inferi, e poi, improvvisamente, chi arriva nel nostro mondo? I puntatori, gli emissari degli inferi, agenti delle potenze infernali.
-Questo valore non è più un int, un bool, ma una locazione di memoria.
+Questo valore non è più un `int`, né un `bool`, ma una locazione di memoria.
 Abbiamo aperto le porte degli inferi.
 (Un tempo tutto questo era sensato).
 
 Se proprio devi fare queste cose, cambia linguaggio.
-“Eh no ma io se lo faccio in C ci metto 3ms di meno e quindi con 7’000’000 di iterazioni risparmio 10 secondi”-
+*“Eh no ma io se lo faccio in C ci metto 3ms di meno e quindi con 7’000’000 di iterazioni risparmio 10 secondi”-*
 Benissimo! Bene!
 A tuo rischio e pericolo.
 
@@ -108,7 +94,7 @@ moria è una cosa reale.
 Non esiste alternativa per allocare dinamicamente la memoria e utilizzarla.
 Poi te la dimentichi e usi solo il nome.
 
-I puntatori non sono mai necessari (quasi).
+I puntatori non sono mai necessari (==quasi==).
 
 Quando fai `int *p`, `int` non serve a niente finché `p` non comincia a puntare.
 
@@ -120,7 +106,7 @@ I progettisti del linguaggio, ‘ste merde, hanno reso possibili tutti questi mo
 …
 …
 …
-restituisce l’indirizzo di una variabile.
+restituisce l’<span class="red">indirizzo di una variabile</span>.
 ??? Ma?
 La variabile vive nella macchina astratta.
 Ma `&`, Orfeo, che cerca Euridice all’inferno, ma è un fesso, ma il nostro `&orfeo`, lo chiamiamo così per amicizia, va negli inferi e ripesca un indirizzo.

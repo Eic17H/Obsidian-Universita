@@ -2,7 +2,7 @@
 cssclasses:
   - lip
 ---
-Lo stesso argomento: <span class="alf">[[Anno 2/Semestre 1/ALF/File/Regex|ALF]]</span>, <span class="so">[[Anno 2/Semestre 1/SO/Lab/Regex|SO]]</span>
+Lo stesso argomento: <span class="alf">[[Anno 2/Semestre 1/ALF/File/Regex|ALF]]</span>, <span class="so">[[Anno 2/Semestre 1/SO/Lab v1/Regex|SO]]</span>
 
 ## Definizione
 

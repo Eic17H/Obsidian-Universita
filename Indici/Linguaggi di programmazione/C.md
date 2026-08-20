@@ -11,7 +11,6 @@ Vedi <span class="pr1">[[Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</span>, <span
 ### Introduzione
 
 * <span class="pr1">[[Introduzione al C]]</span>
-* <span class="pr1">[[Input e output]]</span>
 * <span class="pr1">[[Anno 1/Semestre 1/PR1/Modulo I/Algoritmi|Algoritmi]]</span>
 * <span class="pr1">[[Anno 1/Semestre 1/PR1/Modulo I/Tipi|Tipi]]</span>
 	* <span class="pr1">[[Tipi primitivi]]</span>
@@ -19,8 +18,8 @@ Vedi <span class="pr1">[[Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</span>, <span
 	* <span class="pr1">[[Definizione di tipi]]</span>
 	* <span class="pr1">[[Cast]]</span>
 * <span class="pr1">[[Operatori]]</span>
+* <span class="pr1">[[Input e output]]</span>
 * <span class="pr1">[[Selezione, iterazione e salto]]</span>
-
 * <span class="pr1">[[Subroutine e librerie]]</span> / <span class="pr1">[[Librerie e macro]]</span>
 * <span class="pr1">[[Random]]</span>
 * <span class="pr1">[[Anno 1/Semestre 1/PR1/Modulo I/Scope|Scope]]</span>
@@ -60,7 +59,16 @@ Vedi <span class="pr1">[[Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</span>, <span
 * <span class="asd">[[Anno 1/Semestre 2/ASD/New/Complessità|Complessità]]</span>
 
 ### Pochissime cose semi-avanzate
-* <span class="so">[[Socket]]</span>
-* <span class="so">[[Socket in C]]</span>
+* <span class="so">[[Anno 2/Semestre 1/SO/Lab v1/Altro/Socket]]</span>
+* <span class="so">[[Anno 2/Semestre 1/SO/Lab v1/C/Socket in C]]</span>
 * <span class="so">[[Tutto C SO]]</span>
 * <span class="so">[[Processi, thread e job]]</span>
+
+### Di nuovo ma prima o poi saranno più ordinati
+
+[[Anno 2/Semestre 1/SO/Lab v2/C]]
+[[GCC]]
+[[Processi]]
+[[Thread]]
+[[Anno 2/Semestre 1/SO/Lab v2/Socket in C]]
+[[Guardie e ladri]]

@@ -12,7 +12,7 @@
 ## Programmazione
 
 * <span class="asd">[[Algoritmi e Strutture Dati]]</span>
-* <span class="so">[[Anno 2/Semestre 1/SO/Lab/Lab|Sistemi Operativi]]</span>
+* <span class="so">[[Anno 2/Semestre 1/SO/Lab v1/Lab|Sistemi Operativi]]</span>
 * <span class="pr2">[[Anno 2/Semestre 2/PR2/Lab/Lab|Programmazione 2]]</span>
 * <span class="csmn">[[Anno 2/Semestre 2/CSMN/Lab/Lab|Calcolo Scientifico e Metodi Numerici]]</span>
 * <span class="isw">[[Anno 3/Semestre 2/ISW/Lab/Python|Ingegneria del Software]]</span>

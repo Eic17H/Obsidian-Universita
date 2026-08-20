@@ -11,7 +11,7 @@ Così è già una classe completa ma vuota.
 Esiste anche `public class`, per ora lasciamo perdere.
 Per salvare, Ctrl+S.
 Controlliamo di aver salvato con `cat Monitor.java`.
-(Si suppone si sia seguito <span class="so">[[Bash|SO]]</span> prima di PR2).
+(Si suppone si sia seguito <span class="so">[[Anno 2/Semestre 1/SO/Lab v1/Bash/Bash|SO]]</span> prima di PR2).
 
 Proviamo a fare `javac Monitor.java`, ci crea `Monitor.class`, lì c'è il bytecode.
 Non c'è molto dentro, modella una classe `Monitor` in cui non c'è nessun attributo e nessun metodo.

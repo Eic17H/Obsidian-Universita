@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub",
+  "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\"SO/Lab v1/\"",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -172,6 +172,6 @@
   "repelStrength": 11.1403118040089,
   "linkStrength": 1,
   "linkDistance": 500,
-  "scale": 0.06630088526946137,
+  "scale": 0.3099596052520332,
   "close": false
 }
