@@ -7,7 +7,7 @@
     "light-mode"
   ],
   "theme": "obsidian",
-  "textFontFamily": "Arial,Fairfax HD",
+  "textFontFamily": "",
   "baseFontSizeAction": true,
   "baseFontSize": 16,
   "accentColor": ""

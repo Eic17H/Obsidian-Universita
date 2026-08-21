@@ -335,6 +335,13 @@
           "a": 1,
           "rgb": 6513606
         }
+      },
+      {
+        "query": "path:Indici  ",
+        "color": {
+          "a": 1,
+          "rgb": 11250603
+        }
       }
     ],
     "collapse-display": false,
@@ -347,7 +354,7 @@
     "repelStrength": 11.1403118040089,
     "linkStrength": 1,
     "linkDistance": 500,
-    "scale": 0.3099596052520332,
+    "scale": 0.12286654214411015,
     "close": false
   },
   "openInNewTab": true,
@@ -510,6 +517,13 @@
             "color": {
               "a": 1,
               "rgb": 6513606
+            }
+          },
+          {
+            "query": "path:Indici  ",
+            "color": {
+              "a": 1,
+              "rgb": 11250603
             }
           }
         ],
