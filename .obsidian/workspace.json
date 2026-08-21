@@ -8,21 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8ea5ee5843a47023",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Indici/Categorie/Reti.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Reti"
-            }
-          },
-          {
-            "id": "6a3d3d1c59bb42b2",
+            "id": "0380e12c56921a71",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -32,21 +18,63 @@
             }
           },
           {
-            "id": "5148397fe78464fd",
+            "id": "62b53ad740eeeb9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Indici/Categorie/Logica.md",
+                "file": "Anno 1/Semestre 2/ASD/New/Grafi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Logica"
+              "title": "Grafi"
+            }
+          },
+          {
+            "id": "224145782ff4eaa3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 1/Semestre 2/ASD/Modulo II/Strutture dati/Grafi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Grafi"
+            }
+          },
+          {
+            "id": "e444199d07851905",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 1/Semestre 2/ASD/New/Grafi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Grafi"
+            }
+          },
+          {
+            "id": "e1621e40aa991473",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Anno 3/Semestre 1/LiP/Categorie/SECD.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SECD"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -80,7 +108,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Termine",
+                "query": "coda",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Indici/Categorie/Logica.md",
+                "file": "Anno 1/Semestre 2/ASD/New/Grafi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -198,34 +226,34 @@
       "improved-random-note:Open improved random note": false
     }
   },
-  "active": "5148397fe78464fd",
+  "active": "e444199d07851905",
   "lastOpenFiles": [
+    "Anno 1/Semestre 2/ASD/New/Code.md",
+    "Anno 1/Semestre 2/ASD/New/Code con priorità.md",
+    "Anno 1/Semestre 2/ASD/Modulo II/Strutture dati/Coda.md",
+    "Anno 1/Semestre 2/ASD/New/Grafi.md",
+    "Anno 1/Semestre 2/ASD/New/Stack.md",
+    "Indici/Linguaggi di programmazione/C.md",
+    "Anno 1/Semestre 2/ASD/Modulo II/Strutture dati/Grafi.md",
+    "Anno 3/Semestre 1/LiP/Categorie/SECD.md",
+    "Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Dijkstra.md",
+    "Anno 1/Semestre 2/ASD/New/Dijkstra.md",
+    "Anno 1/Semestre 2/ASD/New/Alberi.md",
     "Indici/Categorie/Reti.md",
+    "Indici/Linguaggi di programmazione/Java.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Supporto/Protocolli di controllo.md",
+    "Anno 2/Semestre 2/RC/Vecchi/File/Protocolli di rete.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Supporto/IP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/QoS.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Supporto/BOOTP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Supporto/RARP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Domande/ARP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Nuovi/DHCP.md",
+    "Anno 2/Semestre 2/RC/File/Parte III/Domande/SLA.md",
+    "Anno 2/Semestre 2/CSMN/Lab/Funzioni.md",
+    "Indici/Categorie/Logica.md",
     "Anno 2/Semestre 2/RC/File/Parte III/Supporto/AQM.md",
     "Anno 1/Semestre 1/PR1/Modulo I/Test/Termini.md",
-    "Anno 1/Semestre 1/PR1/Modulo I/PR1I prov.md",
-    "Anno 2/Semestre 1/EED/Economia/File/Oligopolio.md",
-    "Anno 2/Semestre 1/ALF/File/Logica proposizionale classica.md",
-    "A scelta/Semestre 2/Logica/File/Enunciati.md",
-    "Anno 1/Semestre 1/AM/File/Logica proposizionale.md",
-    "Anno 2/Semestre 1/EED/Economia/File/Funzione di produzione.md",
-    "Anno 2/Semestre 1/SO/Teoria/Architetture di elaborazione.md",
-    "Anno 2/Semestre 1/SO/Sistemi Operativi.md",
-    "Anno 2/Semestre 1/SO/Teoria/Teoria.md",
-    "Anno 2/Semestre 1/SO/Teoria/Introduzione.md",
-    "Anno 2/Semestre 1/SO/Lab v2/Lab.md",
-    "Anno 2/Semestre 1/SO/Lab v1/Lab.md",
-    "Anno 2/Semestre 1/SO/Lab v2/Guardie e ladri.md",
-    "Anno 2/Semestre 1/SO/Lab v2/C.md",
-    "Anno 2/Semestre 1/SO/Lab v2/GCC.md",
-    "Anno 2/Semestre 1/SO/Lab v2/Socket.md",
-    "Anno 2/Semestre 1/SO/Lab v2/Processi e job.md",
-    "Anno 2/Semestre 1/SO/Lab v2/File.md",
-    "Anno 2/Semestre 1/SO/Lab v2/Bash.md",
-    "Anno 2/Semestre 1/SO/Lab v2/Input, output e pipe.md",
-    "Anno 2/Semestre 1/SO/Lab v2/Regex.md",
-    "Anno 2/Semestre 1/SO/Lab v2/VM e Dual Boot.md",
-    "Anno 3/Semestre 2/ISW/Teoria/Introduzione/Cenni storici.md",
     "Immagini/Pasted image 20260820230432.png",
     "Immagini/Pasted image 20260820230420.png",
     "Immagini/Pasted image 20260820230407.png",

@@ -609,13 +609,19 @@
       "rules": []
     },
     "diamond": {
-      "combinationLogic": "AND",
+      "combinationLogic": "OR",
       "index": 3,
       "rules": [
         {
           "source": "folder",
           "property": "",
           "value": "Indici/Categorie",
+          "logic": "contains"
+        },
+        {
+          "source": "tag",
+          "property": "",
+          "value": "hublvl1",
           "logic": "contains"
         }
       ]
@@ -626,13 +632,19 @@
       "rules": []
     },
     "hexagon": {
-      "combinationLogic": "AND",
+      "combinationLogic": "OR",
       "index": 5,
       "rules": [
         {
           "source": "folder",
           "property": "",
           "value": "Indici/Linguaggi di programmazione",
+          "logic": "contains"
+        },
+        {
+          "source": "tag",
+          "property": "",
+          "value": "hublvl2",
           "logic": "contains"
         }
       ]
@@ -762,13 +774,13 @@
     "automation": false,
     "tags": true,
     "properties": true,
-    "links": false,
+    "links": true,
     "arrows": true,
     "folders": true,
     "images": true,
     "icons": true,
-    "focus": false,
-    "shapes": true,
+    "focus": true,
+    "shapes": false,
     "layers": true,
     "elements-stats": true,
     "names": true,

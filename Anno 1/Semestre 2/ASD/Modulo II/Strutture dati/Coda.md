@@ -11,4 +11,4 @@ Le operazioni possibili sono:
 * `isEmpty`: vero se la coda è vuota;
 * `isFull`: vero se la coda è piena..
 
-L'utilizzo si basa su due puntatori, `front e back`, primo e ultimo, entrambi inizializzati a `null`. Con `push`, si crea un nuovo elemento, lo si fa puntare al vecchio ultimo elemento, e `back` si fa puntare a quello nuovo. Invece `pop` restituisce l'elemento puntato da front, che punterà poi al vecchio secondo elemento, che punterà a `null`, essendo diventato il primo.
+L'utilizzo si basa su due puntatori, `front e back`, primo e ultimo, entrambi inizializzati a `NULL`. Con `push`, si crea un nuovo elemento, lo si fa puntare al vecchio ultimo elemento, e `back` si fa puntare a quello nuovo. Invece `pop` restituisce l'elemento puntato da front, che punterà poi al vecchio secondo elemento, che punterà a `null`, essendo diventato il primo.

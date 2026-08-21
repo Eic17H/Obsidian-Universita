@@ -7,7 +7,7 @@ Ogni macchina di Internet ha uno o più [[Indirizzo IP|indirizzi IP]], ma non si
 
 Le schede di rete, per esempio le schede Ethernet, comprendono i loro indirizzi, come gli indirizzi Ethernet.
 
-L'ARP "converte" tra indirizzi IP e indirizzi data link.
+L'ARP "converte" da indirizzi IP a indirizzi data link. C'è anche [[RARP|l'opposto]].
 
 ## Esempio 6.4 di Dessì
 
