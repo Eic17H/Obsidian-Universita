@@ -2,6 +2,8 @@
 cssclasses:
   - so
 ---
+Scusate lo devo ancora tradurre.
+
 󱥂󱥵cat󱤡󱥞󱤘󱤮󱤉󱤌󱥍󱤏󱤪󱥳
 󱥂󱥵head󱤡󱥞󱤘󱤮󱤉󱤩󱥬󱤽󱥳󱥍󱥡󱤖
 󱥞󱤘󱥌󱤉󱥡󱤖󱤙󱤿󱤼

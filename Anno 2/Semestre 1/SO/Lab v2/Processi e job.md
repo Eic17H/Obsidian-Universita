@@ -2,6 +2,8 @@
 cssclasses:
   - so
 ---
+Anche questo va ancora tradotto.
+
 SO20241016
 󱤽󱥡󱤡󱤿󱥩󱥮‍󱥳󱤧󱤬 (input, output, error)
 < - 󱥄󱥌󱤉󱥁󱥩󱤪󱦜󱤪󱤧󱤬󱤡󱥄󱥶󱤉󱤄

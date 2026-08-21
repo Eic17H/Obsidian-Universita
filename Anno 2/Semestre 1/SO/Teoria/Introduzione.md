@@ -29,7 +29,7 @@ Tu magari comunichi un sacco di cose ai docenti e il collega non ne sa nulla. <s
 
 Se copi il progetto tanto non sai fare nulla e lavoro non ne trovi.
 E della laurea che te ne fai?
-Ce n'era uno così, tirocinante, nell'azienda di prof. Carta. Non sapeva fare nulla.
+Ce n'era uno così, tirocinante, nell'azienda di prof Carta. Non sapeva fare nulla.
 Ma neanche ti accorgi dei tuoi difetti. E non impari niente.
 
 Elearning. Materiale e anche esami. Leggi il regolamento.

@@ -2,9 +2,9 @@
 cssclasses:
   - so
 ---
-[[Anno 2/Semestre 1/SO/Lab v2/File]]
-[[Input, output e pipe]]
-[[Anno 2/Semestre 1/SO/Lab v2/Regex]]
+Prima di tutto vediamo come [[Anno 2/Semestre 1/SO/Lab v2/File|interagire con i file]], poi vediamo come [[Input, output e pipe|far interagire più comandi tra loro]], e poi vediamo come manipolare il testo con le [[Anno 2/Semestre 1/SO/Lab v2/Regex|espressioni regolari]].
+
+Imparato ciò, sotto ci sono degli esercizi.
 
 (20241104 non ho preso appunti ma mi sa che abbiamo cominciato lì)
 

@@ -2,6 +2,8 @@
 cssclasses:
   - alf
 ---
+Lo stesso argomento: <span class="am">[[Logica proposizionale|AM]]</span>, <span class="logica">[[Enunciati|Logica]]</span>
+
 La LPC studia le proposizioni che possono essere <span class="green">vere</span> o <span class="red">false</span>.
 
 **Frase**: "Joker è un nemico di Batman"
@@ -10,7 +12,9 @@ Due frasi diverse che corrispondono alla stessa preposizione, in questo caso <sp
 
 "Professor Bartoletti è Batman", "la congettura di Goldman è vera".
 Possono essere <span class="green">vere</span> o <span class="red">false</span>, ma non sappiamo quale siano.
-Alcune proposizioni si possono scomporre, altre no: **proposizioni atomiche**. #termine 
+Alcune proposizioni si possono scomporre, altre no:
+> **==Proposizione atomica==**: non si può scomporre
+
 Da proposizioni atomiche e <span class="logica">[[Enunciati#Connettivi logici|connettivi logici]]</span> puoi creare "molecole logiche".
 $∧$, $∨$, $¬$, $→$. $And$, $or$, $not$, $pertanto$.
 
@@ -25,7 +29,7 @@ I babilonesi facevano matematica con algoritmi rudimentali.
 Ridurre il ragionamento al puro calcolo tramite la logica.
 Aveva cominciato Aristotele, ma l'ha generalizzato Leibniz. E poi arrivò Boole.
 
-Usiamo delle <span class="termine">variabili</span>, o <span class="termine"><i>lettere proposizionali</i></span>. #termine 
+Usiamo delle <span class="termine">variabili</span>, o ==***lettere proposizionali***==.
 Ne abbiamo infinite: $p$, $q$, $r$, $p'$, $q_7$, $r_{r_{r_{r_{r_{r_{r}}}}}}$.
 L'insieme delle formule proposizionali è definito dalle seguenti regole:
 1) Tutte le <span class="termine">lettere proposizionali</span> sono formule;

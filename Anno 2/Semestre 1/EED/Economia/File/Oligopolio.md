@@ -1,7 +1,10 @@
+---
+cssclasses: eed
+---
 # Lezione
 Dopo il monopolio vediamo l'oligopolio.
 
-#Termine ==Collusione==
+==**Collusione**==
 È possibile in un mercato colludere?
 Se ci sono due grandi produttori, possono chiamarsi e dire "oh ce li dividiamo?".
 In Europa è illegale. Monopolio illegale, sleale.
@@ -11,7 +14,7 @@ Adottiamo comportamenti strategici, *game theory*, *zero-sum game*.
 
 Un rivale ha un pezzo di mercato, io ho il mio, e provo a monopolizzare il mio.
 Provo a ipotizzare su di lui, e lui fa lo stesso.
-#Termine ==Nash Equilibrium==
+==**Nash Equilibrium**==
 Non c'è bisogno di ricordare formule particolare. Stessi criteri ma siamo in due. Complemento.
 Ipotizzo che il collega abbia già occupato una parte del mercato.
 Prima ipotesi, non posso essere sicuro. Non possiamo colludere.
@@ -20,7 +23,7 @@ Ci sono prezzi di mercato \> dei prezzi di competizione, ma non ci sono di monop
 Non c'è bisogno di ricordare manco una formula.
 Ricorda sempre ricavo marginale, costo marginale, sul (residuo??).
 
-#Termine ==Funzione di reazione==
+==**Funzione di reazione**==
 Abbiamo P=a-bQ
 Con due aziende, Q=Q1+Q2
 P = a -bQ1 -bQ2.

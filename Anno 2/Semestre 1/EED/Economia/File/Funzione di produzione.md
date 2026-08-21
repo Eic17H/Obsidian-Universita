@@ -1,19 +1,22 @@
+---
+cssclasses: eed
+---
 Venerdì stavamo esaminando insieme il caso della funzione di produzione
 Combinazione ottimale per soddisfare il target produttivo e minimizzare i costi di produzione
-Funzione di produzione di tipo Rod Douglas, la più semplice è
-Q=L^α \* K^β, se α e β sono 1/2, hai Q=sqrt(λLλK)=λsqrt(LK) che scala linearmente con λ.
+Funzione di produzione di tipo Rod Douglas, la più semplice è $Q=L^\alpha \cdot K^\beta$, e se $\alpha$ e $\beta$ sono $1/2$, hai $Q=\sqrt{\lambda L\lambda K}=\lambda\sqrt{LK}$ che scala linearmente con $\lambda$.
 
-#Termine Rendimenti costanti di scala: se noi N fattori raddoppiamo i fattori produttivi raddoppiamo la produzione. Quella lì sopra.
+> **==Rendimenti costanti di scala==**: se noi N fattori raddoppiamo i fattori produttivi raddoppiamo la produzione. Quella lì sopra.
+
 Non è scontato: raddoppiamo l'impianto e i lavoratori, magari non raddoppiamo perché avevamo già i migliori lavoratori esistenti e quelli nuovi non fanno nulla.
 
-#Termine Production hill
-Grafico 3D, dove Q è verticale e L e K sono orizzontali.
-#Termine Isoquanto: horizontal slice of the producton hill, vedi Analisi Matematica.
-Se non slici orizzonalmente, lo fai verticalmene. Tieni L o K fisso.
- α = β = 1/2
-∂Q/∂K = sqrt(L/K)/2>0, è crescente
+> **==Production hill==**: Grafico 3D, dove Q è verticale e L e K sono orizzontali.
+
+> **==Isoquanto==**: Horizontal slice of the producton hill, vedi Analisi Matematica.
+
+Se non slici orizzonalmente, lo fai verticalmene. Tieni L o K fisso. $α = β = 1/2$
+$∂Q/∂K = \sqrt{L/K}/2>0$, è crescente
 Rifacciamo la derivata
-∂∂Q/∂∂K = -sqrt(L/K\^3)/4<0, quindi cresce ma cresce sempre più lentamente.
+$∂∂Q/∂∂K = -\sqrt{L/K^3}/4<0$, quindi cresce ma cresce sempre più lentamente.
 (Tante parole per descrivere la radice quadrata alla fine)
 Ma ti fa rendere conto che ogni impianto ha una sua capacità massima, i rendimenti di produzione sono sempre decrescenti, più ottimizzi la produzione meno puoi ottimizzarla, quindi a un certo punto stai sprecando risorse per impegnarti a risparmiarne.
 

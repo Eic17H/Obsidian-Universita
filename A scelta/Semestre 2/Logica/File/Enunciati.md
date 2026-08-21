@@ -2,7 +2,9 @@
 cssclasses:
   - logica
 ---
-# Analisi logica
+Lo stesso argomento: <span class="am">[[Logica proposizionale|AM]]</span>, <span class="alf">[[Logica proposizionale classica|ALF]]</span>
+
+## Analisi logica
 
 Questo argomento l'abbiamo già visto in realtà molto presto, alle elementari. Analisi logica. Ce ne sono due: analisi logica della proposizione, che analizza la singola proposizione, e analisi del periodo, che studia i collegamenti tra proposizioni semplici.
 
@@ -10,7 +12,7 @@ Ovviamente non ripetiamo le elementari. Ci sono dei *falsi amici*, termini che i
 
 Nozione fondamentale: enunciato.
 
-# Enunciati
+## Enunciati
 
 > Una qualsiasi espressione linguistica a proposito della quale abbia senso chiedersi se è vera o se è falsa.
 
@@ -24,7 +26,7 @@ Ci sono enunciati che contengono termini vaghi, molto comuni nel linguaggio natu
 
 Ci sono due categorie di enunciato: semplice e composto.
 
-## Categorie di enunciato
+### Categorie di enunciato
 
 > **Enunciato semplice**: non contiene altri enunciati quando non contiene altri enunciati come sue parti proprie.
 
@@ -45,7 +47,7 @@ Torniamo a noi.
 A noi interessa il livello degli enunciati complessi. Capire se il valore di verità di un enunciato composto dipende da quello degli enunciati da cui è composto, e come. Dobbiamo capire qual è la colla degli enunciati.
 
 In grammatica a scuola, che dicevamo? Usiamo le congiunzioni. Congiunzioni coordinanti, subordinanti, per esempio "e", "o", "se/allora", "quando", "mentre", "perché", "benché", "quantunque", "ma". Sono troppe. Ci limiteremo a studiare cinque congiunzioni, che chiamiamo <span class="alf"><i>[[Logica proposizionale classica|connettivi logici]]</i></span>.
-# Connettivi logici
+## Connettivi logici
 
 * Congiunzione: e
 * Disgiunzione: o
@@ -81,7 +83,7 @@ Associatività. Una congiunzione ha due congiunti, mai tre. Però uno dei congiu
 
 Tornando a Frege, per questo motivo i padri della logica decisero di usare un linguaggio formale, per evitare quest'altro problema, l'ambiguità.
 
-# Principî
+## Principî
 
 I connettivi sono verofunzionali, se non è verofunzionale non è un connettivo. Principio di verofunzionalità.
 
@@ -91,11 +93,11 @@ Questi sono principi indipendenti, possiamo creare logiche con solo uno dei due 
 
 In logica classica, con classico non si intende come in letteratura classica, non c'entrano i greci e i latini, non è logica antica, non studiamo Aristotele :(, semplicemente è la prima logica formale mai esistita, ma è moderna.
 
-# Altro
+## Altro
 
 Richard Montague (*Mòntaghiu*). Fu allievo di Alfred Tarski. Creò una logica al limite tra la logica e la linguistica, o almeno un precursore, molto interessante. America degli anni 50, era omosessuale, fu assassinato in un night club e non fu fatta luce sul caso. Grammatica di Montague, una disciplina.
 
-# Formalizzazione
+## Formalizzazione
 
 Simboli. Inizialmente per abbreviare, poi per eliminare ambiguità e vaghezza.
 
@@ -105,7 +107,7 @@ Con le lettere $p$ e $q$ possiamo indicare degli enunciati, e da lì "$p \lor q$
 
 E anche "$¬ p \lor (p \rightarrow q)$", non piove, o se piove c'è vento. Parentesi, come nell'algebra.
 
-# Ordine delle operazioni
+## Ordine delle operazioni
 
 Ovviamente possiamo, come già visto, usare le parentesi per specificare l'ordine dei connettivi. Lo facciamo anche in algebra, ma in algebra c'è anche un ordine implicito, una convenzione secondo la quale alcuni operatori si applicano prima di altri. "$3 + 2 \cdot \text{-}5$" è "$3 + [2 \cdot (\text{-}5)]$".
 
@@ -117,11 +119,11 @@ Allo stesso modo i connettivi logici hanno una simile convenzione.
 
 Questa convenzione permette a qualunque proposizione scritta in simboli di avere una sola interpretazione che non dipende dal contesto.
 
-# Tavole di verità
+## Tavole di verità
 
 Le tavole di verità descrivono il comportamento dei connettivi logici.
 
-## Negazione
+### Negazione
 
 Se un valore è $\text{vero}$, "piove", allora la sua negazione, "non piove", è $\text{falso}$. Per un valore $\text{falso}$, "c'è il sole", la sua negazione è $\text{vera}$, "non c'è il sole". Indichiamo $\text{falso}$ con $0$ e $\text{vero}$ con $1$, per convenzione.
 
@@ -129,7 +131,7 @@ Se un valore è $\text{vero}$, "piove", allora la sua negazione, "non piove", è
 | --- | ---- |
 | $0$ | $1$  |
 | $1$ | $0$  |
-## Congiunzione
+### Congiunzione
 
 Quando abbiamo due proposizioni, chiamiamole p e q. Avendo due proposizioni, ciascuna con due possibili valori, abbiamo quattro possibili combinazioni.
 
@@ -141,7 +143,7 @@ Quando abbiamo due proposizioni, chiamiamole p e q. Avendo due proposizioni, cia
 | $0$ | $1$ | $0$         |
 | $1$ | $0$ | $0$         |
 | $1$ | $1$ | $0$         |
-## Disgiunzione
+### Disgiunzione
 
 C'è una situazione un po' antipatica. La parola "o" in italiano, come in molte altre lingue, ha due significati: uno inclusivo e uno inclusivo.
 
@@ -156,7 +158,7 @@ In questo corso consideriamo la disgiunzione inclusiva, $\text{vel}$.
 | $1$ | $0$ | $1$        |
 | $1$ | $1$ | $1$        |
 
-## Implicazione
+### Implicazione
 
 Questa è più complicata.
 
@@ -174,11 +176,11 @@ Secondo Paoli, la logica classica è una pessima formalizzazione del linguaggio 
 
 Si bilanciano pregi e difetti. L'eleganza e la semplicità della logica classica hanno come compromesso la differenza dal linguaggio naturale.
 
-## Doppia implicazione
+### Doppia implicazione
 
 Un'implicazione che va in entrambe le direzioni. $p \leftrightarrow q = (p \rightarrow q) \land (q \rightarrow p)$.
 
-## Ridondanza
+### Ridondanza
 
 In realtà 5 connettivi sono troppi. Alcuni connettivi si possono esprimere in termini di altri.
 
@@ -186,7 +188,7 @@ $p \land q = ¬(¬p \lor ¬q)$
 
 Tutti e 5 i connettivi logici, e ogni altra funzione booleana binaria, a partire da un unico connettivo. Questo fu osservato all'inizio del '900 da un americano di nome Sheffer. Inventò un connettivo, indicato con $|$, il Sheffer's stroke; è $\text{vero}$ quando $p$ e $q$ sono $\text{false}$, e permette di ottenere qualunque altro connettivo. Ma è estremamente scomodo.
 
-## Esempio composto
+### Esempio composto
 
 $p \land (¬q \leftrightarrow p \lor q)$. La tabella di verità è quella del connettivo principale, cioè il connettivo che sta fuori da tutte le parentesi, incluse quelle implicite. In questo caso è l'\land.
 
@@ -212,7 +214,7 @@ Wittgenstein, uno dei creatori della tavola di verità. Secondo lui, le tautolog
 
 Un enunciato con almeno un $1$ è soddisfacibile. Un enunciato con almeno uno $0$ è falsificabile. Ogni tautologia è soddisfacibile, ogni contraddizione è falsificabile. Ma non valgono né gli inversi né i conversi. Sono proprietà esistenziali, basta una riga per farle valere.
 
-# Istanza di sostituzione
+## Istanza di sostituzione
 
 $p \lor (q \rightarrow p)$. Un'istanza di sostituzione di questa formula è un'altra formula che posso ottenere a partire da essa prendendo ciascuna sua variabile e sostituendole uniformemente con delle formule, usando la stessa formula per la stessa variabile ciascuna volta. Per esempio $q \land ¬r \lor (p \rightarrow q \land ¬r)$.
 
@@ -225,7 +227,7 @@ Se riduco il numero di righe, le proprietà universali vengono mantenute, quelle
 Esercizio:
 $(p \land q \rightarrow r) \rightarrow (p \rightarrow (q \rightarrow r))$
 
-# Semplificazione dei calcoli
+## Semplificazione dei calcoli
 
 In $p\land q\rightarrow r$, ogni volta che $r$ è $\text{vero}$, non mi importa cosa c'è a sinistra, l'implicazione intera è $\text{vera}$, questo fa comodo facendo la tabella di verità. Stessa cosa se l'antecedente è $\text{falso}$.
 
@@ -245,7 +247,7 @@ Essenzialmente la logica è questa: short circuit. Vedi che non ho riempito tutt
 
 Questa formula è la *conversa* di quella dell'esercizio, perché abbiamo scambiato l'antecedente con la conseguente. Termine preso dalla sillogistica aristotelica.
 
-# L'argomento più noioso di tutto il corso: principali leggi logiche enunciative (tipi di tautologie particolari)
+## L'argomento più noioso di tutto il corso: principali leggi logiche enunciative (tipi di tautologie particolari)
 
 Non ci verrà chiesto di ripetere a memoria questa lista. Però sono tautologie e può essere utile esercitarci e fare i calcoli perché ci vengano tutti $1$.
 
@@ -275,6 +277,6 @@ Augustus de Morgan fu un precursore di Boole, un po' a cavallo tra il sillogismo
 
 Le leggi di Filone e di Crisippo ci definiscono l'implicazione da negazione, disgiunzione e congiunzione. Ma anche viceversa.
 
-# Nozione di formula
+## Nozione di formula
 
 Cos'è questo linguaggio che per ora stavamo utilizzando in maniera molto informale? Con questi simboli con significati che abbiamo capito senza che ci venissero spiegati? È un [[Linguaggio formale]].

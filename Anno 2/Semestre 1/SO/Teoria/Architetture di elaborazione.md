@@ -3,8 +3,9 @@ cssclasses:
   - so
 ---
 Architetture di elaborazione. Partiamo dal basso.
-Cos'è un <span class="blue">processore</span>?  #termine
-Macchina sequenziale che esegue esclusivamente operazioni della propria ISA.
+Cos'è un <span class="blue">processore</span>?
+> <span class="blue"><b>Processore</b></span>: Macchina sequenziale che esegue esclusivamente operazioni della propria ISA.
+
 Le <span class="green">istruzioni</span> sono stringhe di bit che stanno nella memoria, che il processore legge, decodifica ed esegue.
 Le istruzioni eseguite sono legate alla lettura scrittura manipolazione di dati.
 Leggere, manipolare, riscrivere dati. Dal punto di vista del processore, questo è il mondo.
@@ -19,12 +20,12 @@ Ci si arriva, usando altre tecnologie.
 Tramite la tecnologia della compilazione, la rappresentazione in codice C diventa una rappresentazione della stessa funzione in assembly.
 Il programma assemblato non è più generico, ma specifico a quell'ISA.
 Il codice assembly è testo, ancora non lo posso usare. Ora serve l'<span class="blue">assembler</span>.
-L'<span class="blue">assembler</span> associa alle istruzioni assembly le giuste sequenze di bit. #termine 
+> L'<span class="blue"><b>assembler</b></span> associa alle istruzioni assembly le giuste sequenze di bit.
 
 Noi sappiamo che dal C si passa all'ASM e poi quello gira.
 Se vuoi capire cosa fa un sistema operativo devi sapere a cosa serve.
 Impareremo a mappare il codice C al codice ISA.
-<span class="blue">Macchina sequenziale</span>: azioni singole legate ad un clock. #termine 
+> <span class="blue"><b>Macchina sequenziale</b></span>: azioni singole legate ad un clock.
 
 Il <span class="blue">loader</span> carica, al reset, sul <span class="green">program counter</span>, l'indirizzo della prima istruzione.
 Infinite sequenze di cose facili stratificate che diventano difficili.
@@ -38,8 +39,8 @@ Il programma deve gestire anche le <span class="yellow">istruzioni di salto</spa
 Se l'istruzione è <span class="yellow">jump</span>, sovrascrivo PC subito, non aspetto al ciclo dopo, faccio tutto insieme.
 
 Ci sono due categorie dei famiglie di instruction set.
-<span class="orange">RISC</span>: Insieme ridotto di istruzioni (meno istruzioni distinte) #termine 
-<span class="orange">CISC</span>: Insieme complesso di istruzioni (molte istruzioni) #termine 
+> <span class="orange"><b>RISC</b></span>: Insieme ridotto di istruzioni (meno istruzioni distinte)
+> <span class="orange"><b>CISC</b></span>: Insieme complesso di istruzioni (molte istruzioni)
 #SLIDE
 
 Ha vari registri. Il <span class="green">registro</span> `$0` ha sempre valore `0`.
