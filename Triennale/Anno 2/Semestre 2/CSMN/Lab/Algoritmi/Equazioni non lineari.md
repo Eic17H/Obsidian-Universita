@@ -1,0 +1,11 @@
+---
+cssclasses:
+  - csmn
+---
+Teoria: [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Equazioni non lineari|Equazioni non lineari]]
+
+Utilizziamo metodi iterativi per trovare le radici dei sistemi non lineari:
+* [[Bisezione]]
+* [[Newton]]
+* [[Secanti]]
+* [[Corde]]
