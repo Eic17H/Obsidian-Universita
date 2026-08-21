@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 ## Perché usare gli LLM
 * Meno tempo per abbozzare i test;
 * Suggerisce casi positivi e negativi, e quali casi limiti ignorare;

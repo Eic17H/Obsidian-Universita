@@ -2,7 +2,7 @@
 cssclasses:
   - so
 ---
-[[Anno 2/Semestre 1/SO/Lab v2/Socket in C]]
+[[Anno 2/Semestre 1/SO/Lab v2/Socket in C|Socket in C]]
 <span class="rc">[[Berkeley Socket]]</span>
 
 La lezione di ieri ha introdotto i modelli di rete

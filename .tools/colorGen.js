@@ -330,6 +330,8 @@ function generateAllCssClasses() {
     --caret-color: var(--accent);
     --blockquote-border-color: var(--accent);
     --text-selection: var(--accent-inverse);
+    --tag-color: var(--accent);
+    --tag-background: color-mix(in srgb, var(--accent-inverse) 20%, transparent);
 }
 ::spelling-error {
   text-decoration: wavy var(--accent) underline;

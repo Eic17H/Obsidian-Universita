@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 Una **==User Story==** è una breve descrizione di un'interazione tra un utente e il sistema, dal punto di vista dell'utente, scritta in linguaggio naturale. Una storia si concentra su una feature, e ciascuna feature deve avere almeno una storia. Le storie sono scritte dal cliente o dal PO con l'aiuto degli sviluppatori.
 
 Le storie si scrivono su schede A6. Sono indipendenti tra loro. I dev devono stimare quanto ci mettono a realizzarle. Devono essere testabili e non ambigue, ma sono ammessi chiarimenti.

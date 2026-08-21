@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 Lo stesso argomento: <span class="ium">[[Anno 3/Semestre 1/IUM/Teoria/Requisiti|IUM]]</span>
 
 Tradizionalmente, i requisiti si decidono tutti insieme prima della realizzazione del progetto. È un processo lento e costoso. Questo non funziona con le metodologie agili, perché i requisiti possono sorgere e cambiare in qualunque momento, e non sono noti in anticipo né dal cliente né dagli sviluppatori.

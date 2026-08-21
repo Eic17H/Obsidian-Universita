@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 [[Agile]]
 [[XP]]
 [[Scrum]]

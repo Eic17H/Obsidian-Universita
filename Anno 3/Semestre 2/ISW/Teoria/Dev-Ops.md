@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 ## Concetto
 
 È difficile comunicare tra gli sviluppatori, che scrivono software, e operations, chi lo rilascia e lo mantiene in produzione. Nel 2009, Patrick Debois conia il termine *==DevOps==*: integrare e automatizzare il ==dev== e l'==ops== per migliorare e velocizzare lo sviluppo, e soprattutto accorciare il tempo tra una modifica del codice e il suo uso in produzione.

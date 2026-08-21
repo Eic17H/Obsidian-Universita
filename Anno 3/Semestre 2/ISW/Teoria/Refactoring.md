@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 Il refactoring serve per evitare che il [[Debito tecnico]] annulli il valore monetario che il cliente trae dal prodotto.
 
 > *==**Refactoring**== is the process of changing a software system in such a way that it does not alter the external behavior of the code yet improves its internal structure*

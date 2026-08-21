@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 ## Concetto
 
 Quando si prende una decisione rapida ma meno pensata a un certo punto dello sviluppo, le conseguenze potrebbero crescere e diventare difficili da gestire più avanti. Questo è detto ==debito tecnico==, o *technical debt* (TD).

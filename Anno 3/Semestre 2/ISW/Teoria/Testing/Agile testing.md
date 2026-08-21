@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 Vediamo delle pratiche tipiche dell'XP, usate però da tutti gli sviluppatori agili.
 Si basano su certi princìpi:
 * Automatizzare tutti i test;
