@@ -3,7 +3,7 @@ cssclasses: pr2
 ---
 Allora, le stringhe sono immutabili. Una volta assegnata, non si può più cambiare. Se devi fare una serie di trasformazioni, devi fare una copia per trasformazione di ciascuna stringa che devi trasformare. E quelle restano in memoria finché non le toglie il garbage collector. Se devi fare 100 metodi poi, è difficile tenere traccia di ciò che stai facendo. Entrano in gioco le stream.
 
-Una pipeline ha una sorgente (al 99% una collection, altrimenti una funzione generatrice), una sequenza di operazioni intermedie fatte tramite lambda, e un'operazione terminale.
+Una pipeline ha una sorgente (al 99% una collection, altrimenti una funzione generatrice), una sequenza di operazioni intermedie fatte tramite [[Espressioni lambda|lambda]], e un'operazione terminale.
 
 Il metodo `.stream()` ce l'hanno tutte le collections.
 

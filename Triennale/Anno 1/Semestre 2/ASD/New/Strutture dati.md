@@ -2,6 +2,8 @@
 cssclasses:
   - asd
 ---
+Vediamo strutture dati implementate come [[struct]] in C.
+
 * [[Triennale/Anno 1/Semestre 2/ASD/New/Liste|Liste]]
 	* [[Liste ordinate]]
 * [[Triennale/Anno 1/Semestre 2/ASD/New/Grafi|Grafi]]

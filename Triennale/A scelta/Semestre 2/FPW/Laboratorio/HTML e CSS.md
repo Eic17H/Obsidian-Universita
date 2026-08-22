@@ -78,7 +78,7 @@ Introduciamo le liste.
         * `<ul>`, unordered list, a puntini
             * Con dentro `<li>`, list item
         * `<ol>`, ordered list, a numeri
-*Nota come per usare un tag `<a>` devi metterci DENTRO del testo, altrimenti non compare
+* Nota come per usare un tag `<a>` devi metterci DENTRO del testo, altrimenti non compare
     * Per capirci, `<a href="ilmiosito.web">qua dentro</a>`
 * Per correttezza specifichiamo che una navbar va sempre dentro un tag `<nav></nav>`
     * Visivamente è uguale ma per correttezza si fa

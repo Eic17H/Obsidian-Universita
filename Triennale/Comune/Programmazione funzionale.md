@@ -1,0 +1,1 @@
+Ha le sue radici nel <span class="lip">[[λ-calcolo]]</span>. Questo paradigma è alla base dell'<span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/OCaml/Funzioni|OCaml]]</span>, mentre il <span class="pr2">[[Espressioni lambda|Java]]</span>, il <span class="fpw">[[Arrow function|JavaScript]]</span> e il Python hanno implementato modi per utilizzarlo.

@@ -1,5 +1,6 @@
-# Architettura client-server e internet
-
+---
+cssclasses: isw
+---
 Ci sono dei client che sono entità hardware-software che chiedono servizi a server, altre entità hw-sw, che li forniscono. Un server può a sua volta chiedere un servizio a un altro server. Internet è una versione moderna di questa architettura, dove i client sono i browser e app.
 
 L'informazione tra client e server, che fluisce data la richiesta, è tipicamente scambiata tramite xml o json, linguaggi leggibili anche da esseri umani, relativamente. Suoni e immagini non viaggiano con codifica nativa ma vengono appiattiti a testo.
@@ -19,7 +20,5 @@ ESB: enterprise service bus. È middleware. Hardware esisteva già come parola, 
 MULE è open source e molto usato. La sua architettura di certo non ce la chiede all'esame.
 
 I programmi monoliti sono programmi che fanno tutto senza appoggiarsi ad altri programmi, anche se magari sono divisi in più moduli.
-
-Interruzione: tirocinio extracurriculare, minimo 400€ al mese prendi, talvolta anche 800-1000, non *puoi* fare più dell'80% delle ore normali di lavoro. Recruiting day, aziende che chiedono all'uni di mandare tirocinanti. Segui il job placement nei loro canali (eg instagram). 26 novembre career day, 40 aziende colloqui non-stop, ti candidi tramite il portale alma laurea, ma ci sono anche colloqui open senza candidatura (o con candidatura rifiutata). progetto.occupabilita@unica.it. Il periodo di decadimento (half life) delle competenze informatiche è di circa 2 anni, cioè tra 2 anni avrai la metà delle competenze che hai ora, perché la tecnologia sarà cambiata. Quindi ciò che serve è la capacità di adattarsi ai framework e alle tecnologie future, mentalità critica.
 
 Per l'esistenza di internet sono fondamentali i cavi sottomarini. L'Iran ha dei droni sottomarini. Potrebbero fermare internet in qualunque momento. L'Iran, la Cina e la Russia hanno missili ipersonici che possono schivare i missili antimissile, l'America non ce li ha, l'Europa neanche ci prova. Questo è perché l'utilizzo di CAD nella società occidentale aumenta molto la produttività su problemi standard, ma rallenta quelli nuovi. I missili normali vanno a velocità ipersonica ma vanno a parabola, quindi è facile intercettarli, i missili ipersonici possono manovrare. Il CAD ti ostacola la creazione di queste cose nuove, parere di una persona coltissima di cui non ho sentito il nome. La matematica pura è fondamentale, serve per imparare a pensare da zero.

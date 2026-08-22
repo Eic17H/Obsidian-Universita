@@ -6,11 +6,11 @@ cssclasses:
 * [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Algoritmi|Algoritmi]]
 * [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Tipi|Tipi]]
 * [[Subroutine e librerie]]
-* [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Scope]]
+* [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Scope|Scope]]
 * [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Ricorsione|Ricorsione]]
 * [[Inferno]]
 * [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Complessità|Complessità]]
-* [[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|I pochi appunti di laboratorio che lascio per completezza]]
+* [[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|Laboratorio]] (WIP)
 
 ## Introduzione
 

@@ -38,7 +38,7 @@ Vediamo un esempio.
 
 Per implementare il peering, due AS si scambiano le [[Tabella di routing|tabelle di routing]]. Il peering però non è transitivo, perché due peer devono conoscere la tabella di routing l'uno dell'altro.
 
-Il BGP è di tipo [[Distance vector]], ma a differenza degli altri protocolli dello stesso tipo non tiene traccia solo del costo di un cammino, ma memorizza l'intero cammino ([[Path vector protocol]]). Il cammino ha due informazioni: qual è il prossimo router da cui si deve saltare di AS, e la sequenza (invertita) di AS attraversati (AS path).
+Il BGP è di tipo [[distance vector]], ma a differenza degli altri protocolli dello stesso tipo non tiene traccia solo del costo di un cammino, ma memorizza l'intero cammino ([[Path vector protocol]]). Il cammino ha due informazioni: qual è il prossimo router da cui si deve saltare di AS, e la sequenza (invertita) di AS attraversati (AS path).
 
 Coppie di router BGP comunicano tramite connessioni [[TCP]] per comunicazioni affidabili.
 

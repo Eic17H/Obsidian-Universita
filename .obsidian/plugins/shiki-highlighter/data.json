@@ -1,7 +1,7 @@
 {
   "disabledLanguages": [],
   "customThemeFolder": "",
-  "customLanguageFolder": "",
+  "customLanguageFolder": ".obsidian/languages",
   "darkTheme": "obsidian-theme",
   "lightTheme": "obsidian-theme",
   "preferThemeColors": true,

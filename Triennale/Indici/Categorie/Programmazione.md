@@ -36,7 +36,7 @@
 
 [[Triennale/Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Selection Sort]]
 [[Triennale/Anno 3/Semestre 2/ISW/Lab/Strutture dati|Strutture dati]]
-[[Programmazione - Cenni storici]]
+[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Storia]]
 [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Ricorsione]]
 [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Scope]]
 [[Subroutine e librerie]]
@@ -94,10 +94,9 @@
 [[Vue]]
 [[HTML e CSS]]
 [[Express]]
-[[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL/SQL]]
+[[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL]]
 [[CSS]]
 [[HTML e form]]
-[[HTTP]]
 [[JavaScript]]
 [[Suddivisione di una pagina HTML]]
 
@@ -233,3 +232,12 @@ Algoritmi:
 [[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket]]
 [[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket in C]]
 [[Thread]]
+
+[[Ancora CSS]]
+[[Vue]]
+[[Ancora server]]
+[[Arrow function]]
+[[Express]]
+[[HTML e CSS]]
+[[Post e Get]]
+[[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL]]

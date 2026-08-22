@@ -2,6 +2,8 @@
 cssclasses:
   - bd
 ---
+Lo stesso argomento: <span class="asd">[[Hash]]</span>
+
 Hai le chiavi `key`, hai una funzione `h()` che data una chiave ne restituisce l'hash. Hai un indice hash in cui all'indice `h(key)`si trova un puntatore al punto in cui è memorizzato il dato con indice `key`.
 
 Le operazioni che si svolgono sono:

@@ -24,3 +24,5 @@ Si usa MatLab. Pipeline di elaborazione delle immagini in ambito industriale, bi
 Lingua: Italiano
 
 Retreival-Augmented Generation, LLM. Python.
+
+Ha orari che si overlappano con GA.

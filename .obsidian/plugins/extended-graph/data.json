@@ -175,7 +175,7 @@
   "additionalProperties": {},
   "backupGraphOptions": {
     "collapse-filter": false,
-    "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\"SO/Lab v1/\"",
+    "search": "-file:Indice -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\"SO/Lab v1/\"",
     "showTags": false,
     "showAttachments": false,
     "hideUnresolved": true,
@@ -354,7 +354,7 @@
     "repelStrength": 11.1403118040089,
     "linkStrength": 1,
     "linkDistance": 500,
-    "scale": 0.12286654214411015,
+    "scale": 0.22769209064247314,
     "close": false
   },
   "openInNewTab": true,
@@ -527,7 +527,7 @@
             }
           }
         ],
-        "search": "-file:Indice -path:.canvas -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\"SO/Lab v1/\"",
+        "search": "-file:Indice -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\"SO/Lab v1/\"",
         "hideUnresolved": true,
         "showAttachments": false,
         "showOrphans": false,
@@ -595,22 +595,36 @@
   "shapeQueries": {
     "circle": {
       "combinationLogic": "AND",
-      "index": 0,
-      "rules": []
+      "index": 2,
+      "rules": [
+        {
+          "source": "folder",
+          "property": "",
+          "value": "Triennale",
+          "logic": "contains"
+        }
+      ]
     },
     "square": {
       "combinationLogic": "AND",
-      "index": 1,
-      "rules": []
+      "index": 3,
+      "rules": [
+        {
+          "source": "folder",
+          "property": "",
+          "value": "Magistrale",
+          "logic": "contains"
+        }
+      ]
     },
     "triangle": {
       "combinationLogic": "AND",
-      "index": 2,
+      "index": 4,
       "rules": []
     },
     "diamond": {
       "combinationLogic": "OR",
-      "index": 3,
+      "index": 1,
       "rules": [
         {
           "source": "folder",
@@ -628,12 +642,12 @@
     },
     "pentagon": {
       "combinationLogic": "AND",
-      "index": 4,
+      "index": 5,
       "rules": []
     },
     "hexagon": {
       "combinationLogic": "OR",
-      "index": 5,
+      "index": 0,
       "rules": [
         {
           "source": "folder",
@@ -772,25 +786,25 @@
   "resetAfterChanges": false,
   "collapsedSettings": {
     "automation": false,
-    "tags": true,
-    "properties": true,
-    "links": true,
-    "arrows": true,
-    "folders": true,
-    "images": true,
-    "icons": true,
-    "focus": true,
+    "tags": false,
+    "properties": false,
+    "links": false,
+    "arrows": false,
+    "folders": false,
+    "images": false,
+    "icons": false,
+    "focus": false,
     "shapes": false,
-    "layers": true,
-    "elements-stats": true,
+    "layers": false,
+    "elements-stats": false,
     "names": true,
-    "zoom": true,
-    "local-graph": true,
+    "zoom": false,
+    "local-graph": false,
     "display": false,
     "filter": true,
-    "inputs": true,
-    "performances": true,
-    "beta": true
+    "inputs": false,
+    "performances": false,
+    "beta": false
   },
   "selectionMode": "replace",
   "exportSVGOptions": {

@@ -1,4 +1,4 @@
-In Python non esistono tipi primitivi, tutto è una classe.
+In Python non esistono tipi primitivi, tutto è una [[OOP|classe]].
 
 * Interi `int`: la lunghezza in bit è arbitraria
 * Reali `float`: lo sai già

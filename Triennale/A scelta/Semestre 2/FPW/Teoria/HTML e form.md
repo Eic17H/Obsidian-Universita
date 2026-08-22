@@ -2,7 +2,7 @@
 cssclasses:
   - fpw
 ---
-È scontato che il server invii dati al client, ma è anche possibile che il client invii dati al server. Il metodo più semplice per farlo è il tag `<form>` in HTML, insieme ad altri tag quali `<input>` e `<button>`. `<input>` è un tag autochiudente con un attributo, `type`, che permette di selezionare in che modo vegono immessi i dati.
+È scontato che il server invii dati al client, ma è anche possibile che il client invii dati al server. Il metodo più semplice per farlo è il tag `<form>` in [[HTML e CSS|HTML]], insieme ad altri tag quali `<input>` e `<button>`. `<input>` è un tag autochiudente con un attributo, `type`, che permette di selezionare in che modo vegono immessi i dati.
 
 ## Testo
 

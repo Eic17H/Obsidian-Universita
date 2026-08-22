@@ -4,24 +4,63 @@
     "type": "split",
     "children": [
       {
-        "id": "dbcabc1505f5027b",
+        "id": "78a9e51060378b83",
         "type": "tabs",
         "children": [
           {
-            "id": "d9ec42b2d3c2f692",
+            "id": "2cb11f8bf02231bf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Magistrale/Anno 1/Semestre 1/Possibili a scelta.md",
+                "file": "Triennale/A scelta/Semestre 2/FPW/Laboratorio/Ancora CSS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Possibili a scelta"
+              "title": "Ancora CSS"
+            }
+          },
+          {
+            "id": "3300067ff7f00de4",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "10186c1f0171b1a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Triennale/Indici/Linguaggi di programmazione/OCaml.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "OCaml"
+            }
+          },
+          {
+            "id": "7b71c74252d8d46c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Triennale/Anno 1/Semestre 2/ASD/New/Dijkstra.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dijkstra"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -96,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Anno 1/Semestre 1/PR1/Modulo I/Tipi.md",
+                "file": "Triennale/Anno 1/Semestre 2/ASD/New/Dijkstra.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +182,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Magistrale/Anno 1/Semestre 1/Possibili a scelta.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -152,8 +190,7 @@
               "title": "Outline"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -161,6 +198,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "webpage-html-export:Export as HTML": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -168,51 +206,51 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "webpage-html-export:Export as HTML": false,
       "edge-tts:Read note aloud": false,
       "improved-random-note:Open improved random note": false
     }
   },
-  "active": "d9ec42b2d3c2f692",
+  "active": "7b71c74252d8d46c",
   "lastOpenFiles": [
-    "Magistrale/Anno 1/Semestre 1/Possibili a scelta.md",
-    "Magistrale/Anno 1/Semestre 1/Decision Science/Info di base.md",
-    "Magistrale/Anno 1/Semestre 1/Data Mining/Info di base.md",
+    "Triennale/Anno 1/Semestre 2/ASD/New/Dijkstra.md",
+    "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Programmazione 1 - Modulo I.md",
+    "Triennale/Anno 3/Semestre 1/LiP/Raw/20251112.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Jacobi.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Gauss-Seidel.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Vettori.md",
+    "Triennale/A scelta/Semestre 2/FPW/Teoria.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Android Studio/XML.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Lab.md",
+    "Triennale/A scelta/Semestre 2/Logica/Moduli/Modulo II.md",
+    "Triennale/A scelta/Semestre 2/Logica/Moduli/Modulo I.md",
+    "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Storia.md",
+    "Triennale/A scelta/Semestre 2/Logica/Moduli/Introduzione.md",
+    "Triennale/A scelta/Semestre 2/Logica/File/Ragionamento ex hypothesi/Alfred Tarski.md",
+    "Triennale/A scelta/Semestre 2/Logica/Esercitazioni/20260401.md",
+    "Triennale/A scelta/Semestre 2/Logica/File/Logiche rilevanti.md",
+    "Triennale/Anno 1/Semestre 1/AM/File/Relazioni e funzioni/Discontinuità.md",
+    "Triennale/A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
+    "Triennale/Anno 3/Semestre 1/IUM/Teoria/Test.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Teoria/Memoria.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Teoria/Architettura dell'Informazione.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Teoria/IUM-20251117.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Teoria/Errori.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Equazioni non lineari/Metodi iterativi.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Esercitazioni/Secondo parziale.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Lab new/Personas.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Lab new/Requisiti.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Relazione.pdf",
+    "Triennale/Anno 2/Semestre 1/DeM/Teoria",
+    "Triennale/Anno 2/Semestre 1/DeM/Tesine",
+    "Triennale/Anno 2/Semestre 1/DeM",
+    "Triennale/Anno 3/Semestre 2/ISW/Cose nuove",
+    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Untitled",
     "Magistrale/Indici/Linguaggi di programmazione",
     "Magistrale/Indici/Nuova cartella",
-    "Magistrale/Anno 1/Semestre 2/Possibili a scelta.md",
-    "Indice.md",
     "Magistrale/Anno 2/Semestre 2/Blockchain & Smart Contracts",
     "Magistrale/Anno 2/Semestre 1/Embedded Systems for the Internet of Things",
-    "Magistrale/Anno 2/Semestre 1/A scelta",
-    "Magistrale/Anno 2/Semestre 1/Cloud Infrastructures & Security",
-    "Magistrale/Anno 2/Semestre 1/Cryptography",
-    "Magistrale/Anno 1/Semestre 2/A scelta",
-    "Magistrale/Anno 1/Semestre 1/A scelta 2",
-    "Magistrale/Anno 1/Semestre 1/A scelta 1",
-    "Magistrale/Anno 1/Semestre 1/Dat.md",
     "Magistrale/Anno 2/Untitled.canvas",
-    "README.md",
-    "Altro/Come spiegare ai parenti cosa studi.md",
-    "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Tipi.md",
     "Triennale/Immagini/non come ma cosa v3.png",
-    "Altro/Filtri per il grafo.md",
-    "Triennale/Untitled 2.md",
-    "Untitled.md",
-    "Untitled 1.md",
-    "Triennale/Indici/Categorie/Logica.md",
-    "Triennale/A scelta/Semestre 2/Logica/File/Deduzione Naturale.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/Bash.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/C.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/Cenni storici.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/Processi e job.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/Processi.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/Linux.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/GCC.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket.md",
-    "Triennale/Indici/Categorie/Programmazione.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/Input, output e pipe.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab v2/File.md",
     "Triennale/Immagini/Pasted image 20260820230432.png",
     "Triennale/Immagini/Pasted image 20260820230420.png",
     "Triennale/Immagini/Pasted image 20260820230407.png",
@@ -222,7 +260,6 @@
     "Triennale/Immagini/Pasted image 20260820210543.png",
     "Triennale/Immagini/Pasted image 20260820210456.png",
     "Triennale/Immagini/Pasted image 20260820210432.png",
-    "Triennale/A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
     "Untitled.canvas"
   ]
 }

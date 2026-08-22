@@ -1,10 +1,10 @@
 ---
 cssclasses: alf
 ---
-Una cosa che non avevo capito finché non l'ho trovata nell'esame è fold_left quindi te lo dico in caso
+Una cosa che non avevo capito finché non l'ho trovata nell'esame è `fold_left`.
 Perché pensavo funzionasse in modo completamente diverso da come funziona
 
-Prende una funzione, un valore e una lista.
+Prende una [[Triennale/Anno 2/Semestre 1/ALF/OCaml/Funzioni|funzione]], un valore e una lista.
 Fai che il valore è di tipo $V$ e la lista è di tipo $L$.
 La funzione deve prendere un $V$ e un $L$, e restituire un $V$.
 Il $V$ che restituisce sarà il valore della volta dopo che lo applica.

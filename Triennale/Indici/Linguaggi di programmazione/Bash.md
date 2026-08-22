@@ -6,4 +6,4 @@ icon: Bash.png
 [[Input, output e pipe]]
 [[Triennale/Anno 2/Semestre 1/SO/Lab v2/Regex]]
 
-![[Bash.png]]
+#hub

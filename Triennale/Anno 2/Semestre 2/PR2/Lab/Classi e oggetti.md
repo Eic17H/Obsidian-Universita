@@ -1,6 +1,8 @@
 ---
 cssclasses: pr2
 ---
+Le classi e gli oggetti sono il concetto alla base della [[OOP]].
+
 ## Creazione di una classe
 
 Creiamo il file `Monitor.java`.

@@ -2,6 +2,8 @@
 cssclasses:
   - fpw
 ---
+Vue è un framework di [[JavaScript|JavaScript]].
+
 ## Installazione
 
 Installiamo tutti node.js, fondamentale per Vue.

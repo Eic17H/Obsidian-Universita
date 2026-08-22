@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 Ci sono diversi metodi "diretti" per risolvere i sistemi lineari, e quale si usa dipende dalla conformazione della matrice:
 * [[Diagonali]]
 * [[Ortogonali]]

@@ -3,9 +3,10 @@ cssclasses: am
 ---
 Lo stesso argomento: <span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/File/Funzioni|ALF]]</span>
 
-[[Discontinuità]]
-[[Triennale/Anno 1/Semestre 1/AM/File/Relazioni e funzioni/Ricorsione]]
-[[Equazioni]]
+Approfondimenti: 
+* [[Discontinuità|Discontinuità]]
+* [[Triennale/Anno 1/Semestre 1/AM/File/Relazioni e funzioni/Ricorsione|Ricorsione]]
+* [[Equazioni|Equazioni]]
 
 ## Relazioni
 

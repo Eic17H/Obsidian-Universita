@@ -9,6 +9,7 @@ cssclasses: rc
 [[BGP]]
 [[CIDR]]
 [[IPv4]]
+[[QoS]]
 [[IPv6]]
 [[Link State Routing]]
 [[NAT]]
@@ -39,7 +40,7 @@ cssclasses: rc
 [[Boh]]
 [[Protocolli di rete]]
 [[Timer]]
-[[ACK cumulativi]]
+[[Nagle e Clark]]
 [[Algoritmo di Nagle]]
 [[Berkeley Socket]]
 [[Buffer di trasporto]]
@@ -58,5 +59,8 @@ cssclasses: rc
 [[Stub]]
 
 [[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket]]
+[[Architettura client-server e internet]]
+[[Scomposizione]]
+[[HTTP]]
 
 #hub

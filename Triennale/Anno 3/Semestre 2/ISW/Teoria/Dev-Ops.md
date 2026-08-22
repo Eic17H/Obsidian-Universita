@@ -1,6 +1,22 @@
 ---
 cssclasses: isw
 ---
+## Dalla lezione
+
+Metodologia di ISW che nasce perché è difficile comunicare tra dev (chi scrive il software) e ops (chi lo rilascia e lo mantiene). Termine coniato da Patrick Debois nel 2009. Integra e automatizza il dev e l'ops per accelerare lo sviluppo; si intende, il lasso di tempo tra la modifica del codice e la messa in produzione.
+
+Operazioni:
+* Hosting: preparazione server, servizi, reti
+* Deploy: installazione
+* Monitoring & alerting: log, metriche eccetera
+* Logging: registrazione e analisi degli eventi
+* Security: gestione degli accessi, firewall, backup
+* Scaling: come si adatta il sistema all'aumento del carico
+* Gestione incidenti: diagnosi e risoluzione rapita di errori e anomalie
+* Business continuity: fare sì che il sistema non si fermi mai, con ridondanza, failover e disaster recovery
+
+Sta leggendo le slide
+
 ## Concetto
 
 È difficile comunicare tra gli sviluppatori, che scrivono software, e operations, chi lo rilascia e lo mantiene in produzione. Nel 2009, Patrick Debois conia il termine *==DevOps==*: integrare e automatizzare il ==dev== e l'==ops== per migliorare e velocizzare lo sviluppo, e soprattutto accorciare il tempo tra una modifica del codice e il suo uso in produzione.

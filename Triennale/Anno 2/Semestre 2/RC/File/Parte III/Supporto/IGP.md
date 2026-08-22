@@ -7,7 +7,7 @@ Non devono fare altro che spostare i pacchetti nel modo più efficiente possibil
 
 ![[Pasted image 20260820210456.png]]
 
-## Routing all’interno dell’ internetworking (OSPF)
+## Routing all’interno dell'internetworking ([[OSPF]])
 Un AS si puo’ suddividere in piu’ Aree.
 Un AS puo’ avere un Area dorsale detta anche Area 0.
 OSPF distingue:

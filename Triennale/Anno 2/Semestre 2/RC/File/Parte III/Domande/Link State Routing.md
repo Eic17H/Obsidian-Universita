@@ -29,6 +29,7 @@ Abbiamo questa sottorete:
 Questi sono i pacchetti che contengono lo stato dei collegamenti in quella sottorete:
 ![[Pasted image 20260820214017.png]]
 
+A questo punto, $A$ possiede solo il proprio.
 ### Inviare
 
 Tramite flooding.

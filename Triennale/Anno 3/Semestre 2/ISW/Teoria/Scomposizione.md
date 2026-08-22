@@ -1,3 +1,6 @@
+---
+cssclasses: isw
+---
 # SOA e MS
 
 Ci sono due approcci per scomporre un'applicazione monolitica in diversi moduli: SOA e microservizi. Vedi #slide.

@@ -2,7 +2,7 @@
 cssclasses:
   - bd
 ---
-Lo stesso argomento: [[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL/SQL|FPW]]
+Lo stesso argomento: [[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL|FPW]]
 
 SQL. Di nuovo. Sì da FPW.
 

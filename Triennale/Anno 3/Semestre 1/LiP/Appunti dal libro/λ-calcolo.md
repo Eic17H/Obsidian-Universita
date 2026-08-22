@@ -6,6 +6,8 @@ cssclasses:
 
 Il lambda-calcolo fu introdotto da Alonzo Church negli anni '30 come parte della sua ricerca delle fondamenta della matematica. Tra il 1936 e il 1940 trovò una formulazione <span class="logica">[[Insieme di formule inconsistente|logicamente consistente]]</span> e la documentò.
 
+Si è poi evoluto nella [[programmazione funzionale]].
+
 ### Spiegazione intuitiva
 
 Il ==lambda-calcolo== è un modo per scrivere funzioni. Per esempio: $$f = λx.x+1$$ Questo è equivalente a: $$f(x) = x+1$$Per applicare una funzione, come $f(1)$, si scrive $f\ 1$, un po' come in OCaml scriveresti `f 1`. Così come in OCaml, nel lambda-calcolo tutto è una funzione. Quando scriviamo $f\ 1$, prendiamo la "formula" di $f$, la parte a destra del $.$, e scriviamo $1$ al posto di ogni $x$.

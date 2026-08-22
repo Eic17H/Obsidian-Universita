@@ -130,9 +130,9 @@ E il ragionamento che ti serve per arrivarci da solo.
 
 ```C
 if(x==3){
-    a++
+    a++;
 }else{
-    b++
+    b++;
 }
 ```
 
@@ -164,9 +164,9 @@ fine:
   
 ```C
 if(x>3){
-    a++
+    a++;
 }else{
-    b++
+    b++;
 }
 ```
 
@@ -204,7 +204,7 @@ Se va al ramo vero, non raggiungerà mai `GOTO falso`
 
 ```C
 while(i<5){
-	i++
+	i++;
 }
 ```
 

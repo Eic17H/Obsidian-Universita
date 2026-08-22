@@ -1,5 +1,6 @@
 ---
-cssclasses: rc
+cssclasses:
+  - rc
 ---
 Average queue length, lunghezza media coda. Utilizzato nella [[RED]].
 
@@ -8,4 +9,4 @@ I router RED usano un filtro passa-basso (low-pass filter) per il calcolo dell'A
 È una media dinamica pesata esponenziale (EWMA - Exponential Weighted
 Moving Average):$$avg' = (1-w_q)\cdot avg+w_qq$$Dove il peso $w_q$ è una costante del tempo.
 
-OH MADONNA QUA C'è UN BEL PO' DA DIRE, pagino 172, questa parte è assurda.
+OH MADONNA QUA C'è UN BEL PO' DA DIRE, pagina 172, questa parte è assurda.

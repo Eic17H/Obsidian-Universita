@@ -8,7 +8,7 @@ cssclasses:
 	* [[HTML e CSS|Prima lezione]]
 	* Da ordinare
 * **SQL**
-	* [[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL/SQL|Introduzione]]
+	* [[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL|Introduzione]]
 * **Vue**
 	* [[Vue|Introduzione]]
 * **Express**

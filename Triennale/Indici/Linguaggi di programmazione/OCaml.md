@@ -10,4 +10,6 @@ icon: OCaml.png
 * <span class="alf">[[Pattern matching]]</span>
 * <span class="alf">[[Fold left]]</span>
 * <span class="lip">[[Triennale/Anno 3/Semestre 1/LiP/Progetto/Progetto|Progetto di LiP]]</span>
+
+Vedi anche esercizi che ho fatto [per ALF](https://github.com/Eic17H/ocaml-challenge) e [per LiP](https://github.com/Eic17H/lip-ocaml).
 #hub 

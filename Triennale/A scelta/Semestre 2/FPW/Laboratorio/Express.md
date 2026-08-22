@@ -2,7 +2,7 @@
 cssclasses:
   - fpw
 ---
-Ebbene sì, oggi creiamo un server che collegheremo al sito e al database che abbiamo fatto nelle lezioni precedenti.
+Ebbene sì, oggi creiamo un server [[HTTP]] che collegheremo al sito e al database che abbiamo fatto nelle lezioni precedenti.
 
 ## Installazione dei tool
 
@@ -87,16 +87,16 @@ Ricapitolando, abbiamo una cartella con un nome qualunque, chiamiamola la root d
 
 Vediamo la sintassi base di JS e la Composition API. Per Vue invece useremo la Option API. Cambia poco. (L'ha detto in modo incomprensibile).
 
-```
+```JS
 const express = require('express');
 const app = express();
 ```
 
 Stiamo richiedendo la presenza di Express, e istanziando Express.
 
-Ogni server si connette a una determinata porta, di default è a caso. Noi usiamo la 3000. Quindi mettiamo il valore in una costante, e diciamo all'app di ascoltare la porta 3000, mettendo poi un'arrow function per farle sapere cosa fare una volta connesso.
+Ogni server si connette a una determinata porta, di default è a caso. Noi usiamo la 3000. Quindi mettiamo il valore in una costante, e diciamo all'app di ascoltare la porta 3000, mettendo poi un'[[arrow function]] per farle sapere cosa fare una volta connesso.
 
-```
+```JS
 const port = 3000;
 app.listen(port, () => console.log(`app listening on port ${port}`));
 ```

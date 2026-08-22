@@ -1,0 +1,1 @@
+Tramite la regressione lineare si stima il valore atteso di una variabile $Y$, dipendente dai valori di $n$ variabili indipendenti $X_0,\ldots,X_n$, dati i valori di queste variabili. Ogni variabile ha un coefficiente, ed è presente un'intercetta, la formula è così:$$Y=c+β_0\cdot X_0+\ldots+β_n\cdot X_n$$
