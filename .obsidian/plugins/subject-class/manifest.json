@@ -1,0 +1,9 @@
+{
+	"id": "subject-class",
+	"name": "Subject Class",
+	"version": "1.0.0",
+	"minAppVersion": "1.5.0",
+	"description": "Adds a CSS class based on the subject directory of the active file.",
+	"author": "ChatGPT",
+	"isDesktopOnly": false
+}
