@@ -4,7 +4,7 @@ cssclasses:
 ---
 ## Indice
 
-* [[Triennale/Anno 1/Semestre 2/ASD/New/Strutture dati]]
+* [[Triennale/Anno 1/Semestre 2/ASD/New/Strutture dati|Strutture dati]]
 * [[Ordinamento|Algoritmi di ordinamento]]
 * [[Triennale/Anno 1/Semestre 2/ASD/New/Algoritmi|Altri algoritmi]]
 * [[Triennale/Anno 1/Semestre 2/ASD/New/Complessità|Complessità]]

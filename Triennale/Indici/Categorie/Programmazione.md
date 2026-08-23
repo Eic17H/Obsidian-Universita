@@ -1,78 +1,178 @@
-[[Triennale/Indici/Linguaggi di programmazione/C]] [[Triennale/Indici/Linguaggi di programmazione/Python|Python]] [[Triennale/Indici/Linguaggi di programmazione/OCaml|OCaml]] [[MatLab]] [[Java]] [[Triennale/Indici/Linguaggi di programmazione/Bash|Bash]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Bash]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/File]]
-[[Input, output e pipe]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Regex]]
-[[JavaScript]][[Vue]][[Triennale/Anno 3/Semestre 2/ISW/Lab/Python]]
-[[Triennale/Anno 2/Semestre 2/PR2/Teoria/Interfacce]]
-[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/File|File]]
-* [[Triennale/Anno 2/Semestre 1/ALF/OCaml/Tipi|Tipi]]
-* [[Triennale/Anno 2/Semestre 1/ALF/OCaml/Funzioni|Funzioni]]
-* [[if then else]]
-* [[Pattern matching]]
-* [[Fold left]]
-#hub
-[[Processi, thread e job]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Complessità|Complessità]]
-[[Liste ordinate]]
-[[Forma canonica]]
-[[Lagrange]]
-[[Fold left]]
-* [[Introduzione a Java]]
-* [[Classi e oggetti]]
-* [[Ereditarietà]]
-	* [[Override|Override]]
-	* [[Classi astratte]]
-	* [[Triennale/Anno 2/Semestre 2/PR2/Lab/Interfacce]]
-* [[Static]]
-* [[Triennale/Anno 2/Semestre 2/PR2/Lab/Eccezioni]]
-* [[Varargs]]
-* [[Inline]]
-	* [[Classi anonime]]
-	* [[Espressioni lambda]]
-* [[Stream]]
-* [[Classi innestate]]
-* [[Static]]
+[[Triennale/Indici/Linguaggi di programmazione/C|C]] [[Triennale/Indici/Linguaggi di programmazione/Python|Python]] [[Triennale/Indici/Linguaggi di programmazione/OCaml|OCaml]] [[MatLab]] [[Java]] [[Triennale/Indici/Linguaggi di programmazione/Bash|Bash]] #hub
 
-[[Triennale/Anno 1/Semestre 2/ASD/Modulo II/Algoritmi/Selection Sort]]
-[[Triennale/Anno 3/Semestre 2/ISW/Lab/Strutture dati|Strutture dati]]
-[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Storia]]
-[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Ricorsione]]
-[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Scope]]
-[[Subroutine e librerie]]
-[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Complessità]]
-[[Inferno]]
-[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Algoritmi]]
-[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Tipi]]
-[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab]]
-[[8088]]
-[[IJVM]]
-[[Triennale/Anno 2/Semestre 1/ALF/File/OCaml]]
+## Indice carino forse
+
+### Per principianti
+* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Storia|Storia]]</span>
+* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Algoritmi|Algoritmi]]</span>
+* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Tipi|Tipi]]</span>
+* <span class="pr1">[[Subroutine e librerie]]</span>
+* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Scope|Scope]]</span>
+* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Ricorsione|Ricorsione]]</span>
+* <span class="pr1">[[Inferno]]</span>
+* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Complessità|Complessità]]</span>
+### Applicazione delle basi al C
+* <span class="pr1">[[Introduzione al C]]</span>
+* <span class="pr1">[[Tipi primitivi]]</span>
+* <span class="pr1">[[Input e output]]</span>
+* <span class="pr1">[[Operatori]]</span>
+* <span class="pr1">[[Cast]]</span>
+* <span class="pr1">[[Selezione, iterazione e salto]]</span>
+* <span class="pr1">[[Librerie e macro]]</span>
+* <span class="pr1">[[Leggibilità]]</span>
+* <span class="pr1">[[Random]]</span>
+* <span class="pr1">[[Array]]</span>
+* <span class="pr1">[[Definizione di tipi]]</span>
+* <span class="pr1">[[Puntatori]]</span>
+* <span class="pr1">[[Allocazione dinamica]]</span>
+* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/File|File]]</span>
+
+### Algoritmi e Strutture Dati in C
+* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Strutture dati|Strutture dati]]</span>
+	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Liste|Liste]]</span>
+		* <span class="asd">[[Liste ordinate]]</span>
+	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Grafi|Grafi]]</span>
+		* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Alberi|Alberi]]</span>
+			* <span class="asd">[[ABR]]</span>
+			* <span class="asd">[[Alberi decisionali]]</span>
+			* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Heap|Heap]]</span>
+			* <span class="asd">[[Code con priorità]]</span>
+	*  <span class="asd">[[Code|Code]]</span>
+		* <span class="asd">[[Code con priorità]]</span>
+	* <span class="asd">[[Hash]]</span>
+	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Stack|Stack]]</span>
+* <span class="asd">[[Ordinamento|Algoritmi di ordinamento]]</span>
+	* <span class="asd">[[Merge sort]]</span>
+	* <span class="asd">[[Insertion sort]]</span>
+	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Selection Sort|Selection sort]]</span>
+	* <span class="asd">[[Quick sort]]</span>
+	* <span class="asd">[[Heap sort]]</span>
+* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Algoritmi|Altri algoritmi]]</span>
+	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Dijkstra|Dijkstra]]</span>
+	* <span class="asd">[[KMP]]</span>
+	* <span class="asd">[[Ordinamento]]</span>
+	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Ricerca binaria|Ricerca binaria]]</span>
+	* <span class="asd">[[Merge]]</span>
+* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Complessità|Complessità]]</span>
+
+### Breve sguardo al basso livello
+
+* <span class="are">[[IJVM]]</span>
+* <span class="are">[[8088]]</span>
+* <span class="so">[[Architetture di elaborazione]]</span>
+
+### Lavorare con Linux
+
+* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Cenni storici|Cenni storici]]</span>
+* <span class="so">[[VM e Dual Boot]]</span>
+* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Bash|Bash]]</span>
+	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/File|File]]</span>
+	* <span class="so">[[Input, output e pipe]]</span>
+	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Regex|Regex]]</span>
+* <span class="so">[[Processi e job]]</span>
+	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket|Socket]]</span>
+* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/C|C]]</span>
+	* <span class="so">[[GCC]]</span>
+	* <span class="so">[[Processi]]</span>
+	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket in C|Socket in C]]</span>
+	* <span class="so">[[Thread]]</span>
+	* <span class="so">[[Guardie e ladri]]</span>
+
+### Programmazione funzionale in OCaml
+
+* <span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/OCaml/Tipi|Tipi]]</span>
+* <span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/OCaml/Funzioni|Funzioni]]</span>
+	* <span class="alf">[[Funzioni di secondo ordine]]</span>
+* <span class="alf">[[if then else]]</span>
+* <span class="alf">[[Pattern matching]]</span>
+* <span class="alf">[[Fold left]]</span>
+* <span class="lip">[[Triennale/Anno 3/Semestre 1/LiP/Progetto/Progetto|Progetto di LiP]]</span>
+
+### Programmazione orientata agli oggetti in Java
+
+#### Teoria
+
+* <span class="pr2">[[Programmazione a oggetti]]</span>
+* <span class="pr2">[[Oggetti e classi]]</span>
+* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Teoria/Eccezioni|Eccezioni]]</span>
+* <span class="pr2">[[Lettura dei file in Java]]</span>
+* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Teoria/Interfacce|Interfacce]]</span>
+
+#### Pratica
+
+* <span class="pr2">[[Introduzione a Java]]</span>
+* <span class="pr2">[[Classi e oggetti]]</span>
+* <span class="pr2">[[Ereditarietà]]</span>
+	* <span class="pr2">[[Override|Override]]</span>
+	* <span class="pr2">[[Classi astratte]]</span>
+	* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Lab/Interfacce|Interfacce]]</span>
+* <span class="pr2">[[Static]]</span>
+* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Lab/Eccezioni|Eccezioni]]</span>
+* <span class="pr2">[[Varargs]]</span>
+* <span class="pr2">[[Inline]]</span>
+	* <span class="pr2">[[Classi anonime]]</span>
+	* <span class="pr2">[[Espressioni lambda]]</span>
+* <span class="pr2">[[Stream]]</span>
+* <span class="pr2">[[Classi innestate]]</span>
+* <span class="pr2">[[Static]]</span>
+
+### Metodi numerici in MatLab
+
+#### Come si usa MatLab
+* <span class="csmn">[[Introduzione a MatLab]]</span>
+* <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Branching|Branching]]</span>
+* <span class="csmn">[[Vettori e matrici]]</span>
+* <span class="csmn">[[Operazioni matriciali]]</span>
+* <span class="csmn">[[Grafici]]</span>
+* <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Funzioni|Funzioni]]</span>
+
+#### Algoritmi
+* <span class="csmn">[[Epsilon di macchina]]</span>
+* <span class="csmn">[[Errore di cancellazione]]</span>
+* <span class="csmn">[[Metodo di Gauss]]</span>
+	* <span class="csmn">[[Gauss con pivoting|Versione con pivoting]]</span>
+* <span class="csmn">[[Fattorizzazione ALU]]</span>
+	* <span class="csmn">[[Fattorizzazione PALU]]</span>
+* <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Metodi iterativi|Metodi iterativi]]</span>
+	*  <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Gauss-Seidel|Gauss-Seidel]]</span>
+	* <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Jacobi|Jacobi]]</span>
+* <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Equazioni non lineari|Equazioni non lineari]]</span>
+	* <span class="csmn">[[Bisezione]]</span>
+	* <span class="csmn">[[Newton]]</span>
+	* <span class="csmn">[[Secanti]]</span>
+	* <span class="csmn">[[Corde]]</span>
+* <span class="csmn">[[Interpolazione]]</span>
+	* <span class="csmn">[[Forma canonica]]</span>
+	* <span class="csmn">[[Lagrange]]</span>
+
+### Un po' di Python
+
+- <span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Branching|Branching]]</span>
+- <span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Strutture dati|Strutture dati]]</span>
+- <span class="isw">[[Classi]]</span>
+- <span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Funzioni|Funzioni]]</span>
+- <span class="isw">[[Oggetti]]</span>
+- <span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Python|Python generale]]</span>
+
+### Un po' di programmazione web
+- <span class="fpw">[[Vue]]</span>
+- <span class="fpw">[[HTML e CSS]]</span>
+- <span class="fpw">[[Express]]</span>
+- <span class="fpw">[[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL|SQL]]</span>
+- <span class="fpw">[[CSS]]</span>
+- <span class="fpw">[[HTML e form]]</span>
+- <span class="fpw">[[JavaScript]]</span>
+- <span class="fpw">[[Suddivisione di una pagina HTML]]</span>
+- <span class="fpw">[[Ancora CSS]]</span>
+- <span class="fpw">[[Vue]]</span>
+- <span class="fpw">[[Ancora server]]</span>
+- <span class="fpw">[[Arrow function]]</span>
+- <span class="fpw">[[Post e Get]]</span>
+
+## Unsorted
+
+
 [[Triennale/Anno 2/Semestre 1/ALF/File/Regex]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Regex]]
-[[Introduzione al terminale]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/C/Socket in C]]
-[[Tutto C SO]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Bash/Bash]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Altro/Socket]]
-[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Branching]]
-[[Grafici]]
-[[Interpolazione]]
-[[Introduzione a MatLab]]
-[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab]]
-[[Anno 2/Semestre 2/CSMN/Lab/Metodi iterativi]]
-[[Operazioni matriciali]]
-[[Risoluzione di sistemi]]
-[[Anno 2/Semestre 2/CSMN/Lab/Sistemi non lineari
-[[Casting]]
-[[Anno 2/Semestre 2/PR2/Lab/Classi]]
-[[Ereditarietà]]
-[[Anno 2/Semestre 2/PR2/Lab/Java]]
-[[Override]]
-[[Triennale/Anno 2/Semestre 2/PR2/Teoria/Eccezioni]]
-[[Lettura dei file in Java]]
-[[Oggetti e classi]]
-[[Programmazione a oggetti]]
 [[Triennale/Anno 3/Semestre 1/BD/Lab/SQL]]
 [[Anomalie]]
 [[Hashing]]
@@ -91,153 +191,4 @@
 [[Triennale/Anno 3/Semestre 2/ISW/Lab/Funzioni]]
 [[Oggetti]]
 [[Triennale/Anno 3/Semestre 2/ISW/Lab/Python]]
-[[Vue]]
-[[HTML e CSS]]
-[[Express]]
-[[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL]]
-[[CSS]]
-[[HTML e form]]
-[[JavaScript]]
-[[Suddivisione di una pagina HTML]]
-
-
-* [[Introduzione al C]]
-* [[Input e output]]
-* [[Operatori]]
-* [[Tipi primitivi]]
-* [[Cast]]
-* [[Librerie e macro]]
-* [[Selezione, iterazione e salto]]
-* [[Leggibilità]]
-* [[Random]]
-* [[Array]]
-* [[Definizione di tipi]]
-* [[Puntatori]]
-* [[Allocazione dinamica]]
-
 [[Agile testing]] [[Refactoring]] [[Debito tecnico]] [[Testing]] [[Unit testing con LLM]] [[Prototipi]]
-
-* [[Introduzione a MatLab]]
-* [[Triennale/Anno 2/Semestre 2/CSMN/Lab/Branching|Branching]]
-* [[Vettori e matrici]]
-* [[Operazioni matriciali]]
-* [[Grafici]]
-* [[Triennale/Anno 2/Semestre 2/CSMN/Lab/Funzioni|Funzioni]]
-
-Algoritmi:
-* [[Epsilon di macchina]]
-* [[Errore di cancellazione]]
-* [[Metodo di Gauss]]
-* [[Fattorizzazione ALU]]
-* [[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Metodi iterativi|Metodi iterativi]]
-* [[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Equazioni non lineari|Equazioni non lineari]]
-
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Regex]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Altro/Socket]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Bash/Bash]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/C/Socket in C]]
-[[Tutto C SO]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Linux/File]]
-[[Introduzione al terminale]]
-[[Processi, thread e job]]
-[[Virtual machine]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Lab]]
-
-
-[[Triennale/Anno 3/Semestre 2/ISW/Lab/Branching]]
-[[Triennale/Anno 3/Semestre 2/ISW/Lab/Strutture dati]]
-[[Classi]]
-[[Triennale/Anno 3/Semestre 2/ISW/Lab/Funzioni]]
-[[Oggetti]]
-[[Triennale/Anno 3/Semestre 2/ISW/Lab/Python]]
-
-
-[[Vettori e matrici]]
-[[Bisezione]]
-[[Corde]]
-[[Epsilon di macchina]]
-[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Equazioni non lineari]]
-[[Errore di cancellazione]]
-[[Fattorizzazione ALU]]
-[[Fattorizzazione PALU]]
-[[Gauss con pivoting]]
-[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Gauss-Seidel]]
-[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Jacobi]]
-[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Metodi iterativi]]
-[[Metodo di Gauss]]
-[[Newton]]
-[[Secanti]]
-[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Branching]]
-[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Funzioni]]
-[[Grafici]]
-[[Interpolazione]]
-[[Introduzione a MatLab]]
-[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab]]
-[[Anno 2/Semestre 2/CSMN/Lab/Metodi iterativi]]
-[[Operazioni matriciali]][[Risoluzione di sistemi]]
-[[Sistemi non lineari]]
-[[Varargs]]
-[[Classi anonime]]
-[[Classi astratte]]
-[[Classi innestate]]
-[[Classi e oggetti]]
-[[Triennale/Anno 2/Semestre 2/PR2/Lab/Eccezioni]]
-[[Ereditarietà]]
-[[Espressioni lambda]]
-[[Inline]]
-[[Triennale/Anno 2/Semestre 2/PR2/Lab/Interfacce]]
-[[Introduzione a Java]]
-[[Triennale/Anno 2/Semestre 2/PR2/Lab/Lab]]
-[[Anno 2/Semestre 2/PR2/Lab v2/Oggetti]]
-[[Static]]
-[[Stream]]
-
-
-
-[[Triennale/Anno 1/Semestre 2/ASD/New/Strutture dati]]
-[[ABR]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Alberi]]
-[[Alberi decisionali]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Algoritmi]]
-[[Code]]
-[[Code con priorità]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Dijkstra]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Grafi]]
-[[Hash]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Heap]]
-[[Heap sort]]
-[[Insertion sort]]
-[[KMP]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Liste]]
-[[Merge]]
-[[Merge sort]]
-[[Ordinamento]]
-[[Quick sort]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Ricerca binaria]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Selection Sort]]
-[[Triennale/Anno 1/Semestre 2/ASD/New/Stack]]
-
-
-[[VM e Dual Boot]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Bash]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/C]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Cenni storici]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/File]]
-[[GCC]]
-[[Guardie e ladri]]
-[[Input, output e pipe]]
-[[Processi]]
-[[Processi e job]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Regex]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket in C]]
-[[Thread]]
-
-[[Ancora CSS]]
-[[Vue]]
-[[Ancora server]]
-[[Arrow function]]
-[[Express]]
-[[HTML e CSS]]
-[[Post e Get]]
-[[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL]]

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 In Python non esistono tipi primitivi, tutto è una [[OOP|classe]].
 
 * Interi `int`: la lunghezza in bit è arbitraria

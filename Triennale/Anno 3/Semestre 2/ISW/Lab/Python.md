@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 In queste lezioni facciamo Python. Prima facciamo le basi, poi vedremo i framework necessari per il progetto. Python è molto più semplice e intuitivo dei linguaggi a cui siamo abituati.
 
 # Caratteristiche

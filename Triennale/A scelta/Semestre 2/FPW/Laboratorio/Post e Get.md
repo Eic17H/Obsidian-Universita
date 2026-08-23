@@ -2,7 +2,7 @@
 cssclasses:
   - fpw
 ---
-Ok allora[[Express|l'altra volta]]  abbiamo fatto `server.js`, abbiamo fatto `db.js` con tutti i dati necessari per connetterci al database, in `src` abbiamo fatto le tre tabelle del database, e in film abbiamo fatto controller, queries e routes.
+Ok allora [[Express|l'altra volta]]  abbiamo fatto `server.js`, abbiamo fatto `db.js` con tutti i dati necessari per connetterci al database, in `src` abbiamo fatto le tre tabelle del database, e in film abbiamo fatto controller, queries e routes.
 
 In film queries abbiamo messo le queries che abbiamo usato per vedere i dati del database. Per ora una per vederli tutti e una per vederne uno dato l'id. In controller, le funzioni js che ci fanno usare quelle queries. Film routes che importa film controller, ci permette di fare richieste al database in base alla root che definiamo in questo modo. Per la root, esegui getfilmlist, invece se gli passiamo un id eseugui getfilmbyid.
 

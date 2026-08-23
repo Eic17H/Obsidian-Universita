@@ -80,7 +80,7 @@ Per adesso, il contenuto delle pagine rimane adatto al modo in cui funziona HTML
 I nostri link appunto non funzionano. Dobbiamo modificare `index.js`.
 * `import HomeView from '../views/HomeView.vue'`: c'è già. Aggiungiamo gli altri.
 * `@` è un alias per la root del nostro progetto.
-* Definiamo le routes. Due sono già definite. Una usa `=>`, una arrow function, anziché `import` in alto, che possiamo usare ma non è necessario. Va bene usare copilot per fare questa cosa tediosa di scrivere la stessa cosa 50 volte. (In realtà `import` non mi funziona quindi uso `=>`).
+* Definiamo le routes. Due sono già definite. Una usa `=>`, una [[arrow function]], anziché `import` in alto, che possiamo usare ma non è necessario. Va bene usare copilot per fare questa cosa tediosa di scrivere la stessa cosa 50 volte. (In realtà `import` non mi funziona quindi uso `=>`).
 * Abbiamo aggiornato il router per dare percorsi alle pagine, adesso dobbiamo dare questi indirizzi alla navbar dentro le pagine. Sarebbe meglio se fossero del tipo `<RouterLink to="/">Home</RouterLink>`, per utilizzare le componenti proprie di Vue.
 
 ## Inserire un'immagine

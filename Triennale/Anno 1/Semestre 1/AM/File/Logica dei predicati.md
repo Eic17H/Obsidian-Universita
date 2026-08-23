@@ -1,7 +1,7 @@
 ---
 cssclasses: am
 ---
-Lo stesso argomento: <span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/File/Logica dei predicati|ALF]]</span>
+Approfondimento: <span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/File/Logica dei predicati|ALF]]</span>
 
 Abbiamo visto le [[Logica proposizionale|proposizioni normali]]. Aggiungiamo le variabili.
 

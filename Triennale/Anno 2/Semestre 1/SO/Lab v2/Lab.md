@@ -1,7 +1,7 @@
 ---
 cssclasses: so
 ---
-* [[Triennale/Anno 3/Semestre 2/ISW/Teoria/Introduzione/Cenni storici|Cenni storici]]
+* [[Triennale/Anno 2/Semestre 1/SO/Lab v2/Cenni storici|Cenni storici]]
 * [[VM e Dual Boot]]
 * Non ho preso appunti alla seconda lezione
 * [[Triennale/Anno 2/Semestre 1/SO/Lab v2/Bash|Bash]]

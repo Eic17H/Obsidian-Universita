@@ -6,6 +6,7 @@ icon: OCaml.png
 * <span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/File/OCaml|OCaml]]</span>
 * <span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/OCaml/Tipi|Tipi]]</span>
 * <span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/OCaml/Funzioni|Funzioni]]</span>
+* <span class="alf">[[Funzioni di secondo ordine]]</span>
 * <span class="alf">[[if then else]]</span>
 * <span class="alf">[[Pattern matching]]</span>
 * <span class="alf">[[Fold left]]</span>

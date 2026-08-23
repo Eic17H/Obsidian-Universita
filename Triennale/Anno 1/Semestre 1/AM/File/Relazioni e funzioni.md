@@ -35,5 +35,3 @@ Quindi, una relazione è un insieme di coppie ordinate. Una funzione è un tipo 
 > ==**Funzione**==: Relazione in cui non esistono due coppie con lo stesso primo elemento. $\forall a \in A,\ \exists| b \in B$.
 
 Ci sono un sacco di appunti abbreviati incomprensibili che potrei provare a capire più avanti. Mi segno che il resto del primo quaderno è su questo argomento.
-
-#empty

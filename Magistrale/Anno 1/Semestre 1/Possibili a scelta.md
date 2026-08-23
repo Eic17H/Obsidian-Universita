@@ -12,6 +12,8 @@ Professore: Scateni
 
 Lingua: Inglese
 
+Credo di scegliere questo. Sì soprattutto per Scateni, ma anche perché mi interessano le cose grafiche e si collega con IP.
+
 ### Image Processing
 
 Professoressa: Di Ruberto
@@ -19,6 +21,8 @@ Professoressa: Di Ruberto
 Lingua: Italiano
 
 Si usa MatLab. Pipeline di elaborazione delle immagini in ambito industriale, biomedico e scientifico.
+
+Credo di scegliere questo, perché voglio vedere vere applicazioni di MatLab, e mi interessano le applicazioni biomediche della programmazione.
 ### Information Retrieval
 
 Lingua: Italiano

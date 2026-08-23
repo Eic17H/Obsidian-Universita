@@ -86,3 +86,5 @@ Dire che falsificare la premessa verifica la deduzione sembra strano.
 "*Se la lavagna è nera, professor Bartoletti è Batman.*"
 La lavagna è bianca, quindi quella frase è vera.
 Sembra sbagliato, ma è stato definito così.
+
+[[Tautologie|Vediamo poi come analizzare le tautologie]].

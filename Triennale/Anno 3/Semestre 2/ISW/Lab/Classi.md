@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 "Abbiamo" visto le classi (non c'ero)
 
 # Override
