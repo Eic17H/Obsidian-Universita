@@ -3,9 +3,9 @@
     HOW TO USE
 ==================
 
-Install the AutoClass plugin
-Group your notes in folders
-Group your folders in groups
+Install the AutoClass plugin (optional)
+Group your notes in folders (in the file system)
+Group your folders in groups (conceptually)
 Define those groups in "groups"
     Each element of "groups" is an array containing strings that are the names of those folders
 Define the color parameters in "colors"
@@ -25,8 +25,7 @@ let groups = {
     orange: ["RC", "ISW", "ARE"],
     yellow: ["PR1", "ASD", "SO", "PR2"],
     green: ["BD", "FPW", "IUM"],
-    blue: ["FDI", "ALF", "LiP", "Logica"],
-    purple: ["EED"]
+    blue: ["FDI", "ALF", "LiP", "Logica"]
 }
 
 /*
@@ -50,11 +49,11 @@ let colors = {
     },
     orange : {
         minL: 0.6689,
-        maxL: 0.7372,
+        maxL: 0.7858,
         minC: 0.15,
-        maxC: 0.15,
+        maxC: 0.1297,
         minH: 65,
-        maxH: 45,
+        maxH: 41.72,
         signH: -1
     },
     yellow : {
@@ -82,15 +81,6 @@ let colors = {
         maxC: 0.12,
         minH: 260,
         maxH: 220,
-        signH: -1
-    },
-    purple : {
-        minL: 0.55,
-        maxL: 0.55,
-        minC: 0.15,
-        maxC: 0.15,
-        minH: 280,
-        maxH: 280,
         signH: -1
     }
 }

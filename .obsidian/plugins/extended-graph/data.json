@@ -242,14 +242,14 @@
         "query": "path:ISW/",
         "color": {
           "a": 1,
-          "rgb": 15041332
+          "rgb": 15436875
         }
       },
       {
         "query": "path:ARE/",
         "color": {
           "a": 1,
-          "rgb": 16156756
+          "rgb": 16751735
         }
       },
       {
@@ -330,13 +330,6 @@
         }
       },
       {
-        "query": "path:EED/",
-        "color": {
-          "a": 1,
-          "rgb": 6513606
-        }
-      },
-      {
         "query": "path:Indici  ",
         "color": {
           "a": 1,
@@ -354,7 +347,7 @@
     "repelStrength": 11.1403118040089,
     "linkStrength": 1,
     "linkDistance": 500,
-    "scale": 0.22769209064247314,
+    "scale": 0.09025608297589763,
     "close": false
   },
   "openInNewTab": true,
@@ -425,14 +418,14 @@
             "query": "path:ISW/",
             "color": {
               "a": 1,
-              "rgb": 15041332
+              "rgb": 15436875
             }
           },
           {
             "query": "path:ARE/",
             "color": {
               "a": 1,
-              "rgb": 16156756
+              "rgb": 16751735
             }
           },
           {
@@ -510,13 +503,6 @@
             "color": {
               "a": 1,
               "rgb": 38584
-            }
-          },
-          {
-            "query": "path:EED/",
-            "color": {
-              "a": 1,
-              "rgb": 6513606
             }
           },
           {
