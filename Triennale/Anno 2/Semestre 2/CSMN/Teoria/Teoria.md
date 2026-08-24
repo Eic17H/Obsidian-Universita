@@ -22,7 +22,7 @@ cssclasses:
 	* Metodi iterativi
 		* Jacobi
 		* Gauss-Siedel
-* [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Equazioni non lineari]]
+* [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Equazioni non lineari|Equazioni non lineari]]
 
 #modulo
 

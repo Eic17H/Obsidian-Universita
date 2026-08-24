@@ -36,6 +36,8 @@ Ricominci finché il risultato non è $0$.
 I resti, in ordine inverso, sono le cifre del numero convertito.
 Così come le cifre vanno da $0$ a $B-1$, anche i resti vanno da $0$ a $B-1$.
 
+A noi interessa la [[base 2|base 2]].
+
 ### Conversione di numeri razionali
 
 $\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + ···$, se è una serie finita, sarà sempre minore di $1$.
@@ -48,4 +50,4 @@ L'algoritmo che segue da questa logica è:
 * Se è maggiore di $1$, la cifra è $1$, altrimenti è $0$;
 * Ricomincio finché il numero non è $0$.
 Appunto, non tutti terminano.
-$0,78125_{10} = 0,1101_2; 0,9_{10} = 0,1(1100)_2$.
+$0,78125_{10} = 0,1101_2; 0,9_{10} = 0,1\overline{1100}_2$.

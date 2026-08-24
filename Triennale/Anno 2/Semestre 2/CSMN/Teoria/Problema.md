@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 ## Problema ben posto
 Un problema si definisce Problema Ben Posto (secondo Hadamard) se, in un prefissato campo di definizione:
 1.  Ammette una e una sola soluzione.

@@ -54,5 +54,9 @@
 [[Vettori]]
 [[Triennale/Anno 2/Semestre 1/ALF/File/Funzioni]]
 [[Insiemi]]
+[[Base 2]]
+[[Complemento]]
+[[Overflow]]
+[[Virgola mobile]]
 
 #hub

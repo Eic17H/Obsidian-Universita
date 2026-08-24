@@ -32,6 +32,6 @@ Data una relazione $r$:
 
 Quindi, una relazione è un insieme di coppie ordinate. Una funzione è un tipo speciale di relazione in cui non esistono due coppie in cui il primo elemento è uguale. Detto in modo più familiare, immagina una certa funzione $f(x)=x^2$: contiene la coppia $(1,1)$ e la coppia $(2,4)$ e così via. Se avessi invece una relazione $g$ che contiene $(1,1)$ e $(1,2)$, quanto farebbe $g(1)$? Avrebbe due valori possibili ma la nostra nozione di funzione ci dà un solo valore.
 
-> ==**Funzione**==: Relazione in cui non esistono due coppie con lo stesso primo elemento. $\forall a \in A,\ \exists| b \in B$.
+> ==**Funzione**==: Relazione in cui non esistono due coppie con lo stesso primo elemento. $\forall a \in A,\ \exists! b \in B$.
 
 Ci sono un sacco di appunti abbreviati incomprensibili che potrei provare a capire più avanti. Mi segno che il resto del primo quaderno è su questo argomento.

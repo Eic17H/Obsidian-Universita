@@ -42,10 +42,21 @@ Come volevasi dimostrare.
 
 ## Con le tabelle di verità
 
-Anziché usare una lunga lista di trasformazioni, possiamo semplicemente usare le tabelle di verità dei connettivi logici. Se la colonna del connettivo principale ha solo $1$, allora è una tautologia.
+Anziché usare una lunga lista di trasformazioni, possiamo semplicemente usare le tabelle di verità dei connettivi logici. Se la colonna del connettivo principale ($\to$) ha solo $1$, allora è una tautologia.
 
-1. Se Pippo ha copiato, allora Pippo era seduto in ultima fila;
-2. Pippo era seduto in ultima fila;
-3. Pippo ha copiato.
+1. Se Pippo ha copiato, allora Pippo era seduto in ultima fila $C\to U$;
+2. Pippo era seduto in ultima fila $U$;
+3. Pippo ha copiato $C$.
+
+|     |     | $((C \to U) \land U) \to C$ |   <   |  <   |    <    |  <   |   <   |  <  |
+| :-: | :-: | :-------------------------: | :---: | :--: | :-----: | :--: | :---: | :-: |
+|     |     |    $((C \to U) \land U)$    |   <   |  <   |    <    |  <   | $\to$ | $C$ |
+|     |     |         $((C\to U)$         |   <   |  <   | $\land$ | $U)$ | $\to$ | $C$ |
+| $C$ | $U$ |            $((C$            | $\to$ | $U)$ | $\land$ | $U)$ | $\to$ | $C$ |
+| $0$ | $0$ |             $0$             |  $1$  | $0$  |   $0$   | $0$  |  $1$  | $0$ |
+| $0$ | $1$ |             $0$             |  $1$  | $1$  |   $1$   | $1$  |  $0$  | $0$ |
+| $1$ | $0$ |             $1$             |  $0$  | $0$  |   $0$   | $0$  |  $1$  | $1$ |
+| $1$ | $1$ |             $1$             |  $1$  | $1$  |   $1$   | $1$  |  $1$  | $1$ |
+
 
 Vediamo che questa non è una tautologia, non è un buon modo di ragionare, è una <span class="logica">[[fallacie|fallacia logica]]</span>.

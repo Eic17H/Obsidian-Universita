@@ -58,4 +58,4 @@ Questa cosa non l'ho capita: la *chiusura positiva* di $\mathcal{L}$ è $\mathca
 
 #### Esempio
 
-Consideriamo l'alfabeto $A = \{0,1\}$, che possiamo usare per creare un linguaggio con cui scrivere numeri interpretabili in qualunque base. Creiamo un linguaggio le cui parole sono solo numeri pari che contengono $1$ tre volte di fila da qualche parte:$$(0+1)^* \cdot 111 \cdot (0+1)^* \cdot 0$$Abbiamo una quantità illimitata di cifre a sinistra e a destra dell'$111$ e necessariamente uno $0$ alla fine per renderlo pari. Ricorda qualcosa? È come le [[Espressioni regolari]] già viste in ALF.
+Consideriamo l'alfabeto $A = \{0,1\}$, che possiamo usare per creare un linguaggio con cui scrivere numeri interpretabili in qualunque base. Creiamo un linguaggio le cui parole sono solo numeri pari che contengono $1$ tre volte di fila da qualche parte:$$(0+1)^* \cdot 111 \cdot (0+1)^* \cdot 0$$Abbiamo una quantità illimitata di cifre a sinistra e a destra dell'$111$ e necessariamente uno $0$ alla fine per renderlo pari. Ricorda qualcosa? È come le [[Espressioni regolari|espressioni regolari]] già viste in ALF.

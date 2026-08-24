@@ -37,18 +37,18 @@ Interfaccia che dice che è possibile iterare su quella classe. Implementata da 
 
 Permette di scorrere un iterable. Ha alcuni metodi utili:
 
-* `forEachRemaining` - come `forEach`, ma gli passi l'elemento da cui partire
-* `hasNext` - come in ASD, `if(x.next != null) ...`
-* `next` - autoesplicativo
-* `remove` - rimuove l'ultimo elemento
+* `forEachRemaining` - come `forEach`, ma gli passi l'elemento da cui partire;
+* `hasNext` - come in ASD, `if(x.next != null) ...`;
+* `next` - autoesplicativo;
+* `remove` - rimuove l'ultimo elemento,
 
 ## Comparable
 
-Definisce l'ordine naturale delle cose, con il metodo `T::compareTo(T o)`, che restituisce un numero negativo se il parametro viene prima del chiamante, 0 se sono uguali, e un numero negativo se il parametro viene dopo.
+Definisce l'ordine naturale delle cose, con il metodo `T::compareTo(T o)`, che restituisce un numero negativo se il parametro viene prima del chiamante, $0$ se sono uguali, e un numero negativo se il parametro viene dopo.
 
 ## Comparator
 
-Definisce l'ordinamento totale. Definiamo, in un'altra classe, un metodo che confronta due elementi, `compare(T o1, T o2)`. Di nuovo, restituisce un numero negativo se o1<o2, e così via.
+Definisce l'ordinamento totale. Definiamo, in un'altra classe, un metodo che confronta due elementi, `compare(T o1, T o2)`. Di nuovo, restituisce un numero negativo se $o_1<o_2$, e così via.
 
 # Collections
 

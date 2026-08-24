@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 Sono in ritardo non so di che si parli
 # Bisezione
 

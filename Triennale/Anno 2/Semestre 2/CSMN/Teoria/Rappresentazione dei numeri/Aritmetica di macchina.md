@@ -2,7 +2,7 @@
 cssclasses:
   - csmn
 ---
-I numeri decimali non possono essere memorizzati sempre esattamente su un calcolatore. L'opzione migliore per risparmio di memoria è la <span class="fdi">[[Numeri binari|virgola mobile]]</span>.
+I numeri decimali non possono essere memorizzati sempre esattamente su un calcolatore. L'opzione migliore per risparmio di memoria è la <span class="fdi">[[Virgola mobile|virgola mobile]]</span>.
 
 Vediamo la memorizzazione di alcuni numeri.
 

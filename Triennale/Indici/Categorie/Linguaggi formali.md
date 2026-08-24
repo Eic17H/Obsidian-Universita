@@ -19,7 +19,7 @@
 [[Triennale/Anno 3/Semestre 1/LiP/Categorie/Scope]]
 [[SECD]]
 [[Tipizzazione]]
-
+[[PDA]]
 [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Linguaggio|Linguaggio]]
 [[Triennale/Anno 2/Semestre 2/PR2/Teoria/Linguaggio|Linguaggio]]
 [[Triennale/Anno 2/Semestre 1/ALF/File/Linguaggi formali|Linguaggi formali]]

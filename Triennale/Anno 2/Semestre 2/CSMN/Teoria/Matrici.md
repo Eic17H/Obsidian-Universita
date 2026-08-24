@@ -13,7 +13,7 @@ Una combinazione lineare è il vettore che si ottiene facendo la somma di certi 
 $$
 \{\underline{x}_1, \underline{x}_2, ... \underline{x}_k\}
 $$
-Se e solo se la somma di tutti gli aixi=0, allora e solo allora ai=0 per ogni i. Allora xi sono linearmente indipendenti, cioè nessun xi può essere espresso come combinazione degli altri vettori. Per esempio se x1=1;1;0, x2=0;0;1, x3=1;1;1, allora con a1=1, a2=1, a3=-1 ho la somma=0, quindi i vettori non sono linearmente indipendenti.
+Se e solo se la somma di tutti gli $a_ix_i=0$, allora e solo allora $a_i=0$ per ogni $i$. Allora $x_i$ sono linearmente indipendenti, cioè nessun $x_i$ può essere espresso come combinazione degli altri vettori. Per esempio se $x_1=1;1;0$, $x_2=0;0;1$, $x_3=1;1;1$, allora con $a_1=1$, $a_2=1$, $a_3=-1$ ho la somma$=0$, quindi i vettori non sono linearmente indipendenti.
 
 La base di uno spazio lineare è i vettori linearmente indipendenti + generatori. Non ho capito che ha detto. Esempio semplicissimo, R2\^2 con x1=1;0 e x2=0;1 che sono i miei versori, per ottenere x=a;b, metto alfa1=a e alfa2=b, e ottengo proprio x (che è sottolineato).
 
@@ -51,7 +51,7 @@ Altra cosa: $A^TB^T = (BA)^T$.
 
 ## Matrici invertibili
 
-$3$ è un numero invertibile, il suo inverso è $\frac{1}{3}$, perché $3*\frac{1}{3}=1$. L'equivalente di $1$ è $I$, la matrice con $1$ in tutte le "caselle". L'inversa di $A$ si scrive $A^{-1}$, e $AA^{-1}=I$. Deve essere quadrata, perché $AA^{-1} = A^{-1}A$, quindi m=m ed n=n essenzialmente se ci pensi, sono entrambi interni.
+$3$ è un numero invertibile, il suo inverso è $\frac{1}{3}$, perché $3\cdot\frac{1}{3}=1$. L'equivalente di $1$ è $I$, la matrice con $1$ in tutte le "caselle". L'inversa di $A$ si scrive $A^{-1}$, e $AA^{-1}=I$. Deve essere quadrata, perché $AA^{-1} = A^{-1}A$, quindi m=m ed n=n essenzialmente se ci pensi, sono entrambi interni.
 
 $(AB)^{-1} = B^{-1}A^{-1}$
 
