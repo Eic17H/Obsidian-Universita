@@ -13,7 +13,7 @@ Così è già una classe completa ma vuota.
 Esiste anche `public class`, per ora lasciamo perdere.
 Per salvare, Ctrl+S.
 Controlliamo di aver salvato con `cat Monitor.java`.
-(Si suppone si sia seguito <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Bash/Bash|SO]]</span> prima di PR2).
+(Si suppone si sia seguito <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Ancora utili/Bash|SO]]</span> prima di PR2).
 
 Proviamo a fare `javac Monitor.java`, ci crea `Monitor.class`, lì c'è il bytecode.
 Non c'è molto dentro, modella una classe `Monitor` in cui non c'è nessun attributo e nessun metodo.
@@ -143,7 +143,7 @@ Ricordiamo che tipo "void visualizzaRoba(int numerox)" si dice firma del metodo.
 
 Nota che una classe non può funzionare senza un costruttore.
 Prima abbiamo provato e ha funzionato, diciamo, perché?
-Java mette a disposizione un costruttore di default. Tutte le classi [[Ereditarietà|ereditano]] da una classe che si chiama Object.
+Java mette a disposizione un costruttore di default. Tutte le classi [[Triennale/Anno 2/Semestre 2/PR2/Lab/Ereditarietà|ereditano]] da una classe che si chiama Object.
 	Object mette a disposizione un costruttore default a tutti gli oggetti.
 Questo costruttore smette di esistere appena definisci un costruttore vero e proprio per la classe.
 

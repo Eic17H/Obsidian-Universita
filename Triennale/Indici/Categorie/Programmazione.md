@@ -1,4 +1,4 @@
-[[Triennale/Indici/Linguaggi di programmazione/C|C]] [[Triennale/Indici/Linguaggi di programmazione/Python|Python]] [[Triennale/Indici/Linguaggi di programmazione/OCaml|OCaml]] [[MatLab]] [[Java]] [[Triennale/Indici/Linguaggi di programmazione/Bash|Bash]] #hub
+[[Triennale/Indici/Linguaggi di programmazione/C|C]] [[Triennale/Indici/Linguaggi di programmazione/Python|Python]] [[Triennale/Indici/Linguaggi di programmazione/OCaml|OCaml]] [[MatLab]] [[Java]] [[Triennale/Indici/Linguaggi di programmazione/Bash|Bash]] [[Solidity]] #hub
 
 ## Indice carino forse
 
@@ -15,7 +15,7 @@
 * <span class="pr1">[[Introduzione al C]]</span>
 * <span class="pr1">[[Tipi primitivi]]</span>
 * <span class="pr1">[[Input e output]]</span>
-* <span class="pr1">[[Operatori]]</span>
+* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Operatori]]</span>
 * <span class="pr1">[[Cast]]</span>
 * <span class="pr1">[[Selezione, iterazione e salto]]</span>
 * <span class="pr1">[[Librerie e macro]]</span>
@@ -63,18 +63,17 @@
 
 ### Lavorare con Linux
 
-* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Cenni storici|Cenni storici]]</span>
+* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/Cenni storici|Cenni storici]]</span>
 * <span class="so">[[VM e Dual Boot]]</span>
-* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Bash|Bash]]</span>
-	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/File|File]]</span>
+* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/Bash|Bash]]</span>
+	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/File|File]]</span>
 	* <span class="so">[[Input, output e pipe]]</span>
-	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Regex|Regex]]</span>
+	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/Regex|Regex]]</span>
 * <span class="so">[[Processi e job]]</span>
-	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket|Socket]]</span>
-* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/C|C]]</span>
+* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/C|C]]</span>
 	* <span class="so">[[GCC]]</span>
 	* <span class="so">[[Processi]]</span>
-	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket in C|Socket in C]]</span>
+	* <span class="so">[[Socket in C|Socket in C]]</span>
 	* <span class="so">[[Thread]]</span>
 	* <span class="so">[[Guardie e ladri]]</span>
 
@@ -102,7 +101,7 @@
 
 * <span class="pr2">[[Introduzione a Java]]</span>
 * <span class="pr2">[[Classi e oggetti]]</span>
-* <span class="pr2">[[Ereditarietà]]</span>
+* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Lab/Ereditarietà]]</span>
 	* <span class="pr2">[[Override|Override]]</span>
 	* <span class="pr2">[[Classi astratte]]</span>
 	* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Lab/Interfacce|Interfacce]]</span>
@@ -168,6 +167,21 @@
 - <span class="fpw">[[Ancora server]]</span>
 - <span class="fpw">[[Arrow function]]</span>
 - <span class="fpw">[[Post e Get]]</span>
+
+### Solidity per il tirocinio
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Introduzione|Introduzione]]
+* [[Tipi e variabili]]
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Operatori|Operatori]]
+* [[Condizionali]]
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Funzioni|Funzioni]]
+* [[Visibilità]]
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Strutture dati|Strutture dati]]
+* [[Eventi]]
+* [[Ether]]
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Errori|Errori]]
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà|Ereditarietà]]
+* [[Contratti]]
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Interfacce|Interfacce]]
 
 ## Unsorted
 

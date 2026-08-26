@@ -8,7 +8,7 @@ Vedi anche il [[Agile testing|testing in contesto agile]] nello specifico.
 
 > Il **==Software Testing==** è il processo di analisi di un prodotto software per rilevare le differenze tra le condizioni esistenti e richieste (cioè, gli errori) e per valutare le caratteristiche del prodotto software.
 
-> ==**Mistake** (Errore Umano)==: azione umana che produce un risultato non corretto; lo stesso argomento: <span class="ium">[[Errori|IUM]]</span>.
+> ==**Mistake** (Errore Umano)==: azione umana che produce un risultato non corretto; lo stesso argomento: <span class="ium">[[Triennale/Anno 3/Semestre 1/IUM/Teoria/Errori|IUM]]</span>.
 
 > ==**Fault**/**Defect** (Difetto)==: passaggio o processo o definizione dati non corretti in un programma.
 

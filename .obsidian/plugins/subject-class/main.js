@@ -34,15 +34,26 @@ var SemesterCssPlugin = class extends import_obsidian.Plugin {
   }
   async wrapCrossSubjectLinks() {
     const file = this.app.workspace.getActiveFile();
+    let currentSubject;
     if (!file) {
+      currentSubject = "";
       return;
-    }
-    const currentSubject = this.getSubject(file);
-    if (!currentSubject) {
-      return;
+    } else {
+      currentSubject = this.getSubject(file);
+      if (!currentSubject) {
+        currentSubject = "";
+      }
     }
     await this.app.vault.process(file, (content) => {
-      return content.replace(
+      const existingSpans = [];
+      content = content.replace(
+        /<span class="[^"]*">[\s\S]*?<\/span>/g,
+        (span) => {
+          const index = existingSpans.push(span) - 1;
+          return `\0SPAN_${index}\0`;
+        }
+      );
+      content = content.replace(
         /\[\[([^|\]]+)(?:\|([^\]]+))?\]\]/g,
         (match, linkpath, alias) => {
           const linkedFile = this.app.metadataCache.getFirstLinkpathDest(
@@ -59,18 +70,23 @@ var SemesterCssPlugin = class extends import_obsidian.Plugin {
           return `<span class="${linkedSubject}">${match}</span>`;
         }
       );
+      content = content.replace(
+        /\0SPAN_(\d+)\0/g,
+        (_, index) => existingSpans[Number(index)]
+      );
+      return content;
     });
   }
   // FIRST FEATURE:
   async onload() {
     this.addCommand({
       id: "add-semester-css-class",
-      name: "Add semester CSS class",
+      name: "Fix document subject class",
       callback: () => this.addSemesterCssClass()
     });
     this.addCommand({
       id: "wrap-cross-subject-links",
-      name: "Wrap cross-subject links",
+      name: "Fix link subject class",
       callback: () => this.wrapCrossSubjectLinks()
     });
   }

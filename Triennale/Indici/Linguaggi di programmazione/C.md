@@ -1,7 +1,7 @@
 ---
 icon: C.png
 ---
-Vedi <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</span>, <span class="asd">[[Algoritmi e Strutture Dati|ASD]]</span>, <span class="so">[[Sistemi Operativi - Modulo II|SO]]</span>
+Vedi <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</span>, <span class="asd">[[Algoritmi e Strutture Dati|ASD]]</span>, <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/Lab|SO]]</span>
 
 #hub  #hublvl2
 
@@ -17,7 +17,7 @@ Vedi <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</sp
 	* <span class="pr1">[[Array]]</span>
 	* <span class="pr1">[[Definizione di tipi]]</span>
 	* <span class="pr1">[[Cast]]</span>
-* <span class="pr1">[[Operatori]]</span>
+* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Operatori]]</span>
 * <span class="pr1">[[Input e output]]</span>
 * <span class="pr1">[[Selezione, iterazione e salto]]</span>
 * <span class="pr1">[[Subroutine e librerie]]</span> / <span class="pr1">[[Librerie e macro]]</span>
@@ -66,9 +66,9 @@ Vedi <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</sp
 
 ### Di nuovo ma prima o poi saranno più ordinati
 
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/C]]
+[[Triennale/Anno 2/Semestre 1/SO/Lab/C]]
 [[GCC]]
 [[Processi]]
 [[Thread]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket in C]]
+[[Socket in C]]
 [[Guardie e ladri]]

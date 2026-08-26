@@ -4,7 +4,7 @@
 * <span class="csmn">[[CSMN|Calcolo Scientifico e Metodi Numerici]]</span>
 
 ## Booleani e linguaggi
-* <span class="fdi">[[Fondamenti|Fondamenti di Informatica]]</span>
+* <span class="fdi">[[Fondamenti di Informatica|Fondamenti di Informatica]]</span>
 * <span class="alf">[[Automi e Linguaggi Formali]]</span>
 * <span class="lip">[[Linguaggi di Programmazione]]</span>
 * <span class="logica">[[Istituzioni di Logica]]</span>

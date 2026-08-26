@@ -7,7 +7,7 @@ WIP
 * [[Introduzione al C]]
 * [[Tipi primitivi]]
 * [[Input e output]]
-* [[Operatori]]
+* [[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Operatori]]
 * [[Cast]]
 * [[Selezione, iterazione e salto]]
 * [[Librerie e macro]]

@@ -5,6 +5,6 @@ Qui sono elencate solo le materie con appunti fatti bene o decentemente. Vedi an
 * <span class="am">[[Analisi Matematica]]</span>
 * <span class="md">[[Matematica Discreta]]</span>
 * <span class="csmn">[[CSMN|Calcolo Scientifico e Metodi Numerici]]</span>
-* <span class="fdi">[[Fondamenti|Fondamenti di Informatica]]</span>
+* <span class="fdi">[[Fondamenti di Informatica|Fondamenti di Informatica]]</span>
 * <span class="lip">[[Linguaggi di Programmazione]]</span>
 * <span class="logica">[[Istituzioni di Logica]]</span>

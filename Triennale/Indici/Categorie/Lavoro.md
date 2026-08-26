@@ -17,7 +17,7 @@
 [[Iterazione]]
 [[Prototipi]]
 [[Triennale/Anno 3/Semestre 1/IUM/Teoria/Requisiti]]
-[[Test]]
+[[Triennale/Anno 3/Semestre 1/IUM/Teoria/Test|Test]]
 
 [[Software]]
 [[Brevetto]]

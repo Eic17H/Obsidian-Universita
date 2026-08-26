@@ -7,8 +7,8 @@ cssclasses:
 * [[Prototipi]]
 * [[Architettura dell'Informazione]]
 * [[Componente umana]]
-* [[Errori]]
+* [[Triennale/Anno 3/Semestre 1/IUM/Teoria/Errori]]
 * [[Testo]]
-* [[Test]]
+* [[Triennale/Anno 3/Semestre 1/IUM/Teoria/Test|Test]]
 
 #modulo

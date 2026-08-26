@@ -1,66 +1,62 @@
----
-cssclasses: rc
----
-[[BOOTP]]
-[[RARP]]
-[[Protocolli di controllo]]
-[[Storia di internet]]
-[[ARP]]
-[[BGP]]
-[[CIDR]]
-[[IPv4]]
-[[QoS]]
-[[IPv6]]
-[[Link State Routing]]
-[[NAT]]
-[[RED]]
-[[SLA]]
-[[Sliding Window]]
-[[Algoritmi dinamici]]
-[[AQM]]
-[[AS]]
-[[Classi IPv4]]
-[[Controllo della congestione]]
-[[Data Link]]
-[[Distance vector]]
-[[ECHO]]
-[[EGP]]
-[[IGP]]
-[[Indirizzo IP]]
-[[IP]]
-[[ISO-OSI]]
-[[Path vector protocol]]
-[[Protocollo di routing]]
-[[Tabella di routing]]
-[[TCP]]
-[[TCP-IP]]
-[[Categorie di applicazioni]]
-[[Categorie di reti]]
-[[Applicazioni e reti]]
-[[Boh]]
-[[Protocolli di rete]]
-[[Timer]]
-[[Nagle e Clark]]
-[[Algoritmo di Nagle]]
-[[Berkeley Socket]]
-[[Buffer di trasporto]]
-[[Clark]]
-[[Congestione al livello di trasporto]]
-[[Crash]]
-[[Delayed time]]
-[[DHCP]]
-[[ICMP]]
-[[KPI]]
-[[AQL]]
-[[MPLS]]
-[[RPF]]
-[[RSVP]]
-[[SRTT]]
-[[Stub]]
-
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Socket]]
-[[Architettura client-server e internet]]
-[[Scomposizione]]
-[[HTTP]]
+<span class="rc">[[BOOTP]]</span>
+<span class="rc">[[RARP]]</span>
+<span class="rc">[[Protocolli di controllo]]</span>
+<span class="rc">[[Storia di internet]]</span>
+<span class="rc">[[ARP]]</span>
+<span class="rc">[[BGP]]</span>
+<span class="rc">[[CIDR]]</span>
+<span class="rc">[[IPv4]]</span>
+<span class="rc">[[QoS]]</span>
+<span class="rc">[[IPv6]]</span>
+<span class="rc">[[Link State Routing]]</span>
+<span class="rc">[[NAT]]</span>
+<span class="rc">[[RED]]</span>
+<span class="rc">[[SLA]]</span>
+<span class="rc">[[Sliding Window]]</span>
+<span class="rc">[[Algoritmi dinamici]]</span>
+<span class="rc">[[AQM]]</span>
+<span class="rc">[[AS]]</span>
+<span class="rc">[[Classi IPv4]]</span>
+<span class="rc">[[Controllo della congestione]]</span>
+<span class="rc">[[Data Link]]</span>
+<span class="rc">[[Distance vector]]</span>
+<span class="rc">[[ECHO]]</span>
+<span class="rc">[[EGP]]</span>
+<span class="rc">[[IGP]]</span>
+<span class="rc">[[Indirizzo IP]]</span>
+<span class="rc">[[IP]]</span>
+<span class="rc">[[ISO-OSI]]</span>
+<span class="rc">[[Path vector protocol]]</span>
+<span class="rc">[[Protocollo di routing]]</span>
+<span class="rc">[[Tabella di routing]]</span>
+<span class="rc">[[TCP]]</span>
+<span class="rc">[[TCP-IP]]</span>
+<span class="rc">[[Categorie di applicazioni]]</span>
+<span class="rc">[[Categorie di reti]]</span>
+<span class="rc">[[Applicazioni e reti]]</span>
+<span class="rc">[[Boh]]</span>
+<span class="rc">[[Protocolli di rete]]</span>
+<span class="rc">[[Timer]]</span>
+<span class="rc">[[Nagle e Clark]]</span>
+<span class="rc">[[Algoritmo di Nagle]]</span>
+<span class="rc">[[Berkeley Socket]]</span>
+<span class="rc">[[Buffer di trasporto]]</span>
+<span class="rc">[[Clark]]</span>
+<span class="rc">[[Congestione al livello di trasporto]]</span>
+<span class="rc">[[Crash]]</span>
+<span class="rc">[[Delayed time]]</span>
+<span class="rc">[[DHCP]]</span>
+<span class="rc">[[ICMP]]</span>
+<span class="rc">[[KPI]]</span>
+<span class="rc">[[AQL]]</span>
+<span class="rc">[[MPLS]]</span>
+<span class="rc">[[RPF]]</span>
+<span class="rc">[[RSVP]]</span>
+<span class="rc">[[SRTT]]</span>
+<span class="rc">[[Stub]]</span>
+<span class="so">[[Socket|Socket]]</span>
+<span class="isw">[[Architettura client-server e internet]]</span>
+<span class="isw">[[Scomposizione]]</span>
+<span class="fpw">[[HTTP]]</span>
 
 #hub

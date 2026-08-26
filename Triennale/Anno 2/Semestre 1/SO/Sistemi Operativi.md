@@ -3,7 +3,7 @@ cssclasses:
   - so
 ---
 ## [[Triennale/Anno 2/Semestre 1/SO/Teoria/Teoria|Modulo I]]
-## [[Triennale/Anno 2/Semestre 1/SO/Lab v2/Lab|Modulo II]]
+## [[Triennale/Anno 2/Semestre 1/SO/Lab/Lab|Modulo II]]
 
 ## Avvertenze
 

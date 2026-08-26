@@ -1,9 +1,9 @@
 ---
 icon: Bash.png
 ---
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Bash]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/File]]
+[[Triennale/Anno 2/Semestre 1/SO/Lab/Bash]]
+[[Triennale/Anno 2/Semestre 1/SO/Lab/File]]
 [[Input, output e pipe]]
-[[Triennale/Anno 2/Semestre 1/SO/Lab v2/Regex]]
+[[Triennale/Anno 2/Semestre 1/SO/Lab/Regex]]
 
 #hub

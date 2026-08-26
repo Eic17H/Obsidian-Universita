@@ -4,24 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "c946acdfad009707",
+        "id": "fe41703b87ff1d87",
         "type": "tabs",
         "children": [
           {
-            "id": "a234d05f8ab72b69",
+            "id": "a50939876b95c425",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "958e90bd81f8fc56",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Crash.md",
-                "mode": "source",
+                "file": "Triennale/Anno 2/Semestre 1/SO/Lab/Lab.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Crash"
+              "title": "Lab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -55,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "choke pack",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.1296195983887
+    "width": 227.72080993652344
   },
   "right": {
     "id": "1feb8741361685ad",
@@ -96,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Crash.md",
+                "file": "Triennale/Anno 2/Semestre 1/SO/Lab/Lab.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.1004638671875,
-    "collapsed": true
+    "width": 297.1004638671875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,56 +183,56 @@
       "improved-random-note:Open improved random note": false
     }
   },
-  "active": "a234d05f8ab72b69",
+  "active": "958e90bd81f8fc56",
   "lastOpenFiles": [
-    "Triennale/Anno 2/Semestre 2/RC/Vecchi/Raw/RC-20250505.md",
-    "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Nuovi/Crash.md",
-    "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Ragionamento ex hypothesi.md",
-    "Triennale/Indici/Categorie/Lavoro.md",
-    "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Stili di semantica.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Equazioni non lineari/Approssimazione di funzioni.md",
-    "Triennale/A scelta/Semestre 2/FPW/FPW.md",
-    "Triennale/Anno 1/Semestre 1/FDI/File/Virgola mobile.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Rappresentazione dei numeri/Aritmetica di macchina.md",
-    "Triennale/Anno 2/Semestre 1/ALF/File/Linguaggi formali.md",
-    "Triennale/A scelta/Semestre 2/Logica/File/Enunciati/Linguaggio formale.md",
-    "Triennale/Anno 2/Semestre 2/PR2/Teoria/Oggetti e classi.md",
-    "Triennale/Anno 3/Semestre 1/BD/Teoria/Paradigmi.md",
-    "Triennale/Anno 2/Semestre 2/PR2/Teoria/Programmazione a oggetti.md",
-    "Triennale/Anno 1/Semestre 1/AM/File/Relazioni e funzioni/Ricorsione.md",
-    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Metodologie/Scrum.md",
-    "Triennale/Anno 1/Semestre 1/AM/File/Calcolo infinitesimale/Serie di Taylor.md",
-    "Triennale/Anno 1/Semestre 1/AM/File/Topologia della retta.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Vettori.md",
-    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Metodologie/XP.md",
-    "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo tipizzato.md",
-    "Triennale/Anno 1/Semestre 1/AM/File/3D.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Matrici.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/CSMN.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Teoria.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari.md",
-    "Triennale/Anno 2/Semestre 1/ALF/Nuovi",
+    "Triennale/Anno 2/Semestre 1/SO/Lab/VM e Dual Boot.md",
+    "Triennale/Anno 2/Semestre 1/SO/Lab/Lab.md",
+    "Triennale/Anno 2/Semestre 1/SO/Lab/Cenni storici.md",
+    "Triennale/Indici/Linguaggi di programmazione/C.md",
+    "Triennale/Anno 2/Semestre 1/SO/Lab/Bash.md",
+    "Triennale/Indici/Linguaggi di programmazione/Solidity.md",
+    "Triennale/Indici/Categorie/Programmazione.md",
+    "Triennale/Indici/Categorie/Programmazione v2.md",
+    "Triennale/Untitled 2.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Relazione.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Teoria/Requisiti.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Eventi.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Interfacce.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Introduzione.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Strutture dati.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Tipi e variabili.md",
+    "Triennale/Anno 3/Semestre 2/R54/Smart contracts analysis and verification.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Contratti.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Funzioni.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Visibilità.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Condizionali.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Operatori.md",
+    "Triennale/Anno 1/Semestre 1/FDI/Fondamenti di Informatica.md",
+    "Indice.md",
+    "Triennale/Indici/Linguaggi di programmazione/Icone/Solidity.png",
     "Immagini/Pasted image 20260823105620.png",
+    "Immagini/Pasted image 20260826145519.png",
+    "Immagini/Pasted image 20260404115105.png",
+    "Immagini/Pasted image 20260819190440.png",
+    "Immagini/non come ma cosa v3.png",
+    "Immagini/Pasted image 20260629163530.png",
+    "Immagini/Pasted image 20260820230432.png",
+    "Immagini/Pasted image 20260820230420.png",
+    "Immagini/Pasted image 20260820230407.png",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity",
+    "Triennale/Anno 3/Semestre 2/R54",
+    "Triennale/Anno 2/Semestre 1/SO/Lab v1/Ancora utili",
+    "Untitled.base",
+    "Triennale/Anno 2/Semestre 1/ALF/Nuovi",
     "Triennale/A scelta/Semestre 2/Logica/Canvas/Connettivi logici.canvas",
-    "Immagini/Pasted image 20260823012008.png",
     "Immagini",
     "Triennale/Anno 3/Semestre 1/LiP/Altro",
     "Triennale/Anno 2/Semestre 2/CSMN/Lab/Relazione.pdf",
     "Triennale/Anno 2/Semestre 1/DeM/Teoria",
-    "Triennale/Anno 2/Semestre 1/DeM/Tesine",
-    "Triennale/Anno 2/Semestre 1/DeM",
-    "Triennale/Anno 3/Semestre 2/ISW/Cose nuove",
-    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Untitled",
-    "Magistrale/Indici/Linguaggi di programmazione",
     "Magistrale/Anno 2/Untitled.canvas",
-    "Triennale/Immagini/non come ma cosa v3.png",
-    "Triennale/Immagini/Pasted image 20260820230432.png",
-    "Triennale/Immagini/Pasted image 20260820230420.png",
-    "Triennale/Immagini/Pasted image 20260820230407.png",
-    "Triennale/Immagini/Pasted image 20260820214056.png",
-    "Triennale/Immagini/Pasted image 20260820214017.png",
-    "Triennale/Immagini/Pasted image 20260820213920.png",
-    "Triennale/Immagini/Pasted image 20260820210543.png",
     "Untitled.canvas"
   ]
 }

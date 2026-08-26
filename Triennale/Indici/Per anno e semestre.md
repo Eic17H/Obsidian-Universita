@@ -3,7 +3,7 @@
 ## Semestre 1
 
 * <span class="pr1">[[Programmazione 1]]</span>
-* <span class="fdi">[[Fondamenti|Fondamenti di Informatica]]</span>
+* <span class="fdi">[[Fondamenti di Informatica|Fondamenti di Informatica]]</span>
 * <span class="am">[[Analisi Matematica]]</span>
 
 ## Semestre 2

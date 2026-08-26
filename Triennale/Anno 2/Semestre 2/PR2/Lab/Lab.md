@@ -3,7 +3,7 @@ cssclasses: pr2
 ---
 * [[Introduzione a Java]]
 * [[Classi e oggetti]]
-* [[Ereditarietà]]
+* [[Triennale/Anno 2/Semestre 2/PR2/Lab/Ereditarietà]]
 	* [[Override|Override]]
 	* [[Classi astratte]]
 	* [[Triennale/Anno 2/Semestre 2/PR2/Lab/Interfacce|Interfacce]]

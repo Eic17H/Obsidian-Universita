@@ -2,7 +2,7 @@
 cssclasses:
   - alf
 ---
-Lo stesso argomento: <span class="lip">[[Espressioni regolari|LiP]]</span>, <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Regex|SO]]</span>
+Lo stesso argomento: <span class="lip">[[Espressioni regolari|LiP]]</span>, <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Ancora utili/Regex|SO]]</span>
 
 Abbiamo visto gli [[Triennale/Anno 2/Semestre 1/ALF/File/Automi|automi a stati finiti]]. Non possono fare tante cose, per esempio i palindromi. Si usano per l'analisi lessicale nei compilatori.
 

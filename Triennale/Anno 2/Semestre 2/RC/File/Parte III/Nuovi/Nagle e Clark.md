@@ -3,7 +3,7 @@ cssclasses: rc
 ---
 ## Concetto detto in modo stupido
 
-**==Ack cumulativi==**: c'entra con la [[sliding window|.
+**==Ack cumulativi==**: c'entra con la [[sliding window]].
 
 **==Nagle==**: essenzialmente lui ha la window che è fissa a 0. Quindi nel mentre tu che generi dati da inviare, anziché avere 10 pacchetti da 1 byte, li metti insieme in 1 pacchetto da 10 byte.
 

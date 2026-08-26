@@ -1,0 +1,1 @@
+L'eredità vedo che si fa con `contract A ... contract B is A`. Cosa si eredita? Dipende dalla [[visibilità]].
