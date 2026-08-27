@@ -14,5 +14,7 @@ icon: solidity.png
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà|Ereditarietà]]
 * [[Contratti]]
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Interfacce|Interfacce]]
+* [[Foundry]]
+* [[Halmos]]
 
 #hub #hublvl2
