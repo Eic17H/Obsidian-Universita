@@ -2,7 +2,7 @@
 cssclasses:
   - fpw
 ---
-Vue è un framework di [[JavaScript|JavaScript]].
+Vue è un framework di [[Triennale/A scelta/Semestre 2/FPW/Teoria/JavaScript|JavaScript]].
 
 ## Installazione
 

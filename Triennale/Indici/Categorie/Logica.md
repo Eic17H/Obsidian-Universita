@@ -1,5 +1,5 @@
 [[Logica proposizionale]] [[Logica proposizionale classica]] [[Insieme di formule inconsistente]] [[Argomenti]] [[Calcolo alla Hilbert]] [[Calcolo dei Sequenti]] [[Calcolo logico]] [[Deduzione Naturale]] [[Enunciati]] [[Fallacie]] [[Triennale/Anno 2/Semestre 1/ALF/File/Logica dei predicati|Logica dei predicati]] [[Triennale/Anno 1/Semestre 1/AM/File/Logica dei predicati|Logica dei predicati]] [[Mappe di Karnaugh]]
-
+[[Dimostrazioni]]
 [[Tautologie]]
 [[Teorema di correttezza]]
 [[Teorema di completezza]]

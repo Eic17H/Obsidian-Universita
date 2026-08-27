@@ -1,1 +1,3 @@
 Le struct del C sono simili alle classi dell'[[OOP]].
+
+#hidden

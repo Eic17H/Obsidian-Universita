@@ -3,19 +3,19 @@ cssclasses: so
 ---
 Concetto:
 
-Guardia: #
-Ladro: $
-La # è controllata tramite le frecce, parte da in basso a destra
-Il $ si muove in modo casuale, parte da in alto a sinistra
-Il gioco termina quando la # prende il $
+Guardia: `#`
+Ladro: `$`
+La `#` è controllata tramite le frecce, parte da in basso a destra
+Il `$` si muove in modo casuale, parte da in alto a sinistra
+Il gioco termina quando la `#` prende il `$`
 
 
 Tecnica:
 
 3 processi
-    Figlio: Input e posizione #, solo valore interno
-    Figlio: Casuale e posizione $, solo valore interno
-    Padre: Stampa, collisioni, termina gioco
+* Figlio: Input e posizione `#`, solo valore interno
+* Figlio: Casuale e posizione `$`, solo valore interno
+* Padre: Stampa, collisioni, termina gioco
 Usa pipe, fai funzioni separate, temporizza bene
 
 

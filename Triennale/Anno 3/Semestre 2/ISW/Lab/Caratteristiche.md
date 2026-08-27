@@ -2,9 +2,7 @@
 cssclasses:
   - isw
 ---
-In queste lezioni facciamo Python. Prima facciamo le basi, poi vedremo i framework necessari per il progetto. Python è molto più semplice e intuitivo dei linguaggi a cui siamo abituati.
-
-# Caratteristiche
+Python è molto più semplice e intuitivo dei linguaggi a cui siamo abituati.
 
 Python è un linguaggio interpretato, quindi dà errori a runtime. Tecnicamente, è compilato in bytecode, ma nel pratico è interpretato.
 
@@ -16,12 +14,4 @@ Ha un sistema di garbage collection, non serve il `free()`. Il binding è fatto 
 
 Come IDE si possono usare PySharp e VSCode. Il progetto verrà spiegato con PySharp, con VSCode le cartelle si gestiscono in modo un po' diverso.
 
-* [[Triennale/Anno 3/Semestre 2/ISW/Lab/Branching|Branching]]
-* [[Triennale/Anno 3/Semestre 2/ISW/Lab/Funzioni|Funzioni]]
-* [[Triennale/Anno 3/Semestre 2/ISW/Lab/Strutture dati|Strutture dati]]
-* [[Oggetti]]
-## Output su terminale
-
-Lo strumento principale di debugging. Si fa con `print()`.
-
-Per il resto, vedi le #slide
+Lo strumento principale di debugging è l'output su terminale. Si fa con `print()`.

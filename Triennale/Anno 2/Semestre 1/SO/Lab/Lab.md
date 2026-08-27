@@ -6,11 +6,12 @@ cssclasses: so
 * [[Triennale/Anno 2/Semestre 1/SO/Lab/Cenni storici|Cenni storici]]
 * [[VM e Dual Boot]]
 * Credo manchi qualcosa qui
-* [[Triennale/Anno 2/Semestre 1/SO/Lab/Bash|Bash]]
+* Bash:
 	* [[Triennale/Anno 2/Semestre 1/SO/Lab/File|File]]
 	* [[Input, output e pipe]]
 	* [[Triennale/Anno 2/Semestre 1/SO/Lab/Regex|Regex]]
 	* [[Bash cheatsheet]]
+	* [[Esercizi]]
 * [[Processi e job]]
 	* [[Socket|Socket]]
 * [[Triennale/Anno 2/Semestre 1/SO/Lab/C|C]]

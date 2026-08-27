@@ -1,4 +1,8 @@
-[[Triennale/Indici/Linguaggi di programmazione/C|C]] [[Triennale/Indici/Linguaggi di programmazione/Python|Python]] [[Triennale/Indici/Linguaggi di programmazione/OCaml|OCaml]] [[MatLab]] [[Java]] [[Triennale/Indici/Linguaggi di programmazione/Bash|Bash]] [[Solidity]] #hub
+[[Altro/Linguaggi di programmazione/C|C]] [[Python|Python]] [[Altro/Linguaggi di programmazione/OCaml|OCaml]] [[MatLab]] [[Java]] [[Bash|Bash]] [[Solidity]] [[Kotlin]] [[Altro/Linguaggi di programmazione/JavaScript|JavaScript]] [[Triennale/Anno 3/Semestre 1/BD/Lab/SQL]]
+
+[[Programmazione Web]]
+
+#hub
 
 ## Indice carino forse
 
@@ -65,10 +69,11 @@
 
 * <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/Cenni storici|Cenni storici]]</span>
 * <span class="so">[[VM e Dual Boot]]</span>
-* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/Bash|Bash]]</span>
+* Bash
 	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/File|File]]</span>
 	* <span class="so">[[Input, output e pipe]]</span>
 	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/Regex|Regex]]</span>
+	* <span class="so">[[Esercizi|Esercizi]]</span>
 * <span class="so">[[Processi e job]]</span>
 * <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/C|C]]</span>
 	* <span class="so">[[GCC]]</span>
@@ -146,6 +151,7 @@
 
 ### Un po' di Python
 
+- <span class="isw">[[Caratteristiche]]</span>
 - <span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Branching|Branching]]</span>
 - <span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Strutture dati|Strutture dati]]</span>
 - <span class="isw">[[Classi]]</span>
@@ -160,7 +166,7 @@
 - <span class="fpw">[[Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL|SQL]]</span>
 - <span class="fpw">[[CSS]]</span>
 - <span class="fpw">[[HTML e form]]</span>
-- <span class="fpw">[[JavaScript]]</span>
+- <span class="fpw">[[Triennale/A scelta/Semestre 2/FPW/Teoria/JavaScript]]</span>
 - <span class="fpw">[[Suddivisione di una pagina HTML]]</span>
 - <span class="fpw">[[Ancora CSS]]</span>
 - <span class="fpw">[[Vue]]</span>
@@ -186,23 +192,23 @@
 ## Unsorted
 
 
-[[Triennale/Anno 2/Semestre 1/ALF/File/Regex]]
-[[Triennale/Anno 3/Semestre 1/BD/Lab/SQL]]
-[[Anomalie]]
-[[Hashing]]
-[[Triennale/Anno 3/Semestre 1/BD/Teoria/Memoria]]
-[[Progettazione]]
-[[Query innestate]]
-[[Viste]]
-[[Activity]]
-[[XML]]
-[[Android Studio]]
-[[Figma]]
-[[Introduzione ad Android Studio]]
-[[Triennale/Anno 3/Semestre 1/LiP/Progetto/Progetto]]
-[[Triennale/Anno 3/Semestre 2/ISW/Lab/Branching]]
-[[Classi]]
-[[Triennale/Anno 3/Semestre 2/ISW/Lab/Funzioni]]
-[[Oggetti]]
+<span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/File/Regex]]</span>
+<span class="bd">[[Triennale/Anno 3/Semestre 1/BD/Lab/SQL]]</span>
+<span class="bd">[[Anomalie]]</span>
+<span class="bd">[[Hashing]]</span>
+<span class="bd">[[Triennale/Anno 3/Semestre 1/BD/Teoria/Memoria]]</span>
+<span class="bd">[[Progettazione]]</span>
+<span class="bd">[[Query innestate]]</span>
+<span class="bd">[[Viste]]</span>
+<span class="ium">[[Activity]]</span>
+<span class="ium">[[XML]]</span>
+<span class="ium">[[Android Studio]]</span>
+<span class="ium">[[Figma]]</span>
+<span class="ium">[[Introduzione ad Android Studio]]</span>
+<span class="lip">[[Triennale/Anno 3/Semestre 1/LiP/Progetto/Progetto]]</span>
+<span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Branching]]</span>
+<span class="isw">[[Classi]]</span>
+<span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Funzioni]]</span>
+<span class="isw">[[Oggetti]]</span>
 [[Triennale/Anno 3/Semestre 2/ISW/Lab/Python]]
-[[Agile testing]] [[Refactoring]] [[Debito tecnico]] [[Testing]] [[Unit testing con LLM]] [[Prototipi]]
+<span class="isw">[[Agile testing]]</span> <span class="isw">[[Refactoring]]</span> <span class="isw">[[Debito tecnico]]</span> <span class="isw">[[Testing]]</span> <span class="isw">[[Unit testing con LLM]]</span> <span class="ium">[[Prototipi]]</span>

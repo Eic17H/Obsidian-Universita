@@ -7,7 +7,7 @@ Un `uint` ha di default 256 bit. Possiamo specificare il numero di bit, per esem
 Le variabili dichiarate nel corpo del contratto, quindi fuori da una funzione, sono *state variables*, e quindi sono scritte nella blockchain. Se invece sono dichiarate dentro una [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Funzioni|funzione]], sono variabili locali.
 
 ```Solidity
-pragma solidity ^0.8.0
+pragma solidity ^0.8.0;
 
 contract MyContract {
 	string public stringa = "Hello world";

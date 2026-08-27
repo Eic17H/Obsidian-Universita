@@ -9,6 +9,6 @@ cssclasses:
 * [[Suddivisione di una pagina HTML]]
 * [[Search Engine Optimization]]
 * [[CSS]]
-* [[JavaScript]]
+* [[Triennale/A scelta/Semestre 2/FPW/Teoria/JavaScript]]
 
 #modulo

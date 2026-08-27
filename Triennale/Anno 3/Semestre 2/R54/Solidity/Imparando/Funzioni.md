@@ -1,7 +1,7 @@
 Possiamo dichiarare funzioni.
 
 ```Solidity
-pragma solidity ^0.8.0
+pragma solidity ^0.8.0;
 
 contract MyContract {
 	string nome = "Massimo";
@@ -39,7 +39,7 @@ Le funzioni si dichiarano con `function`, e il tipo di ritorno si scrive come ul
 Possiamo anche dichiarare nuovi modificatori e applicarli alle funzioni:
 
 ```Solidity
-pragma solidity ^0.8.0
+pragma solidity ^0.8.0;
 
 contract MyContract {
 	modifier soloProprietario {
@@ -50,6 +50,10 @@ contract MyContract {
 ```
 
 Usiamo la keyword `require`, e mettiamo come primo parametro un'espressione booleana che deve essere vera, e come secondo parametro il messaggio di errore. Questo che abbiamo creato fa sì che chi chiama la funzione debba sempre essere il proprietario del contratto.
+
+`_` invece rappresenta il corpo della funzione modificata. Questo è perché il corpo del modificatore non è altro che del normalissimo codice che viene eseguito *al posto* della funzione modificata, ed è per questo che mettiamo `_` per includere anche il codice originale. Questo è utile perché così possiamo anche aggiungere codice *dopo* quello della funzione e non solo prima.
+
+Non possiamo mettere `return` nei modificatori.
 
 ## Constructor
 

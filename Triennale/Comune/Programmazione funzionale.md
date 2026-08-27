@@ -5,3 +5,5 @@ In questo paradigma, le funzioni sono un tipo di dato.
 Un concetto fondamentale sono le <span class="alf">[[funzioni di secondo ordine]]</span>, funzioni che hanno come parametri o come risultato delle funzioni. Un esempio molto semplice è la derivata, che prende in input una funzione e ne restituisce un altra, per esempio, se indichiamo le funzioni come $input\mapsto output$, $D(x \mapsto x^2)=(x\mapsto 2x)$, questa $D()$ è una funzione di secondo ordine.
 
 Quando applichiamo una funzione, guardiamo il tipo in input e il tipo in output ([[analisi dimensionale]]). In questo caso, il tipo di una funzione include anche il suo tipo in input e in output, quindi l'input di $D()$ non può essere una funzione qualsiasi, deve essere una funzione $\mathbb R \to \mathbb R$. Non puoi fare la derivata, per esempio, di $iszero()$, che è $\mathbb R \to \mathbb {Bool}$.
+
+#hidden

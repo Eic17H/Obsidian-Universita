@@ -1,4 +1,3 @@
-* [[Dimostrazioni]]
 * [[Teoria degli Insiemi|Teoria degli Insiemi]]
 * [[Relazioni e funzioni]]
 * [[Topologia della retta]]

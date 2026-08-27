@@ -1,2 +1,6 @@
+---
+cssclasses:
+  - isw
+---
 
 #empty

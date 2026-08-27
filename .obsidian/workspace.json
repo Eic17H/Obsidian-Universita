@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a50939876b95c425",
+            "id": "3e19e26a541ef5ce",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -18,21 +18,34 @@
             }
           },
           {
-            "id": "958e90bd81f8fc56",
+            "id": "adeb800979dacac9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Triennale/Anno 2/Semestre 1/SO/Lab/Lab.md",
-                "mode": "preview",
+                "file": "Triennale/Indici/Categorie/Programmazione.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab"
+              "title": "Programmazione"
+            }
+          },
+          {
+            "id": "c991f0517b7dd28b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Altro/Linguaggi di programmazione/SQL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +120,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Triennale/Anno 2/Semestre 1/SO/Lab/Lab.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,44 +195,44 @@
       "improved-random-note:Open improved random note": false
     }
   },
-  "active": "958e90bd81f8fc56",
+  "active": "3e19e26a541ef5ce",
   "lastOpenFiles": [
-    "Triennale/Anno 2/Semestre 1/SO/Lab/VM e Dual Boot.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab/Lab.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab/Cenni storici.md",
-    "Triennale/Indici/Linguaggi di programmazione/C.md",
-    "Triennale/Anno 2/Semestre 1/SO/Lab/Bash.md",
-    "Triennale/Indici/Linguaggi di programmazione/Solidity.md",
+    "Triennale/Indici/Categorie/Matematica.md",
+    "Altro/Linguaggi di programmazione/SQL.md",
     "Triennale/Indici/Categorie/Programmazione.md",
-    "Triennale/Indici/Categorie/Programmazione v2.md",
-    "Triennale/Untitled 2.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Relazione.md",
-    "Triennale/Anno 3/Semestre 1/IUM/Teoria/Requisiti.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Eventi.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Interfacce.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Introduzione.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Strutture dati.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Tipi e variabili.md",
-    "Triennale/Anno 3/Semestre 2/R54/Smart contracts analysis and verification.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Contratti.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Funzioni.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Visibilità.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Condizionali.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Operatori.md",
-    "Triennale/Anno 1/Semestre 1/FDI/Fondamenti di Informatica.md",
-    "Indice.md",
-    "Triennale/Indici/Linguaggi di programmazione/Icone/Solidity.png",
+    "Triennale/Indici/Categorie/Linguaggi formali.md",
+    "Triennale/Indici/Categorie/Logica.md",
+    "Altro/Linguaggi di programmazione/Kotlin.png",
     "Immagini/Pasted image 20260823105620.png",
+    "Altro/Linguaggi di programmazione/Kotlin.md",
+    "Altro/Linguaggi di programmazione/Java.md",
+    "Altro/Linguaggi di programmazione/Icone/JavaScript.png",
+    "Altro/Linguaggi di programmazione/JavaScript.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Android Studio/XML.md",
+    "Triennale/Anno 3/Semestre 1/BD/Teoria/Viste.md",
+    "Altro/Linguaggi di programmazione/Programmazione Web.md",
+    "Triennale/A scelta/Semestre 2/FPW/Laboratorio/SQL.md",
+    "Triennale/Anno 3/Semestre 1/BD/Teoria/Hashing.md",
+    "Triennale/Anno 3/Semestre 1/BD/Teoria/Memoria.md",
+    "Triennale/Anno 3/Semestre 1/BD/Teoria/Normalizzazione.md",
+    "Triennale/Anno 3/Semestre 1/BD/Teoria/Paradigmi.md",
+    "Triennale/Anno 3/Semestre 1/BD/Teoria/Progettazione.md",
+    "Triennale/Anno 3/Semestre 1/BD/Teoria/Query innestate.md",
+    "Triennale/Anno 3/Semestre 1/BD/Lab/SQL.md",
+    "Triennale/Anno 3/Semestre 1/BD/Lab/20251006.md",
+    "Triennale/A scelta/Semestre 2/FPW/Laboratorio/Post e Get.md",
+    "Triennale/A scelta/Semestre 2/FPW/Laboratorio/Ancora server.md",
+    "Triennale/A scelta/Semestre 2/FPW/Laboratorio/Express.md",
+    "Triennale/A scelta/Semestre 2/FPW/Laboratorio/HTML e CSS.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Lab/Introduzione ad Android Studio.md",
+    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Testing.md",
+    "Altro/Linguaggi di programmazione/Icone/Solidity.png",
     "Immagini/Pasted image 20260826145519.png",
     "Immagini/Pasted image 20260404115105.png",
     "Immagini/Pasted image 20260819190440.png",
     "Immagini/non come ma cosa v3.png",
     "Immagini/Pasted image 20260629163530.png",
     "Immagini/Pasted image 20260820230432.png",
-    "Immagini/Pasted image 20260820230420.png",
-    "Immagini/Pasted image 20260820230407.png",
     "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando",
     "Triennale/Anno 3/Semestre 2/R54/Solidity",
     "Triennale/Anno 3/Semestre 2/R54",
