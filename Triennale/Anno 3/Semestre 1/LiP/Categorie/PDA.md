@@ -14,7 +14,7 @@ Questo esercizio appare come variante di quello con le [[Triennale/Anno 3/Semest
 
 Non puoi codificare $0^n1^n$ con un automa a stati finiti, perché quando hai finito con gli $0$ devi ricordarti quanti ne hai messi quando poi cominci a mettere gli $1$. Un numero finito di stati non basta, e un FSA non ha altri modi di "ricordare".
 
-Una semplice aggiunta che risolve questo problema è una <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Stack|pila]]</span>. Concettualmente, ogni volta che metto $0$ pusho qualcosa, che poi poppo quando devo mettere gli $1$, così sono nella stessa quantità.
+Una semplice aggiunta che risolve questo problema è una <span class="asd">[[Stack|pila]]</span>. Concettualmente, ogni volta che metto $0$ pusho qualcosa, che poi poppo quando devo mettere gli $1$, così sono nella stessa quantità.
 
 ## Formalità
 

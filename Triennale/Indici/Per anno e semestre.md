@@ -20,7 +20,7 @@
 * <span class="so">[[Sistemi Operativi]]</span>
 * <span class="alf">[[Automi e Linguaggi Formali]]</span>
 * <span class="dem">[Dati e Modelli](https://midnight-orchid-79e.notion.site/Dati-e-modelli-6b9dfb9394644449a2d8574d71e7208c)</span>
-* <span class="eed">[[Diritto]]</span> (Forse)
+* <span class="eed">[[Triennale/Anno 2/Semestre 1/EED/Diritto/Diritto]]</span> (Forse)
 * <span class="eed">[[Economia]]</span> (Forse)
 ## Semestre 2
 * <span class="pr2">[[Programmazione 2]]</span>

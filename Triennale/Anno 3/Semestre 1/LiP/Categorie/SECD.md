@@ -10,7 +10,7 @@ cssclasses: lip
 
 ### Notazione
 
-Visto il concetto di <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Stack|stack/pila]]</span>, useremo sia la notazione intuitiva $\underset{\underset C B} A$, sia la notazione corretta $A::B::C$.$\newcommand{\llangle}{⟪}\newcommand{\rrangle}{⟫}$
+Visto il concetto di <span class="asd">[[Stack|stack/pila]]</span>, useremo sia la notazione intuitiva $\underset{\underset C B} A$, sia la notazione corretta $A::B::C$.$\newcommand{\llangle}{⟪}\newcommand{\rrangle}{⟫}$
 
 Quella da usare negli esercizi è ovviamente la seconda, la prima sarà usata nelle spiegazioni per introdurre i concetti base.
 

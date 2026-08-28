@@ -15,9 +15,9 @@ Se $(a, b)$ esiste, allora $a$ e $b$ sono adiacenti. Il lato $(a, b)$ è *incide
 
 I nodi contengono i dati. Gli archi possono anche contenere un numero ciascuno, che rappresenta il "peso" (costo o distanza) dell'arco.
 
-Gli [[Triennale/Anno 1/Semestre 2/ASD/New/Alberi|alberi]] sono un tipo particolare di grafo, che non presentano cicli, cioè tra due nodi c'è uno e un solo percorso.
+Gli [[Alberi|alberi]] sono un tipo particolare di grafo, che non presentano cicli, cioè tra due nodi c'è uno e un solo percorso.
 
-Vedi anche l'[[Triennale/Anno 1/Semestre 2/ASD/New/Dijkstra|algoritmo di Dijkstra]], che permette di trovare in modo efficiente il percorso migliore tra due nodi.
+Vedi anche l'[[Dijkstra|algoritmo di Dijkstra]], che permette di trovare in modo efficiente il percorso migliore tra due nodi.
 
 ## Implementazioni
 
@@ -56,7 +56,7 @@ Usiamo questa struct, ma onestamente non mi torna:
 Mi sa che un grafo viene rappresentato come un array di struct, che hanno come campi le informazioni che ci servono e poi un puntatore a quella struct lì sopra, che usiamo per fare la lista.
 ### Visita in profondità: DFS.
  
-Usando uno [[Triennale/Anno 1/Semestre 2/ASD/New/Stack|stack]] ausiliario, decidiamo da quale nodo partire e lo mettiamo nello stack, poi ripetiamo:
+Usando uno [[Stack|stack]] ausiliario, decidiamo da quale nodo partire e lo mettiamo nello stack, poi ripetiamo:
 * Guardiamo il nodo in cima allo stack e lo chiamiamo $n$;
 * Scorriamo la lista e consideriamo il primo arco $n\to m$ tale che $m$ non è ancora stato visitato;
 	* Se abbiamo trovato un tale arco, pushiamo $m$, lo segniamo come visitato e ripartiamo;

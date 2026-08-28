@@ -32,31 +32,31 @@ Vedi <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</sp
 
 ### Algoritmi e strutture dati semplici
 
-* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Strutture dati]]</span>
-	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Liste|Liste]]</span>
+* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/File/Strutture dati]]</span>
+	* <span class="asd">[[Liste|Liste]]</span>
 		* <span class="asd">[[Liste ordinate]]</span>
-	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Grafi|Grafi]]</span>
-		* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Alberi|Alberi]]</span>
+	* <span class="asd">[[Grafi|Grafi]]</span>
+		* <span class="asd">[[Alberi|Alberi]]</span>
 			* <span class="asd">[[ABR]]</span>
 			* <span class="asd">[[Alberi decisionali]]</span>
-			* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Heap|Heap]]</span>
+			* <span class="asd">[[Heap|Heap]]</span>
 			* <span class="asd">[[Code con priorità]]</span>
 	*  <span class="asd">[[Code|Code]]</span>
 		* <span class="asd">[[Code con priorità]]</span>
 	* <span class="asd">[[Hash]]</span>
-	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Stack|Stack]]</span>
+	* <span class="asd">[[Stack|Stack]]</span>
 * <span class="asd">[[Ordinamento|Algoritmi di ordinamento]]</span>
 	* <span class="asd">[[Merge sort]]</span>
 	* <span class="asd">[[Insertion sort]]</span>
-	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Selection Sort|Selection sort]]</span>
+	* <span class="asd">[[Selection Sort|Selection sort]]</span>
 	* <span class="asd">[[Quick sort]]</span>
 	* <span class="asd">[[Heap sort]]</span>
-* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Algoritmi|Altri algoritmi]]</span>
-	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Dijkstra|Dijkstra]]</span>
+* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/File/Algoritmi|Altri algoritmi]]</span>
+	* <span class="asd">[[Dijkstra|Dijkstra]]</span>
 	* <span class="asd">[[Merge|Merge]]</span>
 	* <span class="asd">[[KMP]]</span>
-	* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Ricerca binaria|Ricerca binaria]]</span>
-* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Complessità|Complessità]]</span>
+	* <span class="asd">[[Ricerca binaria|Ricerca binaria]]</span>
+* <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/File/Complessità|Complessità]]</span>
 
 ### Pochissime cose semi-avanzate
 * <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Altro/Socket]]</span>

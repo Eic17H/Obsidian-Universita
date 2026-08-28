@@ -2,7 +2,7 @@
 cssclasses:
   - asd
 ---
-Dato un [[Triennale/Anno 1/Semestre 2/ASD/New/Grafi|grafo]] e un nodo di partenza, è un metodo efficiente per ottenere il percorso miglire tra quel nodo e tutti gli altri nodi senza percorrere davvero tutti i percorsi possibili del grafo.
+Dato un [[Grafi|grafo]] e un nodo di partenza, è un metodo efficiente per ottenere il percorso miglire tra quel nodo e tutti gli altri nodi senza percorrere davvero tutti i percorsi possibili del grafo.
 
 ## Pseudocodice
 

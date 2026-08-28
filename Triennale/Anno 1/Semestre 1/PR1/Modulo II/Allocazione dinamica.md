@@ -6,8 +6,8 @@ Belli i [[Puntatori|puntatori]], belli gli array, ma utilizzi reali? Saranno uti
 Finora abbiamo avuto array e matrici di grandezza fissa (recuperare frame e stack dalle #slide). Quando dichiariamo una variabile, allochiamo in maniera statica una posizione di memoria. Si fa in compilazione, fa parte del *data frame*. Possiamo invece allocare *a runtime* in maniera dinamica.
 
 Grazie all'allocazione dinamica possiamo fare strutture finora impossibili.
-* **<span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Liste|Liste]]</span>**: blocchi che si comportano come array, ma hanno lunghezza variabile.
-* **<span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/New/Alberi|Alberi]]</span>**: complicati.
+* **<span class="asd">[[Liste|Liste]]</span>**: blocchi che si comportano come array, ma hanno lunghezza variabile.
+* **<span class="asd">[[Alberi|Alberi]]</span>**: complicati.
 
 ## Funzioni
 ### Dimensione

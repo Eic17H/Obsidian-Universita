@@ -52,6 +52,20 @@ typedef struct nodo {
 } Nodo;
 ```
 
+
 ## Operazioni
 
 [[Ordinamento]]
+
+## Da riscrivere per ora incollo
+
+/**
+ * Funzione aggancia(nodo a, nodo b):
+ *      a.next = &b
+ *      #se doppiamente concatenata:
+ *          b.prev = &a
+ *
+ * Funzione inserisci(nodo vecchio, nodo nuovo):
+ *      aggancia(nuovo, vecchio.next)
+ *      aggancia(vecchio, nuovo)
+ */
