@@ -176,18 +176,16 @@
 
 ### Solidity per il tirocinio
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Introduzione|Introduzione]]
-* [[Tipi e variabili]]
-* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Operatori|Operatori]]
+* [[Valori]]
 * [[Condizionali]]
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Funzioni|Funzioni]]
-* [[Visibilità]]
-* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Strutture dati|Strutture dati]]
 * [[Eventi]]
 * [[Ether]]
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Errori|Errori]]
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà|Ereditarietà]]
 * [[Contratti]]
-* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Interfacce|Interfacce]]
+* [[Foundry]]
+* [[Halmos]]
 
 ## Unsorted
 
@@ -212,3 +210,4 @@
 <span class="isw">[[Oggetti]]</span>
 [[Triennale/Anno 3/Semestre 2/ISW/Lab/Python]]
 <span class="isw">[[Agile testing]]</span> <span class="isw">[[Refactoring]]</span> <span class="isw">[[Debito tecnico]]</span> <span class="isw">[[Testing]]</span> <span class="isw">[[Unit testing con LLM]]</span> <span class="ium">[[Prototipi]]</span>
+[[Fuzzing]]

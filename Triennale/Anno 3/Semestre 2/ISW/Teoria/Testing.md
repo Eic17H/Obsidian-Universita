@@ -3,7 +3,7 @@ cssclasses: isw
 ---
 Il testing è un processo sistematico che esegue del software per trovarne i difetti. Il software in questione è detto SUT, System Under Test.
 
-Vedi anche il [[Agile testing|testing in contesto agile]] nello specifico.
+Vedi anche il [[Agile testing|testing in contesto agile]] nello specifico, e altre tecniche come [[fuzzing|fuzzing]].
 ## Definizioni IEEE
 
 > Il **==Software Testing==** è il processo di analisi di un prodotto software per rilevare le differenze tra le condizioni esistenti e richieste (cioè, gli errori) e per valutare le caratteristiche del prodotto software.
