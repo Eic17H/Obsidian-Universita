@@ -5,6 +5,7 @@
 - [ ] <span class="rc">[[Berkeley Socket]]</span>
 - [ ] <span class="lip">[[Tipizzazione]]</span>
 - [ ] <span class="rc">[[KPI]]</span>
-- [ ] <span class="rc">[[RED]]</span>
-- [ ] <span class="rc">[[AQM]]</span>
+- [x] <span class="rc">[[RED]]</span>
+- [x] <span class="rc">[[AQM]]</span>
+- [ ] <span class="isw">[[Decoupling]]</span>
 #hidden

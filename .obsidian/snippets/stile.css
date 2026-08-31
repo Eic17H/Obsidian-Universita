@@ -3,6 +3,10 @@
   --accent-dark: #b94738;
   --accent-light: #760000;
 }
+.dem {
+  --accent-dark: #ff7675;
+  --accent-light: #c9323a;
+}
 .md {
   --accent-dark: #c85371;
   --accent-light: #840e39;

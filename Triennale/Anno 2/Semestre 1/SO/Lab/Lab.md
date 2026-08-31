@@ -3,7 +3,7 @@ cssclasses: so
 ---
 ## Indice
 
-* [[Triennale/Anno 2/Semestre 1/SO/Lab/Cenni storici|Cenni storici]]
+* [[Storia di Linux|Storia di Linux]]
 * [[VM e Dual Boot]]
 * Credo manchi qualcosa qui
 * Bash:

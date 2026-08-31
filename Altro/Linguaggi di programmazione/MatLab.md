@@ -1,9 +1,11 @@
 ---
 icon: MatLab.png
 ---
-Vedi <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab|CSMN]]</span> e la <span class="csmn">[[Relazione|relazione]]</span>
+Vedi <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab|CSMN]]</span> e la <span class="csmn">[[Relazione|relazione]]</span>.
 
-## Tentativo di indice ordinato
+In MatLab tutto è una matrice. Infatti si chiama MatLab e non MathLab, Mat di matrice.
+
+## Indice
 
 Come si usa MatLab:
 * <span class="csmn">[[Introduzione a MatLab]]</span>

@@ -20,7 +20,7 @@ I link in questo documento sono trasandati e alcuni sono stati rinominati automa
 * [[Insiemi|Insiemi]]
 * [[Triennale/Anno 2/Semestre 1/ALF/File/Funzioni]]
 * [[Regole di inferenza]]
-* [[ALF/File/Ricorsione|Ricorsione]]
+* [[Triennale/Anno 2/Semestre 1/ALF/File/Ricorsione|Ricorsione]]
 * [[Passaggi di stato]]
 * [[Triennale/Anno 2/Semestre 1/ALF/File/Linguaggi formali]]
 * [[Triennale/Anno 2/Semestre 1/ALF/File/Automi|Automi]]

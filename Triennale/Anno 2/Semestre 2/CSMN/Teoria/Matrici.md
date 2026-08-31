@@ -33,15 +33,15 @@ Lo spazio delle matrici $R^{mxn}$ è uno spazio lineare. C=A+B, allora tutti gli
 
 Non è sempre definito, tra due matrici può non essere possibile fare un prodotto.
 
-Il caso più semplice è il prodotto di una matrice con una sola riga per una con una sola colonna, con la stessa lunghezza, è a11\*b11 + a12\*b21 + ...
+Il caso più semplice è il prodotto di una matrice con una sola riga per una con una sola colonna, con la stessa lunghezza, è $a_{1,1}\cdot b_{1,1} + a_{1,2}\cdot b_{2,1} + \ldots$.
 
-Se A è mxn e B è pxq, allora n=p, altrimenti non posso fare la moltiplicazione. mxn pxq, mnemonico, quelli interni n=p, quelli esterni il risultato è mxq. Importante.
+Se $A$ è $m\times n$ e $B$ è $p\times q$, allora $n=p$, altrimenti non posso fare la moltiplicazione. $m\times n$ e $p\times q$, mnemonico, quelli interni $n=p$, quelli esterni il risultato è $m \times q$. Importante.
 
 Il prodotto tra matrici non è argomento d'esame. È una cosa talmente di base che devi saperla fare in fretta, perché si usa per gli argomenti d'esame.
 
-È come un prodotto scalare tra due vettori. Quindi il prodotto righe per colonne è il prodotto scalare tra tutte le righe e tutte le colonne. cij = \<a(riga i), b(colonna j)> (\<,> è il prodotto scalare). Trattiamo tutti i vettori come matrici colonna. Quindi $<\underline{x},\underline{y}> = \underline{x}^T\underline{y}$. Trattiamo tutto come matrice, così come fa MatLab, che è MatLab e non MathLab perché è Mat di Matrice. Infatti se gli fai il prodotto scalare col `for` lo fa lentamente, se glielo fai con l'operazione matriciale lo fa molto più efficientemente.
+È come un prodotto scalare tra due vettori. Quindi il prodotto righe per colonne è il prodotto scalare tra tutte le righe e tutte le colonne. $c_{i,j}= \langle a(\text{riga }i), b(\text{colonna }j)\rangle$ ($\langle,\rangle$ è il prodotto scalare). Trattiamo tutti i vettori come matrici colonna. Quindi $\langle\underline{x},\underline{y}\rangle = \underline{x}^T\underline{y}$. Trattiamo tutto come matrice, così come fa MatLab, che è MatLab e non MathLab perché è Mat di Matrice. Infatti se gli fai il prodotto scalare col `for` lo fa lentamente, se glielo fai con l'operazione matriciale lo fa molto più efficientemente.
 
-I vettori sono sempre in colonna. Se è una riga, è un vettore trasposto. Il vangelo. Abbiamo $x$ e $y$ in $R^n$. $\underline{x}^Ty$ è una matrice 1x1, $\underline{x}\underline{y}^T$ è una matrice nxn.
+I vettori sono sempre in colonna. Se è una riga, è un vettore trasposto. Il vangelo. Abbiamo $x$ e $y$ in $R^n$. $\underline{x}^Ty$ è una matrice $1\times1$, $\underline{x}\underline{y}^T$ è una matrice $n \times n$.
 
 Il prodotto tra matrici è associativo $A(BC)=(AB)C$, distributivo, $A(B+C)=AB+AC$. Non è commutativo.
 # $$AB ≠ BA$$
@@ -51,10 +51,7 @@ Altra cosa: $A^TB^T = (BA)^T$.
 
 ## Matrici invertibili
 
-$3$ è un numero invertibile, il suo inverso è $\frac{1}{3}$, perché $3\cdot\frac{1}{3}=1$. L'equivalente di $1$ è $I$, la matrice con $1$ in tutte le "caselle". L'inversa di $A$ si scrive $A^{-1}$, e $AA^{-1}=I$. Deve essere quadrata, perché $AA^{-1} = A^{-1}A$, quindi m=m ed n=n essenzialmente se ci pensi, sono entrambi interni.
-
-$(AB)^{-1} = B^{-1}A^{-1}$
-
+$3$ è un numero invertibile, il suo inverso è $\frac{1}{3}$, perché $3\cdot\frac{1}{3}=1$. L'equivalente di $1$ è $I$, la matrice con $1$ in tutte le "caselle". L'inversa di $A$ si scrive $A^{-1}$, e $AA^{-1}=I$. Deve essere quadrata, perché $AA^{-1} = A^{-1}A$, quindi m=m ed n=n essenzialmente se ci pensi, sono entrambi interni.$$(AB)^{-1} = B^{-1}A^{-1}$$
 In più, $(A^T)^{-1} = (A^{-1})^T$, e si indica anche con $A^{-T}$, e così puoi scegliere quale fare prima, certe volte ti viene molto bene farne una.
 
 Se una matrice è invertibile, le sue colonne o le sue righe sono linearmente indipendenti.
@@ -64,23 +61,23 @@ Se una matrice è invertibile, le sue colonne o le sue righe sono linearmente in
 È una funzione che prende una matrice **quadrata** e mi restituisce un numero, il determinante.
 
 $$
-det: R^{nxn} -|> R
-$$
-$$
-A |-> det(A)
+\begin{matrix*}[l]
+det:&R^{n\times n} &\to& R\\
+&A& \mapsto& det(A)
+\end{matrix*}
 $$
 Si fa con Laplace. È la somma di ogni elemento per la determinante della matrice che si ottiene eliminando la sua riga e la sua colonna, e i segni sono a scacchiera.
 
 $$
 \sum_{j=1}^{n}{(-1)^{i+j}a_{ij}det(A_{ij})}
 $$
-Dove $A_{ij}$ è proprio quella matrice senza la riga i e la colonna j.
+Dove $A_{ij}$ è proprio quella matrice senza la riga $i$ e la colonna $j$.
 
-E quindi il determinante? Una matrice è invertibile solo se ha determinante≠0. Infatti \{\{1;2};\{1;2}} vedi che le colonne sono uguali, mica linearmente indipendenti.
+E quindi il determinante? Una matrice è invertibile solo se ha $det≠0$. Infatti $\begin{bmatrix}1&1\\2&2\end{bmatrix}$ vedi che le colonne sono uguali, mica linearmente indipendenti.
 
 Proprietà:
 
 $det(A^T)=det(A)$
 $det(A^*) = \overline{det(A)}$
 $det(AB) = det(A)·det(B)$
-$det(aA) = a^n · det(A)$, con n dimensione di A. Questa non la ricorda nessuno. Perché? Perché Laplace è ricorsiva.
+$det(aA) = a^n · det(A)$, con $n$ dimensione di $A$. Questa non la ricorda nessuno. Perché? Perché Laplace è ricorsiva.

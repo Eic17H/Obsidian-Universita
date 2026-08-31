@@ -2,7 +2,7 @@
 cssclasses:
   - asd
 ---
-Un heap (o uno heap) è un albero con una proprietà specifica: il dato di ogni nodo è maggiore o uguale al dato dei suoi figli.
+Un heap (o uno heap) è un albero con una proprietà specifica: il dato di ogni nodo è maggiore o uguale al dato dei suoi figli. Questa proprietà è utile per l'[[Heap sort|ordinamento]].
 
 Noi consideriamo gli alberi binari rappresentati [[Alberi#Array|come array]].
 

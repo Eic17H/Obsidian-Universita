@@ -21,9 +21,9 @@ Il libro lo chiama "calcolo dei sequenti", Paoli preferisce "calcolo delle seque
 
 Manipoliamo oggetti formali diversi dagli altri due. Con Hilbert dimostriamo formule di $\mathcal{L}_0$, con la deduzione naturale deriviamo formule di $\mathcal{L}_0$. Qui non operiamo su formule ma su *sequenti* di forma $Γ \Rightarrow Δ$:
 
-> **Sequente** $Γ \Rightarrow Δ$: coppia ordinata di successioni finite o vuote di formule di $\mathcal{L}_0$, separate da un simbolo convenzionale chiamato *freccione*.
+> **Sequente** $Γ \Rightarrow Δ$: <span class="am">[[Coppia ordinata|coppia ordinata]]</span> di successioni finite o vuote di formule di $\mathcal{L}_0$, separate da un simbolo convenzionale chiamato *freccione*.
 
-Attenzione, qui, i simboli $Γ$ e $Δ$, non sono insiemi, ma successioni, dove l'ordine ha importanza. Inoltre, importa anche il numero di occorrenze di ciascuna formula.
+Attenzione, qui, i simboli $Γ$ e $Δ$, non sono <span class="am">[[Teoria degli Insiemi|insiemi]]</span>, ma successioni, dove l'ordine ha importanza. Inoltre, importa anche il numero di occorrenze di ciascuna formula.
 
 Per esempio, una sequenza è:$$p \land q, \; r, \; p\rightarrow q, \; p \rightarrow q \enspace \Rightarrow \enspace q \lor r, \; \lnot p \lor r$$Quello che c'è a sinistra si chiama l'*antecedente* di una sequenza, e quello che c'è a destra si chiama *conseguente*. Ciascuno può essere vuoto, come abbiamo detto, o possono esserlo entrambi. Quindi $\Rightarrow$ è una sequenza.
 

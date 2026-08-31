@@ -9,7 +9,7 @@ Query nidificate, cioè query la cui condizione è formulata usando il risultato
 
 Ci sono operatori quantificati. Per esempio `ANY`, che restituisce `true` se almeno uno dei confronti della sub-query restituisce `true`, o qualcosa del genere... Non si capisce a parole, quindi usiamo un esempio.
 
-```
+```SQL
 SELECT Cognome, Nome
 FROM Studenti
 WHERE Matricola = ANY (SELECT Studente
@@ -29,7 +29,7 @@ La stessa operazione si può fare con una `JOIN`.
 
 Per esempio, trovare l'elemento più basso in un insieme:
 
-```
+```SQL
 SELECT *
 FROM Studenti
 WHERE Anno <= ALL (SELECT Anno
@@ -56,6 +56,6 @@ Una sub-query correlata è una sub-query che usa riferimenti a tabelle della que
 
 ## Scope
 
-[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Scope|Strumenti per la pulizia di pavimenti…?]] Scherzi a parte. Una sub-query vede lo scope della query al livello superiore, ma non il contrario. Quindi può servire invertire query e sub-query per usare lo scopo di una nell'altra.
+<span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Scope|Strumenti per la pulizia di pavimenti…?]]</span> Scherzi a parte. Una sub-query vede lo scope della query al livello superiore, ma non il contrario. Quindi può servire invertire query e sub-query per usare lo scopo di una nell'altra.
 
 All'esame potremo trovare sub-query dentro sub-query, o sub-query affiancate.

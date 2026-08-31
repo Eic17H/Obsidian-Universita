@@ -24,7 +24,7 @@ Vediamo un altro caso: $D=\{\text{soluzioni di }x^8+x^6+x-3=0\}$, è decidibile 
 
 Gli elementi sono distinti, quindi non si ripetono. Un insieme, per esempio, $\{1,1\}$ è in realtà $\{1\}$ semplicemente.
 
-Gli insiemi possono avere qualunque tipo di elemento, potremmo avere insiemi di nomi, insiemi di forme, insiemi di insiemi. Noi però vedremo perlopiù insiemi di numeri, e insiemi di insiemi di numeri. Vedi infatti anche gli [[Insiemi numerici]].
+Gli insiemi possono avere qualunque tipo di elemento, potremmo avere insiemi di nomi, insiemi di forme, insiemi di insiemi. Noi però vedremo perlopiù insiemi di numeri, e insiemi di insiemi di numeri. Vedi infatti anche gli [[insiemi numerici]].
 
 Per indicare che un elemento $a$ è contenuto in un insieme $A$, scriviamo $a \in A$.
 

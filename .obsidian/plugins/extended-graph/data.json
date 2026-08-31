@@ -175,7 +175,7 @@
   "additionalProperties": {},
   "backupGraphOptions": {
     "collapse-filter": false,
-    "search": "-file:Indice -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub",
+    "search": "-file:Indice -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\".canvas\"",
     "showTags": false,
     "showAttachments": false,
     "hideUnresolved": true,
@@ -215,6 +215,13 @@
         "color": {
           "a": 1,
           "rgb": 11024170
+        }
+      },
+      {
+        "query": "path:DeM/",
+        "color": {
+          "a": 1,
+          "rgb": 16737894
         }
       },
       {
@@ -347,7 +354,7 @@
     "repelStrength": 9.7046293666572,
     "linkStrength": 1,
     "linkDistance": 325,
-    "scale": 0.09213980001787346,
+    "scale": 0.042905821378321246,
     "close": false
   },
   "openInNewTab": true,
@@ -391,6 +398,13 @@
             "color": {
               "a": 1,
               "rgb": 11024170
+            }
+          },
+          {
+            "query": "path:DeM/",
+            "color": {
+              "a": 1,
+              "rgb": 16737894
             }
           },
           {
@@ -513,7 +527,7 @@
             }
           }
         ],
-        "search": "-file:Indice -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub",
+        "search": "-file:Indice -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\".canvas\"",
         "hideUnresolved": true,
         "showAttachments": false,
         "showOrphans": false,

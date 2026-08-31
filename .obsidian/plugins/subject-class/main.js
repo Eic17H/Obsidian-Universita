@@ -26,7 +26,7 @@ var import_obsidian = require("obsidian");
 var SemesterCssPlugin = class extends import_obsidian.Plugin {
   // NEW FEATURE EXPERIMENTAL:
   getSubject(file) {
-    const match = file.path.match(/(?:^|\/)Semestre [12]\/([a-zA-Z]+)\//);
+    const match = file.path.match(/(?:^|\/)Semestre [12]\/([a-zA-Z0-9]+)\//);
     if (!match) {
       return null;
     }

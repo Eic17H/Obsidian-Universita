@@ -3,24 +3,25 @@ cssclasses:
   - pr1
 ---
 [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Ricorsione|Ricorsione]].
-Una classe di studenti è una classe di studenti + uno studente, o uno studente da solo.
-classe = classe + studente | studente
+Una classe di studenti è una classe di studenti + uno studente, o uno studente da solo.$$classe := classe + studente\ |\ studente$$
 Se da una classe togli uno studente, o ne aggiungi uno, è ancora una classe.
 Il concetto di ricorsione è legato al concetto di oggetto autosimile.
 Pensa alla scatola del Droste, la cui illustrazione contiene una scatola del Droste.
 Guardi nella foto e dentro c’è la stessa foto, in cui c’è la stessa foto, in cui c’è la stessa foto, ma non puoi zoommare all’infinito, a un certo punto devi trovare la tipa che ti fa 🖕.
 Vedi anche i frattali, e il triangolo di Sierpiński, che è formato da tre triangoli di Sierpiński.
-Se cerchi “<span class="alf">[[ALF/File/Ricorsione|recursion]]</span>” su Google, ti chiede se intendevi scrivere “<span class="am">[[Triennale/Anno 1/Semestre 1/AM/File/Relazioni e funzioni/Ricorsione|recursion]]</span>”.
+Se cerchi “<span class="alf">[[Triennale/Anno 2/Semestre 1/ALF/File/Ricorsione|recursion]]</span>” su Google, ti chiede se intendevi scrivere “<span class="am">[[Triennale/Anno 1/Semestre 1/AM/File/Relazioni e funzioni/Ricorsione|recursion]]</span>”.
 A noi programmatori fa ridere, a qualcun altro sembriamo imbecilli, e forse hanno ragione.
 
-ℕ, successore e precedente, utile. Fattoriale.
-5! = 5×4×3×2×1
-	4! = 4×3×2×1
-		3! = 3×2×1
-			2! = 2×1
-				1! = 1
-Questo è fattibile perché ℕ è ordinato.
-Quindi ∀n∈ℕ∃!m | m=n-1
+$\mathbb N$, successore e precedente, utile. Fattoriale.$$\begin{matrix*}[r]
+5!=5\times4\times3\times2\times1 \\
+4!=4\times3\times2\times1 \\
+3!=3\times2\times1 \\
+2!=2\times1 \\
+1!=1 \\
+\end{matrix*}$$
+
+Questo è fattibile perché $\mathbb N$ è ordinato.
+Quindi $\forall n \in \mathbb N\ \exists ! m \ |\ m = n-1$.
 Puoi anche farlo in ordine inverso, che è utile se vuoi usare l’iterazione anziché la recursione.
 Il metodo iterativo però è meno elegante.
 
@@ -31,7 +32,7 @@ Questa formula nasce da una considerazione di Fibonacci.
 Mai pensato di prendere due conigli? A un mese si riproducono. I conigli scopano molto, devono mantenere questa fama.
 Una coppia, poi 1, 2, 3, 5, 8, già 13, 21, 34, 55.
 Scopano come conigli.
-Al mese i, hai mesei-1+mesei-2 coppie. 89. 144. 233.
+Al mese $i$, hai $mese_i-1+mese_i-2$ coppie. 89. 144. 233.
 
 Con l’iterazione come fai? Non fai. Sì è fattibile ma difficile.
 Ma la formula è già il suo algoritmo iterativo.

@@ -67,7 +67,7 @@
 
 ### Lavorare con Linux
 
-* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/Cenni storici|Cenni storici]]</span>
+* <span class="so">[[Storia di Linux|Storia di Linux]]</span>
 * <span class="so">[[VM e Dual Boot]]</span>
 * Bash
 	* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab/File|File]]</span>
@@ -91,6 +91,9 @@
 * <span class="alf">[[Pattern matching]]</span>
 * <span class="alf">[[Fold left]]</span>
 * <span class="lip">[[Triennale/Anno 3/Semestre 1/LiP/Progetto/Progetto|Progetto di LiP]]</span>
+	* <span class="lip">[[Short circuit]]</span>
+	* <span class="lip">[[Costanti]]</span>
+	* <span class="lip">[[Razionali]]</span>
 
 ### Programmazione orientata agli oggetti in Java
 
@@ -157,7 +160,6 @@
 - <span class="isw">[[Classi]]</span>
 - <span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Funzioni|Funzioni]]</span>
 - <span class="isw">[[Oggetti]]</span>
-- <span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Python|Python generale]]</span>
 
 ### Un po' di programmazione web
 - <span class="fpw">[[Vue]]</span>
@@ -208,5 +210,4 @@
 <span class="isw">[[Classi]]</span>
 <span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Funzioni]]</span>
 <span class="isw">[[Oggetti]]</span>
-[[Triennale/Anno 3/Semestre 2/ISW/Lab/Python]]
 <span class="isw">[[Agile testing]]</span> <span class="isw">[[Refactoring]]</span> <span class="isw">[[Debito tecnico]]</span> <span class="isw">[[Testing]]</span> <span class="isw">[[Unit testing con LLM]]</span> <span class="ium">[[Prototipi]]</span>

@@ -3,7 +3,7 @@ cssclasses: so
 ---
 #hublvl2 #badhub
 
-[[Triennale/Anno 2/Semestre 1/SO/Lab/Cenni storici]]
+[[Storia di Linux]]
 
 [[Triennale/Anno 2/Semestre 1/SO/Lab/File]]
 [[Processi]]

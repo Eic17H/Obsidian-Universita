@@ -1,7 +1,7 @@
 ---
 cssclasses: csmn
 ---
-L'algoritmo riscontra un problema quando il denominatore di $m$ si annulla. Per risolvere questo problema, possiamo scambiare la riga in questione con un'altra riga in modo tale che l'elemento sulla diagonale non sia nullo, ottenendo un'altra matrice equivalente.
+L'[[Metodo di Gauss|algoritmo]] riscontra un problema quando il denominatore di $m$ si annulla. Per risolvere questo problema, possiamo scambiare la riga in questione con un'altra riga in modo tale che l'elemento sulla diagonale non sia nullo, ottenendo un'altra matrice equivalente.
 
 Questo si chiama *pivoting*, e l'elemento diagonale è detto elemento pivot. Per questioni di stabilità numerica, è sempre meglio scambiare con la riga che ha l'elemento massimo, per ottenere la frazione più piccola possibile.
 

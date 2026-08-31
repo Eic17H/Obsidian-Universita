@@ -57,5 +57,12 @@
 [[Complemento]]
 [[Overflow]]
 [[Virgola mobile]]
+[[Triennale/Anno 2/Semestre 1/DeM/Tesine/Ottimizzazione]]
+[[Regressione]]
+[[Simulazione]]
+[[Solver]]
+[[Regressione lineare]]
+[[Triennale/Anno 2/Semestre 1/DeM/Tesine/Ottimizzazione/Ottimizzazione|Ottimizzazione]]
+[[Ottimizzazione discreta]]
 
 #hub

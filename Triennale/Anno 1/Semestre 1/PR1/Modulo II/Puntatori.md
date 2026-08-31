@@ -11,4 +11,6 @@ Per quanto riguarda il tipo, se hai `int a`, allora `&a` sarà di tipo `int*`, e
 
 Vediamo le [[Definizione di tipi|struct]]. Anche le struct sono variabili, e hanno un operatore particolare, `.`. Il grande problema di questo operatore, è che ha precedenza su `*`. Quindi se tu hai il tuo struct `Persona riccardo`, e hai il puntatore `Persona* tizio` che punta a Riccardo, certamente puoi fare `*tizio` per riferirti a Riccardo, ma se provi a fare `*tizio.nome` non funziona, perché diventa `*(tizio.nome)` che non funziona. Dovresti scrivere esplicitamente `(*tizio).nome`, che è orrendo. Quindi invece hanno fatto un altro operatore, e scriviamo `tizio->nome`, senza asterisco.
 
+In ogni caso la priorità degli operatori è fastidiosa, consiglio di usare esplicitamente le parentesi, per esempio in casi come `(*numero)++`, che scritto come `*numero++` diventa `*(numero++)`.
+
 Non puoi dare un valore a caso a un puntatore e dereferenziarlo. Se provi a dereferenziare un puntatore che punta fuori dal tuo territorio, ti dà un errore detto *segmentation fault*, che per gli studenti del C è un incubo ricorrente.

@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - dem
+---
+https://support.microsoft.com/en-us/excel/load-the-solver-add-in-in-excel
 ## Matematica
 
 Ottimizzazione Lineare o Programmazione Lineare		
@@ -6,20 +11,20 @@ Esiste una funzione di cui si ricerca l'ottimo
 	In particolare valori di certe variabili decisionali che massimizzino/minimizzino una funzione	
 	Funzione anche soggetta a vincoli	
 		
-Diciamo che f = c1x1 + c2x2 + …		
-	c1 è il costo/beneficio della variabile decisionale x1 etc	
-	Somma con j da 1 a n di cjxj	
-	f è la funzione obiettivo	
+Diciamo che $f = c_1x_1 + c_2x_2 + …$		
+	$c_1$ è il costo/beneficio della variabile decisionale $x_1$ etc	
+	Somma con $j$ da $1$ a $n$ di $c_jx_j$	
+	$f$ è la funzione obiettivo	
 		
 E poi ci sono dei vincoli		
-	a1,1x1 + a1,2x2 + … + a1,n*xn >= b1	
-	a2,1x2 + a2,2x2 + … etc	
-	o anche <= comunque	
-	b1 è il 1o vincolo	
+	$a_{1,1}x_1 + a_{1,2}x2 + … + a_{1,n}*x_n \geq b_1$	
+	$a_{2,1}x_2 + a_{2,2}x_2 + …$ etc	
+	o anche $\leq$ comunque	
+	$b_1$ è il 1o vincolo	
 		
-Metti che am1=1, amn=0 per ogni x, bm=0		
-	Il vincolo è 1^xj=xj>=0 (o <=0)	
-	Essenzialmente in questo caso con 1 e poi solo 0 sto creando un vincolo sul segno della variabile decisionale	
+Metti che $a_{m,1}=1, a_{m,n}=0 \forall x, b_m=0$ 		
+	Il vincolo è $1^{x_j}=x_j\geq0$ (o $\leq0$)	
+	Essenzialmente in questo caso con $1$ e poi solo $0$ sto creando un vincolo sul segno della variabile decisionale	
 		
 Fine della matematica		
 	Adesso vediamo perché è utile	
@@ -49,3 +54,4 @@ Partiamo dal file excel che c'è su moodle
 Serve l'addin solver (componente aggiuntiva risolutore)
 L'interfaccia ti dice tutto
 Per usarlo devi premere il tasto play schiacciato in alto a destra nel riquadro
+[[Solver|Maggiori dettagli]]

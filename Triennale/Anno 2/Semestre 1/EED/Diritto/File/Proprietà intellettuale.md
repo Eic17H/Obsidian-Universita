@@ -30,7 +30,7 @@ Il diritto d'autore non tutela la semplice idea, ma la sua espressione.
 
 > ***Ius excludendi alios*, diritto esclusivo**: posso escludere altri dal godimento del bene immateriale.
 
-# Contraffazione
+## Contraffazione
 
 > La **contraffazione** è creazione volontaria di confusione.
 

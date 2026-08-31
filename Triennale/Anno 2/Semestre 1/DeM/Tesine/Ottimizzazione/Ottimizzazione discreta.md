@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - dem
+---
+Una variante dell'[[Triennale/Anno 2/Semestre 1/DeM/Tesine/Ottimizzazione/Ottimizzazione|ottimizzazione]].
 ## Introduzione
 
 Ottimizzazione discreta	

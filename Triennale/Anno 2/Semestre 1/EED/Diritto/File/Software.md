@@ -9,3 +9,5 @@ Anche progettazione e pianificazione (la fase immediatamente precedente alla ste
 Il codice è protetto in quanto opera scritta in un linguaggio, come un manuale di istruzioni.
 
 Le parti obbligatorie e standard non sono tutelate.
+
+Il software può essere protetto sia dal [[diritto d'autore]] che dal [[brevetto]].

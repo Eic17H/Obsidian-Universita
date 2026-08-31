@@ -18,7 +18,7 @@ Non ho capito:
 * **RSU** Report Service Unit: si garantisce un pannello di controllo delle prestazioni, di sola lettura;
 * **MSU** Management Service Unit: si garantisce un pannello di controllo che permette di modificare certi parametri, come gestire la banda e gestire i circuiti virtuali.
 
-## KPI
+## [[KPI|KPI]]
 
 Di nuovo non capisco e lo incollo così com'è:
 

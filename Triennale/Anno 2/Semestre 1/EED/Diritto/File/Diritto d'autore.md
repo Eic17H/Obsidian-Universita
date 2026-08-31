@@ -86,3 +86,25 @@ Creo qualcosa, dico che non voglio sia pubblicato, muoio, nessuno può pubblicar
 Creo, non dico niente, muoio, un erede o un legatario può pubblicarlo.
 
 Un legatario è una persona specificata da me.
+
+## Licenza creative commons
+
+Rinuncio ai diritti (tengo la paternità). CC è la più diffusa, ce ne sono altre poco note. Ci sono icone che ti dicono che ne puoi fare.
+
+## Tipi di diritto d'autore
+
+Il diritto morale è inalienabile (non lo posso vendere) e intrasmissibile (non lo posso donare). L'eccezione è il diritto di inedito, un diritto morale che si può trasmettere.
+
+Il diritto economico è diverso. Trasmissione mortis causa testamentale (erede o legatario) o causa legittima (non c'è testamente, va a coniuge, figli o antenati).
+
+Diritti connessi, vedi slide.
+
+## Diritti connessi
+
+AI e artisti, interpreti, esecutori: titolari di diritti connessi. Vedi slide.
+
+## Tecnologia
+
+Con media digitale, non puoi più controllare e limitare la copia. Escamotage: quando compri un dispositivo di archiviazione di massa, paghi un po' un fondo per gli autori.
+
+Posso copiare audio e video su un'USB, ma non software o nient'altro (?).

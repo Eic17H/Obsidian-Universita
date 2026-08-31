@@ -83,7 +83,7 @@ $$
 \dfrac{}{\langle x, \delta \rangle \to \delta(x)}Α \qquad
 \dfrac{}{\langle c, \delta \rangle \to c}Β \qquad
 \dfrac{}{\langle \fun(x,t),\delta\rangle\to \fun(x,t)}Γ \\
-\dfrac{\langle t_1,\delta\rangle \to v_1 \qquad \ldots\ldots \qquad \langle t_{a_{i}}, \delta \rangle v_{a_{i}}}{\langle op_i (t_1, \ldots, t_{a_i}),\delta \rangle \to \widetilde{op}(v_1,\ldots,v_{a_i})}Δ \\
+\dfrac{\langle t_1,\delta\rangle \to v_1 \qquad \ldots\ldots \qquad \langle t_{a_{i}}, \delta \rangle \to v_{a_{i}}}{\langle op_i (t_1, \ldots, t_{a_i}),\delta \rangle \to \widetilde{op}(v_1,\ldots,v_{a_i})}Δ \\
 \dfrac{\langle t_0, \delta \rangle \to true \qquad \langle t_1,\delta\rangle\to v}{\langle\ifthenelse{t_0}{t_1}{t_2},\delta\rangle\to v} Ε \qquad
 \dfrac{\langle t_0, \delta \rangle \to false \qquad \langle t_2,\delta\rangle\to v}{\langle\ifthenelse{t_0}{t_1}{t_2},\delta\rangle\to v} Ζ \\
 \dfrac{\langle t_1,\delta\rangle\to \fun(x,t) \qquad \langle t_2,\delta \rangle \to v' \qquad \langle t,\delta[x/v']\rangle\to v}{\langle \apply(t_1,t_2),\delta \rangle \to v}Η \\
@@ -112,7 +112,23 @@ Lui l'ha fatta uguale, solo che anziché scrivere ogni volta $\bot[f/\fun(x,x)]$
 
 #### Small-step
 
-Come primo tentativo, userò la notazione sbagliata per avere qualcosa di familiare. E per ora non ho voglia di copiare tutte le regole, prima o poi lo farò.
+$$\begin{matrix}
+\dfrac{}{\llangle x, \Delta \rrangle \too \llangle top(\Delta)(x),\Delta\rrangle}(1) \qquad
+\dfrac{}{\llangle\textbf{op}_i(v_1,\ldots,v_{a_i}),\Delta\rrangle\too\llangle v, \Delta \rrangle}(2) \\
+\dfrac{\llangle t_j, \Delta \rrangle \too \llangle t'_j, \Delta' \rrangle}{\llangle \textbf{op}_i(v_1,\ldots,v_{j-1},t_j,\ldots,t_{a_i}),\Delta \rrangle \too \llangle \textbf{op}_i(v_1,\ldots,v_{j-1},t'_j,\ldots,t_{a_i}),\Delta'\rrangle}(3) \\
+\dfrac{}{\llangle \ifthenelse{true}{t_1}{t_2},\Delta\rrangle\too\llangle t_1,\Delta\rrangle}(4) \qquad
+\dfrac{}{\llangle\ifthenelse{false}{t_1}{t_2},\Delta\rrangle\too\llangle t_2,\Delta\rrangle}(5) \\
+\dfrac{\llangle t_0, \Delta \rrangle \too \llangle t_0', \Delta' \rrangle}{\llangle\ifthenelse{t_0}{t_1}{t_2},\Delta\rrangle\too\llangle\ifthenelse{t_0'}{t_1}{t_2},\Delta'\rrangle}(6) \\
+\dfrac{}{\llangle\apply(\fun(x,t),v),\Delta\rrangle\too\llangle funblock(t),push(top(\Delta)[x/v]),\Delta\rrangle}(7) \\
+\dfrac{\llangle t_1, \Delta \rrangle \too \llangle t_1', \Delta' \rrangle}{\llangle\apply(t_1,t_2),\Delta\rrangle\too\llangle \apply(t_1',t_2),\Delta'\rrangle}(8) \\
+\dfrac{\llangle t_2, \Delta \rrangle \too \llangle t_2', \Delta' \rrangle}{\llangle \apply(\fun(x,t),t_2),\Delta\rrangle\too\llangle \apply(\fun(x,t),t_2'),\Delta'\rrangle}(9) \\
+\dfrac{\llangle t,\Delta\rrangle \too \llangle t',\Delta'\rrangle}{\llangle funblock(t),\Delta\rrangle\too\llangle funblock(t'),\Delta'\rrangle}(10) \qquad
+\dfrac{}{\llangle funblock(v),\Delta\rrangle\too\llangle v,pop(\Delta)\rrangle}(11) \\
+\dfrac{\llangle t_1, \Delta \rrangle \too \llangle t_1', \Delta' \rrangle}{\llangle \letin{x=t_1}{t_2},\Delta\rrangle\too\llangle \letin{x=t_1'}{t_2},\Delta\rrangle}(12) \\
+\dfrac{}{\llangle \letin{x=v}{t},\Delta\rrangle\too\llangle funblock(t),push(top(\Delta)[x/v],\Delta)\rrangle}(13)
+\end{matrix}$$
+
+Come primo tentativo, userò la notazione sbagliata per avere qualcosa di familiare.
 
 $$
 \dfrac{}{\llangle \letin{f=fun(x,x)}{\apply(f,1)},\ push(\bot,emptystack)\rrangle \too \llangle funblock(\apply(f,1)),\push{\bot[f/fun(x,x)]}{\bot}\rrangle}(13),\qquad
@@ -144,3 +160,6 @@ Perché al secondo passaggio non posso usare la $(10)$? Perché richiederebbe pi
 
 CE L'HO FATTA. È identica a quella del prof. Dai non è così male. Lo so che questi dovrebbero essere appunti da cui studiare per quelli degli anni dopo ma questa è letteralmente la prima volta che provo a fare questo tipo di esercizio.
 
+### Appello del 3 Settembre 2026
+
+Ha ridato le stesse regole. Il file si chiama `2025foglioregoleEsempio.pdf`, quindi immagino rimanga lo stesso per tutto l'anno accademico. Detto che da Ottobre non c'è più Pinna e rimane solo Bartoletti, quindi si vedrà.

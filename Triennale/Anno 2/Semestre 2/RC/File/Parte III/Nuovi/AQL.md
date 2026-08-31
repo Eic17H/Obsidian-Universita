@@ -9,4 +9,4 @@ I router RED usano un filtro passa-basso (low-pass filter) per il calcolo dell'A
 È una media dinamica pesata esponenziale (EWMA - Exponential Weighted
 Moving Average):$$avg' = (1-w_q)\cdot avg+w_qq$$Dove il peso $w_q$ è una costante del tempo.
 
-OH MADONNA QUA C'è UN BEL PO' DA DIRE, pagina 172, questa parte è assurda.
+Ci sono un sacco di cose incomprensibili a pagina 172. Essenzialmente dice che è importante scegliere un buon valore per $w_q$, un buon valore indicativo è $0.002$.
