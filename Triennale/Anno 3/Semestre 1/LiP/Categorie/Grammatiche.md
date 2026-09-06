@@ -1,6 +1,7 @@
 ---
 cssclasses: lip
 ---
+Questo esercizio viene proposto anche coi [[PDA|push down automata]], la scelta è lasciata allo studente.
 ## Teoria
 
 * [[Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Linguaggi|Linguaggi]]
@@ -21,7 +22,6 @@ L'obiettivo degli esercizi è, dato un linguaggio, scrivere una grammatica che g
 
 Le regole di sostituzione si chiamano produzioni.
 
-Questo esercizio ha una variante coi [[PDA|push down automata]].
 ## Esercizi
 
 ### 10 Luglio 2026

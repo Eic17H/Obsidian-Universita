@@ -10,4 +10,4 @@ Il codice è protetto in quanto opera scritta in un linguaggio, come un manuale 
 
 Le parti obbligatorie e standard non sono tutelate.
 
-Il software può essere protetto sia dal [[diritto d'autore]] che dal [[brevetto]].
+Il software può essere protetto sia dal [[Diritto d'autore]] che dal [[Brevetto]].

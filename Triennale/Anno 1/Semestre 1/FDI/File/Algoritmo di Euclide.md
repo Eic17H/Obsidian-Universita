@@ -29,6 +29,7 @@ Euclide ha ideato un algoritmo che non usa la scomposizione in fattori:
 * Se $a<b$, scambiali;
 * Se $a\%b=0$, il risultato è $b$;
 * Altrimenti, $a$ prende il valore di $b$, $b$ prende il valore di $a\%b$ e si ricomincia.
+
 Sappiamo se converge? Cioè, sappiamo se termina?
 $0<r<b$, sempre. Ma visto che il nuovo $b$ è il vecchio $r$, $b$ diminuisce sempre, e così anche $r$. Una serie di naturali che diminuisce sempre prima o poi converge a $0$.
 

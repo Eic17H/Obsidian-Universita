@@ -297,7 +297,7 @@ Inoltre, e spero tantissimo che questa sia vera, una funzione come valore di rit
 
 Qui c'è un problema. La persona che ha dato la soluzione dice che la riga 25 ha `w=` e non `x=`. Con scope dinamico non cambia, ma con le variabili passate per riferimento credo cambi eccome. Per poter confrontare la soluzione con la sua, considererò il codice modificato.
 
-Vediamo il mio albero e la mia call stack. Nell'albero ho lasciato i valori vecchi barrati (che è equivalente ad avere uno stack di valori per ogni simbolo), così si può confrontare lo storico dei valori nella vostra esecuzione.
+Vediamo il mio albero e la mia call stack. Nell'albero ho lasciato i valori vecchi barrati (che è equivalente ad avere uno stack di valori per ogni simbolo), così si può confrontare lo storico dei valori nella vostra esecuzione. Ho chiamato $α$ il blocco anonimo `{}`.
 
 $$\begin{matrix}
 \textbf{ENV TREE}\\
@@ -333,7 +333,7 @@ $$\begin{matrix}
 
 Appunto alla fine $x@α$ vale $22$. Vediamo adesso quelli che sono praticamente dei log che ho fatto durante l'esecuzione.
 
-*  Allora, in questo momento ho lo stack $f::h1::g::{}::Global$. Sto eseguendo $f$, che ha $[y/x@Global]$. `y=y+x`. $x$ prende quella del $Global$, che prima dell'esecuzione è $3$ e dopo quindi diventa $6$.
+*  Allora, in questo momento ho lo stack $f::h1::g::α::Global$. Sto eseguendo $f$, che ha $[y/x@Global]$. `y=y+x`. $x$ prende quella del $Global$, che prima dell'esecuzione è $3$ e dopo quindi diventa $6$.
 * Poi con `w(x)` vale $3$.
 * Poi con `n=h1(m)-z`, $x@α$ diventa $5$.
 * Sto eseguendo $f(w)$ chiamata da $h2$. $w@h2$ ottiene il valore $8$.

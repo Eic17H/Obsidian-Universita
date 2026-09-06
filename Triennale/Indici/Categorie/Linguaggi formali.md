@@ -1,5 +1,6 @@
 #hub 
 [[Valutazione]]
+[[Tipizzazione OCaml-like]]
 [[Formalità]]
 [[Aritmetica non Tipizzata]]
 [[Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Automi]]
@@ -15,7 +16,7 @@
 [[Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Tipi]]
 [[λ-calcolo]]
 [[λ-calcolo tipizzato]]
-[[Triennale/Anno 3/Semestre 1/LiP/Categorie/Linguaggi]]
+[[Grammatiche]]
 [[Triennale/Anno 3/Semestre 1/LiP/Categorie/Scope]]
 [[SECD]]
 [[Tipizzazione]]

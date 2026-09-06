@@ -1,7 +1,7 @@
 ---
 cssclasses: lip
 ---
-Questo quesito ha un'altra variante, vedi [[SECD]].
+Questo quesito ha un'altra variante, vedi [[SECD]], anche se credo sia stata abbandonata.
 ## Teoria
 
 * [[Semantica]]
@@ -42,7 +42,6 @@ Questa me la sto inventando ma serve per fare un esempio veloce:
 Con queste regole semplici, vediamo un esempio intero:$\newcommand{\aligndown}{\genfrac{}{}{0pt}{0}{}}$
 
 > Partendo dal contesto vuoto, vogliamo valutare $let\ x=5\ in\ x+0$. Costruiamo l'albero partendo dalla radice.$$\dfrac{}{\langle let\ x=5\ in\ x+0, \bot \rangle \to \ldots}$$Dobbiamo trovare una regola la cui radice ha una forma che corrisponde a quella che ho scritta qui. L'unica è $\text{LetIn}$.$$\dfrac{\langle 5,δ\rangle\to\ldots \qquad \langle x+0,δ[\ldots] \rangle\to\ldots}{\langle let\ x=5\ in\ x+0, \bot \rangle \to \ldots}\text{LetIn}$$La forma è quella, ma al posto dei puntini non sappiamo ancora cosa mettere. L'unico ramo che ha informazioni complete a sinistra del $\to$ è quello sinistro, quindi proseguiamo con quello. La sua struttura è quella della regola $\text{Const}$.$$\dfrac{\dfrac{}{\langle 5,δ\rangle\to5}\text{Const} \qquad \aligndown{\langle x+0,δ[\ldots] \rangle\to\ldots}}{\langle let\ x=5\ in\ x+0, \bot \rangle \to \ldots}\text{LetIn}$$Ottenuto un valore lì, la regola $\text{LetIn}$ ci dice dove copiarla (nella formula sarebbe il $v_1$).$$\dfrac{\dfrac{}{\langle 5,δ\rangle\to5}\text{Const} \qquad \aligndown{\langle x+0,δ[x/5] \rangle\to\ldots}}{\langle let\ x=5\ in\ x+0, \bot \rangle \to \ldots}\text{LetIn}$$Non possiamo ancora usare il valore della variabile, perché a sinistra non abbiamo $x$ ma $x+0$. Fortunatamente corrisponde a un'altra regola.$$\dfrac{\dfrac{}{\langle 5,δ\rangle\to5}\text{Const} \qquad \dfrac{\langle x,δ[x/5] \rangle\to\ldots}{\langle x+0,δ[x/5] \rangle\to\ldots}\text{PlusZero}}{\langle let\ x=5\ in\ x+0, \bot \rangle \to \ldots}\text{LetIn}$$Adesso sì che possiamo valutare quel ramo.$$\dfrac{\dfrac{}{\langle 5,δ\rangle\to5}\text{Const} \qquad \dfrac{\dfrac{}{\langle x,δ[x/5] \rangle\to5}\text{Var}}{\langle x+0,δ[x/5] \rangle\to\ldots}\text{PlusZero}}{\langle let\ x=5\ in\ x+0, \bot \rangle \to \ldots}\text{LetIn}$$E ora propaghiamo verso il basso seguendo le regole a ritroso. Importantissimo: facciamo così, non perché in automatico il valore a destra della freccia si copia all'infinito in basso, ma perché quegli slot hanno la stessa metavariabile a ogni passo, cioè attraversando la riga del $\text{PlusZero}$ copio il valore dallo slot $v$ all'altro slot $v$. E lo stesso vale per la regola $\text{LetIn}$.$$\dfrac{\dfrac{}{\langle 5,δ\rangle\to5}\text{Const} \qquad \dfrac{\dfrac{}{\langle x,δ[x/5] \rangle\to5}\text{Var}}{\langle x+0,δ[x/5] \rangle\to5}\text{PlusZero}}{\langle let\ x=5\ in\ x+0, \bot \rangle \to 5}\text{LetIn}$$Finito.
-
 ### Small-step
 
 Questa è più difficile da capire, quindi la vediamo in funzione delle sue differenze dalla big-step.
@@ -67,9 +66,11 @@ p_3 & \too & (r3) \\
 p_4 & \too & (a4) \\
 p_5
 \end{matrix*}
-\end{matrix*}$$Qui ho numerato assiomi e regole di inferenza, ma questa volta anche il prof le numera. Sorprendentemente, la seconda versione è più difficile da digitare in LaTeX, almeno col metodo (orrendo) che ho usato finora. La cosa fondamentale qui, è che vietiamo assolutamente alberi con più di due nodi; quindi, anche se trovi qualcosa che può fare uno step di valutazione, se richiede più di due nodi, allora non lo fai, invece fai fare uno step alle parentesi interne.
+\end{matrix*}$$Qui ho numerato assiomi e regole di inferenza, ma questa volta anche il prof le numera. Sorprendentemente, la seconda versione è più difficile da digitare in LaTeX, almeno col metodo (orrendo) che ho usato finora.
 
-Questi $p_n$ sono coppie della forma $\newcommand{\llangle}{⟪}\newcommand{\rrangle}{⟫} \llangle t,\Delta\rrangle$, dove $t$ è un termine e $\Delta$ è una pila (stack) di ambienti. Cioè? Probabilmente dovrei metterlo in un documento a parte solo per la teoria, ma essenzialmente quando cominciamo un nuovo blocco (nel nostro caso con $\textbf{let in}$), praticamente stiamo cambiando l'ambiente. Però quando finisce quel blocco, vogliamo tornare al vecchio ambiente. Quindi all'inizio del blocco pushamo il nuovo ambiente in cima alla pila, usiamo quello come ambiente nel corso del blocco, e poi quando finisce il blocco poppiamo la pila per tornare all'ambiente precedente.$\newcommand{\push}[2]{\underset {#2}{#1}}$
+~~La cosa fondamentale qui, è che vietiamo assolutamente alberi con più di due nodi; quindi, anche se trovi qualcosa che può fare uno step di valutazione, se richiede più di due nodi, allora non lo fai, invece fai fare uno step alle parentesi interne.~~ Credo che questo sia completamente falso, ho capito male. L'esercizio di Settembre 2026 mi sembra impossibile da fare con questa limitazione.
+
+Questi $p_n$ sono coppie della forma $\newcommand{\llangle}{⟪}\newcommand{\rrangle}{⟫} \llangle t,\Delta\rrangle$, dove $t$ è un termine e $\Delta$ è una pila (stack) di ambienti. Cioè? Probabilmente dovrei metterlo in un documento a parte solo per la teoria, ma essenzialmente quando cominciamo un nuovo blocco (nel nostro caso con $\textbf{let in}$), praticamente stiamo cambiando l'ambiente. Però quando finisce quel blocco, vogliamo tornare al vecchio ambiente. Quindi all'inizio del blocco pushiamo il nuovo ambiente in cima alla pila, usiamo quello come ambiente nel corso del blocco, e poi quando finisce il blocco poppiamo la pila per tornare all'ambiente precedente.$\newcommand{\push}[2]{\underset {#2}{#1}}$
 
 > Esempio molto informale (perché lo scrivo non avendo ancora capito l'argomento). $$\llangle \letin{x=2}{x+2},\bot \rrangle \too \llangle x+2, \push {\bot[x/2]} \bot \rrangle \too \llangle 2+2, \bot \rrangle \too \llangle 4, \bot \rrangle$$Chi decide quando finisce un blocco e posso poppare? Delle regole di inferenza fatte bene, che, essendo questo un esempio molto informale, noi non abbiamo.
 ## Esempi
@@ -136,8 +137,7 @@ $$
 $$
 Per ora mi arrendo qui. Sembra giusto. Ma ho capito perché si usa quell'altra notazione.
 
-$$
-\begin{matrix*}[l]
+$$\begin{matrix*}[l]
 \Delta = push(\bot,emptystack) \\
 \Delta' = push(top(\Delta[f/fun(x,x)],\Delta))\\
 \Delta'' = push(top(\Delta'[x/1],\Delta')) \\
@@ -163,3 +163,41 @@ CE L'HO FATTA. È identica a quella del prof. Dai non è così male. Lo so che q
 ### Appello del 3 Settembre 2026
 
 Ha ridato le stesse regole. Il file si chiama `2025foglioregoleEsempio.pdf`, quindi immagino rimanga lo stesso per tutto l'anno accademico. Detto che da Ottobre non c'è più Pinna e rimane solo Bartoletti, quindi si vedrà.
+
+$$\newcommand{\ifthenelse}[3]{\textbf{if } #1 \textbf{ then } #2 \textbf{ else } #3}\newcommand{\letin}[2]{\textbf{let } #1 \textbf{ in } #2}\newcommand{\apply}{\textbf{apply}}\newcommand{\fun}{\textbf{fun}}\newcommand{\too}{\rightsquigarrow}\newcommand{\llangle}{⟪}\newcommand{\rrangle}{⟫}\letin{y=3}{\apply(\apply(\fun(x,x),\fun(z,times(z,2))),y)}$$
+#### Big step
+
+Ho aggiunto nomi (lettere greche) alle regole per rendere chiaro lo svolgimento. I nomi non sono presenti nelle regole fornite da Pinna e non devono essere inclusi nello svolgimento.
+
+$$\begin{matrix}
+\dfrac{}{\langle x, \delta \rangle \to \delta(x)}Α \qquad
+\dfrac{}{\langle c, \delta \rangle \to c}Β \qquad
+\dfrac{}{\langle \fun(x,t),\delta\rangle\to \fun(x,t)}Γ \\
+\dfrac{\langle t_1,\delta\rangle \to v_1 \qquad \ldots\ldots \qquad \langle t_{a_{i}}, \delta \rangle \to v_{a_{i}}}{\langle op_i (t_1, \ldots, t_{a_i}),\delta \rangle \to \widetilde{op}(v_1,\ldots,v_{a_i})}Δ \\
+\dfrac{\langle t_0, \delta \rangle \to true \qquad \langle t_1,\delta\rangle\to v}{\langle\ifthenelse{t_0}{t_1}{t_2},\delta\rangle\to v} Ε \qquad
+\dfrac{\langle t_0, \delta \rangle \to false \qquad \langle t_2,\delta\rangle\to v}{\langle\ifthenelse{t_0}{t_1}{t_2},\delta\rangle\to v} Ζ \\
+\dfrac{\langle t_1,\delta\rangle\to \fun(x,t) \qquad \langle t_2,\delta \rangle \to v' \qquad \langle t,\delta[x/v']\rangle\to v}{\langle \apply(t_1,t_2),\delta \rangle \to v}Η \\
+\dfrac{\langle t_1,\delta \rangle \to v_1 \qquad \langle t_2,\delta[x/v_1]\rangle \to v}{\langle \letin{x=t_1}{t_2},\delta\rangle\to v}Θ
+\end{matrix}$$
+Svolgimento:
+
+$$\dfrac{\dfrac{}{\langle 3, \bot \rangle \to 3}Β \qquad \dfrac{\dfrac {\dfrac{}{\langle \fun(x,x),δ' \rangle \to \fun(x,x)}Γ \qquad \dfrac{}{\langle \fun(z,times(z,2)),δ' \rangle \to \fun(z,times(z,2))}Γ \qquad \dfrac{}{\langle x, δ''\rangle \to \fun(z,times(z,2))}Α}{\langle \apply(\fun(x,x),\fun(z,times(z,2))) , δ' \rangle \to \fun(z, times(z,2))}Η \qquad \dfrac{}{\langle y, δ' \rangle \to 3}Α \qquad \dfrac{\dfrac{}{\langle z, δ''' \rangle \to 3}Α \qquad \dfrac{}{\langle 2 , δ''' \rangle \to 2}Β}{\langle times(z,2), δ''' \rangle \to 6}Δ}{\langle \apply(\apply(\fun(x,x),\fun(z,times(z,2))),y), δ' \rangle \to 6}Η}{\langle\letin{y=3}{\apply(\apply(\fun(x,x),\fun(z,times(z,2))),y)},\bot\rangle \to 6}Θ$$
+Dove: $$\begin{matrix*}[l]
+δ' = \bot[y/3]
+\\ δ'' = δ'[x/\fun(z,times(z,2))]
+\\ δ''' = δ'[z/3]
+\end{matrix*}$$
+<div style="break-after: page;"></div>
+#### Small-step
+
+Come accennato, credo che questo svolgimento sia sbagliato. A questo punto credo che bisogni effettivamente valutare le parentesi più esterne usando come giustificazione lo strato immediatamente più interno, che a sua volta usa una giustificazione, e così via finché non si trova uno strato che si può valutare con un assioma. Presento comunque la mia derivazione probabilmente sbagliata.
+
+$$\begin{matrix*}[l]
+\Delta =  \\
+\Delta' =  \\
+\Delta'' =  \\
+\\
+\begin{matrix*}[l]
+\llangle , \rrangle & \too & \\
+\end{matrix*}
+\end{matrix*}$$

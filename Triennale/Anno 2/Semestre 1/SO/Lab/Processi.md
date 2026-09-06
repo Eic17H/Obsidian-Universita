@@ -3,7 +3,7 @@ cssclasses:
   - so
 ---
 [[Socket]]
-
+[[Processi e job]]
 ## Execl e fork
 
 Programmi diversi che vivono su HW diversi possono comunicare

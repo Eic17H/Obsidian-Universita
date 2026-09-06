@@ -92,5 +92,4 @@ Quindi l'uguaglianza è vera. Il DFA che descrive il linguaggio ha questa funzio
 C'è un modo migliore per rappresentare i DFA? Sì. Il ritorno dei pallogrammi. Quello dell'esempio si rappresenta così:
 
 `class:invert`
-
 ![[Pasted image 20260404115105.png]]

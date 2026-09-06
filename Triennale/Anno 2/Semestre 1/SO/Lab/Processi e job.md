@@ -2,7 +2,7 @@
 cssclasses:
   - so
 ---
-Processi e job.
+[[Processi]] e job.
 I processi creano altri processi.
 Quando immettiamo un comando nella shell, la shell avvia un processo. Anche la shell è un processo. I processi sono organizzati ad albero, la cui radice è `init` o `systemd`. Il kernel avvia init, e init avvia il sistema operativo. Possiamo collegare i processi con le pipe. Un gruppo di processi è un *job*.
 

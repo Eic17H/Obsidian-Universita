@@ -205,9 +205,4 @@
 <span class="ium">[[Android Studio]]</span>
 <span class="ium">[[Figma]]</span>
 <span class="ium">[[Introduzione ad Android Studio]]</span>
-<span class="lip">[[Triennale/Anno 3/Semestre 1/LiP/Progetto/Progetto]]</span>
-<span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Branching]]</span>
-<span class="isw">[[Classi]]</span>
-<span class="isw">[[Triennale/Anno 3/Semestre 2/ISW/Lab/Funzioni]]</span>
-<span class="isw">[[Oggetti]]</span>
 <span class="isw">[[Agile testing]]</span> <span class="isw">[[Refactoring]]</span> <span class="isw">[[Debito tecnico]]</span> <span class="isw">[[Testing]]</span> <span class="isw">[[Unit testing con LLM]]</span> <span class="ium">[[Prototipi]]</span>

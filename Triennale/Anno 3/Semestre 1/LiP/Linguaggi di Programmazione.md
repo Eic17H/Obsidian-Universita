@@ -2,13 +2,16 @@
 cssclasses:
   - lip
 ---
+Questi appunti riguardano la materia così com'era insegnata da Pinna. Da Ottobre 2026, è stato sostituito da Bartoletti. Le modalità d'esame potrebbero essere rimaste simili.
+
+C'è molta confusione in questi appunti.
 ## La materia
 
 Questa materia riguarda le scelte di design dietro i linguaggi di programmazione, le fondamenta matematiche dei linguaggi formali, e come viene definito il comportamento dei linguaggi funzionali e imperativi. Vedi anche [[Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Introduzione|l'introduzione e la storia]].
 
 LiP è una sorta di ALF 2. Inoltre, è più facile se si è anche seguito Istituzioni di Logica.
 
-C'è anche il [[λ-calcolo|λ-calcolo]], molto importante in generale ma abbastanza inutile per l'esame.
+C'è anche il [[λ-calcolo|λ-calcolo]], interessante in generale ma abbastanza inutile per l'esame.
 
 Ah e il [[Triennale/Anno 3/Semestre 1/LiP/Progetto/Progetto|progetto]].
 ## Esame scritto
@@ -19,7 +22,7 @@ Il voto massimo dello scritto è 16.
 
 A dire il vero oltre agli argomenti che ho scritto qui potrebbe essercene un altro che semplicemente non mi è capitato all'esame, devo chiedere.
 
-### [[Triennale/Anno 3/Semestre 1/LiP/Categorie/Linguaggi|Linguaggi]]
+### [[Grammatiche|Linguaggi]]
 
 1 punto.
 

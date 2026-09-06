@@ -4,7 +4,7 @@ cssclasses:
 ---
 Lo stesso argomento: <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/File/Complessità|ASD]]</span>
 
-Un programma complesso può andare bene per un insieme di dati piccolo, ma per quelli grandi essere troppo lento.
+Un [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Algoritmi|programma]] complesso può andare bene per un insieme di dati piccolo, ma per quelli grandi essere troppo lento.
 
 Il caso medio si denota con $O(n)$, il caso ottimo con $Ω(n)$ e il caso pessimo con $Θ(n)$, dove $n$ è la dimensione dei dati.
 A noi interessa $O(n)$.

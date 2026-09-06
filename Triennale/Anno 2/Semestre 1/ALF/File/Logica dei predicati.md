@@ -52,7 +52,7 @@ Come possiamo renderla falsa? Con l'espansione del dominio. Semplicemente se $\m
 
 ### Decidibilità
 
-Come si capisce se è soddisfacibile, insoddisfacibile, una tautologia o una contraddizione? Con la forza bruta, vedi tutte le possibili combinazioni. Computazionalmente <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Complessità|complesso]]</span>.
+Come si capisce se è soddisfacibile, insoddisfacibile, una tautologia o una contraddizione? Con la forza bruta, vedi tutte le possibili combinazioni. Computazionalmente [[Triennale/Comune/Complessità|complesso]].
 
 C'è di meglio? Nella logica proposizionale, sì, ci sono algoritmi. Ma qui non posso provare tutti i modelli, sono infiniti, quindi ***devo*** usare un algoritmo. Spoiler, per la logica dei predicati non esiste questo algoritmo.
 

@@ -179,7 +179,7 @@ Ma Gentzen, sempre nella sua tesi di dottorato, risolve il problema. Professor P
 
 Gentzen dimostra che il *bound* in questione è... 3. Tre? III. Risolto il problema, ez, il problema è sempre decidibile. PER LA LOGICA PROPOSIZIONALE, coi quantificatori è indecidibile.
 
-È un problema *hard*, un problema <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Complessità|esponenziale]]</span>, con parametro la lunghezza dell'input.
+È un problema *hard*, un problema [[Triennale/Comune/Complessità|esponenziale]], con parametro la lunghezza dell'input.
 
 # Armonia
 

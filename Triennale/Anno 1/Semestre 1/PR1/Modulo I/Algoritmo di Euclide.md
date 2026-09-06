@@ -14,4 +14,5 @@ Un metodo più efficiente è l’algoritmo di Euclide. È un algoritmo in quanto
 * È scritto in un linguaggio univoco, quello della matematica;  
 * Ogni passo si svolge in un tempo finito.  
 * Termina perché dopo ogni passo, si ottiene un valore strettamente minore del precedente, e lavoriamo con i numeri naturali. Tutte le serie discendenti di numeri naturali prima o poi terminano: non puoi scendere per sempre nei numeri interi senza andare sotto 0.  
+
 Otteniamo la risposta giusta? Non lo sappiamo, ma almeno sappiamo che termina sempre.

@@ -2,7 +2,7 @@
 cssclasses:
   - asd
 ---
-Dato un [[Grafi|grafo]] e un nodo di partenza, è un metodo efficiente per ottenere il percorso miglire tra quel nodo e tutti gli altri nodi senza percorrere davvero tutti i percorsi possibili del grafo.
+Dato un [[Grafi|grafo]] e un nodo di partenza, è un metodo efficiente per ottenere il percorso migliore tra quel nodo e tutti gli altri nodi senza percorrere davvero tutti i percorsi possibili del grafo.
 
 ## Pseudocodice
 

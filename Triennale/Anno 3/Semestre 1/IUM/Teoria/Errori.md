@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 Vediamo quattro tipi di errori
 ## Svista
 Gli errori non intenzionali nascono da una discrepanza tra intenzione e azione. Può succedere a causa di scarsa abilità fisica o di distrazione.

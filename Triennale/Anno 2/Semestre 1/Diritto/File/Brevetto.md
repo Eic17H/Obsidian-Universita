@@ -14,7 +14,7 @@ Il BEEU è solo brevetto che vale in tutta l’UE.
 
 Se brevetti in più paesi, paghi le tasse separatamente in ciascun paese. La soluzione è il BEEU. Che però non vale in Spagna, perché il BEEU è in inglese, francese e tedesco ma la Spagna vuole le cose fatte in spagnolo.
 
-Questa è la principale differenza col [[diritto d'autore]]: il diritto d'autore si applica in automatico ma l'opera va esternata, il brevetto va richiesto ma non serve esternare l'idea. E poi il brevetto si paga.
+Questa è la principale differenza col [[Diritto d'autore]]: il diritto d'autore si applica in automatico ma l'opera va esternata, il brevetto va richiesto ma non serve esternare l'idea. E poi il brevetto si paga.
 
 Per brevettare un'idea serve una descrizione sufficiente per farla capire a un tecnico di media competenza. Di media competenza, quindi non specializzato.
 

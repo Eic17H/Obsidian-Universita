@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 Sequenze di comandi a cui diamo un nome, argomenti, e forse un valore di ritorno.
 
 ```Python

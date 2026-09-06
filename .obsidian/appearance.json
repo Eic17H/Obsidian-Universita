@@ -4,7 +4,8 @@
     "stile",
     "hide-properties",
     "images",
-    "light-mode"
+    "light-mode",
+    "small-latex"
   ],
   "theme": "obsidian",
   "textFontFamily": "",

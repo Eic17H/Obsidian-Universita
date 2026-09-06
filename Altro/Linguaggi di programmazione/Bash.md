@@ -6,5 +6,6 @@ icon: Bash.png
 [[Input, output e pipe]]
 [[Triennale/Anno 2/Semestre 1/SO/Lab/Regex]]
 [[Esercizi]]
+[[Processi e job]]
 
 #hub

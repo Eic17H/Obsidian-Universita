@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 ## Cosa sono gli LLM?
 
 Sono addestrati su enormi volumi di dati ottenuti sia legalmente che illegalmente per apprendere pattern di regole grammaticali e relazioni semantiche. Hanno molto in comune coi motori di ricerca; ci sono molti motori di ricerca, qua il più comune è Google, in Cina Baidou, in Russia Yandex. In Cina addirittura hanno bloccato Microsoft e Google, che ha funzionato benissimo per sviluppare giganti informatici interni senza dipendere dall'America.

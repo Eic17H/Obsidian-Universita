@@ -2,7 +2,9 @@
 * [[Relazioni e funzioni]]
 * [[Topologia della retta]]
 * [[Calcolo infinitesimale]]
+* [[Limiti]]
 * [[3D]]
+* [[Trigonometria]]
 [[Derivate]] [[Integrali]] [[Triennale/Anno 1/Semestre 1/AM/File/Calcolo infinitesimale/Serie di Taylor|Serie di Taylor]] [[Coppia ordinata]] [[Insiemi numerici]] [[Discontinuità]] [[Equazioni]] [[Triennale/Anno 1/Semestre 1/AM/File/Relazioni e funzioni/Ricorsione|Ricorsione]] [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Algoritmo di Euclide|Algoritmo di Euclide]] [[Triennale/Anno 1/Semestre 1/FDI/File/Algoritmo di Euclide|Algoritmo di Euclide]] [[Triennale/Anno 1/Semestre 1/FDI/File/Basi numeriche|Basi numeriche]] [[Numeri binari]]
 
 * [[Classi di resto]]

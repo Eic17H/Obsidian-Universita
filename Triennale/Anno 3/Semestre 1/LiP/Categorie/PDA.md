@@ -10,7 +10,7 @@ Push-Down Automaton, automa a pila. Un tipo di automa che fa uso di uno stack.
 
 ## Concetto semplificato
 
-Questo esercizio appare come variante di quello con le [[Triennale/Anno 3/Semestre 1/LiP/Categorie/Linguaggi|grammatiche]].
+Questo esercizio appare come variante di quello con le [[Grammatiche|grammatiche]].
 
 Non puoi codificare $0^n1^n$ con un automa a stati finiti, perché quando hai finito con gli $0$ devi ricordarti quanti ne hai messi quando poi cominci a mettere gli $1$. Un numero finito di stati non basta, e un FSA non ha altri modi di "ricordare".
 

@@ -1,0 +1,9 @@
+
+    .small-latex > .math-block > mjx-container {
+        max-width: 100%;
+        overflow: visible !important;
+    }
+
+    .small-latex > .math-block > mjx-container > mjx-math {
+        font-size: 45% !important;
+    }

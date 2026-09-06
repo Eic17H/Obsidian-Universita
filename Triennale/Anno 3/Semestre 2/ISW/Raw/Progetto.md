@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 Un link per iscriversi.
 * Esce questo post
 * C'è un link a un modulo in cui viene chiesto il progetto

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 ## Condizionali: `if elif else`
 
 Il solito che conosciamo, ma al posto di `else if` c'è `elif`. In C, `else if` termina il primo blocco e ne inizia un altro, invece in Python `elif` continua lo stesso blocco con altre condizioni.

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 Dicevamo, RUP, Rational Unified Process. Importante storicamente, ora non usato ma molti concetti rimangono sia per agile che in generale.
 
 UML nasce nell'ambito della OOP, nasce come conseguenza dell'introduzione del #slide, i tre concetti del RUP sono:

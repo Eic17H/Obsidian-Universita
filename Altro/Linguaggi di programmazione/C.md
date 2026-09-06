@@ -59,16 +59,8 @@ Vedi <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</sp
 * <span class="asd">[[Triennale/Anno 1/Semestre 2/ASD/File/Complessità|Complessità]]</span>
 
 ### Pochissime cose semi-avanzate
-* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v1/Altro/Socket]]</span>
-* <span class="so">[[Triennale/Anno 2/Semestre 1/SO/Lab v1/C/Socket in C]]</span>
-* <span class="so">[[Tutto C SO]]</span>
-* <span class="so">[[Processi, thread e job]]</span>
-
-### Di nuovo ma prima o poi saranno più ordinati
-
-[[Triennale/Anno 2/Semestre 1/SO/Lab/C]]
-[[GCC]]
-[[Processi]]
-[[Thread]]
-[[Socket in C]]
-[[Guardie e ladri]]
+- <span class="so">[[GCC]]</span>
+- <span class="so">[[Processi]]</span>
+- <span class="so">[[Thread]]</span>
+- <span class="so">[[Socket in C]]</span>
+- <span class="so">[[Guardie e ladri]]</span>

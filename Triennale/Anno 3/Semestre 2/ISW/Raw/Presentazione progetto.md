@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - isw
+---
 Bisogna iscrivere il proprio gruppo con un form.
 
 Il progetto prevede l'utilizzo di LLM. Quindi per forza per fare il progetto devi compilare un modulo su quali LLM conosci.
