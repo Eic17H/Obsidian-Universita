@@ -1,7 +1,7 @@
 ---
 cssclasses: rc
 ---
-Network Address Translation. Una mappatura da uno spazio di [[Indirizzo IP|indirizzi IP]] ad un altro, attuata modificando i [[Pacchetto|pacchetti]] in transito.
+Network Address Translation. Una mappatura da uno spazio di indirizzi [[IP]] ad un altro, attuata modificando i [[Pacchetto|pacchetti]] in transito.
 
 Lo scopo originale è di evitare di assegnare un nuovo indirizzo a ogni host quando si sposta la rete.
 

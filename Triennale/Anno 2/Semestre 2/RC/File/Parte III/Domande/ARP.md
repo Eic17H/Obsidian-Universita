@@ -3,7 +3,7 @@ cssclasses: rc
 ---
 Address Resolution Protocol.
 
-Ogni macchina di Internet ha uno o più [[Indirizzo IP|indirizzi IP]], ma non si possono usare direttamente per inviare pacchetti, perché le schede di rete del [[Data Link|livello data link]] non li comprendono.
+Ogni macchina di Internet ha uno o più indirizzi [[IP]], ma non si possono usare direttamente per inviare pacchetti, perché le schede di rete del [[Data Link|livello data link]] non li comprendono.
 
 Le schede di rete, per esempio le schede Ethernet, comprendono i loro indirizzi, come gli indirizzi Ethernet.
 
