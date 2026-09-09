@@ -5,10 +5,12 @@ cssclasses: rc
 
 ## Intestazione
 
+![[Pasted image 20260908143948.png]]
+
 ### Parte 1
 * $4bit$ **versione**
 * $4bit$ **internet header length**: minimo 5, unità 4 byte
-* $8bit$ **type of service**: 8bit classe, 2bit congestione
+* $8bit$ **type of service**: precedenza e congestione
 * $16bit$ **total length**: intero datagramma, unità 1 byte, di solito 1500 per allinearsi coi frame Ethernet
 
 ### Parte 2

@@ -5,7 +5,7 @@ Il **==border gateway protocol==** è un protocollo di routing che collega route
 
 ## Concetto informale e Wikipedia
 
-Tu hai un insieme di indirizzi, e questo insieme si dice *rete* o *prefisso*. C'è una tabella con molti di questi prefissi. Questi prefissi hanno un riscontro fisico, sono praticamente delle zone. Questo protocollo fa due cose:
+Tu hai un insieme di indirizzi, e questo insieme si dice *rete* o *[[CIDR|prefisso]]*. C'è una tabella con molti di questi prefissi. Questi prefissi hanno un riscontro fisico, sono praticamente delle zone. Questo protocollo fa due cose:
 
 * Instradare collegamenti basandosi su certe regole che possono anche essere di natura politica;
 * Instrada in modo decentralizzato, così che si possano fare più comodamente modifiche alla rete internet.
@@ -20,7 +20,7 @@ Per instradare, si usano due campi. ==AS-PATH== è la lista di AS per cui è gi�
 
 ## Dal libro di Dessì
 
-Per scambiare dati all'interno di un [[AS]], si usano [[IGP]], ma se si devono scambiare dati tra un AS e un altro, non si può usare la stessa logica, si hanno obiettivi diversi, quindi si usano gli [[EGP]]. IL BGP (Border Gateway Protocol) è un EGP che si preoccupa degli aspetti politici del routing.
+Per scambiare dati all'interno di un [[AS]], si usano [[IGP]], ma se si devono scambiare dati tra un AS e un altro, non si può usare la stessa logica, si hanno obiettivi diversi, quindi si usano gli [[EGP]]. IL **BGP (Border Gateway Protocol)** è un EGP che si preoccupa degli aspetti politici del routing.
 
 Ci sono dei vincoli imposti sulle politiche di routing: si decide quale traffico può fluire su quali linee tra AS.
 
@@ -38,7 +38,7 @@ Vediamo un esempio.
 
 Per implementare il peering, due AS si scambiano le [[Tabella di routing|tabelle di routing]]. Il peering però non è transitivo, perché due peer devono conoscere la tabella di routing l'uno dell'altro.
 
-Il BGP è di tipo [[distance vector]], ma a differenza degli altri protocolli dello stesso tipo non tiene traccia solo del costo di un cammino, ma memorizza l'intero cammino ([[Path vector protocol]]). Il cammino ha due informazioni: qual è il prossimo router da cui si deve saltare di AS, e la sequenza (invertita) di AS attraversati (AS path).
+Il BGP è di tipo [[distance vector]], ma a differenza degli altri protocolli dello stesso tipo non tiene traccia solo del costo di un cammino, ma memorizza l'intero cammino ([[path vector protocol]]). Il cammino ha due informazioni: qual è il prossimo router da cui si deve saltare di AS, e la sequenza (invertita) di AS attraversati (AS path).
 
 Coppie di router BGP comunicano tramite connessioni [[TCP]] per comunicazioni affidabili.
 
@@ -47,6 +47,3 @@ Faccio copia e incolla perché non ho capito.
 > ![[Pasted image 20260729012212.png]]
 > 
 > Questo è un esempio applicativo di quello che abbiamo visto precedentemente, dove abbiamo un treno di comunicazione dei pacchetti dove è riportato il percorso e il tipo di salto successivo.
-
-## Dalle slide del prof
-

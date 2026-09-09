@@ -115,6 +115,38 @@
   "searchShowKeyboardHints": true,
   "recentNotes": [
     {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Cartelle brutte/Supporto/Protocollo di routing.md",
+      "lastOpenedAt": 1788872942066
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Cartelle brutte/Supporto/Pacchetto.md",
+      "lastOpenedAt": 1788872833563
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/AS/IS-IS.md",
+      "lastOpenedAt": 1788872829766
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/AS/IGP.md",
+      "lastOpenedAt": 1788872829020
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Cartelle brutte/Supporto/IS-IS.md",
+      "lastOpenedAt": 1788872812878
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Cartelle brutte/Supporto/Protocolli di controllo.md",
+      "lastOpenedAt": 1788872527907
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Cartelle brutte/Domande/ARP.md",
+      "lastOpenedAt": 1788872526604
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Cartelle brutte/Nuovi/ICMP.md",
+      "lastOpenedAt": 1788872513467
+    },
+    {
       "path": "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Linguaggi.md",
       "lastOpenedAt": 1788772707359
     },
@@ -170,9 +202,9 @@
     "directedWikiEdges": true,
     "graphChatModel": null,
     "autoLabelClusters": false,
-    "markdownOnly": false,
+    "markdownOnly": true,
     "leidenSeed": 42,
-    "leidenResolution": 0.75,
+    "leidenResolution": 1.8,
     "bridgeThreshold": 0.4,
     "highlightIsolated": false,
     "highlightBridges": false,

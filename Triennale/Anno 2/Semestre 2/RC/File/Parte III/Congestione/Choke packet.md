@@ -2,7 +2,7 @@
 cssclasses:
   - rc
 ---
-Un metodo di [[controllo della congestione]].
+Un metodo di [[Controllo della congestione]].
 ## Spiegazione informale
 
 Quando sto ricevendo troppi pacchetti e non riesco a gestirli, invio al mittente un choke packet, cioè un pacchetto che gli dice di rallentare. Lo sto inviando al mittente, quindi potrebbe dover attraversare altri nodi prima di arrivarci.

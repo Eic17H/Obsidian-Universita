@@ -2,11 +2,9 @@
 cssclasses: rc
 ---
 [[IP|Protocollo internet]] versione 6.
+## Intestazione
 
 ![[Pasted image 20260820210336.png]]
-![[Pasted image 20260820210349.png]]
-
-## Intestazione
 
 * $4bit$ **version**
 * $8bit$ **traffic class**: simile a ToS, gestione prioritaria del traffico
@@ -19,6 +17,8 @@ cssclasses: rc
 
 ### Estensioni
 
+![[Pasted image 20260820210349.png]]
+
 Le estensioni corrispondono ai campi IPv4 meno utilizzati
 
 * Opzioni **hop per hop**: informazioni per i router
@@ -30,14 +30,14 @@ Le estensioni corrispondono ai campi IPv4 meno utilizzati
 
 Procatoria, c'è molto da dire su questi
 
-### Hop per hop
+#### Hop per hop
 
-### Destinazione
+#### Destinazione
 
-### Routing
+#### Routing
 
-### Frammentazione
+#### Frammentazione
 
-### Autenticazione
+#### Autenticazione
 
-### Carico utile cifrato
+#### Carico utile cifrato

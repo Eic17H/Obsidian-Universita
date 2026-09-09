@@ -83,6 +83,12 @@
     --accent: var(--accent-light);
     --accent-inverse: var(--accent-dark);
 }
+@media print {
+  .serious {
+    --accent-light: #000000 !important;
+    --accent-dark: #ffffff !important;
+  }
+}
 * {
     --link-color: var(--accent);
     --text-accent: var(--accent);

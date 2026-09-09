@@ -17,11 +17,9 @@ Reti:
 <span class="rc">[[Categorie di reti]]</span>
 <span class="rc">[[SLA]]</span>
 <span class="rc">[[Sliding Window]]</span>
-<span class="rc">[[Algoritmo di Nagle]]</span>
 <span class="rc">[[AQL]]</span>
 <span class="rc">[[Berkeley Socket]]</span>
 <span class="rc">[[Buffer di trasporto]]</span>
-<span class="rc">[[Clark]]</span>
 <span class="rc">[[Congestione al livello di trasporto]]</span>
 <span class="rc">[[Crash]]</span>
 <span class="rc">[[Delayed time]]</span>

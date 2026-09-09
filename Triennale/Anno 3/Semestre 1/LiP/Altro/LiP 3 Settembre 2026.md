@@ -1,3 +1,8 @@
+---
+cssclasses:
+- lip
+- serious
+---
 Dal mese prossimo non ci sarà più Pinna, ma è possibile che gli esami rimangano simili.
 ## Valutazione
 

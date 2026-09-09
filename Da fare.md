@@ -1,11 +1,7 @@
 - [ ] <span class="rc">[[Crash]]</span>
 - [ ] <span class="rc">[[IP]]</span>
-- [x] <span class="rc">[[IPv4]]</span>
 - [ ] <span class="rc">[[IPv6]]</span>
 - [ ] <span class="rc">[[Berkeley Socket]]</span>
-- [x] <span class="lip">[[Tipizzazione]]</span>
 - [ ] <span class="rc">[[KPI]]</span>
-- [x] <span class="rc">[[RED]]</span>
-- [x] <span class="rc">[[AQM]]</span>
 - [ ] <span class="isw">[[Decoupling]]</span>
 #hidden

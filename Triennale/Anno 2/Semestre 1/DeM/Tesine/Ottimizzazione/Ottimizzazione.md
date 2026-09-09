@@ -1,6 +1,7 @@
 ---
 cssclasses:
   - dem
+  - serious
 ---
 https://support.microsoft.com/en-us/excel/load-the-solver-add-in-in-excel
 ## Matematica

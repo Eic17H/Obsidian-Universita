@@ -702,5 +702,181 @@
       "slowestSkillFolderMs": 191
     },
     "timestamp": "2026-09-07T09:23:09.029Z"
+  },
+  {
+    "label": "S2B startup",
+    "totalMs": 1170,
+    "phases": [
+      {
+        "kind": "mark",
+        "name": "onload:start",
+        "offset": 0,
+        "duration": 0,
+        "blocking": true
+      },
+      {
+        "kind": "span",
+        "name": "data:load",
+        "offset": 0,
+        "duration": 40,
+        "blocking": true
+      },
+      {
+        "kind": "mark",
+        "name": "onload:registrations-done",
+        "offset": 48,
+        "duration": 0,
+        "blocking": true
+      },
+      {
+        "kind": "mark",
+        "name": "layoutReady:start",
+        "offset": 48,
+        "duration": 0,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "lexical:startInit",
+        "offset": 50,
+        "duration": 1,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "vectorstore:startInit",
+        "offset": 50,
+        "duration": 0,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "skills:migrate",
+        "offset": 50,
+        "duration": 1,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "skills:migrate-core",
+        "offset": 51,
+        "duration": 0,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "skills:migrate-manage-skills",
+        "offset": 51,
+        "duration": 0,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "skills:migrate-manage-notes",
+        "offset": 51,
+        "duration": 0,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "lexical:miniSearch.open",
+        "offset": 50,
+        "duration": 11,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "pendingChanges:load",
+        "offset": 51,
+        "duration": 12,
+        "blocking": true
+      },
+      {
+        "kind": "mark",
+        "name": "onload:end",
+        "offset": 83,
+        "duration": 0,
+        "blocking": true
+      },
+      {
+        "kind": "span",
+        "name": "lexical:loadFromStorage",
+        "offset": 61,
+        "duration": 152,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "skills:bootstrap",
+        "offset": 51,
+        "duration": 1004,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "skills:discover",
+        "offset": 1056,
+        "duration": 45,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "skills:init",
+        "offset": 50,
+        "duration": 1050,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "promptFiles:init",
+        "offset": 1100,
+        "duration": 35,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "agent:chatManager.load",
+        "offset": 1136,
+        "duration": 33,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "agent:init",
+        "offset": 1135,
+        "duration": 35,
+        "blocking": false
+      },
+      {
+        "kind": "span",
+        "name": "vectorstore:ready",
+        "offset": 1170,
+        "duration": 0,
+        "blocking": false
+      },
+      {
+        "kind": "mark",
+        "name": "deferred:end",
+        "offset": 1170,
+        "duration": 0,
+        "blocking": false
+      }
+    ],
+    "meta": {
+      "rendererToOnloadMs": 1383046,
+      "obsidianPreLayoutMs": 0,
+      "platform": "windows",
+      "enabledCommunityPlugins": 10,
+      "usedJSHeapMB": 190,
+      "jsHeapLimitMB": 4096,
+      "lexicalIndexDocs": 574,
+      "lexicalIndexBytes": 0,
+      "lexicalIndexLoadedFromCache": true,
+      "vaultFileCount": 572,
+      "skillFolderCount": 6,
+      "slowestSkillFolder": "manage-notes",
+      "slowestSkillFolderMs": 19
+    },
+    "timestamp": "2026-09-08T12:56:17.347Z"
   }
 ]

@@ -1,6 +1,7 @@
 ---
 cssclasses:
   - dem
+  - serious
 ---
 ## Obiettivo
 
