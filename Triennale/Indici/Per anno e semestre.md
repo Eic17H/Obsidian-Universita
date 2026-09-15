@@ -19,9 +19,9 @@
 
 * <span class="so">[[Sistemi Operativi]]</span>
 * <span class="alf">[[Automi e Linguaggi Formali]]</span>
-* <span class="dem">[Dati e Modelli](https://midnight-orchid-79e.notion.site/Dati-e-modelli-6b9dfb9394644449a2d8574d71e7208c)</span>
-* <span class="eed">[[Triennale/Anno 2/Semestre 1/Diritto/Diritto]]</span> (Forse)
-* <span class="eed">[[Economia]]</span> (Forse)
+* <span class="dem">[[Dati e Modelli]]</span>
+* <span class="diritto">[[Triennale/Anno 2/Semestre 1/Diritto/Diritto|Diritto]]</span> (Forse)
+* <span class="economia">[[Economia]]</span> (Forse)
 ## Semestre 2
 * <span class="pr2">[[Programmazione 2]]</span>
 * <span class="rc">[[Reti di Calcolatori]]</span>
@@ -41,4 +41,8 @@
 ## Semestre 2
 * <span class="fpw">[[FPW|Fondamenti di Programmazione Web]]</span>
 * <span class="logica">[[Istituzioni di Logica]]</span>
+
+## Tirocinio
+* <span class="r54">[[Smart contracts analysis and verification]]</span>
+
 #indice

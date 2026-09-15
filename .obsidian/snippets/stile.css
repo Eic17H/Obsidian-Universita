@@ -113,11 +113,17 @@
     background-color: transparent;
     color: var(--accent);
 }
+mark {
+    background-color: transparent;
+    color: var(--accent);
+}
 ul .list-bullet::after { 
 background-color: var(--accent);
 }
 * {
   --code-background: color-mix(in srgb, var(--accent-inverse) 20%, transparent);
+  --link-external-color: var(--accent);
+  --link-extenral-color-hover: color-mix(in srgb, var(--accent-inverse) 20%, transparent);
 }
 body {
   --accent-light: #000000;

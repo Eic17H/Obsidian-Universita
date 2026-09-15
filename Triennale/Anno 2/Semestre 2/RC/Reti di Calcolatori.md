@@ -4,16 +4,79 @@ cssclasses:
 ---
 ## Indice
 
+Raggruppati vagamente per argomento.
+### Autonomous System
+
+* [[OSPF]]
+* [[AS]]
 * [[BGP]]
+* [[EGP]]
+* [[IGP]]
+* [[IS-IS]]
+* [[Link State Routing]]
+### Congestione
+
+* [[Sliding Window]]
+* [[AQL]]
+* [[AQM]]
+* [[Choke packet]]
+* [[Congestione al livello di trasporto]]
+* [[Controllo della congestione]]
+* [[Drop-tail]]
+* [[Nagle e Clark]]
+* [[RED]]
+
+### Controllo
+
+* [[RARP]]
+* [[ARP]]
+* [[BOOTP]]
+* [[DHCP]]
+* [[ICMP]]
+* [[Protocolli di controllo]]
+
+### QoS
+
+* [[SLA]]
+* [[KPI]]
+* [[QoS]]
+
+### IP
+
+* [[Timer]]
+* [[CIDR]]
+* [[Classi IPv4]]
+* [[IP]]
 * [[IPv4]]
 * [[IPv6]]
-* [[Link State Routing]]
-* [[SLA]]
-* [[ARP]]
-* [[Sliding Window]]
-* [[CIDR]]
 * [[NAT]]
-* [[RED]]
+* [[SRTT]]
+* [[TCP]]
+* [[TCP-IP]]
+
+### Altro
+
+* [[Stub]]
+* [[Berkeley Socket]]
+* [[Buffer di trasporto]]
+* [[Crash]]
+* [[Delayed time]]
+* [[MPLS]]
+* [[RPF]]
+* [[RSVP]]
+* [[Tabella di routing]]
+* [[Algoritmi dinamici]]
+* [[Data Link]]
+* [[Distance vector]]
+* [[ECHO]]
+* [[Finestra ACK]]
+* [[ISO-OSI]]
+* [[Pacchetto]]
+* [[Path vector protocol]]
+* [[Protocollo di routing]]
+* [[Round trip time]]
+* [[Categorie di reti]]
+* [[Categorie di applicazioni]]
 ## Introduzione agli appunti
 
 Non ho preso praticamente appunti, e quelli che ho preso sono un po' inutili. Ho invece fatto dei riassunti su alcuni argomenti della terza parte, quella esclusiva dell'orale.
