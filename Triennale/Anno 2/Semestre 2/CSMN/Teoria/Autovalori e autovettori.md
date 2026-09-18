@@ -1,6 +1,3 @@
----
-cssclasses: csmn
----
 Autovalori e autovettori di una [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Matrici|matrice]].
 
 Per forza. Non puoi non parlarne.
@@ -18,7 +15,7 @@ Come si calcolano?
 * Raccolgo la x, $(A-λI)\underline{x}=\underline{0}$
 * Chiamiamola B, $B\underline{x}=\underline{0}$.
 
-Ma quindi, guarda un po': \[$^1_0$$^1_1$\]·\[$^x_y$\]=\[$^0_0$\], ti esce \{$^{x+y=0}_{y=0}$, un sistema. Perché abbia soluzione devo mettere che $det(B)=0$ necessariamente, e $det(A-λI)$ è detto *polinomio caratteristico*, è un polinomio con n soluzioni.
+Ma quindi, guarda un po': $[{^1_0}{^1_1}]\cdot[^x_y]=[^0_0]$, ti esce $\left\{^{x+y=0}_{y=0}\right.$, un sistema. Perché abbia soluzione devo mettere che $det(B)=0$ necessariamente, e $det(A-λI)$ è detto *polinomio caratteristico*, è un polinomio con n soluzioni.
 
 Ergo troviamolo
 
@@ -26,12 +23,12 @@ Ergo troviamolo
 * $det(B)$ è un polinomio
 * Metto $det(B)=0$
 
-I due autovalori potrebbero essere uguali tra loro, perché sono soluzioni di un polinomio e anche lì può succedere. Se due autovalori sono uguali, quell'autovalore è uno solo, con molteplicità 2. *molteplicità algebrica*.
+I due autovalori potrebbero essere uguali tra loro, perché sono soluzioni di un polinomio e anche lì può succedere. Se due autovalori sono uguali, quell'autovalore è uno solo, con molteplicità 2. *Molteplicità algebrica*.
 
-Per trovare gli autovettori dobbiamo partire dal passo intermedio $(A-λI)\underline{x}=\underline{0}$. Lo trasformiamo in sistema di equazioni, e magari ci esce che y=0 per esempio, ed x non ci esce, quindi x può essere quello che vuoi, che indichiamo con t. Quindi in quel caso quell'autovalore avrebbe autovalori infiniti, che però diciamo che è un solo autovettore. Il numero di autovettori che trovo è chiamato *molteplicità geometrica*.
+Per trovare gli autovettori dobbiamo partire dal passo intermedio $(A-λI)\underline{x}=\underline{0}$. Lo trasformiamo in sistema di equazioni, e magari ci esce che $y=0$ per esempio, ed $x$ non ci esce, quindi $x$ può essere quello che vuoi, che indichiamo con $t$. Quindi in quel caso quell'autovalore avrebbe autovalori infiniti, che però diciamo che è un solo autovettore. Il numero di autovettori che trovo è chiamato *molteplicità geometrica*.
 
 Detto in modo rigoroso è completamente diverso. "La dimensione dello spazio generato dalla span di questa matrice".
 
 Come minimo metà dei termini in questi appunti sono interpretati e trascritti male. Da rivedere.
 
-Una matrice che ha una moltiplicità geometrica minore del suo grado è detta *difettiva*, perché non esiste una base di due vettori indipendenti che genera le sue colonne.
+Una matrice che ha una molteplicità geometrica minore del suo grado è detta *difettiva*, perché non esiste una base di due vettori indipendenti che genera le sue colonne.
