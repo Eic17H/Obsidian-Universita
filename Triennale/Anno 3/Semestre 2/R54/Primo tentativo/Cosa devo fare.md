@@ -54,3 +54,11 @@ Appunto noi in `ground-truth.csv`, che è uno spreadsheet che ci dice le cose ve
 Cioè, `auth-in-agree` *non vale* nella versione v2.
 
 La prossima cosa che dovrò capire saranno i test relativi a queste proprietà fatti con Certora e SolCMC.
+
+## La prossima volta
+
+Inferno.
+
+Dà tutto errore e sto litigando con le versioni dei tool perché non si capisce niente, poi faccio cose non cambio niente e all'improvviso funziona.
+
+Però una cosa si blocca per molto tempo e non so bene cosa pensare. Ma almeno adesso un test gira e i risultati sono gli stessi che ci sono nella repo.
