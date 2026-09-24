@@ -62,3 +62,21 @@ Inferno.
 Dà tutto errore e sto litigando con le versioni dei tool perché non si capisce niente, poi faccio cose non cambio niente e all'improvviso funziona.
 
 Però una cosa si blocca per molto tempo e non so bene cosa pensare. Ma almeno adesso un test gira e i risultati sono gli stessi che ci sono nella repo.
+
+## Crowdfund
+
+* `bal-decr-onlyif-wd-reclaim`
+* `donate-bal-inc`
+* `donate-not-dec-donation`
+* `donate-not-revert`
+* `donation-inc-onlyif-donate`
+* `exists-unique-donation-change`
+* `msg-value-not-negative`
+* `no-receive-after-deadline`
+* `reclaim-even-if-msgvalue`
+* `reclaim-not-revert`
+* `wd-full-balance`
+* `wd-not-revert`
+
+Fatti:
+* `no-donate-after-deadline`

@@ -60,3 +60,48 @@ Non possiamo mettere `return` nei modificatori.
 `constructor` è una funzione particolare in Solidity. La funzione costruttore è una funzione che viene eseguita una e una sola volta, quando il contratto viene inizializzato nella blockchain.
 
 Non ha altri limiti in confronto a qualunque altro tipo di funzione, puoi darle parametri e renderla pagabile, l'unico vincolo è che si può chiamare una sola volta.
+
+## Revert
+
+Una chiamata a funzione può essere abortita con un errore, riportando l'ambiente allo stato in cui era prima dell'esecuzione. Questo ripristino dello stato è detto revert. Il gas utilizzato è perso.
+
+Avviene con `require()`, `revert()` e `assert()`.
+## Reentrancy
+
+Una chiamata rientrante (*reentrant call*) è una chiamata a un contratto che avviene mentre è ancora in esecuzione una chiamata precedente allo stesso contratto e lo stato del contratto chiamato non è stato ancora aggiornato.
+
+Per esempio, molto semplice:
+```Solidity
+mapping(address => uint256) public conti;
+function prelievo() external {
+	// Quanti soldi ha chi prelieva
+	uint256 quantita = conti[msg.sender];
+	// Non puoi prelevare se non hai soldi
+    require(quantita > 0);
+
+    // Invii i soldi
+    (bool ok, ) = msg.sender.call{value: quantita}("");
+    require(ok);
+
+	// Ti segni che non ha più soldi
+    conti[msg.sender] = 0;
+}
+```
+
+In questo caso, invii i soldi prima di segnarti che non ha più soldi. Quindi può chiamare la funzione due volte insieme, e tu gli invii due volte i soldi e poi ti segni una sola volta che non ne ha più.
+
+Ricorda SO, se avrò voglia metterò un link. Come visto in SO, questo si può risolvere con un mutex.
+
+Per esempio, nel nostro progetto abbiamo `ReentrancyGuard.sol`, che ha un mutex condiviso da tutte le funzioni che hanno il modificatore `nonReentrant()`. La logica semplificata è:
+
+```Solidity
+bool occupato = false;
+modifier nonReentrant() {
+	require(!occupato);
+	occupato = true;
+	_;
+	occupato = false;
+}
+```
+
+Questo significa che può esserci una sola funzione non-rientrante alla volta nella call stack. In teoria questo significa che una funzione non-rientrante non può chiamarne un'altra, la soluzione è renderle private e dare loro punti d'entrata non-rientranti esterni.
