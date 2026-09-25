@@ -135,7 +135,7 @@ mapping(address => uint) public conti;
 Uno dei due tipi può esso stesso essere una mappa. Per esempio, se per ogni indirizzo non voglio salvare i suoi soldi, ma quanti soldi deve a un altro indirizzo, posso avere come chiave l'indirizzo del debitore, e come dato una mappa che rappresenta i suoi debiti. Ciascuna di queste mappe ha come chiave l'indirizzo del creditore, e come valore la quantità di soldi.
 
 ```Solidity
-mapping(address => mapping(address => uint) public debiti;
+mapping(address => mapping(address => uint)) public debiti;
 ```
 
 Concettualmente somiglia a una mappa che come chiave ha una coppia ordinata di indirizzi, e come dato un intero. E se ci pensi questa corrispondenza tra le due strutture ricorda le <span class="alf">[[funzioni di secondo ordine]]</span>.

@@ -66,20 +66,18 @@ Però una cosa si blocca per molto tempo e non so bene cosa pensare. Ma almeno a
 ## Crowdfund
 
 * `bal-decr-onlyif-wd-reclaim`
-* `donate-not-dec-donation`
 * `donate-not-revert`
-* `donation-inc-onlyif-donate`
 * `exists-unique-donation-change`
-* `msg-value-not-negative`
 * `no-receive-after-deadline`
 * `reclaim-even-if-msgvalue`
 * `reclaim-not-revert`
-* `wd-full-balance`
 * `wd-not-revert`
 
 Fatti:
 * `no-donate-after-deadline`
 * `donate-bal-inc`
+* `donation-inc-onlyif-donate`
+* `donate-not-dec-donation`
 
 Il mio problema è con `wd-full-balance`:
 > after a non-reverting `withdraw`, the whole balance of the contract is sent to `owner`.
@@ -133,3 +131,4 @@ function invariant(uint choice) public payable {
 
 Modo stupido di farlo, metto che `donate()` paga il donatore dopo la fase di donazione. In questo modo vediamo che le `require` sono soddisfatte ma l'`assert` no. Chiaramente viola anche la proprietà `no-donate-after-deadline`.
 
+`msg-value-not-negative` è impossibile. Controlla che, indovina un po', il valore del messaggio non sia negativo. Il valore del messaggio è un `uint`, letteralmente è definito come numero naturale.

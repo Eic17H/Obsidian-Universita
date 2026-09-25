@@ -34,7 +34,7 @@ Le funzioni si dichiarano con `function`, e il tipo di ritorno si scrive come ul
 
 `pure`: non modificano ***né leggono*** lo stato
 
-`payable`: hanno il permesso di ricevere Ether, soldi.
+`payable`: hanno il permesso di ricevere Ether, soldi, e in quel caso c'è un valore `msg.value` di tipo `uint256` che dice quanto ha pagato.
 
 Possiamo anche dichiarare nuovi modificatori e applicarli alle funzioni:
 
