@@ -66,7 +66,6 @@ Però una cosa si blocca per molto tempo e non so bene cosa pensare. Ma almeno a
 ## Crowdfund
 
 * `bal-decr-onlyif-wd-reclaim`
-* `donate-bal-inc`
 * `donate-not-dec-donation`
 * `donate-not-revert`
 * `donation-inc-onlyif-donate`
@@ -80,3 +79,57 @@ Però una cosa si blocca per molto tempo e non so bene cosa pensare. Ma almeno a
 
 Fatti:
 * `no-donate-after-deadline`
+* `donate-bal-inc`
+
+Il mio problema è con `wd-full-balance`:
+> after a non-reverting `withdraw`, the whole balance of the contract is sent to `owner`.
+
+Tutte le versioni ce l'hanno falsa, con la nota:
+
+> This property is false, since during the `withdraw` external call, the owner can send the funds to another contract through its `receive` method.
+
+Guardando il codice, però, mi sembra vera, perché c'è
+```Solidity
+function withdraw() public {
+	require (block.number > end_donate);
+	require (address(this).balance >= goal);
+
+	(bool succ,) = owner.call{value: address(this).balance}("");
+	require(succ);
+}
+```
+
+E mi sembra proprio che invii tutti i soldi all'owner.
+
+In quel caso, io non so come renderla vera.
+
+Vediamo invece `bal-decr-onlyif-wd-reclaim` che mi sembra fattibile. Vediamo la definizione in inglese e in SolCMC.
+
+> after the donation phase, if the contract balance decreases then either a successful `withdraw` or `reclaim` have been performed.
+
+
+```Solidity
+function invariant(uint choice) public payable {
+    
+    // Siamo nella fase di cui parla la proprietà
+    require(block.number > end_donate);
+
+    uint _balance = address(this).balance;
+
+    if (choice == 0) {
+        donate();
+    } else if (choice == 1) {
+        withdraw();
+    } else if (choice == 2) {
+        reclaim();
+    } else {
+        require(false);
+    }
+    
+    require(address(this).balance < _balance);
+    assert(choice == 1 || choice == 2);
+}
+```
+
+Modo stupido di farlo, metto che `donate()` paga il donatore dopo la fase di donazione. In questo modo vediamo che le `require` sono soddisfatte ma l'`assert` no. Chiaramente viola anche la proprietà `no-donate-after-deadline`.
+
