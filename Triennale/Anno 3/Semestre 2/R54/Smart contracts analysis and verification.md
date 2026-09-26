@@ -16,6 +16,6 @@ I dettagli saranno concordati con il responsabile del progetto.
 
 ## Indice
 
-![[Solidity]]
+![[Altro/Linguaggi di programmazione/Solidity]]
 
 #materia

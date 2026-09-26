@@ -14,3 +14,5 @@ Per le [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Funzioni|funzioni]] 
 * `external`: solo fuori dal contratto;
 * `internal`: solo dal contratto stesso, o dai contratti figli (si può ereditare).
 ## Interfacce
+
+Nelle interfacce, tutte le funzioni sono considerate `virtual` implicitamente.

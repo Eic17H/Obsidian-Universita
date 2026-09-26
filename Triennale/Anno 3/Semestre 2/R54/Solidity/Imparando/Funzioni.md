@@ -36,12 +36,16 @@ Le funzioni si dichiarano con `function`, e il tipo di ritorno si scrive come ul
 
 `payable`: hanno il permesso di ricevere Ether, soldi, e in quel caso c'è un valore `msg.value` di tipo `uint256` che dice quanto ha pagato.
 
+`virtual` e `override` riguardano l'[[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà|ereditarietà]]: una funzione `override` fa l'override di una funzione `virtual`, senza questi modificatori da entrambi i lati non si può fare l'override.
+
 Possiamo anche dichiarare nuovi modificatori e applicarli alle funzioni:
 
 ```Solidity
 pragma solidity ^0.8.0;
 
 contract MyContract {
+	address immutable owner;
+	/* ... */
 	modifier soloProprietario {
 		require(msg.sender == owner, 'caller must be owner');
 		_;

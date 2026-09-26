@@ -65,19 +65,19 @@ Però una cosa si blocca per molto tempo e non so bene cosa pensare. Ma almeno a
 
 ## Crowdfund
 
-* `bal-decr-onlyif-wd-reclaim`
 * `donate-not-revert`
-* `exists-unique-donation-change`
 * `no-receive-after-deadline`
-* `reclaim-even-if-msgvalue`
 * `reclaim-not-revert`
-* `wd-not-revert`
 
 Fatti:
 * `no-donate-after-deadline`
+* `bal-decr-onlyif-wd-reclaim`
 * `donate-bal-inc`
 * `donation-inc-onlyif-donate`
 * `donate-not-dec-donation`
+* `exists-unique-donation-change`
+* `reclaim-even-if-msgvalue`
+* `wd-not-revert`
 
 Il mio problema è con `wd-full-balance`:
 > after a non-reverting `withdraw`, the whole balance of the contract is sent to `owner`.

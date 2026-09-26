@@ -1,4 +1,4 @@
-[[Altro/Linguaggi di programmazione/C|C]] [[Python|Python]] [[Altro/Linguaggi di programmazione/OCaml|OCaml]] [[MatLab]] [[Java]] [[Bash|Bash]] [[Solidity]] [[Kotlin]] [[Altro/Linguaggi di programmazione/JavaScript|JavaScript]] [[Altro/Linguaggi di programmazione/SQL|SQL]]
+[[Altro/Linguaggi di programmazione/C|C]] [[Python|Python]] [[Altro/Linguaggi di programmazione/OCaml|OCaml]] [[MatLab]] [[Java]] [[Bash|Bash]] [[Altro/Linguaggi di programmazione/Solidity]] [[Kotlin]] [[Altro/Linguaggi di programmazione/JavaScript|JavaScript]] [[Altro/Linguaggi di programmazione/SQL|SQL]]
 
 [[Programmazione Web]]
 
@@ -177,6 +177,7 @@
 - <span class="fpw">[[Post e Get]]</span>
 
 ### Solidity per il tirocinio
+### Imparando
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Introduzione|Introduzione]]
 * [[Valori]]
 * [[Condizionali]]
@@ -186,6 +187,12 @@
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Errori|Errori]]
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà|Ereditarietà]]
 * [[Contratti]]
+### Facendo
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Solidity|Solidity]]
+* [[SolCMC]]
+	* [[Z3]]
+	* [[Eldarica]]
+* [[Certora]]
 
 ## Unsorted
 
