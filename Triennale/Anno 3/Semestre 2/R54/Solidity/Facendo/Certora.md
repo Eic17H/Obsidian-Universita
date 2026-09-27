@@ -74,3 +74,34 @@ Io non so se funziona, perché in teoria `start` è privata, ma magari visto che
 Il fatto è che i file `.spec` mi dice che sono sbagliati. Che diamine. Però, come al solito, vedere un nuovo errore è un passo avanti.
 
 L'ho girato con un contratto noto buono (ha tutti i file necessari per Certora) e, beh, non dà errore. Però è molto lento. In più quello che fa lo invia al server e te lo ritrovi nell'account. Sono qui da 10 minuti e ne ha fatto 27 su 108. Non lo voglio lasciare così tutta la notte, quindi per ora lo fermo.
+
+## Ecco svelato il trucco
+
+Tu hai le tue specifiche, del tipo `proprieta.spec`, scritte in CVL. Queste possono invocare dei metodi, che vanno definiti e dichiarati in altri file.
+
+Implementi i getter in Solidity in `getters.sol`, e li dichiari in CVL in `methods.spec`. Attenzione, questo tool ha anche dei fallback per le dichiarazioni che sono condivisi dall'intero progetto, quindi il tool ha dichiarato `balanceOf()`, e tu lo implementi una volta per contratto.
+
+Per esempio ho `getters.sol`:
+```Solidity
+function getBalance() public view returns (uint) {
+    return address(this).balance;
+}
+
+function getStart() public view returns (uint64) {
+    return start;
+}
+
+function getDuration() public view returns (uint64) {
+    return duration;
+}
+```
+
+E `methods.spec`:
+```CVL
+methods {
+    function getBalance() external returns (uint) envfree;
+    function getStart() external returns (uint64) envfree;
+    function getDuration() external returns (uint64) envfree;
+}
+```
+

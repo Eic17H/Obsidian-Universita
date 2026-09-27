@@ -132,3 +132,9 @@ function invariant(uint choice) public payable {
 Modo stupido di farlo, metto che `donate()` paga il donatore dopo la fase di donazione. In questo modo vediamo che le `require` sono soddisfatte ma l'`assert` no. Chiaramente viola anche la proprietà `no-donate-after-deadline`.
 
 `msg-value-not-negative` è impossibile. Controlla che, indovina un po', il valore del messaggio non sia negativo. Il valore del messaggio è un `uint`, letteralmente è definito come numero naturale.
+
+## Litigando con Certora
+
+Il fatto è che mi sa che il tool è sbagliato, perché è cambiato l'output di Certora. Ma questo è strano, perché un tale dal nome utente LoadWrench l'ha usato di recente e ha funzionato.
+
+Magari me ne farò una ragione.
