@@ -47,3 +47,7 @@ Questo test quindi:
 * Se i soldi che il contratto ha dopo l'esecuzione del metodo sono minori di quelli di prima, fallisce se il metodo eseguito è quello che corrisponde all'input $0$.
 
 Quindi il test fallisce se l'input $0$, cioè la funzione `donate()`, toglie soldi al contratto. Infatti questo contratto *accetta* donazioni tramite `donate()`, e paga persone con gli altri due metodi.
+
+## Spiegazione migliore
+
+I test scritti in SolCMC sono composti da una funzione che può prendere dei parametri. Si utilizzano due comandi principali: require e assert. Una require prende un'espressione booleana, e ignora il test corrente se è falsa. Un assert invece fa fallire il test se l'espressione è falsa. Il resto del codice è normale codice Solidity, nello scope del contratto. La funzione viene eseguita più volte con valori casuali per i parametri. Si può eseguire col solver [[Z3]] o [[Eldarica]]. Il tempo dell'ambiente non scorre durante un test.

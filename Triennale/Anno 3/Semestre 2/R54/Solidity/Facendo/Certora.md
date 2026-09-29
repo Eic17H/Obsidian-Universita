@@ -105,3 +105,6 @@ methods {
 }
 ```
 
+## Spiegazione migliore
+
+I test scritti in Certora usano il linguaggio CVL. Non sono funzioni, ma blocchi di codice; i valori casuali sono assegnati alle variabili dichiarate senza inizializzazione. Anche qui si usano assert e require. La differenza è che si possono oddio è un casino se guardi no-send-in-agree. Stacca stacca, non ci capisco niente in realtà.
