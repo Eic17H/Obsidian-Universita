@@ -1,3 +1,4 @@
+Importante ricordare di controllare che un valore intero di Certora entri nella variabile Solidity con cui va confrontata. Quindi se un `mathint` di Certora rappresenta un `uint64` di Solidity, bisogna fare `require ... < 2^64`.
 ## Setup
 
 Devi farti un account, generare la tua chiave e impostarla come variabile d'ambiente mi pare, con `export CERTORAKEY="..."`.
