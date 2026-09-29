@@ -84,3 +84,4 @@ specificato.
 `AltGr + ‘` - Permette di inserire un backtick (  \` ).
 `*` - Una qualunque stringa.
 `?` - Un qualunque carattere.
+`&&` - Messo tra due comandi, fa eseguire il secondo una volta completato il primo.
