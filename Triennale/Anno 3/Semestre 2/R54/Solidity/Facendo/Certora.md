@@ -108,3 +108,20 @@ methods {
 ## Spiegazione migliore
 
 I test scritti in Certora usano il linguaggio CVL. Non sono funzioni, ma blocchi di codice; i valori casuali sono assegnati alle variabili dichiarate senza inizializzazione. Anche qui si usano assert e require. La differenza è che si possono oddio è un casino se guardi no-send-in-agree. Stacca stacca, non ci capisco niente in realtà.
+
+## Questo è strano
+
+```
+Finished verification request
+ERROR: Prover found violations:
+
+[rule] rel_le_bal:
+    [func] Induction base: After the constructor: FAIL
+    [func] <receiveOrFallback>()
+    [func] release()
+report url: https://prover.certora.com/output/8113460/0f84be2b550948059f0f3c506f230a4d?anonymousKey=d0488b72b09a6c3891812cc337f0d472c4564219
+
+Violations were found
+```
+
+Induction base. Chissà cos'è.
