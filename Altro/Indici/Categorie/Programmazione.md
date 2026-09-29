@@ -104,12 +104,13 @@
 * <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Teoria/Eccezioni|Eccezioni]]</span>
 * <span class="pr2">[[Lettura dei file in Java]]</span>
 * <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Teoria/Interfacce|Interfacce]]</span>
+* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Teoria/Stream|Stream]]</span>
 
 #### Pratica
 
 * <span class="pr2">[[Introduzione a Java]]</span>
 * <span class="pr2">[[Classi e oggetti]]</span>
-* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Lab/Ereditarietà]]</span>
+* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Lab/Ereditarietà|Ereditarietà]]</span>
 	* <span class="pr2">[[Override|Override]]</span>
 	* <span class="pr2">[[Classi astratte]]</span>
 	* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Lab/Interfacce|Interfacce]]</span>
@@ -119,7 +120,7 @@
 * <span class="pr2">[[Inline]]</span>
 	* <span class="pr2">[[Classi anonime]]</span>
 	* <span class="pr2">[[Espressioni lambda]]</span>
-* <span class="pr2">[[Stream]]</span>
+* <span class="pr2">[[Triennale/Anno 2/Semestre 2/PR2/Lab/Stream|Stream]]</span>
 * <span class="pr2">[[Classi innestate]]</span>
 * <span class="pr2">[[Static]]</span>
 
@@ -178,21 +179,21 @@
 
 ### Solidity per il tirocinio
 ### Imparando
-* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Introduzione|Introduzione]]
-* [[Valori]]
-* [[Condizionali]]
-* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Funzioni|Funzioni]]
-* [[Eventi]]
-* [[Ether]]
-* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Errori|Errori]]
-* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà|Ereditarietà]]
-* [[Contratti]]
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Introduzione|Introduzione]]</span>
+* <span class="r54">[[Valori]]</span>
+* <span class="r54">[[Condizionali]]</span>
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Funzioni|Funzioni]]</span>
+* <span class="r54">[[Eventi]]</span>
+* <span class="r54">[[Ether]]</span>
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Errori|Errori]]</span>
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà|Ereditarietà]]</span>
+* <span class="r54">[[Contratti]]</span>
 ### Facendo
-* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Solidity|Solidity]]
-* [[SolCMC]]
-	* [[Z3]]
-	* [[Eldarica]]
-* [[Certora]]
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Solidity|Solidity]]</span>
+* <span class="r54">[[SolCMC]]</span>
+	* <span class="r54">[[Z3]]</span>
+	* <span class="r54">[[Eldarica]]</span>
+* <span class="r54">[[Certora]]</span>
 
 ## Unsorted
 

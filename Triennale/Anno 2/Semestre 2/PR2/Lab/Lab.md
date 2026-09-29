@@ -3,7 +3,7 @@ cssclasses: pr2
 ---
 * [[Introduzione a Java]]
 * [[Classi e oggetti]]
-* [[Triennale/Anno 2/Semestre 2/PR2/Lab/Ereditarietà]]
+* [[Triennale/Anno 2/Semestre 2/PR2/Lab/Ereditarietà|Ereditarietà]]
 	* [[Override|Override]]
 	* [[Classi astratte]]
 	* [[Triennale/Anno 2/Semestre 2/PR2/Lab/Interfacce|Interfacce]]
@@ -13,7 +13,7 @@ cssclasses: pr2
 * [[Inline]]
 	* [[Classi anonime]]
 	* [[Espressioni lambda]]
-* [[Stream]]
+* [[Triennale/Anno 2/Semestre 2/PR2/Lab/Stream|Stream]]
 * [[Classi innestate]]
 * [[Static]]
 

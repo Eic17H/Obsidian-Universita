@@ -1,3 +1,9 @@
+---
+cssclasses:
+  - pr2
+---
+#todo: fix
+
 # Programmazione Funzionale
 
 Week 9
@@ -109,3 +115,20 @@ BiFunction<String,String,Integer> f2 = (s1,s2) -> 5;
 Comparator<String> f1 = f2::apply
 ```
 Si fa così.
+
+
+
+# Ancora stream
+## Come creare uno stream
+
+Vedi slide. Con iterate, possiamo fare una stream potenzialmente infinita, creando essenzialmente una serie matematica in cui specifichiamo il primo elemento e la arrow function per derivare il successivo. Ci sono funzioni terminali, come limit, che limita la stream a una lunghezza massima.
+
+Durante l'esame pratico abbiamo a disposizione la documentazione di Java. Sia per l'esame che nella vita è importante sapere leggere, prima o poi ci serviranno classi che non conosciamo.
+
+## Collectors
+
+Trasformano lo stream in un iterabile (lo serializza, materializza). Di solito non li scriviamo, usiamo quelli già implementati. Si passano a Stream::collect().
+
+guarda le #slide e fai una lista di metodi utili (questo è per me, se è nei riassunti raggruppati non dovrebbe)
+
+Ricorda che se hai A::m(), e B extends A, con @Override B::m(), se hai oggetti di classe B, e fai .map(A::m()), ti fa comunque l'implementazione di B.
