@@ -21,8 +21,8 @@ Update .obsidian/graph.json every time parameters or group list change - the out
 // Parameters:
 
 let groups = {
-    red: ["AM", "DeM", "MD", "CSMN"],
-    red2: ["DeM"],
+    red: ["AM", "MD", "CSMN"],
+    red2: ["DeM", "DS"],
     orange: ["RC", "ISW", "ARE"],
     yellow: ["PR1", "ASD", "SO", "PR2"],
     green: ["BD", "FPW", "IUM"],
@@ -50,11 +50,11 @@ let colors = {
     },
     red2 : {
         minL: 0.7044,
-        maxL: 0.7044,
+        maxL: 0.5544,
         minC: 0.1872,
-        maxC: 0.1872,
+        maxC: 0.1666,
         minH: 23.19,
-        maxH: 23.19,
+        maxH: 23.26,
         signH: -1
     },
     orange : {
@@ -323,6 +323,12 @@ function generateAllCssClasses() {
     --accent: var(--accent-light);
     --accent-inverse: var(--accent-dark);
 }
+@media print {
+  .serious {
+    --accent-light: #000000 !important;
+    --accent-dark: #ffffff !important;
+  }
+}
 * {
     --link-color: var(--accent);
     --text-accent: var(--accent);
@@ -347,11 +353,17 @@ function generateAllCssClasses() {
     background-color: transparent;
     color: var(--accent);
 }
+mark {
+    background-color: transparent;
+    color: var(--accent);
+}
 ul .list-bullet::after { 
 background-color: var(--accent);
 }
 * {
   --code-background: color-mix(in srgb, var(--accent-inverse) 20%, transparent);
+  --link-external-color: var(--accent);
+  --link-extenral-color-hover: color-mix(in srgb, var(--accent-inverse) 20%, transparent);
 }
 body {
   --accent-light: #000000;

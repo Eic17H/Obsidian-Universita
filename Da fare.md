@@ -4,4 +4,5 @@
 - [ ] <span class="rc">[[Berkeley Socket]]</span>
 - [ ] <span class="rc">[[KPI]]</span>
 - [ ] <span class="isw">[[Decoupling]]</span>
+- [ ] <span class="ds">[[Il processo decisionale]]</span>
 #hidden

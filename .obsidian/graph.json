@@ -43,13 +43,6 @@
       }
     },
     {
-      "query": "path:DeM/",
-      "color": {
-        "a": 1,
-        "rgb": 16737894
-      }
-    },
-    {
       "query": "path:MD/",
       "color": {
         "a": 1,
@@ -61,6 +54,20 @@
       "color": {
         "a": 1,
         "rgb": 12408469
+      }
+    },
+    {
+      "query": "path:DeM/",
+      "color": {
+        "a": 1,
+        "rgb": 16737894
+      }
+    },
+    {
+      "query": "path:DS/",
+      "color": {
+        "a": 1,
+        "rgb": 11414322
       }
     },
     {

@@ -4,6 +4,8 @@ cssclasses:
   - serious
 ---
 https://support.microsoft.com/en-us/excel/load-the-solver-add-in-in-excel
+
+[[Triennale/Anno 2/Semestre 1/DeM/Tesine/Ottimizzazione|Tesina]]
 ## Matematica
 
 Ottimizzazione Lineare o Programmazione Lineare		

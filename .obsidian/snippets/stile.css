@@ -1,11 +1,6 @@
-
 .am {
   --accent-dark: #b94738;
   --accent-light: #760000;
-}
-.dem {
-  --accent-dark: #ff7675;
-  --accent-light: #c9323a;
 }
 .md {
   --accent-dark: #c85371;
@@ -14,6 +9,14 @@
 .csmn {
   --accent-dark: #ce65a4;
   --accent-light: #8b2768;
+}
+.dem {
+  --accent-dark: #ff7675;
+  --accent-light: #c9323a;
+}
+.ds {
+  --accent-dark: #bf3c40;
+  --accent-light: #7b0005;
 }
 .rc {
   --accent-dark: #e48e25;
@@ -70,10 +73,6 @@
 .logica {
   --accent-dark: #0ea6c8;
   --accent-light: #006889;
-}
-.eed {
-  --accent-dark: #7072d7;
-  --accent-light: #3c3695;
 }
 .theme-dark * {
     --accent: var(--accent-dark);

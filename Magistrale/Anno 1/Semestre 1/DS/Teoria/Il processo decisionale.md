@@ -1,0 +1,132 @@
+---
+cssclasses:
+  - ds
+---
+#slide
+
+Studiamo metodi per prendere decisioni in modo sensato. Ci sono più passi.
+
+* Individuare il problema, descriverlo a parole, e far emergere il criterio decisionale, i requisiti e i dati;
+* Modellizzazione del problema: trovare un modello di ottimizzazione, cioè descrivere in formule il mio problema, e questo serve per darle a degli applicativi o degli algoritmi che date le formule risolvono il problema;
+* Definizione di un algoritmo risolutivo per il modello;
+* Trovare un'implementazione di quell'algoritmo, o scriverla;
+* Determinare la soluzione, cioè capire se i risultati risolvono il mio problema, e in tal caso analizzarla.
+
+Come fanno i risultati a non essere adeguati? Può succedere se ho sbagliato i criteri.
+
+Questi step non sono sequenziali ma iterativi. La tesina va comunque strutturata così.
+
+## Modello
+
+Descrizione schematica del mio problema. I modelli che usiamo noi sono modelli matematici. Ci sono modelli fisici come la galilea del vento.
+
+I modelli matematici di ottimizzazione descrivono problemi decisionali e sono risolti da algoritmi di ottimizzazione.
+
+In un problema decisionale bisogna capire il modo migliore per utilizzare risorse, l'utilizzo delle quali comporta un costo ed è soggetto a vincoli, in modo tale da massimizzare i risultati.
+
+### Modelli di ottimizzazione
+
+Una decisione può essere descritta da un vettore $x$ di ==*variabili decisionali*==. Diciamo $X$ l'insieme delle soluzioni ammissibili, cioè l'insieme degli $x$ che soddisfa tutti i vincoli. L'ottimizzazione è la ricerca della soluzione ammissibile che minimizza il costo:$$min\ f(x):\ x\in X \subseteq R^n$$
+La funzione $f(x): X \to R$ è detta ==*funzione obiettivo*==.
+
+Troveremo spesso questo termine:
+
+> Un'**==istanza==** di un modello di ottimizzazione è un *esempio* del problema, ottenuto assegnando ai dati uno specifico insieme di valori. Assegnare questi valori è detto *istanziare* il problema.
+
+Cioè, io definisco un problema in modo generale, senza dare numeri specifici. Definisco il problema in modo tale che abbia senso a prescindere dai numeri. Quando lo istanzio poi gli do numeri specifici.
+
+## Programmazione lineare
+
+La maggior parte dei modelli di ottimizzazione saranno di <span class="dem">[[Triennale/Anno 2/Semestre 1/DeM/Tesine/Ottimizzazione/Ottimizzazione|ottimizzazione lineare]]</span>, perché molti problemi decisionali sono descrivibili come tali, e sono compresi molto bene e facili da implementare. Tanto che anche se il problema non è modellabile come lineare, lo si può trattare fino a un certo punto come se lo fosse e si ottengono comunque risultati decenti. La programmazione lineare (**==PL==**) consente di trattare problemi molto più grandi della programmazione non lineare.
+
+Se un problema di ==PL== ammette una soluzione ottima, il valore è unico, ma si può ottenere con più vettori diversi. Per esempio se hai due macchine identiche, se scambi i percorsi che fanno non ti cambia nulla.
+
+Se ci limitiamo ai valori interi, abbiamo ==PLI==, programmazione lineare intera.
+
+Un esempio di problema affrontabile con la ==PL== è:
+* Dobbiamo capire la quantità da acquistare per ciascun prodotto di una lista;
+* Ogni prodotto ha un limite massimo di quantità;
+* Ogni prodotto ha certe proprietà;
+* Ogni proprietà ha una somma minima;
+* Dobbiamo minimizzare la spesa totale.
+
+E si rappresenta come:
+* Sia $J$ l'insieme dei prodotti tra cui scegliere;
+* Sia $I$ l'insieme delle proprietà;
+* Sia $x_j$ la quantità non-negativa da acquistare del prodotto $j \in J$ (==variabili decisionali==);
+* Sia $c_j$ il costo di un'unità del prodotto $j \in J$;
+* Sia $u_j$ la quantità massima del prodotto $j \in J$;
+* Sia $b_i$ la quantità minima della proprietà $i \in I$;
+* Sia $a_{ij}$ la quantità di proprietà $i \in I$ presente in un'unità del prodotto $j \in J$.
+
+Il modello di PL di questo problema decisionale si può scrivere così:
+
+Le mie decisioni riguardano quello che è direttamente sotto il mio controllo, le quantità $x_j$ (che lui legge "*ics con gei*"), le quantità dei prodotti che compro. Ognuna ha un costo, letteralmente un prezzo, e una quantità massima. Le proprietà non le posso controllare direttamente, seguono da $x_j$, e ho dei minimi e/o dei massimi per ciascuna, e in particolare, se ogni prodotto ha un vettore dei macronutrienti, il vettore dei macronutrienti totali è la somma del prodotto tra ogni vettore e il suo coefficiente quantità, quindi questo è un problema lineare.
+
+Quindi rappresento il problema così:
+* $\min \sum\limits_{j \in J} c_jx_j$ è la *funzione obiettivo*;
+* $\sum\limits_{j \in J} a_{ij} x_j \geq b_i,\ \forall i \in I$ sono i *vincoli tecnologici*, cioè limiti massimi o minimi legati ai requsiti;
+* $0 \leq x_j \leq u_j,\ \forall j \in J$ sono altri vincoli sul dominio variabili decisionali, chiaramente quel vincolo c'è perché i valori di $x$ non possono essere negativi, non posso comprare $-16$ carote.
+
+Ricordando come funzionano le <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Matrici|matrici]]</span> e i vettori, possiamo anche scriverli come:
+* $\min c' x$;
+* $Ax \geq b$;
+* $0 \leq x \leq u$.
+
+Visto che quelle formule sopra corrispondono alla definizione di prodotto vettoriale e matriciale.
+
+#slide
+
+Ignoriamo a quali problemi corrispondono questi modelli. Vediamo una differenza matematica tra questi due problemi: uno è lineare e l'altro no.
+
+Se non rispetto i vincoli, la soluzione è inammissibile. Se li rispetto, cioè le disequazioni sono vere, allora la soluzione è ammissibile. Non è detto che sia ottima.
+
+Nel primo, notiamo che i costi possono anche essere negativi, e in quel caso il coefficiente tende ad essere alto. Non è per forza minimizzazione dei mali, può essere massimizzazione dei benefici.
+
+In un problema lineare, posso solo prendere una variabile e moltiplicarla per uno scalare. Non posso elevarla a potenza, non posso moltiplicarla per un'altra variabile.
+
+Quel "s.t." sarebbe "subject to", "soggetto a", ma si usa allo stesso modo di "tale che", "such that".
+
+Esercizio: formalizzare quel problema delle slide come problema di programmazione lineare.
+
+* Sia $x$ il vettore delle quantità degli alimenti, tutte positive
+* Sia $p$ il vettore dei prezzi degli alimenti
+* Sia $m$ il vettore dei requisiti minimi di valori nutrizionali
+* $|x| = |p| = |m|$
+* Sia $V$ la matrice $|p| \times |x|$ dei valori nutrizionali degli alimenti
+* Requisito minimo dei valori nutrizionali: $Vx \geq m$
+* Ottimizzazione del prezzo: $\min px'$
+
+Con la sintassi con cui l'ha scritta nelle slide, ci sono degli applicativi che lo risolvono come codice.
+
+Certamente possiamo farlo a mano andando per tentativi, con tante variabili viene male, e a prescindere quasi di sicuro non troviamo l'ottimo.
+
+Appunto personale, questo $px'$ è equivalente a una funzione $R^{|x|}\to R$. Possiamo trovare un minimo con l'analisi. Non so fare la derivata ma magari si riesce. Cioè uso la definizione con $h$ molto piccolo, ma mi servirebbe un versore casuale e quello funziona solo in due dimensioni.
+
+Tornando a noi, la soluzione trovata è l'unica soluzione minima (ma magari con vettore diverso). Si dicono soluzioni simmetriche o equivalenti.
+
+> **==Vincolo stretto==**: Un vincolo è soddisfatto in senso stretto se la disuguaglianza è soddisfatta con l'uguaglianza, cioè in parole povere il valore è proprio al limite.
+
+> **==Variabile duale==** di un vincolo: Se aumento la vedi slide, ricorda l'<span class="csmn">[[Problema#Condizionamento e propagazione dell'errore|errore]]</span>
+
+
+Un tipo specifico di PLI è quello booleano, dove $x$ ha come elementi solo $1$ e $0$, cioè tutti i minimi sono $0$ e tutti i massimi sono $1$. Per esempio il problema dello zaino.
+
+Se $b>\sum\limits_j a_j$, posso mettere $x$ tutto a $1$.
+
+Esercizio per casa: fare la cosa delle slide. Scrivere un'istanza del problema dello zaino per aiutare il ladro. Dobbiamo quindi istanziare $x$. A mano.
+
+$$\begin{matrix*}[l]
+\max \sum\limits_{j=1}^n c_jx_j \\
+s.t. \\
+\sum\limits_{j=1}^n a_jx_j\leq b_j \\
+x_j \in \{0,1\}, j=1\ldots n \\
+\begin{matrix*}
+b & = & 19 \\
+c & = & [30 & 36 & 15 & 11 & 5 & 3] \\
+a & = & [9 & 12 & 6 & 5 & 3 & 2] \\
+x & = & [1 & 0 & 1 & 0 & 1 & 0] \\
+\end{matrix*}\\
+\end{matrix*}$$
+
+Arriviamo a un costo di $18$ e un valore di $50$. Essenzialmente ho preso gli elementi col maggior rapporto $c_i:a_i$.
