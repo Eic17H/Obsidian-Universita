@@ -1,4 +1,6 @@
 Importante ricordare di controllare che un valore intero di Certora entri nella variabile Solidity con cui va confrontata. Quindi se un `mathint` di Certora rappresenta un `uint64` di Solidity, bisogna fare `require ... < 2^64`.
+
+Se ci sono tipi definiti dentro il contratto, come degli enum, per esempio l'enum `State` definito dentro il contratto `Escrow`, in Certora lo devi chiamare `Escrow.State`.
 ## Setup
 
 Devi farti un account, generare la tua chiave e impostarla come variabile d'ambiente mi pare, con `export CERTORAKEY="..."`.
