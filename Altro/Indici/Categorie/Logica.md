@@ -27,6 +27,6 @@
 [[Assiomi]]
 [[Ragionamento ex hypothesi]]
 [[Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Storia]]
-
+[[Clausole di Horn]]
 
 #hub
