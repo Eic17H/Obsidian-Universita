@@ -2,6 +2,7 @@
 cssclasses:
   - alf
 ---
+Questo è ALF, Automi e Linguaggi Formali fatto con Bartoletti. Non è AI Learning Formation fatto con Atzori. Hanno riorganizzato il corso di laurea, e credo dovessero tenere la stessa lista di esami, quindi tecnicamente hanno tenuto "ALF".
 ## In che condizioni versano gli appunti
 
 In realtà ho pochi appunti digitali, il che è un peccato perché si collega molto ad altre materie. Ma comunque certe volte mi vengono in mente modi per capire certi concetti strani, quindi li aggiungo come file a parte.
