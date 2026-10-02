@@ -1,5 +1,6 @@
 Qui sono elencate solo le materie con appunti fatti bene o decentemente. Vedi anche [[Per anno e semestre|tutte le materie in ordine cronologico]] e [[Per gruppo|alcuni raggruppamenti per argomento]].
 
+Triennale:
 * <span class="pr1">[[Programmazione 1]]</span>
 * <span class="are">[[Architettura degli Elaboratori]]</span>
 * <span class="am">[[Analisi Matematica]]</span>
@@ -9,6 +10,9 @@ Qui sono elencate solo le materie con appunti fatti bene o decentemente. Vedi an
 * <span class="lip">[[Linguaggi di Programmazione]]</span>
 * <span class="logica">[[Istituzioni di Logica]]</span>
 
+Magistrale:
+* [[Decision Science]]
+* [[Image Processing]]
 ## Risorse esterne
 
 ### Leonardo Dessì

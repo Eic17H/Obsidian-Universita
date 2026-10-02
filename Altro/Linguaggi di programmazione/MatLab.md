@@ -1,7 +1,7 @@
 ---
 icon: MatLab.png
 ---
-Vedi <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab|CSMN]]</span> e la <span class="csmn">[[Relazione|relazione]]</span>.
+Vedi <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab|CSMN]]</span> con la  <span class="csmn">[[Relazione|relazione]]</span>, e [[Image Processing]].
 
 In MatLab tutto è una matrice. Infatti si chiama MatLab e non MathLab, Mat di matrice.
 
@@ -33,5 +33,10 @@ Algoritmi:
 * <span class="csmn">[[Interpolazione]]</span>
 	* <span class="csmn">[[Forma canonica]]</span>
 	* <span class="csmn">[[Lagrange]]</span>
+
+Image Processing:
+* [[Rappresentazione delle immagini]]
+* [[Aritmetica delle immagini]]
+* [[Preprocessing]]
 
 #hub #hublvl2

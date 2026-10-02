@@ -195,6 +195,12 @@
 	* <span class="r54">[[Eldarica]]</span>
 * <span class="r54">[[Certora]]</span>
 
+## Image processing
+
+* [[Rappresentazione delle immagini]]
+* [[Aritmetica delle immagini]]
+* [[Preprocessing]]
+
 ## Unsorted
 
 
