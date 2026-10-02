@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Magistrale/Anno 1/Semestre 1/DS/Raw/20260929.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "20260929"
             }
           }
         ]
@@ -37,7 +37,9 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "alphabetical",
-            "autoReveal": false
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
           },
           "icon": "lucide-folder-closed",
           "title": "Files"
@@ -145,6 +147,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -155,6 +158,8 @@
   },
   "active": "87e77ccf7d525997",
   "lastOpenFiles": [
+    "Magistrale/Anno 1/Semestre 1/DS/Raw/20260928.md",
+    "README.md",
     "SO/Modulo I/Sistemi Operativi - Modulo I.md",
     "SO/Sistemi Operativi.md",
     "SO/Modulo II/Sistemi Operativi - Modulo II.md",
@@ -167,7 +172,6 @@
     "SO/Modulo II/C/Socket in C.md",
     "SO/Modulo II/Bash/Terminale di Linux - cheatsheet.md",
     "SO/Modulo II/Altro/Socket.md",
-    "README.md",
     "PR2/Programmazione 2.md",
     "PR2/Modulo II/Override.md",
     "PR2/Modulo II/Java.md",
@@ -180,7 +184,6 @@
     "PR1/Modulo I/Programmazione - Cenni storici.md",
     "PR1/Modulo I/Linguaggio.md",
     "PR1/Modulo I/Algoritmi.md",
-    "MD/Matematica Discreta.md",
     "FPW/about.html",
     "FPW/Laboratorio/File.zip",
     "SO/Modulo II/Linux",
