@@ -15,8 +15,8 @@
   --accent-light: #c9323a;
 }
 .ds {
-  --accent-dark: #bf3c40;
-  --accent-light: #7b0005;
+  --accent-dark: #d34f50;
+  --accent-light: #8d0017;
 }
 .rc {
   --accent-dark: #e48e25;
@@ -73,6 +73,14 @@
 .logica {
   --accent-dark: #0ea6c8;
   --accent-light: #006889;
+}
+.ga {
+  --accent-dark: #8e3ef3;
+  --accent-light: #5700ae;
+}
+.ip {
+  --accent-dark: #ac35cc;
+  --accent-light: #6c008a;
 }
 .theme-dark * {
     --accent: var(--accent-dark);

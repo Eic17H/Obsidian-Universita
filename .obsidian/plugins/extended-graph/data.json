@@ -242,7 +242,7 @@
         "query": "path:DS/",
         "color": {
           "a": 1,
-          "rgb": 11414322
+          "rgb": 12664386
         }
       },
       {
@@ -344,6 +344,20 @@
         }
       },
       {
+        "query": "path:GA/",
+        "color": {
+          "a": 1,
+          "rgb": 8399074
+        }
+      },
+      {
+        "query": "path:IP/",
+        "color": {
+          "a": 1,
+          "rgb": 10231995
+        }
+      },
+      {
         "query": "path:Indici  ",
         "color": {
           "a": 1,
@@ -432,7 +446,7 @@
             "query": "path:DS/",
             "color": {
               "a": 1,
-              "rgb": 11414322
+              "rgb": 12664386
             }
           },
           {
@@ -531,6 +545,20 @@
             "color": {
               "a": 1,
               "rgb": 38584
+            }
+          },
+          {
+            "query": "path:GA/",
+            "color": {
+              "a": 1,
+              "rgb": 8399074
+            }
+          },
+          {
+            "query": "path:IP/",
+            "color": {
+              "a": 1,
+              "rgb": 10231995
             }
           },
           {

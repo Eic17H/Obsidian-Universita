@@ -26,7 +26,8 @@ let groups = {
     orange: ["RC", "ISW", "ARE"],
     yellow: ["PR1", "ASD", "SO", "PR2"],
     green: ["BD", "FPW", "IUM"],
-    blue: ["FDI", "ALF", "LiP", "Logica"]
+    blue: ["FDI", "ALF", "LiP", "Logica"],
+    purple: ["GA", "IP"]
 }
 
 /*
@@ -92,6 +93,15 @@ let colors = {
         minH: 260,
         maxH: 220,
         signH: -1
+    },
+    purple : {
+        minL: 0.5193,
+        maxL: 0.5193,
+        minC: 0.2503,
+        maxC: 0.2295,
+        minH: 298.06,
+        maxH: 318.34,
+        signH: 1
     }
 }
 

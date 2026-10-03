@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ip
+---
 Aritmetica delle immagini:
 * `imabsdiff`: differenza assoluta pixel per pixel;
 * `imadd`: somma pixel per pixel, o somma dello stesso valore a tutti i pixel;

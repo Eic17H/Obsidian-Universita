@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ip
+---
 Per generare e visualizzare un istogramma usiamo `imhist(I, N)`, dove `I` e l'immagine ed `N` non lo mettiamo per tenerlo default a $256$.
 
 Per esempio, `pout.tif` se la guardi è tremenda. C'è poco contrasto, non usa i grigi più scuri né i grigi più chiari. Quindi l'istogramma sarà tutto concentrato al centro.
