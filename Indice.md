@@ -11,8 +11,8 @@ Triennale:
 * <span class="logica">[[Istituzioni di Logica]]</span>
 
 Magistrale:
-* [[Decision Science]]
-* [[Image Processing]]
+* <span class="ds">[[Decision Science]]</span>
+* <span class="ip">[[Image Processing]]</span>
 ## Risorse esterne
 
 ### Leonardo Dessì
