@@ -48,6 +48,20 @@ Questo test quindi:
 
 Quindi il test fallisce se l'input $0$, cioè la funzione `donate()`, toglie soldi al contratto. Infatti questo contratto *accetta* donazioni tramite `donate()`, e paga persone con gli altri due metodi.
 
+## Altro modo
+
+Guardiamo questo test:
+```Solidity
+/// @custom:preghost function deposit
+bool pre = block.number <= timeout_block && balance_b>=1 && balance==1;
+int old_balance_b = balance_b;
+
+/// @custom:postghost function deposit
+assert (!pre || (balance_b==old_balance_b-1 && balance==2));
+```
+
+Il primo blocco verrà eseguito prima del metodo `deposit()`, il secondo verrà eseguito dopo il metodo `deposit()`.
+
 ## Spiegazione migliore
 
 I test scritti in SolCMC sono composti da una funzione che può prendere dei parametri. Si utilizzano due comandi principali: require e assert. Una require prende un'espressione booleana, e ignora il test corrente se è falsa. Un assert invece fa fallire il test se l'espressione è falsa. Il resto del codice è normale codice Solidity, nello scope del contratto. La funzione viene eseguita più volte con valori casuali per i parametri. Si può eseguire col solver [[Z3]] o [[Eldarica]]. Il tempo dell'ambiente non scorre durante un test.
