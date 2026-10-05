@@ -569,7 +569,7 @@
             }
           }
         ],
-        "search": "-file:Indice -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\".canvas\"",
+        "search": "-file:Indice -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\".canvas\" -path:\"/raw/\"",
         "hideUnresolved": true,
         "showAttachments": false,
         "showOrphans": false,

@@ -67,5 +67,8 @@
 [[Triennale/Anno 2/Semestre 1/DeM/Tesine/Ottimizzazione/Ottimizzazione|Ottimizzazione]]
 [[Ottimizzazione discreta]]
 [[Il processo decisionale]]
+[[PLI booleana]]
+[[Poliedri e Vertici]]
+[[Programmazione lineare]]
 
 #hub
