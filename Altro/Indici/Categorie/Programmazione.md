@@ -194,12 +194,15 @@
 	* <span class="r54">[[Z3]]</span>
 	* <span class="r54">[[Eldarica]]</span>
 * <span class="r54">[[Certora]]</span>
+	* <span class="r54">[[Struttura di una specifica]]</span>
+	* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Certora/Tipi]]</span>
+	* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Certora/Formalità]]</span>
 
 ## Image processing
 
-* [[Rappresentazione delle immagini]]
-* [[Aritmetica delle immagini]]
-* [[Preprocessing]]
+* <span class="ip">[[Rappresentazione delle immagini]]</span>
+* <span class="ip">[[Aritmetica delle immagini]]</span>
+* <span class="ip">[[Preprocessing]]</span>
 
 ## Unsorted
 

@@ -1,7 +1,7 @@
 #hub 
 [[Valutazione]]
 [[Tipizzazione OCaml-like]]
-[[Formalità]]
+[[Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo/Formalità]]
 [[Aritmetica non Tipizzata]]
 [[Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Automi]]
 [[Espressioni regolari]]

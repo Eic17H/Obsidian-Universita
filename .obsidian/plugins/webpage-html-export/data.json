@@ -10,7 +10,7 @@
     "postProcess": true,
     "displayProgress": true,
     "inlineHTML": false,
-    "exportPath": "C:\\GitHub\\eic17h.github.io\\appunti-universita",
+    "exportPath": "/home/eic/Documents/GitHub/eic17h.github.io/appunti-universita",
     "filesToExport": [
       "Altro/Indici/Categorie/Reti.md",
       "Altro/Indici/Per anno e semestre.md",

@@ -1,12 +1,25 @@
+---
+icon: Certora.jpg
+---
 ## Cos'è
 
 Certora è un tool per la verifica formale che converte le funzioni di Solidity in formule matematiche e dimostra teoremi su quelle formule.
+
+* [[Struttura di una specifica]]
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Certora/Tipi|Tipi]]
+* [[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Certora/Formalità|Formalità]]
 
 ## Consigli
 
 Importante ricordare di controllare che un valore intero di Certora entri nella variabile Solidity con cui va confrontata. Quindi se un `mathint` di Certora rappresenta un `uint64` di Solidity, bisogna fare `require ... < 2^64`.
 
 Se ci sono tipi definiti dentro il contratto, come degli enum, per esempio l'enum `State` definito dentro il contratto `Escrow`, in Certora lo devi chiamare `Escrow.State`.
+
+Non puoi fare chiamate esterne con Certora. Se testi un metodo che fa chiamate esterne, Certora va in *havoc* e lo tratta come una sorta di undefined behavior.
+
+Da vedere:
+
+> To resolve this call, add a 'links' entry for 'beneficiary' in contract 'VestingWallet' (use 'using' aliases for contract names)
 ## Setup
 
 Devi farti un account, generare la tua chiave e impostarla come variabile d'ambiente mi pare, con `export CERTORAKEY="..."`.
@@ -134,3 +147,9 @@ Violations were found
 ```
 
 Induction base. Chissà cos'è.
+
+## AAAAAAAAAA
+
+https://chat.deepseek.com/share/r4rssb4leqi9rwi78r
+
+Capire cos'è Havoc e che diamine.

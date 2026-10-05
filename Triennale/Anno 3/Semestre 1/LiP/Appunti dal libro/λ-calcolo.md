@@ -217,4 +217,4 @@ prd &=& λm.fst\ (m\ ss\ zz)
 \end{matrix*}$$
 ## Approfondimenti
 
-Vedi anche delle [[Formalità|ulteriori formalità]] sulla sintassi e sulla semantica del λ-calcolo, e la [[λ-calcolo tipizzato|versione con tipi]].
+Vedi anche delle [[Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo/Formalità|ulteriori formalità]] sulla sintassi e sulla semantica del λ-calcolo, e la [[λ-calcolo tipizzato|versione con tipi]].

@@ -142,3 +142,19 @@ Magari me ne farò una ragione.
 La cosa brutta è che un ambiente di Solidity ha una sorta di variabile globale `timestamp`, di tipo `uint64`, ma Certora lo testa con `uint256`, quindi possono esserci problemi di overflow, soprattuto coi confronti (dice che $x>y$, ma $x>2^{64}$ quindi una volta troncato la prima disuguaglianza non vale più).
 
 E poi c'è tutto il problema del troncamento degli interi che rende tutto una merda. E quindi sai che faccio, guarda tu, ripesco il trick che usavamo con assembly e moltiplico entrambi i lati dell'equazione per il denominatore. Che è l'opposto di quello che facciamo con CSMN, dove vogliamo numeri bassi perché lavoriamo coi float.
+
+## HTLC
+
+### `commit-not-revert-isCommitted-was-false`
+
+E qui come dovrei fare?
+
+* $p$: `commit()` avviene con successo, cioè non reverta, `0011`
+* $q$: `isCommitted`, `0101`
+* $\alpha$ **commit-reverts-if-isCommitted**: $q \to \lnot p$, `1110`
+* $\beta$ **commit-not-revert-isCommitted-was-false**: $\lnot q \to p$, `0111`
+* $\alpha \land \beta$ **specifiche**: `0110`, cioè $p \text{ xor } q$.
+* Una versione con $\lnot \alpha \land \beta$ `0001`
+* Una versione con $\alpha \land \lnot \beta$ `1000`
+ 
+### `reveal-preimage`
