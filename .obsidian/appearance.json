@@ -10,6 +10,7 @@
   "theme": "obsidian",
   "textFontFamily": "",
   "baseFontSizeAction": true,
-  "baseFontSize": 16,
-  "accentColor": ""
+  "baseFontSize": 18,
+  "accentColor": "",
+  "nativeMenus": false
 }

@@ -2,4 +2,3 @@
 cssclasses:
   - ga
 ---
-* [[Convex hull]]

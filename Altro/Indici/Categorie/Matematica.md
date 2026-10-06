@@ -70,5 +70,7 @@
 [[PLI booleana]]
 [[Poliedri e Vertici]]
 [[Programmazione lineare]]
+[[Convex hull]]
+[[CH is a polygon]]
 
 #hub
