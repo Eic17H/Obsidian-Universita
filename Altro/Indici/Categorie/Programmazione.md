@@ -218,7 +218,6 @@
 <span class="ium">[[Activity]]</span>
 <span class="ium">[[XML]]</span>
 <span class="ium">[[Android Studio]]</span>
-<span class="ium">[[Figma]]</span>
 <span class="ium">[[Introduzione ad Android Studio]]</span>
 <span class="isw">[[Agile testing]]</span> <span class="isw">[[Refactoring]]</span> <span class="isw">[[Debito tecnico]]</span> <span class="isw">[[Testing]]</span> <span class="isw">[[Unit testing con LLM]]</span> <span class="ium">[[Prototipi]]</span>
 [[Fuzzing]]

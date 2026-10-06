@@ -68,7 +68,7 @@
 [[Ottimizzazione discreta]]
 [[Il processo decisionale]]
 [[PLI booleana]]
-[[Poliedri e Vertici]]
+[[Poliedri]]
 [[Programmazione lineare]]
 [[Convex hull]]
 [[CH is a polygon]]

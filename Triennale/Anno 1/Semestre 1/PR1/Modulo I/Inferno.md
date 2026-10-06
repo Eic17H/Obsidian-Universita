@@ -7,7 +7,7 @@ cssclasses:
 Dentro la funzione [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Ricorsione|ricorsiva]] ci sono invocazioni alla funzione stessa.
 Lo [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Scope|scope]] definisce qual è l’ambito di visibilità degli identificatori.
 `a=fib(3);` Prima cosa da valutare: ==rvalue==.
-[orrendi grafici sul quaderno che non ricreerò]
+\[orrendi grafici sul quaderno che non ricreerò\]
 L’insieme di funzioni invocate si può visualizzare come una pila di invocazioni, una call stack in cui una funzione che ne invoca un’altra la mette sopra sé stessa. L’unica funzione attiva è quella in cima, l’ultima chiamata, quelle sotto sono in pausa, congelate.
 Si chiama *freeze/thaw*, congelare/scongelare.
 
@@ -88,7 +88,7 @@ Se proprio devi fare queste cose, cambia linguaggio.
 Benissimo! Bene!
 A tuo rischio e pericolo.
 
-Quando allochi della memoria dall’heap, ‘sto gran pezzo di me…
+Quando allochi della memoria dall’heap, 'sto gran pezzo di me…
 moria è una cosa reale.
 
 Non esiste alternativa per allocare dinamicamente la memoria e utilizzarla.
@@ -98,7 +98,7 @@ I puntatori non sono mai necessari (==quasi==).
 
 Quando fai `int *p`, `int` non serve a niente finché `p` non comincia a puntare.
 
-I progettisti del linguaggio, ‘ste merde, hanno reso possibili tutti questi modi (e altri) per dichiarare un puntatore: `int* p`, `int *q`, `int*r`, `int * s`…
+I progettisti del linguaggio, 'ste merde, hanno reso possibili tutti questi modi (e altri) per dichiarare un puntatore: `int* p`, `int *q`, `int*r`, `int * s`…
 
 
 `&` è un operatore unario prefisso che…

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - csmn
+---
 Autovalori e autovettori di una [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Matrici|matrice]].
 
 Per forza. Non puoi non parlarne.
