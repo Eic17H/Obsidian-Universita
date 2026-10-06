@@ -8,7 +8,7 @@ Per ora sono disordinati, poi ci lavorerò una volta capito come dividere bene g
 * [[Il processo decisionale]]
 * [[Programmazione lineare]]
 * [[PLI booleana]]
-* [[Poliedri e Vertici]]
+* [[Poliedri]]
 ## Introduzione
 
 Ci occupiamo di determinare decisioni con criteri, nel senso che cerchiamo di trovare la decisione migliore per un dato problema. I problemi possono essere di tantissimi tipi: in informatica, assegnazione di lavori jobless server (eh?), i criteri possono essere i tempi di completamento dei jobs, invece nelle telecomunicazioni può essere l'instradamento efficiente, nella logistica posso voler determinare itinerari degli autoveicoli per servire tutti i clienti minimizzando la distanza percorsa, o il tempo, o il carburante. Quindi ho decisioni da prendere e requisiti da soddisfare con quelle decisioni.
