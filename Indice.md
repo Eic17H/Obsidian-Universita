@@ -1,4 +1,4 @@
-Qui sono elencate solo le materie con appunti fatti bene o decentemente, o che lo saranno. [[Per anno e semestre|Clicca qui per vedere tutte le materie]].
+Qui sono elencate solo le materie con appunti fatti bene o decentemente, o che lo saranno. **==[[Per anno e semestre|Clicca qui per vedere tutte le materie]]==**.
 
 Triennale:
 * <span class="pr1">[[Programmazione 1]]</span>

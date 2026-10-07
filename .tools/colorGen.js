@@ -355,17 +355,45 @@ function generateAllCssClasses() {
 .math {
   color: var(--accent);
 }
-.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
-    background-color: transparent;
-    color: var(--accent);
+  .cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
+    background-color: transparent !important;
+    color: var(--accent) !important;
 }
 .markdown-preview-view mark {
-    background-color: transparent;
-    color: var(--accent);
+    background-color: transparent !important;
+    color: var(--accent) !important;
+}
+.markdown-rendered mark {
+    background-color: transparent !important;
+    color: var(--accent) !important;
+}
+mark[data-highlight=red] {
+    --accent-light: red !important;
+    --accent-dark: red !important;
+}
+mark[data-highlight=orange] {
+    --accent-light: orange !important;
+    --accent-dark: orange !important;
+}
+mark[data-highlight=yellow] {
+    --accent-light: yellow !important;
+    --accent-dark: yellow !important;
+}
+mark[data-highlight=green] {
+    --accent-light: green !important;
+    --accent-dark: green !important;
+}
+mark[data-highlight=blue] {
+    --accent-light: blue !important;
+    --accent-dark: blue !important;
+}
+mark[data-highlight=purple] {
+    --accent-light: purple !important;
+    --accent-dark: purple !important;
 }
 mark {
-    background-color: transparent;
-    color: var(--accent);
+    background-color: transparent !important;
+    color: var(--accent) !important;
 }
 ul .list-bullet::after { 
 background-color: var(--accent);
