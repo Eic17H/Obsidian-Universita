@@ -2,7 +2,6 @@
 cssclasses:
   - csmn
 ---
-# Calcolo Scientifico e Metodi Numerici
 # [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Teoria|Teoria]]
 # [[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab|Laboratorio]]
 

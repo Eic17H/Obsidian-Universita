@@ -2,7 +2,7 @@
 * <span class="am">[[Analisi Matematica]]</span>
 * <span class="md">[[Matematica Discreta]]</span>
 * <span class="dem">[[Dati e Modelli]]</span>
-* <span class="csmn">[[CSMN|Calcolo Scientifico e Metodi Numerici]]</span>
+* <span class="csmn">[[Calcolo Scientifico e Metodi Numerici|Calcolo Scientifico e Metodi Numerici]]</span>
 * <span class="ds">[[Decision Science]]</span>
 
 ## Booleani e linguaggi
