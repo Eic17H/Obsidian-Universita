@@ -36,152 +36,152 @@
       }
     },
     {
-      "query": "path:AM/",
-      "color": {
-        "a": 1,
-        "rgb": 11024170
-      }
-    },
-    {
-      "query": "path:MD/",
-      "color": {
-        "a": 1,
-        "rgb": 11944802
-      }
-    },
-    {
-      "query": "path:CSMN/",
-      "color": {
-        "a": 1,
-        "rgb": 12408469
-      }
-    },
-    {
-      "query": "path:DeM/",
-      "color": {
-        "a": 1,
-        "rgb": 16737894
-      }
-    },
-    {
-      "query": "path:DS/",
-      "color": {
-        "a": 1,
-        "rgb": 12664386
-      }
-    },
-    {
-      "query": "path:RC/",
-      "color": {
-        "a": 1,
-        "rgb": 13860352
-      }
-    },
-    {
-      "query": "path:ISW/",
-      "color": {
-        "a": 1,
-        "rgb": 15436875
-      }
-    },
-    {
-      "query": "path:ARE/",
-      "color": {
-        "a": 1,
-        "rgb": 16751735
-      }
-    },
-    {
-      "query": "path:PR1/",
-      "color": {
-        "a": 1,
-        "rgb": 9076224
-      }
-    },
-    {
-      "query": "path:ASD/",
-      "color": {
-        "a": 1,
-        "rgb": 11051071
-      }
-    },
-    {
-      "query": "path:SO/",
-      "color": {
-        "a": 1,
-        "rgb": 13091945
-      }
-    },
-    {
-      "query": "path:PR2/",
-      "color": {
-        "a": 1,
-        "rgb": 15198354
-      }
-    },
-    {
-      "query": "path:BD/",
-      "color": {
-        "a": 1,
-        "rgb": 31023
-      }
-    },
-    {
-      "query": "path:FPW/",
-      "color": {
-        "a": 1,
-        "rgb": 4366154
-      }
-    },
-    {
-      "query": "path:IUM/",
-      "color": {
-        "a": 1,
-        "rgb": 7849318
-      }
-    },
-    {
-      "query": "path:FDI/",
-      "color": {
-        "a": 1,
-        "rgb": 1136321
-      }
-    },
-    {
-      "query": "path:ALF/",
-      "color": {
-        "a": 1,
-        "rgb": 28608
-      }
-    },
-    {
-      "query": "path:LiP/",
-      "color": {
-        "a": 1,
-        "rgb": 33981
-      }
-    },
-    {
-      "query": "path:Logica/",
-      "color": {
-        "a": 1,
-        "rgb": 38584
-      }
-    },
-    {
-      "query": "path:GA/",
-      "color": {
-        "a": 1,
-        "rgb": 8399074
-      }
-    },
-    {
-      "query": "path:IP/",
-      "color": {
-        "a": 1,
-        "rgb": 10231995
-      }
-    },
+    "query": "path:AM/",
+    "color": {
+    "a": 1,
+    "rgb": 11024170
+    }
+},
+{
+    "query": "path:MD/",
+    "color": {
+    "a": 1,
+    "rgb": 11944802
+    }
+},
+{
+    "query": "path:CSMN/",
+    "color": {
+    "a": 1,
+    "rgb": 12408469
+    }
+},
+{
+    "query": "path:DeM/",
+    "color": {
+    "a": 1,
+    "rgb": 16737894
+    }
+},
+{
+    "query": "path:DS/",
+    "color": {
+    "a": 1,
+    "rgb": 12664386
+    }
+},
+{
+    "query": "path:RC/",
+    "color": {
+    "a": 1,
+    "rgb": 13860352
+    }
+},
+{
+    "query": "path:ISW/",
+    "color": {
+    "a": 1,
+    "rgb": 15436875
+    }
+},
+{
+    "query": "path:ARE/",
+    "color": {
+    "a": 1,
+    "rgb": 16751735
+    }
+},
+{
+    "query": "path:PR1/",
+    "color": {
+    "a": 1,
+    "rgb": 9076224
+    }
+},
+{
+    "query": "path:ASD/",
+    "color": {
+    "a": 1,
+    "rgb": 11051071
+    }
+},
+{
+    "query": "path:SO/",
+    "color": {
+    "a": 1,
+    "rgb": 13091945
+    }
+},
+{
+    "query": "path:PR2/",
+    "color": {
+    "a": 1,
+    "rgb": 15198354
+    }
+},
+{
+    "query": "path:BD/",
+    "color": {
+    "a": 1,
+    "rgb": 31023
+    }
+},
+{
+    "query": "path:FPW/",
+    "color": {
+    "a": 1,
+    "rgb": 4366154
+    }
+},
+{
+    "query": "path:IUM/",
+    "color": {
+    "a": 1,
+    "rgb": 7849318
+    }
+},
+{
+    "query": "path:FDI/",
+    "color": {
+    "a": 1,
+    "rgb": 1136321
+    }
+},
+{
+    "query": "path:ALF/",
+    "color": {
+    "a": 1,
+    "rgb": 28608
+    }
+},
+{
+    "query": "path:LiP/",
+    "color": {
+    "a": 1,
+    "rgb": 33981
+    }
+},
+{
+    "query": "path:Logica/",
+    "color": {
+    "a": 1,
+    "rgb": 38584
+    }
+},
+{
+    "query": "path:GA/",
+    "color": {
+    "a": 1,
+    "rgb": 7425023
+    }
+},
+{
+    "query": "path:IP/",
+    "color": {
+    "a": 1,
+    "rgb": 9197006
+    }
+},
     {
       "query": "path:Indici  ",
       "color": {

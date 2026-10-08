@@ -1,86 +1,87 @@
+
 .am {
-  --accent-dark: #b94738;
+  --accent-dark: #dc6656;
   --accent-light: #760000;
 }
 .md {
-  --accent-dark: #c85371;
+  --accent-dark: #eb728e;
   --accent-light: #840e39;
 }
 .csmn {
-  --accent-dark: #ce65a4;
+  --accent-dark: #f084c4;
   --accent-light: #8b2768;
 }
 .dem {
-  --accent-dark: #ff7675;
+  --accent-dark: #ff9794;
   --accent-light: #c9323a;
 }
 .ds {
-  --accent-dark: #d34f50;
+  --accent-dark: #f66f6d;
   --accent-light: #8d0017;
 }
 .rc {
-  --accent-dark: #e48e25;
+  --accent-dark: #ffae4d;
   --accent-light: #a15000;
 }
 .isw {
-  --accent-dark: #fc9c5b;
+  --accent-dark: #ffbc7b;
   --accent-light: #b85d12;
 }
 .are {
-  --accent-dark: #ffac86;
+  --accent-dark: #ffcca6;
   --accent-light: #cc6d49;
 }
 .pr1 {
-  --accent-dark: #998d20;
+  --accent-dark: #b8ad46;
   --accent-light: #5e5200;
 }
 .asd {
-  --accent-dark: #b7b050;
+  --accent-dark: #d7d071;
   --accent-light: #7a7300;
 }
 .so {
-  --accent-dark: #d7d479;
+  --accent-dark: #f8f59a;
   --accent-light: #989438;
 }
 .pr2 {
-  --accent-dark: #f8f9a2;
+  --accent-dark: #ffffc3;
   --accent-light: #b7b762;
 }
 .bd {
-  --accent-dark: #05893e;
+  --accent-dark: #3aa85b;
   --accent-light: #004d00;
 }
 .fpw {
-  --accent-dark: #52ae59;
+  --accent-dark: #73cf77;
   --accent-light: #00701a;
 }
 .ium {
-  --accent-dark: #87d576;
+  --accent-dark: #a7f796;
   --accent-light: #499537;
 }
 .fdi {
-  --accent-dark: #2365d2;
+  --accent-dark: #4285f4;
   --accent-light: #00258f;
 }
 .alf {
-  --accent-dark: #007ed1;
+  --accent-dark: #279ef3;
   --accent-light: #00418f;
 }
 .lip {
-  --accent-dark: #0093cd;
+  --accent-dark: #28b3ef;
   --accent-light: #00568d;
 }
 .logica {
-  --accent-dark: #0ea6c8;
+  --accent-dark: #45c6e9;
   --accent-light: #006889;
 }
 .ga {
-  --accent-dark: #8e3ef3;
-  --accent-light: #5700ae;
+  --accent-dark: #9b7fff;
+  --accent-light: #4d00ca;
 }
 .ip {
-  --accent-dark: #ac35cc;
-  --accent-light: #6c008a;
+  --accent-dark: #ba85ff;
+  --accent-light: #61259c;
 }
 .theme-dark * {
     --accent: var(--accent-dark);
@@ -112,7 +113,7 @@
 .math {
   color: var(--accent);
 }
-.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
+  .cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
     background-color: transparent !important;
     color: var(--accent) !important;
 }

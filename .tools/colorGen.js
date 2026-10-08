@@ -95,12 +95,12 @@ let colors = {
         signH: -1
     },
     purple : {
-        minL: 0.5193,
-        maxL: 0.5193,
+        minL: 0.5668,
+        maxL: 0.5697,
         minC: 0.2503,
-        maxC: 0.2295,
-        minH: 298.06,
-        maxH: 318.34,
+        maxC: 0.1801,
+        minH: 285.89,
+        maxH: 302.31,
         signH: 1
     }
 }
@@ -250,9 +250,11 @@ function generate(n, minL, maxL, minC, maxC, minH, maxH, signH) {
     return arr
 }
 
+// This decides how much brighter the color is in dark mode, and vice versa
+// This will need to be more complex eventually
 let deltaL = {
     light : -0.15,
-    dark : +0.05,
+    dark : +0.15,
     graph : 0
 }
 
