@@ -202,7 +202,7 @@
 
 * <span class="ip">[[Rappresentazione delle immagini]]</span>
 * <span class="ip">[[Aritmetica delle immagini]]</span>
-* <span class="ip">[[Preprocessing]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing]]</span>
 
 ## Unsorted
 

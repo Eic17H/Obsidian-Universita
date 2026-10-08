@@ -6,10 +6,13 @@ cssclasses:
 
 ### Teoria
 
+* [[Immagine]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Preprocessing|Preprocessing]]
+
 ### Lab
 * [[Rappresentazione delle immagini]]
 * [[Aritmetica delle immagini]]
-* [[Preprocessing]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
 
 ## Informazioni
 
