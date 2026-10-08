@@ -12,7 +12,6 @@
 * <span class="asd">[[Algoritmi e Strutture Dati]]</span>
 * <span class="are">[[Architettura degli Elaboratori]]</span>
 * <span class="md">[[Matematica Discreta]]</span>
-* <span class="fems">==Fisica e Metodo Scientifico==</span> è cambiato dopo che l'ho fatto
 
 ## Anno 2
 
@@ -21,8 +20,8 @@
 * <span class="so">[[Sistemi Operativi]]</span>
 * <span class="alf">[[Automi e Linguaggi Formali]]</span>
 * <span class="dem">[[Dati e Modelli]]</span>
-* <span class="diritto">[[Triennale/Anno 2/Semestre 1/Diritto/Diritto|Diritto]]</span> (Forse)
-* <span class="economia">[[Economia]]</span> (Forse)
+* <span class="diritto">[[Triennale/Anno 2/Semestre 1/Diritto/Diritto|Diritto]]</span>
+* <span class="economia">[[Economia]]</span>
 ### Semestre 2
 * <span class="pr2">[[Programmazione 2]]</span>
 * <span class="rc">[[Reti di Calcolatori]]</span>
