@@ -13,3 +13,6 @@ In questo corso, tratteremo quasi esclusivamente di temi che hanno a che fare co
 Indice:
 
 * [[Proprietà intellettuale]]
+* [[Diritto d'autore]]
+* [[Brevetto]]
+* [[Software]]
