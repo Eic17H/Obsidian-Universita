@@ -70,3 +70,63 @@ Gli altri due sono da fare a casa, #todo.
 Se vediamo l'istogramma di un'immagine che figooo, in cui gli oggetti sono scuri e lo sfondo è chiaro, vediamo che l'istogramma ha due colline, cioè è bimodale. Scegliamo quindi un punto di soglia, sotto il quale tutto è oggetto e sopra il quale tutto è sfondo.
 
 Per prendere il contorno, prendiamo i valori che si trovano le due colline, i pixel di transizione tra i due colori.
+
+
+```MatLab
+C = imread('cameraman.tif');
+M = imread('moon.tif');
+P = imread('pout.tif');
+figure;
+
+subplot(4,3,1);
+imshow(C);
+title('Cameraman');
+subplot(4,3,2);
+imshow(M);
+title('Moon');
+subplot(4,3,3);
+imshow(P);
+title('Pout');
+
+subplot(4,3,4);
+imhist(C);
+subplot(4,3,5);
+imhist(M);
+subplot(4,3,6);
+imhist(P);
+
+cTreshold = 75;
+mTreshold = 25;
+pTreshold = 115;
+
+C2 = (C > cTreshold);
+M2 = (M > mTreshold);
+P2 = (P > pTreshold);
+
+subplot(4,3,7);
+imshow(C2);
+subplot(4,3,8);
+imshow(M2);
+subplot(4,3,9);
+imshow(P2);
+
+cLow = 21;
+cHigh = 86;
+mLow = 25;
+mHigh = 150;
+pLow = 108;
+pHigh = 121;
+
+C3 = ((C > cLow) .* (C < cHigh));
+M3 = ((M > mLow) .* (M < mHigh));
+P3 = ((P > pLow) .* (P < pHigh));
+
+subplot(4,3,10);
+imshow(C3);
+subplot(4,3,11);
+imshow(M3);
+subplot(4,3,12);
+imshow(P3);
+```
+
+![[Pasted image 20261009114224.png]]
