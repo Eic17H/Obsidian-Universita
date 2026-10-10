@@ -8,7 +8,7 @@ Here is your toolbox:
 1. Figure out if a point $P$ is in a half plane or another with respect to the segment $\overline{P_jP_k}$.
 
 And here is the algorithm:
-1. Take all the <span class="am">[[Coppia ordinata|pairs]]</span> in $P$, that is $P \times P$, whose <span class="am">[[Teoria degli Insiemi#Prodotto cartesiano|cardinality]]</span> is $|P|^2$, important to know for [[Triennale/Comune/Complessità|complexity]];
+1. Take all the <span class="am">[[Coppia ordinata|pairs]]</span> in $P$, that is $P \times P$, whose <span class="am">[[Teoria degli Insiemi#Prodotto cartesiano|cardinality]]</span> is $|P|^2$, important to know for [[Comune/Complessità|complexity]];
 2. For each pair, use the ==tool== to see which halfplane the other $n-2$ points are in.
 
 Let's ignore how it's done, you have your tools, they're black boxes, like library functions.

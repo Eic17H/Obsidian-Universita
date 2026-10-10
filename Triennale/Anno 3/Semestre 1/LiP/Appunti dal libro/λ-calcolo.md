@@ -6,7 +6,7 @@ cssclasses:
 
 Il lambda-calcolo fu introdotto da Alonzo Church negli anni '30 come parte della sua ricerca delle fondamenta della matematica. Tra il 1936 e il 1940 trovò una formulazione <span class="logica">[[Insieme di formule inconsistente|logicamente consistente]]</span> e la documentò.
 
-Si è poi evoluto nella [[programmazione funzionale]].
+Si è poi evoluto nella [[Programmazione funzionale]].
 
 ### Spiegazione intuitiva
 

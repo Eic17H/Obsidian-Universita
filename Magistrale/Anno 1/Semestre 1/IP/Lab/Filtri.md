@@ -2,6 +2,8 @@
 cssclasses:
   - ip
 ---
+[[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri|Teoria]]
+
 Un filtro in MatLab è semplicemente una matrice.
 
 Usiamo la funzione `imfilter(f, w, filtering_mode, boundary_options, size_options)` per fare $f*w$.

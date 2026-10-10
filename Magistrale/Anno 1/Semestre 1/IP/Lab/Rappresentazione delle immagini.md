@@ -2,6 +2,8 @@
 cssclasses:
   - ip
 ---
+[[Immagine|Teoria]]
+
 Le funzioni del toolbox sono di tipo m-files. Possiamo vedere il codice di una funzione con `type nome_funzione`.
 
 In MatLab, le immagini sono rappresentate come matrici (quando la prof dice "array", lo intende come termine generalizzato a più dimensioni). Molto comodo, perché concettualizziamo già le immagini come matrici, e MatLab tratta tutto come matrice, indicizzate a partire da $1$, mentre noi le indicizziamo da $0$.
@@ -35,3 +37,5 @@ Ci sono funzioni per convertire un'immagine da un formato a un altro.
 * `mat2gray()` converte da una matrice qualunque a intensità, considerando il valore massimo presente nella matrice come bianco, e $0$ come nero;
 * `im2double()` converte da `uint8` a `double`;
 * `im2uint8()` converte da `double` a `uint8`.
+
+[[Aritmetica delle immagini|Ci sono anche operazioni specifiche]].

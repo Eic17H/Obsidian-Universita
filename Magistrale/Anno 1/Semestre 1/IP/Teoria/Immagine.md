@@ -2,6 +2,8 @@
 cssclasses:
   - ip
 ---
+[[Rappresentazione delle immagini|Lab]]
+
 Un'immagine è una versione finita e discreta di una proiezione bidimensionale di una scena tridimensionale. è una funzione discreta, la cui ampiezza è detta ==*valore*==. Le immagini quindi sono rappresentate da matrici: ogni punto è identificato da una posizione, e a ogni punto corrisponde un valore.
 
 Vediamo nelle slide un'immagine *monocromatica* di un topo. Con monocromatica si intende scala di grigi, quindi ogni pixel ha un valore scalare che va da $0$ a convenzionalmente $255$, o comunque fino a $l-1$, dove $l$ è il numero di step possibili. Quindi le zone più chiare avranno valori vicini a $255$, e le zone più scure valori vicini a $0$.

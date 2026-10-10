@@ -2,7 +2,7 @@
 cssclasses:
   - asd
 ---
-Vediamo strutture dati implementate come [[struct]] in C.
+Vediamo strutture dati implementate come [[Struct]] in C.
 
 * [[Liste|Liste]]
 	* [[Liste ordinate]]

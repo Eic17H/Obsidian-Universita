@@ -14,7 +14,7 @@ cssclasses:
 * [[Aritmetica delle immagini]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
 * [[Trasformazioni puntuali]]
-* [[Filtri]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri]]
 
 ## Informazioni
 
