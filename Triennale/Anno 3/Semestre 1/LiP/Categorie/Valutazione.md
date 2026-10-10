@@ -187,17 +187,3 @@ Dove: $$\begin{matrix*}[l]
 \\ δ'' = δ'[x/\fun(z,times(z,2))]
 \\ δ''' = δ'[z/3]
 \end{matrix*}$$
-<div style="break-after: page;"></div>
-#### Small-step
-
-Come accennato, credo che questo svolgimento sia sbagliato. A questo punto credo che bisogni effettivamente valutare le parentesi più esterne usando come giustificazione lo strato immediatamente più interno, che a sua volta usa una giustificazione, e così via finché non si trova uno strato che si può valutare con un assioma. Presento comunque la mia derivazione probabilmente sbagliata.
-
-$$\begin{matrix*}[l]
-\Delta =  \\
-\Delta' =  \\
-\Delta'' =  \\
-\\
-\begin{matrix*}[l]
-\llangle , \rrangle & \too & \\
-\end{matrix*}
-\end{matrix*}$$

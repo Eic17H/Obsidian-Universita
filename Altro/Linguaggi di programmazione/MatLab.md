@@ -5,6 +5,8 @@ Vedi <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab|CSMN]]</span>
 
 In MatLab tutto è una matrice. Infatti si chiama MatLab e non MathLab, Mat di matrice.
 
+Importante! Su Linux Mint, perché funzionasse il launcher dal desktop, ho dovuto impostare il comando a `matlab -desktop`. Per un paio di giorni ha funzionato senza.
+
 ## Indice
 
 Come si usa MatLab:
@@ -37,6 +39,8 @@ Algoritmi:
 Image Processing:
 * [[Rappresentazione delle immagini]]
 * [[Aritmetica delle immagini]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
+* [[Trasformazioni puntuali]]
+* [[Filtri]]
 
 #hub #hublvl2

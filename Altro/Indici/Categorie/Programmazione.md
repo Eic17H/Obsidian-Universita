@@ -200,9 +200,11 @@
 
 ## Image processing
 
-* <span class="ip">[[Rappresentazione delle immagini]]</span>
-* <span class="ip">[[Aritmetica delle immagini]]</span>
-* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing]]</span>
+* [[Rappresentazione delle immagini]]
+* [[Aritmetica delle immagini]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
+* [[Trasformazioni puntuali]]
+* [[Filtri]]
 
 ## Unsorted
 
