@@ -77,5 +77,6 @@
 [[Convex hull]]
 [[Convex hull algorithm]]
 [[CH is a polygon]]
+[[Polygon triangulation]]
 
 #hub
