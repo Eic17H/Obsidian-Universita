@@ -47,3 +47,9 @@ lrwxrwxrwx 1 eic eic 31 ott  7 17:29 ~/.local/bin/certoraRun.py -> ~/.local/bin/
 Dove `emv.jar`, `tac_optimizer` e `certoraRun` sono stati generati dal processo di compilazione.
 
 Ho anche dovuto installare `pipx install certora-cli`.
+
+No poi in realtà tutto questo è sbagliato, non funziona niente.
+
+Ho seguito [la guida ufficiale](https://github.com/Certora/CertoraProver/blob/master/README.md) ma è vaga e c'erano altri problemi strani, [chat con DeepSeek](https://chat.deepseek.com/share/gwj1ypjhjarixcydug).
+
+È anche una versione diversa di CVL.

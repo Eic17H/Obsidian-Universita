@@ -153,3 +153,32 @@ Induction base. Chissà cos'è.
 https://chat.deepseek.com/share/r4rssb4leqi9rwi78r
 
 Capire cos'è Havoc e che diamine.
+
+## Ok allora
+
+Havoc significa che se il contratto fa una chiamata esterna a un altro contratto, Certora si prepara al peggio e mette valori a caso nell'ambiente. L'ambiente sarebbe l'oggetto `e` e tutte le variabili `ghost` (globali).
+
+Questo mi ha dato problemi in questo test:
+
+```CVL
+ghost mathint sent;
+
+hook CALL(uint g, address addr, uint value, uint argsOffset, uint argsLength, uint retOffset, uint retLength) uint rc {
+    if (addr == currentContract.arbiter) {
+        sent = value;
+    }
+}
+
+rule arbitrate_send {   
+    env e;
+    require e.msg.sender == currentContract.arbiter;
+    address a;
+    require a == currentContract.seller || a == currentContract.buyer;
+    currentContract.arbitrate(e, a);
+    assert sent == to_mathint(currentContract.fee);
+}
+```
+
+Qui *vorremmo* poter usare `sent` come accumulatore, che è a `0` prima della chiamata interna ad `arbitrate()` e aumenta di `value` ad ogni chiamata esterna verso `arbiter`, ma non si può, perché Certora fa havoc quando chiama `arbitrate()` e quindi `send` non parte più da `0`.
+
+È come se non ci fosse modo di mandare informazioni a `CALL`, né dal "main" né da un'altra istanza di `CALL`, ma solo informazioni da `CALL` al main. Quindi se `arbitrate()` attiva `CALL` più volte, puoi avere informazioni solo dall'ultima volta.
