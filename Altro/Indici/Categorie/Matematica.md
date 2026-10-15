@@ -78,5 +78,11 @@
 [[Convex hull algorithm]]
 [[CH is a polygon]]
 [[Polygon triangulation]]
+[[Filtri globali]]
+[[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri puntuali]]
+[[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri spaziali]]
+[[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Sharpening]]
+[[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing]]
+[[Rumore]]
 
 #hub

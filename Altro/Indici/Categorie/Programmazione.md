@@ -203,8 +203,10 @@
 * [[Rappresentazione delle immagini]]
 * [[Aritmetica delle immagini]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
-* [[Trasformazioni puntuali]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri puntuali]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Smoothing]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Sharpening]]
 
 ## Unsorted
 

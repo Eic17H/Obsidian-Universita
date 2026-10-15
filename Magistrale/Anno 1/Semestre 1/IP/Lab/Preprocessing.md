@@ -2,6 +2,8 @@
 cssclasses:
   - ip
 ---
+#damettereinordine
+
 [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Preprocessing|Teoria]]
 
 Per generare e visualizzare un istogramma usiamo `imhist(I, N)`, dove `I` e l'immagine ed `N` non lo mettiamo per tenerlo default a $256$.

@@ -2,19 +2,27 @@
 cssclasses:
   - ip
 ---
+Metterò in ordine entro il parziale del 5 novembre.
 ## Indice
 
 ### Teoria
 
 * [[Immagine]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Preprocessing|Preprocessing]]
+* [[Filtri]]
+	* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri puntuali]]
+	* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri spaziali]]
+		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing]]
+		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Sharpening]]
+	* [[Filtri globali]]
+* [[Rumore]]
 
 ### Lab
 * [[Rappresentazione delle immagini]]
 * [[Aritmetica delle immagini]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
-* [[Trasformazioni puntuali]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri puntuali]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali]]
 
 ## Informazioni
 
@@ -72,9 +80,9 @@ Libro di testo: Digital Image Processing di Gonzales e Woods, standard internazi
 ### Modalita d'esame
 
 Esame, in quest'ordine:
-* Scritto: risposta multipla, teoria, due parziali e tre appelli, il voto si resetta a fine *sessione*
-* Orale: si può sostituire con un paper, preferito dalla maggior parte degli studenti, si può fare in gruppo massimo 4 e valutazione individuale, circa 10 minuti a testa, presentazione tutti insieme lo stesso giorno, questo voto non scade
-* MatLab: risoluzione di un problema simile a quelli delle esercitazioni, openbook
+* Scritto: risposta multipla, teoria, due parziali e tre appelli, il voto si resetta **a fine *sessione***.
+* Orale: si può sostituire con un paper, preferito dalla maggior parte degli studenti, si può fare in gruppo massimo 4 e valutazione individuale, circa 10 minuti a testa, presentazione tutti insieme lo stesso giorno, questo voto non scade.
+* MatLab: risoluzione di un problema simile a quelli delle esercitazioni, openbook.
 
 Sono tutte obbligatorie, e hanno tutte lo stesso valore.
 

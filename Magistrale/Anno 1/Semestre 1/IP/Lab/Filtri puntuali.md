@@ -2,6 +2,8 @@
 cssclasses:
   - ip
 ---
+#damettereinordine
+
 Le trasformazioni puntuali danno un valore al pixel in output in funzione solo del pixel omologo in input.
 
 ## Contrasto
@@ -74,3 +76,63 @@ imhist(J);
 ## Altre
 
 `imcomplement()` fa il negativo.
+
+## Utilizzo
+
+### Confronto
+
+Applichiamo a `moon.tif` queste trasformazioni:
+* Negativo
+* Regolazione della luminosità
+* Correzione gamma ($\gamma = 0.5$, $\gamma = 2$)
+* Stretching del contrasto
+
+Per ognuna, visualizzare:
+* Immagine originale
+* Immagine elaborata
+* Istogramma originale
+* Istogramma elaborato
+
+```MatLab
+clear;
+
+I = imread('moon.tif');
+N = imcomplement(I);
+L = imadd(I, 50);
+G1 = im2uint8(im2double(I).^0.5);
+G2 = im2uint8(im2double(I).^2);
+S = imadjust(I);
+
+figure;
+
+subplot(6,2,1);
+imshow(I);
+subplot(6,2,3);
+imshow(N);
+subplot(6,2,5);
+imshow(L);
+subplot(6,2,7);
+imshow(G1);
+subplot(6,2,9);
+imshow(G2);
+subplot(6,2,11);
+imshow(S);
+
+subplot(6,2,2);
+imhist(I);
+subplot(6,2,4);
+imhist(N);
+subplot(6,2,6);
+imhist(L);
+subplot(6,2,8);
+imhist(G1);
+subplot(6,2,10);
+imhist(G2);
+subplot(6,2,12);
+imhist(S);
+```
+
+![[Pasted image 20261009120106.png]]
+
+
+Invece andava fatta per ognuna una figura con due righe e due colonne, a sinistra l'originale e a destra quella in esame. #todo 
