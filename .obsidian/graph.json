@@ -36,150 +36,150 @@
       }
     },
     {
-      "query": "path:AM/",
+      "query": "[\"cssclasses\":\"am\"]",
       "color": {
         "a": 1,
         "rgb": 11024170
       }
     },
     {
-      "query": "path:MD/",
+      "query": "[\"cssclasses\":\"md\"]",
       "color": {
         "a": 1,
         "rgb": 11944802
       }
     },
     {
-      "query": "path:CSMN/",
+      "query": "[\"cssclasses\":\"csmn\"]",
       "color": {
         "a": 1,
         "rgb": 12408469
       }
     },
     {
-      "query": "path:DeM/",
+      "query": "[\"cssclasses\":\"dem\"]",
       "color": {
         "a": 1,
         "rgb": 16737894
       }
     },
     {
-      "query": "path:DS/",
+      "query": "[\"cssclasses\":\"ds\"]",
       "color": {
         "a": 1,
         "rgb": 12664386
       }
     },
     {
-      "query": "path:RC/",
+      "query": "[\"cssclasses\":\"rc\"]",
       "color": {
         "a": 1,
         "rgb": 13860352
       }
     },
     {
-      "query": "path:ISW/",
+      "query": "[\"cssclasses\":\"isw\"]",
       "color": {
         "a": 1,
         "rgb": 15436875
       }
     },
     {
-      "query": "path:ARE/",
+      "query": "[\"cssclasses\":\"are\"]",
       "color": {
         "a": 1,
         "rgb": 16751735
       }
     },
     {
-      "query": "path:PR1/",
+      "query": "[\"cssclasses\":\"pr1\"]",
       "color": {
         "a": 1,
         "rgb": 9076224
       }
     },
     {
-      "query": "path:ASD/",
+      "query": "[\"cssclasses\":\"asd\"]",
       "color": {
         "a": 1,
         "rgb": 11051071
       }
     },
     {
-      "query": "path:SO/",
+      "query": "[\"cssclasses\":\"so\"]",
       "color": {
         "a": 1,
         "rgb": 13091945
       }
     },
     {
-      "query": "path:PR2/",
+      "query": "[\"cssclasses\":\"pr2\"]",
       "color": {
         "a": 1,
         "rgb": 15198354
       }
     },
     {
-      "query": "path:BD/",
+      "query": "[\"cssclasses\":\"bd\"]",
       "color": {
         "a": 1,
         "rgb": 31023
       }
     },
     {
-      "query": "path:FPW/",
+      "query": "[\"cssclasses\":\"fpw\"]",
       "color": {
         "a": 1,
         "rgb": 4366154
       }
     },
     {
-      "query": "path:IUM/",
+      "query": "[\"cssclasses\":\"ium\"]",
       "color": {
         "a": 1,
         "rgb": 7849318
       }
     },
     {
-      "query": "path:FDI/",
+      "query": "[\"cssclasses\":\"fdi\"]",
       "color": {
         "a": 1,
         "rgb": 1136321
       }
     },
     {
-      "query": "path:ALF/",
+      "query": "[\"cssclasses\":\"alf\"]",
       "color": {
         "a": 1,
         "rgb": 28608
       }
     },
     {
-      "query": "path:LiP/",
+      "query": "[\"cssclasses\":\"lip\"]",
       "color": {
         "a": 1,
         "rgb": 33981
       }
     },
     {
-      "query": "path:Logica/",
+      "query": "[\"cssclasses\":\"logica\"]",
       "color": {
         "a": 1,
         "rgb": 38584
       }
     },
     {
-      "query": "path:GA/",
+      "query": "[\"cssclasses\":\"ga\"]",
       "color": {
         "a": 1,
-        "rgb": 7425023
+        "rgb": 14610226
       }
     },
     {
-      "query": "path:IP/",
+      "query": "[\"cssclasses\":\"ip\"]",
       "color": {
         "a": 1,
-        "rgb": 9197006
+        "rgb": 14152012
       }
     },
     {
@@ -200,6 +200,6 @@
   "repelStrength": 9.7046293666572,
   "linkStrength": 1,
   "linkDistance": 325,
-  "scale": 0.22590245328636682,
+  "scale": 0.3399288620547644,
   "close": false
 }
