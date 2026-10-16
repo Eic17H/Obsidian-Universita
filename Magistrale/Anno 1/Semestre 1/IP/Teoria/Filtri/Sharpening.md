@@ -4,6 +4,8 @@ cssclasses:
 ---
 #damettereinordine
 
+[[Magistrale/Anno 1/Semestre 1/IP/Lab/Sharpening|Lab]]
+
 Il valore di un pixel viene modificato tenendo conto dei pixel in un intorno opportuno. Possono essere lineari o non lineari.
 
 Finora abbiamo visto i filtri di smoothing, oggi finiamo i filtri spaziali vedendo gli operatori di sharpening.

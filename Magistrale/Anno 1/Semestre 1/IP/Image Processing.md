@@ -15,7 +15,7 @@ Metterò in ordine entro il parziale del 5 novembre.
 		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing]]
 		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Sharpening]]
 	* [[Filtri globali]]
-* [[Rumore]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Rumore]]
 
 ### Lab
 * [[Rappresentazione delle immagini]]

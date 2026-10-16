@@ -83,6 +83,6 @@
 [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri spaziali]]
 [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Sharpening]]
 [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing]]
-[[Rumore]]
+[[Magistrale/Anno 1/Semestre 1/IP/Teoria/Rumore]]
 
 #hub

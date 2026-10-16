@@ -3,6 +3,8 @@ cssclasses:
   - ip
 ---
 #damettereinordine
+
+[[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing|Teoria]]
 ## Averaging
 
 Per creare un filtro di averaging $m \times m$, basta fare `w = ones(m,m)/m/m`, perché così tutti gli elementi sono uguali e si sommano a $1$. Ovviamente questo rende più difficile rilevare i contorni degli oggetti.

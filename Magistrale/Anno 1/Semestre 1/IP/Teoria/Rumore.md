@@ -4,6 +4,8 @@ cssclasses:
 ---
 #damettereinordine 
 
+[[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore|Lab]]
+
 Categorizziamo il rumore sulla base della distribuzione dei valori, la sua PDF (probabilità density function) (vedi #slide). Il rumore gaussiano segue una distribuzione gaussiana, il rumore che boh ha una distribuzione uniforme, e il rumore sale-e-pepe ha solo due valori.
 
 Quella distribuzione si riferisce al rumore puro, che si trova aggiunto a un'immagine. Quindi il rumore è la differenza tra l'immagine rumorosa e l'immagine "pulita".

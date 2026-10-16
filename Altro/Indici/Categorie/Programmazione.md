@@ -207,6 +207,7 @@
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Smoothing]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Sharpening]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore]]
 
 ## Unsorted
 
