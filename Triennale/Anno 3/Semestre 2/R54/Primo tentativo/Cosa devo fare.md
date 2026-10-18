@@ -158,3 +158,21 @@ E qui come dovrei fare?
 * Una versione con $\alpha \land \lnot \beta$ `1000`
  
 ### `reveal-preimage`
+
+# Allora (18 ottobre)
+
+Avendo installato correttamente Certora, direi che è il momento di fare le cose per bene. Ho aggiustato Escrow al meglio delle mie abilità, oggi Crowdfund.
+
+`reclaim-own-funds` è tremendo. Con Z3 è perlopiù `UNK`, che va bene perché tanto con Eldarica va tutto bene. Ma con Certora è quasi tutto `FP!`, che va già male, ma addirittura ha sia `TP!` che `TN`, che è strano.
+
+La `v10` ha un problema con gli import che non so come risolvere, mi dice che la cartella degli import è fuori dal path di solc.
+
+`donation-dec-onlyif-reclaim` è perlopiù `FP!` con Certora, e con SolCMC non l'ho fatto, ma dovrebbe (*dovrebbe*) essere facile.
+
+Ci ha messo esattamente un'ora a fare tutti i test di Certora tra l'altro.
+
+`wd-empties-balance` ha un singolo `FP!` con SolCMC. Ci sono un paio di `FN` ma sono pochi e sparsi.
+
+Per il resto, mancano molti test con SolCMC.
+
+Non ho ancora cominciato a "fregare il tool" ed è passato esattamente un mese (su quattro e mezzo).

@@ -4,6 +4,12 @@ I tipi di Certora non corrispondono 1:1 coi [[Valori|tipi di Solidity]], ma i va
 
 ### `mathint`
 
+### Booleani
+
+Ci sono due nuovi operatori binari booleani: `=>`, che sarebbe $\to$, e `<=>`, che sarebbe $\leftrightarrow$. Ovviamente `a => b` equivale a `!a || b`, e `<=>` equivale a `==`.
+
+Si applica la short circuit a `a => b`.
+
 ## `env`
 
 Se abbiamo un metodo che non è envfree, cioè che scrive o legge dall'ambiente, dobbiamo dichiarare un ambiente in cui viene eseguita, e passarlo come primo parametro.
