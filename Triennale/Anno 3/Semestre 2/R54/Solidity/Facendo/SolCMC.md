@@ -71,3 +71,15 @@ I test scritti in SolCMC sono composti da una funzione che può prendere dei par
 Il tempo dell'ambiente non scorre durante un test.
 
 Se un metodo reverta, il test viene scartato, come se si fallisse una require.
+
+## try catch
+
+Molto importante, esiste try catch.
+
+```Solidity
+try this.donate{value: 0}() {
+	donateSuccess = true;
+} catch {
+	donateSuccess = false;
+}
+```
