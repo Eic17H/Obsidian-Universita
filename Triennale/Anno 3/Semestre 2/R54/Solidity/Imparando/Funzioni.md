@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 Possiamo dichiarare funzioni.
 
 ```Solidity

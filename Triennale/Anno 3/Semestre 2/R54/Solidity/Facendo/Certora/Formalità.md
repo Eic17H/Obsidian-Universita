@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 ## Modello
 
 Un modello, o esempio, è un'istanza, cioè una tupla di valori assegnata alle variabili. Un test che ha tre variabili numeriche avrà modelli che sono terne di numeri.

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 I tipi di Certora non corrispondono 1:1 coi [[Valori|tipi di Solidity]], ma i valori di Solidity possono più o meno essere castati nelle variabili di Certora.
 
 ## Tipi normali

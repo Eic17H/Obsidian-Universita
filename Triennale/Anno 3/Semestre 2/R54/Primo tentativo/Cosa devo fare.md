@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 ## Primo obiettivo
 
 Rendi escrow, che è vecchio, agli standard di bank
@@ -183,9 +187,12 @@ Per quanto riguarda Crowdfund:
 * **donation-inc-onlyif-donate** credo di aver finito, SolCMC non passa ma sembra un problema di SolCMC.
 * **wd-empties-balance** ha un falso positivo su v2 perché v2 non permette di eseguire un wd, ma la logica del wd per il resto è uguale alle altre
 * **no-deadlock** su v9 non ho capito è proprio strana
-* **reclaim-own-funds** su Certora è strana e basta
+* **reclaim-own-funds** su Certora è strana e basta, mi sa che solcmc fa una sorta di havoc e certora no
 * v14 mi sa che ha la ground truth sbagliata
 
 Ma mi sa che semplicemente Crowdfund è troppo difficile per me ora.
 
 Lottery ha tanta tanta tanta tanta roba, ma potrebbe essere interessante. No ma figo eh, `ERROR:root:Missing owner-impartiality-eoa-v23 ground truth.`, e io che ne so. Dai magari magari riesco a metterci mano. E tra l'altro è l'unico decente, sembra.
+
+Ah no semplicemente hanno lasciato i risultati del test di v23 e v24 ma non v23 e v24 stessi.
+

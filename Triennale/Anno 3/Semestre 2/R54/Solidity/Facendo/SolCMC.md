@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 SolCMC è un tool per fare test su contratti. Definiamo il modo in cui bisogna interagire col contratto, i casi da ignorare, i casi in cui il test passa e i casi in cui il test non passa. Se esiste un input che non passa, questo vale controesempio per la proprietà in questione, e sappiamo che la proprietà non vale.
 
 Diciamo che un positivo o un negativo sono soddisfatti quando la proprietà potrebbe valere o potrebbe non valere, e sono asseriti quando si dimostra che vale o che non vale. I primi si indicano coi risultati `P` ed `N`, i secondi con `P!` ed `N!`. `P` può essere un falso positivo ed `N` può essere un falso negativo. Si può avere un falso negativo quando c'è una chiamata esterna, quindi il tool non può sapere se il contratto chiamato fa qualcosa che non va bene per la proprietà. La maggior parte dei risultati sono asseribili.

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 ## Tipi e variabili
 
 Solidity è staticamente tipato, quindi le variabili vanno dichiarate insieme al tipo.
@@ -73,7 +77,7 @@ In ordine di precedenza:
     `=`, `+=`, ...: assegnamento e assegnamento+operatore;
 15. `,`: virgola.
 
-Con gli operatori booleani, si applica la short circuit, che influisce sui side-effects come in C.
+Con gli operatori booleani, si applica la <span class="lip">[[Short circuit|short circuit]]</span>, che influisce sui side-effects come in C.
 
 ## Strutture dati
 

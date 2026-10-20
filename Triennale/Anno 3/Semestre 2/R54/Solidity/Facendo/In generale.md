@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 I test hanno tre componenti principali:
 * `require`, che sono le condizioni senza le quali il test viene scartato
 * Il codice
