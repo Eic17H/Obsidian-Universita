@@ -87,3 +87,8 @@ try this.donate{value: 0}() {
 	donateSuccess = false;
 }
 ```
+
+Però:
+
+> `Try can only be used with external function calls and contract creation calls.`
+
