@@ -30,9 +30,22 @@
               "icon": "lucide-file",
               "title": "20260928"
             }
+          },
+          {
+            "id": "c0480993be7201f8",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Altro/Basi/Non copiati.base",
+                "viewName": "Table"
+              },
+              "icon": "lucide-table",
+              "title": "Non copiati"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -109,7 +122,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "README.md",
+            "file": "Empty.base",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -156,6 +169,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "audio-recorder:Start/stop recording": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -165,8 +179,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aac3dbdb5666cd5c",
+  "active": "c0480993be7201f8",
   "lastOpenFiles": [
+    "Triennale/Anno 3/Semestre 2/ISW/Raw/Blockchain.md",
+    "Altro/Basi/Non copiati.base",
+    "Triennale/Anno 3/Semestre 2/ISW/Raw/Tirocinio extracurriculare.md",
+    "Magistrale/Anno 1/Semestre 1/GA/Raw/20261021.md",
+    "Altro/Basi/Aggiustare.base",
+    "Altro/Basi",
+    "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri.md",
+    "Altro/Basi/Empty.base",
+    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Scomposizione.md",
+    "Triennale/Anno 3/Semestre 1/IUM/Lab/20251014.md",
+    "Untitled.md",
+    "Magistrale/Anno 1/Semestre 1/DM/Raw/20260928.md",
     "Magistrale/Anno 1/Semestre 1/DM/Data Mining.md",
     "Magistrale/Anno 1/Semestre 1/GA/Theory/Convex hull.md",
     "Magistrale/Anno 1/Semestre 1/GA/Theory/Support/CH is a polygon.md",
@@ -185,23 +211,11 @@
     "SO/Modulo II/Linux/Linux - Cenni storici.md",
     "SO/Modulo II/Linux/Introduzione al terminale.md",
     "SO/Modulo II/Linux/File.md",
-    "SO/Modulo II/C/Tutto C SO.md",
-    "SO/Modulo II/C/Socket in C.md",
-    "SO/Modulo II/Bash/Terminale di Linux - cheatsheet.md",
-    "SO/Modulo II/Altro/Socket.md",
-    "PR2/Programmazione 2.md",
-    "PR2/Modulo II/Override.md",
-    "PR2/Modulo II/Java.md",
-    "PR2/Modulo II/Ereditarietà.md",
     "FPW/about.html",
     "FPW/Laboratorio/File.zip",
     "SO/Modulo II/Linux",
     "SO/Modulo II/C",
     "SO/Modulo II/Bash",
-    "SO/Modulo II/Altro",
-    "SO/Modulo II",
-    "SO/Modulo I",
-    "SO",
-    "PR2/Modulo II"
+    "SO/Modulo II/Altro"
   ]
 }

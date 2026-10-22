@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - '!file.path.contains("Raw")'
+        - or:
+            - file.hasTag("slide")
+            - file.hasTag("cercare")
+            - file.hasTag("damettereinordine")
+            - file.hasTag("fix")
+    sort:
+      - property: file.ctime
+        direction: ASC
