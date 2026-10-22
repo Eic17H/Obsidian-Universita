@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 assert(bool condition): abort execution and revert state changes if condition is false (use for internal error)
 
 require(bool condition): abort execution and revert state changes if condition is false (use for malformed input or error in external component)

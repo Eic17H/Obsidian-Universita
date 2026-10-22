@@ -28,6 +28,7 @@ let groups = {
     green: ["BD", "FPW", "IUM"],
     blue: ["FDI", "ALF", "LiP", "Logica"],
     yellow2: ["GA", "IP"],
+    solidity: ["R54"],
 }
 
 /*
@@ -95,14 +96,23 @@ let colors = {
         signH: -1
     },
     yellow2 : {
-        minL: 0.9094,
+        minL: 0.888,
         maxL: 0.9094,
-        minC: 0.1942,
+        minC: 0.2055,
         maxC: 0.1845,
-        minH: 115.01,
+        minH: 123.43,
         maxH: 118.58,
-        signH: 1
+        signH: -1
     },
+    solidity : {
+        minL: 0.4466,
+        maxL: 0.4466,
+        minC: 0.1117,
+        maxC: 0.1117,
+        minH: 284.81,
+        maxH: 284.81,
+        signH: 1
+    }
 }
 
 

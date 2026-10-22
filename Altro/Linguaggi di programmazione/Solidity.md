@@ -13,6 +13,7 @@ icon: solidity.png
 * <span class="r54">[[Contratti]]</span>
 ### Facendo
 * <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Solidity|Solidity]]</span>
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Test|Test]]</span>
 * <span class="r54">[[SolCMC]]</span>
 	* <span class="r54">[[Z3]]</span>
 	* <span class="r54">[[Eldarica]]</span>

@@ -1,5 +1,6 @@
 ---
 cssclasses: am
+icon: derivata.png
 ---
 ## Concetto e definizione
 

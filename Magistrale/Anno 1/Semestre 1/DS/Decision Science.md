@@ -25,4 +25,8 @@ Fatta la tesina, si fa la teoria. Due o tre domande sugli argomenti trattati a l
 
 Non c'è uno scritto, che fa comodo al professore. A noi fa un po' strano, perché noi ci iscriviamo a un appello ma la data dell'orale va concordata. Sarebbe meglio consegnare la tesina almeno una settimana prima dell'orale. La prima domanda è di parlare della tesina.
 
+## Requisiti
+
+* <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Matrici|Matrici]]</span>
+
 #materia 

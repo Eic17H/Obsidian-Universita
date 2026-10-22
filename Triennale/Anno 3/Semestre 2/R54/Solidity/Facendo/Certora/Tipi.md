@@ -1,8 +1,18 @@
+---
+cssclasses:
+  - r54
+---
 I tipi di Certora non corrispondono 1:1 coi [[Valori|tipi di Solidity]], ma i valori di Solidity possono più o meno essere castati nelle variabili di Certora.
 
 ## Tipi normali
 
 ### `mathint`
+
+### Booleani
+
+Ci sono due nuovi operatori binari booleani: `=>`, che sarebbe $\to$, e `<=>`, che sarebbe $\leftrightarrow$. Ovviamente `a => b` equivale a `!a || b`, e `<=>` equivale a `==`.
+
+Si applica la short circuit a `a => b`.
 
 ## `env`
 

@@ -11,7 +11,6 @@ Vedi <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</sp
 ### Introduzione
 
 * <span class="pr1">[[Introduzione al C]]</span>
-* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Algoritmi|Algoritmi]]</span>
 * <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Tipi|Tipi]]</span>
 	* <span class="pr1">[[Tipi primitivi]]</span>
 	* <span class="pr1">[[Array]]</span>
@@ -26,7 +25,6 @@ Vedi <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|PR1]]</sp
 * <span class="pr1">[[Inferno]]</span> / <span class="pr1">[[Puntatori]]</span>
 	* <span class="pr1">[[Allocazione dinamica]]</span>
 * <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Ricorsione|Ricorsione]]</span>
-* <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Complessità|Complessità]]</span>
 * <span class="pr1">[[Leggibilità]]</span>
 * <span class="pr1">[[Triennale/Anno 1/Semestre 1/PR1/Modulo II/File|File]]</span>
 
