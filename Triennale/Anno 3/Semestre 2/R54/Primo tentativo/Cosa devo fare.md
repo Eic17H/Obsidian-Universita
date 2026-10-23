@@ -220,6 +220,204 @@ Mi sa che controllo bene Escrow e vedo se posso fare una pull request. Devo anch
 > 
 > So the short answer is: the result gap is likely driven by the missing `deposit` initialization plus the difference between a Certora rule’s pre-state and SolCMC’s reachable-state analysis—not simply by SolCMC discovering that the arbiter receives the wrong amount. To confirm which assertion caused each `N`, we’d need the per-run SolCMC logs; the CSV summary doesn’t include that information.
 
-Devo capire se Copilot dice il vero. Effettivamente deposit mi sembrava strano. Direi che provo a reimplementare da zero Escrow senza guardare v1.
+Devo capire se Copilot dice il vero. Effettivamente deposit mi sembrava strano. Direi che provo a reimplementare da zero Escrow senza guardare v1. (l'ho fatto e l'ho ricreato quasi 1:1 carattere per carattere, inutile).
 
 A mezzanotte capisco che la cosa da risolvere è proprio la cosa di `deposit` adesso. Ah e ho trovato un test che il tool effettivamente sbaglia.
+
+### 21 ottobre
+
+Ora che l'ho fatto, v3 non passa arbitrate send. Ah ma è giusto, ha ragione lui.
+
+Devo poi aggiustare la didascalia di v3 e derivati.
+
+Ehhhh... E mi sa che non c'è altro da fare. Sì ok no vedo che devo aggiungere le didascalie ok. Ma il codice in sé mi sembra finito. A meno che non voglia fare altre versioni ancora. E domani lascio il computer qui a girare test.
+
+Fatto ciò, passerei agli altri contratti. Direi che aggiusto Crowdfund.
+
+Anzi no ho pensato a una versione che reverta qualunque cosa tu faccia.
+
+...
+
+...
+
+Ho sconfitto il computer?
+
+```
+ERROR:root:WARNING: 'wait_for_results' has no effect in local tool runs
+WARNING: Build cache is used with a local certora-cli script version. Beware of false hits and unexpected behaviors!
+Start Wed Oct 21 23:47:05 CEST 2026
+The scene contains 1 contracts:
+Escrow : 0xce4604a0000000000000000000000001
+Running initial transformations
+Has CVL checks.
+Checking CVL certora/recipient-buyer-or-seller.spec for contract Escrow
+Unrolling loops 1 time, unwinding condition is asserted
+Error: Got exception Could not compile access to contract storage currentContract.recipient @ recipient-buyer-or-seller.spec:18:12 due to missing context information. This is likely caused by failures elsewhere in the tool; please check the Global Problems view and contact Certora for help. when compiling rule recipient_buyer_or_seller
+Failed to compile rule recipient_buyer_or_seller due to utils.CertoraException: Could not compile access to contract storage currentContract.recipient @ recipient-buyer-or-seller.spec:18:12 due to missing context information. This is likely caused by failures elsewhere in the tool; please check the Global Problems view and contact Certora for help.
+Error: Timed out waiting for background tasks:
+    
+Done 0m
+Compiling versions/Escrow_v15.sol...
+Compiling versions/Escrow_v15.sol to expose internal function information and local variables...
+Verifier run command:
+ java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_10_21_23_46_59_148975e662
+ERROR: Execution of command "java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_10_21_23_46_59_148975e662" terminated with exitcode 100.
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Got exception Could not compile access to contract storage currentContract.recipient @ recipient-buyer-or-seller.spec:18:12 due to missing context information. This is likely caused by failures elsewhere in the tool; please check the Global Problems view and contact Certora for help. when compiling rule recipient_buyer_or_seller
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Timed out waiting for background tasks:
+CRITICAL:     
+
+Certora Prover run failed (code 1)
+```
+
+Non lo so. Credo sia semplicemente perché la variabile non è inizializzata? Ma dovrebbe esserlo a `0x0`, boh.
+
+E se............... Io sono qui per testare i limiti dei tool. E ci devo fare la tesi. E adesso sto proprio capendo le basi di logica formale dietro questi limiti. E se tipo la tesi su questo?
+
+### 22 ottobre vesting wallet
+
+5exrctvbuiomp,è.
+
+non so come tenere conto dell'errore di arrotondamento. non lo so. non lo so. csmn dovrebbe avermelo insegnato ma non l'ho capito. ho prvoato a bruteforce ma mi esce errore potenzialmente infinito, non lo so. devo capirlo meglio, ma non sono abbadtanza intelligenge. basta.
+
+queso è il mio ragionamento
+
+> How to correct for integer truncation
+> 
+> Let $a$, $b$ and $c$ be three timestamps such that s$tart<a<b<c<end$.
+> Let $T$ be the constant `totalAllocation`, let $D=end-start$.
+> Assume $start=0$, thus $end=D$.
+> Let $v()$ be `vestingSchedule()`:
+>      $v(x) := Tx/D$.
+> Let $x=v(a), y=v(b), z=v(c)$.
+> 
+> If we're dealing with real numbers, then we want:
+>      $(a-b)/(x-y) === (b-c)/(y-z)$
+>      $(a-b)*(y-z) === (b-c)\cdot(x-y)$
+> 
+> Let's consider integer $v(x)$, that is, $⌊v(⌊x⌋)⌋$.
+>      $⌊Ta⌋=Ta$, but $⌊Ta/D⌋\neq Ta/D$
+>      We need an upper bound for $Ta/D-⌊Ta/D⌋$.
+>          Call that upper bound E, we'll have:
+>              $abs((a-b)\cdot(y-z)-(b-c)\cdot(x-y)) < E$
+>      How do we compute $E$ in Solidity?
+>      Looking back at all of this, this doesn't make sense, as $E<1$.
+>      Could the error just be $4$?
+>      I think the problem is that I assumed $start=0$;
+> 
+> Assume $start = S$
+> $v(x) := T\cdot(x-S)/D$
+> What's the error now?
+> I just feel like it's still $4$ (of course I checked it and it's wrong).
+> I'm just gonna test it in C.
+> The test gives $1$ as maximum error.
+> I did it wrong. What's at most 1 is $abs((a-b)\cdot(y-z)-(b-c)\cdot(x-y))/T$.
+> Actually very rarely it's $>1000$.
+
+Questo è il codice C bruttissimo che ho usato:
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
+int start;
+int duration;
+int end;
+
+int vestingSchedule(int totalAllocation, int timestamp) {
+    if (timestamp < start) {
+        return 0;
+    } else if (timestamp > start + duration) {
+        return totalAllocation;
+    } else {
+        return (totalAllocation * (timestamp - start)) / duration;
+    }
+}
+
+float vestingScheduleFloat(int totalAllocation, int timestamp) {
+    if (timestamp < start) {
+        return 0;
+    } else if (timestamp > start + duration) {
+        return totalAllocation;
+    } else {
+        return ((float) (totalAllocation * (timestamp - start))) / ((float) duration);
+    }
+}
+
+int main() {
+    srand(time(0));
+
+    start = abs(rand())%0xFFFF;
+    duration = abs(rand())%0xFFFF;
+    end = start+duration;
+
+    printf("%d, %d, %d\n", start, duration, end);
+
+    int totalAllocation = abs(rand())%0xFFFF;
+
+    int e;
+
+    float prod;
+
+    float taError, sError, eError;
+
+    for(int i = 0; i<1000; i++) {
+        printf("\n\n");
+        int t1 = abs(rand())%duration+start;
+        int t2 = abs(rand())%duration+start;
+        if(t2<t1) {e=t1; t1=t2; t2=e;};
+        int t3 = abs(rand())%duration+start;
+        if(t3<t2) {e=t3; t3=t2; t2=e;};
+        if(t2<t1) {e=t1; t1=t2; t2=e;};
+
+        int i1 = vestingSchedule(totalAllocation, t1);
+        int i2 = vestingSchedule(totalAllocation, t2);
+        int i3 = vestingSchedule(totalAllocation, t3);
+
+        float f1 = vestingScheduleFloat(totalAllocation, t1);
+        float f2 = vestingScheduleFloat(totalAllocation, t2);
+        float f3 = vestingScheduleFloat(totalAllocation, t3);
+
+        printf("Timestamps:\t\t%d\t\t%d\t\t%d\nvsInt:\t\t\t%d\t\t%d\t\t%d\nvsFloat:\t\t%f\t%f\t%f\n", t1, t2, t3, i1, i2, i3, f1, f2, f3);
+
+        int di = (i2-i1)*(t3-t2) - (i3-i2)*(t2-t1);
+        float df = (f2-f1)*(t3-t2) - (f3-f2)*(t2-t1);
+
+        printf("Differences:\t\t%d\t\t%f\n",di,df);
+        printf("Int ratios:\t\t%d\t\t%d\n", (i2-i1)/(t2-t1), (i3-i2)/(t3-t2));
+        printf("Int ...:\t\t%d\t\t%d\t\t%d\n", (i2-i1)*(t3-t2), (i3-i2)*(t2-t1), (int)(prod=(i2-i1)*(t3-t2)-(i3-i2)*(t2-t1)));
+        printf("Float ratios:\t\t%f\t%f\n", (f2-f1)/(t2-t1), (f3-f2)/(t3-t2));
+
+        if(taError < prod/totalAllocation) taError = prod/totalAllocation;
+        if(sError < prod/start) sError = prod/start;
+        if(eError < prod/end) eError = prod/end;
+
+        printf("Error ratios: %f, %f, %f\n", prod/totalAllocation, prod/start, prod/end);
+    }
+
+    printf("Error ratios: %f, %f, %f\n", taError, sError, eError);
+
+    return 0;
+}
+```
+
+Fa schifo e prima di questo codice non sapevo neanche che esistesse "floating point fault".
+
+Ha pure sbagliato Copilot.
+
+
+
+
+
+Per Escrow v8, devo ricordarmi che `///@custom:negate` esiste.
+
+Ecco però cosa devo fare a Vesting Wallet:
+* `exp-all-rel` non ha senso che non passi.
+* v9 che ha `releasable` con alcune parti crescenti e altre piatte.
+* `benef-only-recv` Certora con `hook` (require riceve assert beneficiario).
+* `release-rel` stessa cosa (require beneficiario assert riceve).
+* Porting di `rel-strict-incr` a SolCMC copiando quello che ho fatto con Certora.
+
+Cos'ho fatto:
+* `exp-all-rel` era il solito problema di conversione tra `mathint` e `uint64`, ma con SolCMC ancora non funziona.
