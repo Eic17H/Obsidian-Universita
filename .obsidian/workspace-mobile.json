@@ -35,13 +35,14 @@
             "id": "c0480993be7201f8",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Altro/Basi/Non copiati.base",
-                "viewName": "Table"
+                "file": "Triennale/Anno 3/Semestre 2/R54/Primo tentativo/Come ho installato tutto.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Non copiati"
+              "icon": "lucide-file",
+              "title": "Come ho installato tutto"
             }
           }
         ],
@@ -181,8 +182,9 @@
   },
   "active": "c0480993be7201f8",
   "lastOpenFiles": [
-    "Triennale/Anno 3/Semestre 2/ISW/Raw/Blockchain.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Certora.md",
     "Altro/Basi/Non copiati.base",
+    "Triennale/Anno 3/Semestre 2/ISW/Raw/Blockchain.md",
     "Triennale/Anno 3/Semestre 2/ISW/Raw/Tirocinio extracurriculare.md",
     "Magistrale/Anno 1/Semestre 1/GA/Raw/20261021.md",
     "Altro/Basi/Aggiustare.base",
@@ -210,7 +212,6 @@
     "SO/Modulo II/Linux/Processi, thread e job.md",
     "SO/Modulo II/Linux/Linux - Cenni storici.md",
     "SO/Modulo II/Linux/Introduzione al terminale.md",
-    "SO/Modulo II/Linux/File.md",
     "FPW/about.html",
     "FPW/Laboratorio/File.zip",
     "SO/Modulo II/Linux",
