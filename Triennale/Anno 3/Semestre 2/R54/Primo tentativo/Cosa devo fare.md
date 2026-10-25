@@ -421,3 +421,6 @@ Ecco però cosa devo fare a Vesting Wallet:
 
 Cos'ho fatto:
 * `exp-all-rel` era il solito problema di conversione tra `mathint` e `uint64`, ma con SolCMC ancora non funziona.
+
+
+Altra idea, per rispettare bal Dec onlyif release o quello che è, durante il constructor invia tutto il balance a chi vuole, e così in teoria forse può fare quello che vuole con tutte le revert senza fallire neanche gli altri test.
