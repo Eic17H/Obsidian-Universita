@@ -424,3 +424,23 @@ Cos'ho fatto:
 
 
 Altra idea, per rispettare bal Dec onlyif release o quello che è, durante il constructor invia tutto il balance a chi vuole, e così in teoria forse può fare quello che vuole con tutte le revert senza fallire neanche gli altri test.
+
+### 24 ottobre
+
+No quella cosa non ha funzionato, perché tanto rimangono altre proprietà che non valgono.
+
+Per testare che v8 di non ricordo cosa reverta quando non dovrebbe, metti assert false e ///invert.
+
+Tornando a Vesting Wallet, con molto aiuto da copilot ho capito come calcolare il margine d'errore dello strictly increasing. Non l'ho davvero capito, però quello che ha generato sembra funzionare. Domani lo devo mettere anche su solcmc.
+
+Rimangono gli errori strani a caso in giro.
+
+I falsi positivi su v8 sono giusti direi. Però non so se mettere exp-all-rel come coso invertito. Ah no, release può revertire perché c'è una chiamata esterna quindi probabilmente anche invertire non funzionerebbe, quindi direi che il mio lavoro ha funzionato. Qui si nota pure cosa significa che "le variabili dei metodi non vengono scritte sulla blockchain", perché i test non le possono leggere.
+
+Release rel falsa su v10 è a causa del limite dell'havoc.
+
+Rel strict incr falsa su v6 è a causa del mio metodo di merda di calcolo dell'errore.
+
+Quindi tutto ciò che rimane da fare è tradurre tutto in solcmc e chiedere a Bartoletti che fare per lo strict incr, dopodiché posso passare a Crowdfund, è fatto quello farei la pull request.
+
+Per Crowdfund, non so cosa fare dopo, ci penserò domani.
