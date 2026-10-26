@@ -431,11 +431,6 @@ fatto:
 
 `rel-strict-incr` invece dà positivo a tutto quindi non funziona comunque.
 
-
-
-
-
-
 per vedere eoa, tx.origin == msg.sender
 
 
@@ -460,3 +455,283 @@ Rel strict incr falsa su v6 è a causa del mio metodo di merda di calcolo dell'e
 Quindi tutto ciò che rimane da fare è tradurre tutto in solcmc e chiedere a Bartoletti che fare per lo strict incr, dopodiché posso passare a Crowdfund, è fatto quello farei la pull request.
 
 Per Crowdfund, non so cosa fare dopo, ci penserò domani.
+
+###### 26 ottobre
+
+Niente, non ho capito bene cosa fare con Crowdfund, c'è troppa roba.
+
+Ho provato a usare `/// @custom:negate` per rilevare le revert con SolCMC. Il fatto è che, e proverò a scriverlo in logica formale per ragionarci bene, sono veri i seguenti:$$\begin{matrix*}[l]
+\vdash \lnot \exists\ \text{assert}(false) \Rightarrow P \\
+\vdash \exists\ \text{assert}(false) \Rightarrow N \\
+\text{negate} \vdash \lnot \exists\ \text{assert}(false) \Rightarrow N \\
+\text{negate} \vdash \exists\ \text{assert}(false) \Rightarrow P
+\end{matrix*}$$
+Però è scritto malissimo non lo so fare mi arrendo.
+
+Insomma, il fatto è che, di base, se esiste un caso in cui si può fare `assert(false)` e non c'è una revert, allora quel singolo caso rende l'intero test falso. Con negate, il contrario, un singolo caso che passa fa passare l'intero test. Perché la negazione viene applicata dopo.
+
+Essenzialmente quello normale è $\land$, negate è $\lnot \land$, io voglio $\land \lnot$, che non sembra possibile, quindi mi arrendo.
+
+Io seriamente non so che fare con Crowdfund adesso.
+
+Io vedo che esiste questa cosa:
+```Solidity
+function no_deadlock() public {
+    
+    require(address(this).balance > 0);
+    
+    require(donation[address(this)] > 0);
+
+    bool donateSuccess;
+    bool withdrawSuccess;
+    bool reclaimSuccess;
+
+    try this.donate{value: 0}() {
+        donateSuccess = true;
+    } catch {
+        donateSuccess = false;
+    }
+
+    try this.withdraw() {
+        withdrawSuccess = true;
+    } catch {
+        withdrawSuccess = false;
+    }
+
+    try this.reclaim() {
+        reclaimSuccess = true;
+    } catch {
+        reclaimSuccess = false;
+    }
+
+    assert(donateSuccess || withdrawSuccess || reclaimSuccess);
+}
+```
+
+Se guardiamo cos'ho scritto prima:
+
+![[SolCMC#try catch]]
+
+Quindi che succede? Posso usarlo per controllare se un metodo reverta? In teoria sì? Ah no. Ah no. Ecco, il fatto è proprio che quei metodi contengono chiamate esterne.
+
+Ma quindi significa che con questo contratto in particolare io quella cosa la posso fare eccome.
+
+E ora ci provo.
+
+Ok l'altro problema è che l'invariante viene chiamata dal contratto stesso, non da un chiamante arbitrario.
+
+No niente ho provato e non funziona perché fa una sorta di cosa che concettualmente somiglia all'havoc diciamo.
+
+```Solidity
+/// donate-not-revert-overflow:
+/// a transaction `donate` is not reverted if
+/// the donation phase has not ended and
+/// sum between the old and the current donation does not overflow.
+
+function invariant(uint256 val) public {
+    require(block.number <= end_donate);
+    require(val <= address(this).balance);
+    require(donation[address(this)] <= type(uint256).max - val);
+
+    bool success;
+
+    try this.donate{value: val} () {
+        success = true;
+    } catch {
+        success = false;
+    }
+
+    assert(success);
+}
+```
+
+Non so più che fare.
+
+Mi faccio una lista dei falsi positivi o negativi.
+
+| Proprietà                       | Z3                                                                                                                                                                                            | eld                       | Certora                                                                                                                        |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| **donate-bal-inc**              | Durante `donate` v4 invia ETH all'owner se può farlo senza diminuire il proprio bilancio, ma nessuno dei tre capisce che si assicura di non diminuire il bilancio. Non credo sia risolvibile. |                           | <                                                                                                                              |
+| **donate-not-dec-donation**     | UNK anche a 120s.                                                                                                                                                                            Non ha senso. FN su v14. o.  |                                                                                                                                |
+| **donation-dec-onlyif-reclaim** | Credo sia la solita cosa della reentrancy.                                                                                                                                                                                |                                                                                                                                |
+| **donation-inc-onlyif-donate**  | Anche qui credo reentrancy, e anche selfdestruct.                                                                                                                                                                         |                                                                                                                                |
+| **no-deadlock**                 | Falsi positivi su v9 e v21 perché le revert passano i test.                                                                                                                                                               | Falso negativo su v6, non so perché.                                                                                           |
+| **no-receive-after-deadline**   |                                                                                                                                                                                                                           | Falso positivo su v21 e v7. Possibile errore nella ground truth.                                                               |
+| **owner-only-recv**             |                                                                                                                                                                                                                           | Falsi negativi su v2, v21 e v7. Tutti e tre si rifiutano di fare qualunque cosa, possibile formalizzazione sbagliata nel test. |
+| **reclaim-even-if-msgvalue**    |                                                                                                                                                                                                                           | FN su v18, molto strano, probabilmente un errore nel test.                                                                     |
+| **reclaim-own-funds**           | Stranamente è corretto su SolCMC ma pieno di FP (con alcuni TN e TP) su Certora.                                                                                                                                          | <                                                                                                                              |
+| **wd-empties-balance**          | FP su v2, perché le condizioni della wd sono velatamente insoddisfacibili (ma quindi in un certo senso è vacuamente TP, da vedere).                                                                                       |                                                                                                                                |
+| **wd-full-balance**             |                                                                                                                                                                                                                           | FP su v10, il solito problema del fatto che può inoltrare subito l'ETH.                                                        |
+| **wd-transfer-to-owner**        |                                                                                                                                                                                                                           | FN su v2, ma mi aspetterei il problema opposto.                                                                                |
+
+Quindi cosa farei adesso? Oltre a vedere gli UNK, cosa che non mi conviene perché devo risparmiare batteria, farei una lista:
+
+* **donate-not-dec-donation** molto strano.
+* **no-deadlock.sol** secondo me non posso farci niente.
+* **no-deadlock.spec** sarà difficile.
+* **no-receive-after-deadline** da vedere ground truth e chiedere a Bartoletti come interpretare gli "if" e "only if" del linguaggio naturale.
+* **owner-only-recv** formalizzazione errata nel test di sicuro (e possibile esempio della formalizzazione classica di "if").
+* **reclaim-even-if-msgvalue** dovrebbe essere facile.
+* **reclaim-own-funds** sembra difficile.
+* **wd-empties-balance** anche qui ground truth da chiedere.
+* **wd-transfer-to-owner** non ho idea se sono capace a risolvere.
+
+Comincio.
+
+ **reclaim-even-if-msgvalue** credo di aver trovato una soluzione orrenda con negate.
+
+```CVL
+/// @custom:negate
+// This test will pass if the contract always accepts calls to `reclaim` with `msg.value>0`
+// With `assert !lastReverted` and no `@custom:negate`, a test would fail if there was
+// any way for `reclaim` to revert with `msg.value>0`, even for unrelated reasons,
+// such as a sender that rejects ETH.
+
+rule reclaim_even_if_msgvalue {
+    env e;
+
+    require(e.block.number > currentContract.end_donate);
+    require(nativeBalances[currentContract] < currentContract.goal);
+    require(currentContract.donation[e.msg.sender] > 0);
+    
+    require(e.msg.value > 0);
+
+    reclaim@withrevert(e);
+
+    assert lastReverted;
+}
+```
+
+**no-deadlock**
+
+Veramente non capisco, non ha senso. v21 è sempre in deadlock, perché tutto reverta sempre, quindi tutti i try/catch dovrebbero mettere la variabile falsa e l'assert dovrebbe fallire. Ah no, niente, haha, perché v21 non può avere soldi, è impossibile mandarglieli. Quindi ho sbagliato la ground truth. Ah e invece no, guarda cos'ho scritto:
+
+> All methods always revert, and the contract can receive $\text{ETH}$ when it address is specified in a coinbase transaction or in a `selfdestruct`, meaning the property is not vacuously true.
+
+Strano. E questa non me la sono inventata io eh, c'è di default su tutte per **no-receive-after-deadline**
+
+> This property should always be false, since a contract can receive $\text{ETH}$ when its address is specified in a coinbase transaction or in a `selfdestruct`.
+
+Quindi nulla, un vero e proprio errore del tool. Mission complete.
+
+v9 fallisce perché nessuno viene contato come donatore (quindi nessuno ha il permesso di ritirare i soldi), ma il contratto si tiene $1 \text{ ETH}$ da ogni donazione (tranne se la donazione è di $1 \text{ ETH}$). Guardiamo la definizione di deadlock.
+
+>  at least one of the main functions (donate, withdraw, reclaim) must not revert if the contract has a balance and the caller has made a donation.
+
+Vale a dire:$$this.balance>0 \land caller.donation > 0 \vdash donate \lor wd \lor reclaim$$
+Però $caller.donation = 0\ \forall\ caller$, quindi direi che lo lascio così, con l'asterisco di chiedere a Bartoletti. Non mi sembra un'ottima definizione di deadlock, perché l'owner non ha fatto una donazione, ma ok.
+
+Vediamo invece v6. La ground truth mi torna: chiunque può withdraware quindi non c'è rischio che l'owner causi il deadlock. Però anche qui secondo me è un problema con la formalizzazione, perché il problema si ha se per ogni caller non c'è nulla da fare, invece il test e la formalizzazione controllano che esista un tale caller. Forse bisogna chiedere a Bartoletti.
+
+**donate-not-dec-donation**
+
+No non ha il minimo senso.
+
+**cosa mi rimane?**
+
+* **no-receive-after-deadline**: ground truth secondo me
+* **owner-only-recv**: probabilmente formalizzazione sbagliata
+* **reclaim-own-funds**: ??????????
+* **wd-empties-balance**: ground truth?
+* **wd-transfer-to-owner**: ????????????????????????
+
+Per ora basta.
+
+Ok 5 minuti dopo riprendo.
+
+**no-receive-after-deadline**
+
+> the contract balance does not increase after the end of the donation phase
+
+Vale a dire:$$timestamp>end \vdash \lnot \uparrow this.balance$$
+
+Ovviamente c'è poca formalità nei miei simboli.
+
+Falso positivo su v21 e v7. Cosa fa il test Certora?$$timestamp > end \vdash \lnot (method \to \uparrow this.balance)$$
+Ora sì che si vede una differenza. Però però però... perché esce positiva su v1? Sia per v1 che per v21, $timestamp > end \vdash \forall method\ |\ payable(method),\ method \to revert$, questo non cambia.
+
+Cedo e chiedo di nuovo a Copilot. Cioè non mi sembra- ah ok quella cosa di `selfdestruct` eccetera vale solo se il contratto può fare una chiamata esterna. Ah no ok, *Certora* lo considera solo se il contratto può fare chiamate esterne, se mi fido di quello che dice Copilot (e a questo punto mi fido), allora è comunque possibile ma Certora non se ne accorge.
+
+Boh.
+
+**wd-empties-balance**
+
+Vediamo cosa dice la regola in inglese:
+
+> after a non-reverting `withdraw`, the ETH balance of the Crowdfund contract is equal to zero.
+
+Provo a formalizzarla:$$wd \land \lnot revert \vdash this.balance=0$$
+Vediamo il codice:
+
+```Solidity
+function wd_empties_balance() public payable {
+    
+    require(block.number > end_donate);
+    require(address(this).balance >= goal);
+    require(msg.value == 0);
+    
+    withdraw();
+
+    assert(address(this).balance == 0);
+}
+```
+
+Vale a dire:$$timestamp>end \land this.balance > goal \land msg.value = 0 \land wd \land \lnot revert \vdash this.balance = 0$$
+La maggior parte di quelle require sono già incluse in $wd$ (non so come formalizzarlo), quindi possiamo toglierle per idempotenza:$$wd \land \lnot revert \vdash this.balance=0$$
+E quindi sì, è uguale, il test è corretto, mi sembra.
+
+Adesso vediamo v2:
+
+Ok il fatto è che $end=2^{256}-1$, quindi $\forall timestamp,\ \lnot(timestamp > end)$. Ah però $wd$ non include $timestamp>end$. Ah, ecco il problema. In un certo senso è cambiata la definizione di $wd$. Però noi abbiamo FP, qua mi aspetterei FN, questo significa che c'è un errore nel ground truth.
+
+E infatti, `withdraw` reverterà sempre. Quindi $wd \land \lnot revert = \bot$, e quindi la regola vale vacuamente. Ah no no no no no sono stupido di nuovo. Questo wd reverta quando il goal non è ancora raggiunto. Ma allora che succede? Succede che dopo la wd si può ancora donare, quindi subito dopo la wd qualcuno può donare e il test vede che il bilancio non è $0$. E ti dirò di più, a causa della rientranza il bilancio può aumentare *durante* l'esecuzione di `withdraw()`, niente da fare.
+
+**owner-only-recv**
+
+> only the owner can receive ETH from the contract.
+
+Vale a dire:$$this\xrightarrow{send}x \vdash x = owner$$
+v2, v21 e v7 FN su Certora.
+
+Non è havoc. Vediamo il test e formalizziamolo:
+
+```CVL
+ghost bool violated {
+    init_state axiom violated == false;
+}
+
+hook CALL(uint g, address addr, uint value, uint argsOffset, uint argsLength, uint retOffset, uint retLength) uint rc {
+    if (addr != currentContract.owner && value != 0) {
+        violated = true;
+    }
+}
+
+rule owner_only_recv {
+    assert(violated == false);
+}
+```
+
+$$\forall method,\ method \vdash msg.sender \neq owner \land msg.value \neq 0 \to \bot$$
+Scritto in modo meno stupido:
+
+$$\forall method,\ method \vdash msg.value \neq 0 \to msg.sender = owner$$
+Che è un altro modo per scrivere quello di prima, quindi il test in sé è giusto.
+
+Non capisco.
+
+No aspetta, che dice? Ah ok certo
+
+* v2 non finisce mai la fase di donazione quindi non si può fare reclaim
+* v7 reclaim reverta sempre quando prova a inviare soldi, ma lo fa anche withdraw
+* v21 reverta sempre
+Con tutte e tre neghiamo l'antecedente. Ah ho dimenticato di formalizzare che non reverta. Però neghiamo l'antecedente con tutte e tre.
+
+Il problema con withdraw di v7 fallirebbe il test se il test facesse la fallacia della negazione del conseguente, ma non è questo il caso.
+
+Boh anche con Copilot non capisco.
+
+Il resto lo lascio a domani, faccio in aereo
+
+* **reclaim-own-funds**: molto strano su SolCMC
+* **wd-transfer-to-owner**: v2 Certora
+
