@@ -1,3 +1,8 @@
+formulas:
+  Titolo: 'html("<span class=\""+file.path.replace(/.*Semestre [12]\/([a-zA-Z0-9])/,"$1").replace(/\/.*/,"").lower()+"\"style =\""+"color: var(--accent)"+"\">"+file.path.replace(/.*Semestre [12]\/([a-zA-Z0-9])/,"$1").replace(/\/.*/,"") + "</span>")'
+properties:
+  formula.Titolo:
+    displayName: Materia
 views:
   - type: table
     name: Table
@@ -9,6 +14,22 @@ views:
             - file.hasTag("cercare")
             - file.hasTag("damettereinordine")
             - file.hasTag("fix")
+    order:
+      - formula.Titolo
+      - file.name
+      - file.size
     sort:
+      - property: file.name
+        direction: DESC
+      - property: formula.Titolo
+        direction: DESC
+      - property: file.size
+        direction: DESC
+      - property: formula.Untitled
+        direction: ASC
       - property: file.ctime
         direction: ASC
+    columnSize:
+      formula.Titolo: 78
+      file.name: 195
+      file.size: 128

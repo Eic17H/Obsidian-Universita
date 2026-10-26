@@ -422,6 +422,22 @@ Ecco però cosa devo fare a Vesting Wallet:
 Cos'ho fatto:
 * `exp-all-rel` era il solito problema di conversione tra `mathint` e `uint64`, ma con SolCMC ancora non funziona.
 
+##### 23 ott
+
+fatto:
+* v9
+* `benef-only-recv`
+* `release-rel` fa havoc e quindi devo usare il vecchio trucco di controllare una sola chiamata, quindi fallisce se l'ETH viene inviato in più chiamate, ma mi sa che passa ma dà errore devo capire.
+
+`rel-strict-incr` invece dà positivo a tutto quindi non funziona comunque.
+
+
+
+
+
+
+per vedere eoa, tx.origin == msg.sender
+
 
 Altra idea, per rispettare bal Dec onlyif release o quello che è, durante il constructor invia tutto il balance a chi vuole, e così in teoria forse può fare quello che vuole con tutte le revert senza fallire neanche gli altri test.
 

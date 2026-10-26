@@ -4,5 +4,6 @@
   "sync-graph-settings",
   "shiki-highlighter",
   "subject-class",
-  "extended-graph"
+  "extended-graph",
+  "custom-classes"
 ]

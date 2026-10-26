@@ -26,3 +26,4 @@
 [[Triennale/Anno 2/Semestre 1/ALF/File/Linguaggi formali|Linguaggi formali]]
 [[Linguaggio formale]]
 [[Linguaggio imperativo]]
+[[Macchine di Turing]]

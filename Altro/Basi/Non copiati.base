@@ -1,3 +1,9 @@
+formulas:
+  Materia: 'html("<span class=\""+file.path.replace(/.*Semestre [12]\/([a-zA-Z0-9])/,"$1").replace(/\/.*/,"").lower()+"\"style =\""+"color: var(--accent)"+"\">"+file.path.replace(/.*Semestre [12]\/([a-zA-Z0-9])/,"$1").replace(/\/.*/,"") + "</span>")'
+  Data dal nome: file.name.replace(/.*(202[0-9](0[1-9]|1[0-2])([0-2][0-9]|30|31)).*/,"$1").replace(/[^0-9]/g,"").replace(/([0-9]{4})([0-9]{2})([0-9]{2})/,"$1/$2/$3")
+properties:
+  file.name:
+    displayName: Nome file
 views:
   - type: table
     name: Table
@@ -6,6 +12,19 @@ views:
         - file.path.containsAny("Raw")
         - '!file.path.contains("Copiat")'
         - '!file.path.contains("Copied")'
+    order:
+      - formula.Materia
+      - file.name
+      - formula.Data dal nome
+      - file.size
     sort:
+      - property: file.size
+        direction: DESC
+      - property: formula.Data dal nome
+        direction: DESC
       - property: file.ctime
         direction: DESC
+    columnSize:
+      formula.Materia: 100
+      formula.Data dal nome: 145
+      file.size: 96

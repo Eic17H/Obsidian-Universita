@@ -1,6 +1,20 @@
+formulas:
+  Materia: 'html("<span class=\""+file.path.replace(/.*Semestre [12]\/([a-zA-Z0-9])/,"$1").replace(/\/.*/,"").lower()+"\"style =\""+"color: var(--accent)"+"\">"+file.path.replace(/.*Semestre [12]\/([a-zA-Z0-9])/,"$1").replace(/\/.*/,"") + "</span>")'
 views:
   - type: table
     name: Table
     filters:
       and:
         - file.hasTag("#empty")
+    groupBy:
+      property: cssclasses
+      direction: ASC
+    order:
+      - formula.Materia
+      - file.name
+      - file.links
+    sort:
+      - property: formula.Materia
+        direction: ASC
+    columnSize:
+      file.name: 228
