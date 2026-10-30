@@ -817,3 +817,34 @@ Ci sono dei test che danno ERR perché i metodi hanno parametri formali diversi 
 E poi devo controllare tutti i commenti dappertutto.
 
 Quindi per ora avrei "aggiustato" 4 contratti. E vedo che Bank comunque ha 167 falsi e 656 veri, quindi sembra che avere molti falsi vada comunque bene.
+
+Quindi più tardi faccio Bet.
+
+### Bet
+
+Noto che ho sempre dimenticato di mettere `view` alle invarianti. Da aggiustare. Inoltre c'è da mettere la licenza come su Bank, e usare solo `//` e non `///` per scrivere le regole nelle spec. E c'è anche da controllare che le ground truth abbiano i commenti.
+
+Vedo molti molti molti molti molti molti molti falsi. Capiamoci
+
+|        | ab-gte0 | ab-lte2 | bb-gte0 | bb-lte2 | candep | cannotdep | cb-gte0 | cb-lte2 |
+| ------ | ------- | ------- | ------- | ------- | ------ | --------- | ------- | ------- |
+| **v1** | TP!     | **FN**  | TP!     | **FN**  | TP!    | **FN**    | TP!     | **FN**  |
+| **v2** | TP!     | TN      | TN      | **FN**  | TP!    | TN        | TP!     | TN      |
+| **v3** | TN      | **FN**  | TP!     | TN      | TN     | **FN**    | TP!     | **FN**  |
+| **v4** | TP!     | **FN**  | TP!     | **FN**  | TN     | **FN**    | TP!     | TP!     |
+| **v5** | TP!     | **FN**  | TP!     | **FN**  | TP!    | **FN**    | TN      | **FN**  |
+
+Vediamo. Le regole **lte2** sono sbagliatissime, e anche **cannotdep**. Ci sono anche un paio di falsi negativi condivisi con SolCMC, namely **cannotdep**-v3 e **cb-lte2**-v3. v3 è quella in cui il giocatore A può depositare e avere un bilancio negativo. La seconda è un errore mio, la prima è il test che non controlla il sender.
+
+Il problema è che le regole **lte2** sono implementate nel modo più semplice possibile:
+
+```CVL
+invariant ab_lte2()
+	currentContract.balance_a<=2;
+```
+
+Io non capisco come risolvere. Forse con qualcosa che non è un'invariant ma un test più normale con require eccetera.
+
+Ho introdotto un falso positivo creando v6 che reverta con tutto.
+
+Quindi, concettualmente: mettere più require, controllare il sender, non usare invariant.
