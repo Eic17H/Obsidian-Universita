@@ -2,7 +2,7 @@
 cssclasses:
   - csmn
 ---
-Teoria: [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Jacobi]]
+[[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Jacobi|Teoria]]
 
 L'algoritmo è uguale, ma con $B = D^{-1}(E+F)$ e $f = D^{-1}b$.
 

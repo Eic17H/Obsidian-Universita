@@ -151,3 +151,5 @@ Nacquero i computer IBM-compatible, che costavano meno.
 Il professor Carta ne aveva uno. C'era anche gente in Sardegna che li costruiva. <span class="pink">Bruttini</span>.
 Retrocompatibilità = compatibilità con Intel = x86 = <span class="orange">CISC</span>.
 Però Apple e ARM usano <span class="orange">RISC</span>.
+
+#modulo

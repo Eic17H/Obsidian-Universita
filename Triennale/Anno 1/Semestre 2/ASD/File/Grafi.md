@@ -3,7 +3,6 @@ cssclasses:
   - asd
 ---
 > Eulero ha dato la scintilla che ha iniziato la teoria dei grafi col problema dei ponti di Koenigsberg. Essenzialmente consiste nell'attraversare tutti i ponti una e una sola volta, anche noto come il rompicapo delle stanze con le porte e devi attraversare tutte le porte una e una sola volta. Tornando a noi,
-# Grafi
 
 Un ==grafo== è una <span class="accented">struttura dati</span> astratta non lineare, composto da un insieme finito e non vuoto di nodi e insieme finito di archi.
 

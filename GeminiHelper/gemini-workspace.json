@@ -1,0 +1,19 @@
+{
+  "selectedRagSetting": null,
+  "webSearchEnabled": true,
+  "selectedModel": "gemma-4-26b-a4b-it",
+  "ragSettings": {},
+  "sentPromptHistory": [
+    "Con SolCMC non si possono leggere i bilanci degli altri contratti vero?",
+    "try again",
+    "Con SolCMC non si possono leggere i bilanci degli altri contratti vero?",
+    "Con SolCMC non si possono leggere i bilanci degli altri contratti vero?",
+    "Con SolCMC non si possono leggere i bilanci degli altri contratti vero?"
+  ],
+  "groundingRestrictedChatIds": [
+    "chat_1793390723225_dmjrhou"
+  ],
+  "reasoningEffortByModel": {
+    "gemini-3.8-flash": "high"
+  }
+}
