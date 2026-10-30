@@ -735,3 +735,85 @@ Il resto lo lascio a domani, faccio in aereo
 * **reclaim-own-funds**: molto strano su SolCMC
 * **wd-transfer-to-owner**: v2 Certora
 
+## 30 ottobre 2026
+
+Non ho fatto niente in aereo
+
+### reclaim-own-funds
+
+Solito metodo.
+
+Descrizione in inglese:$$reclaim \land \lnot revert \vdash \Delta (msg.sender.balance)=donation[msg.sender]_{before}$$
+SolCMC:$$reclaim \land \lnot revert \vdash \Delta(msg.sender.balance)=donation[msg.sender]_{before}$$
+Certora:$$reclaim \land \lnot revert \vdash \Delta(msg.sender.balance)=donation[msg.sender]_{before}$$
+Implementazione in v1:$$reclaim \land \lnot revert \vdash \Delta(msg.sender.balance)=donation[msg.sender]_{before}$$
+
+Su Certora, vediamo che è perlopiù $FP!$,  tranne $TP!$ su v2, v21 e v9, e $TN$ su v4 e v7. Su SolCMC invece è tutto corretto.
+
+La ground truth ci dice che la proprietà deve essere falsa perché il sender può essere un contratto che redirige i soldi a un altro indirizzo, di cui SolCMC può tenere conto ma Certora no. Ci aspettiamo dunque molti positivi da parte di Certora, che sono corretti nel caso di v2 e v21 perché revertano troppo, e v9 invece perché donation è sempre $0$ (non viene usata) e quindi reclaim reverta comunque sempre.
+
+Vediamo invece i negativi su v4 e v7. In v4, reclaim invia 1 wei meno di quanto dovrebbe (ovviamente Certora se ne accorge), e v7 invece reverta, oltre alle condizioni normali incluse in $revert$, reverta se il pagamento funziona e non reverta se non funziona, cioè i casi che arrivano all'assert sono quelli dove il pagamento non ha funzionato e quindi ovviamente il test non passa.
+
+Quindi niente di strano? Cosa scrivo?
+
+Ricapitolando, di base Certora dà falsi positivi perché non considera il caso in cui il ricevente dei soldi li inoltra subito a qualcun altro. I veri positivi sono su versioni che lo passano vacuamente revertando sempre. I veri negativi sono su un caso semplice (la formula usata è semplicemente sbagliata) e su uno che non reverta solo se il pagamento non ha funzionato (e quindi arriva all'assert senza aver inviato soldi).
+
+Quindi ok, ho scritto nel test i motivi per cui dà falsi positivi:
+
+> Fails to take into account cases where the sender redirects the funds to another address upon receiving them, yielding false positives.
+
+> The test will still fail if the contract sends the wrong amount in a non-reverting call.
+
+### wd-transfer-to-owner
+
+> after a non-reverting `withdraw`, the ETH balance of owner is increased by an amount equal to the balance (of Crowdfund) before `withdraw` was called
+
+$$wd \land \lnot revert \vdash \Delta(owner.balance) = this.balance_{before}$$
+
+Con SolCMC non c'è. Abbiamo detto che non si può vedere il bilancio di un altro contratto in SolCMC? Non lo so.
+
+Con Certora invece, abbiamo FP su v10 ed FN su v2.
+
+Per v1 questa proprietà non vale, con la giustificazione:
+
+> This property is false, since `owner` can be a contract which can redirect the received funds to another address.
+
+Vediamo come è scritto il test in Certora.$$time>end \land this.balance > goal \land msg.value=0 \vdash \lnot revert \to \Delta(owner.balance)=this.balance_{before}$$
+Notiamo che ~~la maggior parte delle volte dimentico di mettere il metodo nelle assunzioni~~.
+
+Notiamo che in realtà è equivalente all'altro, perché possiamo spostare l'antecedente nelle assunzioni e applicare l'idempotenza della congiunzione. Visto che però le condizioni di revert nelle altre versioni possono cambiare, questo può non essere vero per tutte le versioni. Li chiamerei $revert_1$, $revert_2$ e $revert_{10}$.
+
+v2 rende impossibile $time > end$, ma lo rimuove dalla definizione di $\lnot revert$. Non capisco come questo cambi la sua interazione con questa proprietà, quindi adesso scrivo il test in SolCMC e vedo che mi dice. Effettivamente SolCMC concorda e dice che per v2 vale. Ma non ha sens- ah... È vacua. Perché $time>end$ è sempre falsa. Rimuoverei quegli assert, perché tanto lo sa già se reverta o no. Tanto tecnicamente la definizione della proprietà non lo specifica. Ed ecco qua che è falsa anche per v2.
+
+Ah no ma avevamo FN su v2. E adesso momentaneamente mi ha dato P!. E... non ha comunque senso, perché i cambiamenti in v2 non cambiano quella cosa. Io cambierei la ground truth.
+
+Ora v10. v10 è quella sicura: è non-rientrante, richiede che il costruttore non abbia codice (un metodo fallato per controllare che sia un utente e non un contratto), che l'obiettivo sia strettamente positivo, che il timestamp di fine sia nel futuro, e che il contratto non abbia soldi dopo la withdraw. Falso positivo. Qui c'è allora da capire *perché* il test Certora non passa nelle altre versioni, perché come sappiamo non è il motivo giusto: SolCMC infatti non passa neanche con v10. Credo che sia il solito motivo della reentrancy, non c'entra niente col motivo dato dalla ground truth. Quindi è un'effettiva limitazione di Certora.
+
+### Ricapitolando tutto quanto
+
+Vediamo tutti i falsi che rimangono su Crowdfund:
+
+* **donate-bal-inc** FN v4 v9: Errore stupido dei tool.
+* **donate-not-dec-donation** FN v14 SolCMC: Non l'ho capito.
+* **donation-dec-onlyif-reclaim** FN v2 v7 SolCMC: Reentrancy.
+* **donation-dec-onlyif-reclaim** FP molti Certora: Reentrancy.
+* **donation-inc-onlyif-donate** FN molti SolCMC: Reentrancy.
+* **no-deadlock** FP v9 v21 SolCMC: Vacue (revert e abuso degli attributi).
+* **no-deadlock** FN v6 Certora: Chiedere a Bartoletti (addirittura?).
+* **no-receive-after-deadline** FP v7 v21 Certora: Limite del tool, non considera interferenze esterne se non è il contratto stesso a fare chiamate esterne.
+* **owner-only-recv** FN v2 v7 v21 Certora: Ah... FN perché a occhio le chiamate che inviano soldi ad altri esistono, ma in realtà revertano sempre, e non so come risolvere il problema senza fare danno.
+* **reclaim-own-funds** FP molti Certora: Limite del tool, redirezione dei soldi.
+* **wd-empties-balance** FP v2 SolCMC: Vacuo, revert.
+* **wd-full-balance** FP v10 Certora: Redirezione e rientranza.
+* **wd-transfer-to-owner** FP v10 Certora: Redirezione e rientranza.
+
+Quindi gli unici strani sono **donate-not-dec-donation** che non ha senso e **no-deadlock** che è da chiedere a Bartoletti.
+### Altro
+
+Avevo lavorato a Bet prima di correggere l'installazione di Certora, quindi devo rieseguire i test. (A questo punto per la PR controllo anche quello). Perché lì ho messo la quantità giusta di versioni credo (ogni proprietà è falsa in almeno una versione).
+
+Ci sono dei test che danno ERR perché i metodi hanno parametri formali diversi da quelli di v1, quindi quei test sono da rieseguire prima della PR.
+
+E poi devo controllare tutti i commenti dappertutto.
+
+Quindi per ora avrei "aggiustato" 4 contratti. E vedo che Bank comunque ha 167 falsi e 656 veri, quindi sembra che avere molti falsi vada comunque bene.
