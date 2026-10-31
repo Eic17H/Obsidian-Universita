@@ -1,11 +1,11 @@
 {
   "enabledCssSnippets": [
+    "stile",
     "notation-colour-blocks",
-    "hide-properties",
-    "images",
     "light-mode",
-    "small-latex",
-    "stile"
+    "images",
+    "hide-properties",
+    "small-latex"
   ],
   "theme": "obsidian",
   "textFontFamily": "",

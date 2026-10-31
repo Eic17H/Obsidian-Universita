@@ -1,11 +1,10 @@
 [
-  "webpage-html-export",
+  "doomscroll",
+  "custom-classes",
+  "extended-graph",
+  "gemini-helper",
   "sheets",
-  "sync-graph-settings",
   "shiki-highlighter",
   "subject-class",
-  "extended-graph",
-  "custom-classes",
-  "doomscroll",
-  "gemini-helper"
+  "sync-graph-settings"
 ]
