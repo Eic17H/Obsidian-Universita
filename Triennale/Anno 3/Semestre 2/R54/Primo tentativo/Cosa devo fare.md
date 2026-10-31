@@ -855,4 +855,6 @@ Vorrei fare una versione che soddisfa le proprietà, ma in modo stupido. In real
 
 La cosa del pi greco sarebbe molto più difficile da implementare quindi direi di no.
 
-Provo a fregare 
+Ho invece aggiustato commenti e simili.
+
+Sì rimangono da correggere quei test di Certora di Bet che non so come correggere e così forse posso fare la PR. Ah no devo chiedere a Bartoletti. C'è anche quella cosa di rel-grows-linear e rel-strictly-incr.
