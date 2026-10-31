@@ -409,7 +409,7 @@
       "mtime": 1790958888815
     },
     "Triennale/Anno 2/Semestre 2/PR2/Lab/Interfacce.md": {
-      "mtime": 1790958888815
+      "mtime": 1793445541656
     },
     "Triennale/Anno 2/Semestre 2/PR2/Lab/Inline.md": {
       "mtime": 1790958888815
@@ -1044,14 +1044,11 @@
     "Comune/Bash cheatsheet.md": {
       "mtime": 1790958888844
     },
-    "Altro/Filtri per il grafo.md": {
-      "mtime": 1790958888773
-    },
     "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà.md": {
       "mtime": 1792491606328
     },
     "Triennale/Anno 3/Semestre 2/R54/Primo tentativo/Cosa devo fare.md": {
-      "mtime": 1793407706581
+      "mtime": 1793457475477
     },
     "Triennale/Anno 3/Semestre 2/ISW/Teoria/Software open source.md": {
       "mtime": 1790958888843
@@ -2506,6 +2503,98 @@
     {
       "path": "Triennale/A scelta/Semestre 2/Logica/File/Equivalenza dei calcoli.md",
       "viewedAt": 1793445477613
+    },
+    {
+      "path": "Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Eldarica.md",
+      "viewedAt": 1793458172584
+    },
+    {
+      "path": "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Linguaggi.md",
+      "viewedAt": 1793458172584
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/PR2/Lab/Stream.md",
+      "viewedAt": 1793458172585
+    },
+    {
+      "path": "Triennale/A scelta/Semestre 2/FPW/Teoria/HTTP.md",
+      "viewedAt": 1793458172585
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/TCP-IP/NAT.md",
+      "viewedAt": 1793458172585
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/CSMN/Lab/Vettori e matrici.md",
+      "viewedAt": 1793458172585
+    },
+    {
+      "path": "Triennale/A scelta/Semestre 2/FPW/Teoria/Search Engine Optimization.md",
+      "viewedAt": 1793458172585
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/RC/File/Parte III/TCP-IP/IPv6.md",
+      "viewedAt": 1793458175597
+    },
+    {
+      "path": "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Tipi.md",
+      "viewedAt": 1793458175598
+    },
+    {
+      "path": "Comune/Git.md",
+      "viewedAt": 1793458175848
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Rappresentazione dei numeri/Aritmetica di macchina.md",
+      "viewedAt": 1793458175848
+    },
+    {
+      "path": "Triennale/Anno 3/Semestre 2/ISW/Teoria/Dev-Ops.md",
+      "viewedAt": 1793458176946
+    },
+    {
+      "path": "Triennale/Anno 3/Semestre 1/IUM/Lab new/Personas.md",
+      "viewedAt": 1793458177012
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi diretti/Gauss.md",
+      "viewedAt": 1793458177394
+    },
+    {
+      "path": "Triennale/Anno 1/Semestre 1/AM/File/Calcolo infinitesimale/Derivate.md",
+      "viewedAt": 1793458177553
+    },
+    {
+      "path": "Triennale/Anno 3/Semestre 2/ISW/Teoria/Refactoring.md",
+      "viewedAt": 1793458177553
+    },
+    {
+      "path": "Triennale/Anno 3/Semestre 2/ISW/Teoria/Requisiti/User Stories.md",
+      "viewedAt": 1793458177553
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 1/SO/Lab/Regex.md",
+      "viewedAt": 1793458192796
+    },
+    {
+      "path": "Triennale/A scelta/Semestre 2/Logica/File/Fallacie/Ambiguo, vago, relativo.md",
+      "viewedAt": 1793458193115
+    },
+    {
+      "path": "Triennale/Anno 3/Semestre 1/BD/Teoria/BD-20251217.md",
+      "viewedAt": 1793458193801
+    },
+    {
+      "path": "Magistrale/Anno 1/Semestre 1/GA/Theory/Polygon triangulation.md",
+      "viewedAt": 1793458194197
+    },
+    {
+      "path": "Triennale/Anno 2/Semestre 1/ALF/Consigli/Funzioni di secondo ordine.md",
+      "viewedAt": 1793458194262
+    },
+    {
+      "path": "Triennale/A scelta/Semestre 2/Logica/File/Calcolo dei Sequenti/Esempi.md",
+      "viewedAt": 1793458194812
     }
   ],
   "indexFormatVersion": 3
