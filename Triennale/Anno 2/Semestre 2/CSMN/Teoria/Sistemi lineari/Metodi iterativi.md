@@ -4,7 +4,7 @@ cssclasses:
 ---
 Vediamo due metodi: quello di [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Jacobi|Jacobi]] e quello di [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Gauss-Seidel|Gauss-Seidel]].
 
-Da riordinare.
+#damettereinordine 
 # Metodi iterativi per la risoluzione dei sistemi lineari
 
 Di nuovo$\newcommand{\u}{\underline}$ $Α \u x = \u b$.

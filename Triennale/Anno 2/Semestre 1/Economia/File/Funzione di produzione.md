@@ -1,5 +1,6 @@
 ---
-cssclasses: eed
+cssclasses:
+  - economia
 ---
 Venerdì stavamo esaminando insieme il caso della funzione di produzione
 Combinazione ottimale per soddisfare il target produttivo e minimizzare i costi di produzione

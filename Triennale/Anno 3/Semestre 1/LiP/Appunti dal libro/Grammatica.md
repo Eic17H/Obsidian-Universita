@@ -3,9 +3,9 @@ cssclasses:
   - lip
 aliases:
 ---
-# Grammatica
+## Grammatica
 
-## Concetto
+### Concetto
 
 Regole che determinano come si formano le parole e le frasi sintatticamente corrette. Quindi, un insieme di regole per generare le parole del linguaggio. Cosa significa *generare*?
 
@@ -15,14 +15,14 @@ Essenzialmente è una relazione su $A^* \times A^*$. Quando troviamo $\alpha$ in
 
 Noi vedremo solo casi in cui $|α|=1$, quindi riscriviamo un solo simbolo.
 
-## Definizione
+### Definizione
 
 > **Grammatica** - Una grammatica su $A$ è la quadrupla $G = (\textbf{V},A,\mathcal{P},\mathcal{S})$, dove:
 > * $\textbf{V}$ è un insieme finito di simboli *non terminali*, e $A$ è un insieme finito di simboli *terminali*, tali che $\textbf{V} \cap A = \emptyset$;
 > * $\mathcal{P}$ è un insieme di produzioni $α \rightarrow β$ su $\textbf{V} \cup A$ tali che $α \in \textbf{V}$.
 > * $\mathcal{S} \in \textbf{V}$ è il simbolo iniziale.
 
-## Esempio
+### Esempio
 
 $$G = (\{S\}, \{0,1\},\{S \rightarrow0S0, S\rightarrow1S1,S\rightarrowε\},S)$$
 Abbiamo detto che la grammatica si usa per derivare delle parole. Come deriviamo la parola $011110$?
@@ -36,7 +36,7 @@ E siamo arrivati alla parola che volevamo derivare.
 
 In simboli, possiamo scrivere cose come $0S0 \xrightarrow{S\rightarrow1S1} 01S10$. 
 
-# Derivazione
+## Derivazione
 
 Abbiamo parlato di [[Derivazione]], ma formalmente cos'è?
 
@@ -67,15 +67,15 @@ Arriviamo quindi al concetto di **derivazione**: una derivazione è la *chiusura
 
 Se $α \xRightarrow{*} β$, diciamo che *deriviamo $α$ da $β$*, quindi esiste una sequenza finita di passi che consentono di arrivare da $α$ a $β$ con passi di derivazione successivi.
 
-## Linguaggio generato da una grammatica
+### Linguaggio generato da una grammatica
 
 Adesso possiamo finalmente collegare i linguaggi e le grammatiche usando questi concetti.
 
 > Sia $G = (\textbf{V},A,\mathcal{P},\mathcal{S})$ una grammatica. Il linguaggio generato da $G$ è l'insieme delle parole composte solo di simboli terminali che si possono derivare da $S$, $\mathcal{L}(G) = \{w \in A^* | S \xRightarrow{*} w\}$.
 
-# Alberi sintattici
+## Alberi sintattici
 
-## Nozione di albero
+### Nozione di albero
 
 Un <span class="asd">[[Alberi|albero]]</span> è un tipo di grafo. Gli alberi sintattici sono un'alternativa alla derivazione.
 
@@ -105,7 +105,7 @@ Vediamo qualche termine relativo agli alberi:
 > **Figlio** - $v'$ è figlio di $v$ se $(v,v') \in A$.
 > **Elenco dei figli** - $succ(v) = \{v' | (v,v') \in A\}$. Se $v$ è una foglia, $succ(v) = \emptyset$. L'ordine con cui sono elencati i figli è rilevante.
 
-## Albero sintattico
+### Albero sintattico
 
 Orrendo
 

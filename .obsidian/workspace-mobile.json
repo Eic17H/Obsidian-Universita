@@ -4,232 +4,102 @@
     "type": "split",
     "children": [
       {
-        "id": "8193cfda1b247446",
+        "id": "effcb818ac8c7a93",
         "type": "tabs",
         "children": [
           {
-            "id": "87e77ccf7d525997",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "aac3dbdb5666cd5c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Magistrale/Anno 1/Semestre 1/DM/Raw/20260928.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "20260928"
-            }
-          },
-          {
-            "id": "c0480993be7201f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Triennale/Anno 3/Semestre 2/R54/Primo tentativo/Come ho installato tutto.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Come ho installato tutto"
-            }
-          },
-          {
-            "id": "f84f0d8d9c9fd03a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Triennale/A scelta/Semestre 2/Logica/File/Fallacie.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Fallacie"
-            }
-          },
-          {
-            "id": "8d8c21cedf17547c",
+            "id": "e385a562362f363b",
             "type": "leaf",
             "state": {
               "type": "doomscroll-view",
               "state": {
                 "batchPaths": [
-                  "Triennale/Anno 3/Semestre 2/ISW/Lab/Branching.md",
-                  "Triennale/A scelta/Semestre 2/Logica/File/Ragionamento ex hypothesi/Alfred Tarski.md",
-                  "Triennale/A scelta/Semestre 2/Logica/File/Teorema di correttezza.md",
-                  "Triennale/Anno 2/Semestre 1/SO/Lab/GCC.md",
-                  "Triennale/A scelta/Semestre 2/Logica/Moduli/Introduzione.md",
-                  "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Eventi.md",
-                  "Triennale/Anno 3/Semestre 2/ISW/Teoria/Requisiti.md",
-                  "Magistrale/Anno 1/Semestre 1/GA/Theory/Support/Ear-cut algorithm.md",
-                  "Magistrale/Anno 1/Semestre 1/IP/Lab/Rappresentazione delle immagini.md",
-                  "Triennale/Anno 1/Semestre 1/AM/File/Insiemi/Coppia ordinata.md",
-                  "Triennale/Anno 2/Semestre 1/Economia/File/Bilanciare due beni.md",
-                  "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Equazioni non lineari/Metodi iterativi.md",
-                  "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Termini.md",
-                  "Triennale/Anno 3/Semestre 1/BD/Lab/BD-Lab-20251118.md",
-                  "Triennale/Anno 1/Semestre 1/AM/File/Insiemi/Insiemi numerici.md",
+                  "Triennale/Anno 1/Semestre 1/FDI/File/Virgola mobile.md",
+                  "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Semantica.md",
+                  "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Contratti.md",
+                  "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Storia.md",
+                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Grafici.md",
+                  "Triennale/A scelta/Semestre 2/Logica/File/Logiche rilevanti/Routley e Routley.md",
+                  "Triennale/Anno 3/Semestre 2/ISW/Cose nuove/LLM.md",
+                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Relazione.md",
+                  "Triennale/Anno 3/Semestre 1/IUM/Teoria/Iterazione.md",
+                  "Triennale/Anno 2/Semestre 1/SO/Lab/Thread.md",
+                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Equazioni non lineari.md",
+                  "Triennale/Anno 3/Semestre 1/BD/Teoria/Memoria.md",
+                  "Triennale/Anno 1/Semestre 2/ASD/File/Merge sort.md",
+                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Lagrange.md",
+                  "Triennale/Anno 2/Semestre 1/ALF/Consigli/Funzioni di secondo ordine.md",
+                  "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert.md",
+                  "Triennale/Anno 2/Semestre 2/PR2/Lab/Override.md",
+                  "Triennale/Anno 3/Semestre 1/IUM/Teoria/Test.md",
                   "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri.md",
-                  "Triennale/Anno 3/Semestre 1/LiP/Progetto/Razionali.md",
-                  "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Test/Linguaggio.md",
-                  "Triennale/Anno 2/Semestre 2/PR2/Lab/Inline.md",
-                  "Triennale/Anno 1/Semestre 1/PR1/Modulo II/Leggibilità.md"
+                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Operazioni matriciali.md"
                 ],
                 "batchHistoryPaths": [
                   [
-                    "Triennale/Anno 3/Semestre 2/ISW/Lab/Branching.md",
-                    "Triennale/A scelta/Semestre 2/Logica/File/Ragionamento ex hypothesi/Alfred Tarski.md",
-                    "Triennale/A scelta/Semestre 2/Logica/File/Teorema di correttezza.md",
-                    "Triennale/Anno 2/Semestre 1/SO/Lab/GCC.md",
-                    "Triennale/A scelta/Semestre 2/Logica/Moduli/Introduzione.md",
-                    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Eventi.md",
-                    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Requisiti.md",
-                    "Magistrale/Anno 1/Semestre 1/GA/Theory/Support/Ear-cut algorithm.md",
-                    "Magistrale/Anno 1/Semestre 1/IP/Lab/Rappresentazione delle immagini.md",
-                    "Triennale/Anno 1/Semestre 1/AM/File/Insiemi/Coppia ordinata.md",
-                    "Triennale/Anno 2/Semestre 1/Economia/File/Bilanciare due beni.md",
-                    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Equazioni non lineari/Metodi iterativi.md",
-                    "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Termini.md",
-                    "Triennale/Anno 3/Semestre 1/BD/Lab/BD-Lab-20251118.md",
-                    "Triennale/Anno 1/Semestre 1/AM/File/Insiemi/Insiemi numerici.md",
+                    "Triennale/Anno 1/Semestre 1/FDI/File/Virgola mobile.md",
+                    "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Semantica.md",
+                    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Contratti.md",
+                    "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Storia.md",
+                    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Grafici.md",
+                    "Triennale/A scelta/Semestre 2/Logica/File/Logiche rilevanti/Routley e Routley.md",
+                    "Triennale/Anno 3/Semestre 2/ISW/Cose nuove/LLM.md",
+                    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Relazione.md",
+                    "Triennale/Anno 3/Semestre 1/IUM/Teoria/Iterazione.md",
+                    "Triennale/Anno 2/Semestre 1/SO/Lab/Thread.md",
+                    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Equazioni non lineari.md",
+                    "Triennale/Anno 3/Semestre 1/BD/Teoria/Memoria.md",
+                    "Triennale/Anno 1/Semestre 2/ASD/File/Merge sort.md",
+                    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Lagrange.md",
+                    "Triennale/Anno 2/Semestre 1/ALF/Consigli/Funzioni di secondo ordine.md",
+                    "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert.md",
+                    "Triennale/Anno 2/Semestre 2/PR2/Lab/Override.md",
+                    "Triennale/Anno 3/Semestre 1/IUM/Teoria/Test.md",
                     "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri.md",
-                    "Triennale/Anno 3/Semestre 1/LiP/Progetto/Razionali.md",
-                    "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Test/Linguaggio.md",
-                    "Triennale/Anno 2/Semestre 2/PR2/Lab/Inline.md",
-                    "Triennale/Anno 1/Semestre 1/PR1/Modulo II/Leggibilità.md"
+                    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Operazioni matriciali.md"
                   ]
                 ],
                 "batchHistoryCursor": 0,
-                "scrollTop": 0,
+                "scrollTop": 7086.33349609375,
                 "focusedPath": null,
-                "scrollAnchor": null
+                "scrollAnchor": {
+                  "path": "Triennale/Anno 2/Semestre 1/ALF/Consigli/Funzioni di secondo ordine.md",
+                  "topOffset": -121.22396087646484
+                }
               },
               "icon": "gallery-vertical",
               "title": "Doomscroll"
             }
           },
           {
-            "id": "0cc4adbb57092310",
+            "id": "d55ef4c40d6b7a94",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Triennale/Anno 3/Semestre 1/BD/Lab/20251118.md",
+                "file": "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Lagrange.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20251118"
+              "title": "Lagrange"
             }
           },
           {
-            "id": "713d62687fde9f46",
+            "id": "b42fe4c2d2f0af63",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Magistrale/Anno 1/Semestre 1/GA/Theory/Support/Ear-cut algorithm.md",
+                "file": "Triennale/Anno 1/Semestre 1/FDI/File/Virgola mobile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ear-cut algorithm"
-            }
-          },
-          {
-            "id": "be73484b6447247c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Eventi.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Eventi"
-            }
-          },
-          {
-            "id": "fc48b3916a87fb60",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "38dcfb34a46bef5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Magistrale/Anno 1/Semestre 1/BiDa/Big Data.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Big Data"
-            }
-          },
-          {
-            "id": "05d31b8f10818699",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ether.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ether"
-            }
-          },
-          {
-            "id": "deaacfd6b7d33cfb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Triennale/Anno 1/Semestre 2/ASD/File/Alberi decisionali.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Alberi decisionali"
-            }
-          },
-          {
-            "id": "aa06bdd796c45059",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Assiomi.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Assiomi"
+              "title": "Virgola mobile"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -360,7 +230,7 @@
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 3
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -376,43 +246,43 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0cc4adbb57092310",
+  "active": "e385a562362f363b",
   "lastOpenFiles": [
-    "Magistrale/Anno 1/Semestre 1/GA/Theory/Support/Ear-cut algorithm.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Eventi.md",
-    "Triennale/A scelta/Semestre 2/Logica/File/Teorema di correttezza.md",
-    "Triennale/A scelta/Semestre 2/Logica/File/Fallacie.md",
-    "Magistrale/Anno 1/Semestre 1/BiDa/Big Data.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ether.md",
-    "Triennale/Anno 1/Semestre 2/ASD/File/Alberi decisionali.md",
-    "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Assiomi.md",
-    "Triennale/Anno 3/Semestre 2/R54/Primo tentativo/Come ho installato tutto.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Certora.md",
+    "Triennale/Anno 1/Semestre 1/FDI/File/Virgola mobile.md",
+    "Triennale/Anno 2/Semestre 1/ALF/OCaml/Pattern matching.md",
+    "Magistrale/Anno 1/Semestre 1/IP/Lab/Smoothing.md",
+    "Triennale/Anno 1/Semestre 1/PR1/Modulo II/Operatori.md",
+    "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Introduzione.md",
+    "Triennale/Anno 3/Semestre 1/BD/Raw/20251216.md",
+    "Triennale/Anno 3/Semestre 1/BD/Raw",
+    "Triennale/Anno 3/Semestre 1/LiP/Categorie/PDA.md",
+    "Triennale/Anno 2/Semestre 1/DeM/Tesine/Simulazione.md",
+    "Triennale/A scelta/Semestre 2/Logica/File/Enunciati.md",
+    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Introduzione.md",
+    "Triennale/Anno 1/Semestre 2/ASD/File/Code con priorità.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Metodo di Gauss.md",
+    "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi.md",
+    "Triennale/Anno 1/Semestre 2/ASD/File/Strutture dati.md",
+    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Newton.md",
+    "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Grammatica.md",
+    "Triennale/Anno 2/Semestre 2/RC/Vecchi/File/Applicazioni e reti.md",
+    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Introduzione/Il corso.md",
+    "Triennale/A scelta/Semestre 2/Logica/File/Calcolo dei Sequenti/Storia.md",
+    "Triennale/Anno 2/Semestre 1/DeM/Tesine/Regressione.md",
+    "Triennale/Anno 1/Semestre 1/PR1/Modulo II/Selezione, iterazione e salto.md",
+    "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo/Formalità.md",
+    "Altro/Linguaggi di programmazione/C.md",
+    "Triennale/Anno 2/Semestre 1/Economia/File/Funzione di produzione.md",
+    "Triennale/Anno 1/Semestre 1/PR1/Modulo II/File.md",
     "Altro/Basi/Non copiati.base",
-    "Triennale/Anno 3/Semestre 2/ISW/Raw/Blockchain.md",
-    "Triennale/Anno 3/Semestre 2/ISW/Raw/Tirocinio extracurriculare.md",
-    "Magistrale/Anno 1/Semestre 1/GA/Raw/20261021.md",
     "Altro/Basi/Aggiustare.base",
     "Altro/Basi",
-    "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri.md",
     "Altro/Basi/Empty.base",
-    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Scomposizione.md",
-    "Triennale/Anno 3/Semestre 1/IUM/Lab/20251014.md",
-    "Untitled.md",
-    "Magistrale/Anno 1/Semestre 1/DM/Raw/20260928.md",
-    "Magistrale/Anno 1/Semestre 1/DM/Data Mining.md",
-    "Magistrale/Anno 1/Semestre 1/GA/Theory/Convex hull.md",
-    "Magistrale/Anno 1/Semestre 1/GA/Theory/Support/CH is a polygon.md",
-    "Magistrale/Anno 1/Semestre 1/GA/Graphics Algorithms.md",
-    "Magistrale/Anno 1/Semestre 1/GA/Theory/Polygon triangulation.md",
-    "Indice.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Valori.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà.md",
     "FPW/about.html",
     "FPW/Laboratorio/File.zip",
     "SO/Modulo II/Linux",
     "SO/Modulo II/C",
-    "SO/Modulo II/Bash",
-    "SO/Modulo II/Altro"
+    "SO/Modulo II/Bash"
   ]
 }

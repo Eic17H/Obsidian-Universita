@@ -2,9 +2,9 @@
 cssclasses:
   - logica
 ---
-Così come la deduzione naturale, il calcolo delle sequenze nasce negli anni 30, in particolare nel 1934, con Gentzen, allievo di Hilbert. Scuola tedesca di logica della prima metà del 1900, gli allievi di Hilbert, tutte queste logiche.
+Così come la deduzione naturale, il ==calcolo delle sequenze== nasce negli anni 30, in particolare nel 1934, con ==Gentzen==, allievo di Hilbert. Scuola tedesca di logica della prima metà del 1900, gli allievi di Hilbert, tutte queste logiche.
 
-Gentzen introduce nello stesso trattato sia ND che Seq.
+Gentzen introduce nello stesso trattato sia $ND$ che $PK$.
 
 L'obiettivo, come con Hilbert, era la formazione della matematica: dimostrare che il calcolo formale dell'aritmetica non può portare a contraddizioni. E usa il calcolo delle sequenze per dimostrare la non-contradditorietà dell'aritmetica. Non vedremo questa dimostrazione perché dovremmo introdurre la logica dei predicati, che invece non facciamo.
 
