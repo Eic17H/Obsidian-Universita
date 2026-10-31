@@ -6,5 +6,6 @@
   },
   "googleApiKeyConfigured": true,
   "apiPlan": "free",
-  "workspaceFolder": "GeminiHelper"
+  "workspaceFolder": ".GeminiHelper",
+  "maxSavedChatHistories": 0
 }

@@ -1,7 +1,7 @@
 ---
 cssclasses: pr2
 ---
-# Interfacce
+## Interfacce
 
 Si vedrà meglio in ISW l'anno prossimo.
 Non tutti i team che collaborano per un progetto sanno di preciso cosa l'altro deve fare.
@@ -23,17 +23,17 @@ I metodi sono pubblici di default. Di solito il default è package visibility.
 Le interfacce permettono anche il polimorfismo.
 Non ho capito un cazzo, non sembra neanche stia parlando italiano onestamente.
 
-# Interfacce importanti
+## Interfacce importanti
 
-## Clonable
+### Clonable
 
 Non contengono qualcosa, ma danno struttura al codice. Non ha metodi dichiarati, ma segna che la nostra classe che lo implementa, implementa il metodo `clone`.
 
-## Iterable
+### Iterable
 
 Interfaccia che dice che è possibile iterare su quella classe. Implementata da quasi tutte le interfacce. Permette in modo molto semplice di scorrere. In C, quando abbiamo implementato le liste, dovevamo tenere traccia dei puntatori. Gli iterable hanno invece un metodo per farlo in modo semplice, `foreach`, che prende un metodo come parametro e lo applica a *tutti* gli oggetti.
 
-## Iterator
+### Iterator
 
 Permette di scorrere un iterable. Ha alcuni metodi utili:
 
@@ -42,26 +42,26 @@ Permette di scorrere un iterable. Ha alcuni metodi utili:
 * `next` - autoesplicativo;
 * `remove` - rimuove l'ultimo elemento,
 
-## Comparable
+### Comparable
 
 Definisce l'ordine naturale delle cose, con il metodo `T::compareTo(T o)`, che restituisce un numero negativo se il parametro viene prima del chiamante, $0$ se sono uguali, e un numero negativo se il parametro viene dopo.
 
-## Comparator
+### Comparator
 
 Definisce l'ordinamento totale. Definiamo, in un'altra classe, un metodo che confronta due elementi, `compare(T o1, T o2)`. Di nuovo, restituisce un numero negativo se $o_1<o_2$, e così via.
 
-# Collections
+### Collections
 
 Sono nel package `java.util`, che va importato manualmente. Si usano perlopiù le liste, i set e le mappe. Grazie alle collections abbandoniamo gli array.
 
-## `List<T>`
+#### `List<T>`
 
 Molto più semplice che in C. Una lista di dimensione variabile, di oggetti senza un ordine particolare. Come coi vettori, possiamo indicizzare direttamente. È implementata da molte classi, la più comune è `ArrayList<T>`. È iterabile.
 
-## `Set<T>`
+#### `Set<T>`
 
 Come una lista, ma due elementi non possono essere uguali. La classe più utile che la impelementa è `HashSet<T>`. Anche queste sono iterabili.
 
-## `Map<T>`
+#### `Map<T>`
 
 Come i dizionari di Python. Ha chiavi distinte, ciascuna assegnata a un valore. Un solo valore. Ma i valori possono essere liste, per esempio. Non si può iterare, ma c'è un metodo che ti dà una lista di chiavi e una lista di valori, e le liste sono iterabili. L'implementazione più comune sono le `HashMap<T>`, che utilizzano il principio delle hash per evitare che ci siano chiavi duplicate.

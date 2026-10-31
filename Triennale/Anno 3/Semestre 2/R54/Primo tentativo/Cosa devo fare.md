@@ -850,3 +850,9 @@ Ho introdotto un falso positivo creando v6 che reverta con tutto.
 Quindi, concettualmente: mettere più require, controllare il sender, non usare invariant.
 
 Vorrei fare una versione che soddisfa le proprietà, ma in modo stupido. In realtà fa tutt'altro, ma per coincidenza soddisfa anche le proprietà. E ora ci penso. Ho tre variabili con tre valori possibili, cioè ho tre trit, cioè ho 9 stati possibili lavorando solo con queste variabili, 18 stati se considero anche lo scorrere del tempo. Se e solo se `b != 0`, allora è possibile usare `deposit` che fa `b--, c++`. Non ho altre restrizioni. Non so non mi viene in mente niente. Potrei fare una cosa che calcola le cifre di $\pi$, semplicemente andando avanti di un passo ogni volta che si chiama un metodo, ho anche trovato un bell'algoritmo che lo fa usando solo gli interi oggi. Potrei far sì che oooooooooooooooooooooooooooh... Potrei far sì che con ogni metodo che chiami, vai avanti di un passo, calcolando le cifre di pi greco in base 9 e codificandole in base 3. Per le restrizioni su `deposit` posso semplicemente continuare ad andare avanti con le cifre finché non trovo una cifra che rispetta quella proprietà. Dai ci sta. Uso le tre variabili solo come display delle cifre, i calcoli li faccio su altre variabili.
+
+## 31 ottobre
+
+La cosa del pi greco sarebbe molto più difficile da implementare quindi direi di no.
+
+Provo a fregare 
