@@ -858,3 +858,129 @@ La cosa del pi greco sarebbe molto più difficile da implementare quindi direi d
 Ho invece aggiustato commenti e simili.
 
 Sì rimangono da correggere quei test di Certora di Bet che non so come correggere e così forse posso fare la PR. Ah no devo chiedere a Bartoletti. C'è anche quella cosa di rel-grows-linear e rel-strictly-incr.
+
+No basta sono qui da un'ora e non so come aggiustare quegli lte2.
+
+No ok non so bene cosa fare ora quindi lavoro su HTLC.
+
+### 1 Novembre
+
+Allora, capiamo HTLC ora che capisco bene questo tirocinio.
+
+Ci sono proprietario e verificatore, due utenti. Il proprietario ha un segreto che può essere svelato dopo. Il segreto è una stringa, e inizialmente il contratto ne salva lo SHA256.
+
+Il proprietario invia lo SHA256 e dei soldi. $1000$ blocchi dopo (un blocco è un'unità di tempo della macchina virtuale di Ethereum), se il segreto non è ancora stato rivelato come stringa, i soldi vengono inviati al verificatore. Se invece il proprietario rivela il segreto entro $1000$ blocchi, i soldi tornano al proprietario.
+
+Quindi ci sono tre metodi: `commit` per inviare i soldi e lo SHA256, `reveal` per rivelare il segreto e riprendersi i soldi, `timeout` per prendere i soldi scaduto il contratto.
+
+Le proprietà sono:
+* **balance-only-increases-on-commit**: $\lnot revert \vdash \Delta (this.balance) \neq 0 \to commit$
+- **cant-uncommit**: autoesplicativo
+- **commit-auth-owner**: $commit \land \lnot revert \vdash sender = owner$
+- **commit-minimum**: $commit \land \lnot revert \vdash \Delta(this.balance)\geq fee$
+- **commit-reverts-if-isCommitted**: autoesplicativo
+- **commit-twice-reverts**: $commit_{before} \land \lnot revert \vdash commit_{after} \to revert$
+- **contract-balance-is-commit-value**: $commit \land \lnot revert \vdash this.balance = fee$, vedo già il problema della `selfdestruct`
+- **owner-immutable**: $\forall method \vdash \lnot\Delta(owner)$
+- **reveal-auth-owner**: $reveal \vdash \lnot revert \to sender = owner$
+- **reveal-timeout-after-isCommitted**: $(reveal \lor timeout) \vdash \lnot revert \to isCommitted$
+- **reveal-transfer**: $reveal \land \lnot revert \vdash \Delta(owner.balance) \geq this.balance_{before}$
+- **reveal-zeroes-balance**: $reveal \land \lnot revert \vdash this.balance = 0$
+- **sent-le-init-bal**: I soldi inviati dal contratto sono al più i soldi depositati all'inizio.
+- **timeout-deadline**: $timeout \land \lnot revert \vdash e.block > init.block + waitTime$
+- **timeout-transfer**: $timeout \land \lnot revert \vdash \Delta(verifier.balance) \geq this.balance_{before}$
+- **timeout-zeroes-balance**: $timeout \land \lnot revert \vdash this.balance = 0$
+- **verifier-immutable**: $\lnot \Delta(verifier)$
+- **wrong-preimage-reverts**: $reveal(s) \land \lnot revert \vdash hash = sha256(s)$
+
+Ok. Io a quanto pare ho fatto la versione 15 di questo coso, che vïola **commit-reverts-if-isCommitted**, semplicemente togliendo una require. Vediamo tutte le versioni:
+
+1) Normale
+2) Puoi fare commit dopo reveal e timeout
+3) Puoi fare timeout un blocco in anticipo
+4) Timeout paga il mittente anziché il verificatore
+5) Chiunque può committare
+6) Chiunque può rivelare
+7) Reveal e timeout discommittano
+8) Reveal accetta tutte le stringhe
+9) Puoi committare anche $0 \text{ ETH}$
+10) Reveal paga il verificatore anziché il proprietario
+11) Timeout paga il proprietario anziché il verificatore
+12) Se paghi, reveal cambia l'hash salvato per darti ragione
+13) Se paghi, timeout rende te il verificatore
+14) Se paghi, reveal rende te il proprietario
+15) Puoi committare più volte
+
+Tutte le proprietà sono falsificate almeno una volta. Aggiungerei versioni che revertano sempre e che non fanno niente e cose del genere. 16 reverta sempre, 17 non fa niente ma non reverta, 18 non fa niente e reverta quando dovrebbe.
+
+Vediamo come fare la ground truth. Se c'è $\lnot revert$ nelle assunzioni o nell'antecedente, 16 è vera di sicuro. 
+
+Ok facendo la ground truth vedo che lì c'è una proprietà non presente altrove, **commit-not-revert-isCommitted-was-false**, che immagino sia $commit \vdash \lnot isCommitted \to \lnot revert$. È falsa solo in v15, ma v15 l'ho fatta io, che succede. Aspetta, questa proprietà non c'era prima che arrivassi io, cos'ho fatto?
+
+????????????????????????????????????????
+
+Il 13 ottobre io ho aggiunto questa cosa alla ground truth. Il 23 luglio Monti l'ha aggiunta al readme e ha fatto un test Certora, ma era già nello skeleton. Poi il 24 luglio l'ha tolta dallo skeleton. Non so perché io ce l'abbia allora. Va be' la tolgo.
+
+Che casino lol.
+
+Va be' direi che, capito tutto questo, è il momento di eseguire tutti i test su queste mie nuove versioni.
+
+Visto che non l'ho mai fatto credo, metto il comando qui visto che me lo sto preparando.
+
+```bash
+python run_solcmc_simple.py --contract htlc --version 16 --timeout 120
+python run_certora_simple.py --contract htlc --version 16
+python run_solcmc_simple.py --contract htlc --version 17 --timeout 120
+python run_certora_simple.py --contract htlc --version 17
+python run_solcmc_simple.py --contract htlc --version 18 --timeout 120
+python run_certora_simple.py --contract htlc --version 18
+creaReadme htlc
+```
+
+Vedo degli `ERR` che non capisco, lo lascio girare.
+
+Ah vedo che non sono sicurissimo di come ho fatto la ground truth perché certe cose diventano difficili da definire quando faccio il coglione e faccio revertare tutto, e che i test Certora non sono mai stati eseguiti. Tocca eseguirli adesso. Vedo quanto ci mette la versione 1. Dalle 16:06 alle 16:08. Dai ci sta.
+
+|         | balance-only-increases-on-commit | cant-uncommit                    | commit-auth-owner                | commit-minimum                   | commit-reverts-if-isCommitted    | commit-twice-reverts             | contract-balance-is-commit-value | owner-immutable                  | reveal-auth-owner                | reveal-timeout-after-isCommitted | reveal-transfer                  | reveal-zeroes-balance            | sent-le-init-bal                 | timeout-deadline                 | timeout-transfer                 | timeout-zeroes-balance           | verifier-immutable               | wrong-preimage-reverts           |
+|---------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------------|
+| **v1** | FP!                              | FN                               | TP!                              | TP!                              | TP!                              | FN                               | TN                               | FN                               | FN                               | FN                               | TN                               | TN                               | ERR                              | TP!                              | FP!                              | TN                               | FN                               | FN                               |
+
+Alla grande.
+
+Fatto questo contratto, se tutto va bene, avrò aggiustato 5 contratti su 12 che dovevo fare.
+
+Quelli dopo che farei sono Lottery, Social Recovery Wallet, Deposit e Deposit.
+
+E dopo rimarrebbe Zerotoken Bank, che è il grande boss. Insieme a Call Wrapper che mi sembra stranamente semplice e mi fa paura, AMM che mi faceva paura un tempo e non so perché, e basta...?
+
+Diciamo mezzo mese per capire il tirocinio, un mesetto per fare cinque contratti, quindi mi aspettano un mesetto per altri quattro contratti, e due mesi per gli ultimi tre strani.
+
+Vedendo i risultati di HTLC, vedo cosa fare.
+
+SolCMC
+* **balance-only-increases-on-commit**, **cant-uncommit**, **owner-immutable**, **sent-le-init-bal** e **verifier-immutable** hanno problemi nei test, danno `ERR` e a primo sguardo l'errore mi sembra stupido
+* **commit-reverts-if-isCommitted** dà FP su v17 che non reverta mai, e in più non capisco come hanno fatto il test
+* **commit-twice-reverts** FN su v7
+* **reveal-timeout-after-isCommitted** FP su v7
+* **reveal-transfer**.sol e **reveal-zeroes-balance** FP su v18 e non credo sia colpa mia
+* **timeout-transfer** FP su v17 e v18 e non so se è colpa mia
+* **timeout-zeroes-balance** FP su v18
+
+Certora è un puttanaio. Prima faccio una lista di quelli dove la maggior parte sono falsi
+* **balance-only-increases-on-commit**, per `selfdestruct`
+* **cant-uncommit**, ???????
+* **commit-twice-reverts** in realtà solo metà, che strano
+* **owner-immutable** ?????????????????
+* **reveal-auth-owner** com'è possibile, non li ho neanche fatti io
+* **reveal-timeout-after-isCommitted**
+* **timeout-transfer**
+* **verifier-immutable**
+* **wrong-preimage-reverts**
+
+Ora invece vediamo quelli con una quantità più interessante di falsi
+* **commit-minimum** FN su v3 e v4
+* **reveal-transfer** FP su v8 e v16
+
+Tra l'altro non avevo messo la ground truth per v15, cosa stavo pensando.
+
+Ci sarà molto da fare, così almeno posso continuare a rimandare il momento in cui dovrò chiedere informazioni a Bartoletti per fare la PR.
