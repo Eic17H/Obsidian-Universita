@@ -1013,3 +1013,240 @@ Quindi... Cosa rimane di falso con Certora?
 
 Comunque un grande miglioramento.
 
+### 2 novm
+
+**wrong-preimage-reverts**, non so perché prima non andasse. Prima richiedeva che la preimmagine fosse sbagliata e asseriva che reveal revertisse, $hashing(s)\neq hash \vdash reveal \to revert$, ora l'ho resa più simile alla descrizione in inglese, $reveal \vdash \lnot revert \to hashing(s) \neq hash$ e funziona.
+
+Falso positivo su v12. Ed è perché leggo l'hash dopo aver fatto reveal. `hash` è un `bytes32`. La leggo prima, ed è comunque negativa. Ok ho capito perché, dice "committed hash", quindi la devo committare dentro il test.
+
+Risposta finale:
+```CVL
+bool correctPreimage = (hashing(e, s) == hash);
+commit(e, hash);
+reveal(e, s);
+assert correctPreimage;
+```
+
+Non copio l'intero codice perché la licenza è *GPL-3.0-only* e non ricordo come funzioni, quindi scrivo del codice incompleto con logica equivalente.
+
+Per quella cosa della lunghezza della stringa, ho provato a fare così:
+
+```CVL
+mathint passString;
+
+if (passString == 0) {
+	f(e, args);
+} else if (passString == 1) {
+	f(e, s);
+} else if (passString == 2) {
+	f(e, args, s);
+} else {
+	f(e, s, args);
+}
+```
+
+Però al generico `method f` puoi passare solo un `env` e un `calldataarg`.
+
+Vediamo **commit-minimum**. Quando chiami `commit` devi pagare almeno `fee`. Il test semplicemente committa e poi asserisce che il valore sia almeno `fee`. Ok c'è un errore nel codice di v3, probabilmente copiato da una versione vecchia di v1: il check confronta col letterale `1 ether` anziché con la variabile `fee`. Sì infatti 5 mesi fa era così anche su v1. Ok semplice.
+
+Ultima, **sent-init-le-bal**. Codice orrendo, non perché è fatto male ma perché è molto diverso dal solito, quasi alieno. Ok dà `ERR` perché è troppo lenta ma non passa neanche. Vedo molti ghost quindi credo sia un problema di havoc.
+
+Io copio la risposta di Copilot, poi ci penserò:
+
+> This is a **real counterexample reported by the prover**, not a Solidity compiler error or a prover crash. The constructor/base check passes; the failure is in the **induction step**: the prover checks whether every state satisfying your invariant stays within it after a method call.
+> 
+> The invariant in `sent-le-init-bal.spec` is too weak to prove that:
+> 
+> - Its `init_state` axioms set the ghosts to zero initially, but the induction step does not assume every candidate pre-state is reachable from that initial state. It assumes only `total_sent <= _deposited`.
+> - That condition allows a candidate pre-state with `isCommitted == false` but `total_sent == 8`.
+> - In the `commit` counterexample, `commit` accepts `msg.value == 3` and the HTLC balance becomes `6`. The `isCommitted` hook then sets `_deposited` to `6`, while `total_sent` remains `8`. So the post-state violates `8 <= 6`.
+> 
+> The reveal and timeout reports show the same underlying weakness: their candidate pre-states contain ghost values that are inconsistent with the intended protocol history. For example, the reveal trace starts with `total_sent == -1`. Those values aren’t reachable from the zero-initialized ghosts, but the current invariant doesn’t rule them out.
+> 
+> To prove the intended property, strengthen the invariant to capture the protocol phase and the ghosts’ valid ranges—for example, that `total_sent` is nonnegative, and that before commitment both ghosts are zero. Also check that the `CALL` hook counts only the transfers you intend to include.
+
+Sto per finire anche l'ultimo contratto, devo pensare a cosa devo chiedere a Bartoletti.
+
+* Definizione di strictly increasing e lineare per Vesting Wallet
+* No receive after deadline mal definita
+* Deadlock definito formalmente in modo che non corrisponde a una nozione normale di deadlock, e qualcosa con v6 (non capisco i miei appunti, da rivedere)
+* Non c'entra ma donate-not-dec-donation è da rivedere
+
+Ah ok sono davvero poche cose.
+
+Vediamo SolCMC.
+
+Tutto `ERR`:
+* **balance-only-increases-on-commit**
+* **cant-uncommit**
+* **owner-immutable**
+* **sent-le-init-bal**
+* **verifier-immutable**
+
+Pochi falsi:
+* **commit-reverts-if-isCommitted** Pv17
+* **commit-twice-reverts** Nv7
+* **reveal-timeout-after-isCommitted** Pv7
+* **reveal-transfer** Pv18
+* **reveal-zeroes-balance** Pv18
+* **timeout-transfer** Pv17v18
+* **timeout-zeroes-balance** Pv18
+
+v17 e v18 li ho fatti apposta per avere falsi positivi. È più interessante che v7 abbia un falso positivo e un falso negativo. `reveal()` e `timeout()` discommittano. **reveal-timeout-after-isCommitted** è semplice da correggere, basta leggere `isCommitted` prima di chiamare il metodo. Ah è già così. Problema di ground truth?
+
+Inglese:
+> `reveal()` and `timeout()` can only be successfully called if contract is in a committed state
+
+SolCMC:
+> $(reveal \lor timeout) \land \lnot revert \to \lnot \lnot isCommitted_{before}$
+
+Certora:
+
+> $(reveal \lor timeout) \land \lnot revert \to isCommitted_{after}$
+
+Ecco qui la fregatura. Eccola qui.
+
+E qui c'è da chiedere a Bartoletti. Perché in inglese mi sembra che `isCommitted` vada letta prima, ed è ciò che fa SolCMC, ma Certora e la ground truth la vogliono letta dopo.
+
+Vediamo l'altra. Ok anche qui ambiguità in inglese immagino, "any immediate \[sic\] following calls to `commit()` must revert". Quindi vanno fatte di fila. Ma il test SolCMC permette anche di avere due chiamate non consecutive. Ma "immediately following" cosa significa?
+
+Ok, se vediamo tutte le proprietà, vediamo che c'è sia **commit-revert-if-isCommitted** che non specifica "immediately" che **commit-twice-reverts**, che specifica "immediately". Quindi immagino che debbano essere di fila. Peccato, mi piaceva questo codice. Vedo se posso mettere una preghost che si applica a tutti i metodi.
+
+Ok vedo che non esiste documentazione pratica di SolCMC. Ho trovato solo un pdf che spiega il lato formale, ma ho fatto CTRL+F `preghost` e non c'era. Cerco nella documentazione di Solidity. Nulla. Copilot. Sembra non si possa. Addio codice carino.
+
+La cosa più semplice che mi viene in mente.
+
+```Solidity
+function invariant() public view {
+    commit();
+    commit();
+    assert(false);
+}
+```
+
+Ok falso positivo su v17 ma ok tanto quello è strano, ora stacco.
+
+Vediamo gli ERR. **balance-only-increases-on-commit**. Vedo della sintassi carina: `msg.sig` è la signature del metodo del messaggio, `this.commit.selector` è la signature di `commit()`, e le puoi confrontare per vedere se il metodo chiamato è quello lì. Ma perché ERR? Figo non ha senso. Devo modificare il parser mi sa. Anzi no vedo un `/// @custom:invariant` che non ho mai visto, provo a toglierlo. Nop ok peggio. No non capisco come modificare il parser.
+
+Ah.
+
+```
+$ python run_solcmc_simple.py --contract htlc --version 1 --property balance-only-increases-on-commit
+
+Using z3 as backend SMT-solver:
+Compiler run successful. No output generated.
+
+../contracts/htlc/solcmc/build/contracts/Htlc_balance-only-increases-on-commit_v1.sol: ERR
+
+Using eld as backend SMT-solver:
+Compiler run successful. No output generated.
+
+../contracts/htlc/solcmc/build/contracts/Htlc_balance-only-increases-on-commit_v1.sol: ERR
+```
+
+Ok il problema era che il test stava usando una funzione interna come invariante, segnata come `/// @custom:invariant`, con un assert dentro, ma non veniva mai eseguita e non faceva nulla. Ho messo gli assert nel postghost. Ho anche provato 300 strategie diverse e o dà positivo a tutto o negativo a tutto.
+
+Ah ok no falliscono perché `selfdestruct` ovviamente. Mi accontento.
+
+Immagino che **cant-uncommit** abbia lo stesso problema. Sì, un'invariant segnata come interna, basta metterla pubblica. E le altre due.
+
+Ok, carino, i preghost e postghost hanno accesso alle variabili dei metodi, mentre un'invariant no.
+
+Situazione:
+
+* v16, v17 e v18 hanno falsi positivi dove te l'aspetti.
+* **commit-twice-reverts** FPv15 è molto strano, FPv2 non capisco se è normale
+
+Ah, fine, ok.
+
+???????? Perché **sent-le-init-bal**.spec dà `ERR` su tutto? Timeout. Ah certo, non capisco nulla di questo codice.
+
+```
+'--contracts', './versions', '--specs', './certora/sent-le-init-bal.spec', '--version', '19', '--output', './certora']
+ERROR:root:WARNING: 'wait_for_results' has no effect in local tool runs
+WARNING: Build cache is used with a local certora-cli script version. Beware of false hits and unexpected behaviors!
+Start Mon Nov 02 23:02:42 CET 2026
+The scene contains 1 contracts:
+Htlc : 0xce4604a0000000000000000000000001
+Running initial transformations
+Has CVL checks.
+Checking CVL certora/sent-le-init-bal.spec for contract Htlc
+Unrolling loops 1 time, unwinding condition is asserted
+Verified: inv-Induction base: After the constructor
+Violated: inv-Using general requirements-timeout()
+Violated: inv-Using general requirements-commit(bytes32)
+Violated: inv-Using general requirements-reveal(string)
+Error: Timed out waiting for background tasks:
+    
+Done 0m
+Compiling versions/Htlc_v19.sol...
+Compiling versions/Htlc_v19.sol to expose internal function information and local variables...
+Verifier run command:
+ java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_02_23_02_39_263972f44c
+ERROR: Execution of command "java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_02_23_02_39_263972f44c" terminated with exitcode 100.
+CRITICAL: [ForkJoinPool-1-worker-6] ERROR ALWAYS - Timed out waiting for background tasks:
+CRITICAL:     
+
+Certora Prover run failed (code 1)
+```
+
+Allora. Ci sono due variabili ghost, una per i soldi depositati e una per i soldi inviati, inizializzate a $0$. Ad ogni chiamata, i soldi inviati vengono incrementati del valore del messaggio. Vedo una cosa strana:
+
+```CVL
+hook Sstore isCommitted bool newVal (bool oldVal) {
+    if (newVal && !oldVal) {
+        _deposited = to_mathint(nativeBalances[currentContract]);
+    }
+}
+```
+
+Non ho modo di capire cosa è una keyword e cosa no, quindi posso solo sperare che faccia esattamente quello che sembra: la variabile dei soldi depositati è sempre uguale al bilancio del contratto.
+
+E poi c'è un'invariante, che richiede che il totale dei soldi inviati siano meno del bilancio.
+
+Ahhh ok. Quel `newVal` e `oldVal` significano "la variabile sta venendo assegnata" e "la variabile conteneva già un valore". Cioè quell'hook si attiva quando la variabile viene assegnata per la prima volta. Ah no quella è `isCommitted`, quindi niente quello che dicevo non ha senso. Questo hook si attiva quando `isCommitted` viene assegnata, `oldVal` è il valore prima dell'assegnamento e `newVal` è il valore dopo l'assegnamento, quello che io scrivevo $isCommitted_{before}$ e $isCommitted_{after}$.
+
+Ora, perché timeouta? Ah che coincidenza, non solo timeouta Certora, il contratto vïola la proprietà col metodo `timeout()`. Immagino per l'havoc.
+
+wrxecgvbyinompinobiytvycrexuiopmuytvy e ora che faccio??????????
+
+Il mio tentativo ovviamente fa schifo, ma vale la pena provare.
+
+```CVL
+rule sent_le_init_bal {
+    method f1;
+    method f2;
+    method f3;
+    calldataarg arg1;
+    calldataarg arg2;
+    calldataarg arg3;
+    env e;
+
+    mathint sent = 0;
+    mathint deposited = 0;
+
+    f1(e,arg1);
+    mathint sent1 = sent + total_sent;
+    f2(e,arg2);
+    mathint sent2 = sent1 + total_sent;
+    f3(e,arg3);
+    mathint sent3 = sent2 + total_sent;
+    deposited = _deposited;
+
+    assert sent3 <= deposited;
+}
+```
+
+Beh, il test sta andando. Da molto. Vediamo i log- santi numi quanti file sono.
+
+![[Pasted image 20261102231946.png]]
+
+Credo siano $O(n^3)$ file dove $n$ è il numero di metodi possibili. Quando di solito sarebbe $O(n)$. Il report ha 14k righe e non ha ancora finito. 1500 file e passa. Ma quindi sono 14k o 1k4 righe? 14k, avevo letto bene. Beh adesso sono 17k. Basta.
+
+Ok, mi tengo l'ERR.
+
+Che brutta esperienza.
+
+> Making the accounting ghosts persistent should address the havoc-related cases; the invariant will also need a condition relating the ghost values to the contract’s commit state
+
+Grazie Copilot non so che farmene, addio basta.
