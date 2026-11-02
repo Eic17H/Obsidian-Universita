@@ -95,7 +95,7 @@ var SemesterCssPlugin = class extends import_obsidian.Plugin {
     if (!file) {
       return;
     }
-    const match = file.path.match(/(?:^|\/)Semestre [12]\/([a-zA-Z]+)\//);
+    const match = file.path.match(/(?:^|\/)Semestre [12]\/([a-zA-Z0-9]+)\//);
     if (!match) {
       return;
     }

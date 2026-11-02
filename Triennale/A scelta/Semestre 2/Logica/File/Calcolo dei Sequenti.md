@@ -1,6 +1,7 @@
 ---
 cssclasses:
 - logica
+icon: sequenti.png
 ---
 [[Calcolo alla Hilbert|Hilbert]] è bello perché è sistematico, si presta bene a dimostrare teoremi metateorici, vedremo nel terzo modulo il teorema di completezza. Nella [[Deduzione Naturale|deduzione naturale]] viene bene lavorare dentro.
 

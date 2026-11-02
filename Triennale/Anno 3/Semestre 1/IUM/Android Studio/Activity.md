@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - ium
+---
 ## Cos'è e come si crea
 
 Il concetto di Activity è fondamentale per lo sviluppo in Android. Concettualmente, un'Activity è la finestra in cui viene visualizzata l'interfaccia grafica.

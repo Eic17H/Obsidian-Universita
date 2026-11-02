@@ -10,19 +10,19 @@ Questo argomento l'abbiamo già visto in realtà molto presto, alle elementari. 
 
 Ovviamente non ripetiamo le elementari. Ci sono dei *falsi amici*, termini che in grammatica significano qualcosa e in logica significano qualcosa di leggermente o significativamente diverso.
 
-Nozione fondamentale: enunciato.
+Nozione fondamentale: ==enunciato==.
 
 ## Enunciati
 
 > Una qualsiasi espressione linguistica a proposito della quale abbia senso chiedersi se è vera o se è falsa.
 
-In grammatica invece, "Che ore sono?" è una proposizione interrogativa, ma non è un enunciato: non ha un valore di verità.
+In grammatica invece, "Che ore sono?" è una proposizione interrogativa, ma non è un enunciato: non ha un ==valore di verità==.
 
-Ci sono espressioni che non sono enunciati per motivi diversi. Per esempio "il padre di Carlo" si usa per riferirsi a un certo individuo, per denotarlo, non per asserire qualcosa. Non è un enunciato perché risponde a un'esigenza linguistica diversa.
+Ci sono espressioni che non sono enunciati per motivi diversi. Per esempio "il padre di Carlo" si usa per riferirsi a un certo individuo, per denotarlo, non per ==asserire== qualcosa. Non è un enunciato perché risponde a un'esigenza linguistica diversa.
 
 Non stiamo dicendo che perché un'espressione sia un enunciato ci debba essere un metodo per *conoscerne* il valore di verità. "In questo esatto momento, in Sardegna, vive un numero dispari di gatti". Potrebbe essere vero, potrebbe essere falso, ma nessuna persona lo sa.
 
-Ci sono enunciati che contengono termini vaghi, molto comuni nel linguaggio naturale. "Giovanni è alto". Supponiamo che Giovanni abbia un'altezza di 1.78m, che lo pone in qualche modo in una fascia che pone noi parlanti della lingua italiana in dubbio. Questo non significa che "Giovanni è alto" non sia un enunciato, significa solo che la vaghezza del predicato "alto", significa solo che anche conoscendo l'altezza di Giovanni alla precisione di un millimetro e anche se fossimo parlanti perfettamente competenti della lingua italiana, potremmo essere incerti riguardo parole elgantissime che ho dimenticato e non voglio dire cazzate quindi finisco qui.
+Ci sono enunciati che contengono termini [[Ambiguo, vago, relativo|vaghi]], molto comuni nel linguaggio naturale. "Giovanni è alto". Supponiamo che Giovanni abbia un'altezza di 1.78m, che lo pone in qualche modo in una fascia che pone noi parlanti della lingua italiana in dubbio. Questo non significa che "Giovanni è alto" non sia un enunciato, significa solo che la vaghezza del predicato "alto", significa solo che anche conoscendo l'altezza di Giovanni alla precisione di un millimetro e anche se fossimo parlanti perfettamente competenti della lingua italiana, potremmo essere incerti riguardo parole elgantissime che ho dimenticato e non voglio dire cazzate quindi finisco qui.
 
 Ci sono due categorie di enunciato: semplice e composto.
 

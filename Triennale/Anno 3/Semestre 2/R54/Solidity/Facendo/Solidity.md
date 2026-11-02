@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 Vediamo un contratto e capiamo cosa fa. Per la licenza, includo il link all'[originale](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/finance/VestingWallet.sol).
 
 ```Solidity

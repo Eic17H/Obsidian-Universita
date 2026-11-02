@@ -1,5 +1,7 @@
 ---
 icon: Certora.jpg
+cssclasses:
+  - r54
 ---
 ## Cos'è
 

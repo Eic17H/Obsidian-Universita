@@ -4,11 +4,11 @@ cssclasses:
 ---
 [[Gauss con pivoting|Versione con pivoting]]
 
-Teoria: [[Gauss]]
+[[Gauss|Teoria]]
 
 L'algoritmo di Gauss permette di trasformare una qualunque matrice in una matrice triangolare superiore, in modo tale che i sistemi associati alle due matrici abbiano la stessa soluzione, cioè le matrici sono equivalenti.
 
-Si annullano tutti gli elementi sotto la diagonale. Per farlo, si sottrae dalla riga che si sta modificando un'altra riga, moltiplicata per un certo coefficiente $m$. Il coefficiente è scelto in modo tale che l'elemento non nullo più a sinistra si annulli, quindi è il rapporto tra l'elemento non nullo più a sinistra delle due righe.
+Si annullano tutti gli elementi sotto la diagonale. Per farlo, dalla riga che si sta modificando si sottrae un'altra riga, moltiplicata per un certo coefficiente $m$. Il coefficiente è scelto in modo tale da annullare l'elemento non nullo più a sinistra, quindi è il rapporto tra quell'elemento e quello corrispondente nell'altra riga.
 
 ```MatLab
 function [U,b] = gauss(A,b)

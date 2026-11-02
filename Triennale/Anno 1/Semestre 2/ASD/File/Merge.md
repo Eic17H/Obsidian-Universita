@@ -6,6 +6,8 @@ Un algoritmo che, date due [[Liste ordinate|liste ordinate]], restituisce una li
 
 Trattiamo le liste come [[Code|code]]: confrontiamo le teste delle due liste in input, rimuoviamo l'elemento minore tra i due e lo aggiungiamo alla lista in output. Quando una delle due liste è vuota, non c'è più bisogno di fare confronti, quindi mettiamo tutti gli elementi dell'altra lista in quella in output.
 
+La complessità è $O(n)$.
+
 ## Pseudocodice
 
 * Abbiamo una lista $l$ di lunghezza $m$, e una lista $r$ di lunghezza $n$;

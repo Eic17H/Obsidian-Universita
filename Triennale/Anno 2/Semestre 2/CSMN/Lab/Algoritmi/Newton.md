@@ -3,8 +3,6 @@ cssclasses:
   - csmn
 ---
 L'approccio è un po' diverso: si parte da un singolo valore, $x_0$, e lo si aggiorna iterativamente con la formula:$$x^{(k+1)} = x^{(k)} - \dfrac{f(x^{(k)})}{f'(x^{(k)})}$$
-Ci si ferma se l'ordinata è minore della tolleranza, se il valore di $x$ nelle due iterazioni è cambiato poco, o se si è superato il numero massimo di iterazioni.
-
 Ci si ferma se:
 * L'ordinata è minore o uguale alla tolleranza, $f(x)\leqτ$;
 * Il valore di $x$ è cambiato poco nelle ultime due iterazioni, $\dfrac{|x^{(k+1)}-x^{(k)}|}{|x^{(k)}|}\leqτ$;

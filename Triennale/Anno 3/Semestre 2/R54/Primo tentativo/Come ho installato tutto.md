@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - r54
+---
 La soluzione che ha funzionato è stata:
 
 ## Parte facile

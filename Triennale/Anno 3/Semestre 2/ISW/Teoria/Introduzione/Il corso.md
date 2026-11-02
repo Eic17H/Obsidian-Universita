@@ -61,3 +61,5 @@ Progetto:
 I voti restano 18 mesi, ma il professore potrebbe andare in pensione
 
 Non si può rifiutare un voto di teoria >20, <=20 sì dai per la media sì
+
+#hidden

@@ -1,0 +1,20 @@
+{
+  "selectedRagSetting": null,
+  "webSearchEnabled": true,
+  "selectedModel": "gemma-4-26b-a4b-it",
+  "ragSettings": {},
+  "sentPromptHistory": [
+    "Con SolCMC non si possono leggere i bilanci degli altri contratti vero?",
+    "try again",
+    "Con SolCMC non si possono leggere i bilanci degli altri contratti vero?",
+    "Con SolCMC non si possono leggere i bilanci degli altri contratti vero?",
+    "Con SolCMC non si possono leggere i bilanci degli altri contratti vero?",
+    "Com'è che si dice \"infrangere o non rispettare una proprietà\" in questo tirocinio? (cartella R54)"
+  ],
+  "groundingRestrictedChatIds": [
+    "chat_1793390723225_dmjrhou"
+  ],
+  "reasoningEffortByModel": {
+    "gemini-3.8-flash": "high"
+  }
+}

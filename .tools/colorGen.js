@@ -27,7 +27,8 @@ let groups = {
     yellow: ["PR1", "ASD", "SO", "PR2"],
     green: ["BD", "FPW", "IUM"],
     blue: ["FDI", "ALF", "LiP", "Logica"],
-    purple: ["GA", "IP"]
+    yellow2: ["GA", "IP"],
+    solidity: ["R54"],
 }
 
 /*
@@ -94,13 +95,22 @@ let colors = {
         maxH: 220,
         signH: -1
     },
-    purple : {
-        minL: 0.5668,
-        maxL: 0.5697,
-        minC: 0.2503,
-        maxC: 0.1801,
-        minH: 285.89,
-        maxH: 302.31,
+    yellow2 : {
+        minL: 0.888,
+        maxL: 0.9094,
+        minC: 0.2055,
+        maxC: 0.1845,
+        minH: 123.43,
+        maxH: 118.58,
+        signH: -1
+    },
+    solidity : {
+        minL: 0.4466,
+        maxL: 0.4466,
+        minC: 0.1117,
+        maxC: 0.1117,
+        minH: 284.81,
+        maxH: 284.81,
         signH: 1
     }
 }
@@ -272,7 +282,7 @@ function rgbArrayToDec(arr) {
 
 
 function oneFolderStringGraph(folder, color) {return `{
-    "query": "path:${folder}/",
+    "query": "[\\"cssclasses\\":\\"${folder.toLowerCase()}\\"]",
     "color": {
     "a": 1,
     "rgb": ${color}

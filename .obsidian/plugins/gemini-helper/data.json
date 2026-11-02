@@ -1,0 +1,11 @@
+{
+  "webSearch": {
+    "provider": "none",
+    "tavilyApiKey": "",
+    "braveApiKey": ""
+  },
+  "googleApiKeyConfigured": true,
+  "apiPlan": "free",
+  "workspaceFolder": ".GeminiHelper",
+  "maxSavedChatHistories": 0
+}

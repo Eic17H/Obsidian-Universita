@@ -1,2 +1,2 @@
-[[Convex hull]]
-[[Magistrale/Anno 1/Semestre 1/DS/Teoria/Convessità]]
+<span class="ga">[[Convex hull|GA: Convex hull]]</span> e convessità nel senso geometrico.
+<span class="ds">[[Magistrale/Anno 1/Semestre 1/DS/Teoria/Convessità|DS: Convessità]]</span> nel senso algebrico.

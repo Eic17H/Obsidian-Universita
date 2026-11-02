@@ -7,7 +7,7 @@ cssclasses:
 Numeri frazionari.
 Noi facciamo così: $0,35610 = 3·10-1+5·10-2+6·10-3$.
 È come le cifre normali, ma gli esponenti sono al contrario.
-Applicando la stessa logica alla base 2: $0,101_2 = 2-1+2-3 = \frac{1}{2} + \frac{1}{8}$.
+Applicando la stessa logica alla base 2: $0,101_2 = 2^{-1}+2^{-3} = \frac{1}{2} + \frac{1}{8}$.
 Chiaramente, non tutti i numeri razionali hanno poche cifre in binario, quindi spesso dovremo approssimare.
 Molti numeri con un numero finito di cifre in base 10 ne hanno infinite in base 2, così come $⅓$, che in base 3 ha due cifre ($0,1_3$), ne ha infinite in base 10.
 $0,2_{10}$ in base 2 è $0,001100110011…$, è periodico.
