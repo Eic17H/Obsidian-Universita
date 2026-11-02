@@ -984,3 +984,32 @@ Ora invece vediamo quelli con una quantità più interessante di falsi
 Tra l'altro non avevo messo la ground truth per v15, cosa stavo pensando.
 
 Ci sarà molto da fare, così almeno posso continuare a rimandare il momento in cui dovrò chiedere informazioni a Bartoletti per fare la PR.
+
+Vediamo un po', che faccio.
+
+* **cant-uncommit** fallisce perché considera anche stringhe troppo lunghe per la funzione di hashing.
+* **commit-twice-reverts** era eccessivamente complicata prima, faceva chiamare un metodo qualunque ma poi richiedeva che fosse commit, l'ho resa più semplice e funziona.
+* **owner-immutable** stessa cosa della stringa lunga
+* **reveal-auth-owner** il metodo colpevole per la cosa della stringa, con `require s.length <= 224;` funziona almeno su v1
+* **reveal-\*** stessa cosa.
+* **timeout-transfer** problema di overflow, corretto $a\geq b+c$ in $a-b \geq c$.
+* **verifier-immutable** stringa lunga
+* **wrong-preimage-reverts** stringa lunga
+
+Per quelli che chiamano il metodo generico `f` anziché un metodo specifico che usa l'hash, devo capire come limitare la lunghezza della stringa, perché in quei casi si usa un parametro generico.
+
+Quindi quelli sarebbero **cant-uncommit**, **owner-immutable** e **verifier-immutable**.
+
+Farò qualcosa che tecnicamente non va bene, cioè cambiare solo per i due metodi esistenti che prendono una stringa in input. Questo significa che una nuova versione che ha un nuovo metodo che prende una stringa in input fallisce il test. Nacque così HTLC v19.
+
+Quindi... Cosa rimane di falso con Certora?
+
+* **balance-only-increases-on-commit** `selfdestruct`
+* **commit-minimum** v3 v4
+* **reveal-transfer** redirect
+* **sent-init-le-bal** ERR
+* **timeout-transfer** `selfdestruct`
+* **wrong-preimage-reverts** era uno di quelli che dovrei aver aggiustato con questa cosa della lunghezza
+
+Comunque un grande miglioramento.
+
