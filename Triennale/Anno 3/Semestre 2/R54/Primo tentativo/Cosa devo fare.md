@@ -1250,3 +1250,21 @@ Che brutta esperienza.
 > Making the accounting ghosts persistent should address the havoc-related cases; the invariant will also need a condition relating the ghost values to the contract’s commit state
 
 Grazie Copilot non so che farmene, addio basta.
+
+### 3 nov
+
+Cosa devo scrivere quindi al professore?
+
+HTLC:
+
+* **reveal-timeout-after-isCommitted** "reveal() and timeout() can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato "committed" prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
+
+Vesting Wallet:
+* Definizione di strictly increasing
+* Definizione di lineare
+
+Crowdfund:
+* No receive after deadline mal definita
+* Deadlock definito formalmente in modo che non corrisponde a una nozione normale di deadlock, e qualcosa con v6 (non capisco i miei appunti, da rivedere)
+
+**donate-not-dec-donation** devo controllarlo io.
