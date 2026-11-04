@@ -5,7 +5,7 @@ cssclasses:
 ## Numeri razionali
 
 Numeri frazionari.
-Noi facciamo così: $0,35610 = 3·10-1+5·10-2+6·10-3$.
+Noi facciamo così: $0,35610 = 3·10^{-1}+5·10-2+6·10-3$.
 È come le cifre normali, ma gli esponenti sono al contrario.
 Applicando la stessa logica alla base 2: $0,101_2 = 2^{-1}+2^{-3} = \frac{1}{2} + \frac{1}{8}$.
 Chiaramente, non tutti i numeri razionali hanno poche cifre in binario, quindi spesso dovremo approssimare.
