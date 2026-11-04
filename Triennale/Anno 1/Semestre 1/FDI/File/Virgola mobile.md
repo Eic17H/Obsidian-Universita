@@ -5,7 +5,7 @@ cssclasses:
 ## Numeri razionali
 
 Numeri frazionari.
-Noi facciamo così: $0,35610 = 3·10-1+5·10-2+6·10-3$.
+Noi facciamo così: $0,35610 = 3·10^{-1}+5·10^{-2}+6·10^{-3}$.
 È come le cifre normali, ma gli esponenti sono al contrario.
 Applicando la stessa logica alla base 2: $0,101_2 = 2^{-1}+2^{-3} = \frac{1}{2} + \frac{1}{8}$.
 Chiaramente, non tutti i numeri razionali hanno poche cifre in binario, quindi spesso dovremo approssimare.
@@ -29,10 +29,10 @@ La soluzione è la rappresentazione in virgola mobile.
 ## Virgola mobile
 
 Coi numeri normali, non scriviamo $1250000000$ e $0,0000125$, scriviamo $125·10^7$ e $125·10^{-7}$.
-Un qualsiasi numero è $±x_{n-1}···x_1x_0,y_{-1}y_{-2}···y_{-m}·B^{±···a_1a_0}$, segno, mantissa ed esponente intero.
+Un qualsiasi numero è $±x_{n-1}\cdots x_1x_0,y_{-1}y_{-2}\cdots y_{-m}·B^{± \cdots a_1a_0}$, segno, mantissa ed esponente intero.
 Lo stesso vale per la codifica digitale dei numeri.
 Vogliamo che la codifica sia univoca. Renderla univoca è il processo di normalizzazione.
-Si normalizza la mantissa. Per esempio a $125·10-7$ si preferisce $0,125·10^{-4}$.
+Si normalizza la mantissa. Per esempio a $125·10^{-7}$ si preferisce $0,125·10^{-4}$.
 Un altro elemento è la polarizzazione dell'esponente. Vedi le slide.
 
 Ragioniamo prima in base 10. Usando 2 cifre per l'esponente andiamo da 00 a 99.
