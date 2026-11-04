@@ -1672,3 +1672,58 @@ Ti dirò, **v9** è più difficile di quanto sembrasse. Nel senso che per tutte 
 Fare la ground truth per tutti è stato molto noioso, alla fine sono arrivato a **v19** e ci ho messo 45 minuti.
 
 Sarà più difficile fare i test, perché la struttura del contratto mi sembra un po' contorta, ma sono solo 5 proprietà, quindi 10 test. Dopo mi scrivo le proprietà in linguaggio semi-formale.
+
+* **no-recov**: $\vdash recovery \to revert$
+* **owner-cannot-change**: $\vdash owner = firstOwner$
+* **recov-fails**: $|\{x\ |\ x \in Guardians \land x.recovery()\}|<threshold \vdash recovery \to revert$
+* **recov-implies-guardian**: $x.recovery() \vdash x \in Guardians$
+* **recov-succeeds**: $|\{x\ |\ x \in Guardians \land x.recovery(newOwner)\}| \geq threshold \vdash (recovery \to \lnot revert) \land owner_{after}=newOwner$
+
+$x \to revert$ si fa come `x(); assert(false);`.
+
+Non so bene perché questa non funzioni:
+```CVL
+invariant owner_cannot_change()
+    currentContract.owner == currentContract._first_owner;
+```
+
+Ok piccolo problema.
+
+```CVL
+invariant recov_implies_guardian(address a)
+    currentContract.guardianToRecovery[a].usedInExecuteRecovery
+    => currentContract.isGuardian[keccak256(
+		currentContract.abi.encodePacked(a)
+	)];
+```
+
+Questa cosa non funziona. Perché? Perché non esiste `abi` in Certora. `abi.encodePacket()` è una cosa per mettere un indirizzo in 20 byte perché sia possibile passarlo a `keccak256()`. E non si può fare in Certora.
+
+E anche **recov-succeeds** non va bene, perché a Certora non piacciono gli array... È ciò che direi se fosse vero. Invece esistono `forall` e `exists`. Per esempio:
+
+```CVL
+require forall uint256 i . i < currentContract.esempio.length =>
+	(currentContract.esempio[i] / 2) * 2 = currentContract.esempio[i];
+```
+
+Significa $\forall i,\ i<|esempio| \to esempio_i /2\times 2 = esempio_i \vdash$.
+
+Comunque non riesco a fare neanche questa perché serve l'hash.
+
+Ok quelli di SolCMC sono già fatti da Franco Sainas.
+
+Piccolo problema, il test SolCMC vuole eseguire `executeRecovery` che però è esterna e quindi non può.
+
+Ci ha messo quasi un'ora e mezza a far girare tutti i test.
+
+Cosa vediamo di brutto? Oltre ai miei errori della ground truth.
+
+SolCMC
+* **recov-implies-guardian** FNv2v14: non so, i guardiani non possono cambiare quindi non capisco perché negativa.
+* **recov-fails** ERR: `external` non gli piace. e se usassi il contratto stesso per chiamarla esternamente? non ha senso.
+* **recov-succeeds** ERR: `external` non gli piace.
+
+Certora:
+* **no-recov** FNv16v17: potrei provare con `assert !currentContract._recovered;`
+* **owner-cannot-change**: dà negativo a tutto
+* **recov-succeeds**: dà negativo a tutto ma so che non funziona
