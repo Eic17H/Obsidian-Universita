@@ -24,7 +24,7 @@ Assunzioni
 * $α\landβ$
 Come facciamo il modus ponens? Eliminazione della conseguenza.
 
-$$\dfrac{\dfrac{α\landβ}{α}ΛE(a) \enspace\enspace\enspace α\rightarrow(β\rightarrowγ)}{β\rightarrowγ}\rightarrow E$$Siamo in logica classica, molto semplicemente riuso la stessa assunzione più volte$$\dfrac{\dfrac{\dfrac{\dfrac{[α\landβ]_1}{β}ΛE(b) \enspace\enspace\enspace \dfrac{\dfrac{[α\landβ]_1}{α}ΛE(a) \enspace\enspace\enspace [α\rightarrow(β\rightarrowγ)]_2}{β\rightarrowγ}\rightarrow E}{γ}\rightarrow E}{α\landβ\rightarrowγ}\rightarrow I,1}{α\rightarrow(β\rightarrowγ))\rightarrow((α\landβ\rightarrowγ)}\rightarrow I,2$$
+$$\dfrac{\dfrac{α\landβ}{α}ΛE(a) \enspace\enspace\enspace α\rightarrow(β\rightarrowγ)}{β\rightarrowγ}\rightarrow E$$Siamo in logica classica, molto semplicemente riuso la stessa assunzione più volte$$\dfrac{\dfrac{\dfrac{\dfrac{[α\landβ]_1}{β}ΛE(b) \enspace\enspace\enspace \dfrac{\dfrac{[α\landβ]_1}{α}ΛE(a) \enspace\enspace\enspace [α\rightarrow(β\rightarrowγ)]_2}{β\rightarrowγ}\rightarrow E}{γ}\rightarrow E}{α\landβ\rightarrowγ}\rightarrow I,1}{(α\rightarrow(β\rightarrowγ))\rightarrow(α\landβ\rightarrowγ)}\rightarrow I,2$$
 
 Sappiamo adesso notare che questa derivazione non è valida nella logica lineare.
 
