@@ -12,7 +12,7 @@ Quasi sempre, ci sono almeno quattro tipi di tipi differenti tipi:
 * Caratteri.
 
 ### Booleani
-Il tipo booleano è un tipo discreto (enumerabile), con solo due valori possibili, <span class="green">vero</span> e <span class="red">falso</span>.
+Il tipo booleano è un tipo discreto (enumerabile), con solo due valori possibili, <span class="green">vero</span> e <span class="red">falso</span>. ==🟢vero==
 Per rappresentare un booleano basterebbe un solo bit, ma per come sono fatti i computer è difficile usare un solo bit in un byte, quindi si usa comunque un byte intero.
 Il C è strano, di base non ha un tipo booleano (c’è dal C99, ma molti non lo usano).
 Tra l’altro, avete notato che il tipo booleano in C è diverso dagli altri? È `_Bool`.
