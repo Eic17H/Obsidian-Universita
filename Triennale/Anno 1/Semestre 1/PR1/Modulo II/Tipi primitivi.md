@@ -2,7 +2,7 @@
 cssclasses: pr1
 ---
 Abbiamo visto le variabili, che contengono numeri. In realtà questo non è del tutto vero.
-
+#damettereinordine
 ```
     /**
      * I bit di rappresentazione hanno degli standard per i minimi.

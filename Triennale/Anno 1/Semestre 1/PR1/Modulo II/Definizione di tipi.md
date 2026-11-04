@@ -1,6 +1,7 @@
 ---
 cssclasses: pr1
 ---
+#damettereinordine
 ```
 /**
      * DEFINIZIONE NUOVI TIPI
