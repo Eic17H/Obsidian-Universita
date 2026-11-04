@@ -1,6 +1,8 @@
 ---
 cssclasses: pr1
 ---
+#damettereinordine
+
 Scambio, booleani, media, 44 gatti, ++, priorità, undefined behavior
 
 ## Undefined behavior
