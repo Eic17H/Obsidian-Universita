@@ -1256,15 +1256,381 @@ Grazie Copilot non so che farmene, addio basta.
 Cosa devo scrivere quindi al professore?
 
 HTLC:
-
-* **reveal-timeout-after-isCommitted** "reveal() and timeout() can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato "committed" prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
+* **reveal-timeout-after-isCommitted**: "`reveal()` and `timeout()` can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato "committed" prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
 
 Vesting Wallet:
-* Definizione di strictly increasing
-* Definizione di lineare
+* **rel-strict-incr**: "\[...\] the releasable amount is strictly increasing \[...\]" - Una funzione da interi a interi è sempre una funzione costante a tratti, poiché i risultati delle divisioni vengono troncati, perciò esistono coefficienti angolari che fanno sì che due valori diversi in input risultino nello stesso output (perché se la funzione fosse continua, la differenza negli output sarebbe minore di 1). Tali funzioni dovrebbero essere considerate strettamente crescenti come secondo la ground truth? Ho scritto un test che compensa il problema se la funzione è lineare.
+* **rel-grows-linear**: "releasable grows linearly \[...\]: two successful consequent calls to `releasable` differ by c\*t, where t is the timestamp difference between the two calls, and c is a fixed constant for the contract" - Stesso problema, anche qui il mio test compensa il troncamento con del margine di errore e corrisponde alla ground truth, dovrei usare la definizione esatta o accettare del margine di errore?
 
 Crowdfund:
-* No receive after deadline mal definita
 * Deadlock definito formalmente in modo che non corrisponde a una nozione normale di deadlock, e qualcosa con v6 (non capisco i miei appunti, da rivedere)
+* **no-deadlock** "at least one of the main functions (donate, withdraw, reclaim) must not revert if the contract has a balance and the caller has made a donation." - 
+* No aspetta non ho capito che problema c'è con questa. Ok è una definizione strana di deadlock (non lo considererei deadlock se l'owner può sbloccare il contratto) ma non sono fatti miei.
 
 **donate-not-dec-donation** devo controllarlo io.
+
+Mi ero segnato anche di controllare **no-receive-after-deadline** ma mi sembra vada bene.
+
+Sto scrivendo la parte di **rel-strict-incr**, e vedendo il mio codice, è orrendo!
+
+```CVL
+// Avoid timestamps being so close that releasable1==releasable2 despite the function being strictly increasing.
+// Will not work with function that grow faster than linearly.
+require (balance1+released1) * (timestamp2 - timestamp1) >= duration;
+```
+
+La nuova idea è che, se l'ordinata destra è uguale a quella sinistra, spostiamo l'ascissa destra più a destra, col minor $x$ tale che la $y$ non sia uguale. Ha senso? No. Ha senso solo se la prima $y$ presente ha una differenza di $1$.
+
+Però Certora funziona molto più similmente a un linguaggio funzionale/dichiarativo che imperativo, non posso fare un loop che sposta la $x_2$ a destra finché non va bene. La devo esprimere come si fa tipo in analisi. Quindi, o $x_2$ va bene al primo tentativo, o si prova con un'altra:$$x_2'\ |\ f(x_2')=f(x_1)+1 \land f(x_2'-1)=f(x_1)$$
+Questo approccio non funziona perché avrò sbagliato qualcosa coi tipi. Quindi richiedo che *per ogni* ascissa minore di $x_2'$ la sua ordinata è uguale a quella sinistra.
+
+No no non funziona neanche così. Togliamo che fx2=fx1+1. Neanche. Eppure era un'idea così bella.
+
+Eh ma comunque questo approccio considera valida una step function come quella che ho fatto. E come fai a dire che è una step function e non una funzione trigonometrica molto molto particolare? Non puoi, non esiste questa differenza. Incollo qui il mio codice orrendo e tengo l'altra versione.
+
+```CVL
+    // Naive approach to the rule
+    if(releasable2 > releasable1) assert true;
+    else if(releasable2 < releasable1) assert false;
+    // If they're equal, check if it's because the function isn't strictly increasing or because the timestamps are too close
+    else {
+        mathint balance = balance1;
+        mathint released = released1;
+
+        // If there's a releasable different from releasable1 between timestamp1 and timestamp2, the function isn't strictly increasing
+        env eBetween;
+        mathint tsBetween = eBetween.block.timestamp;
+        require tsBetween > timestamp1;
+        require tsBetween < timestamp2;
+        mathint relBetween = currentContract.releasable(eBetween);
+        assert relBetween == releasable1 && relBetween == releasable2;
+
+        // Find the least timestamp greater than timestamp2 such that its releasable ...
+    }
+```
+
+Quindi ok, sono solo quelle tre proprietà. E che problema c'è?
+
+Quindi è questo:
+
+> Buongiorno, ho dubbi sull'interpretazione di alcune proprietà.
+> 
+> HTLC:
+> * **reveal-timeout-after-isCommitted**: "`reveal()` and `timeout()` can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato "committed" prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
+> 
+> Vesting Wallet:
+> * **rel-strict-incr**: "\[...\] the releasable amount is strictly increasing \[...\]" - Una funzione da interi a interi è sempre una funzione costante a tratti, poiché i risultati delle divisioni vengono troncati, perciò esistono coefficienti angolari che fanno sì che due valori diversi in input risultino nello stesso output (perché se la funzione fosse continua, la differenza negli output sarebbe minore di 1). Tali funzioni dovrebbero essere considerate strettamente crescenti come secondo la ground truth? Ho scritto un test che compensa il problema se la funzione è lineare.
+> * **rel-grows-linear**: "releasable grows linearly \[...\]: two successful consequent calls to `releasable` differ by c\*t, where t is the timestamp difference between the two calls, and c is a fixed constant for the contract" - Stesso problema, anche qui il mio test compensa il troncamento con del margine di errore e corrisponde alla ground truth, dovrei usare la definizione esatta o accettare del margine di errore?
+
+O, in plain text:
+
+```Text
+Buongiorno, ho dubbi sull'interpretazione di alcune proprietà.
+
+HTLC:
+- reveal-timeout-after-isCommitted: "reveal() and timeout() can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato "committed" prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
+
+Vesting Wallet:
+- rel-strict-incr: "[...] the releasable amount is strictly increasing [...]" - Una funzione da interi a interi è sempre una funzione costante a tratti, poiché i risultati delle divisioni vengono troncati, perciò esistono coefficienti angolari che fanno sì che due valori diversi in input risultino nello stesso output (perché se la funzione fosse continua, la differenza negli output sarebbe minore di 1). Tali funzioni dovrebbero essere considerate strettamente crescenti come secondo la ground truth? Ho scritto un test che compensa il problema se la funzione è lineare.
+- rel-grows-linear: "releasable grows linearly [...]: two successful consequent calls to releasable differ by c*t, where t is the timestamp difference between the two calls, and c is a fixed constant for the contract" - Stesso problema, anche qui il mio test compensa il troncamento con del margine di errore e corrisponde alla ground truth, dovrei usare la definizione esatta o accettare del margine di errore?
+```
+
+E niente, poi lo mando.
+
+Adesso direi che quello che rimane da fare è eseguire tutti i test e scrivere i commenti nella ground truth. E magari capire se posso controllare i not-revert con SolCMC perché ho visto un trick carino fatto coi postghost e assert(false).
+
+E mi ha detto che lo studio dei linguaggi e dei tool conta come tempo del tirocinio, quindi dopo aver finito questi cinque contratti e prima di cominciare i prossimi, posso mettere in ordine questi appunti perché sono talmente lunghi che diventa difficile rileggerli. Visto che ci sono anche informazioni false in mezzo.
+
+Poi carino per Escrow, mettere che `instate` ha `!=` anziché `==`.
+
+Quindi, i contratti su cui ho lavorato sono Crowdfund, Escrow, HTLC, Vesting Wallet, e Bet Tokenless. Tengo i loro readme aperti così vedo che test eseguire.
+
+Per prima cosa tutti gli UNK, perlopiù di Z3 perché è lentissimo.
+
+Rimarranno poi gli ERR delle versioni che richiedono di modificare i test perché i parametri formali sono diversi.
+
+```Bash
+python run_solcmc_simple.py --contract crowdfund --version 9 --solver z3 --timeout 300
+creaReadme crowdfund
+python run_solcmc_simple.py --contract crowdfund --property donation-dec-onlyif-reclaim --solver z3 --timeout 300
+creaReadme crowdfund
+python run_solcmc_simple.py --contract crowdfund --property donation-inc-onlyif-donate --solver z3 --timeout 300
+creaReadme crowdfund
+python run_solcmc_simple.py --contract crowdfund --property no-receive-after-deadline --solver z3 --timeout 300
+creaReadme crowdfund
+python run_solcmc_simple.py --contract crowdfund --property reclaim-own-funds --solver z3 --timeout 300
+creaReadme crowdfund
+python run_solcmc_simple.py --contract crowdfund --property wd-empties-balance --solver z3 --timeout 300
+creaReadme crowdfund
+python run_solcmc_simple.py --contract crowdfund --property wd-transfer-to-owner --solver z3 --timeout 300
+creaReadme crowdfund
+```
+
+18:17, si comincia, vediamo quando finisce tutto.
+
+19:20 siamo a **reclaim-own-funds**, tutto inutile tra l'altro perché è ancora pieno di UNK.
+
+Ho capito che gli altri contratti li testo con z3 a 30 secondi e poi con eldarica per farlo davvero.
+
+Per risolvere il problema delle versioni che hanno metodi nuovi che da SolCMC non sono visibili, ho provato a usare preghost e postghost, ma non funziona.
+
+```Solidity
+/// @custom:ghost
+address user;
+
+/// @custom:preghost function donate
+uint donation_prev = donation[user];
+/// @custom:postghost function donate
+uint donation_next = donation[user];
+assert (donation_next >= donation_prev);
+
+/// @custom:preghost function withdraw
+uint donation_prev = donation[user];
+/// @custom:postghost function withdraw
+uint donation_next = donation[user];
+assert (donation_next >= donation_prev);
+
+/// @custom:preghost function reclaim
+uint donation_prev = donation[user];
+/// @custom:postghost function reclaim
+uint donation_next = donation[user];
+assert (donation_next >= donation_prev || msg.sender);
+
+/// @custom:preghost function clawback
+uint donation_prev = donation[user];
+/// @custom:postghost function clawback
+uint donation_next = donation[user];
+assert (donation_next >= donation_prev);
+
+function invariant(address _user) public payable {
+    user = _user;
+}
+```
+
+```
+ERROR:root:Preghost injection failed: ../contracts/crowdfund/solcmc/donation-dec-onlyif-reclaim.sol: ../contracts/crowdfund/versions/Crowdfund_v14.sol: function clawback.
+```
+
+..........
+
+Hai presente quando ho messo view a tutto? Ecco c'era un motivo se non c'era.
+
+```
+   |
+82 |             arbitrate(dst);
+   |             ^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v14.sol:84:13:
+   |
+84 |             redeem();
+   |             ^^^^^^^^
+
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_redeem-send_v13.sol:78:9:
+   |
+78 |         redeem();
+   |         ^^^^^^^^
+
+
+ERROR:root:Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_redeem-send_v13.sol:78:9:
+   |
+78 |         redeem();
+   |         ^^^^^^^^
+
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:69:13:
+   |
+69 |             approve_payment();
+   |             ^^^^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:71:13:
+   |
+71 |             refund();
+   |             ^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:73:13:
+   |
+73 |             open_dispute();
+   |             ^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:75:13:
+   |
+75 |             arbitrate(dst);
+   |             ^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:77:13:
+   |
+77 |             redeem();
+   |             ^^^^^^^^
+
+
+ERROR:root:Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:69:13:
+   |
+69 |             approve_payment();
+   |             ^^^^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:71:13:
+   |
+71 |             refund();
+   |             ^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:73:13:
+   |
+73 |             open_dispute();
+   |             ^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:75:13:
+   |
+75 |             arbitrate(dst);
+   |             ^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-agree_v11.sol:77:13:
+   |
+77 |             redeem();
+   |             ^^^^^^^^
+
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_redeem-send_v1.sol:75:9:
+   |
+75 |         redeem();
+   |         ^^^^^^^^
+
+
+ERROR:root:Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_redeem-send_v1.sol:75:9:
+   |
+75 |         redeem();
+   |         ^^^^^^^^
+
+
+Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_dispute-if-agree_v6.sol:71:24:
+   |
+71 |     function invariant(uint f) public view {
+   |                        ^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_dispute-if-agree_v6.sol:78:9:
+   |
+78 |         open_dispute();
+   |         ^^^^^^^^^^^^^^
+
+
+ERROR:root:Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_dispute-if-agree_v6.sol:71:24:
+   |
+71 |     function invariant(uint f) public view {
+   |                        ^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_dispute-if-agree_v6.sol:78:9:
+   |
+78 |         open_dispute();
+   |         ^^^^^^^^^^^^^^
+
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_redeem-send_v10.sol:77:9:
+   |
+77 |         redeem();
+   |         ^^^^^^^^
+
+
+ERROR:root:Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_redeem-send_v10.sol:77:9:
+   |
+77 |         redeem();
+   |         ^^^^^^^^
+
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:74:13:
+   |
+74 |             approve_payment();
+   |             ^^^^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:76:13:
+   |
+76 |             refund();
+   |             ^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:78:13:
+   |
+78 |             open_dispute();
+   |             ^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:80:13:
+   |
+80 |             arbitrate(dst);
+   |             ^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:82:13:
+   |
+82 |             redeem();
+   |             ^^^^^^^^
+
+
+ERROR:root:Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:74:13:
+   |
+74 |             approve_payment();
+   |             ^^^^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:76:13:
+   |
+76 |             refund();
+   |             ^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:78:13:
+   |
+78 |             open_dispute();
+   |             ^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:80:13:
+   |
+80 |             arbitrate(dst);
+   |             ^^^^^^^^^^^^^^
+
+Error: Function cannot be declared as view because this expression (potentially) modifies the state.
+  --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/escrow/solcmc/build/contracts/Escrow_auth-in-dispute_v4.sol:82:13:
+   |
+82 |             redeem();
+   |             ^^^^^^^^
+```
+
+Ok ho aggiustato anche le ground truth. C'è un record su cui non sono sicuro, ma in caso se ne occuperà il mio successore.
+
+Ah ma sai che vedendo bene tutto. Nel readme ci sono molti meno contratti che nel progetto intero. Io vedo che Safe ha quasi 2000 righe di codice Solidity, e non credo proprio sia al pari con le specifiche. Io spero di non doverlo toccare. Ha 55 proprietà. Eh?
+
+> NOTE: this file is called ground-truth.csv only for script compatibility, but it DOES NOT REPRESENT the ground truths of the properties, which cannot be reliably determined for this contract. The third entries should hence not be taken into consideration.
+
+Cosa significa... Cioè, è talmente complesso che non lo sanno neanche loro come funziona? Quindi di sicuro non lo devo toccare, ok.
+
+Le altre che non sono nella lista sono Infinifi, Silo Core, e Template (ma va'). Infinifi ha 2411 righe di codice, è bruttissimo, e ha lo stesso warning di Safe. Silo Core ha 7148 righe!!!!!!!!!!!!!!!!!! Ha una sola proprietà. E vedo una cosa bellissima. Ha due versioni. Una è `SiloCore_v1.sol`. L'altra si chiama `Silo_forsev2bohcheck.sol` ed è completamente diversa.
+
+Quindi posso tranquillamente ignorare quelle cose.
+
+Tra l'altro vedo che Bank, che è ciò che devo prendere come esempio, è semplicissimo. Ha 9 righe di corpo vero e proprio. È letteralmente "mi mandi soldi, me lo segno, rivuoi i soldi, te li ridò". Ma ha un sacco di proprietà.
+
+Quindi i piani non cambiano. Domani chiedo a Bartoletti per la PR e mi faccio un'altra branch per lavorare a un altro contratto.
