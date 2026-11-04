@@ -10,19 +10,20 @@ Metterò in ordine entro il parziale del 5 novembre.
 * [[Immagine]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Preprocessing|Preprocessing]]
 * [[Filtri]]
-	* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri puntuali]]
-	* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri spaziali]]
-		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing]]
-		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Sharpening]]
-	* [[Filtri globali]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Rumore]]
+	* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri puntuali|Puntuali]]
+	* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri spaziali|Spaziali]]
+		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing|Smoothing]]
+		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Sharpening|Sharpening]]
+	* [[Filtri globali|Globali]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Rumore|Rumore]]
+* [[Dominio delle frequenze]]
 
 ### Lab
 * [[Rappresentazione delle immagini]]
 * [[Aritmetica delle immagini]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri puntuali]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri puntuali|Filtri puntuali]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali|Filtri spaziali]]
 
 ## Informazioni
 

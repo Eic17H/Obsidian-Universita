@@ -1316,7 +1316,7 @@ Quindi è questo:
 > Buongiorno, ho dubbi sull'interpretazione di alcune proprietà.
 > 
 > HTLC:
-> * **reveal-timeout-after-isCommitted**: "`reveal()` and `timeout()` can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato "committed" prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
+> * **reveal-timeout-after-isCommitted**: "`reveal()` and `timeout()` can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato committed prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
 > 
 > Vesting Wallet:
 > * **rel-strict-incr**: "\[...\] the releasable amount is strictly increasing \[...\]" - Una funzione da interi a interi è sempre una funzione costante a tratti, poiché i risultati delle divisioni vengono troncati, perciò esistono coefficienti angolari che fanno sì che due valori diversi in input risultino nello stesso output (perché se la funzione fosse continua, la differenza negli output sarebbe minore di 1). Tali funzioni dovrebbero essere considerate strettamente crescenti come secondo la ground truth? Ho scritto un test che compensa il problema se la funzione è lineare.
@@ -1328,7 +1328,7 @@ O, in plain text:
 Buongiorno, ho dubbi sull'interpretazione di alcune proprietà.
 
 HTLC:
-- reveal-timeout-after-isCommitted: "reveal() and timeout() can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato "committed" prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
+- reveal-timeout-after-isCommitted: "reveal() and timeout() can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato committed prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
 
 Vesting Wallet:
 - rel-strict-incr: "[...] the releasable amount is strictly increasing [...]" - Una funzione da interi a interi è sempre una funzione costante a tratti, poiché i risultati delle divisioni vengono troncati, perciò esistono coefficienti angolari che fanno sì che due valori diversi in input risultino nello stesso output (perché se la funzione fosse continua, la differenza negli output sarebbe minore di 1). Tali funzioni dovrebbero essere considerate strettamente crescenti come secondo la ground truth? Ho scritto un test che compensa il problema se la funzione è lineare.
@@ -1634,3 +1634,96 @@ Quindi posso tranquillamente ignorare quelle cose.
 Tra l'altro vedo che Bank, che è ciò che devo prendere come esempio, è semplicissimo. Ha 9 righe di corpo vero e proprio. È letteralmente "mi mandi soldi, me lo segno, rivuoi i soldi, te li ridò". Ma ha un sacco di proprietà.
 
 Quindi i piani non cambiano. Domani chiedo a Bartoletti per la PR e mi faccio un'altra branch per lavorare a un altro contratto.
+
+## 4 nov
+
+Quindi, cosa voglio fare adesso? Ho detto Lottery, Social Recovery Wallet, Deposit e Deposit. Lottery ha tantissime proprietà e non ho voglia. I due Deposit sono molto diversi, sono molto semplici, e mi stanno già antipatici. Social Recovery Wallet ha poche proprietà ma 160 righe, comincerei da quello.
+
+Concettualmente, è un salvadanaio. Ci sono due tipi di utente: proprietario e guardiani. Il proprietario ha una password, se la perde i guardiani possono eleggere unanimamente un nuovo utente. Questo salvadanaio non è un salvadanaio, avevo capito male. Anziché usare il proprio conto per fare affari con altri, il proprietario può usare il salvadanaio come tramite, cioè invia comandi al salvadanaio e quello li esegue come se fosse l'utente stesso. Il proprietario può rimuovere guardiani: richiede la rimozione, aspetta tre giorni, dopo tre giorni la può annullare oppure può nominare un sostituto, solo se nomina un sostituto il guardiano viene rimosso e sostituito.
+
+Le proprietà sono:
+* **no-recov**: Il recupero è impossibile (falso).
+* **owner-cannot-change**: Il proprietario non può essere cambiato (falso).
+* **recov-fails**: Il recupero fallisce se non partecipano abbastanza guardiani.
+* **recov-implies-guardian**: Se qualcuno ha partecipato a un recupero, è un guardiano (falso, perché può aver partecipato e poi essere stato rimosso).
+* **recov-succeeds**: Se hanno partecipato abbastanza guardiani, il recupero ha funzionato e il nuovo proprietario è quello scelto.
+
+Per ora le versioni sono:
+* **v1**: Normale.
+* **v2**: Non si possono togliere guardiani.
+
+Farei:
+* **v3**: Non si può cambiare proprietario.
+* **v4**: Quando si prova a cambiare proprietario, il nuovo proprietario è il guardiano che ha proposto il voto.
+* **v5**: Quando si prova a cambiare proprietario, se il proprietario corrente non è l'originale, il nuovo proprietario è l'originale.
+* **v6**: Qualunque indirizzo è considerato guardiano.
+* **v7**: Qualunque indirizzo è considerato proprietario.
+* **v8**: Il proprietario è sempre un guardiano.
+* **v9**: Quando si cambia proprietario, il vecchio proprietario sostituisce il guardiano che ha proposto il voto.
+* **v10**: Quando si propone di cambiare proprietario, il guardiano che ha proposto il voto diventa il proprietario, e l'indirizzo scelto come nuovo proprietario prende il suo posto.
+* **v11**: Il recupero non richiede un numero minimo di guardiani.
+* **v12**: Il recupero ha un numero massimo di guardiani.
+* **v13**: Il recupero fallisce sempre.
+
+I test SolCMC sono tremendi, usano la vecchia nomenclatura per le proprietà che le numera e basta, e sono presenti tante versioni per ogni test (a che ci serve Git, no?). Non ci sono test Certora. Ah no ok i test SolCMC sono di Franco Sainas, che è il primo dev di questo progetto, quindi va bene dai, è roba vecchia. I test sono lunghissimi, cos'è. Ah mi sa che contengono il contratto in sé, perché risalgono a prima dello script Python.
+
+Ti dirò, **v9** è più difficile di quanto sembrasse. Nel senso che per tutte le altre ci ho messo due minuti e per questa cinque.
+
+Fare la ground truth per tutti è stato molto noioso, alla fine sono arrivato a **v19** e ci ho messo 45 minuti.
+
+Sarà più difficile fare i test, perché la struttura del contratto mi sembra un po' contorta, ma sono solo 5 proprietà, quindi 10 test. Dopo mi scrivo le proprietà in linguaggio semi-formale.
+
+* **no-recov**: $\vdash recovery \to revert$
+* **owner-cannot-change**: $\vdash owner = firstOwner$
+* **recov-fails**: $|\{x\ |\ x \in Guardians \land x.recovery()\}|<threshold \vdash recovery \to revert$
+* **recov-implies-guardian**: $x.recovery() \vdash x \in Guardians$
+* **recov-succeeds**: $|\{x\ |\ x \in Guardians \land x.recovery(newOwner)\}| \geq threshold \vdash (recovery \to \lnot revert) \land owner_{after}=newOwner$
+
+$x \to revert$ si fa come `x(); assert(false);`.
+
+Non so bene perché questa non funzioni:
+```CVL
+invariant owner_cannot_change()
+    currentContract.owner == currentContract._first_owner;
+```
+
+Ok piccolo problema.
+
+```CVL
+invariant recov_implies_guardian(address a)
+    currentContract.guardianToRecovery[a].usedInExecuteRecovery
+    => currentContract.isGuardian[keccak256(
+		currentContract.abi.encodePacked(a)
+	)];
+```
+
+Questa cosa non funziona. Perché? Perché non esiste `abi` in Certora. `abi.encodePacket()` è una cosa per mettere un indirizzo in 20 byte perché sia possibile passarlo a `keccak256()`. E non si può fare in Certora.
+
+E anche **recov-succeeds** non va bene, perché a Certora non piacciono gli array... È ciò che direi se fosse vero. Invece esistono `forall` e `exists`. Per esempio:
+
+```CVL
+require forall uint256 i . i < currentContract.esempio.length =>
+	(currentContract.esempio[i] / 2) * 2 = currentContract.esempio[i];
+```
+
+Significa $\forall i,\ i<|esempio| \to esempio_i /2\times 2 = esempio_i \vdash$.
+
+Comunque non riesco a fare neanche questa perché serve l'hash.
+
+Ok quelli di SolCMC sono già fatti da Franco Sainas.
+
+Piccolo problema, il test SolCMC vuole eseguire `executeRecovery` che però è esterna e quindi non può.
+
+Ci ha messo quasi un'ora e mezza a far girare tutti i test.
+
+Cosa vediamo di brutto? Oltre ai miei errori della ground truth.
+
+SolCMC
+* **recov-implies-guardian** FNv2v14: non so, i guardiani non possono cambiare quindi non capisco perché negativa.
+* **recov-fails** ERR: `external` non gli piace. e se usassi il contratto stesso per chiamarla esternamente? non ha senso.
+* **recov-succeeds** ERR: `external` non gli piace.
+
+Certora:
+* **no-recov** FNv16v17: potrei provare con `assert !currentContract._recovered;`
+* **owner-cannot-change**: dà negativo a tutto
+* **recov-succeeds**: dà negativo a tutto ma so che non funziona

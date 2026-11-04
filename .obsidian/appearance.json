@@ -4,8 +4,8 @@
     "notation-colour-blocks",
     "light-mode",
     "images",
-    "hide-properties",
-    "small-latex"
+    "small-latex",
+    "hide-properties"
   ],
   "theme": "obsidian",
   "textFontFamily": "",

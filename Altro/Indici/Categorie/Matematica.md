@@ -84,5 +84,5 @@
 [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Sharpening]]
 [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing]]
 [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Rumore]]
-
+[[Dominio delle frequenze]]
 #hub

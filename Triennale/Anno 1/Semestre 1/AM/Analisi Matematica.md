@@ -8,6 +8,7 @@ cssclasses: am
 * [[Dimostrazioni]]
 * [[Teoria degli Insiemi|Teoria degli Insiemi]]
 * [[Relazioni e funzioni]]
+* [[Vincoli]]
 * [[Topologia della retta]]
 * [[Calcolo infinitesimale]]
 * [[3D]]

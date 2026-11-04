@@ -39,7 +39,7 @@ Non dovrebbe mai arrivare il momento di parlare di gestione di memoria quando si
 Aveva senso quando si avevano kB di memoria, ma ora siamo 6 ordini di grandezza sopra.
 
 Finora abbiamo pensato a una macchina astratta con memoria infinita. La macchina di Turing ha una memoria infinita. Ma la macchina astratta poi va tradotta in una macchina reale limitata.
-Vedi slide.
+Vedi #slide.
 Abbiamo fatto finta che non ci sia spreco di memoria.
 Il meccanismo, più che alternativo, aggiuntivo è un retaggio del passato.
 Oggi non capita di usare lo stesso computer più persone allo stesso tempo.
@@ -67,7 +67,7 @@ Costa.
 
 ## Puntatori
 
-Puntatori: nuova tipologia di simboli che, sinceramente, non vorremmo che esistessero, per un motivo molto semplice:
+[[Puntatori|Puntatori]]: nuova tipologia di simboli che, sinceramente, non vorremmo che esistessero, per un motivo molto semplice:
 
 | Mondo                                                              | Inferi                                                                          |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |

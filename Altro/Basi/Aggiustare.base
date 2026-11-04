@@ -19,17 +19,17 @@ views:
       - file.name
       - file.size
     sort:
-      - property: file.name
+      - property: file.size
         direction: DESC
       - property: formula.Titolo
         direction: DESC
-      - property: file.size
+      - property: file.name
         direction: DESC
       - property: formula.Untitled
         direction: ASC
       - property: file.ctime
         direction: ASC
     columnSize:
-      formula.Titolo: 78
+      formula.Titolo: 100
       file.name: 195
       file.size: 128
