@@ -1634,3 +1634,35 @@ Quindi posso tranquillamente ignorare quelle cose.
 Tra l'altro vedo che Bank, che è ciò che devo prendere come esempio, è semplicissimo. Ha 9 righe di corpo vero e proprio. È letteralmente "mi mandi soldi, me lo segno, rivuoi i soldi, te li ridò". Ma ha un sacco di proprietà.
 
 Quindi i piani non cambiano. Domani chiedo a Bartoletti per la PR e mi faccio un'altra branch per lavorare a un altro contratto.
+
+## 4 nov
+
+Quindi, cosa voglio fare adesso? Ho detto Lottery, Social Recovery Wallet, Deposit e Deposit. Lottery ha tantissime proprietà e non ho voglia. I due Deposit sono molto diversi, sono molto semplici, e mi stanno già antipatici. Social Recovery Wallet ha poche proprietà ma 160 righe, comincerei da quello.
+
+Concettualmente, è un salvadanaio. Ci sono due tipi di utente: proprietario e guardiani. Il proprietario ha una password, se la perde i guardiani possono eleggere unanimamente un nuovo utente. Questo salvadanaio non è un salvadanaio, avevo capito male. Anziché usare il proprio conto per fare affari con altri, il proprietario può usare il salvadanaio come tramite, cioè invia comandi al salvadanaio e quello li esegue come se fosse l'utente stesso. Il proprietario può rimuovere guardiani: richiede la rimozione, aspetta tre giorni, dopo tre giorni la può annullare oppure può nominare un sostituto, solo se nomina un sostituto il guardiano viene rimosso e sostituito.
+
+Le proprietà sono:
+* **no-recov**: Il recupero è impossibile (falso).
+* **owner-cannot-change**: Il proprietario non può essere cambiato (falso).
+* **recov-fails**: Il recupero fallisce se non partecipano abbastanza guardiani.
+* **recov-implies-guardian**: Se qualcuno ha partecipato a un recupero, è un guardiano (falso, perché può aver partecipato e poi essere stato rimosso).
+* **recov-succeeds**: Se hanno partecipato abbastanza guardiani, il recupero ha funzionato e il nuovo proprietario è quello scelto.
+
+Per ora le versioni sono:
+* **v1**: Normale.
+* **v2**: Non si possono togliere guardiani.
+
+Farei:
+* **v3**: Non si può cambiare proprietario.
+* **v4**: Quando si prova a cambiare proprietario, il nuovo proprietario è il guardiano che ha proposto il voto.
+* **v5**: Quando si prova a cambiare proprietario, se il proprietario corrente non è l'originale, il nuovo proprietario è l'originale.
+* **v6**: Qualunque indirizzo è considerato guardiano.
+* **v7**: Qualunque indirizzo è considerato proprietario.
+* **v8**: Il proprietario è sempre un guardiano.
+* **v9**: Quando si cambia proprietario, il vecchio proprietario sostituisce il guardiano che ha proposto il voto.
+* **v10**: Quando si propone di cambiare proprietario, il guardiano che ha proposto il voto diventa il proprietario, e l'indirizzo scelto come nuovo proprietario prende il suo posto.
+* **v11**: Il recupero non richiede un numero minimo di guardiani.
+* **v12**: Il recupero ha un numero massimo di guardiani.
+* **v13**: Il recupero fallisce sempre.
+
+I test SolCMC sono tremendi, usano la vecchia nomenclatura per le proprietà che le numera e basta, e sono presenti tante versioni per ogni test (a che ci serve Git, no?). Non ci sono test Certora. Ah no ok i test SolCMC sono di Franco Sainas, che è il primo dev di questo progetto, quindi va bene dai, è roba vecchia. I test sono lunghissimi, cos'è. Ah mi sa che contengono il contratto in sé, perché risalgono a prima dello script Python.
