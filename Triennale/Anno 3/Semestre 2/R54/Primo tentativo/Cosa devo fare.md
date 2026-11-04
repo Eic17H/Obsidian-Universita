@@ -1666,3 +1666,9 @@ Farei:
 * **v13**: Il recupero fallisce sempre.
 
 I test SolCMC sono tremendi, usano la vecchia nomenclatura per le proprietà che le numera e basta, e sono presenti tante versioni per ogni test (a che ci serve Git, no?). Non ci sono test Certora. Ah no ok i test SolCMC sono di Franco Sainas, che è il primo dev di questo progetto, quindi va bene dai, è roba vecchia. I test sono lunghissimi, cos'è. Ah mi sa che contengono il contratto in sé, perché risalgono a prima dello script Python.
+
+Ti dirò, **v9** è più difficile di quanto sembrasse. Nel senso che per tutte le altre ci ho messo due minuti e per questa cinque.
+
+Fare la ground truth per tutti è stato molto noioso, alla fine sono arrivato a **v19** e ci ho messo 45 minuti.
+
+Sarà più difficile fare i test, perché la struttura del contratto mi sembra un po' contorta, ma sono solo 5 proprietà, quindi 10 test. Dopo mi scrivo le proprietà in linguaggio semi-formale.
