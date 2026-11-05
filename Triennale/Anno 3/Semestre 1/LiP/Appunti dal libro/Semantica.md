@@ -5,7 +5,7 @@ aliases:
 ---
 La grammatica descrive la struttura di un linguaggio, ma non ci dice cosa significa. `Come` è una sequenza di simboli accettata sia dall'italiano che dall'inglese, ma ha un significato diverso nelle due lingue. La differenza tra le due si trova non nella grammatica ma nella **==semantica==**.
 
-Per quanto ci riguarda, la semantica definisce *cosa fa* un programma sintatticamente corretto. Permette di sviluppare tecniche di ottimizzazione e di debugging, di verificare la correttezza, di tradurre tra formalismi diversi.
+Per quanto ci riguarda, la semantica definisce *==cosa fa==* un programma sintatticamente corretto. Permette di sviluppare tecniche di ottimizzazione e di debugging, di verificare la correttezza, di tradurre tra formalismi diversi.
 
 Il libro descrive quattro definizioni della semantica (algebrica, assiomatica, operazionale, denotazionale), ma non si capisce niente. Lo riporto comunque a grandi linee:
 * **Algebrica**: le operazioni sono definite con equazioni; descrive bene i tipi di dato astratti, come moduli e classi.
