@@ -14,46 +14,50 @@
               "type": "doomscroll-view",
               "state": {
                 "batchPaths": [
-                  "Triennale/Anno 1/Semestre 1/FDI/File/Virgola mobile.md",
-                  "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Semantica.md",
-                  "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Storia.md",
-                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Grafici.md",
-                  "Triennale/A scelta/Semestre 2/Logica/File/Logiche rilevanti/Routley e Routley.md",
-                  "Triennale/Anno 3/Semestre 2/ISW/Cose nuove/LLM.md",
-                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Relazione.md",
-                  "Triennale/Anno 3/Semestre 1/IUM/Teoria/Iterazione.md",
-                  "Triennale/Anno 2/Semestre 1/SO/Lab/Thread.md",
-                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Equazioni non lineari.md",
-                  "Triennale/Anno 3/Semestre 1/BD/Teoria/Memoria.md",
-                  "Triennale/Anno 1/Semestre 2/ASD/File/Merge sort.md",
-                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Lagrange.md",
-                  "Triennale/Anno 2/Semestre 1/ALF/Consigli/Funzioni di secondo ordine.md",
-                  "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert.md",
-                  "Triennale/Anno 2/Semestre 2/PR2/Lab/Override.md",
-                  "Triennale/Anno 3/Semestre 1/IUM/Teoria/Test.md",
-                  "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri.md",
-                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Operazioni matriciali.md",
-                  "Triennale/A scelta/Semestre 2/FPW/Laboratorio/HTML e CSS.md",
-                  "Triennale/Anno 1/Semestre 2/ASD/File/Selection Sort.md",
-                  "Triennale/A scelta/Semestre 2/FPW/Laboratorio/Post e Get.md",
-                  "Magistrale/Anno 1/Semestre 1/GA/Theory/Convex hull algorithm.md",
+                  "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Controllo/ARP.md",
+                  "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Storia.md",
+                  "Triennale/Anno 3/Semestre 1/LiP/Categorie/Grammatiche.md",
+                  "Triennale/A scelta/Semestre 2/FPW/Teoria/JavaScript.md",
                   "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Subroutine e librerie.md",
+                  "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Macchina SECD.md",
                   "Triennale/Anno 3/Semestre 2/ISW/Teoria/Architettura client-server e internet.md",
-                  "Triennale/Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
                   "Triennale/Anno 1/Semestre 1/AM/File/Insiemi/Coppia ordinata.md",
                   "Triennale/A scelta/Semestre 2/Logica/File/Calcolo dei Sequenti/Congiunzione modificata.md",
-                  "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Macchina SECD.md",
-                  "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Sharpening.md",
-                  "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi diretti/Diagonali.md",
-                  "Triennale/A scelta/Semestre 2/FPW/Laboratorio/Ancora CSS.md",
-                  "Triennale/Anno 1/Semestre 2/ARE/File/IJVM.md",
-                  "Comune/Bash cheatsheet.md",
-                  "Triennale/Anno 3/Semestre 1/IUM/Teoria/Prototipi.md",
-                  "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Ragionamento ex hypothesi.md",
-                  "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Norme/Norme matriciali.md",
-                  "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà.md"
+                  "Magistrale/Anno 1/Semestre 1/IP/Teoria/Dominio delle frequenze.md",
+                  "Triennale/Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
+                  "Triennale/Anno 3/Semestre 1/LiP/Altro/LiP 3 Settembre 2026.md",
+                  "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Errore di cancellazione.md",
+                  "Triennale/Anno 2/Semestre 1/DeM/Tesine/Ottimizzazione.md",
+                  "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ether.md",
+                  "Triennale/Anno 3/Semestre 2/ISW/Teoria/Requisiti.md",
+                  "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri puntuali.md",
+                  "Triennale/Anno 2/Semestre 2/RC/File/Parte III/TCP-IP/IPv6.md",
+                  "Triennale/Anno 3/Semestre 1/BD/Teoria/Progettazione.md",
+                  "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Algoritmi.md"
                 ],
                 "batchHistoryPaths": [
+                  [
+                    "Triennale/Anno 2/Semestre 2/RC/File/Parte III/Controllo/ARP.md",
+                    "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Storia.md",
+                    "Triennale/Anno 3/Semestre 1/LiP/Categorie/Grammatiche.md",
+                    "Triennale/A scelta/Semestre 2/FPW/Teoria/JavaScript.md",
+                    "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Subroutine e librerie.md",
+                    "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Macchina SECD.md",
+                    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Architettura client-server e internet.md",
+                    "Triennale/Anno 1/Semestre 1/AM/File/Insiemi/Coppia ordinata.md",
+                    "Triennale/A scelta/Semestre 2/Logica/File/Calcolo dei Sequenti/Congiunzione modificata.md",
+                    "Magistrale/Anno 1/Semestre 1/IP/Teoria/Dominio delle frequenze.md",
+                    "Triennale/Anno 2/Semestre 2/PR2/Lab/Eccezioni.md",
+                    "Triennale/Anno 3/Semestre 1/LiP/Altro/LiP 3 Settembre 2026.md",
+                    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Errore di cancellazione.md",
+                    "Triennale/Anno 2/Semestre 1/DeM/Tesine/Ottimizzazione.md",
+                    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ether.md",
+                    "Triennale/Anno 3/Semestre 2/ISW/Teoria/Requisiti.md",
+                    "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri puntuali.md",
+                    "Triennale/Anno 2/Semestre 2/RC/File/Parte III/TCP-IP/IPv6.md",
+                    "Triennale/Anno 3/Semestre 1/BD/Teoria/Progettazione.md",
+                    "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Algoritmi.md"
+                  ],
                   [
                     "Triennale/Anno 1/Semestre 1/FDI/File/Virgola mobile.md",
                     "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Semantica.md",
@@ -96,12 +100,43 @@
                   ]
                 ],
                 "batchHistoryCursor": 0,
-                "scrollTop": 0,
+                "scrollTop": 2322.666748046875,
                 "focusedPath": null,
-                "scrollAnchor": null
+                "scrollAnchor": {
+                  "path": "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Subroutine e librerie.md",
+                  "topOffset": -204.4166717529297
+                }
               },
               "icon": "gallery-vertical",
               "title": "Doomscroll"
+            }
+          },
+          {
+            "id": "f7b0de37a874cb67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Triennale/A scelta/Semestre 2/FPW/Teoria/JavaScript.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "JavaScript"
+            }
+          },
+          {
+            "id": "5a286a27fa3ad606",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Storia.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Storia"
             }
           },
           {
@@ -202,8 +237,7 @@
               "title": "Cosa devo fare"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -282,7 +316,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Triennale/Anno 2/Semestre 1/SO/Lab/Thread.md",
+            "file": "Triennale/A scelta/Semestre 2/FPW/Teoria/JavaScript.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -351,8 +385,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cb47e998d05632c8",
+  "active": "e385a562362f363b",
   "lastOpenFiles": [
+    "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Storia.md",
+    "Triennale/Anno 2/Semestre 1/SO/Lab/Thread.md",
     "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Storia.md",
     "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Semantica.md",
     "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Tipi.md",
@@ -378,8 +414,6 @@
     "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi.md",
     "Triennale/Anno 1/Semestre 2/ASD/File/Strutture dati.md",
     "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Newton.md",
-    "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Grammatica.md",
-    "Triennale/Anno 2/Semestre 2/RC/Vecchi/File/Applicazioni e reti.md",
     "Altro/Basi/Non copiati.base",
     "Altro/Basi/Aggiustare.base",
     "Altro/Basi",

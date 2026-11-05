@@ -21,7 +21,7 @@ Ogni thread è collegata a una thread function.
 Ci possono essere thread per thread function.
 
 Per crearli:
-```
+```C
 int pthread_create(ID, attributi, start routine, argomenti)
 ```
 Gli attributi sono opzioni di sistema, noi le lasciamo a `NULL`.
