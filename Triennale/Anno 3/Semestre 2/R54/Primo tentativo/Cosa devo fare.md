@@ -1727,3 +1727,140 @@ Certora:
 * **no-recov** FNv16v17: potrei provare con `assert !currentContract._recovered;`
 * **owner-cannot-change**: dà negativo a tutto
 * **recov-succeeds**: dà negativo a tutto ma so che non funziona
+
+Onestamente se funziona questo non so quanto altro vada fatto a questo contratto. Proverei già a passare a un altro (ma su un'altra branch per rendere più facile la PR dopo). Proverei con Deposit.
+
+## 5 nov
+
+**recov-succeeds** fallisce perché la funzione è esterna. Mi sembra il momento giusto per usare preghost e postghost. No non funziona ok. Questa era la mia idea:
+
+```Solidity
+/// @custom:ghost
+address newOwner;
+address[] guardianList;
+
+/// @custom:preghost function executeRecovery
+require(guardianList.length >= threshold);
+require(inRecovery == true);
+for (uint i = 0; i < guardianList.length; i++) {
+    require(isGuardian[keccak256(abi.encodePacked(guardianList[i]))] == true);
+    require(guardianToRecovery[guardianList[i]].proposedOwner == newOwner);
+    require(guardianToRecovery[guardianList[i]].recoveryRound == currRecoveryRound);
+}
+
+/// @custom:postghost function executeRecovery
+assert(owner == newOwner);
+
+/// @custom:invariant
+function invariant(address newOwner_, address[] calldata guardianList_) public {
+    newOwner = newOwner_;
+    guardianList = guardianList_;
+}
+```
+
+Ma dà positivo a tutto. Ma la speranza non è persa. Pensaci. Se reverta a me non va bene, e non mi va bene neanche se l'owner non è quello giusto. Ma se reverta passa per forza. È finalmente il momento di usare `/// @custom:negate`. Quindi asserisco che l'owner sia sbagliato, il che raggruppa l'owner sbagliato insieme al revert.
+
+Ha senso? Non per forza. C'è ancora il problema di De Morgan. Cosa intendo? Se chiamiamo la proprietà che voglio controllare `ok` (nel nostro caso `ok = (owner == newOwner)`), e il modello $x$:
+
+* $assert(ok) \Rightarrow \forall x,\ (x \to ok) \lor revert$
+* $assert (\lnot ok) \Rightarrow \forall x,\ (x \to \lnot ok) \lor revert$
+* $negate,\ assert(ok) \Rightarrow \exists x,\ (x \land \lnot ok) \land \lnot revert$
+* $negate,\ assert(\lnot ok) \Rightarrow \exists x,\ (x \land \lnot ok) \land \lnot revert$
+
+Io ho fatto l'ultima, che significa "esiste un modello che viola l'assert senza revertare". È quello che voglio? Non so, io vorrei $\forall x,\ (x \to \lnot ok) \to revert$. Voglio vedere se è equivalente all'altra. Proverei a usare il calcolo logico ma visto che non conosco bene la logica dei predicati farò a occhio:
+* $(x \to \lnot ok) \to revert$
+* $(\lnot x \lor \lnot ok) \to revert$
+* $\lnot (\lnot x \lor \lnot ok) \lor revert$
+* $(x \land ok) \lor revert$
+
+Che ci somiglia quasi, sia chiaro. Però rimane il problema della differenza tra $\forall$ e $\exists$: v4 e v5 danno falso positivo, perché *esiste* un caso in cui l'assert passa (quando il proprietario corrente è l'originale), ma io vorrei controllare che l'assert passi sempre.
+
+Comunque l'ho fatta così:
+
+```Solidity
+/// @custom:negate
+
+/// @custom:ghost
+address newOwner;
+address[] guardianList;
+
+/// @custom:preghost function executeRecovery
+require(guardianList.length >= threshold);
+require(inRecovery == true);
+for (uint i = 0; i < guardianList.length; i++) {
+    require(guardianToRecovery[guardianList[i]].recoveryRound == currRecoveryRound);
+    require(guardianToRecovery[guardianList[i]].proposedOwner == newOwner);
+    require(!guardianToRecovery[guardianList[i]].usedInExecuteRecovery);
+}
+
+/// @custom:postghost function executeRecovery
+assert(owner != newOwner);
+
+/// @custom:invariant
+function invariant(address newOwner_, address[] calldata guardianList_) public {
+    newOwner = newOwner_;
+    guardianList = guardianList_;
+}
+```
+
+trcyubinompminvgyfdtcfferfpkiobgh fhghuojkoouvgfxdtyuiokplèò boh lascio così. Faccio uguale recovery fails. Ah no! Non c'è bisogno, perché voglio che fallisca, quindi la revert va bene che sia positiva. E infatti tutto ok (tranne la v11 fatta apposta per fregare questo test perché butta il valore di threshold impostato).
+
+Devo capire se posso fare `recov-fails` in Certora anche senza generare hash validi.
+
+Oppure provo a generare hash validi eh. Vediamo. Vediamo. Quello che mi manca è `abi.encodePacked()`, che a quanto pare rimuove il padding da un indirizzo. Secondo Copilot, basta fare così:
+
+```CVL
+bytes20 packedSender = to_bytes20(e.msg.sender);
+require currentContract.isGuardian[keccak256(packedSender)];
+```
+
+Ok `to_bytes20(address)` dà errore di tipo, perché un indirizzo sta in 32 byte. No, un indirizzo sta in 20 byte in Solidity, ma viene paddato a 20 byte in Certora. Lo posso convertire in `uint20` in Certora? No! Perché Certora non mi fa convertire un indirizzo in un intero! Ma perché! Ah ma posso convertirlo in `uint256`. Non non è vero, secondo DeepSeek posso fare `uint256(e.msg.sender)` ma è falsissimo.
+
+La soluzione fa schifo lol:
+
+```CVL
+address senderAddress = e.msg.sender;
+bytes32 senderBytes32 = to_bytes32(senderAddress);
+uint256 senderNum32 = assert_uint256(senderBytes32);
+uint160 senderNum20 = assert_uint160(senderNum32%(2^(8*20)));
+bytes20 senderBytes20 = to_bytes20(senderNum20);
+require currentContract.isGuardian[keccak256(senderBytes20)];
+```
+
+Dà ancora negativo ma almeno questa require non dà errore di tipo, che è quello che volevo fare. Adesso lo rendo tutto una cosa sola.
+
+```CVL
+require currentContract.isGuardian[keccak256(to_bytes20(assert_uint160((assert_uint256(to_bytes32(e.msg.sender)))%(2^(8*20)))))];
+```
+
+Fa schifo.
+
+Ho formattato così il cast:
+
+```CVL
+to_bytes20( // 20 byte array
+	assert_uint160( // 20 byte uint
+		assert_uint256( // 32 byte uint
+			to_bytes32( // 32 byte array
+				e.msg.sender
+			)
+		)
+	)
+)
+```
+
+Voglio ricordare ai cari lettori che questo cast avviene implicitamente in Solidity.
+
+Tornando a noi, questo test non funziona. Le require sono quelle giuste, corrispondono a quelle di Solidity. Gli assert mi tornano.
+
+Ok il problema a quanto pare è che Certora sta girando con un limite di $1$ alla lunghezza dei loop. E che me ne faccio scusa? E come faccio a cambiarlo? Ok si può, ma mi dà stack overflow perché ho messo il limite a 256. E con un limite di 3 dà comunque N. Anche con 64. Fallisce `assert !lastReverted`. Quindi controllo tutti i require del contratto per vedere quale non passa. Oh ma che cazzo non ha più require e reverta comunque? COLPA MIA. Colpa mia. Non è pagabile, andava pagabile. Ok non è solo quello.
+
+> The `e.msg.value == 0` constraint fixed the previous counterexample. This is a **different revert**: Certora now finds `guardianList.length = 17`, and the first encoded address is `0x1000000000000000000000000000000000000f1a7` (`Results.txt`, `counterexample trace`).
+> 
+> That value is larger than the maximum 160-bit address. Solidity’s generated calldata decoder rejects it **before `executeRecovery`’s body runs**. So commenting out the function’s `require`s won’t prevent this revert; it’s not one of those checks.
+> 
+> The next thing to constrain in the spec is that every list entry is a valid 160-bit address, in addition to the list length. The trace’s decoder check is specifically testing that address-width condition; the li
+
+Mi prendi in giro. Mi prendi in giro. Ma chi te lo fa fare? Ma se tu sei Certora, e sei fatto letteralmente solo per controllare contratti Solidity, perché hai tutte queste differenze da Solidity?
+
+Non so come fare a limitare i valori degli indirizzi, ci penso dopo, addio. xr6cvybumopminvtydtgvujnm,ovydfcgvbinokhigcgh.
