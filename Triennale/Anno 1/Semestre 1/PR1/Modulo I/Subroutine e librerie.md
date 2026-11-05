@@ -7,7 +7,7 @@ cssclasses:
 > Com- nellalalah… Beh, forse nella vita di tutti i giorni non si usa… Avere una routine significa fare la stessa cosa nello stresso ordine nello stesso modo ogni volta. È la definizione di programma.
 > In Golf, dove Scateni ha tanta determinazione ma scarsi risultati, si parla di routine. I linguaggi di programmazione, rispetto ai linguaggi naturali, sono formali,
 
-Sotto-, come interpretiamo ‘sto sotto? Sottoparte del problema complessivo. Scomposizione del problema.
+Sotto-, come interpretiamo 'sto sotto? Sottoparte del problema complessivo. Scomposizione del problema.
 
 Un grande classico quando si parla di programmazione è fare confronti con la cucina.
 Esempio: olio tartufato lasagne al forno.
