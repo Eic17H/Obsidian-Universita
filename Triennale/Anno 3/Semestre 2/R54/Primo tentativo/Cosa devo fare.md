@@ -1864,3 +1864,65 @@ Ok il problema a quanto pare è che Certora sta girando con un limite di $1$ all
 Mi prendi in giro. Mi prendi in giro. Ma chi te lo fa fare? Ma se tu sei Certora, e sei fatto letteralmente solo per controllare contratti Solidity, perché hai tutte queste differenze da Solidity?
 
 Non so come fare a limitare i valori degli indirizzi, ci penso dopo, addio. xr6cvybumopminvtydtgvujnm,ovydfcgvbinokhigcgh.
+
+Vediamo un po' come si fa. È proprio vero che bisogna riposare, a mente fresca ci ho messo 15 secondi a rendermi conto che mi basta castare a un intero di Certora, prima ho provato a castare a un intero di Solidity. `to_mathint(guardianList[i]) < 2^160`. Continua a dare N.
+
+Ho provato a evitare anche i duplicati.
+
+```CVL
+require forall uint256 i .
+	forall uint256 j .
+		i < guardianList.length && j < guardianList.length
+		&& i != j
+		=> guardianList[i] != guardianList[j]
+	;
+```
+
+Non funziona neanche questo.
+
+Ma certo. Era molto più semplice. Se non puoi portare il cavallo all'acqua, porta l'acqua al cavallo. Quella conversione lunghissima da indirizzo a byte sbagliava l'allineamento dei bit e anche la lunghezza. Basta generare un `bytes20` e confrontarlo con l'indirizzo.
+
+```CVL
+bytes20 senderHash;
+require senderHash == to_bytes20(assert_uint160(to_mathint(e.msg.sender)));
+require currentContract.isGuardian[keccak256(senderHash)];
+```
+
+Diamo un altro sguardo al mio bellissimo codice brutto:
+
+```CVL
+// modifier onlyGuardian
+require currentContract.isGuardian[
+	keccak256( // hash
+		to_bytes20( // 20 byte array
+			assert_uint160( // 20 byte uint
+				assert_uint256( // 32 byte uint
+					to_bytes32( // 32 byte array
+						e.msg.sender
+					)
+				)
+			)
+		)
+	)
+];
+```
+
+Non funziona comunque neanche la nuova soluzione perché comunque questo stronzo di Certora casta il mio tanto agoniato `bytes20` in un `bytes32` prima di hasharlo. Copilot consiglia di scrivere la funzione di hashing in Solidity e poi chiamarla esternamente da Certora, come si faceva col vecchio `methods.spec`, ma non riesco a importarlo. Ho provato così:
+
+```CVL
+/// @custom:run certoraRun versions/SocialRecoveryWallet_v1.sol:Wallet certora/guardianHash.sol:Helper --verify Wallet:certora/recov-succeeds.spec --loop_iter 64
+```
+
+Ma non lo prende, ovviamente perché non funziona così. Quindi niente, basta, mi arrendo.
+
+No non mi arrendo così arrivo a 4 ore di tirocinio fatte oggi. Come posso fare? Documentazione di Certora prima di tutto.
+
+Dalla [documentazione](https://docs.certora.com/en/latest/docs/prover/approx/hashing.html) vedo che l'hash in Certora fa schifo schifissimo. Ci sono proprio delle perle.
+
+* Certora sceglie la funzione `keccak256()` arbitrariamente, quindi non deve necessariamente corrispondere a quella usata da Solidity.
+* La funzione di hashing usata da Certora non è necessariamente la stessa per ogni occorrenza del simbolo `keccak256`.
+	* Se ho capito bene, questo significa che, dati `x` e `y` arbitrari, `keccak256(x) < keccak256(y) && keccak256(x) >= keccak(256)y` è vera, nonostante normalmente sia un semplicissimo esempio di contraddizione, cioè di espressione sempre falsa.
+
+Quindi sto pensando che forse l'unica via è implementarla in Certora, cosa che molto probabilmente non funzionerebbe comunque. Boh non trovo nessuna formula online.
+
+Sto anche pensando che non capisco questa cosa del limite del loop. Com'è che io posso, tecnicamente, fare copia incolla $2^{256}$ volte dello stesso codice in cui cambio solo una costante numerica, e quello me lo fai fare, ma se uso `forall` allora mi metti un limite perché fai stack overflow? Mannagia.
