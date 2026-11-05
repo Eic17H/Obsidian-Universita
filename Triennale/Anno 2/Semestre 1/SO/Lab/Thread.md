@@ -5,7 +5,7 @@ cssclasses:
 Thread
 
 Per compilare:
-```
+```Bash
 gcc source.c -l pthread -o out
 ```
 Un'altra opzione `-l`. Se lo vogliamo usare con ncurses, dobbiamo mettere entrambi.
@@ -13,7 +13,7 @@ Ecco che torna utile makefile, li metti lì.
 
 Tutti i thread hanno un ID, di tipo `pthread_t`.
 Ne puoi avviare uno con del codice simile a questo:
-```
+```C
 void* start_routine(void*);
 ```
 Se voglio fare altri thread che fanno una funzione diversa, ne faccio un'altra.
