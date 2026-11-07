@@ -2407,6 +2407,6 @@ In realtà non so come metterli in ordine, la maggior parte degli appunti sono a
 
 Che succede, non ho cambiato il test ma adesso v4 e v10 danno FP. E ora rieseguo e dà TN su v4. Che succede?
 
-**recov-fails` è simile, ma molto più semplice, perché ha meno precondizioni, visto che non devo evitare che fallisca per motivi diversi da quelli specificati.
+**recov-fails** è simile, ma molto più semplice, perché ha meno precondizioni, visto che non devo evitare che fallisca per motivi diversi da quelli specificati.
 
-Ora po
+Ora posso anche fare **recov-implies-guardian**. So come controllare che il mittente è un guardiano, so come controllare che la recovery funzioni. Semplicemente, se **recov-succeed** era $isGuardian(sender) \land Α \to $
