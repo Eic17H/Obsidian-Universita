@@ -2411,3 +2411,4 @@ Che succede, non ho cambiato il test ma adesso v4 e v10 danno FP. E ora rieseguo
 
 Ora posso anche fare **recov-implies-guardian**. So come controllare che il mittente è un guardiano, so come controllare che la recovery funzioni. Semplicemente, se **recov-succeed** era $isGuardian(sender) \land Α \to recov \land \lnot revert$, questa è $recov \vdash \lnot revert \to isGuardian(sender)$.
 
+Per avere un mittente tale che sia anche guardiano, uso lo stesso trick di tentare una chiamata generica. No aspetta, non so. Perché stavo usando il fatto che $\lnot revert \to isGuardian(sender)$. Ma questo non significa che $revert \to \lnot isGuardian(sender)$, significa $revert \to \lnot isGuardian(sender) \lor A$. Per essere sicuro che il mittente non sia un guardiano, devo usare il sillogismo disgiuntivo e negare le altre precondizioni di successo della recovery. Quindi mi servono anche tutti quegli altri loop, che possono comunque restare quasi invariati credo.
