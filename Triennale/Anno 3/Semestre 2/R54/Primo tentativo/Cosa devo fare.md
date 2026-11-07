@@ -2406,3 +2406,5 @@ Devo vedere come funziona il salvataggio dello storage, e in generale mettere in
 In realtà non so come metterli in ordine, la maggior parte degli appunti sono abbastanza inutili.
 
 Che succede, non ho cambiato il test ma adesso v4 e v10 danno FP. E ora rieseguo e dà TN su v4. Che succede?
+
+`recov-fails`
