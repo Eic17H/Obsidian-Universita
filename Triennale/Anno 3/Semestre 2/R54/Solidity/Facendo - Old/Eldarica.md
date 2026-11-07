@@ -2,7 +2,7 @@
 cssclasses:
   - r54
 ---
-Eldarica è un model checker per le [[clausole di Horn]], Numerical Transition Systems e programmi software.
+Eldarica è un model checker per le [[Clausole di Horn]], Numerical Transition Systems e programmi software.
 
 ## Cos'è
 

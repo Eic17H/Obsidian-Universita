@@ -12,14 +12,14 @@ icon: solidity.png
 * <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Ereditarietà|Ereditarietà]]</span>
 * <span class="r54">[[Contratti]]</span>
 ### Facendo
-* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Solidity|Solidity]]</span>
-* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Test|Test]]</span>
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Solidity|Solidity]]</span>
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Test|Test]]</span>
 * <span class="r54">[[SolCMC]]</span>
 	* <span class="r54">[[Z3]]</span>
 	* <span class="r54">[[Eldarica]]</span>
-* <span class="r54">[[Certora]]</span>
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Certora]]</span>
 	* <span class="r54">[[Struttura di una specifica]]</span>
-	* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Certora/Tipi|Tipi]]</span>
-	* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo/Certora/Formalità|Formalità]]</span>
+	* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Certora/Tipi|Tipi]]</span>
+	* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Certora/Formalità|Formalità]]</span>
 
 #hub #hublvl2

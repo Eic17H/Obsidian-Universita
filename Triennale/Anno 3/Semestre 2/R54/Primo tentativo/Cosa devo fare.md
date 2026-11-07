@@ -283,7 +283,7 @@ queso è il mio ragionamento
 
 > How to correct for integer truncation
 > 
-> Let $a$, $b$ and $c$ be three timestamps such that s$tart<a<b<c<end$.
+> Let $a$, $b$ and $c$ be three timestamps such that $start<a<b<c<end$.
 > Let $T$ be the constant `totalAllocation`, let $D=end-start$.
 > Assume $start=0$, thus $end=D$.
 > Let $v()$ be `vestingSchedule()`:
@@ -2402,3 +2402,7 @@ Sposto lo storage a dopo il passo 3 e vedo che succede.
 Ha funzionato per v10. Ora giro il test per gli altri e spero bene. No aspetta non ha senso. Ho messo il salvataggio dello storage tra un requirement e l'altro della lista dei guardiani, perché è cambiato? v4 rimane TN. E v12 diventa TN. Giro tutti i test e vedo.
 
 Devo vedere come funziona il salvataggio dello storage, e in generale mettere in ordine questi appunti, ho quasi 20k parole in un solo documento e sta diventando fastidioso scorrere fino in basso per aggiungere cose.
+
+In realtà non so come metterli in ordine, la maggior parte degli appunti sono abbastanza inutili.
+
+Che succede, non ho cambiato il test ma adesso v4 e v10 danno FP. E ora rieseguo e dà TN su v4. Che succede?
