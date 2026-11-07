@@ -2409,4 +2409,5 @@ Che succede, non ho cambiato il test ma adesso v4 e v10 danno FP. E ora rieseguo
 
 **recov-fails** è simile, ma molto più semplice, perché ha meno precondizioni, visto che non devo evitare che fallisca per motivi diversi da quelli specificati.
 
-Ora posso anche fare **recov-implies-guardian**. So come controllare che il mittente è un guardiano, so come controllare che la recovery funzioni. Semplicemente, se **recov-succeed** era $isGuardian(sender) \land Α \to $
+Ora posso anche fare **recov-implies-guardian**. So come controllare che il mittente è un guardiano, so come controllare che la recovery funzioni. Semplicemente, se **recov-succeed** era $isGuardian(sender) \land Α \to recov \land \lnot revert$, questa è $recov \vdash \lnot revert \to isGuardian(sender)$.
+
