@@ -2338,3 +2338,67 @@ Mi arrendo. Fa tutto schifo. Per i curiosi lettori, il tentativo abbandonato si 
 Cos'ho imparato? Niente onestamente. Ok un po' il comportamento della funzione hash ma non mi serve a niente.
 
 No basta. Mi sa che la funzione hash è un muro che Certora non riesce ad aggirare. È un muro, con l'`e.msg.sender` di Certora da un lato, e il `msg.sender` di Solidity dall'altro. E non lo possiamo attraversare. [Chat di DeepSeek](https://chat.deepseek.com/share/yj7achw8gt4xgpte2p) così quando metto in ordine gli appunti mi segno quello che ho scritto.
+
+Ragioniamoci. Detto che secondo me non c'è una soluzione. Ma ragioniamoci. Il modificatore `onlyGuardian` richiede che l'hash dell'indirizzo del mittente sia approvato. Certora sa l'indirizzo del mittente e sa... Aspetta. C'è qualcosa. A Certora non importa che il mittente sia un guardiano, a Certora importa che il mittente sia tale da non essere la causa della revert. Leggiamo bene:
+
+> if a number of guardians greater than or equal to the threshold have participated in the same recovery round, and selected the same new owner, then `executeRecovery()` will succeed and `owner == newOwner`.
+
+Non c'è scritto da nessuna parte che il mittente deve essere un guardiano. Quindi io prendo un mittente a caso, chiamo il metodo, e richiedo che non reverti, in questo modo so che il mittente non causa una revert, *e poi* faccio il test. Devo tirare fuori `lastStorage`.
+
+Praticamente mi segno lo storage iniziale con `storage initial = lastStorage;`, e poi lo ripristino nella chiamata con `executeRecovery(...) at initial;`.
+
+Metto questo all'inizio:
+
+```CVL
+// Find a sender that doesn't make the method revert
+method f;
+calldataarg args;
+require f.selector == sig:executeRecovery().selector;
+f@withrevert(e,args);
+require(!lastReverted);
+```
+
+E poi cambio la chiamata:
+
+```CVL
+executeRecovery@withrevert(e, newOwner, guardianList) at initial;
+```
+
+Ok bene la mia idea ha funzionato. Nuovo problema: troppi loop nel metodo. Provo ad aggiungere la flag `--optimistic_loop` alla chiamata. P. P. P! Adesso lo faccio girare su tutti e fine.
+
+Vediamo i risultati. Abbiamo dei falsi positivi:
+
+* v4, v5, v10: Boh, non so perché, dovrebbe essere semplice vedere che mette il proprietario sbagliato.
+* v12, v13: Ma come scusa, reverta in una condizione in cui non dovrebbe e te ne freghi.
+* v14: Poco da fare, diventa vacua perché non esiste un mittente valido.
+
+E che succede? Boh.
+
+Per v4, provo a mettere che il nuovo proprietario non deve essere un guardiano. No, vale comunque. Per capire, vediamo chi esce negativo. Solo v16 e v17, dove la recovery non cambia il proprietario.
+
+Il problema è che io sto aggiungendo require, ma le require possono solo rendere il risultato più positivo, io lo voglio rendere più negativo.
+
+Ok ho cambiato l'ordine delle istruzioni e v4 è giusta.
+
+### 7 nov
+
+v3 è falsa negativa. Ma è colpa mia, ho fatto male la ground truth. Poi abbiamo 10 12 13 14. 10 non l'ho capita, imposta il proprietario sbagliato, non dovrebbe passare. LE altre possono revertare anche quando sono rispettate le precondizioni.
+
+14 soprat- ahhhh... Reverta sempre, quindi il primo passo di trovare un sender che funziona fallisce e il test passa vacuamente.
+
+v10 è identica a v4 però, l'unica differenza è che cambia la lista dei guardiani. Ah niente, perché leggo la lista dei guardiani prima di chiamare il metodo.
+
+Cosa sta facendo il mio codice?
+
+1. Crea variabili di input, ambiente e storage
+2. Requirement semplici
+3. Requirement sulla lista dei guardiani
+4. Chiama il metodo per cercare un mittente che vada bene
+5. Chiama il metodo per davvero
+6. Assert
+
+Sposto lo storage a dopo il passo 3 e vedo che succede.
+
+Ha funzionato per v10. Ora giro il test per gli altri e spero bene. No aspetta non ha senso. Ho messo il salvataggio dello storage tra un requirement e l'altro della lista dei guardiani, perché è cambiato? v4 rimane TN. E v12 diventa TN. Giro tutti i test e vedo.
+
+Devo vedere come funziona il salvataggio dello storage, e in generale mettere in ordine questi appunti, ho quasi 20k parole in un solo documento e sta diventando fastidioso scorrere fino in basso per aggiungere cose.
