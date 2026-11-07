@@ -112,14 +112,13 @@
             "id": "b07336cafaf4197b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Subroutine e librerie.md",
-                "mode": "source",
-                "source": false
+                "file": "Altro/Basi/Recenti.base",
+                "viewName": "View"
               },
-              "icon": "lucide-file",
-              "title": "Subroutine e librerie"
+              "icon": "lucide-table",
+              "title": "Recenti"
             }
           },
           {
@@ -399,18 +398,25 @@
   },
   "active": "b07336cafaf4197b",
   "lastOpenFiles": [
+    "Triennale/Anno 2/Semestre 1/Economia/Raw/20241209.md",
+    "Altro/Basi/Recenti.base",
+    "Triennale/Anno 2/Semestre 1/Economia/Raw/20241129.md",
+    "Triennale/Anno 3/Semestre 2/R54/Primo tentativo/Cosa devo fare.md",
+    "Triennale/Anno 3/Semestre 2/R54/Primo tentativo/Come ho installato tutto.md",
+    "Magistrale/Anno 1/Semestre 1/GA/Raw/20261103.md",
+    "Magistrale/Anno 1/Semestre 1/GA/Raw/20261104.md",
+    "Magistrale/Anno 1/Semestre 1/IP/Raw/20261105.md",
+    "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Subroutine e librerie.md",
     "Triennale/A scelta/Semestre 2/FPW/Teoria/JavaScript.md",
     "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Storia.md",
     "Triennale/Anno 2/Semestre 1/SO/Lab/Thread.md",
     "Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Storia.md",
     "Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/Semantica.md",
     "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Tipi.md",
-    "Magistrale/Anno 1/Semestre 1/IP/Raw/20261105.md",
     "Triennale/Anno 1/Semestre 1/PR1/Programmazione 1.md",
     "Triennale/Anno 1/Semestre 1/PR1/Modulo I/Algoritmi.md",
     "Indice.md",
     "Triennale/Anno 1/Semestre 1/FDI/File/Virgola mobile.md",
-    "Triennale/Anno 3/Semestre 2/R54/Primo tentativo/Cosa devo fare.md",
     "Triennale/Anno 2/Semestre 1/ALF/OCaml/Pattern matching.md",
     "Magistrale/Anno 1/Semestre 1/IP/Lab/Smoothing.md",
     "Triennale/Anno 1/Semestre 1/PR1/Modulo II/Operatori.md",
@@ -420,12 +426,6 @@
     "Triennale/Anno 3/Semestre 1/LiP/Categorie/PDA.md",
     "Triennale/Anno 2/Semestre 1/DeM/Tesine/Simulazione.md",
     "Triennale/A scelta/Semestre 2/Logica/File/Enunciati.md",
-    "Triennale/Anno 3/Semestre 2/R54/Solidity/Imparando/Introduzione.md",
-    "Triennale/Anno 1/Semestre 2/ASD/File/Code con priorità.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/Lab/Algoritmi/Metodo di Gauss.md",
-    "Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing.md",
-    "Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi.md",
-    "Triennale/Anno 1/Semestre 2/ASD/File/Strutture dati.md",
     "Altro/Basi/Non copiati.base",
     "Altro/Basi/Aggiustare.base",
     "Altro/Basi",
@@ -433,7 +433,6 @@
     "FPW/about.html",
     "FPW/Laboratorio/File.zip",
     "SO/Modulo II/Linux",
-    "SO/Modulo II/C",
-    "SO/Modulo II/Bash"
+    "SO/Modulo II/C"
   ]
 }

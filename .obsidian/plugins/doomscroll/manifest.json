@@ -1,9 +1,9 @@
 {
   "id": "doomscroll",
   "name": "Doomscroll",
-  "version": "0.2.0",
-  "minAppVersion": "1.7.2",
-  "description": "Scroll through your own notes, not someone else's feed.",
+  "version": "1.0.1",
+  "minAppVersion": "1.13.0",
+  "description": "Rediscover your notes, one scroll at a time.",
   "author": "yaroshevych",
   "authorUrl": "https://github.com/yaroshevych",
   "isDesktopOnly": false
