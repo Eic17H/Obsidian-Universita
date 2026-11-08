@@ -2489,3 +2489,28 @@ satisfy !lastReverted;
 Proverei **owner-cannot-change**.spec. Chiaramente non va bene un'invariant. Faccio una regola normale, che chiama un metodo e vede se i l proprietario è cambiato. Ah no, il primo proprietario deve essere sempre il proprietario per la regola. Niente comunque. Ah ma aspetta, prima richiedo che il vecchio proprietario sia il primo proprietario. Ebbene funziona.
 
 Con questo fix, rimangono solo due falsi: v3, che non fa altro che non permettere al proprietario di cambiare, e v17, che non fa niente ma reverta quando serve. Non ha senso ma lo lascio così. Ci sono solo tre veri positivi, 14, 15 e 16, dove la recovery o reverta o non fa niente. Strano che v17, che è la fusione di v15 e v16, prenda un falso negativo.
+
+Mi viene il dubbio che non debba evitare che il metodo chiamato sia il costruttore. Dubito, ma provo. Mi sa che non si può neanche fare. Ah ok v3 fallisce perché c'è un loop nel contratto. Metto `--optimistic-loop`. E ora v3 dà TP, e v1 dà TN. Bello. E allora credo che **no-recov** abbia lo stesso problema. E **recov-fails**? Strano.
+
+Tutto risolto con **owner-cannot-change**. **no-recov** è rimasto uguale. In effetti è solo ambigua la descrizione, "la recovery non dovrebbe mai succedere", ma intendi il metodo o l'azione? Perché in v16 e v17 avviene il metodo ma non l'azione, e il mio test controlla che non avvenga il metodo, invece il test di Franco Sainas asserisce che `!_recovered`. Però boh, da vedere se mi posso fidare di quella variabile, in effetti il contratto si può benissimo implementare senza. Boh, questo contratto è strano.
+
+Vediamo se questo risolve **recov-fails**. Risolve eccome. v11 rimane sbagliato ma non c'è niente da fare.
+
+Quindi ora siamo in questa situazione:
+
+SolCMC
+* ==🟢**recov-fails** FPv11: variabile `threshold` impostata male, niente da fare==
+* **recov-implies-guardian** FNv2: molto strano che SolCMC sbagli questa
+* **recov-succeeds** FPv3v4v5v10: non capisco, imposta un proprietario sbagliato
+* **recov-succeeds** FPv12v13: non capisco, reverta quando non dovrebbe
+* ==🟢**recov-succeeds** FNv15: normale, revert+negate==
+
+Certora:
+
+* ==🟡**no-recov** FNv16v17: possibile errore nell'interpretazione della proprietà==
+* ==🟢**owner-cannot-change**: tutto giusto==
+* ==🟢**recov-fails** FNv11: com'è normale che sia==
+* ==🟡**recov-implies-guardian**: niente da fare, parte da stati invalidi==
+* ==🟢**recov-succeeds** FPv14: vacuo, richiede che esista un mittente che non fa revertare==
+
+Direi che ora mi concentro su SolCMC.
