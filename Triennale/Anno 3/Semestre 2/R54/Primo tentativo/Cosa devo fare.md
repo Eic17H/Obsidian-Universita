@@ -2444,3 +2444,13 @@ Un altro modo per controllare che il mittente sia un guardiano c'è. Perché `ex
 Ok ok ok. Non ho voglia adesso, spero che funzioni.
 
 Questo tirocinio sembrava inutile, ma effettivamente mi sta insegnando a probare il codice senza metterci mano. Io col codice Certora sto leggendo solo le informazioni che il contratto mi permette di leggere. Sarebbe così facile sapere che il mittente è un guardiano se potessi leggere la lista, ma la lista è hashata e quindi devo fare tutti questi giri per ottenere l'informazione, ma devo stare attento a non modificare troppo lo stato, altrimenti la mia verifica diventa vacua.
+
+Siamo sicuri che questo ragionamento funzioni? Per controllare `senderIsGuardian`, devo chiamare `supportRecovery`. Ma poi devo controllare che possa. Ah no. Allora. Devo vedere se il mittente ha partecipato a una recovery. E poi devo vedere se il mittente ha proposto o supportato una recovery. Sono compatibili le due cose? Sembra di sì, perché entrambe le azioni impostano `usedInExecuteRecovery` a falso, quindi prima di chiamarla può essere anche vero.
+
+Ah... Tra l'altro... Non è che potevo semplicemente fare così anche con l'altro test?
+
+Ok allora, neanche questo funziona ovviamente, perché non parte da uno stato sensato. Quindi anche con v2 Certora può inventarsi uno stato che falsifica il test, anche se non è raggiungibile in v2.
+
+Controllo se un'invariante può controllare se un metodo reverta. Non sembra. Non capisco come fare.
+
+Devo stare attento a controllare che non ci siano overflow, perché un metodo può revertare non solo quando c'è scritto ma anche quando c'è un overflow, per esempio con un'addizione. Non c'entrava in questo caso.
