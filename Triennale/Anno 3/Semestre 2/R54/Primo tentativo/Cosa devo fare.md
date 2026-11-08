@@ -2414,3 +2414,33 @@ Ora posso anche fare **recov-implies-guardian**. So come controllare che il mitt
 Per avere un mittente tale che sia anche guardiano, uso lo stesso trick di tentare una chiamata generica. No aspetta, non so. Perché stavo usando il fatto che $\lnot revert \to isGuardian(sender)$. Ma questo non significa che $revert \to \lnot isGuardian(sender)$, significa $revert \to \lnot isGuardian(sender) \lor A$. Per essere sicuro che il mittente non sia un guardiano, devo usare il sillogismo disgiuntivo e negare le altre precondizioni di successo della recovery. Quindi mi servono anche tutti quegli altri loop, che possono comunque restare quasi invariati credo.
 
 Sto anche notando che con "recov" non intende "questa chiamata avviene con successo" ma "ha partecipato a una recovery in passato", che è salvato in un array. Quindi non serve fare cose strane con lo storage per fare due chiamate indipendenti. Ed è un array le cui chiavi sono indirizzi (è lo stesso che leggiamo nel loop), quindi non c'è il problema dell'hash.
+
+### 8 novemrbre
+
+Non funziona. Non funziona molto bene. Dà negativo su v1 com'è giusto che sia, ma dà negativo anche su v2. Questo mi fa pensare che il mio $\lnot A$ del sillogismo disgiuntivo sia sbagliato.
+
+Devo vedere cos'è `memory` in Solidity.
+
+La logica del test mi sembra sensata. Ci mette molto di più a girare su v2, quindi sicuramente sta cercando qualche loophole. Cosa farei senza Copilot. Ok il solito, non ho impostato lo stato di partenza.
+
+Il fatto che le require rendano il test più positivo, e le assert più negativo, mi ricorda comunque il calcolo delle sequenze.
+
+Ok non ho capito questa cosa. Ora ho reso più sensato lo stato di partenza e v1 mi esce positiv... Ah... Devo fare due ambienti forse? Il problema qui è che diventa vacua. No ho già dimenticato il mio ragionamento. Ah sì, essenzialmente un negativo richiede che passi del tempo tra quando un indirizzo partecipa in una recovery e quando faccio l'assert, ma non so come farlo. Perché a questo punto è ovvio che, dopo la recovery, se non reverta allora vuole dire che il mittente ha partecipato alla recovery, e se reverta non ha partecipato.
+
+Provo a usare lo storage iniziale nella chiamata. Niente.
+
+Quello che succede è che io mi faccio un setuppone per chiamare il contratto in modo tale che l'unico modo per cui reverti sia... Eccetera eccetera. Insomma questa cosa mi sporca lo stato del contratto, ma io voglio sperimentare su uno stato arbitrario.
+
+La mia soluzione, se si può fare, è di prendere tutto questo setuppone e metterlo in una funzione che ha il solo scopo di determinare se il mittente è un guardiano. Poi uso questa conoscenza in un'invariante, e l'invariante controlla stati arbitrari credo.
+
+Copilot mi consiglia "ghost state". Dei tre paragrafi, queste due parole sono l'unica cosa utile. Sarebbe bello se facessero un LLM che risponde alle tue domande dicendoti cosa cercare su Google, perché è quello che ha appena fatto Copilot indirettamente.
+
+Ok, un passo avanti mentalmente. Facciamo un passo avanti. Io sto leggendo `currentContract.guardianToRecovery[e.msg.sender].usedInExecuteRecovery` durante l'assert, cioè dopo la recovery. Questo è sbagliato, perché leggere la verità di `senderIsGuardian` modifica `usedInExecuteRecovery` (effetto osservatore). Male. L'idea era quindi di leggere `usedInExecuteRecovery` all'inizio, ma devo richiedere che sia falso per poter leggere `senderIsGuardian`.
+
+Non so come funzioni lo storage. Quindi... L'idea. È di. Leggere `usedInExecuteRecovery`, salvare lo storage, e poi fissare `usedInExecuteRecovery` a falso. Ma questo non funziona.
+
+Un altro modo per controllare che il mittente sia un guardiano c'è. Perché `executeRecovery` non è l'unica `onlyGuardian`. A me basta che sia `onlyGuardian`. Ed `executeRecovery` è l'unica che modifica `usedInExecuteRecovery` (abbastanza ovvio dal nome). Enorme passo avanti. Risolto tutto forse credo spero.
+
+Ok ok ok. Non ho voglia adesso, spero che funzioni.
+
+Questo tirocinio sembrava inutile, ma effettivamente mi sta insegnando a probare il codice senza metterci mano. Io col codice Certora sto leggendo solo le informazioni che il contratto mi permette di leggere. Sarebbe così facile sapere che il mittente è un guardiano se potessi leggere la lista, ma la lista è hashata e quindi devo fare tutti questi giri per ottenere l'informazione, ma devo stare attento a non modificare troppo lo stato, altrimenti la mia verifica diventa vacua.
