@@ -2454,3 +2454,38 @@ Ok allora, neanche questo funziona ovviamente, perché non parte da uno stato se
 Controllo se un'invariante può controllare se un metodo reverta. Non sembra. Non capisco come fare.
 
 Devo stare attento a controllare che non ci siano overflow, perché un metodo può revertare non solo quando c'è scritto ma anche quando c'è un overflow, per esempio con un'addizione. Non c'entrava in questo caso.
+
+I test ci sono tutti. Vediamo la situazione dei falsi.
+
+SolCMC
+* ==🟢**recov-fails** FPv11: variabile `threshold` impostata male, niente da fare==
+* ==🟢**recov-implies-guardian** FNv14: errore mio, ops==
+* **recov-implies-guardian** FNv2: molto strano che SolCMC sbagli questa
+* **recov-succeeds** FPv3v4v5v10: non capisco, imposta un proprietario sbagliato
+* **recov-succeeds** FPv12v13: non capisco, reverta quando non dovrebbe
+* ==🟢**recov-succeeds** FNv15: normale, revert+negate==
+
+Certora:
+
+* ==🔴**no-recov** FNv16v17: esiste il metodo da chiamare, ma non fa niente, non so come risolvere senza sovraspecificare==
+* **owner-cannot-change** FNv3v14v15v16v17: ok dà negativo a tutto, da cambiare
+* **recov-fails** FNv16: non ha senso per nientissimo
+* ==🟡**recov-implies-guardian**: niente da fare==
+* ==🟢**recov-succeeds** FPv14: vacuo, richiede che esista un mittente che non fa revertare==
+
+Posso usare satisfy. Eccoci. Forse posso fare due regole dentro una spec. Forse. Spero. Dai. Se posso usare satisfy e posso mettere due regole, metto una seconda regola che richiede che esista almeno un mittente che non fa revertare. Boh vedo `satisfy` in Template e nei test di regressione, credo vada bene.
+
+Mi dice che non posso combinare satisfy e assert. Brutto. È strano però, perché non li ho messi nella stessa regola. E sul sito di Certora c'è scritto che non vanno messi nella stessa *sotto*regola, e sul [GitHub di Certora](https://github.com/Certora/Examples/blob/14668d39a6ddc67af349bc5b82f73db73349ef18/CVLByExample/ConstantProductPool/certora/spec/ConstantProductPool.spec#L243) vedo una spec con satisfy in una regola e assert in un'altra.
+
+Non è un limite di CVL, è nelle regole dello script di Franco Sainas. Sarà una regola fissa del progetto, che non capisco visto che non è una limitazione di Certora, è una regola imposta a caso.
+
+Comunque la mia soluzione era questa, molto semplice:
+
+```CVL
+supportRecovery@withrevert(e,addr);
+satisfy !lastReverted;
+```
+
+Proverei **owner-cannot-change**.spec. Chiaramente non va bene un'invariant. Faccio una regola normale, che chiama un metodo e vede se i l proprietario è cambiato. Ah no, il primo proprietario deve essere sempre il proprietario per la regola. Niente comunque. Ah ma aspetta, prima richiedo che il vecchio proprietario sia il primo proprietario. Ebbene funziona.
+
+Con questo fix, rimangono solo due falsi: v3, che non fa altro che non permettere al proprietario di cambiare, e v17, che non fa niente ma reverta quando serve. Non ha senso ma lo lascio così. Ci sono solo tre veri positivi, 14, 15 e 16, dove la recovery o reverta o non fa niente. Strano che v17, che è la fusione di v15 e v16, prenda un falso negativo.
