@@ -2558,3 +2558,33 @@ Warning: CHC: Assertion violation might happen here.
 Quindi forse non c'entra `keccac256`. E allora niente, non so come fare. Non ha senso.
 
 Con **recov-succeeds**, potrei semplicemente aver fatto un disastro con nomi di variabili e scope. Ok, non era quello il problema, ma di sicuro fa piacere correggerlo. Siamo in negate, quindi aggiungere più require va in negativo. Io rimetto la regola che controlla che tutti i guardiani siano guardiani. Ah ma aspetta. Siamo in negate. Quindi basta una volta che lo fa giusto per renderla positiva. Allora non so.
+
+### 9nov
+
+Vedo `sstore` in alcuni file SolCMC. Vediamo cos'è. Non c'entra nulla.
+
+Vediamo bene **recov-succeeds**.
+
+> In inglese:$$constr(G, t) \vdash |\{g\ |\ g \in G' \land Rec(g, r, o) \land isG(g)\}| \geq t \Rightarrow exRec \to \lnot rev \land own'=o$$
+
+> In v1:$$constr(G,t) \vdash isG(m.c), inRec, |g|\geq t, $$
+
+No mi arrendo, è davvero infattibile farla bene, non ha senso. Niente fatto sta che sono equivalenti.
+
+Il test SolCMC fa $|G| \geq t, inRec, \forall g \in G (g.r=r \land g.o = o \land \lnot g.u) \Rightarrow o' = o \land \lnot revert$. Mi sembra giusto. Ah no ho fatto un casino. De Morgan, esiste un esempio, non per ogni modello ma esiste un tale modello. Infatti siamo pieni di falsi positivi. Perché siamo in negate.
+
+Che versioni hanno falsi positivi?
+
+v3: Il processo di recovery può succedere, ma alla fine non cambia il proprietario.
+
+Il falso positivo avviene quando esiste almeno un modello che soddisfa la proprietà, visto che siamo in negate. Visto che siamo in negate, aggiungere requisiti rende la proprietà più falsa. Quindi aggiungo che il proprietario proposto non deve essere quello corrente, perché se lo fosse, non modificare il proprietario soddisferebbe la proprietà. Soddisfa ancora. Metto che il nuovo proprietario non può essere un guardiano. Niente.
+
+Non ha senso. No aspetta non capisco. In che modo le mie variabili interagiscono col metodo? Ecco, ho fatto un casino. Le preghost e postghost sono nello scope del metodo a cui si riferiscono. Quindi quando ho cambiato il nome per evitare lo shadowing, non dovevo. Perché cambiando il nome, diventano completamente scollegate dal metodo. Però passa comunque. Ok ho spostato la require del proprietario diverso dal proprietario e ora è giusto. Giro su tutti e vedo.
+
+Devo dire che quel test è da rifare, perché l'ho fatto con molta confusione. Ok v10 e v4 rimangono sbagliati.
+
+Invece forse dovevo tenere gli identificatori diversi, e poi usare una require per averli uguali a quelli dell'invariante. Boh.
+
+L'ho reso più sensato. v3 non passa. v1 invece passa. Ok quello che ho fatto è stato che l'invariante ha come parametro solo il nuovo proprietario, che viene richiesto sia uguale a quello del parametro del metodo. Come secondo la descrizione in inglese, si richiede che i guardiani che partecipano siano d'accordo e siano almeno il threshold. Richiedo anche che il test non passi banalmente con un proprietario proposto uguale a quello corrente. E poi asserisco che il proprietario sia quello del parametro dell'invariante.
+
+Però v4 passa. Come siamo messi rispetto a prima? FPv4v5v10v13, FNv15. Risolti due e peggiorato uno. v4 non ha senso che passi, perché controllo che il proprietario proposto non sia un guardiano. Va be', non capisco.
