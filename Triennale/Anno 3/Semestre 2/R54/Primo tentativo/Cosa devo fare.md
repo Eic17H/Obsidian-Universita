@@ -2668,3 +2668,35 @@ Certora Prover run failed (code 1)
 Perché non ha questo problema con la v1 che è identica? Bello non ho capito. Fallisce alla deposit, che non dovrebbe. E non ha il punto esclamativo, sarà per quello. Non capirò come si fa ora.
 
 Sia questo che SRW hanno "variabili ghost" direttamente nel contratto. Secondo me erano per quando non si potevano mettere dal tool. Probabilmente prima della PR mi farà aggiornare questa cosa. Da chiedere a Bartoletti prima o poi o poi o poi.
+
+Vediamo Deposit ETH. Eldarica non ha UNK neanche a 30 secondi, menomale. Solita roba del vecchio metodo dei getters e simili per Certora. `// TODO fregalo`, grazie Roberto Pettinau, io come te.
+
+Ma che significa?
+
+```log
+Start Mon Nov 09 22:57:39 CET 2026
+The scene contains 1 contracts:
+DepositEth : 0xce4604a0000000000000000000000002
+Running initial transformations
+Has CVL checks.
+Checking CVL certora/wd-sender-rcv-EOA.spec for contract DepositEth
+Unrolling loops 1 time, unwinding condition is asserted
+Error: The signature resolution for a dispatcher summary resolved to a fallback function. This is unsupported.
+Error: Had an exception while verifying the rule 'wd_sender_rcv_EOA':
+Error: Timed out waiting for background tasks:
+    
+Done 0m
+Compiling versions/DepositEth_v3.sol...
+Compiling versions/DepositEth_v3.sol to expose internal function information and local variables...
+Verifier run command:
+ java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_09_22_57_27_6148378415
+ERROR: Execution of command "java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_09_22_57_27_6148378415" terminated with exitcode 100.
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - The signature resolution for a dispatcher summary resolved to a fallback function. This is unsupported.
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Had an exception while verifying the rule 'wd_sender_rcv_EOA':
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Timed out waiting for background tasks:
+CRITICAL:     
+
+Certora Prover run failed (code 1)
+```
+
+L'errore è su tutti i test su v3, che invia soldi ad `address(0)`.
