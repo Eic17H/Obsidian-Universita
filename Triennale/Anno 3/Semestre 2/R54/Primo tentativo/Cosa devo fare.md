@@ -2588,3 +2588,41 @@ Invece forse dovevo tenere gli identificatori diversi, e poi usare una require p
 L'ho reso più sensato. v3 non passa. v1 invece passa. Ok quello che ho fatto è stato che l'invariante ha come parametro solo il nuovo proprietario, che viene richiesto sia uguale a quello del parametro del metodo. Come secondo la descrizione in inglese, si richiede che i guardiani che partecipano siano d'accordo e siano almeno il threshold. Richiedo anche che il test non passi banalmente con un proprietario proposto uguale a quello corrente. E poi asserisco che il proprietario sia quello del parametro dell'invariante.
 
 Però v4 passa. Come siamo messi rispetto a prima? FPv4v5v10v13, FNv15. Risolti due e peggiorato uno. v4 non ha senso che passi, perché controllo che il proprietario proposto non sia un guardiano. Va be', non capisco.
+
+Ho aggiunto che il proprietario proposto non deve essere il mittente dei metodi relativi alla recovery. E v4 passa. Ah siamo in negate, devo farla al contrario. Non capisco cosa sto facendo. Ho negato certe require e boh v4 passa ancora. Forse le require devono restare dritte e le assert devono restare storte. Sì perché le require dentro i metodi restano uguali.
+
+Il problema è la negate. La negate è abbastanza inutile. Perché basta un singolo esempio di modello adatto per renderla positiva. v13 ha lo stesso problema.
+
+Situazione:
+* ==🟢**recov-fails** FPv11: variabile `threshold` impostata male, niente da fare==
+* ==🟡**recov-implies-guardian** FNv2: strano ma niente da fare==
+* ==🔴**recov-succeeds**: con la negate basta un solo modello valido==
+
+v8 dà molto `UNK`.
+
+Non so che altro fare con questo contratto. Metto i commenti alla ground truth e provo con un altro.
+
+Vediamo che fare adesso. Lottery ha troppe proprietà, dà fastidio. Deposit ERC20 è semplicissimo, ha solo tre proprietà. Io ci provo.
+
+Cominciamo bene.
+
+```log
+ERROR:root:versions/DepositERC20_v2.sol: Couldn't retrieve contract name.
+ERROR:root:versions/DepositERC20_v2.sol: Couldn't retrieve contract name.
+ERROR:root:versions/DepositERC20_v2.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v2.sol contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v2.sol contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v2.sol contract name.
+ERROR:root:versions/DepositERC20_v1.sol: Couldn't retrieve contract name.
+ERROR:root:versions/DepositERC20_v1.sol: Couldn't retrieve contract name.
+ERROR:root:versions/DepositERC20_v1.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v1.sol contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v1.sol contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v1.sol contract name.
+```
+
+Proviamo SolCMC. Vedo subito che **wd-contract-bal**.sol è sbagliato. Gli errori con Certora sono che il contratto non rispetta le convenzioni di nominazione. Si chiamava `TokenTransfer` che è completamente diverso dal nome del file. Ok i test sono scritti per Certora vecchio, tranne **no-deposit-twice**.
+
+Con entrambi i tool, **wd-contract-bal** è falso negativo. Sicuramente a causa di seldestruct.
+
+Ho la batteria scarica, non credo di poter fare molto altro.
