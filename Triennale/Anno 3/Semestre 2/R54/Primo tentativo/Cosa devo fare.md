@@ -2514,3 +2514,47 @@ Certora:
 * ==🟢**recov-succeeds** FPv14: vacuo, richiede che esista un mittente che non fa revertare==
 
 Direi che ora mi concentro su SolCMC.
+
+Ok, ho detto abbastanza [[Formalizzazione|baggianate]]. È il momento di vedere SolCMC.
+
+In **recov-implies-guardian**, in inglese dice "has participated in a recovery", che non è ben definito. Una recovery ha tre "fasi": l'inizio, il supporto, e l'esecuzione. Nel mio test Certora, che funziona, io controllo che l'indirizzo abbia partecipato all'esecuzione, ma il test SolCMC controlla che abbia partecipato all'inizio o al supporto. Non credo c'entri nulla. Esatto non c'entra nulla.
+
+Ok, noto che gli unici positivi sono i soliti indiziati, quelli che non fanno niente. Questo è perché gli array non vengono aggiornati e il test passa vacuamente.
+
+Vediamo il log:
+
+```log
+Warning: CHC: Error trying to invoke SMT solver.
+   --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/social_recovery_wallet/solcmc/build/contracts/SocialRecoveryWallet_recov-implies-guardian_v2.sol:139:9:
+    |
+139 |         assert(isGuardian[keccak256(abi.encodePacked(a))]);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning: CHC: Assertion violation might happen here.
+   --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/social_recovery_wallet/solcmc/build/contracts/SocialRecoveryWallet_recov-implies-guardian_v2.sol:139:9:
+    |
+139 |         assert(isGuardian[keccak256(abi.encodePacked(a))]);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+```
+
+Copilot non aiuta. Sembra che il problema sia che al solver non piace `keccak256`, di nuovo. Non so come risolvere. Non posso fare il trick della revert perché su SolCMC le revert passano i test. Provo a farla al contrario, $(p \to q) \leftrightarrow (\lnot q \to \lnot p)$.
+
+Adesso dice così:
+
+```log
+Warning: CHC: Error trying to invoke SMT solver.
+   --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/social_recovery_wallet/solcmc/build/contracts/SocialRecoveryWallet_recov-implies-guardian_v2.sol:139:9:
+    |
+139 |         assert(!guardianToRecovery[a].usedInExecuteRecovery);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning: CHC: Assertion violation might happen here.
+   --> /home/eic/Documents/Uni/git/contracts-verification-benchmark/contracts/social_recovery_wallet/solcmc/build/contracts/SocialRecoveryWallet_recov-implies-guardian_v2.sol:139:9:
+    |
+139 |         assert(!guardianToRecovery[a].usedInExecuteRecovery);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+```
+
+Quindi forse non c'entra `keccac256`. E allora niente, non so come fare. Non ha senso.
+
+Con **recov-succeeds**, potrei semplicemente aver fatto un disastro con nomi di variabili e scope. Ok, non era quello il problema, ma di sicuro fa piacere correggerlo. Siamo in negate, quindi aggiungere più require va in negativo. Io rimetto la regola che controlla che tutti i guardiani siano guardiani. Ah ma aspetta. Siamo in negate. Quindi basta una volta che lo fa giusto per renderla positiva. Allora non so.
