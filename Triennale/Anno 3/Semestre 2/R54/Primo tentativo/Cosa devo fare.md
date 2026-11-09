@@ -2633,12 +2633,13 @@ Ho la batteria scarica, non credo di poter fare molto altro. Vediamo che version
 * Can deposit multiple times
 * Can't withdraw
 * Can only withdraw once
-* Può ricevere soldi
 * Tutto revert
 * Revert e fa niente
 * Niente revert e fa niente
-* Niente revert
 * Solo depositor può withdraw
 * Depositor non può withdraw
 * Withdraw withholds un po' di soldi
 * Each address can only withdraw once
+* Withdraw always sends funds to depositor
+
+Il contratto è talmente semplice che è stato facile scriverle tutte. Farò la ground truth più tardi ma anche quella dovrebbe essere semplice con così poche proprietà.
