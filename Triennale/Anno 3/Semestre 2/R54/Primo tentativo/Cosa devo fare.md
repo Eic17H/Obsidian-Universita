@@ -2642,4 +2642,29 @@ Ho la batteria scarica, non credo di poter fare molto altro. Vediamo che version
 * Each address can only withdraw once
 * Withdraw always sends funds to depositor
 
-Il contratto è talmente semplice che è stato facile scriverle tutte. Farò la ground truth più tardi ma anche quella dovrebbe essere semplice con così poche proprietà.
+Il contratto è talmente semplice che è stato facile scriverle tutte.
+
+**no-deposit-twice** e **wd-leq-init-bal** escono giusti per tutte le versioni su SolCMC. **wd-contract-bal** esce perlopiù FN per i motivi già detti. La maggior parte delle versioni corrispondono a tutte le proprietà nonostante siano sbagliate, perché le proprietà non sono sufficienti.
+
+Il problema con Certora è che la variabile `sent` è privata. C'è da usare una hook e una variabile ghost, ma havoc, non so che fare, "the overall withdrawn amount does not exceed the initial deposit" quindi deve essere il conto totale. Non credo di poter risolvere. Certora docs e vedo se si può evitare l'havoc delle variabili ghost. Ok i ghost persistenti non vengono né havocati né revertiti.
+
+No no aspetta, solo alcune versioni danno errore.
+
+```log
+Done 0m
+Compiling versions/DepositERC20_v10.sol...
+Compiling versions/DepositERC20_v10.sol to expose internal function information and local variables...
+Verifier run command:
+ java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_09_22_29_06_3535664ce2
+ERROR: Execution of command "java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_09_22_29_06_3535664ce2" terminated with exitcode 100.
+CRITICAL: [ForkJoinPool-1-worker-6] ERROR ALWAYS - Got exception Could not compile access to contract storage currentContract.sent @ wd-leq-init-bal.spec:4:5 due to missing context information. This is likely caused by failures elsewhere in the tool; please check the Global Problems view and contact Certora for help. when compiling rule Using general requirements
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Got exception Could not compile access to contract storage currentContract.sent @ wd-leq-init-bal.spec:4:5 due to missing context information. This is likely caused by failures elsewhere in the tool; please check the Global Problems view and contact Certora for help. when compiling rule Induction base: After the constructor
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Timed out waiting for background tasks:
+CRITICAL:     
+
+Certora Prover run failed (code 1)
+```
+
+Perché non ha questo problema con la v1 che è identica? Bello non ho capito. Fallisce alla deposit, che non dovrebbe. E non ha il punto esclamativo, sarà per quello. Non capirò come si fa ora.
+
+Sia questo che SRW hanno "variabili ghost" direttamente nel contratto. Secondo me erano per quando non si potevano mettere dal tool. Probabilmente prima della PR mi farà aggiornare questa cosa. Da chiedere a Bartoletti prima o poi o poi o poi.
