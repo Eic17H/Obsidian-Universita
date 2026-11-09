@@ -2625,4 +2625,20 @@ Proviamo SolCMC. Vedo subito che **wd-contract-bal**.sol è sbagliato. Gli error
 
 Con entrambi i tool, **wd-contract-bal** è falso negativo. Sicuramente a causa di seldestruct.
 
-Ho la batteria scarica, non credo di poter fare molto altro.
+Ho la batteria scarica, non credo di poter fare molto altro. Vediamo che versioni posso fare:
+
+* Non reentrant
+* Can never deposit
+* Can deposit exactly twice
+* Can deposit multiple times
+* Can't withdraw
+* Can only withdraw once
+* Può ricevere soldi
+* Tutto revert
+* Revert e fa niente
+* Niente revert e fa niente
+* Niente revert
+* Solo depositor può withdraw
+* Depositor non può withdraw
+* Withdraw withholds un po' di soldi
+* Each address can only withdraw once
