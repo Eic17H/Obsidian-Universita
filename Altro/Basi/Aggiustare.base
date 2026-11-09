@@ -19,9 +19,9 @@ views:
       - file.name
       - file.size
     sort:
-      - property: file.size
-        direction: DESC
       - property: formula.Titolo
+        direction: ASC
+      - property: file.size
         direction: DESC
       - property: file.name
         direction: DESC
