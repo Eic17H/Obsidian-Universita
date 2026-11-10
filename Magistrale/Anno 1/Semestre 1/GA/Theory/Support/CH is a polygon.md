@@ -1,6 +1,7 @@
 ---
 cssclasses:
   - ga
+date: 2026-10-06
 ---
 Before, we need a secret third property:
 3. CH is **==THE==** smallest ==1==.
