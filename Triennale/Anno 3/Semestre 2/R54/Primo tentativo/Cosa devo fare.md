@@ -2786,3 +2786,57 @@ rule always_depletable {
 ```
 
 Questa sarà difficile, va affrontata con la logica formale, e non so se sarà possibile.
+
+Torniamo su questo caro amico adesso che è mezzanotte passata.
+
+Perché **always-depletable** non va bene? Perché non ho trovato un modo per codificare la formalizzazione che ne ho tratto. Adesso ho due opzioni: formalizzarla in modo diverso o riprovare a codificarla.
+
+> any user (EOA) at any time can fire a transaction to receive the full balance of the contract.
+
+Analizziamola pezzo per pezzo.
+
+* Ambiente $\forall e:env\ |$
+	* $\forall e.msg.sender : EOA$ significa che $e.msg.sender=e.tx.origin$
+	* $\forall e.block.timestamp$
+* Può sparare una transazione, $\exists (f, a):(method, args) \ |$
+	* Ricevere l'intero bilancio del contratto $f(e,a) \Rightarrow \Delta e.msg.sender.balance = - \Delta this.balance = this.balance_{before}$
+
+Secondo la ground truth, questa proprietà dovrebbe valere per v1, così come **wd-sender-receive-EOA**. Il fatto è che quella proprietà dà FN per v1 in Certora. In più, io ho scritto sia che il mittente riceve soldi, sia che il contratto perde soldi. Ma il nome dice la seconda, e la descrizione dice la prima. In ogni caso, la seconda mi risulta falsa a causa della selfdestruct, e la prima mi sembra vera ma Certora darebbe falsa.
+
+Vedo perché Certora dà falsa quell'altra proprietà. AH. Sì, è perché devi controllare che il mittente non sia il contratto stesso, altrimenti *certo* che resta uguale prima e dopo la transazione, se manda soldi a sé stesso. Da tenere a mente. Bene allora proviamo così.
+
+Ah aspetta... Come risolvo il problema del $\forall$/$\exists$? Boh, ma ora provo la mia implementazione di prima con queste due correzioni.
+
+Ok ok che strano. Con satisfy dà negativo su v1 e con assert dà positivo. Ah forse non è strano, perché... Ah vuol dire che è sbagliato. Perché satisfy negate dà negativo se esiste un modello sbagliato. Infatti v4 con assert dà positivo. Ok fin qui tutto sbagliato. Provo a rifarlo da capo.
+
+Questo secondo me è un modo molto stupido per farlo:
+
+```CVL
+rule always_depletable {
+    env e;
+    require e.msg.sender == e.tx.origin;
+    require e.msg.sender != currentContract;
+    require e.msg.value == 0;
+
+    method f;
+    calldataarg args;
+
+    mathint senderBalBefore = nativeBalances[e.msg.sender];
+    mathint contractBalBefore = nativeBalances[currentContract];
+
+    f@withrevert(e,args);
+
+    mathint senderBalAfter = nativeBalances[e.msg.sender];
+    require senderBalAfter > senderBalBefore;
+    mathint senderBalDiff = senderBalAfter - senderBalBefore;
+    assert senderBalDiff == contractBalBefore;
+}
+```
+
+Infatti non funziona neanche. Con satisfy certamente funziona, ma non ha senso farlo.
+
+Tra l'altro ho notato che ho scritto male la formalizzazione di prima.$$\forall e:env,\ \exists (f,a):(method,args)\ |\ sender_e=origin_e,\ f(e,a) \Rightarrow \Delta \$_{sender_e}=\$_{this,before}$$Il mio test è:$$\exists e:env,\ \exists (f,a):(method,args)\ |\ sender_e=origin_e,\ f(e,a) \Rightarrow \Delta \$_{sender_e}=\$_{this,before}$$
+
+È sbagliato e basta. Cambia di poco, ma ancora non so come avere $\forall$ ed $\exists$ insieme.
+
+Pensiamoci. $\lnot \forall x.y \leftrightarrow \exists x.\lnot y$, $\lnot \exists x.y \leftrightarrow \forall x . \lnot y$. De Morgan semplicissimo. Il problema è che io voglio $\forall x. \exists y. z$. Come si fa? $\forall x. \lnot \forall y. \lnot z$. Come faccio a mettere un $\lnot$ lì? Non credo di poterlo fare. Allora al contrario. $\lnot \exists x. \forall y. \lnot z$, significa $\forall x.\lnot \forall y. \lnot z$, che significa $\forall x. \exists y. z$, che è ciò che voglio. Ma siamo punto e a capo, come mischio i due quantificatori? Boh.
