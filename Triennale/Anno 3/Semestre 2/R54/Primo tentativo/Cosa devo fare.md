@@ -2840,3 +2840,33 @@ Tra l'altro ho notato che ho scritto male la formalizzazione di prima.$$\forall 
 È sbagliato e basta. Cambia di poco, ma ancora non so come avere $\forall$ ed $\exists$ insieme.
 
 Pensiamoci. $\lnot \forall x.y \leftrightarrow \exists x.\lnot y$, $\lnot \exists x.y \leftrightarrow \forall x . \lnot y$. De Morgan semplicissimo. Il problema è che io voglio $\forall x. \exists y. z$. Come si fa? $\forall x. \lnot \forall y. \lnot z$. Come faccio a mettere un $\lnot$ lì? Non credo di poterlo fare. Allora al contrario. $\lnot \exists x. \forall y. \lnot z$, significa $\forall x.\lnot \forall y. \lnot z$, che significa $\forall x. \exists y. z$, che è ciò che voglio. Ma siamo punto e a capo, come mischio i due quantificatori? Boh.
+
+Finora ho visto cosa volevo dire, ma non so come dirlo. Andiamo nell'altra direzione. Prendiamo tutto ciò che ho a disposizione, e vediamo cosa ci permette di dire.
+
+* `require x; assert y;` $\forall m\ |\ x \Rightarrow y$
+* `require x; satisfy y;` $\exists m\ |\ x \Rightarrow y$
+* `negate; require x; assert y;` $\exists m\ |\ x \Rightarrow \lnot y$
+* `negate; require x; satisfy y;` $\forall m\ |\ x \Rightarrow \lnot y$
+
+Non so come formalizzarlo, ma la `negate` fa anche un'altra cosa che da quello che ho scritto non è evidente: se $m \to \lnot x$, senza la negate il test è positivo, con la negate il test è negativo. Quindi la negate aggiunge una sorta di $\land(\exists x. m \land x)$, mentre senza la negate abbiamo $\lor \lnot(\exists x.m \land x)$, che ovviamente segue da De Morgan. E la seconda si può riscrivere come $\lor(\forall x.m \to \lnot x)$. Quindi riscriviamo
+
+* `require x; assert y;` $(\forall m\ |\  x \Rightarrow y)\lor(\forall x\ |\ m \to \lnot x)$
+* `require x; satisfy y;` $(\exists m\ |\ x \Rightarrow y)\lor(\forall x\ |\ m \to \lnot x)$
+* `negate; require x; assert y;` $(\exists m\ |\ x \Rightarrow \lnot y)\land(\exists x\ |\  m \land x)$
+* `negate; require x; satisfy y;` $(\forall m\ |\ x \Rightarrow \lnot y)\land(\exists x\ |\  m \land x)$
+
+Tecnicamente... No aspetta, ho sbagliato. Perché questi vanno combinati. Perché per esempio nell'ultima dovrei scrivere $\forall m \exists x \ |\ \cdots$. quindi tecnicamente ho trovato un modo per combinare i quantificatori, ma quell'$m$ è un modello. Un modello da cos'è formato? Da valori delle variabili, che sono i nostri $e$, $f$ ed $a$, oltre alle altre variabili.
+
+Ma poi ho anche fatto un casino con l'overloading dei simboli, sto usando $x$ sia come variabile che come statement. Non credo abbia molto senso, ho certamente fatto passi avanti ma mi sembra tutto inutile.
+
+Ma proviamoci comunque. Io voglio questo:$$\forall e \exists (f,a) \ |\ f(e,a) \Rightarrow \lnot revert \land ok(\Delta \$)$$
+Dove $ok()$ è una funzione $int \to bool$. Questa formula che ho ottenuto è di una delle forme di cui sopra? Sì, se le avessi scritte bene, sarebbe negate/satisfy, dove $x = (f,a)$ e $y = \lnot ok(\Delta \$)$, credo. Questo significa:
+* `negate`
+* `f(e,a); require !lastReverted` no non ha senso
+
+Ecco che il problema di mischiare variabili e statements si fa sentire. Perché io voglio davvero *richiedere* che non reverti? Immaginiamo di sì, domani testo, allora avremmo:
+* `negate`
+* `f@withrevert(e,a); require !lastReverted;`
+* `satisfy senderBalDiff != contractBalBefore;`
+
+Mi sembra molto strano. No secondo me non funziona. Secondo me se lavoro all'indietro e provo a formalizzare questo test diventa diverso da quello con cui sono partito. Però quest'idea di trovare una forma canonica per le proprietà e ricondurla a uno di quattro tipi di test mi piace molto.
