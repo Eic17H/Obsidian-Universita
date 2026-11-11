@@ -1,11 +1,19 @@
-/*
+/* Native tables retain Obsidian's own scrolling and layout. */
+.sheets-table-scroll {
+	max-width: 100%;
+	overflow-x: auto;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+/* Cells consumed by a merge (`<`/`^`) or the vertical-header marker column. */
+.sheets-hidden-cell {
+	display: none;
+}
 
-If your plugin does not need CSS, delete this file.
-
-*/
+/* Row-header cells produced by a vertical-header (all-dashes) column. */
+.sheets-row-header {
+	font-weight: var(--font-semibold, 600);
+	background-color: var(--background-secondary);
+}
 
 .obs-sheets_error {
 	color: rgb(255, 100, 100);
