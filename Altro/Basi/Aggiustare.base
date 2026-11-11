@@ -30,6 +30,6 @@ views:
       - property: file.ctime
         direction: ASC
     columnSize:
-      formula.Titolo: 100
+      formula.Titolo: 78
       file.name: 195
       file.size: 128
