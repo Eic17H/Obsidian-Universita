@@ -2870,3 +2870,82 @@ Ecco che il problema di mischiare variabili e statements si fa sentire. Perché 
 * `satisfy senderBalDiff != contractBalBefore;`
 
 Mi sembra molto strano. No secondo me non funziona. Secondo me se lavoro all'indietro e provo a formalizzare questo test diventa diverso da quello con cui sono partito. Però quest'idea di trovare una forma canonica per le proprietà e ricondurla a uno di quattro tipi di test mi piace molto.
+
+### 11/11
+
+Un po' di rigore. In `require x`, `x` è un predicato. Invece in $\exists x$, $x$ è una variabile.
+
+In realtà devo pensare che `mathint x; require p(x);` significhi $\forall x\ |\ p(x)$. Questo ha già più senso. Somiglia al <span class="logica">[[Equivalenza dei calcoli|teorema di equivalenza dei calcoli]]</span>, dove dovevamo far corrispondere le strutture dati tra i due linguaggi formali.
+
+Adesso abbiamo il quantificatore universale. Troviamo il quantificatore esistenziale.
+
+Una specifica tipica è `TYPE x; require p(x); TYPE y; assert q(y);`, che significa $\forall x\ |\ p(x),\ \exists y\ |\ q(y)$. Tra l'altro non ho capito bene come scrivere "tale che" in simboli, non è possibile che debba scrivere spazi espliciti in LaTeX, di solito se scrivo giusto me lo formatta giusto. E non ho scritto i tipi nella notazione logica perché mi sembra ingombrante e meno leggibile.
+
+Fatto sta che abbiamo trovato i quantificatori che cercavamo. Prendiamo la stessa formula e vediamo come cambia se mettiamo `negate` e `satisfy`:
+
+|          | `assert`                          | `satisfy` |
+| -------- | --------------------------------- | --------- |
+|          | $\forall x.p(x),\ \exists y.q(y)$ |           |
+| `negate` |                                   |           |
+
+Non si può scrivere $|$ nelle tabelle perché è anche una "keyword" delle tabelle.
+
+No ma ho sbagliato. Ho sbagliato. Perché non è vero quello che ho detto.
+
+Prima di tutto, è incompleto. Perché fa sembrare che $x$ e $y$ debbano sempre essere distinti, quando in realtà mi conviene dire che ho un modello $m$ che ha membri $x$ e $y$. Tecnicamente tutto quello che voglio può essere incluso in $p()$ e $q()$, ma sto solo offuscando il significato di quello che scrivo.
+
+L'altro problema è che quell'$\exists$ è sbagliato. Perché ovviamente quell'`assert` richiede che **tutte** le coppie $(x,y)$ soddisfino $q()$. Quindi in realtà abbiamo che `require p(m); assert q(m);` significa $\forall m.p(m),\ q(m)$. Chiaramente con la condizione che $\{m:p(m)\} = \emptyset$ è una condizione valida. Con la satisfy e la negate abbiamo le trasformazioni che conosciamo.
+
+Non abbiamo risolto nulla. Io ci provo. Provo a chiedere a un LLM.
+
+> I'm trying to write Certora rules. I'm able to write the rules in propositional logic, but I don't know how to translate them into Certora rules. My tool allows me to add the "negate" modifier to a rule, such that I may write the rule in a way that a certain contract yields negative, but the rule is tagged negative, so the contract is considered to pass the test.
+> I have figured out this, for a certain model m:
+> require p(m); assert q(m); - for all m such that p(m), q(m) (if p(m) is unsatisfiable, pass the test)
+> require p(m); satisfy q(m); - exists m such that p(m), q(m) (if p(m) is unsatisfiable, pass the test)
+> negate; require p(m); assert q(m); - exists m such that p(m), not q(m) (if p(m) is unsatisfiable, fail the test)
+> negate; require p(m); satisfy q(m); - for all m such that p(m), not q(m) (if p(m) is unsatisfiable, fail the test)
+> I want to use an arbitrary combination of for all and exists for variables in the model. For example "for all environments such that timestamp > CONST_X, exists sender Y, such that ...".
+
+In effetti non so neanche come formulare quello che voglio. Io ci provo. No non ha capito niente, sta usando i quantificatori interni a Certora intesi come le regole `forall` ed `exists`, ma quelli richiedono di srotolare i loop e non è ciò che cerco, stai spostando il carico dal solver a un loop che è esattamente ciò che non cerchiamo, credo, forse, boh.
+
+Però se non trovo un'alternativa uso quelli.
+
+Tornando a noi, cosa sto provando a fare?$$\forall e.eoa(e) \exists (f,a) \ |\ f(e,a) \Rightarrow \lnot revert \land ok(\Delta \$)$$Dove:$$ok(x) \leftrightarrow x = this.$_{before} \qquad eoa(x)\leftrightarrow e.msg.sender = e.tx.origin$$
+Però non è completo e non so come inserire l'altra cosa. Scrivo bene:
+* EOA
+* Esiste un metodo e degli argomenti
+
+No non lo so. Aspetta. Se io genero un $(f,a)$ arbitrario, e richiedo che *non* permetta di svuotare il conto. Allora se **no**. Niente.
+
+Filtro. Una require è un filtro. Io voglio che per ogni utente esista un metodo che permetta di fare quella cosa.
+
+Se io genero un metodo arbitrario, allora l'assert mi richiede che $\forall (f,a)$. Io voglio $\exists (f,a)$. Se io metto una require, allora mi fa $(\lnot exists (f,a).p(f,a)) \lor (\forall (f,a).p(f,a),\ q(f,a))$. Che non è comunque ciò che voglio. Se nego tutto? $(exists(f,a).p(f,a)) \land (\exists (f,a),\ p(f,a) \land \lnot q(f,a))$. E tecnicamente io *potrei* mettere il mio $\forall$ dentro $q()$, però nel pratico non posso, perché dopo 64 loop il mio computer si arrende.
+
+Perché il mio vecchio approccio di fare probe e asser mi trovava $\exists (f,a).\forall(e),\ p(f,a,e)$. Ma siamo sicuri? Perché questo mi sta mischiando require e assert. Secondo me sto sbagliando.
+
+Assumiamo per assurdo che sia giusto. Cos'ho fatto con probe e asser? No, sto mischiando i due tentativi.
+
+Provo a scrivere qualcosa, e vedo cosa significa. Come si usa `exists`? Perché realisticamente ci sono pochi metodi, quindi non dovrei avere il problema dei loop. Non c'è bisogno di mettere un "tale che", è un semplice $\exists n.p(n)$. Posso benissimo usare quello.
+
+Non credo di poter mettere una chiamata dentro `exists`.
+
+Bene. Ho scritto una cosa estremamente stupida. Perché questo funzionerebbe in un loop di un linguaggio imperativo.
+
+```CVL
+assert exists method f. exists calldataarg a.
+	((true || (f@withrevert(e,a) at lastStorage)) => ((nativeBalances[e.msg.sender] - senderBalBefore) == contractBalBefore));
+```
+
+O, come l'avevo scritto prima,
+```CVL
+assert exists method f. exists calldataarg a.
+	((true || f(e,a)) => ((nativeBalances[e.msg.sender] - senderBalBefore) == contractBalBefore));
+```
+
+Ok in effetti il problema è che `exists calldataarg` ha troppi valori da controllare.
+
+Ma a prescindere è un errore di sintassi. Niente.
+
+Non so come scriverlo, basta.
+
+Ma poi sto sovrageneralizzando, posso provare ad assumere che il metodo sia lo stesso per tutti, e che l'argomento sia lo stesso per tutti. Ma non lo farò adesso. Tornerei su `withdraw`. Secondo me il mio approccio probe/asser può funzionare, anche se non corrisponde astrattamente alla specifica. Sarebbe:$$\exists n.\forall eoa,\ wd(eoa,n) \to ok(\Delta\$)$$Perché posso dire che è $\forall$? Boh perché sì boh basta.
