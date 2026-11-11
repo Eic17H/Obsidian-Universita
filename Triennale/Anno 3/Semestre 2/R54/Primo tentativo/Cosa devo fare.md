@@ -2949,3 +2949,147 @@ Ma a prescindere è un errore di sintassi. Niente.
 Non so come scriverlo, basta.
 
 Ma poi sto sovrageneralizzando, posso provare ad assumere che il metodo sia lo stesso per tutti, e che l'argomento sia lo stesso per tutti. Ma non lo farò adesso. Tornerei su `withdraw`. Secondo me il mio approccio probe/asser può funzionare, anche se non corrisponde astrattamente alla specifica. Sarebbe:$$\exists n.\forall eoa,\ wd(eoa,n) \to ok(\Delta\$)$$Perché posso dire che è $\forall$? Boh perché sì boh basta.
+
+#### Call wrapper
+
+Non ne posso più di Deposit.
+
+Questo contratto è semplicissimo. Non so come sia possibile dover cambiare qualcosa per portarlo agli standard di Bank.
+
+È un contratto che ha un solo metodo, `callwrap`, il cui scopo è di fare da tramite per le chiamate esterne.
+
+Proprietà:
+
+* **bal**: il bilancio del contratto non cambia dopo `callwrap`. $cw \Rightarrow \lnot \Delta \$$
+* **stor**: lo storage (variabili) del contratto non cambia dopo `callwrap`. $cw \Rightarrow \lnot \Delta stor$
+
+Immagino che tutti i test siano già presenti e funzionanti.
+
+```log
+ERROR:root:versions/Caller_v1.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v1.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v3.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v3.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v1.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v1.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v3.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v3.sol contract name.
+ERROR:root:versions/Caller_v4.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v4.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v4.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v4.sol contract name.
+ERROR:root:versions/Caller_v2.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v2.sol contract name.
+ERROR:root:versions/Caller_v5.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v2.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v5.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v2.sol contract name.
+ERROR:root:versions/Caller_v5.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v5.sol contract name.
+```
+
+Queste naming conventions a caso di questo script python insopportabile, come ti pare. Il file si deve chiamare come il contratto, o almeno in modo simile.
+
+Interessante, i test non passano tutti. Molto strano, mi sembra estremamente semplice.
+
+| SolCMC |     <     |    <     |      <       |     <     |    <     | Certora |    <    |     <     |
+| :----: | :-------: | :------: | :----------: | :-------: | :------: | :-----: | :-----: | :-------: |
+| **Z3** |     <     |    <     | **Eldarica** |     <     |    <     |         |    <    |     <     |
+|        |  **bal**  | **stor** |              |  **bal**  | **stor** |         | **bal** | **stor**  |
+| **v1** |    TN!    |   TP!    |    **v1**    |    TN!    |   TP!    | **v1**  |   TN    |    TP!    |
+| **v2** | ==🔴FP!== |   TP!    |    **v2**    | ==🔴FP!== |   TP!    | **v2**  |   TN    |    TP!    |
+| **v3** |    TN!    |   TN!    |    **v3**    |    TN!    |   TN!    | **v3**  |   TN    | ==🔴FP!== |
+| **v4** |    TN!    |   TN!    |    **v4**    |    TN!    |   TN!    | **v4**  |   TN    | ==🔴FP!== |
+| **v5** | ==🔴FP!== |   TP!    |    **v5**    | ==🔴FP!== |   TP!    | **v5**  |   TN    |    TP!    |
+Vediamo cosa fa ciascuna versione:
+
+1. Rientrante
+2. Non rientrante
+3. Rientrante, con un nuovo metodo rientrante
+4. Non rientrante, con un nuovo metodo rientrante
+5. Non rientrante, con un nuovo metodo non rientrante
+
+Il nuovo metodo è `modifystorage`, che prende in input un dato e lo sovrascrive al dato già presente.
+
+Cos'hanno v2 e v5 in comune? Sono completamente non rientranti. A quanto pare, questo basta per far credere a SolCMC che il loro bilancio non possa cambiare. In realtà può comunque cambiare a causa della chiamata esterna, come nota Certora.
+
+Cos'hanno v3 e v4 in comune? `modifystorage` è rientrante, che permette di eseguire `callwrap` durante `modifystorage`, che permette a `data` di cambiare durante `callwrap`. Questa è una limitazione di Certora già nota dagli altri contratti, non so se posso farci qualcosa.
+
+Vediamo **bal**.sol. Molto semplice, confronta il bilancio prima e dopo la chiamata. Onestamente non so cosa cambiare.
+
+Doveva essere semplice. Doveva essere semplicissima. Com'è possibile. Forse se faccio i test Certora coi hook funziona, devo vedere come interagiscono con la rientranza.
+
+Ha più senso provare Lottery.
+
+#### Lottery
+
+Oddio ha tantissime proprietà e tantissime versioni.
+
+È molto interessante come contratto. È una lotteria appunto, ma gli smart contract sono deterministici e usare fonti esterne di casualità non è abbastanza sicuro per uno smart contract, quindi si usa un metodo deterministico per usare i due partecipanti come RNG.
+
+Ciascun giocatore sceglie un segreto e ne invia l'hash (trauma da SRW), insieme a una somma di denaro uguale per entrambi i giocatori. Una volta che il contratto ha entrambe le hash, i giocatori inviano i segreti. Il vincitore è scelto in funzione dei segreti.
+
+Il problema ovviamente è che il funzionamento del contratto si basa sul comportamento dei giocatori, che possono non seguire le regole. Quindi bisogna punire i giocatori disonesti, in modo tale che un giocatore onesto abbia sempre l'esperienza che l'altro giocatore sia onesto, anche se non lo è.
+
+Le regole sono che:
+
+1. Il giocatore 0 invia soldi e hash.
+2. Il giocatore 1 invia soldi e hash.
+3. G0 rivela il segreto.
+4. G1 rivela il segreto.
+5. I soldi vengono inviati.
+
+Con l'aggiunta che il turno di ciascun giocatore ha una durata massima. Se un giocatore fa scadere il tempo, l'altro giocatore riceve tutti i soldi presenti nel contratto. Per esempio, tra il passo 1 e 2, se G1 aspetta troppo allora G0 si riprende i soldi. Sono tre attese in totale, dalla durata di `DELTA_TIME` e implementata coi timestamp `end_join`, `end_reveal0` ed `end_reveal1` (il tempo parte alla costruzione del contratto). Come con gli altri contratti, il riscatto dei soldi al timeout è implementato come metodo che va chiamato, però può essere chiamato da chiunque.
+
+La descrizione del contratto non li menziona, compaiono a caso nelle descrizioni delle proprietà, ma il contratto è implementato come macchina a transizione di stato. Gli stati, in ordine, sono `Join0`, `Join1`, `Reveal0`, `Reveal1`, `Win`, `End`. Si parte dallo stato `Join0`, e il passo 1 di prima (la funzione `join0()`) ci porta a `Join1`.
+
+È un contratto interessante. Le proprietà sono tante ma perché sono presenti molte variazioni della stessa proprietà.
+
+
+| Proprietà                                             | Gruppo                                                                                                                                                                                                                                                                                                                                             | Individuale                            |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| **deadlock-freedom-join1**(-eoa)                      | Nello stato `___`, se il contratto ha soldi, la prossima transazione può essere una transazione che svuota il bilancio.                                                                                                                                                                                                                            | `Join1`                                |
+| **deadlock-freedom-reveal0**(-eoa)                    | ^                                                                                                                                                                                                                                                                                                                                                  | `Reveal0`                              |
+| **deadlock-freedom-reveal1**(-eoa)                    | ^                                                                                                                                                                                                                                                                                                                                                  | `Reveal1`                              |
+| **deadlock-freedom-win**(-eoa)                        | ^                                                                                                                                                                                                                                                                                                                                                  | `Win`                                  |
+| **deadlock-freedom-join1-witness**(-eoa)              | Dopo la chiamata al metodo `___` che non reverta, il contratto non ha soldi.                                                                                                                                                                                                                                                                       | `redeem0_nojoin1()`                    |
+| **deadlock-freedom-reveal0-witness**(-eoa)            | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem1_noreveal0()`                  |
+| **deadlock-freedom-reveal1-witness**(-eoa)            | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem0_noreveal1()`                  |
+| **deadlock-freedom-win-witness**(-eoa)                | ^                                                                                                                                                                                                                                                                                                                                                  | `win()`                                |
+| **honest-player-profitability-eoa-redeem0-nojoin1**   | Gioc. EOA, in uno stato `___` raggiungibile, dopo la scadenza di quello stato, chiunque può chiamare un metodo che non reverta, che aumenta ($>0$) il bilancio di `___` di esattamente \_\_\_, svuota il bilancio del contratto, e porta lo stato ad `End`.                                                                                        | `Join1`, `player0`, la sua scommessa   |
+| **honest-player-profitability-eoa-redeem0-noreveal1** | ^                                                                                                                                                                                                                                                                                                                                                  | `Reveal1`, `player0`, i soldi in gioco |
+| **honest-player-profitability-eoa-redeem1-noreveal0** | ^                                                                                                                                                                                                                                                                                                                                                  | `Reveal0`, `player1`, i soldi in gioco |
+| **no-incentives-to-abort-eoa**                        | Gioc. EOA, dopo una transazione `reveal0` che non reverta, la prossima transazione può essere `___` e dare i soldi in gioco a `player0`.                                                                                                                                                                                                           | (qualunque)                            |
+| **no-incentives-to-abort-witness-eoa**                | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem0_noreveal1()`                  |
+| **owner-impartiality-eoa**                            | Gioc. EOA, in qualunque stato in cui il giocatore non è determinato, per ogni transazione il cui mittente non è un giocatore, se questa transazione cambia lo storage del contratto, allora una transazione identica di cui cambia solo il mittente, per qualunque mittente EOA, nello stesso stato, deve produrre le stesse modifiche allo stato. |                                        |
+| **player1-should-match-bet**                          | Se una transazione `join1` non reverta, allora `msg.value` è lo stesso della scommessa di `player0`.                                                                                                                                                                                                                                               |                                        |
+| **redeem-before-deadline-reverts-nojoin1**            | Una transazione `___` reverta se il timestamp è $\leq$ `___`.                                                                                                                                                                                                                                                                                      | `redeem0_nojoin1()`, `end_join`        |
+| **redeem-before-deadline-reverts-noreveal0**          | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem1_noreveal0()`, `end_reveal0`   |
+| **redeem-before-deadline-reverts-noreveal1**          | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem0_noreveal1`, `end_reveal1`     |
+| **redeem0-noreveal1-fairness-eoa**                    | Gioc. EOA, se lo stato è `Reveal1`, se `compute_winner()` si valuta a `player0`, allora una `redeem0_noreveal1()` che non reverta aumenta ($>0$) il bilancio di `player0`, non cambia il bilancio di `player1`, e diminuisce ($>0$) il bilancio del contratto.                                                                                     |                                        |
+| **reveal0-reverts-after-deadline**                    | Una transazione `___` reverta dopo `___`.                                                                                                                                                                                                                                                                                                          | `reveal0()`, `end_reveal0`             |
+| **reveal1-reverts-after-deadline**                    | ^                                                                                                                                                                                                                                                                                                                                                  | `reveal1()`, `end_reveal1`             |
+| **status-irreversible**                               | Le transizioni di stato vanno in ordine:`Join0` < `Join1` < `Reveal0` < `Reveal1` < `Win` < `End`.                                                                                                                                                                                                                                                 |                                        |
+| **win-pays-fair-winner-eoa**                          | Gioc. EOA, in uno stato `Win` raggiungibile, una transazione `win()` che non reverta deve dare al giocatore restituito da `compute_winner()` tutti i soldi in gioco.                                                                                                                                                                               |                                        |
+| **win-transaction-env-independent**                   | Due transazioni `win()` che non revertano che partono dallo stesso stato del contratto dovrebbero avere lo stesso vincitore.                                                                                                                                                                                                                       |                                        |
+| **winner-computation-env-independent**                | Con gli stessi input, la funzione di vittoria dà lo stesso output a prescindere dall'env.                                                                                                                                                                                                                                                          |                                        |
+| **wrong-preimage-reverts-p0**                         | Se una transazione `___(s)` non reverta, allora `s` è la preimmagine dell'hash committata da `___`.                                                                                                                                                                                                                                                | `reveal0()`, `player0`                 |
+| **wrong-preimage-reverts-p1**                         | ^                                                                                                                                                                                                                                                                                                                                                  | `reveal1()`, `player1`                 |
+Alcune proprietà hanno anche una versione **-eoa**, che si applica solo se i giocatori sono EOA.
+
+Anche con questa riduzione, ci sono comunque 14 macroproprietà.
+
+Sarà certamente scomodo lavorarci.
+
+Vedo che Certora dà FN su **win-pays-fair-winner-eoa**. Il test è molto semplice. Vedo che fa `nativeBalances[expected_winner] == pre_bal + pre_pot`, non credo che Certora faccia overflow ma è meglio controllare. Vedo anche `compute_winner(e, p0, p1, secret0(e), secret1(e))`, quindi mi chiedo se ci sia un problema con l'hash.
+
+Per l'hash, per fortuna qui abbiamo una funzione Solidity di hashing chiamabile da Certora. Ok `secret0()` è il getter della variabile `secret0`. Boh. Dovrò girare il test e vedere il report, ma non lo farò ora.
+
+Cosa c'è da fare domani:
+* Controllare **win-pays-fair-winner-eoa**.spec.
+* Leggere le 770 righe di ground truth coi commenti..
+* Familiarizzare con le 22 versioni.
+* Provare a scrivere almeno 5 versioni (le mie solite).
+* Magari aggiungere commenti alla ground truth per almeno v1, perché non capisco.
+
+Ma poi io non so se Lottery va aggiustato o no. Perché magari il ✅ ce l'hanno solo i contratti che hanno anche Halmos e Forge. No, ok, Vault ha il ✅ ma ha solo Certora e SolCMC. Rassicurante, così non scopro a caso di aver fatto lavoro a vuoto.
