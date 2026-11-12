@@ -2,6 +2,7 @@
 cssclasses:
   - r54
 ---
+#hidden
 ## Primo obiettivo
 
 Rendi escrow, che è vecchio, agli standard di bank
@@ -3093,3 +3094,14 @@ Cosa c'è da fare domani:
 * Magari aggiungere commenti alla ground truth per almeno v1, perché non capisco.
 
 Ma poi io non so se Lottery va aggiustato o no. Perché magari il ✅ ce l'hanno solo i contratti che hanno anche Halmos e Forge. No, ok, Vault ha il ✅ ma ha solo Certora e SolCMC. Rassicurante, così non scopro a caso di aver fatto lavoro a vuoto.
+
+### 12 nv
+
+Vediamo come funziona **win-pays-fair-winner-eoa**.spec. Vedo già una custom strana:
+```CVL
+/// @custom:run certoraRun versions/Lottery_v1.sol:Lottery versions/lib/EOA0.sol versions/lib/EOA1.sol --verify Lottery:certora/win-pays-fair-winner-eoa.spec --link Lottery:player0=EOA0 --link Lottery:player1=EOA1 --optimistic_hashing --optimistic_loop
+```
+
+In particolare mi sembra strana `--link`.
+
+Il test controlla, nel... Eccoci. La definizione dice ***reachable** state*, ma Certora parte da uno stato arbitrario. Controlla solo che `status == Status.Win`. Allora non lo so.
