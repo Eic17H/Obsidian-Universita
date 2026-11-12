@@ -3105,3 +3105,56 @@ Vediamo come funziona **win-pays-fair-winner-eoa**.spec. Vedo già una custom st
 In particolare mi sembra strana `--link`.
 
 Il test controlla, nel... Eccoci. La definizione dice ***reachable** state*, ma Certora parte da uno stato arbitrario. Controlla solo che `status == Status.Win`. Allora non lo so.
+
+Vediamo la ground truth per v1. Metto io le giustificazioni che sembrano giuste.
+
+* **deadlock-freedom-join1** N: I metodi chiamabili in `Join1` sono `join1()` e `redeem0_nojoin1()`. `join1()` non svuota il bilancio, e `player0` può rifiutare il pagamento di `redeem0_nojoin1()`.
+- **deadlock-freedom-join1-eoa** P: `player0` è un utente e riceverà i soldi.
+- **deadlock-freedom-join1-witness** N: `player0` può rifiutare il pagamento. 
+- **deadlock-freedom-join1-witness-eoa** P: `player0` è un utente e riceverà i soldi.
+- ... sono tutti uguali
+- **honest-player-profitability-eoa...** P: Il giocatore è un utente.
+- **no-incentives-to-abort(-witness)-eoa** P: Sì perché quando scade il tempo funziona così.
+- **owner-impartiality-eoa** P: Sì perché non c'è un metodo che dà poteri speciali all'owner.
+- **player1-should-match-bet** P: Ovvio 
+- **redeem-before-deadline-reverts-...** P: Ovvio  
+- **redeem0-noreveal1-fairness-eoa** P: sì dai
+- **reveal\_-reverts-after-deadline**: molto letterale
+- **status-irreversible**:
+- **win-pays-fair-winner-eoa**:
+- **win-transaction-env-independent**:
+- **winner-computation-env-independent**: 
+- **wrong-preimage-reverts-p0**:
+- **wrong-preimage-reverts-p1**:
+
+Boh basta, ce ne sono troppi semplici. Metto un po' di commenti a quelli che sono falsi per v1. Ok erano pochi.
+
+Il commento per `deadlock-freedom-reveal1-eoa,v6` mi sembra strano, da rivedere.
+
+Vediamo le versioni.
+
+
+| Versione | Gruppo                                                                         | Individuale           |
+| -------- | ------------------------------------------------------------------------------ | --------------------- |
+| 1        | Normale                                                                        | <                     |
+| 2        | `___` invia metà dei soldi.                                                    | `redeem0_nojoin1()`   |
+| 3        | ^                                                                              | `redeem1_noreveal0()` |
+| 4        | ^                                                                              | `redeem0_noreveal1()` |
+| 5        | ^                                                                              | `win()`               |
+| 6        | `redeem0_noreveal1` paga `player1` anziché `player0`.                          | <                     |
+| 7        | `___` non controlla lo stato.                                                  | `join1()`             |
+| 8        | ^                                                                              | `reveal0()`           |
+| 9        | ^                                                                              | `reveal1()`           |
+| 10       | ^                                                                              | `win()`               |
+| 11       | Il vincitore dipende dal timestamp.                                            | <                     |
+| 12       | `___` non controlla la preimmagine.                                            | `reveal0()`           |
+| 13       | ^                                                                              | `reveal1()`           |
+| 14       | Il proprietario può decidere il vincitore.                                     | <                     |
+| 15       | `redeem0_noreveal1()` controlla il timestamp `end_join` anziché `end_reveal1`. | <                     |
+| 16       | `___` non aggiorna lo stato.                                                   | `reveal0()`           |
+| 17       | ^                                                                              | `reveal1()`           |
+| 18       | La funzione di riscatto paga `msg.sender` (?).                                 | <                     |
+| 19       | `join1()` non controlla che la bet sia uguale.                                 | <                     |
+| 20       | `win()` paga `msg.sender`.                                                     | <                     |
+| 21       | `___` non ha un limite di tempo.                                               | `reveal0()`           |
+| 22       | ^                                                                              | `reveal1()`           |
