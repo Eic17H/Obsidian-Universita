@@ -1408,7 +1408,7 @@ function invariant(address _user) public payable {
 }
 ```
 
-```
+```log
 ERROR:root:Preghost injection failed: ../contracts/crowdfund/solcmc/donation-dec-onlyif-reclaim.sol: ../contracts/crowdfund/versions/Crowdfund_v14.sol: function clawback.
 ```
 
@@ -1416,7 +1416,7 @@ ERROR:root:Preghost injection failed: ../contracts/crowdfund/solcmc/donation-dec
 
 Hai presente quando ho messo view a tutto? Ecco c'era un motivo se non c'era.
 
-```
+```log
    |
 82 |             arbitrate(dst);
    |             ^^^^^^^^^^^^^^
@@ -3133,7 +3133,6 @@ Il commento per `deadlock-freedom-reveal1-eoa,v6` mi sembra strano, da rivedere.
 
 Vediamo le versioni.
 
-
 | Versione | Gruppo                                                                         | Individuale           |
 | -------- | ------------------------------------------------------------------------------ | --------------------- |
 | 1        | Normale                                                                        | <                     |
@@ -3158,3 +3157,32 @@ Vediamo le versioni.
 | 20       | `win()` paga `msg.sender`.                                                     | <                     |
 | 21       | `___` non ha un limite di tempo.                                               | `reveal0()`           |
 | 22       | ^                                                                              | `reveal1()`           |
+### 13 nov
+
+Vediamo cosa devo scrivere a Bartoletti. Le cose dell'altra volta più cose nuove.
+
+> Buongiorno, ho dubbi sull'interpretazione di alcune proprietà.
+> 
+> HTLC:
+> * **reveal-timeout-after-isCommitted**: "`reveal()` and `timeout()` can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato committed prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
+> 
+> Vesting Wallet:
+> * **rel-strict-incr**: "\[...\] the releasable amount is strictly increasing \[...\]" - Una funzione da interi a interi è sempre una funzione costante a tratti, poiché i risultati delle divisioni vengono troncati, perciò esistono coefficienti angolari che fanno sì che due valori diversi in input risultino nello stesso output (perché se la funzione fosse continua, la differenza negli output sarebbe minore di 1). Tali funzioni dovrebbero essere considerate strettamente crescenti come secondo la ground truth? Ho scritto un test che compensa il problema se la funzione è lineare.
+> * **rel-grows-linear**: "releasable grows linearly \[...\]: two successful consequent calls to `releasable` differ by c\*t, where t is the timestamp difference between the two calls, and c is a fixed constant for the contract" - Stesso problema, anche qui il mio test compensa il troncamento con del margine di errore e corrisponde alla ground truth, dovrei usare la definizione esatta o accettare del margine di errore?
+
+Ok in realtà le altre cose sono le variabili ghost incluse nel contratto che potrebbero essere un rimasuglio di una versione vecchia del progetto, e il fatto che la cosa che controlla che `assert` e `satisfy` non siano nella stessa regola è rotta.
+
+Però in effetti controllo che esista almeno un esempio di un file `.spec` con più di una regola. Ok non c'è un singolo file che contiene due volte la parola `rule`, immagino di non dover usare due regole nella stessa spec.
+
+Vediamo le proprietà che compaiono solo vere o solo false
+
+- **deadlock-freedom-join1-witness** - N
+- **deadlock-freedom-reveal0-witness** - N
+- **deadlock-freedom-reveal1-witness** - N
+- **deadlock-freedom-win-witness** - N
+- **redeem-before-deadline-reverts-nojoin1** - P
+- **redeem-before-deadline-reverts-noreveal0** - P
+
+Per gli **-witness**, posso creare una versione che richiede che il proprietario del contratto sia un EOA, e se il pagamento in quei metodi fallisce, i soldi vanno al proprietario. Oppure semplicemente si richiede che i giocatori siano EOA. Possiamo farlo perché tanto devono joinare.
+
+In realtà a SolCMC questa cosa non importa, dà comunque negativo.
