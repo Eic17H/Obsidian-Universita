@@ -11,6 +11,7 @@ Certora è un tool per la verifica formale che converte le funzioni di Solidity 
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Certora/Tipi|Tipi]]
 * [[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Certora/Formalità|Formalità]]
 
+Altri link: [[Keccac256]]
 ## Consigli
 
 Importante ricordare di controllare che un valore intero di Certora entri nella variabile Solidity con cui va confrontata. Quindi se un `mathint` di Certora rappresenta un `uint64` di Solidity, bisogna fare `require ... < 2^64`.

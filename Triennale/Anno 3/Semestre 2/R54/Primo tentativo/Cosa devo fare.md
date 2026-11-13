@@ -3186,3 +3186,7 @@ Vediamo le proprietà che compaiono solo vere o solo false
 Per gli **-witness**, posso creare una versione che richiede che il proprietario del contratto sia un EOA, e se il pagamento in quei metodi fallisce, i soldi vanno al proprietario. Oppure semplicemente si richiede che i giocatori siano EOA. Possiamo farlo perché tanto devono joinare.
 
 In realtà a SolCMC questa cosa non importa, dà comunque negativo.
+
+Le altre due proprietà sono facilissime da falsificare, è quasi inutile testarne i test, sono molto letterali.
+
+Ok, è stato utile fare la v23, perché mi rendo conto che i test Certora delle proprietà **-witness**, come al solito, non partono da uno stato valido, quindi anche se il contratto non permette giocatori non EOA, il test li considera comunque. Sicuramente se mettessi il check in ogni metodo funzionerebbe. E mi sa che lo faccio. Eh ma non si può, io faccio `msg.sender == tx.origin` per controllare che il *sender* sia un EOA, ma non credo di poterlo fare con terze parti. C'era la tecnica di controllare che il suo codice abbia lunghezza nulla, ma non è infallibile.

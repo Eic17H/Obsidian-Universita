@@ -21,5 +21,18 @@ icon: solidity.png
 	* <span class="r54">[[Struttura di una specifica]]</span>
 	* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Certora/Tipi|Tipi]]</span>
 	* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Certora/Formalità|Formalità]]</span>
+* <span class="r54">[[Keccac256]]</span>
+
+### Contratti
+- <span class="r54">[[Bet]]</span>
+- <span class="r54">[[Vesting Wallet]]</span>
+- <span class="r54">[[Call Wrapper]]</span>
+- <span class="r54">[[Crowdfund]]</span>
+- <span class="r54">[[Deposit]]</span>
+- <span class="r54">[[Escrow]]</span>
+- <span class="r54">[[HTLC]]</span>
+- <span class="r54">[[Lending Protocol]]</span>
+- <span class="r54">[[Lottery]]</span>
+- <span class="r54">[[Social Recovery Wallet]]</span>
 
 #hub #hublvl2
