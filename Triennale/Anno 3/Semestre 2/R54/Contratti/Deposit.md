@@ -411,3 +411,68 @@ La strategia più sensata mi sembra di fare finta che il check dell'EOA funzioni
 E infatti funziona. Su v1. In generale è pieno di falsi positivi *e* falsi negativi. Per esempio la versione 9 ha finito senza revertare e senza trasferire fondi, perché non reverta quando dovrebbe, quindi il mio metodo di rilevare per finta gli EOA con le revert non funziona. v4 dà positivo perché il test in sé è fatto male nonostante tutta la logica fatta apposta per lui, ma anche perché in realtà la sua require è fatta male perché Roberto Pettinau non sa fare le equazioni.
 
 Essenzialmente in v4 `withdraw(x)` ti preleva $x-1$ soldi. Quindi il check andrebbe fatto $x-1\leq bal$, ma invece fa $x \leq bal - 1$, e quindi il contratto si rifiuta di non avere almeno $2$ nel bilancio. Questo sicuramente non è quello che voleva fare Roberto, ma ormai ho fatto la ground truth seguendo quello che ha scritto, quindi magari faccio un'altra versione che fa quello che voleva fare lui.
+
+Pensiamo bene al test. Sviluppo incrementale: prima lo faccio funzionare almeno su v1, poi penso bene al resto. Secondo la documentazione, ?????? permette di richiedere un EOA. Non ho capito quello che c'è scritto. Secondo DeepSeek, si può usare `require nativeCodesize[e.msg.sender] == 0;` quindi lo provo. Non ha funzionato.
+
+Se quello che dice DeepSeek è vero, le chiamate normali che facciamo per inviare soldi sono "empty external calls". C'è un'opzione di `/// @custom:run` che permette a tali chiamate di considerare il destinatario come EOA, che è quello che mi serve. Metto quindi:
+
+```CVL
+/// @custom:run certoraRun versions/DepositEth_v1.sol:DepositEth --verify DepositEth:certora/always-depletable.spec --optimistic_fallback
+```
+
+Non ha funzionato neanche così..................................!
+
+No.
+
+**No.**
+
+Ho dimenticato di impostare il valore del messaggio a $0$. Revertava per quello. Nuova regola da tenere **sempre** a mente: controlla tutti i revert impliciti. Ok neanche quello ha risolto, reverta ancora. Proviamo con un altro revert implicito: overflow della variabile `sent`. Ok, il bilancio del destinatario può fare overflow, controlla anche quello. Ah adesso funziona.
+
+Ora provo a togliere `--optimistic_fallback`. Ok serviva. Senza, il test ha fallito, non perché ha revertito ma perché ha prelevato solo $1$. Strano.
+
+Vediamo se il mio test funziona sulla versione corretta di v4, che è la difficoltà principale, no, ok. Ok ho sbagliato l'assert, non devo mettere assert in questi casi, devo mettere solo require. Neanche. Sì perché il mio calcolo era sbagliato. Neanche. Certo perché il mio calcolo è ancora sbagliato e la situazione è molto più complicata di quanto potessi pensare. Questo è il mio codice bruttissimo dopo il primo prelievo, devo adesso capire cosa fare nei vari casi:
+
+```CVL
+// The require skips the other checks if this one passes
+require bal1 != 0;
+
+uint wdVal2 = assert_uint256(contractBalInitial + bal1);
+
+require sent < 2^256 - wdVal2;
+require recBal < 2^256 - wdVal2;
+
+withdraw@withrevert(e, wdVal2) at initial;
+bool rev2 = lastReverted;
+mathint bal2 = nativeBalances[currentContract];
+
+require bal2 != 0;
+
+assert false;
+```
+
+Questa logica non funziona, semplicemente il contratto reverta perché il valore del primo prelievo era troppo alto. Perché il test dovrebbe provare con un valore più basso che cosa sto dicendo. Non ha senso. Ci devo pensare bene. Cosa succede in questo test?
+
+* Primo prelievo molto semplice: $wd(x) \to (rev,bal)$
+* Ci sono quattro casi per $(rev,bal)$:
+	* $(false, 0)$: il test passa
+	* $(false,>0)$: provare con un valore più alto per $x$
+	* $(true,0)$: impossibile
+	* $(true,>0)$: provare con un valore più basso per $x$
+
+Dobbiamo quindi lavorare solo su due casi. Il valore più alto è quello che fa già il mio test, quindi faccio l'altro.
+
+Il problema è che non ha senso che siamo nell'ultimo caso con questo test.
+
+Eh........ reverta per la rientranza. Reverta perché Certora assume che ci sia già un'altra funzione rientrante in esecuzione da qualche parte. E io come dovrei fare a risolvere questo problema. Non posso. Grande e grossa limitazione di Certora, non posso.
+
+Ah. Ecco qui un problema. Effettivamente è vero. Il tool ha ragione. Se il contratto invia sempre $x-1$, allora non puoi svuotarne il conto se ha il massimo di soldi possibile, perché $x+1$ non è un numero esistente. Ha ragione il test.
+
+Dopo farò la ground truth.
+
+Adesso però faccio anche una versione che in quel caso invia tutto il bilancio, e lì è vera. eh però comunque come lo passa il test? Non riesce. E invece lo passa eccome.
+
+Rimangono un problema tutte le versioni non rientranti.
+
+Per pura coincidenza ci sono solo due falsi. La versione 10 non ha senso. È la funzione che non reverta, eppure mi compare che ha revertito entrambe le volte. Da capire, ma comunque il test tecnicamente funziona benino.
+
+Metto gli stessi check EOA a **wd-sender-rcv-EOA**. E infatti ora passa tutto.
