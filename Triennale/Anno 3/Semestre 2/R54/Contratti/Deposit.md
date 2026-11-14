@@ -476,3 +476,18 @@ Rimangono un problema tutte le versioni non rientranti.
 Per pura coincidenza ci sono solo due falsi. La versione 10 non ha senso. È la funzione che non reverta, eppure mi compare che ha revertito entrambe le volte. Da capire, ma comunque il test tecnicamente funziona benino.
 
 Metto gli stessi check EOA a **wd-sender-rcv-EOA**. E infatti ora passa tutto.
+
+Vorrei provare a fare i test SolCMC. Com'è la situazione?
+
+* ==🔴**always-depletable** non c'è perché il test deve necessariamente continuare dopo la revert.==
+* ==🔴**wd-contract-bal** è sbagliata per la `selfdestruct`.==
+* ==🟢**wd-leq-init-bal** ok==
+* **wd-not-revert** non c'è
+* **wd-sender-rcv** strana
+* ==🟡**wd-sender-rcv-EOA** esce tutto negativo come quella normale==
+
+**always-depletable** non è possibile. È assolutamente impossibile.
+
+Non ne ho idea. Per **wd-sender-rcv-EOA** ho provato altri modi per rilevare EOA e ho provato ad evitare l'overflow nell'assert ma non funziona. **wd-sender-rcv** ha lo stesso problema in v8.
+
+Rimane **wd-not-revert**, che non so come fare, come al solito. È sempre lo stesso problema. Prima o poi forse lo risolverò. Ma è una grande limitazione del tool. Perché non hai un'opzione per avere sia $\forall m$ che $rev \to F$? Non ha assolutamente senso.
