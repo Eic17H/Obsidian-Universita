@@ -268,3 +268,108 @@ Ecco che il problema di mischiare variabili e statements si fa sentire. Perché 
 * `satisfy senderBalDiff != contractBalBefore;`
 
 Mi sembra molto strano. No secondo me non funziona. Secondo me se lavoro all'indietro e provo a formalizzare questo test diventa diverso da quello con cui sono partito. Però quest'idea di trovare una forma canonica per le proprietà e ricondurla a uno di quattro tipi di test mi piace molto.
+
+---
+
+Vediamo come fare. Sacrificherò un po' di rigore per farlo funzionare. Visto che nel funzionamento normale, il metodo che ci interessa è `withdraw`, anziché dire che "per ogni mittente, esiste un metodo che permette di svuotare il bilancio", assumiamo che il metodo sia sempre quello.
+
+Rimane un altro problema: implicitamente stiamo anche dicendo "esiste un parametro per quel metodo tale che il bilancio si svuoti". Siamo ancora nella stessa situazione di $\forall x \exists y$.
+
+Andiamo a tentativi. Diciamo che chiamiamo $withdraw(x)$ e la quantità rimossa può essere espressa come $x-a$ o come $x/ b$. Allora proviamo con $withdraw(x+a)$ e $withdraw(x\cdot b)$. E non solo, con ognuno proviamo un intorno. Sarebbe una cosa del genere:
+
+```CVL
+mathint bal = nativeBalances[currentContract];
+storage initial = lastStorage;
+
+mathint x = bal;
+
+withdraw@withrevert(x) at initial;
+// The condition is the opposite of the intended behavior
+// If the condition is false, the test will stop here as P
+// If the condition is true, the test will continue
+require nativeBalances[currentContract] != 0;
+
+// If x didn't work
+mathint bal1 = nativeBalances[currentContract];
+bool tooBig1;
+mathint sum;
+mathint prod;
+if(x < bal1) {
+	tooBig1 = true;
+	sum = bal1-x;
+	prod = bal1/x;
+} else {
+	tooBig1 = false;
+	sum = x-bal1;
+	prod = x/bal1;
+}
+
+withdraw@withrevert(x+sum) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x-sum) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x*prod) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x/prod) at initial;
+require nativeBalances[currentContract] != 0;
+
+// try with nearby values
+
+withdraw@withrevert(x+sum+1) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x-sum+1) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x*prod+1) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x/prod+1) at initial;
+require nativeBalances[currentContract] != 0;
+
+withdraw@withrevert(x+sum+2) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x-sum+2) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x*prod+2) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x/prod+2) at initial;
+require nativeBalances[currentContract] != 0;
+
+withdraw@withrevert(x+sum+3) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x-sum+3) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x*prod+3) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x/prod+3) at initial;
+require nativeBalances[currentContract] != 0;
+
+withdraw@withrevert(x+sum-1) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x-sum-1) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x*prod-1) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x/prod-1) at initial;
+require nativeBalances[currentContract] != 0;
+
+withdraw@withrevert(x+sum-2) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x-sum-2) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x*prod-2) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x/prod-2) at initial;
+require nativeBalances[currentContract] != 0;
+
+withdraw@withrevert(x+sum-3) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x-sum-3) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x*prod-3) at initial;
+require nativeBalances[currentContract] != 0;
+withdraw@withrevert(x/prod-3) at initial;
+require nativeBalances[currentContract] != 0;
+
+assert(false);
+```
+
+Ci sono strani brutti errori di sintassi e typechecking ma secondo me la logica ha senso. Risolti quelli, il test gira molto lentamente.
