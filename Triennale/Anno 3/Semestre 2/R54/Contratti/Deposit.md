@@ -373,3 +373,35 @@ assert(false);
 ```
 
 Ci sono strani brutti errori di sintassi e typechecking ma secondo me la logica ha senso. Risolti quelli, il test gira molto lentamente.
+
+Negativo. Come mai? Divisione per zero. Ecco molto molto strano. Vedo che prima della chiamata a `withdraw`, il bilancio è $0$, poi fa la chiamata, e poi il bilancio è $7524$. Semplificando il test, vedo che invece modella casi in cui i soldi non vengono inviati affatto.
+
+Comincio a sospettare che Certora se ne freghi del mio `e.msg.sender==e.tx.origin`. Il metodo reverta al pagamento. Faccio una versione che se il pagamento non funziona invia ad `address(0)`. Beh, non ho capito:
+
+```log
+ERROR:root:WARNING: 'wait_for_results' has no effect in local tool runs
+WARNING: Build cache is used with a local certora-cli script version. Beware of false hits and unexpected behaviors!
+Start Sat Nov 14 01:57:15 CET 2026
+The scene contains 1 contracts:
+DepositEth : 0xce4604a0000000000000000000000001
+Running initial transformations
+Has CVL checks.
+Checking CVL certora/always-depletable.spec for contract DepositEth
+Unrolling loops 1 time, unwinding condition is asserted
+Error: The signature resolution for a dispatcher summary resolved to a fallback function. This is unsupported.
+Error: Had an exception while verifying the rule 'always_depletable':
+Error: Timed out waiting for background tasks:
+    
+Done 0m
+Compiling versions/DepositEth_v11.sol...
+Compiling versions/DepositEth_v11.sol to expose internal function information and local variables...
+Verifier run command:
+ java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_14_01_57_09_4775484a20
+ERROR: Execution of command "java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_14_01_57_09_4775484a20" terminated with exitcode 100.
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - The signature resolution for a dispatcher summary resolved to a fallback function. This is unsupported.
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Had an exception while verifying the rule 'always_depletable':
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Timed out waiting for background tasks:
+CRITICAL:
+```
+
+Il problema è che quel check non basta a Certora per sapere che il mittente è un EOA. Se invece vediamo v8, che fa quel check in Solidity, a Certora va bene. Ma altrimenti il checker assume che il mittente possa comunque rifiutare il pagamento. Ah no anche v8 fallisce. Allora non c'è proprio modo.
