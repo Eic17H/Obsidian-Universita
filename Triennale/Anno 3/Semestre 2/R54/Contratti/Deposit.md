@@ -405,3 +405,9 @@ CRITICAL:
 ```
 
 Il problema è che quel check non basta a Certora per sapere che il mittente è un EOA. Se invece vediamo v8, che fa quel check in Solidity, a Certora va bene. Ma altrimenti il checker assume che il mittente possa comunque rifiutare il pagamento. Ah no anche v8 fallisce. Allora non c'è proprio modo.
+
+La strategia più sensata mi sembra di fare finta che il check dell'EOA funzioni, richiedendo che la funzione non reverti, fare un test che funzioni con questa assunzione, poi rimuovere il check e lasciare il test rotto, scrivendo la limitazione in un commento.
+
+E infatti funziona. Su v1. In generale è pieno di falsi positivi *e* falsi negativi. Per esempio la versione 9 ha finito senza revertare e senza trasferire fondi, perché non reverta quando dovrebbe, quindi il mio metodo di rilevare per finta gli EOA con le revert non funziona. v4 dà positivo perché il test in sé è fatto male nonostante tutta la logica fatta apposta per lui, ma anche perché in realtà la sua require è fatta male perché Roberto Pettinau non sa fare le equazioni.
+
+Essenzialmente in v4 `withdraw(x)` ti preleva $x-1$ soldi. Quindi il check andrebbe fatto $x-1\leq bal$, ma invece fa $x \leq bal - 1$, e quindi il contratto si rifiuta di non avere almeno $2$ nel bilancio. Questo sicuramente non è quello che voleva fare Roberto, ma ormai ho fatto la ground truth seguendo quello che ha scritto, quindi magari faccio un'altra versione che fa quello che voleva fare lui.
