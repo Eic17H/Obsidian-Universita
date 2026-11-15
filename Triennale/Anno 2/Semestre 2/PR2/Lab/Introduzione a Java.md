@@ -2,9 +2,9 @@
 cssclasses: pr2
 ---
 Useremo Ubuntu, Java e GEdit.
-Ci serve JVM, e quindi dobbiamo scaricare il pacchetto da JRE. Con questo si esegue Java già compilato.
-Per sviluppare ci serve anche il compilatore, il JDK.
-Java Virtual Machime Java Runtime Edition, Java Development Kit.
+Ci serve ==JVM==, e quindi dobbiamo scaricare il pacchetto da ==JRE==. Con questo si esegue Java già compilato.
+Per sviluppare ci serve anche il compilatore, il ==JDK==.
+==Java Virtual Machime==, ==Java Runtime Edition==, ==Java Development Kit==.
 Queste cose vanno sapute all'esame.
 "Per sviluppare codice Java serve la JRE" falso, serve la JDK.
 "Per eseguire bytecode Java serve la JDK" falso, serve la JRE o la JDK, una delle due.
