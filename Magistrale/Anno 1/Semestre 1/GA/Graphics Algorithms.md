@@ -10,6 +10,7 @@ cssclasses:
 	* [[Monotone polygon]]
 	* [[DCEL]]
 * [[Range searching]]
+	* [[KDE Tree]]
 
 Teams: `7ty3rx1`
 

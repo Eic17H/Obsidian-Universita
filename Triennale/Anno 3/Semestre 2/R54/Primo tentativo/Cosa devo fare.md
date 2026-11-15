@@ -2,6 +2,7 @@
 cssclasses:
   - r54
 ---
+#hidden
 ## Primo obiettivo
 
 Rendi escrow, che è vecchio, agli standard di bank
@@ -1407,7 +1408,7 @@ function invariant(address _user) public payable {
 }
 ```
 
-```
+```log
 ERROR:root:Preghost injection failed: ../contracts/crowdfund/solcmc/donation-dec-onlyif-reclaim.sol: ../contracts/crowdfund/versions/Crowdfund_v14.sol: function clawback.
 ```
 
@@ -1415,7 +1416,7 @@ ERROR:root:Preghost injection failed: ../contracts/crowdfund/solcmc/donation-dec
 
 Hai presente quando ho messo view a tutto? Ecco c'era un motivo se non c'era.
 
-```
+```log
    |
 82 |             arbitrate(dst);
    |             ^^^^^^^^^^^^^^
@@ -2558,3 +2559,634 @@ Warning: CHC: Assertion violation might happen here.
 Quindi forse non c'entra `keccac256`. E allora niente, non so come fare. Non ha senso.
 
 Con **recov-succeeds**, potrei semplicemente aver fatto un disastro con nomi di variabili e scope. Ok, non era quello il problema, ma di sicuro fa piacere correggerlo. Siamo in negate, quindi aggiungere più require va in negativo. Io rimetto la regola che controlla che tutti i guardiani siano guardiani. Ah ma aspetta. Siamo in negate. Quindi basta una volta che lo fa giusto per renderla positiva. Allora non so.
+
+### 9nov
+
+Vedo `sstore` in alcuni file SolCMC. Vediamo cos'è. Non c'entra nulla.
+
+Vediamo bene **recov-succeeds**.
+
+> In inglese:$$constr(G, t) \vdash |\{g\ |\ g \in G' \land Rec(g, r, o) \land isG(g)\}| \geq t \Rightarrow exRec \to \lnot rev \land own'=o$$
+
+> In v1:$$constr(G,t) \vdash isG(m.c), inRec, |g|\geq t, $$
+
+No mi arrendo, è davvero infattibile farla bene, non ha senso. Niente fatto sta che sono equivalenti.
+
+Il test SolCMC fa $|G| \geq t, inRec, \forall g \in G (g.r=r \land g.o = o \land \lnot g.u) \Rightarrow o' = o \land \lnot revert$. Mi sembra giusto. Ah no ho fatto un casino. De Morgan, esiste un esempio, non per ogni modello ma esiste un tale modello. Infatti siamo pieni di falsi positivi. Perché siamo in negate.
+
+Che versioni hanno falsi positivi?
+
+v3: Il processo di recovery può succedere, ma alla fine non cambia il proprietario.
+
+Il falso positivo avviene quando esiste almeno un modello che soddisfa la proprietà, visto che siamo in negate. Visto che siamo in negate, aggiungere requisiti rende la proprietà più falsa. Quindi aggiungo che il proprietario proposto non deve essere quello corrente, perché se lo fosse, non modificare il proprietario soddisferebbe la proprietà. Soddisfa ancora. Metto che il nuovo proprietario non può essere un guardiano. Niente.
+
+Non ha senso. No aspetta non capisco. In che modo le mie variabili interagiscono col metodo? Ecco, ho fatto un casino. Le preghost e postghost sono nello scope del metodo a cui si riferiscono. Quindi quando ho cambiato il nome per evitare lo shadowing, non dovevo. Perché cambiando il nome, diventano completamente scollegate dal metodo. Però passa comunque. Ok ho spostato la require del proprietario diverso dal proprietario e ora è giusto. Giro su tutti e vedo.
+
+Devo dire che quel test è da rifare, perché l'ho fatto con molta confusione. Ok v10 e v4 rimangono sbagliati.
+
+Invece forse dovevo tenere gli identificatori diversi, e poi usare una require per averli uguali a quelli dell'invariante. Boh.
+
+L'ho reso più sensato. v3 non passa. v1 invece passa. Ok quello che ho fatto è stato che l'invariante ha come parametro solo il nuovo proprietario, che viene richiesto sia uguale a quello del parametro del metodo. Come secondo la descrizione in inglese, si richiede che i guardiani che partecipano siano d'accordo e siano almeno il threshold. Richiedo anche che il test non passi banalmente con un proprietario proposto uguale a quello corrente. E poi asserisco che il proprietario sia quello del parametro dell'invariante.
+
+Però v4 passa. Come siamo messi rispetto a prima? FPv4v5v10v13, FNv15. Risolti due e peggiorato uno. v4 non ha senso che passi, perché controllo che il proprietario proposto non sia un guardiano. Va be', non capisco.
+
+Ho aggiunto che il proprietario proposto non deve essere il mittente dei metodi relativi alla recovery. E v4 passa. Ah siamo in negate, devo farla al contrario. Non capisco cosa sto facendo. Ho negato certe require e boh v4 passa ancora. Forse le require devono restare dritte e le assert devono restare storte. Sì perché le require dentro i metodi restano uguali.
+
+Il problema è la negate. La negate è abbastanza inutile. Perché basta un singolo esempio di modello adatto per renderla positiva. v13 ha lo stesso problema.
+
+Situazione:
+* ==🟢**recov-fails** FPv11: variabile `threshold` impostata male, niente da fare==
+* ==🟡**recov-implies-guardian** FNv2: strano ma niente da fare==
+* ==🔴**recov-succeeds**: con la negate basta un solo modello valido==
+
+v8 dà molto `UNK`.
+
+Non so che altro fare con questo contratto. Metto i commenti alla ground truth e provo con un altro.
+
+Vediamo che fare adesso. Lottery ha troppe proprietà, dà fastidio. Deposit ERC20 è semplicissimo, ha solo tre proprietà. Io ci provo.
+
+Cominciamo bene.
+
+```log
+ERROR:root:versions/DepositERC20_v2.sol: Couldn't retrieve contract name.
+ERROR:root:versions/DepositERC20_v2.sol: Couldn't retrieve contract name.
+ERROR:root:versions/DepositERC20_v2.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v2.sol contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v2.sol contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v2.sol contract name.
+ERROR:root:versions/DepositERC20_v1.sol: Couldn't retrieve contract name.
+ERROR:root:versions/DepositERC20_v1.sol: Couldn't retrieve contract name.
+ERROR:root:versions/DepositERC20_v1.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v1.sol contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v1.sol contract name.
+ERROR:root:Could not retrieve versions/DepositERC20_v1.sol contract name.
+```
+
+Proviamo SolCMC. Vedo subito che **wd-contract-bal**.sol è sbagliato. Gli errori con Certora sono che il contratto non rispetta le convenzioni di nominazione. Si chiamava `TokenTransfer` che è completamente diverso dal nome del file. Ok i test sono scritti per Certora vecchio, tranne **no-deposit-twice**.
+
+Con entrambi i tool, **wd-contract-bal** è falso negativo. Sicuramente a causa di seldestruct.
+
+Ho la batteria scarica, non credo di poter fare molto altro. Vediamo che versioni posso fare:
+
+* Non reentrant
+* Can never deposit
+* Can deposit exactly twice
+* Can deposit multiple times
+* Can't withdraw
+* Can only withdraw once
+* Tutto revert
+* Revert e fa niente
+* Niente revert e fa niente
+* Solo depositor può withdraw
+* Depositor non può withdraw
+* Withdraw withholds un po' di soldi
+* Each address can only withdraw once
+* Withdraw always sends funds to depositor
+
+Il contratto è talmente semplice che è stato facile scriverle tutte.
+
+**no-deposit-twice** e **wd-leq-init-bal** escono giusti per tutte le versioni su SolCMC. **wd-contract-bal** esce perlopiù FN per i motivi già detti. La maggior parte delle versioni corrispondono a tutte le proprietà nonostante siano sbagliate, perché le proprietà non sono sufficienti.
+
+Il problema con Certora è che la variabile `sent` è privata. C'è da usare una hook e una variabile ghost, ma havoc, non so che fare, "the overall withdrawn amount does not exceed the initial deposit" quindi deve essere il conto totale. Non credo di poter risolvere. Certora docs e vedo se si può evitare l'havoc delle variabili ghost. Ok i ghost persistenti non vengono né havocati né revertiti.
+
+No no aspetta, solo alcune versioni danno errore.
+
+```log
+Done 0m
+Compiling versions/DepositERC20_v10.sol...
+Compiling versions/DepositERC20_v10.sol to expose internal function information and local variables...
+Verifier run command:
+ java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_09_22_29_06_3535664ce2
+ERROR: Execution of command "java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_09_22_29_06_3535664ce2" terminated with exitcode 100.
+CRITICAL: [ForkJoinPool-1-worker-6] ERROR ALWAYS - Got exception Could not compile access to contract storage currentContract.sent @ wd-leq-init-bal.spec:4:5 due to missing context information. This is likely caused by failures elsewhere in the tool; please check the Global Problems view and contact Certora for help. when compiling rule Using general requirements
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Got exception Could not compile access to contract storage currentContract.sent @ wd-leq-init-bal.spec:4:5 due to missing context information. This is likely caused by failures elsewhere in the tool; please check the Global Problems view and contact Certora for help. when compiling rule Induction base: After the constructor
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Timed out waiting for background tasks:
+CRITICAL:     
+
+Certora Prover run failed (code 1)
+```
+
+Perché non ha questo problema con la v1 che è identica? Bello non ho capito. Fallisce alla deposit, che non dovrebbe. E non ha il punto esclamativo, sarà per quello. Non capirò come si fa ora.
+
+Sia questo che SRW hanno "variabili ghost" direttamente nel contratto. Secondo me erano per quando non si potevano mettere dal tool. Probabilmente prima della PR mi farà aggiornare questa cosa. Da chiedere a Bartoletti prima o poi o poi o poi.
+
+Vediamo Deposit ETH. Eldarica non ha UNK neanche a 30 secondi, menomale. Solita roba del vecchio metodo dei getters e simili per Certora. `// TODO fregalo`, grazie Roberto Pettinau, io come te.
+
+Ma che significa?
+
+```log
+Start Mon Nov 09 22:57:39 CET 2026
+The scene contains 1 contracts:
+DepositEth : 0xce4604a0000000000000000000000002
+Running initial transformations
+Has CVL checks.
+Checking CVL certora/wd-sender-rcv-EOA.spec for contract DepositEth
+Unrolling loops 1 time, unwinding condition is asserted
+Error: The signature resolution for a dispatcher summary resolved to a fallback function. This is unsupported.
+Error: Had an exception while verifying the rule 'wd_sender_rcv_EOA':
+Error: Timed out waiting for background tasks:
+    
+Done 0m
+Compiling versions/DepositEth_v3.sol...
+Compiling versions/DepositEth_v3.sol to expose internal function information and local variables...
+Verifier run command:
+ java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_09_22_57_27_6148378415
+ERROR: Execution of command "java -jar /usr/tirocinio/bin/.certora/prover/emv.jar -ruleSanityChecks none -ciMode true -buildDirectory .certora_internal/26_11_09_22_57_27_6148378415" terminated with exitcode 100.
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - The signature resolution for a dispatcher summary resolved to a fallback function. This is unsupported.
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Had an exception while verifying the rule 'wd_sender_rcv_EOA':
+CRITICAL: [ForkJoinPool-1-worker-1] ERROR ALWAYS - Timed out waiting for background tasks:
+CRITICAL:     
+
+Certora Prover run failed (code 1)
+```
+
+L'errore è su tutti i test su v3, che invia soldi ad `address(0)`.
+
+### 10 nov
+
+Vediamo la ground truth. La maggior parte delle proprietà sono fatte per essere false, tranne **wd-sender-rcv-EOA** e **always-depletable**. Vediamo tutte le proprietà.
+
+* **always-depletable**: any user (EOA) at any time can fire a transaction to receive the full balance of the contract. $\forall x : EOA,\ \forall t : block,\ \exists n,\ x.wd(n) \Rightarrow \Delta x.\$ = -\Delta this.\$ = this.\$_{before}$.
+- **wd-contract-bal**: the contract balance is decreased by `amount` after a successful `withdraw(amount)`. $\forall n,\ wd(n) \Rightarrow \Delta this.\$ = -n$. Falsa perché reentrant.
+- **wd-leq-init-bal**: the overall withdrawn amount does not exceed the initial deposit. Autoesplicativa, falsa perché coinbase e selfdestruct.
+- **wd-not-revert**: a transaction `withdraw(amount)` is not reverted whenever the `amount` does not exceed the contract balance. $n \leq this.\$ \Rightarrow wd(n) \to \lnot revert$. Falsa perché il ricevente può rifiutare la transazione.
+- **wd-sender-rcv**: after a successful `withdraw(amount)`, the balance of the transaction sender is increased by `amount` ETH. $\forall x : addr,\ x.wd(n) \land \lnot revert \Rightarrow \Delta x.\$ = n$. Falsa perché può inoltrare subito i soldi.
+- **wd-sender-rcv-EOA**: after a successful `withdraw(amount)` originated by an EOA, the balance of the transaction sender is increased by `amount` ETH. $\forall x : EOA,\ x.wd(n) \land \lnot revert \Rightarrow \Delta x.\$ = n$.
+
+**always-depletable**, **wd-not-revert**, **wd-sender-rcv** e **wd-sender-rcv-EOA** compaiono sia vere che false. Per le altre, **wd-contract-bal** può diventare vera con reentrancy guard, per **wd-leq-init-bal** basta rendere impossibile prelevare.
+
+Vediamo le versioni che abbiamo già:
+
+1. Rientrante.
+2. Non rientrante.
+3. Non rientrante, invia soldi a `0x00`.
+4. Non rientrante, invia $1\text{ ETH}$ in meno.
+5. Non rientrante, vuole avere almeno $1\text{ ETH}$ dopo il prelievo.
+6. Non rientrante, ha una blacklist.
+7. Non rientrante, ha una whitelist.
+8. Rientrante, solo gli EOA possono prelevare.
+
+Bene, non capisco. Se il problema di **wd-contract-bal** è la rientranza, perché le versioni non rientranti sono comunque negative? A dire il vero, esce positiva a v2, v5, v6 e v7 con SolCMC, ma comunque negativa a tutte su Certora.
+
+**always-depletable** esce negativa con Certora. La cytvuybuh80j9hobhbiuh0u9hobuho9uhiobjohi9u'hiobuhiu90hobuhi9 non ha senso. A me sembra che il destinatario dei soldi li possa sempre rifiutare.
+
+Questo contratto è orrendo.
+
+Guardiamo il contratto in sé. Il contratto accetta soldi a costruzione, e invia soldi a chi chiama wd.
+
+Faccio una funzione che non reverta se la transazione non va a buon fine. E poi uguale ma non rientrante.
+
+Per **always-depletable**, il fatto che ci sia un $\exists$ mi fa pensare a una negate, ma c'è anche un $\forall$. Il problema del test Certora corrente è che fissa $n = this.\$$, ma a noi serve $\exists n$. Potremmo usare satisfy, ma anche quello non va bene, perché ci serve $\forall x$, non $\exists x$. Ok. Trovo un $n$, e poi lo applico a qualunque $x$. Come? Una chiamata sonda in un ambiente, e una chiamata di asserzione in un altro ambiente. `f(probeEnv, args); require ok; f(assertEnv, args); assert ok;`. Cioè, non ci interessa che vadano bene tutti gli argomenti, ci interessa che vadano bene tutti gli ambienti.
+
+```log
+Error in spec file (always-depletable.spec:22:5): could not type expression "withdraw(probe,amount)", message: Could not find an overloading of method DepositEth.withdraw that matches the given arguments: mathint.
+```
+Molto strano. Non puoi castare un `mathint` a un `uint`? Di solito lo fai. Va bene, faccio io. Sempre N. Non c'entra con la rientranza. Non ho messo che il messaggio deve avere valore $0$. Infatti il bilancio rimane uguale a prima della chiamata.
+
+L'unico modo in cui può star revertando è se il mittente rifiuta i soldi. Vediamo la mia versione nuova. Anche lì N. Ma in quel caso non perché reverta, ma perché non ha inviato i soldi. Quindi il problema è effettivamente che i soldi possono non uscire dal conto. Ma perché Forse perché Certora ignora il fatto che il mittente è un EOA.
+
+No non ci credo. Adesso v4 risulta FP!. Vacuo, perché richiediamo che esistano dei parametri che permettono di svuotare il conto, ma non esistono, neghiamo l'antecedente ed esce positivo. La butto lì, ma mi sa di negate e satisfy. Perché così invertiamo tutto due volte tranne quello che rimane invertito una volta sola. Forse.
+
+NO NON CI CREDO. LO SCRIPT PYTHON SCEMO DI QUESTA REPO. Non mi accetta il codice perché dentro `assertion` c'è scritto `assert`. Forse da dire a Bartoletti, perché questa cosa è malata.
+
+Tornando a noi, v4 esce negativo, ma anche v1 esce negativo. Mi segno l'idea, secondo me è possibile mettere `satisfy` al posto della `require` e una `if(...) satisfy(false)` al posto dell'`assert`/`satisfy`.
+
+```CVL
+/// @custom:negate
+
+rule always_depletable {
+    env probe;
+    env asser;
+
+    // EOA
+    require probe.msg.sender == probe.tx.origin;
+    require asser.msg.sender == asser.tx.origin;
+
+    // Method isn't payable
+    require probe.msg.value == 0;
+    require asser.msg.value == 0;
+
+    // Rule out trivial scenario
+    require nativeBalances[currentContract] > 0;
+
+    // We don't know the correct amount, so we find it by requiring that it empties the balance
+    // That restricts probe.msg.sender to one that empties the balance
+    // So we call withdraw again with an arbitrary sender
+
+    storage initial = lastStorage;
+
+    // exists amount
+    uint amount;
+    withdraw@withrevert(probe, amount);
+    require nativeBalances[currentContract] != 0;
+
+    // for all EOA
+    withdraw@withrevert(asser, amount) at initial;
+    satisfy nativeBalances[currentContract] != 0;
+}
+```
+
+Questa sarà difficile, va affrontata con la logica formale, e non so se sarà possibile.
+
+Torniamo su questo caro amico adesso che è mezzanotte passata.
+
+Perché **always-depletable** non va bene? Perché non ho trovato un modo per codificare la formalizzazione che ne ho tratto. Adesso ho due opzioni: formalizzarla in modo diverso o riprovare a codificarla.
+
+> any user (EOA) at any time can fire a transaction to receive the full balance of the contract.
+
+Analizziamola pezzo per pezzo.
+
+* Ambiente $\forall e:env\ |$
+	* $\forall e.msg.sender : EOA$ significa che $e.msg.sender=e.tx.origin$
+	* $\forall e.block.timestamp$
+* Può sparare una transazione, $\exists (f, a):(method, args) \ |$
+	* Ricevere l'intero bilancio del contratto $f(e,a) \Rightarrow \Delta e.msg.sender.balance = - \Delta this.balance = this.balance_{before}$
+
+Secondo la ground truth, questa proprietà dovrebbe valere per v1, così come **wd-sender-receive-EOA**. Il fatto è che quella proprietà dà FN per v1 in Certora. In più, io ho scritto sia che il mittente riceve soldi, sia che il contratto perde soldi. Ma il nome dice la seconda, e la descrizione dice la prima. In ogni caso, la seconda mi risulta falsa a causa della selfdestruct, e la prima mi sembra vera ma Certora darebbe falsa.
+
+Vedo perché Certora dà falsa quell'altra proprietà. AH. Sì, è perché devi controllare che il mittente non sia il contratto stesso, altrimenti *certo* che resta uguale prima e dopo la transazione, se manda soldi a sé stesso. Da tenere a mente. Bene allora proviamo così.
+
+Ah aspetta... Come risolvo il problema del $\forall$/$\exists$? Boh, ma ora provo la mia implementazione di prima con queste due correzioni.
+
+Ok ok che strano. Con satisfy dà negativo su v1 e con assert dà positivo. Ah forse non è strano, perché... Ah vuol dire che è sbagliato. Perché satisfy negate dà negativo se esiste un modello sbagliato. Infatti v4 con assert dà positivo. Ok fin qui tutto sbagliato. Provo a rifarlo da capo.
+
+Questo secondo me è un modo molto stupido per farlo:
+
+```CVL
+rule always_depletable {
+    env e;
+    require e.msg.sender == e.tx.origin;
+    require e.msg.sender != currentContract;
+    require e.msg.value == 0;
+
+    method f;
+    calldataarg args;
+
+    mathint senderBalBefore = nativeBalances[e.msg.sender];
+    mathint contractBalBefore = nativeBalances[currentContract];
+
+    f@withrevert(e,args);
+
+    mathint senderBalAfter = nativeBalances[e.msg.sender];
+    require senderBalAfter > senderBalBefore;
+    mathint senderBalDiff = senderBalAfter - senderBalBefore;
+    assert senderBalDiff == contractBalBefore;
+}
+```
+
+Infatti non funziona neanche. Con satisfy certamente funziona, ma non ha senso farlo.
+
+Tra l'altro ho notato che ho scritto male la formalizzazione di prima.$$\forall e:env,\ \exists (f,a):(method,args)\ |\ sender_e=origin_e,\ f(e,a) \Rightarrow \Delta \$_{sender_e}=\$_{this,before}$$Il mio test è:$$\exists e:env,\ \exists (f,a):(method,args)\ |\ sender_e=origin_e,\ f(e,a) \Rightarrow \Delta \$_{sender_e}=\$_{this,before}$$
+
+È sbagliato e basta. Cambia di poco, ma ancora non so come avere $\forall$ ed $\exists$ insieme.
+
+Pensiamoci. $\lnot \forall x.y \leftrightarrow \exists x.\lnot y$, $\lnot \exists x.y \leftrightarrow \forall x . \lnot y$. De Morgan semplicissimo. Il problema è che io voglio $\forall x. \exists y. z$. Come si fa? $\forall x. \lnot \forall y. \lnot z$. Come faccio a mettere un $\lnot$ lì? Non credo di poterlo fare. Allora al contrario. $\lnot \exists x. \forall y. \lnot z$, significa $\forall x.\lnot \forall y. \lnot z$, che significa $\forall x. \exists y. z$, che è ciò che voglio. Ma siamo punto e a capo, come mischio i due quantificatori? Boh.
+
+Finora ho visto cosa volevo dire, ma non so come dirlo. Andiamo nell'altra direzione. Prendiamo tutto ciò che ho a disposizione, e vediamo cosa ci permette di dire.
+
+* `require x; assert y;` $\forall m\ |\ x \Rightarrow y$
+* `require x; satisfy y;` $\exists m\ |\ x \Rightarrow y$
+* `negate; require x; assert y;` $\exists m\ |\ x \Rightarrow \lnot y$
+* `negate; require x; satisfy y;` $\forall m\ |\ x \Rightarrow \lnot y$
+
+Non so come formalizzarlo, ma la `negate` fa anche un'altra cosa che da quello che ho scritto non è evidente: se $m \to \lnot x$, senza la negate il test è positivo, con la negate il test è negativo. Quindi la negate aggiunge una sorta di $\land(\exists x. m \land x)$, mentre senza la negate abbiamo $\lor \lnot(\exists x.m \land x)$, che ovviamente segue da De Morgan. E la seconda si può riscrivere come $\lor(\forall x.m \to \lnot x)$. Quindi riscriviamo
+
+* `require x; assert y;` $(\forall m\ |\  x \Rightarrow y)\lor(\forall x\ |\ m \to \lnot x)$
+* `require x; satisfy y;` $(\exists m\ |\ x \Rightarrow y)\lor(\forall x\ |\ m \to \lnot x)$
+* `negate; require x; assert y;` $(\exists m\ |\ x \Rightarrow \lnot y)\land(\exists x\ |\  m \land x)$
+* `negate; require x; satisfy y;` $(\forall m\ |\ x \Rightarrow \lnot y)\land(\exists x\ |\  m \land x)$
+
+Tecnicamente... No aspetta, ho sbagliato. Perché questi vanno combinati. Perché per esempio nell'ultima dovrei scrivere $\forall m \exists x \ |\ \cdots$. quindi tecnicamente ho trovato un modo per combinare i quantificatori, ma quell'$m$ è un modello. Un modello da cos'è formato? Da valori delle variabili, che sono i nostri $e$, $f$ ed $a$, oltre alle altre variabili.
+
+Ma poi ho anche fatto un casino con l'overloading dei simboli, sto usando $x$ sia come variabile che come statement. Non credo abbia molto senso, ho certamente fatto passi avanti ma mi sembra tutto inutile.
+
+Ma proviamoci comunque. Io voglio questo:$$\forall e \exists (f,a) \ |\ f(e,a) \Rightarrow \lnot revert \land ok(\Delta \$)$$
+Dove $ok()$ è una funzione $int \to bool$. Questa formula che ho ottenuto è di una delle forme di cui sopra? Sì, se le avessi scritte bene, sarebbe negate/satisfy, dove $x = (f,a)$ e $y = \lnot ok(\Delta \$)$, credo. Questo significa:
+* `negate`
+* `f(e,a); require !lastReverted` no non ha senso
+
+Ecco che il problema di mischiare variabili e statements si fa sentire. Perché io voglio davvero *richiedere* che non reverti? Immaginiamo di sì, domani testo, allora avremmo:
+* `negate`
+* `f@withrevert(e,a); require !lastReverted;`
+* `satisfy senderBalDiff != contractBalBefore;`
+
+Mi sembra molto strano. No secondo me non funziona. Secondo me se lavoro all'indietro e provo a formalizzare questo test diventa diverso da quello con cui sono partito. Però quest'idea di trovare una forma canonica per le proprietà e ricondurla a uno di quattro tipi di test mi piace molto.
+
+### 11/11
+
+Un po' di rigore. In `require x`, `x` è un predicato. Invece in $\exists x$, $x$ è una variabile.
+
+In realtà devo pensare che `mathint x; require p(x);` significhi $\forall x\ |\ p(x)$. Questo ha già più senso. Somiglia al <span class="logica">[[Equivalenza dei calcoli|teorema di equivalenza dei calcoli]]</span>, dove dovevamo far corrispondere le strutture dati tra i due linguaggi formali.
+
+Adesso abbiamo il quantificatore universale. Troviamo il quantificatore esistenziale.
+
+Una specifica tipica è `TYPE x; require p(x); TYPE y; assert q(y);`, che significa $\forall x\ |\ p(x),\ \exists y\ |\ q(y)$. Tra l'altro non ho capito bene come scrivere "tale che" in simboli, non è possibile che debba scrivere spazi espliciti in LaTeX, di solito se scrivo giusto me lo formatta giusto. E non ho scritto i tipi nella notazione logica perché mi sembra ingombrante e meno leggibile.
+
+Fatto sta che abbiamo trovato i quantificatori che cercavamo. Prendiamo la stessa formula e vediamo come cambia se mettiamo `negate` e `satisfy`:
+
+|          | `assert`                          | `satisfy` |
+| -------- | --------------------------------- | --------- |
+|          | $\forall x.p(x),\ \exists y.q(y)$ |           |
+| `negate` |                                   |           |
+
+Non si può scrivere $|$ nelle tabelle perché è anche una "keyword" delle tabelle.
+
+No ma ho sbagliato. Ho sbagliato. Perché non è vero quello che ho detto.
+
+Prima di tutto, è incompleto. Perché fa sembrare che $x$ e $y$ debbano sempre essere distinti, quando in realtà mi conviene dire che ho un modello $m$ che ha membri $x$ e $y$. Tecnicamente tutto quello che voglio può essere incluso in $p()$ e $q()$, ma sto solo offuscando il significato di quello che scrivo.
+
+L'altro problema è che quell'$\exists$ è sbagliato. Perché ovviamente quell'`assert` richiede che **tutte** le coppie $(x,y)$ soddisfino $q()$. Quindi in realtà abbiamo che `require p(m); assert q(m);` significa $\forall m.p(m),\ q(m)$. Chiaramente con la condizione che $\{m:p(m)\} = \emptyset$ è una condizione valida. Con la satisfy e la negate abbiamo le trasformazioni che conosciamo.
+
+Non abbiamo risolto nulla. Io ci provo. Provo a chiedere a un LLM.
+
+> I'm trying to write Certora rules. I'm able to write the rules in propositional logic, but I don't know how to translate them into Certora rules. My tool allows me to add the "negate" modifier to a rule, such that I may write the rule in a way that a certain contract yields negative, but the rule is tagged negative, so the contract is considered to pass the test.
+> I have figured out this, for a certain model m:
+> require p(m); assert q(m); - for all m such that p(m), q(m) (if p(m) is unsatisfiable, pass the test)
+> require p(m); satisfy q(m); - exists m such that p(m), q(m) (if p(m) is unsatisfiable, pass the test)
+> negate; require p(m); assert q(m); - exists m such that p(m), not q(m) (if p(m) is unsatisfiable, fail the test)
+> negate; require p(m); satisfy q(m); - for all m such that p(m), not q(m) (if p(m) is unsatisfiable, fail the test)
+> I want to use an arbitrary combination of for all and exists for variables in the model. For example "for all environments such that timestamp > CONST_X, exists sender Y, such that ...".
+
+In effetti non so neanche come formulare quello che voglio. Io ci provo. No non ha capito niente, sta usando i quantificatori interni a Certora intesi come le regole `forall` ed `exists`, ma quelli richiedono di srotolare i loop e non è ciò che cerco, stai spostando il carico dal solver a un loop che è esattamente ciò che non cerchiamo, credo, forse, boh.
+
+Però se non trovo un'alternativa uso quelli.
+
+Tornando a noi, cosa sto provando a fare?$$\forall e.eoa(e) \exists (f,a) \ |\ f(e,a) \Rightarrow \lnot revert \land ok(\Delta \$)$$Dove:$$ok(x) \leftrightarrow x = this.$_{before} \qquad eoa(x)\leftrightarrow e.msg.sender = e.tx.origin$$
+Però non è completo e non so come inserire l'altra cosa. Scrivo bene:
+* EOA
+* Esiste un metodo e degli argomenti
+
+No non lo so. Aspetta. Se io genero un $(f,a)$ arbitrario, e richiedo che *non* permetta di svuotare il conto. Allora se **no**. Niente.
+
+Filtro. Una require è un filtro. Io voglio che per ogni utente esista un metodo che permetta di fare quella cosa.
+
+Se io genero un metodo arbitrario, allora l'assert mi richiede che $\forall (f,a)$. Io voglio $\exists (f,a)$. Se io metto una require, allora mi fa $(\lnot exists (f,a).p(f,a)) \lor (\forall (f,a).p(f,a),\ q(f,a))$. Che non è comunque ciò che voglio. Se nego tutto? $(exists(f,a).p(f,a)) \land (\exists (f,a),\ p(f,a) \land \lnot q(f,a))$. E tecnicamente io *potrei* mettere il mio $\forall$ dentro $q()$, però nel pratico non posso, perché dopo 64 loop il mio computer si arrende.
+
+Perché il mio vecchio approccio di fare probe e asser mi trovava $\exists (f,a).\forall(e),\ p(f,a,e)$. Ma siamo sicuri? Perché questo mi sta mischiando require e assert. Secondo me sto sbagliando.
+
+Assumiamo per assurdo che sia giusto. Cos'ho fatto con probe e asser? No, sto mischiando i due tentativi.
+
+Provo a scrivere qualcosa, e vedo cosa significa. Come si usa `exists`? Perché realisticamente ci sono pochi metodi, quindi non dovrei avere il problema dei loop. Non c'è bisogno di mettere un "tale che", è un semplice $\exists n.p(n)$. Posso benissimo usare quello.
+
+Non credo di poter mettere una chiamata dentro `exists`.
+
+Bene. Ho scritto una cosa estremamente stupida. Perché questo funzionerebbe in un loop di un linguaggio imperativo.
+
+```CVL
+assert exists method f. exists calldataarg a.
+	((true || (f@withrevert(e,a) at lastStorage)) => ((nativeBalances[e.msg.sender] - senderBalBefore) == contractBalBefore));
+```
+
+O, come l'avevo scritto prima,
+```CVL
+assert exists method f. exists calldataarg a.
+	((true || f(e,a)) => ((nativeBalances[e.msg.sender] - senderBalBefore) == contractBalBefore));
+```
+
+Ok in effetti il problema è che `exists calldataarg` ha troppi valori da controllare.
+
+Ma a prescindere è un errore di sintassi. Niente.
+
+Non so come scriverlo, basta.
+
+Ma poi sto sovrageneralizzando, posso provare ad assumere che il metodo sia lo stesso per tutti, e che l'argomento sia lo stesso per tutti. Ma non lo farò adesso. Tornerei su `withdraw`. Secondo me il mio approccio probe/asser può funzionare, anche se non corrisponde astrattamente alla specifica. Sarebbe:$$\exists n.\forall eoa,\ wd(eoa,n) \to ok(\Delta\$)$$Perché posso dire che è $\forall$? Boh perché sì boh basta.
+
+#### Call wrapper
+
+Non ne posso più di Deposit.
+
+Questo contratto è semplicissimo. Non so come sia possibile dover cambiare qualcosa per portarlo agli standard di Bank.
+
+È un contratto che ha un solo metodo, `callwrap`, il cui scopo è di fare da tramite per le chiamate esterne.
+
+Proprietà:
+
+* **bal**: il bilancio del contratto non cambia dopo `callwrap`. $cw \Rightarrow \lnot \Delta \$$
+* **stor**: lo storage (variabili) del contratto non cambia dopo `callwrap`. $cw \Rightarrow \lnot \Delta stor$
+
+Immagino che tutti i test siano già presenti e funzionanti.
+
+```log
+ERROR:root:versions/Caller_v1.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v1.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v3.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v3.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v1.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v1.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v3.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v3.sol contract name.
+ERROR:root:versions/Caller_v4.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v4.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v4.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v4.sol contract name.
+ERROR:root:versions/Caller_v2.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v2.sol contract name.
+ERROR:root:versions/Caller_v5.sol: Couldn't retrieve contract name.
+ERROR:root:versions/Caller_v2.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v5.sol contract name.
+ERROR:root:Could not retrieve versions/Caller_v2.sol contract name.
+ERROR:root:versions/Caller_v5.sol: Couldn't retrieve contract name.
+ERROR:root:Could not retrieve versions/Caller_v5.sol contract name.
+```
+
+Queste naming conventions a caso di questo script python insopportabile, come ti pare. Il file si deve chiamare come il contratto, o almeno in modo simile.
+
+Interessante, i test non passano tutti. Molto strano, mi sembra estremamente semplice.
+
+| SolCMC |     <     |    <     |      <       |     <     |    <     | Certora |    <    |     <     |
+| :----: | :-------: | :------: | :----------: | :-------: | :------: | :-----: | :-----: | :-------: |
+| **Z3** |     <     |    <     | **Eldarica** |     <     |    <     |         |    <    |     <     |
+|        |  **bal**  | **stor** |              |  **bal**  | **stor** |         | **bal** | **stor**  |
+| **v1** |    TN!    |   TP!    |    **v1**    |    TN!    |   TP!    | **v1**  |   TN    |    TP!    |
+| **v2** | ==🔴FP!== |   TP!    |    **v2**    | ==🔴FP!== |   TP!    | **v2**  |   TN    |    TP!    |
+| **v3** |    TN!    |   TN!    |    **v3**    |    TN!    |   TN!    | **v3**  |   TN    | ==🔴FP!== |
+| **v4** |    TN!    |   TN!    |    **v4**    |    TN!    |   TN!    | **v4**  |   TN    | ==🔴FP!== |
+| **v5** | ==🔴FP!== |   TP!    |    **v5**    | ==🔴FP!== |   TP!    | **v5**  |   TN    |    TP!    |
+Vediamo cosa fa ciascuna versione:
+
+1. Rientrante
+2. Non rientrante
+3. Rientrante, con un nuovo metodo rientrante
+4. Non rientrante, con un nuovo metodo rientrante
+5. Non rientrante, con un nuovo metodo non rientrante
+
+Il nuovo metodo è `modifystorage`, che prende in input un dato e lo sovrascrive al dato già presente.
+
+Cos'hanno v2 e v5 in comune? Sono completamente non rientranti. A quanto pare, questo basta per far credere a SolCMC che il loro bilancio non possa cambiare. In realtà può comunque cambiare a causa della chiamata esterna, come nota Certora.
+
+Cos'hanno v3 e v4 in comune? `modifystorage` è rientrante, che permette di eseguire `callwrap` durante `modifystorage`, che permette a `data` di cambiare durante `callwrap`. Questa è una limitazione di Certora già nota dagli altri contratti, non so se posso farci qualcosa.
+
+Vediamo **bal**.sol. Molto semplice, confronta il bilancio prima e dopo la chiamata. Onestamente non so cosa cambiare.
+
+Doveva essere semplice. Doveva essere semplicissima. Com'è possibile. Forse se faccio i test Certora coi hook funziona, devo vedere come interagiscono con la rientranza.
+
+Ha più senso provare Lottery.
+
+#### Lottery
+
+Oddio ha tantissime proprietà e tantissime versioni.
+
+È molto interessante come contratto. È una lotteria appunto, ma gli smart contract sono deterministici e usare fonti esterne di casualità non è abbastanza sicuro per uno smart contract, quindi si usa un metodo deterministico per usare i due partecipanti come RNG.
+
+Ciascun giocatore sceglie un segreto e ne invia l'hash (trauma da SRW), insieme a una somma di denaro uguale per entrambi i giocatori. Una volta che il contratto ha entrambe le hash, i giocatori inviano i segreti. Il vincitore è scelto in funzione dei segreti.
+
+Il problema ovviamente è che il funzionamento del contratto si basa sul comportamento dei giocatori, che possono non seguire le regole. Quindi bisogna punire i giocatori disonesti, in modo tale che un giocatore onesto abbia sempre l'esperienza che l'altro giocatore sia onesto, anche se non lo è.
+
+Le regole sono che:
+
+1. Il giocatore 0 invia soldi e hash.
+2. Il giocatore 1 invia soldi e hash.
+3. G0 rivela il segreto.
+4. G1 rivela il segreto.
+5. I soldi vengono inviati.
+
+Con l'aggiunta che il turno di ciascun giocatore ha una durata massima. Se un giocatore fa scadere il tempo, l'altro giocatore riceve tutti i soldi presenti nel contratto. Per esempio, tra il passo 1 e 2, se G1 aspetta troppo allora G0 si riprende i soldi. Sono tre attese in totale, dalla durata di `DELTA_TIME` e implementata coi timestamp `end_join`, `end_reveal0` ed `end_reveal1` (il tempo parte alla costruzione del contratto). Come con gli altri contratti, il riscatto dei soldi al timeout è implementato come metodo che va chiamato, però può essere chiamato da chiunque.
+
+La descrizione del contratto non li menziona, compaiono a caso nelle descrizioni delle proprietà, ma il contratto è implementato come macchina a transizione di stato. Gli stati, in ordine, sono `Join0`, `Join1`, `Reveal0`, `Reveal1`, `Win`, `End`. Si parte dallo stato `Join0`, e il passo 1 di prima (la funzione `join0()`) ci porta a `Join1`.
+
+È un contratto interessante. Le proprietà sono tante ma perché sono presenti molte variazioni della stessa proprietà.
+
+
+| Proprietà                                             | Gruppo                                                                                                                                                                                                                                                                                                                                             | Individuale                            |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| **deadlock-freedom-join1**(-eoa)                      | Nello stato `___`, se il contratto ha soldi, la prossima transazione può essere una transazione che svuota il bilancio.                                                                                                                                                                                                                            | `Join1`                                |
+| **deadlock-freedom-reveal0**(-eoa)                    | ^                                                                                                                                                                                                                                                                                                                                                  | `Reveal0`                              |
+| **deadlock-freedom-reveal1**(-eoa)                    | ^                                                                                                                                                                                                                                                                                                                                                  | `Reveal1`                              |
+| **deadlock-freedom-win**(-eoa)                        | ^                                                                                                                                                                                                                                                                                                                                                  | `Win`                                  |
+| **deadlock-freedom-join1-witness**(-eoa)              | Dopo la chiamata al metodo `___` che non reverta, il contratto non ha soldi.                                                                                                                                                                                                                                                                       | `redeem0_nojoin1()`                    |
+| **deadlock-freedom-reveal0-witness**(-eoa)            | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem1_noreveal0()`                  |
+| **deadlock-freedom-reveal1-witness**(-eoa)            | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem0_noreveal1()`                  |
+| **deadlock-freedom-win-witness**(-eoa)                | ^                                                                                                                                                                                                                                                                                                                                                  | `win()`                                |
+| **honest-player-profitability-eoa-redeem0-nojoin1**   | Gioc. EOA, in uno stato `___` raggiungibile, dopo la scadenza di quello stato, chiunque può chiamare un metodo che non reverta, che aumenta ($>0$) il bilancio di `___` di esattamente \_\_\_, svuota il bilancio del contratto, e porta lo stato ad `End`.                                                                                        | `Join1`, `player0`, la sua scommessa   |
+| **honest-player-profitability-eoa-redeem0-noreveal1** | ^                                                                                                                                                                                                                                                                                                                                                  | `Reveal1`, `player0`, i soldi in gioco |
+| **honest-player-profitability-eoa-redeem1-noreveal0** | ^                                                                                                                                                                                                                                                                                                                                                  | `Reveal0`, `player1`, i soldi in gioco |
+| **no-incentives-to-abort-eoa**                        | Gioc. EOA, dopo una transazione `reveal0` che non reverta, la prossima transazione può essere `___` e dare i soldi in gioco a `player0`.                                                                                                                                                                                                           | (qualunque)                            |
+| **no-incentives-to-abort-witness-eoa**                | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem0_noreveal1()`                  |
+| **owner-impartiality-eoa**                            | Gioc. EOA, in qualunque stato in cui il giocatore non è determinato, per ogni transazione il cui mittente non è un giocatore, se questa transazione cambia lo storage del contratto, allora una transazione identica di cui cambia solo il mittente, per qualunque mittente EOA, nello stesso stato, deve produrre le stesse modifiche allo stato. |                                        |
+| **player1-should-match-bet**                          | Se una transazione `join1` non reverta, allora `msg.value` è lo stesso della scommessa di `player0`.                                                                                                                                                                                                                                               |                                        |
+| **redeem-before-deadline-reverts-nojoin1**            | Una transazione `___` reverta se il timestamp è $\leq$ `___`.                                                                                                                                                                                                                                                                                      | `redeem0_nojoin1()`, `end_join`        |
+| **redeem-before-deadline-reverts-noreveal0**          | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem1_noreveal0()`, `end_reveal0`   |
+| **redeem-before-deadline-reverts-noreveal1**          | ^                                                                                                                                                                                                                                                                                                                                                  | `redeem0_noreveal1`, `end_reveal1`     |
+| **redeem0-noreveal1-fairness-eoa**                    | Gioc. EOA, se lo stato è `Reveal1`, se `compute_winner()` si valuta a `player0`, allora una `redeem0_noreveal1()` che non reverta aumenta ($>0$) il bilancio di `player0`, non cambia il bilancio di `player1`, e diminuisce ($>0$) il bilancio del contratto.                                                                                     |                                        |
+| **reveal0-reverts-after-deadline**                    | Una transazione `___` reverta dopo `___`.                                                                                                                                                                                                                                                                                                          | `reveal0()`, `end_reveal0`             |
+| **reveal1-reverts-after-deadline**                    | ^                                                                                                                                                                                                                                                                                                                                                  | `reveal1()`, `end_reveal1`             |
+| **status-irreversible**                               | Le transizioni di stato vanno in ordine:`Join0` < `Join1` < `Reveal0` < `Reveal1` < `Win` < `End`.                                                                                                                                                                                                                                                 |                                        |
+| **win-pays-fair-winner-eoa**                          | Gioc. EOA, in uno stato `Win` raggiungibile, una transazione `win()` che non reverta deve dare al giocatore restituito da `compute_winner()` tutti i soldi in gioco.                                                                                                                                                                               |                                        |
+| **win-transaction-env-independent**                   | Due transazioni `win()` che non revertano che partono dallo stesso stato del contratto dovrebbero avere lo stesso vincitore.                                                                                                                                                                                                                       |                                        |
+| **winner-computation-env-independent**                | Con gli stessi input, la funzione di vittoria dà lo stesso output a prescindere dall'env.                                                                                                                                                                                                                                                          |                                        |
+| **wrong-preimage-reverts-p0**                         | Se una transazione `___(s)` non reverta, allora `s` è la preimmagine dell'hash committata da `___`.                                                                                                                                                                                                                                                | `reveal0()`, `player0`                 |
+| **wrong-preimage-reverts-p1**                         | ^                                                                                                                                                                                                                                                                                                                                                  | `reveal1()`, `player1`                 |
+Alcune proprietà hanno anche una versione **-eoa**, che si applica solo se i giocatori sono EOA.
+
+Anche con questa riduzione, ci sono comunque 14 macroproprietà.
+
+Sarà certamente scomodo lavorarci.
+
+Vedo che Certora dà FN su **win-pays-fair-winner-eoa**. Il test è molto semplice. Vedo che fa `nativeBalances[expected_winner] == pre_bal + pre_pot`, non credo che Certora faccia overflow ma è meglio controllare. Vedo anche `compute_winner(e, p0, p1, secret0(e), secret1(e))`, quindi mi chiedo se ci sia un problema con l'hash.
+
+Per l'hash, per fortuna qui abbiamo una funzione Solidity di hashing chiamabile da Certora. Ok `secret0()` è il getter della variabile `secret0`. Boh. Dovrò girare il test e vedere il report, ma non lo farò ora.
+
+Cosa c'è da fare domani:
+* Controllare **win-pays-fair-winner-eoa**.spec.
+* Leggere le 770 righe di ground truth coi commenti..
+* Familiarizzare con le 22 versioni.
+* Provare a scrivere almeno 5 versioni (le mie solite).
+* Magari aggiungere commenti alla ground truth per almeno v1, perché non capisco.
+
+Ma poi io non so se Lottery va aggiustato o no. Perché magari il ✅ ce l'hanno solo i contratti che hanno anche Halmos e Forge. No, ok, Vault ha il ✅ ma ha solo Certora e SolCMC. Rassicurante, così non scopro a caso di aver fatto lavoro a vuoto.
+
+### 12 nv
+
+Vediamo come funziona **win-pays-fair-winner-eoa**.spec. Vedo già una custom strana:
+```CVL
+/// @custom:run certoraRun versions/Lottery_v1.sol:Lottery versions/lib/EOA0.sol versions/lib/EOA1.sol --verify Lottery:certora/win-pays-fair-winner-eoa.spec --link Lottery:player0=EOA0 --link Lottery:player1=EOA1 --optimistic_hashing --optimistic_loop
+```
+
+In particolare mi sembra strana `--link`.
+
+Il test controlla, nel... Eccoci. La definizione dice ***reachable** state*, ma Certora parte da uno stato arbitrario. Controlla solo che `status == Status.Win`. Allora non lo so.
+
+Vediamo la ground truth per v1. Metto io le giustificazioni che sembrano giuste.
+
+* **deadlock-freedom-join1** N: I metodi chiamabili in `Join1` sono `join1()` e `redeem0_nojoin1()`. `join1()` non svuota il bilancio, e `player0` può rifiutare il pagamento di `redeem0_nojoin1()`.
+- **deadlock-freedom-join1-eoa** P: `player0` è un utente e riceverà i soldi.
+- **deadlock-freedom-join1-witness** N: `player0` può rifiutare il pagamento. 
+- **deadlock-freedom-join1-witness-eoa** P: `player0` è un utente e riceverà i soldi.
+- ... sono tutti uguali
+- **honest-player-profitability-eoa...** P: Il giocatore è un utente.
+- **no-incentives-to-abort(-witness)-eoa** P: Sì perché quando scade il tempo funziona così.
+- **owner-impartiality-eoa** P: Sì perché non c'è un metodo che dà poteri speciali all'owner.
+- **player1-should-match-bet** P: Ovvio 
+- **redeem-before-deadline-reverts-...** P: Ovvio  
+- **redeem0-noreveal1-fairness-eoa** P: sì dai
+- **reveal\_-reverts-after-deadline**: molto letterale
+- **status-irreversible**:
+- **win-pays-fair-winner-eoa**:
+- **win-transaction-env-independent**:
+- **winner-computation-env-independent**: 
+- **wrong-preimage-reverts-p0**:
+- **wrong-preimage-reverts-p1**:
+
+Boh basta, ce ne sono troppi semplici. Metto un po' di commenti a quelli che sono falsi per v1. Ok erano pochi.
+
+Il commento per `deadlock-freedom-reveal1-eoa,v6` mi sembra strano, da rivedere.
+
+Vediamo le versioni.
+
+| Versione | Gruppo                                                                         | Individuale           |
+| -------- | ------------------------------------------------------------------------------ | --------------------- |
+| 1        | Normale                                                                        | <                     |
+| 2        | `___` invia metà dei soldi.                                                    | `redeem0_nojoin1()`   |
+| 3        | ^                                                                              | `redeem1_noreveal0()` |
+| 4        | ^                                                                              | `redeem0_noreveal1()` |
+| 5        | ^                                                                              | `win()`               |
+| 6        | `redeem0_noreveal1` paga `player1` anziché `player0`.                          | <                     |
+| 7        | `___` non controlla lo stato.                                                  | `join1()`             |
+| 8        | ^                                                                              | `reveal0()`           |
+| 9        | ^                                                                              | `reveal1()`           |
+| 10       | ^                                                                              | `win()`               |
+| 11       | Il vincitore dipende dal timestamp.                                            | <                     |
+| 12       | `___` non controlla la preimmagine.                                            | `reveal0()`           |
+| 13       | ^                                                                              | `reveal1()`           |
+| 14       | Il proprietario può decidere il vincitore.                                     | <                     |
+| 15       | `redeem0_noreveal1()` controlla il timestamp `end_join` anziché `end_reveal1`. | <                     |
+| 16       | `___` non aggiorna lo stato.                                                   | `reveal0()`           |
+| 17       | ^                                                                              | `reveal1()`           |
+| 18       | La funzione di riscatto paga `msg.sender` (?).                                 | <                     |
+| 19       | `join1()` non controlla che la bet sia uguale.                                 | <                     |
+| 20       | `win()` paga `msg.sender`.                                                     | <                     |
+| 21       | `___` non ha un limite di tempo.                                               | `reveal0()`           |
+| 22       | ^                                                                              | `reveal1()`           |
+### 13 nov
+
+Vediamo cosa devo scrivere a Bartoletti. Le cose dell'altra volta più cose nuove.
+
+> Buongiorno, ho dubbi sull'interpretazione di alcune proprietà.
+> 
+> HTLC:
+> * **reveal-timeout-after-isCommitted**: "`reveal()` and `timeout()` can only be successfully called if contract is in a committed state" - La definizione sembra intendere che il contratto debba essere nello stato committed prima della chiamata di questi metodi, e il test SolCMC corrisponde a questa interpretazione, ma il test Certora controlla lo stato dopo la chiamata del metodo, che corrisponde alla ground truth. Dovrei fidarmi della ground truth o correggerla?
+> 
+> Vesting Wallet:
+> * **rel-strict-incr**: "\[...\] the releasable amount is strictly increasing \[...\]" - Una funzione da interi a interi è sempre una funzione costante a tratti, poiché i risultati delle divisioni vengono troncati, perciò esistono coefficienti angolari che fanno sì che due valori diversi in input risultino nello stesso output (perché se la funzione fosse continua, la differenza negli output sarebbe minore di 1). Tali funzioni dovrebbero essere considerate strettamente crescenti come secondo la ground truth? Ho scritto un test che compensa il problema se la funzione è lineare.
+> * **rel-grows-linear**: "releasable grows linearly \[...\]: two successful consequent calls to `releasable` differ by c\*t, where t is the timestamp difference between the two calls, and c is a fixed constant for the contract" - Stesso problema, anche qui il mio test compensa il troncamento con del margine di errore e corrisponde alla ground truth, dovrei usare la definizione esatta o accettare del margine di errore?
+
+Ok in realtà le altre cose sono le variabili ghost incluse nel contratto che potrebbero essere un rimasuglio di una versione vecchia del progetto, e il fatto che la cosa che controlla che `assert` e `satisfy` non siano nella stessa regola è rotta.
+
+Però in effetti controllo che esista almeno un esempio di un file `.spec` con più di una regola. Ok non c'è un singolo file che contiene due volte la parola `rule`, immagino di non dover usare due regole nella stessa spec.
+
+Vediamo le proprietà che compaiono solo vere o solo false
+
+- **deadlock-freedom-join1-witness** - N
+- **deadlock-freedom-reveal0-witness** - N
+- **deadlock-freedom-reveal1-witness** - N
+- **deadlock-freedom-win-witness** - N
+- **redeem-before-deadline-reverts-nojoin1** - P
+- **redeem-before-deadline-reverts-noreveal0** - P
+
+Per gli **-witness**, posso creare una versione che richiede che il proprietario del contratto sia un EOA, e se il pagamento in quei metodi fallisce, i soldi vanno al proprietario. Oppure semplicemente si richiede che i giocatori siano EOA. Possiamo farlo perché tanto devono joinare.
+
+In realtà a SolCMC questa cosa non importa, dà comunque negativo.
+
+Le altre due proprietà sono facilissime da falsificare, è quasi inutile testarne i test, sono molto letterali.
+
+Ok, è stato utile fare la v23, perché mi rendo conto che i test Certora delle proprietà **-witness**, come al solito, non partono da uno stato valido, quindi anche se il contratto non permette giocatori non EOA, il test li considera comunque. Sicuramente se mettessi il check in ogni metodo funzionerebbe. E mi sa che lo faccio. Eh ma non si può, io faccio `msg.sender == tx.origin` per controllare che il *sender* sia un EOA, ma non credo di poterlo fare con terze parti. C'era la tecnica di controllare che il suo codice abbia lunghezza nulla, ma non è infallibile.

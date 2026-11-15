@@ -1,6 +1,8 @@
 ---
 cssclasses:
- - logica
+  - logica
+aliases:
+  - teorema di equivalenza dei calcoli
 ---
 Abbiamo detto che [[Calcolo alla Hilbert|HK]], [[Deduzione Naturale|ND]] e [[Calcolo dei Sequenti|PK]] sono equivalenti, ma non abbiamo detto come. Con HK ed ND ce lo possiamo immaginare, abbiamo una nozione di derivabilità.
 

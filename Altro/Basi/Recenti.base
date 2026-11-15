@@ -1,9 +1,15 @@
+formulas:
+  Materia: 'html("<span class=\""+file.path.replace(/.*Semestre [12]\/([a-zA-Z0-9])/,"$1").replace(/\/.*/,"").lower()+"\"style =\""+"color: var(--accent)"+"\">"+file.path.replace(/.*Semestre [12]\/([a-zA-Z0-9])/,"$1").replace(/\/.*/,"") + "</span>")'
 views:
   - type: table
     name: View
     filters:
       and:
         - file.fullname.endsWith(".md")
+    order:
+      - file.mtime
+      - formula.Materia
+      - file.name
     sort:
       - property: file.mtime
         direction: DESC

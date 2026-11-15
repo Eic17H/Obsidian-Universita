@@ -40,4 +40,35 @@ $$\begin{matrix*}[l]
 
 No niente, è orrendo. Niente. Non lo so come scriverlo.
 
+## Ci riprovo
+
+Come faccio a fare $\forall m,\ \lnot rev$ in SolCMC? Vediamo bene cos'ho a disposizione (niente):
+* `require(x); assert(y);`: $(\forall m,\ \lnot x \lor y) \lor (\forall m,\ \lnot x)$
+
+Ah. Scritto così noto che la mia cosa aggiuntiva dei quantificatori non è una cosa aggiuntiva, ed è solo una cosa ovvia che segue dalla parte ovvia. Quindi lo riscrivo in modo più rigoroso forse.
+
+* `require(x); assert(y);` $\lnot x \to rev \vdash \forall m.\Rightarrow y \lor rev$
+* `negate; require(x); assert(!y);` $\lnot x \to rev \vdash \exists m.  \Rightarrow y \land \lnot rev$
+
+Prendiamo per esempio Deposit ETH. Io voglio questo:$$\begin{matrix*}[l]
+\forall m.\ amount \leq balance \Rightarrow withdraw(balance) \to \lnot rev
+\end{matrix*}$$
+Quello che devo fare è essenzialmente ricondurlo alla una delle due forme normali. Mi sembra già abbastanza impossibile. Prima di tutto siamo nella logica dei predicati, che io non conosco, e non so se esiste un modo per trasformare $\forall$ in $\exists$ ma dubito. Proviamo a ignorare il quantificatore.$$\begin{matrix*}[l]
+p: amount \leq balance\\
+q: withdraw(balance)\\
+r: rev\\
+\dfrac{p \Rightarrow q \to \lnot r}{}
+\end{matrix*}$$
+Ok sto notando che in PK non lo so fare. Provo in ND.$$\begin{matrix*}[l]
+p: amount \leq balance\\
+q: withdraw(balance)\\
+r: rev\\
+p \to (q \to r) \vdash (\lnot \alpha \to r) \to \beta \lor r \\
+\dfrac{p \to (q \to \lnot r)}{}
+\end{matrix*}$$
+
+Ok non ne ho comunque idea, però guarda. Userò delle regole di inferenza tutte mie.$$\dfrac{\dfrac{p \to (q \to r)}{p \to (\lnot q \lor r)}}{...}$$
+No ancora niente. L'idea era che $\beta = \lnot q$, ma poi dovrei in qualche modo rendere $p = (\lnot \alpha \lor r)$, che non credo si possa fare. Anzi aspetta.$$\dfrac{\dfrac{\dfrac{r}{\lnot \alpha \lor r}}{p \to (\lnot \alpha \lor r)} \qquad \dfrac{}{(\lnot \alpha \lor r) \to p}}{(p \to (\lnot \alpha \lor r)) \land((\lnot \alpha \lor r) \to p)}$$
+No non lo so. Però stava cominciando ad essere ridicolo. Niente, non credo si possa fare.
+
 #hidden

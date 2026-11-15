@@ -1,6 +1,7 @@
 ---
 cssclasses:
   - ga
+date: 2026-10-06
 ---
 Let's now try to design the algorithm.
 

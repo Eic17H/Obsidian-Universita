@@ -2,10 +2,13 @@
 cssclasses:
   - fpw
 ---
-Ci sono app web statiche e dinamiche.
-Se mi collego a un sito, sto semplicemente chiedendo al server di mandarmi pagine web, che sono file (tipicamente file .html) nel suo file system.
-Un sito statico, ogni volta che vi accedi ti manda lo stesso file html. Puoi vederlo come un file in una cartella, e poi ti sposti di file e di cartella.
-In quelle dinamiche invece, le pagine non sono più un file statico nel file system del server, sono una risorsa leggermente differente che viene confezionata al momento della richiesta.
+Ci sono app web ==**statiche**== e **==dinamiche==**.
+Se mi collego a un sito, sto semplicemente chiedendo al server di mandarmi pagine web, che sono file (tipicamente file `.html`) nel suo file system.
+
+Un sito ==statico==, ogni volta che vi accedi ti manda lo stesso file HTML. Puoi vederlo come un file in una cartella, e poi ti sposti di file e di cartella.
+
+In quelle ==dinamiche== invece, le pagine non sono più un file statico nel file system del server, sono una risorsa leggermente differente che viene confezionata al momento della richiesta.
+
 Io richiedo al server, il server accetta, confeziona una pagina sul momento (dinamicamente) e poi me la manda. Se lo faccio domani, se lo fa qualcun altro, ne confeziona una diversa a seconda dei dati.
 
 Esempio statico:
@@ -37,7 +40,7 @@ Da allora, sono cambiate le velocità, i protocolli interni ai server, ma rimane
 Questo protocollo non ha stati. Finito un trasferimento, il prossimo non è correlato al precedente
 In realtà esistono modi di correlarli, ma non sono proprie del'HTTP, ma sono costruite sopra il protocollo.
 
-Le richieste sono eseguite col protocollo TCP, che vedremo a Reti Di Calcolatori
+Le richieste sono eseguite col protocollo <span class="rc">[[TCP]]</span>, che vedremo a Reti di Calcolatori
 Le slide sono utili.
 
 Gli indirizzi IP non fanno parte di questo corso.
@@ -54,8 +57,8 @@ Metodo POST: i dati in transito non sono visibili.
 Quindi magari Get ho l'url www.sito.web/page?dati=imieidatiinchiaro, invece Post ho i miei dati in un file a parte e non nell'URL.
 
 Ci sono codici risposta HTTP.
-Per esempio "404" significa "file non trovato", ma è un errore LATO CLIENT (come tutti quelli che cominciano con 4).
-500 server error.
+Per esempio "`404`" significa "file non trovato", ma è un errore **LATO CLIENT** (come tutti quelli che cominciano con `4`).
+`500` server error.
 Non vanno ricordati tutti a memoria per questo esame.
 Per altri esami sì.
 Vedi le slide va'.
