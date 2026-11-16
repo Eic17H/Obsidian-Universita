@@ -8,9 +8,9 @@ Vediamo ora il calcolo della Deduzione Naturale (ND).
 
 ## Cenni storici
 
-Gentzen nel 1934 nella sua tesi di dottorato ha introdotto questa cosa qua. Poi Prawitz, svedese ancora vivo, dimostra questo teorema importante: (poco rigoroso) *tutto ciò che può essere derivato in ND, può essere derivato senza ridondanze*, e le ridondanze sono quelle di questo esempio: introdurre una formula ed eliminarla subito, eliminare un connettivo e reintrodurlo e tornare dov'eravamo. Il teorema di normalizzazione ci dice che ogni derivazione contenente questi giri pesca può essere trasformata in maniera algoritmica in una derivazione che non ne contiene.
+[[Gentzen]] nel 1934 nella sua tesi di dottorato ha introdotto questa cosa qua. Poi [[Prawitz|Prawitz]], svedese ancora vivo, dimostra questo teorema importante: (poco rigoroso) *tutto ciò che può essere derivato in ND, può essere derivato senza ridondanze*, e le ridondanze sono quelle di questo esempio: introdurre una formula ed eliminarla subito, eliminare un connettivo e reintrodurlo e tornare dov'eravamo. Il teorema di normalizzazione ci dice che ogni derivazione contenente questi giri pesca può essere trasformata in maniera algoritmica in una derivazione che non ne contiene.
 
-In una lezione particolare crossover con la filosofia del linguaggio vedremo l'idea del significato dei connettivi che emerge da questo calcolo.
+In una lezione particolare crossover con la [[filosofia del linguaggio|filosofia del linguaggio]] vedremo l'idea del significato dei connettivi che emerge da questo calcolo.
 
 ## Differenze con HK
 
@@ -64,13 +64,15 @@ I puntini verticali significano "supponiamo di aver già dimostrato $β$ da $α$
 
 Se due foglie dell'albero hanno la stessa assunzione, quando chiudiamo una chiudiamo anche l'altra.
 
+È molto probabile che i lettori non siano convinti della sensatezza di questa regola. Ma io ho una spiegazione intuitiva che risponde a una domanda che mi sono fatto all'inizio. Sicuramente il professore non la spiega così perché c'è qualche elemento poco rigoroso che mi sfugge, ma io posso. Se io ho $\alpha \vdash \beta$, significa che se assumo che sia vero $\alpha$ allora è vero $\beta$. Se io ho $\vdash \alpha \to \beta$, significa che se è vero $\alpha$ è vero anche $\beta$. A me sembra che, concettualmente, siano la stessa cosa. E infatti passare dalla prima alla seconda è semplicemente l'applicazione di $\to \text I$, stiamo rimuovendo $\alpha$ dalle assunzioni. Quel $\alpha \cdots \beta$ significa $\alpha \vdash \beta$. E il fatto che avessero lo stesso significato ma fossero formalmente diverse era una delle cose che ho trovato strane quando ha introdotto il concetto di assunzione.
+
 È anche possibile introdurre un'implicazione senza usare nessun'assunzione: in quel caso *chiudiamo l'insieme vuoto di assunzioni*, $\rightarrow I \text{-} \emptyset$. Per esempio:$$\dfrac{α}{β\rightarrowα}\rightarrow I, \emptyset$$Questo è strano. Si può fare eh. Ma è davvero strano. Diciamo che lì possiamo dire che, insomma, c'è una foglia $β$ invisibile che abbiamo chiuso alla prima introduzione senza usarla effettivamente ma almeno l'abbiamo chiusa.
 
 Questo è brutto. Ai logici rilevanti non piace, e infatti permette di derivare l'a fortiori. Quindi nella logica rilevante, è vietato chiudere l'insieme vuoto di premesse.
 
 E poi c'è la logica lineare, che vieta di chiudere due foglie in un colpo. E perché? Nel campo dell'informatica, le premesse sono viste come risorse che una volta consumate non si possono riutilizzare. Per i logici lineari, questo è più vicino a come facciamo deduzione automatica coi computer. Due monete sono uguali tra loro ma per comprare due cose voglio due copie della risorsa, anche se è fungibile.
 
-Questo è legato al tema delle logiche sottostrutturali. Ma questo lo possiamo capire solo una volta fatto il calcolo delle sequenze.
+Questo è legato al tema delle logiche sottostrutturali. Ma questo lo possiamo capire solo una volta fatto il calcolo delle sequenze. (Update: non l'ho capito neanche dopo il calcolo delle sequenze.)
 
 Però torniamo a noi. Noi possiamo chiudere l'insieme vuoto di assunzioni, e ci scateniamo.
 

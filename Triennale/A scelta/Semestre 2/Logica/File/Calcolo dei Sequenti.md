@@ -12,7 +12,7 @@ Il simbolo che usiamo è $PK$, che non è quello che usa Gentzen ma quello che u
 Questi $A$ e $B$ che vediamo sono lettere latine, singole formule, e non lettere greche.
 # [[Triennale/A scelta/Semestre 2/Logica/File/Calcolo dei Sequenti/Storia|Storia]] e nome
 
-Introdotta nel 1934 da Gentzen, allievo di Hilbert.
+Introdotta nel 1934 da [[Gentzen]], allievo di Hilbert.
 
 L'obiettivo, come col calcolo alla Hilbert, era la formazione della matematica: dimostrare che il calcolo formale dell'aritmetica non può portare a contraddizioni.
 

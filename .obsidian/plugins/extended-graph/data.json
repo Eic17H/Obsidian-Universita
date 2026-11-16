@@ -850,7 +850,7 @@
     "images": true,
     "icons": true,
     "focus": true,
-    "shapes": true,
+    "shapes": false,
     "layers": true,
     "elements-stats": false,
     "names": true,
