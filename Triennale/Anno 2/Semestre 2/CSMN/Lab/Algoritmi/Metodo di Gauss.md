@@ -4,7 +4,7 @@ cssclasses:
 ---
 [[Gauss con pivoting|Versione con pivoting]]
 
-[[Gauss|Teoria]]
+[[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi diretti/Gauss|Teoria]]
 
 L'algoritmo di Gauss permette di trasformare una qualunque matrice in una matrice triangolare superiore, in modo tale che i sistemi associati alle due matrici abbiano la stessa soluzione, cioè le matrici sono equivalenti.
 

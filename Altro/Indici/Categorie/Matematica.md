@@ -30,7 +30,7 @@
 		* [[Diagonali]]
 		* [[Ortogonali]]
 		* [[Triangolari]]
-		* [[Gauss]]
+		* [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi diretti/Gauss]]
 		* [[Inversione]]
 	* [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi|Metodi iterativi]]
 		* [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Jacobi]]

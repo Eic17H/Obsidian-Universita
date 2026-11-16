@@ -17,7 +17,7 @@ cssclasses:
 		* [[Diagonali|Diagonali]]
 		* [[Ortogonali|Ortogonali]]
 		* [[Triangolari|Triangolari]]
-		* [[Gauss|Gauss]]
+		* [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi diretti/Gauss|Gauss]]
 		* [[Inversione|Inversione]]
 	* [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi|Metodi iterativi]]
 		* [[Triennale/Anno 2/Semestre 2/CSMN/Teoria/Sistemi lineari/Metodi iterativi/Jacobi|Jacobi]]
