@@ -4,9 +4,9 @@ cssclasses:
 ---
 Studiamo metodi per prendere decisioni in modo sensato. Ci sono più passi.
 
-* Individuare il problema, descriverlo a parole, e far emergere il criterio decisionale, i requisiti e i dati;
-* Modellizzazione del problema: trovare un modello di ottimizzazione, cioè descrivere in formule il mio problema, e questo serve per darle a degli applicativi o degli algoritmi che date le formule risolvono il problema;
-* Definizione di un algoritmo risolutivo per il modello;
+* Individuare il ==problema==, descriverlo a parole, e far emergere il ==criterio decisionale==, i ==requisiti== e i ==dati==;
+* Modellizzazione del problema: trovare un ==modello== di ottimizzazione, cioè descrivere in formule il mio problema, e questo serve per darle a degli applicativi o degli algoritmi che date le formule risolvono il problema;
+* Definizione di un ==algoritmo== risolutivo per il modello;
 * Trovare un'implementazione di quell'algoritmo, o scriverla;
 * Determinare la soluzione, cioè capire se i risultati risolvono il mio problema, e in tal caso analizzarla.
 

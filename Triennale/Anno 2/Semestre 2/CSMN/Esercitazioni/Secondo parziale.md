@@ -4,6 +4,8 @@ cssclasses:
 ---
 Da integrare con gli appunti cartacei
 
+#hidden
+
 # 1. Costruire utilizzando la rappresentazione in forma canonica il polinomio che interpola la seguente tabella
 
 

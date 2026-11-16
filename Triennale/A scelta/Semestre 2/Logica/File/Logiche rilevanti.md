@@ -2,7 +2,7 @@
 cssclasses:
   - logica
 ---
-# Schemi controintuitivi
+## Schemi controintuitivi
 
 A fortiori, $\frac{α}{β→α}$. "Tre è dispari. Quindi, se tre è pari, tre è dispari". La nostra intuizione è che sia falsa, eppure è un argomento valido, poiché istanzia uno schema valido. Nella fisica, ci sono spesso cose che sono vere ma non hanno senso intuitivamente, il problema è che siamo ignoranti e non capiamo la fisica, la soluzione è imparare la fisica. È lo stesso con questo argomento?
 
@@ -14,7 +14,7 @@ Prendiamo per esempio l'ex absurdo quodlibet: "L'imputato aveva una cravatta blu
 
 Questa è la logica classica, prendere o lasciare. Bella, verofunzionale, eppure ci dà questo. Ci sono delle alternative? **Sì.** C'è qualcosa che trova l'errore in questo argomento, la *logica rilevante*.
 
-# Logiche rilevanti
+## Logiche rilevanti
 
 * Nella logica classica, perché un argomento sia valido basta che venga mantenuto il valore di verità ... Nelle logiche rilevanti, c'è anche bisogno che le premesse siano **pertinenti** alla conclusione. Il colore della cravatta non ci dice se è colpevole, che tre sia dispari non è rilevante all'implicazione che ci porta dall'antecedente al conseguente, e infatti:
 * Nella logica classica, l'implicazione è verofunzionale, nelle logiche rilevanti no, e infatti non ha una tavola di verità.
@@ -24,7 +24,7 @@ I padri di questa logica sono due filosofi statunitensi: Alan Anderson e N. Belm
 
 Logic**he** rilevant**i**. La logica classica è l'originale, è l'ortodossia, ce n'è solo una, ma ci sono tanti modi di deviare dall'ortodossia.
 
-## Criteri
+### Criteri
 
 Come verifico la rilevanza? La verofunzionalità è semplice, ma la rilevanza? Ci sono due criteri, sintattico e semantico.
 
@@ -34,7 +34,7 @@ Semantico: uno schema classicamente valido è accettabile quando la forma logica
 
 L'errore è attaccare un dogmatismo e sostituirlo con un altro dogmatismo.
 
-## Difetti
+### Difetti
 
 Nel 1932 esce un libro importante per la storia della logica, Symbolic Logic, uno degli autori è Clarence Irving Lewis. Mai sentito parlare del pragmatismo? Lewis era uno dei proponenti. Una triade di proponenti pari a ??? Pascoli e Carducci.
 
@@ -66,11 +66,13 @@ Guarda la copertina di Relevant logics and their rivals 1 #slide. I logici class
 
 Ed è proprio tramite la p.d.c. che la logica classica prova a salvarsi.
 
-P. Grice, inglese, fine 1900, filosofo del linguaggio, teoria degli *atti linguistici*. "Cosa ne pensi della performance del violinista?" / "Ha accordato bene lo strumento". Ma non ti ho chiesto quello. E se fosse forse forse che intende che non ne pensa bene?
+### Grice
+
+[[Grice|P. Grice]], inglese, fine 1900, filosofo del linguaggio, teoria degli *atti linguistici*. "Cosa ne pensi della performance del violinista?" / "Ha accordato bene lo strumento". Ma non ti ho chiesto quello. E se fosse forse forse che intende che non ne pensa bene?
 
 Come riconosciamo il sottinteso? Per Grice, c'è il criterio della *cancellabilità*: se c'è un sottinteso conversazionale, questo può essere cancellato da un'altra affermazione *senza contraddire il contenuto letterale dell'affermazione precedente*. Grice sostiene che ci siano dei princìpi, detti *massime*. Era un kantiano, le suddivide in boh, si rifà alla critica d.r. pura. Quantità quantità relazione e modalità. Ci interessano le prime due.
 
-## Massima della qualità
+#### Massima della qualità
 
 Se asserisco qualcosa, lo ritengo vero e penso di avere buone ragioni per asserirlo. Principio di cooperazione tra interlocutori, cooperiamo per condividere informazioni.
 
@@ -78,13 +80,13 @@ Lo *ritengo* vero, ma magari è falso. Non è una bugia, è ignoranza, non sto v
 
 Mi fido che l'interlocutore non mi svii.
 
-## Massima della quantità
+#### Massima della quantità
 
 L'interlocutore è tenuto a dare l'informazione più utile e pertinente di cui dispone, niente di più e niente di meno.
 
 Facile violarla pur senza mentire. "Quando sarà il prossimo appello e dove?" / "Sarà nel 2026 in Sardegna". Vero, ma non mi hai risposto, non stai cooperando.
 
-# A noi che interessa?
+## A noi che interessa?
 
 È filosofia del linguaggio, mica della logica. Grice sostiene che non siano insomma frase lunghissima, hai capito. Il falso non è letterale ma sottinteso. Grice sostiene la logica classica.
 

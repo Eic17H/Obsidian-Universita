@@ -34,7 +34,7 @@ Ci sono due categorie di enunciato: semplice e composto.
 
 "Piove" è un enunciato che consiste di un'unica parola, non contiene altri enunciati, quindi è semplice.
 
-"Piove" è vago se ci pensi. Piove dove? La vaghezza nel linguaggio naturale è omnipervasiva. Non faremo storia, ma il professore citerà molte nozioni storiche. Uno dei padri della logica moderna, Frege, tedesco, ascriveva alla logica un compito molto importante: doveva comporre le fondamenta sicure della matematica, e la formalizzazione era un modo per rimuovere tutte le impurità che la rendevano inadeguata. Per Frege la vaghezza era presente ma eliminabile. Più di recente, sono state fatte delle logiche studiate per formalizzare anche il concetto di vaghezza.
+"Piove" è vago se ci pensi. Piove dove? La vaghezza nel linguaggio naturale è omnipervasiva. Non faremo storia, ma il professore citerà molte nozioni storiche. Uno dei padri della logica moderna, [[Frege]], tedesco, ascriveva alla logica un compito molto importante: doveva comporre le fondamenta sicure della matematica, e la formalizzazione era un modo per rimuovere tutte le impurità che la rendevano inadeguata. Per Frege la vaghezza era presente ma eliminabile. Più di recente, sono state fatte delle logiche studiate per formalizzare anche il concetto di vaghezza.
 
 Torniamo a noi.
 
@@ -210,7 +210,7 @@ Questo è un algoritmo con complessità esponenziale, in funzione del numero di 
 
 Qualora la colonna sia composta solo da $1$, significherebbe che il mio enunciato è $\text{vero}$ indipendentemente dalle variabili. Sarebbe una tautologia, un enunciato vero in qualunque universo immaginabile. L'opposto è una contraddizione, sempre $\text{falsa}$. Queste sono proprietà universali, perché tutte le righe le devono rispettare.
 
-Wittgenstein, uno dei creatori della tavola di verità. Secondo lui, le tautologie e le contraddizioni non contengono alcuna informazione. "Piove o non piove" non mi dà nessuna informazione sul meteo. Enunciati con contenuto informativo zero.
+[[Wittgenstein]], uno dei creatori della tavola di verità. Secondo lui, le tautologie e le contraddizioni non contengono alcuna informazione. "Piove o non piove" non mi dà nessuna informazione sul meteo. Enunciati con contenuto informativo zero.
 
 Un enunciato con almeno un $1$ è soddisfacibile. Un enunciato con almeno uno $0$ è falsificabile. Ogni tautologia è soddisfacibile, ogni contraddizione è falsificabile. Ma non valgono né gli inversi né i conversi. Sono proprietà esistenziali, basta una riga per farle valere.
 
