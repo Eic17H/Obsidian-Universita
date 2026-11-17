@@ -206,4 +206,22 @@ Vediamo poi come dovrei fare quelli non esistenti:
 * **no-incentives-to-abort-\***: il check EOA non funziona, stessa logica e stesso problema di **deadlock-freedom-\***.
 * **win-pays-fair-winner-eoa**: anche questa facilmente traducibile, e il revert gioca in nostro favore.
 
-Io non vedo nessun altro contratto usare `/// @custom:nondef`. Vedo che nel readme scrive `FND`.
+Io non vedo nessun altro contratto usare `/// @custom:nondef`. Vedo che nel readme scrive `FND`. E anche `FND` non compare in nessun altro contratto.
+
+Farei prima quelli non esistenti.
+
+Ok **status-irreversible** tutto corretto.
+
+**honest-player-profitability-\*** non mi sembra fattibile in SolCMC, dice "può eseguire una transazione", quindi non solo c'è il problema del fatto che deve essere EOA ma deve anche essere un $\exists$, cosa che mi sembra impossibile addio. Ah ma certo, negate (non credo funzioni così ma ok, glielo copio).
+
+Ah. Ah. Ok. Sto vedendo una cosa particolare per Certora:
+
+```CVL
+/// @custom:run certoraRun versions/Lottery_v1.sol:Lottery versions/lib/EOA0.sol versions/lib/EOA1.sol --verify Lottery:certora/honest-player-profitability-eoa-redeem0-nojoin1.spec --link Lottery:player0=EOA0 --link Lottery:player1=EOA1
+```
+
+Questo significa che questo è il modo per assicurarsi che un contratto sia un EOA.
+
+Il test SolCMC dà tutto negativo. E ti dirò di più, è perché non passa le require mi sa. Infatti l'ho cambiato un po' perché prima le require bloccavano tutta l'esecuzione del test. E adesso dà ancora tutto negativo. Non so cosa fare. Non ha senso. Ho sbagliato di nuovo le require. Ed è per questo che vedo un sacco il metodo `bool pre`/`assert(!pre||)`, perché funziona bene. Ok adesso è lentissimo. UNK a 5 minuti, c'è qualcosa che non va. Sì è proprio perché controllare tutti i metodi non va bene. Infatti se la uso su un solo metodo ci mette pochi secondi. Ma esce tutto `P`. Boh. Orrendo schifo.
+
+Provo a sostituire `assert(...)` con `assertion = ...`, e mettere `assert(assertion)` nell'invariante. Ah e così gira in 7 secondi. Pensavo che fosse una cosa stupida perché è la stessa identica cosa e quando esplora i percorsi possibili risultano uguali ma no. Ok però esce comunque tutto positivo, e stavolta `P!`. Ah è perché non esistono controesempi. Ok l'ho fatto al volo e dà positivo. Non so. EOA immagino. Ah no devo evitare che il pagamento sia di $0$. E invece non basta. Boh.
