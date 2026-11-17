@@ -15,3 +15,7 @@ Consideriamo tutti i contratti:
 * SRW: **recov-implies-guardian** era il grande problema, e ovviamente **recov-succeeds** su SolCMC.
 
 Forse riesco a fare qualcosa per **wd-contract-bal**. Non sarà elegante, non sarà rigoroso, non rispetterà la lettera della proprietà, ma funzionerà decentemente. Praticamente assumerò che il metodo che permette di rispettare la proprietà sia sempre lo stesso.
+
+## 16 novembre
+
+Lottery è carina, continuerò con Lottery, altro che.
