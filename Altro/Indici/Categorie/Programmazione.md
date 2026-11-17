@@ -190,7 +190,7 @@
 * <span class="r54">[[Contratti]]</span>
 ### Facendo
 * <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Solidity|Solidity]]</span>
-* <span class="r54">[[SolCMC]]</span>
+* <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/SolCMC]]</span>
 	* <span class="r54">[[Z3]]</span>
 	* <span class="r54">[[Eldarica]]</span>
 * <span class="r54">[[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/Certora]]</span>

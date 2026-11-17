@@ -511,7 +511,7 @@ function no_deadlock() public {
 
 Se guardiamo cos'ho scritto prima:
 
-![[SolCMC#try catch]]
+![[Triennale/Anno 3/Semestre 2/R54/Solidity/Facendo - Old/SolCMC#try catch]]
 
 Quindi che succede? Posso usarlo per controllare se un metodo reverta? In teoria sì? Ah no. Ah no. Ecco, il fatto è proprio che quei metodi contengono chiamate esterne.
 
