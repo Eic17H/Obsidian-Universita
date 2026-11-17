@@ -11,6 +11,7 @@ cssclasses:
 	* [[DCEL]]
 * [[Range searching]]
 	* [[KDE Tree]]
+	* [[Range tree]]
 
 Teams: `7ty3rx1`
 
