@@ -209,6 +209,14 @@
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Sharpening]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore]]
 
+## Algoritmi grafici
+
+* <span class="ga">[[Convex hull algorithm]]</span>
+- <span class="ga">[[Ear-cut algorithm]]</span>
+- <span class="ga">[[KDE Tree]]</span>
+- <span class="ga">[[Range searching]]</span>
+- <span class="ga">[[Range tree]]</span>
+
 ## Unsorted
 
 
