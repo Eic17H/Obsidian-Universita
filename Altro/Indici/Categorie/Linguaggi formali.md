@@ -1,4 +1,4 @@
-#hub 
+#hub  #hublvl1
 [[Valutazione]]
 [[Tipizzazione OCaml-like]]
 [[Triennale/Anno 3/Semestre 1/LiP/Appunti dal libro/λ-calcolo/Formalità]]

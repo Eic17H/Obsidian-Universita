@@ -1,7 +1,7 @@
 ---
 icon: MatLab.png
 ---
-Vedi <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab|CSMN]]</span> con la  <span class="csmn">[[Relazione|relazione]]</span>, e [[Image Processing]].
+Vedi <span class="csmn">[[Triennale/Anno 2/Semestre 2/CSMN/Lab/Lab|CSMN]]</span> con la  <span class="csmn">[[Relazione|relazione]]</span>, e <span class="ip">[[Image Processing]]</span>.
 
 In MatLab tutto è una matrice. Infatti si chiama MatLab e non MathLab, Mat di matrice.
 
@@ -37,13 +37,15 @@ Algoritmi:
 	* <span class="csmn">[[Lagrange]]</span>
 
 Image Processing:
-* [[Rappresentazione delle immagini]]
-* [[Aritmetica delle immagini]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri puntuali]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Sharpening]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Smoothing]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore]]
+* <span class="ip">[[Rappresentazione delle immagini]]</span>
+* <span class="ip">[[Aritmetica delle immagini]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri puntuali|Filtri puntuali]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali|Filtri spaziali]]</span>
+	* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Smoothing|Smoothing]]</span>
+	* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Sharpening|Sharpening]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri non lineari|Filtri non lineari]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore|Rumore]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Trasformata di Fourier|Trasformata di Fourier]]</span>
 
 #hub #hublvl2

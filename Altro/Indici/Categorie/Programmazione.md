@@ -2,7 +2,7 @@
 
 [[Programmazione Web]]
 
-#hub
+#hub #hublvl1
 
 ## Indice carino forse
 
@@ -200,14 +200,16 @@
 
 ## Image processing
 
-* [[Rappresentazione delle immagini]]
-* [[Aritmetica delle immagini]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri puntuali]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Smoothing]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Sharpening]]
-* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore]]
+* <span class="ip">[[Rappresentazione delle immagini]]</span>
+* <span class="ip">[[Aritmetica delle immagini]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri puntuali|Filtri puntuali]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali|Filtri spaziali]]</span>
+	* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Smoothing|Smoothing]]</span>
+	* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Sharpening|Sharpening]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri non lineari|Filtri non lineari]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore|Rumore]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Trasformata di Fourier|Trasformata di Fourier]]</span>
 
 ## Algoritmi grafici
 

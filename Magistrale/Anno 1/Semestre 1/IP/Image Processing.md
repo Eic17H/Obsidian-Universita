@@ -15,8 +15,15 @@ Metterò in ordine entro il parziale del 5 novembre.
 		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Smoothing|Smoothing]]
 		* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Sharpening|Sharpening]]
 	* [[Filtri globali|Globali]]
+	* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri non lineari|Non lineari]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Rumore|Rumore]]
 * [[Dominio delle frequenze]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Trasformata di Fourier|Trasformata di Fourier]]
+* [[Morfologia matematica]]
+* [[Segmentazione]]
+	* [[Edge detection]]
+	* [[Istogramma]]
+	* [[Regioni]]
 
 ### Lab
 * [[Rappresentazione delle immagini]]
@@ -24,6 +31,11 @@ Metterò in ordine entro il parziale del 5 novembre.
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Preprocessing|Preprocessing]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri puntuali|Filtri puntuali]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri spaziali|Filtri spaziali]]
+	* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Smoothing|Smoothing]]
+	* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Sharpening|Sharpening]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri non lineari|Filtri non lineari]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore|Rumore]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Trasformata di Fourier|Trasformata di Fourier]]
 
 ## Informazioni
 

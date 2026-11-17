@@ -2,7 +2,7 @@
 cssclasses:
   - so
 ---
-## 20241104
+## 4 novembre
 
 ### Esercizio 1
 

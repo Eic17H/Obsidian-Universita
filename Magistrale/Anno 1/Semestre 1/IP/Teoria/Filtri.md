@@ -7,4 +7,6 @@ Possono operare in tre modalità differenti
 * Locale ([[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri spaziali|filtri spaziali]]): il pixel in output è influenzato dal pixel omologo in input e dal suo intorno;
 * [[Filtri globali|Globale]] (*image restoration*): il pixel in output è influenzato dall'intera immagine in input.
 
+Possono essere anche [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Filtri/Filtri non lineari|non lineari]].
+
 Diciamo che ci stiamo muovendo nel dominio spaziale $(x,y)$, più avanti vedremo il dominio delle frequenze. Per questo usiamo filtri spaziali, perché siamo nel dominio spaziale. Un processo di dominio spaziale è una funzione $T()$ che #slide.

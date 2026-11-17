@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:Indice -tag:hidden -tag:empty -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\".canvas\" -path:\"/Raw/\"",
+  "search": "-file:Indice -tag:hidden -tag:indice -tag:materia -tag:modulo -tag:badhub -path:\".canvas\" -path:\"/Raw/\"  -tag:empty",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -207,6 +207,6 @@
   "repelStrength": 9.7046293666572,
   "linkStrength": 1,
   "linkDistance": 325,
-  "scale": 0.3399288620547644,
+  "scale": 0.16214026180773228,
   "close": false
 }

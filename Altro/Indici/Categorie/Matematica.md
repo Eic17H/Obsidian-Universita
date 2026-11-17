@@ -71,4 +71,4 @@
 <span class="ds">[[Poliedri]]</span>
 <span class="ds">[[Programmazione lineare]]</span>
 <span class="ds">[[Magistrale/Anno 1/Semestre 1/DS/Teoria/Convessità]]</span>
-#hub
+#hub #hublvl1

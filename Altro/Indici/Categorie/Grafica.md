@@ -16,3 +16,10 @@
 <span class="ip">[[Filtri]]</span>
 <span class="ip">[[Immagine]]</span>
 <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Teoria/Preprocessing]]</span>
+<span class="ip">[[Morfologia matematica]]</span>
+<span class="ip">[[Segmentazione]]</span>
+<span class="ip">[[Edge detection]]</span>
+<span class="ip">[[Istogramma]]</span>
+<span class="ip">[[Regioni]]</span>
+
+#hub #hublvl1
