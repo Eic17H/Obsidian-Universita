@@ -8,4 +8,4 @@ icon: Bash.png
 [[Esercizi]]
 [[Processi e job]]
 
-#hub #hublvl2
+#hub #hublvl2 #badhub

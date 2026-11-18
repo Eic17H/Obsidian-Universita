@@ -4,4 +4,4 @@ icon: Kotlin.png
 [[Activity]]
 [[Android Studio]]
 [[Introduzione ad Android Studio]]
-#hub #hublvl2
+#hub #hublvl2 #badhub
