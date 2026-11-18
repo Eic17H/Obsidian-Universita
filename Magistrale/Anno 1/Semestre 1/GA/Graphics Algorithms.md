@@ -12,6 +12,7 @@ cssclasses:
 * [[Range searching]]
 	* [[KDE Tree]]
 	* [[Range tree]]
+* [[Point location]]
 
 Teams: `7ty3rx1`
 
