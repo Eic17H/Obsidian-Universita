@@ -225,3 +225,43 @@ Questo significa che questo è il modo per assicurarsi che un contratto sia un E
 Il test SolCMC dà tutto negativo. E ti dirò di più, è perché non passa le require mi sa. Infatti l'ho cambiato un po' perché prima le require bloccavano tutta l'esecuzione del test. E adesso dà ancora tutto negativo. Non so cosa fare. Non ha senso. Ho sbagliato di nuovo le require. Ed è per questo che vedo un sacco il metodo `bool pre`/`assert(!pre||)`, perché funziona bene. Ok adesso è lentissimo. UNK a 5 minuti, c'è qualcosa che non va. Sì è proprio perché controllare tutti i metodi non va bene. Infatti se la uso su un solo metodo ci mette pochi secondi. Ma esce tutto `P`. Boh. Orrendo schifo.
 
 Provo a sostituire `assert(...)` con `assertion = ...`, e mettere `assert(assertion)` nell'invariante. Ah e così gira in 7 secondi. Pensavo che fosse una cosa stupida perché è la stessa identica cosa e quando esplora i percorsi possibili risultano uguali ma no. Ok però esce comunque tutto positivo, e stavolta `P!`. Ah è perché non esistono controesempi. Ok l'ho fatto al volo e dà positivo. Non so. EOA immagino. Ah no devo evitare che il pagamento sia di $0$. E invece non basta. Boh.
+
+---
+
+Provo **win-pays-fair-winner-eoa**. Ovviamente è molto semplice, require status win, win, assert diff=pot. Però non funziona, probabilmente per il problema degli EOA. Ma ovviamente c'è anche un errore mio: non dovrei chiamare `win()` dall'invariante quando posso semplicemente mettere le altre cose come preghost e postghost.
+
+No ma il compilatore dice che `.code.length == 0` non è supportato nella versione corrente.
+
+Preferirei scrivere controesempi.
+
+* **redeem-before-deadline-reverts-\***: rimuovi il check della deadline dai metodi redeem, metti che reverta solo se chi lo chiama non è l'owner
+* **\*-reverts-after-deadline**: stessa cosa
+* **winner-computation-env-independent**: fai una funzione che decide il vincitore al contrario.
+* **wrong-preimage-reverts-\***: puoi pagare per farti accettare la preimmagine
+
+Quindi per comodità mia mi segno: che versioni fare e dove saranno false:
+* Nella prima non fa proprio il check, nella seconda non fa il check se il chiamate è il proprietario
+	- **redeem-before-deadline-reverts-nojoin1**: v24 v27
+	- **redeem-before-deadline-reverts-noreveal0**: v25 v28
+	- **redeem-before-deadline-reverts-noreveal1**: v26 v29
+	- **reveal0-reverts-after-deadline**: (v21) v30
+	- **reveal1-reverts-after-deadline**: (v22) v31
+- Al contrario:
+	- **winner-computation-env-independent** (P): v32
+- Method can be bribed:
+	- **wrong-preimage-reverts-p0**: v33
+	- **wrong-preimage-reverts-p1**: v34
+
+Come mi aspettavo, v32 fallisce con SolCMC ma passa con Certora.
+
+Vediamo i risultati:
+
+Ok molto strano. v26 ha FP su Certora, a questo punto ho il dubbio di averla fatta male. E anche gli ultimi due, probabilmente perché assumono che il valore del messaggio debba essere nullo.
+
+SolCMC invece. v26 ha di nuovo FP, quindi immagino di aver sbagliato davvero. Winner computation FN come ci aspettiamo. Il resto è giusto, incluse le ultime due.
+
+Vediamo v26. Esatto era sbagliata. E ora è giustamente falsa.
+
+La cosa strana è che quelle delle preimmagini non assumono che il messaggio non sia pagato. Non capisco. Per niente. Credo che sia un problema con l'hashing con Certora. Non me l'aspettavo per niente. Non pensavo che quel problema si applicasse anche qui. E non so come risolvere, non credo ci sia un modo.
+
+CHE FIGO. Il problema è che prima chiama `hashing()` per sapere l'hash, e poi chiama `reveal()`. Chiamare `reveal()` pagando è il controesempio che vïola la proprietà, ma per come è scritto il test, se paghi `reveal()` pagando chiami anche `hashing()` pagando, ma `hashing()` non è pagabile. **`hashing()` ha un requisito di non-pagabilità implicito.** Quindi devo chiamarle da due ambienti diversi. E così funziona.
