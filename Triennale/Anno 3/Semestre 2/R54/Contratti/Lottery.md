@@ -333,3 +333,34 @@ Tutti falsi in cui il problema è che SolCMC non modella gli EOA e quindi modell
 Aspetta, c'è `FND` e c'è `TND`. Come? v14 ha `TND` su **owner-impartiality-eoa**. E rimane se rieseguo il test. Ok `FND` se deve essere vera. Forse perché interpreta la `N` come un negativo. Ancora una volta strani problemi.
 
 Per il resto non credo ci siano problemi risolvibili.
+
+Poi c'è Certora. Ha il problema opposto a quanto pare, assume che le chiamate esterne vadano a buon fine anche se non si specifica che il destinatario è un EOA. Però è strano, **deadlock-freedom-\*-witness** hanno TN. La modifica è la stessa delle altre versioni EOA. Ed è FN anche **deadlock-freedom-win-witness-eoa**. Da testare.
+
+**owner-impartiality-eoa** è da vedere, FN. A me il test sembra giusto.
+
+> Assuming `player0` and `player1` are EOAs: in any state where ==🔴the winner is not yet determined==, for every transaction whose ==🟠sender is neither `player0` nor `player1`==; if such transaction ==🟢changes the contract storage==, then ==🔵the same transaction (except for `msg.sender`)==, made by any EOA, in the same state, ==🟣must produce the same state modifications==.
+
+Cosa fa il test:
+
+* L'indirizzo `addr` è definito e non è il contratto e ==🟠non è un giocatore==.
+* I giocatori sono definiti e non sono il contratto e sono diversi.
+* Nell'ambiente `e1` ==🟠il mittente è `addr`==.
+* Nell'ambiente `e2` il mittente è definito e non è `addr` o un giocatore o un contratto, ==🔵il resto è uguale a `e1`==.
+* ==🔴Il vincitore non è definito==.
+* Chiama un metodo ==🔵nelle stesse condizioni== in `e1` e in `e2`.
+* Considera lo stato cambiato se è cambiato uno tra:
+	* Lo status;
+	* La scommessa;
+	* I segreti o le loro hash;
+	* Le deadline;
+	* Il vincitore;
+	* Il bilancio del contratto.
+* Asserisce che ==🟢se lo stato è cambiato in `e1`==, ==🟣allora è cambiato anche in `e2`== (e la funzione non ha revertito).
+
+Ci sono dei problemi. Non controlla che il mittente di `e2` sia un EOA, ma in teoria non cambia perché i giocatori sono definiti. Non controlla che le modifiche allo stato siano **le stesse**, però questo dovrebbe produrre falsi positivi.
+
+Un falso negativo si ha quando non ci sono abbastanza requisiti e quando ci sono troppe asserzioni. È strano che asserisca che la funzione non ha revertito.
+
+Ok, probabilmente Certora non si rende conto che in v1 se i giocatori sono definiti allora non tutti gli status del contratto sono possibili.
+
+Per ora scrivo un commento nella spec, poi sarà da testare con assert diverse. E poi la devo comunque modificare perché tecnicamente non fa quello che dice la descrizione.
