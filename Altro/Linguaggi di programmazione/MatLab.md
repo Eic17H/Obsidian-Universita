@@ -47,5 +47,6 @@ Image Processing:
 * <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri non lineari|Filtri non lineari]]</span>
 * <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore|Rumore]]</span>
 * <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Trasformata di Fourier|Trasformata di Fourier]]</span>
+* <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Lab/Segmentazione]]</span>
 
 #hub #hublvl2

@@ -20,11 +20,10 @@ Metterò in ordine entro il parziale del 5 novembre.
 * [[Dominio delle frequenze]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Trasformata di Fourier|Trasformata di Fourier]]
 * [[Morfologia matematica]]
-* [[Segmentazione]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Teoria/Segmentazione|Segmentazione]]
 	* [[Edge detection]]
 	* [[Istogramma]]
 	* [[Regioni]]
-
 ### Lab
 * [[Rappresentazione delle immagini]]
 * [[Aritmetica delle immagini]]
@@ -36,6 +35,7 @@ Metterò in ordine entro il parziale del 5 novembre.
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Filtri non lineari|Filtri non lineari]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Rumore|Rumore]]
 * [[Magistrale/Anno 1/Semestre 1/IP/Lab/Trasformata di Fourier|Trasformata di Fourier]]
+* [[Magistrale/Anno 1/Semestre 1/IP/Lab/Segmentazione|Segmentazione]]
 
 ## Informazioni
 
