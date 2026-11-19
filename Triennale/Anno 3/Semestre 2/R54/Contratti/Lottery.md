@@ -288,3 +288,36 @@ Interessante che se non posso mettere preghost e postghost che modificano lo sta
 Di nuovo il problema: anziché mettere tante assert, metto una variabile che asserisco una sola volta, ma aggiorno dove voglio.
 
 win transaction env idndododnodn esce N su v1 ciao a domani ciao basta.
+
+---
+
+Vediamo perché. Il test in sé è strano. Chiama `compute_winner` prima di `win` e poi controlla che il vincitore di `win` sia lo stesso calcolato prima.
+
+Ok perfetto il test fa schifo. È cortissimo ma guarda:
+
+```Solidity
+assert(winner == expectedWinner);
+assert(address(this).balance == 0);
+assert(_contract_balance_before == 0 || winner == expectedWinner);
+```
+
+Immagino che l'assert fallito sia il primo.
+
+Vediamo la funzione `win`. Richiede lo stato `Win`, assegna `winner`, paga `winner`, porta lo stato a `End`.
+
+Ok l'assert che fallisce è la seconda. Roba di `selfdestruct` perché è rientrante immagino. È richiesto dalla proprietà?
+
+> Two non-reverting `win` transactions performed from equal contract state always yield the same winning player.
+
+No. Bene lo tolgo e ora passa. Il test è comunque sbagliato perché in SolCMC non possiamo confrontare due ambienti.
+
+Ci sono un po' di falsi negativi. 7 8 9 10 14. Vediamoli:
+
+* 7 8 9 10: Un metodo non controlla lo stato. Una chiamata rientrante a quel metodo permette di cambiare il vincitore durante l'esecuzione di `win`.
+* 14: Il proprietario ha una variante del metodo `win` che gli permette di decidere il vincitore. Una chiamata rientrante a quel metodo permette di cambiare il vincitore durante l'esecuzione di `win`.
+
+E ti direi che potrebbe significare che la proprietà non vale per queste versioni. Perché se io chiamo `win` due volte partendo dallo stesso stato, ma in un caso c'è la chiamata rientrante e nell'altro no, allora sono due chiamate a `win` dallo stesso stato che risultano in due vincitori diversi. Non so.
+
+Non sono ben definiti "state" e "from". Però ti direi che "state" è lo storage (lo stato è status), l'insieme delle variabili, e "from" è "al momento della chiamata". E quindi ti direi che sì, anche se al momento della chiamata lo stato è uguale, una chiamata rientrante *durante* l'esecuzione di `win`può decidere il vincitore. E direi che cambio la ground truth. E mi sembra che Certora non modelli le chiamate rientranti.
+
+Provo a fare una versione di v14 non rientrante. Infatti funziona.
