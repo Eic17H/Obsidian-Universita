@@ -364,3 +364,7 @@ Un falso negativo si ha quando non ci sono abbastanza requisiti e quando ci sono
 Ok, probabilmente Certora non si rende conto che in v1 se i giocatori sono definiti allora non tutti gli status del contratto sono possibili.
 
 Per ora scrivo un commento nella spec, poi sarà da testare con assert diverse. E poi la devo comunque modificare perché tecnicamente non fa quello che dice la descrizione.
+
+Un altro falso con Certora è **win-pays-fair-winner-eoa**. Ok problema dello stato raggiungibile. **win-transaction-env-independent** dà FP adesso su v10 perché non considera la rientranza (detto che dal nome mi sembra che la definizione intendesse qualcosa di diverso).
+
+Devo rileggere gli appunti di oggi perché questa insieme a un'altra cosa che non ricordo andrebbe chiesta a Bartoletti.
