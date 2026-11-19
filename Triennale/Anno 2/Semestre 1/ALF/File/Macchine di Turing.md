@@ -25,3 +25,41 @@ Proviamo a scrivere il primo in simboli. Non so con quale sintassi lo scrivesse 
 	* $B \xrightarrow {1\ \text R\ 1} B$
 
 Anche questa scrive per sempre $1$ andando a destra e non si ferma mai, perché non è possibile tornare allo stato $A$ una volta scritto un $1$.
+
+Provo a implementarla in JS.
+```JS
+transitions = {
+	"A,0": ['R', 1, 'B'],
+	"A,1": ['R', 1, 'halt'],
+	"B,0": ['R', 1, 'B'],
+	"B,1": ['R', 1, 'B']
+}
+
+mem = []
+state = "A"
+pc = 0
+
+function getMem() {
+	if(mem[pc] == undefined) mem[pc] = 0
+	return mem[pc]
+}
+
+function step() {
+	let transition = transitions[[state, getMem()]]
+	if (transition[0] == 'R') pc++; else pc--
+	mem[pc] = transition[1]
+	state = transition[2]
+}
+
+function run(limit) {
+	let i = 0
+	while(i++<limit) step()
+}
+
+function runArbitraryTuringMachine(t, lim) {
+	transitions = t
+	run(lim)
+}
+```
+
+Potrei aver sbagliato. Forse bisogna scrivere sulla memoria prima di spostarsi.

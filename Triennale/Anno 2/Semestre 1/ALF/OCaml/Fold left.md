@@ -21,7 +21,7 @@ Io l'avevo capita al contrario e infatti non sapevo fare quello che c'era all'es
 
 Algoritmo equivalente in codice pseudo-C:
 ```C
-function foldLeft(function f, atype v, btype l[]) {
+atype foldLeft(function f, atype v, btype l[]) {
 	for(i in l) {
 		v = f(v, l[i]);
 	}
@@ -34,3 +34,5 @@ Un altro esempio sarebbe semplicemente la moltiplicazione:
 * `(*) 2 3` → 6
 * `(*) 6 1` → 6
 * `(*) 6 4` → 24
+
+In effetti non si capisce comunque bene quindi in poche parole, se hai `List.fold_left f A [B;C;D]`, restituisce $f(f(f(A,B),C),D)$. Se $f$ è la moltiplicazione (quindi al posto di `f` scrivi `(*)`), restituisce $((A\cdot B) \cdot C) \cdot D$. È importante scriverlo così per le funzioni che non sono commutative/associative.
