@@ -265,3 +265,26 @@ Vediamo v26. Esatto era sbagliata. E ora è giustamente falsa.
 La cosa strana è che quelle delle preimmagini non assumono che il messaggio non sia pagato. Non capisco. Per niente. Credo che sia un problema con l'hashing con Certora. Non me l'aspettavo per niente. Non pensavo che quel problema si applicasse anche qui. E non so come risolvere, non credo ci sia un modo.
 
 CHE FIGO. Il problema è che prima chiama `hashing()` per sapere l'hash, e poi chiama `reveal()`. Chiamare `reveal()` pagando è il controesempio che vïola la proprietà, ma per come è scritto il test, se paghi `reveal()` pagando chiami anche `hashing()` pagando, ma `hashing()` non è pagabile. **`hashing()` ha un requisito di non-pagabilità implicito.** Quindi devo chiamarle da due ambienti diversi. E così funziona.
+
+A che punto siamo.
+
+* **honest-player-profitability-\*** ne mancano due basta fare copia incolla
+* **no-incentive-to-abort-\*** mancano ma sono facili
+* **deadlock-\*-witness-eoa** mancano ma sono facili
+* no ma ne mancano letteralmente alcuni caso
+
+Faccio prima a guardare gli ND
+
+* **deadlock-freedom-\*-witness-eoa**: variazione EOA di quelli esistenti
+* **honest-player-profitability-eoa-redeem\*-noreveal\***: variazione dell'altro (vedere se ho definito bene il pot)
+* **no-incentives-to-abort-\*-eoa**: facile facile
+
+Visto che finalmente ce n'è una carina, vediamo come faccio **no-incentives-to-abort-eoa**. Devo controllare il comportamento di un metodo qualsiasi chiamato subito dopo `reveal0`. Faccio una variabile ghost booleana che di default è falsa. Viene messa vera alla fine di `reveal0`, e viene messa falsa alla fine di tutti gli altri metodi. Questo significa che se un metodo viene eseguito con quella variabile vera all'inizio della sua esecuzione, `reveal0` è il metodo immediatamente precedente. Tra l'altro, è un $\exists$, quindi negate.
+
+Veramente questo tool è una merda. Perché non hai un coso che mi permette di fare una postghost che si applica a tutti metodi? O a tutti i metodi pagabili o cose così? Non ha senso.
+
+Interessante che se non posso mettere preghost e postghost che modificano lo stato a metodi `view`, ha senso. Anche `pure`.
+
+Di nuovo il problema: anziché mettere tante assert, metto una variabile che asserisco una sola volta, ma aggiorno dove voglio.
+
+win transaction env idndododnodn esce N su v1 ciao a domani ciao basta.
