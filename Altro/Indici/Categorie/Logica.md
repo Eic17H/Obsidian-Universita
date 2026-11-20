@@ -28,5 +28,6 @@ Vedi perlopiù <span class="logica">[[Istituzioni di Logica]]</span>
 <span class="logica">[[Ragionamento ex hypothesi]]</span>
 <span class="logica">[[Triennale/A scelta/Semestre 2/Logica/File/Calcolo alla Hilbert/Storia]]</span>
 <span class="r54">[[Clausole di Horn]]</span>
+[[Tableau]]
 
 #hub #hublvl1

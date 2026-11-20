@@ -147,4 +147,4 @@ Era una congiunzione "virtuale", c'era una congiunzione ma potrebbe essere qualu
 
 Il calcolo alla Hilbert non rendeva facile fare derivazioni, dovevi tirare un po' a casaccio. Il calcolo delle sequenze permette di farle in modo estremamente algoritmico. Questa è una via di mezzo.
 
-C'è anche il calcolo tableau, sintattico ma vicino alla semantica, ma secondo il professore è orrendo, soprattutto didatticamente. Invece nessuno usa il [[Calcolo dei Sequenti|calcolo delle sequenze]].
+C'è anche il [[tableau|calcolo tableau]], sintattico ma vicino alla semantica, ma secondo il professore è orrendo, soprattutto didatticamente. Invece nessuno usa il [[Calcolo dei Sequenti|calcolo delle sequenze]].
