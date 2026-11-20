@@ -415,3 +415,15 @@ Per fare l'ultima, basta fare una versione in cui il calcolo del vincitore è no
 È molto contorto. No è tutto inutile. È stato tutto inutile. Ah no aspetta. È perché si rompe con la rientranza. Non so se serve a qualcosa onestamente. Tutto inutile in realtà. La tengo, ma essenzialmente il modo in cui funziona SolCMC e in cui è scritto il test fa sì che reverti sempre (sta chiamando `compute_winner` da dentro `win`).
 
 Bene falsificato.
+
+---
+
+Deadlock. Nelle versioni 16 e 17, `reveal0` e `reveal1` non aggiornano lo stato. Danno FP su **deadlock-freedom-win-witness**. v16 lo dà anche su **deadlock-freedom-reveal1-witness**.
+
+Ok semplicemente è perché non esiste una chiamata a **win** che non reverta, quindi la proprietà è vacuamente vera. Quindi va corretta la ground truth, se la logica non è un'opinione.
+
+Incentivi. In v4 `redeem0_noreveal1` paga la metà di quanto dovrebbe. In v6 paga il giocatore sbagliato. v16 è sempre lei. Incomprensibile. Davvero. Se questo test esce AHHHH. Se questo test esce positivo, esiste almeno un caso positivo. Devo controllare che la bet non sia $0$. E anzi che sia maggiore di $1$ per evitare il troncamento credo. È ancora positivo.
+
+E com'è possibile. Il test mi sembra giusto. No non lo so, non ne ho idea. Andrebbe rifatto da capo.
+
+Honest coso è orrendo allo stesso modo e voglio rifarlo.
