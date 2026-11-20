@@ -581,3 +581,32 @@ Ed è lentissimo. Credo che lo rallentino tutte le chiamate alle funzioni. Quind
 E dopo 300 secondi non passa.
 
 Non deve passare, c'è il problema degli EOA. Non so se è vero perché è in negate ma ci penserò.
+
+L'altra che devo rifare da zero è **no-incentives-\***.
+
+> After a non-reverting `reveal0` transaction, assuming `player0` and `player1` are EOAs, some user can perform, either immediately, or in the future provided there are no in-between transactions, a transaction that makes `player0` redeem the pot
+
+> **witness**: After a non-reverting `reveal0` transaction, assuming `player0` and `player1` are EOAs, some user can perform, either immediately, or in the future provided there are no in-between transactions, a `redeem0_noreveal1` transaction that makes `player0` redeem the pot
+
+Ma perché ho deciso che la voglio rifare? Quella normale dà positivo a tutto, che risulta falso per v4, v6 e v16. Quella witness invece dà TN per v16, ma poi FP per v4 e v6.
+
+Sono la stessa regola, solo che nella seconda si applica solo se la chiamata è a `redeem0_noreveal1`. In v16, `reveal0` non aggiorna lo stato, quindi non è possibile arrivare allo stato `Reveal1`, quindi non è proprio possibile chiamare `redeem0_noreveal1`. Visto che siamo in negate, c'è un falso se *non esiste* modo di avere una transazione valida che non reverta, cioè se si reverta sempre, che è quello che riscontriamo.
+
+v4 non invia abbastanza soldi. Questo *dovrebbe* essere facile da rilevare. Però forse ho capito, forse è perché si immagina che il destinatario, non essendo EOA, possa avere un bilancio che cambia un po' come capita. v6 invece invia i soldi al giocatore sbagliato, ma comunque il giocatore giusto non è un EOA e quindi il suo bilancio può cambiare un po' come vuole. Quindi non ho modo di risolvere.
+
+Perché invece nella versione non witness fallisce v16? Nel senso che prende un falso positivo. Dopo `reveal0`, lo stato è `Reveal0`. In quello stato si possono chiamare `reveal0` e `redeem1_noreveal0`. Credo che sia perché `redeem1_noreveal0` invia soldi al giocatore 1, e non ho incluso un check che si assicura che i giocatori siano diversi. Non era quello.
+
+No ma non si può risolvere, perché dopo `reveal0` è comunque possibile raggiungere un check del bilancio, e arrivati a un check del bilancio facciamo la magia dell'EOA e il bilancio può essere quello che ti pare.
+
+Irrisolvibile (ma quando aggiorneranno SolCMC in teoria il mio test funzionerà).
+
+Ok, ora devo davvero tornare su Certora, perché ho controllato tutto con SolCMC.
+
+**deadlock-freedom** FP perché assume EOA credo. FN con win però, da vedere (secondo me l'ho già visto). **no-incentives-to-abort-witness** dà errore. **owner-impartiality-eoa** già controllato, parte da uno stato invalido. **win-pays-fair-winner** credo stessa cosa ma non ho scritto un commento, da rivedere. E **win-transaction-env-independent** rientranza.
+
+Quindi domani:
+
+* **no-incentives-to-abort-witness**.spec: `ERR`
+* **win-pays-fair-winner**.spec: verificare che parte da uno stato invalido e scrivere un commento.
+
+E basta. L'ultima cosa che poi rimane da fare è mettere in ordine i commenti e direi che può dirsi completo. Anche se mi pare ci fosse una cosa da definire meglio.
