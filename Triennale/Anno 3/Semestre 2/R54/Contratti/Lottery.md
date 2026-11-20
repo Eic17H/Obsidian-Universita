@@ -427,3 +427,155 @@ Incentivi. In v4 `redeem0_noreveal1` paga la metà di quanto dovrebbe. In v6 pag
 E com'è possibile. Il test mi sembra giusto. No non lo so, non ne ho idea. Andrebbe rifatto da capo.
 
 Honest coso è orrendo allo stesso modo e voglio rifarlo.
+
+Vediamo Certora. **owner-impartiality-eoa**.
+
+> Assuming `player0` and `player1` are EOAs: in any state where the winner is not yet determined, for every transaction whose sender is neither `player0` nor `player1`; if such transaction changes the contract storage, then the same transaction (except for `msg.sender`), made by any EOA, in the same state, must produce the same state modifications.
+
+* EOA
+* $winner = 0$
+* $e.msg.sender \notin player[]$
+* $e.msg \to \Delta storage$
+* $e2.msg.sender \neq e.msg.sender$
+* Niente ok si capisce stessi cambiamenti
+
+dtfgu nioèmpnh ghjgvyuih89uihj bbhiouhj ui8uigh gvyi79gyvh jgtfhu Vediamo un po'.
+
+Ah no ok ho fatto un casino enorme quando avevo già trovato il problema:
+
+> Certora may start from a state where both players have joined but the status allows for `join0` or `join1` to run, whose behavior depends on the sender.
+
+Inoltre, nel `/// @custom:run` ho provato a importare un altro file solidity che definisce un contratto che si comporta come un EOA, per usarlo come mittente del messaggio, ma questa cosa si può fare solo per linkare un contratto a un indirizzo che è salvato in una variabile di stato del contratto.
+
+Questo è il mio codice brutto:
+
+```CVL
+/// @custom:run certoraRun versions/Lottery_v1.sol:Lottery versions/lib/EOA0.sol versions/lib/EOA1.sol versions/lib/EOA2.sol --verify Lottery:certora/owner-impartiality-eoa.spec --optimistic_hashing --link Lottery:player0=EOA0 --link Lottery:player1=EOA1 -link eoa=EOA2
+
+rule owner_impartiality_eoa(method f)
+filtered {
+    f -> !f.isView &&
+         !f.isPure &&
+         f.contract == currentContract
+} {
+    // In any state where the winner is not yet determined
+    require currentContract.winner == 0;
+
+    // For every transaction whose sender is neither `player0` nor `player1`
+    env e;
+    require e.msg.sender != currentContract.player0;
+    require e.msg.sender != currentContract.player1;
+    require e.msg.sender != currentContract;
+
+    calldataarg args;
+
+    storage beforeTransaction = lastStorage;
+
+    f(e,args);
+
+    storage afterTransaction = lastStorage;
+
+    // If such transaction changes the contract storage
+    require afterTransaction != beforeTransaction;
+
+    // The same transaction (except for `msg.sender`)
+    env e2;
+    require e2.msg.sender != e.msg.sender;
+    require e2.msg.sender != currentContract;
+
+    // made by any EOA
+    address eoa;
+    require e2.msg.sender == eoa;
+
+    // in the same state
+    f(e2,args) at beforeTransaction;
+
+    // must produce the same state modifications
+    assert afterTransaction == lastStorage;
+}
+```
+
+Quindi adesso honest.
+
+> Assuming `player0` and `player1` behave as EOAs: in any reachable `Join1` state, a user can perform a non-reverting transaction, made after the state's deadline, that strictly increases `player0`'s ETH balance by exactly their bet, leaves the contract's ETH balance at zero, and advances state to `End
+
+"Un utente", quindi preghost e postghost. Richiediamo lo stato `Join1`. Non reverta, quindi siamo in negate. Dopo la deadline dello stato, quindi richiediamo il blocco.
+
+Ok c'è già il problema degli EOA.
+
+Ok forse fa un po' schifo.
+
+Anzitutto ho messo le preghost per gli EOA (ovviamente non funzionano)
+
+```Solidity
+/// @custom:preghost function join0/join1
+require(msg.sender.code.length == 0);
+require(msg.sender == tx.origin);
+```
+
+Poi ho fatto un sacco di roba ghost orrenda per poter fare copia incolla sulle altre versioni del test.
+
+```Solidity
+/// @custom:ghost
+// These act as parameters for the variations of this property
+Status immutable targetStartingState = Status.Join1;
+uint immutable statusDeadline = end_join;
+address payable immutable relevantPlayer = player0;
+Status immutable targetFinalState = Status.End;
+uint immutable targetPlayerBalanceDiff = bet_amount;
+// These store whether the conditions are met
+bool correctStartingState = false;
+bool afterDeadline = false;
+bool strictlyIncreasedBalance = false;
+bool emptiedContractBalance = false;
+bool correctFinalState = false;
+// These are used to know whether the conditions are met
+uint oldPlayerBalance = 0;
+uint newPlayerBalance = 0;
+function isCorrectStartingState() public view returns(bool) {return status == targetStartingState;}
+function isAfterDeadline() public view returns(bool) {return block.number > statusDeadline;}
+function isEmptyContractBalance() public view returns(bool) {return address(this).balance == 0;}
+function isCorrectFinalState() public view returns(bool) {return status == targetFinalState;}
+function playerBalance() public view returns(uint) {return relevantPlayer.balance;}
+function isCorrectBalanceDiff() public view returns(bool) {return oldPlayerBalance > newPlayerBalance && oldPlayerBalance - newPlayerBalance == targetPlayerBalanceDiff;}
+// Final check
+bool justExecutedMethod = false;
+bool precondition = false;
+bool postcondition = false;
+function preconditionMet() public view returns(bool) {return correctStartingState && afterDeadline;}
+function postconditionMet() public view returns(bool) {return strictlyIncreasedBalance && emptiedContractBalance && correctFinalState;}
+```
+
+Poi ho messo i check a tutti i metodi non puri/view
+
+```Solidity
+/// @custom:preghost function ...
+oldPlayerBalance = playerBalance();
+correctStartingState = isCorrectStartingState();
+afterDeadline = isAfterDeadline();
+
+/// @custom:postghost function ...
+newPlayerBalance = playerBalance();
+strictlyIncreasedBalance = isCorrectBalanceDiff();
+emptiedContractBalance = isEmptyContractBalance();
+correctFinalState = isCorrectFinalState();
+justExecutedMethod = true;
+precondition = preconditionMet();
+postcondition = postconditionMet();
+```
+
+E po un'invariante molto semplice
+
+```Solidity
+/// @custom:invariant
+function invariant() public {
+    if(justExecutedMethod) {
+        justExecutedMethod == false;
+        assert(!(!precondition || postcondition));
+    }
+}
+```
+
+Ed è lentissimo. Credo che lo rallentino tutte le chiamate alle funzioni. Quindi posso fare un'altra versione che anziché fare vere e proprie chiamate, scrive la loro definizione inline, tanto la parametrizzo con la variabili immutabili.
+
+E dopo 300 secondi non passa.
