@@ -579,3 +579,5 @@ function invariant() public {
 Ed è lentissimo. Credo che lo rallentino tutte le chiamate alle funzioni. Quindi posso fare un'altra versione che anziché fare vere e proprie chiamate, scrive la loro definizione inline, tanto la parametrizzo con la variabili immutabili.
 
 E dopo 300 secondi non passa.
+
+Non deve passare, c'è il problema degli EOA. Non so se è vero perché è in negate ma ci penserò.
