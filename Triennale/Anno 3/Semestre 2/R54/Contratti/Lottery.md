@@ -610,3 +610,13 @@ Quindi domani:
 * **win-pays-fair-winner**.spec: verificare che parte da uno stato invalido e scrivere un commento.
 
 E basta. L'ultima cosa che poi rimane da fare è mettere in ordine i commenti e direi che può dirsi completo. Anche se mi pare ci fosse una cosa da definire meglio.
+
+---
+
+Vediamo questo errore. Il test non passa e poi dà un errore. Quello non witness invece passa, ma è uguale solo che cambia. Ah ma se siamo in negate in teoria va bene che non passi. Ok tecnicamente va tutto bene, ma c'è il solito errore timeout.
+
+Ecco il problema di **win-pays-fair-winner**, il contratto comincia da uno stato sbagliato:
+![[Pasted image 20261121143854.png]]
+Qui la bet è più del bilancio del contratto, che è impossibile.
+
+Quindi mi sembra che sia finita qui. Rimane il problema del fatto che quell'ERR non dovrebbe esistere ma il codice in sé va bene.
