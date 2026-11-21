@@ -620,3 +620,5 @@ Ecco il problema di **win-pays-fair-winner**, il contratto comincia da uno stato
 Qui la bet è più del bilancio del contratto, che è impossibile.
 
 Quindi mi sembra che sia finita qui. Rimane il problema del fatto che quell'ERR non dovrebbe esistere ma il codice in sé va bene.
+
+Boh non so davvero come risolvere il timeout.
