@@ -6,7 +6,7 @@ aliases:
   - convex hull
   - inviluppo convesso
 ---
-The **convex hull** of a shape $P$ is the smallest shape $\text{CH}$ such that $\text{CH}$ is [[Comune/Convessità|convex]] and all points of $P$ are points of $\text{CH}$. What does that mean?
+The **convex hull** (*inviluppo convesso*) of a shape $P$ is the smallest shape $\text{CH}$ such that $\text{CH}$ is [[Comune/Convessità|convex]] and all points of $P$ are points of $\text{CH}$. What does that mean?
 ## Concept
 
 ### Convex
