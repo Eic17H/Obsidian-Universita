@@ -59,4 +59,4 @@ Quindi vediamo che versioni fare:
 
 L'ultima non so se metterla.
 
-Ignorando l'ultima, passerebbe da 7 versioni a 21.
+Ignorando l'ultima, passerebbe da 7 versioni a 21. Farò più avanti la ground truth.
