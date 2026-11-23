@@ -3,24 +3,9 @@ cssclasses:
   - ga
 date: 2026-10-13
 ---
-#empty
-
 Polygon triangulation can be thought of as an algorithm of the class ==*divide and conquer*==: you take a problem, you split your problem in smaller parts that are easier to be solved, then, once you have the easiest possible solution to your problem, you collect the solutions to all your small problems into one big solution. Merge sort is one example.
 
-Now, *why* do we care about polygon triangulation? Let's ease into it by looking at another problem, *art gallery guarding*:
-
-## Art gallery guarding
-
-> Imagine that you are asked by an art gallery (a museum).
-> Imagine something completely hypothetical, imagine that in a big museum such as Louvre, completely hypothetically, as the Louvre is a *big museum* that's *perfectly guarded*, imagine it's vulnerable to jewelry theft.
-> Imagine that you, as a computer scientist, are tasked to design a control system capable of keeping in sight the whole museum with the ==least== number of cameras.
-> The cameras are pivoting, as in, they can rotate.
-> The museum is approximated as a 2D environment, by imagining all the walls are vertical.
-> The rooms are small enough to have the desired detail from any distance within the room.
-
-Nice problem. How much do you want to be paid for this? Anyway, **==*least*==**, that's the most important part. If you have a simple square room, you can put the single camera anywhere and it will work. The problem is from 1973, before the term *computational geometry* was introduced as Michael Ian Shamos's PhD thesis title, and it became a field of computer science. Though even before we knew we could solve geometrical problems with computer science, as with this problem.
-
-As long as the room is convex, we only need one camera. This follows from the definition of *convex*. When we say *in sight* we mean *straight lines*, also known as *segments*. So, we need to find the minimum amount of cameras such that, for all points in the room, we can trace a segment between that point and at least one camera such that it doesn't cross the boundaries.
+Now, *why* do we care about polygon triangulation? Let's ease into it by looking at another problem, *[[Tricoloring|art gallery guarding]]*.
 
 ## Triangulating
 
@@ -108,7 +93,6 @@ What about with concave polygons? Is it the same rule? The proof is a proof by i
 
 Proof by induction:
 
-
 * Base: a polygon with $n=3$ vertices (a triangle);
 * Induction: if a polygon with $p<m$ vertices is triangulatable with $p-2$ triangles, then a polygon with $m$ vertices is triangulatable with $m-2$ triangles.
 
@@ -130,24 +114,22 @@ To prove the induction step, let's work backwards, starting from a large $m$.
 		4. $m_1+m_2$ is $m+2$ because the two vertices $v$ and $v'$ are in common and thus are double counted;
 	3. $P$ can be triangulated in $m+2-4=m-2$ triangles, QED.
 
-As we know from <span class="logica">[[Deduzione Naturale#Disgiunzione#Eliminazione|formal logic]]</span>, now we have something of the form <span class="logica">$p \lor \lnot p,\ p \vdash q,\ \lnot p \vdash q$</span> which yields <span class="logica">$q$</span>, the thing we're trying to prove.
-
 The camera problem has been proved to be NP-hard, no polynomial solution, that means combinatorial explosion, intractable. So we can't find the *smallest*, we should aim for something *reasonably small*, that being the triangulation. So we can place a camera in each triangle. But actually, we can put a camera on each diagonal, each diagonal controls two triangles. But actually, even then there's overlap, because triangles can have multiple diagonals each. But if we put a camera on a vertex, it covers multiple diagonals at once. But there are more vertices than diagonals. But we don't **have** to put a camera on **every** vertex.
 
 #damettereinordine: ho fatto un casino, [[20261014]] andava messo qua in mezzo
 ## Efficiency
 
-We've more or less solved the problem. We started from the gallery guarding problem, we realized that the best way to solve it is to triangulate the polygon, triangulate the vertices, and place cameras on just one color, giving us at most $\lceil \tfrac n 3 \rceil$ cameras.
+Thanks to [[Monotone polygon|monotone polygons]], we've more or less solved the problem. We started from the gallery guarding problem, we realized that the best way to solve it is to triangulate the polygon, [[Tricoloring|tricolorate]] the vertices, and place cameras on just one color, giving us at most $\lceil \tfrac n 3 \rceil$ cameras.
 
 We don't just want to solve the problem, we want to solve the problem in the best possible way. And Chazelle proved that the best way is $O(n+f(r))$, where $r$ is the number of reflex vertices and $f()$ is some function we don't care about. What happens when our polygon is convex? There are no reflex vertices, making the complexity $O(n)$. And we do indeed have a simple way to triangulate a convex polygon, by just picking one vertex and connecting it to all non-adjacent vertices, which is $n-2$, $O(n)$.
 
 The method to triangulate convex polygons also works on polygons with holes, but we only care about simple polygons.
 
 How to triangulate a simple polygon:
-1. Partition in [[Monotone polygon|monotone]] parts.
+1. Partition in monotone parts.
 2. Triangulation of each part.
 
-We work with y-monotonicity.
+We work with $y$-monotonicity.
 
 Notice how reflex vertices aren't a problem for monotone polygons.
 

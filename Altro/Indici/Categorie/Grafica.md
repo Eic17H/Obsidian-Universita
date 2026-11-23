@@ -1,10 +1,18 @@
+<span class="ga">[[Range tree]]</span>
+<span class="ga">[[CH is a polygon]]</span>
+<span class="ga">[[Ear-cut algorithm]]</span>
+<span class="ga">[[Partitioning]]</span>
+<span class="ga">[[Star-shaped]]</span>
+<span class="ga">[[Tricoloring]]</span>
 <span class="ga">[[Convex decomposition]]</span>
 <span class="ga">[[Convex hull]]</span>
+<span class="ga">[[Convex hull algorithm]]</span>
 <span class="ga">[[DCEL]]</span>
+<span class="ga">[[KDE Tree]]</span>
 <span class="ga">[[Monotone polygon]]</span>
+<span class="ga">[[Point location]]</span>
 <span class="ga">[[Polygon triangulation]]</span>
-<span class="ga">[[Star-shaped]]</span>
-<span class="ga">[[CH is a polygon]]</span>
+<span class="ga">[[Range searching]]</span>
 
 <span class="ip">[[Magistrale/Anno 1/Semestre 1/IP/Teoria/Rumore]]</span>
 <span class="ip">[[Filtri globali]]</span>
