@@ -29,4 +29,34 @@ Vediamo le proprietà.
 - **wd-dec-snd-bal**: `withdraw(amount)` diminuisce il bilancio di $amount$, se non reverta.
 - **wd-not-revert**: `withdraw(amount)` non reverta se $amount > 0$ e $amount \leq$ il tuo bilancio.
 
-La prima cosa che farò sarà mettere in ordine la ground truth, mi dispiace ma ci sono dei commenti quasi inutili, "requires inductive reasoning about the sum".
+La prima cosa che farò sarà mettere in ordine la ground truth, mi dispiace ma ci sono dei commenti quasi inutili, "requires inductive reasoning about the sum", "in all versions parameters are uints".
+
+Proprietà che vanno falsificate o verificate:
+* **always-bal-to-max**: verificabile permettendo di depositare anche se il bilancio totale non può aumentare.
+* **bal-dec-onlyif-wd**: falsificabile mettendo un nuovo metodo o modificando una view.
+* **bal-inc-onlyif-dep**: stessa cosa.
+* **bal-nonneg**: forse posso cambiare il tipo.
+* **cbal-nonneg**: stessa cosa.
+* **dep-inc-snd-bal**: falisificabile facilmente, non so perché non lo sia già.
+* **dep-not-revert**: basta togliere tutto il codice dal metodo.
+
+Quindi vediamo che versioni fare:
+* Se si deposita ma il bilancio del contratto è già al massimo, il bilancio dell'utente viene aggiornato ma il bilancio del contratto no.
+* Un nuovo metodo diminuisce il bilancio dell'utente.
+* `balanceOf` diminuisce il bilancio dell'utente.
+* Un nuovo metodo aumenta il bilancio dell'utente.
+* `balanceOf` aumenta il bilancio dell'utente.
+* I bilanci sono interi con segno.
+* Il bilancio del contratto è un intero con segno.
+* `deposit` aumenta il bilancio della somma sbagliata.
+* `deposit` non fa niente.
+* Tutti i metodi revertano sempre.
+* Tutti i metodi non fanno niente.
+* Tutti i metodi revertano sempre e non hanno altro codice.
+* Tutti i metodi non fanno niente, ma revertano quando dovrebbero.
+* Tutti i metodi sono non-rientranti.
+* `balances` contiene la serie di Fibonacci, `deposit` e `withdraw` calcolano il prossimo termine, `balanceOf` e `totalBalance` restituiscono la stima corrente moltiplicata per $10^{18}.
+
+L'ultima non so se metterla.
+
+Ignorando l'ultima, passerebbe da 7 versioni a 21.
