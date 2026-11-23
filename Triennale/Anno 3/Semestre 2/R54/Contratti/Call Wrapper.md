@@ -66,3 +66,36 @@ Cos'hanno v3 e v4 in comune? `modifystorage` è rientrante, che permette di eseg
 Vediamo **bal**.sol. Molto semplice, confronta il bilancio prima e dopo la chiamata. Onestamente non so cosa cambiare.
 
 Doveva essere semplice. Doveva essere semplicissima. Com'è possibile. Forse se faccio i test Certora coi hook funziona, devo vedere come interagiscono con la rientranza.
+
+---
+
+Che faccio?
+
+C'è un file `notes.json`:
+
+```JSON
+{
+    "bal-v2": {
+        "solcmc": "S:REENTRANT_SELFDESTRUCT",
+        "note": "fooled because every function is non reentrant"
+    },
+    "bal-v5": {
+        "solcmc": "S:REENTRANT_SELFDESTRUCT",
+        "note": "fooled because every function is non reentrant"
+    },
+    "stor-v3": {
+        "certora": "S:REENTRANT_CALL"
+    },
+    "stor-v4": {
+        "certora": "S:REENTRANT_CALL"
+    }
+}.
+```
+
+Sì, c'è anche un punto alla fine che non dovrebbe esserci. Bank non ce l'ha, quindi lo elimino. Bank mette le sue specifiche in `spec.md` e ha un riferimento a quel file in `skeleton.json`, faccio la stessa cosa con CW. Però non funziona. Perché non so leggere, è `file:spec.md`.
+
+Aggiungo la mia solita versione che reverta sempre, ma faccio che reverta sempre anche `receive`.
+
+Non c'è molto altro da fare. Un'altra combinazione di rientrante e non rientrante.
+
+Direi che non c'è altro.
