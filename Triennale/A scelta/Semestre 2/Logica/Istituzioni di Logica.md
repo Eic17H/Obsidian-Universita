@@ -18,8 +18,11 @@ cssclasses:
 ### [[Modulo III]]
 * Teorema di correttezza
 * Teorema di completezza
-### Schemi:
+### Schemi
 * [[Connettivi logici.canvas|Confronto dei connettivi logici]]
+
+### Altro
+* [[Tableau|Calcolo tableau]], menzionato ma escluso dal corso perché considerato brutto.
 
 ## Introduzione
 
