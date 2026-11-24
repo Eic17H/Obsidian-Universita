@@ -10,7 +10,7 @@ Credo di dover sostituire le invarianti con delle regole che seguono una logica 
 
 Vediamo le proprietà.
 
-* **always-bal-inc**: puoi sempre aumentare il conto.
+- **always-bal-inc**: puoi sempre aumentare il conto.
 - **always-bal-to-max**: puoi sempre riempire il conto in una transazione.
 - **always-wd-all-many**: puoi sempre svuotare il conto in transazioni finite.
 - **always-wd-all-one**: poi sempre svuotare il conto in una transazione.
@@ -79,3 +79,323 @@ Vediamo cosa posso definire in SolCMC:
 * ==🔴**wd-not-revert**: no.==
 
 Per **bal-sum-dep** lo faccio dopo perché non so come devo organizzare l'overloading per il mismatch dei tipi tra `amount` di wd, `amount` di dep e bilanci.
+
+Ecco qualcosa che non funziona:
+```Solidity
+// for every user `a`,
+// their balance entry is equal to the sum of all `amount`s in successful `deposit(amount)` with `msg.sender = a`
+// minus those in successful `withdraw(amount)` with `msg.sender = a`.
+
+/// @custom:ghost
+
+// Overloading to support versions with different types
+
+mapping(address => uint) expectedBalsUnsigned;
+mapping(address => int) expectedBalsSigned;
+
+bool balSigned = false;
+bool balUnsigned = false;
+bool depSigned = false;
+bool depUnsigned = false;
+bool wdSigned = false;
+bool wdUnsigned = false;
+
+bool underflow = false;
+bool overflow = false;
+
+function updateDep(address a, uint amt, uint bal) private {
+    depUnsigned = true;
+    balUnsigned = true;
+    if(amt > type(uint).max - expectedBalsUnsigned[a]) {
+        overflow = true;
+    } else {
+        expectedBalsUnsigned[a] += uint(amt);
+    }
+}
+function updateDep(address a, uint amt, int bal) private {
+    depUnsigned = true;
+    balSigned = true;
+    if(amt > uint(type(int).max) - uint(expectedBalsSigned[a])) {
+        overflow = true;
+    } else {
+        expectedBalsSigned[a] += int(amt);
+    }
+}
+function updateDep(address a, int amt, uint bal) private {
+    depSigned = true;
+    balUnsigned = true;
+    if(uint(amt) > uint(type(uint).max) - uint(expectedBalsUnsigned[a])) {
+        overflow = true;
+    } else {
+        expectedBalsUnsigned[a] += uint(amt);
+    }
+}
+function updateDep(address a, int amt, int bal) private {
+    depSigned = true;
+    balSigned = true;
+    if(uint(amt) > uint(type(int).max) - uint(expectedBalsUnsigned[a])) {
+        overflow = true;
+    } else {
+        expectedBalsSigned[a] += int(amt);
+    }
+}
+
+function updateWd(address a, uint amt, uint bal) private {
+    wdUnsigned = true;
+    balUnsigned = true;
+    if(amt > expectedBalsUnsigned[a]) {
+        underflow = true;
+    } else {
+        expectedBalsUnsigned[a] -= uint(amt);
+    }
+}
+function updateWd(address a, uint amt, int bal) private {
+    wdUnsigned = true;
+    balSigned = true;
+    if(amt > uint(expectedBalsSigned[a])) {
+        underflow = true;
+    } else {
+        expectedBalsSigned[a] -= int(amt);
+    }
+}
+function updateWd(address a, int amt, uint bal) private {
+    wdSigned = true;
+    balUnsigned = true;
+    if(uint(amt) > uint(expectedBalsUnsigned[a])) {
+        underflow = true;
+    } else {
+        expectedBalsUnsigned[a] -= uint(amt);
+    }
+}
+function updateWd(address a, int amt, int bal) private {
+    wdSigned = true;
+    balSigned = true;
+    if(uint(amt) > uint(expectedBalsUnsigned[a])) {
+        underflow = true;
+    } else {
+        expectedBalsSigned[a] -= int(amt);
+    }
+}
+
+/// @custom:preghost function deposit
+updateDep(msg.sender, amount, balances[msg.sender]);
+
+/// @custom:preghost function withdraw
+updateWd(msg.sender, amount, balances[msg.sender]);
+
+/// @custom:invariant
+function invariant(address a) public {
+    assert((!balSigned || expectedBalsSigned[a] == int(balances[a]))
+    && (!balUnsigned ||expectedBalsUnsigned[a] == uint(balances[a]))
+    && (!underflow)
+    && (!overflow));
+}
+```
+
+Cioè, magari funziona, ma in 60 secondi non dà risposta quindi non si sa.
+
+Provo in un altro modo.
+
+Questa è la versione più semplice possibile:
+
+```Solidity
+/// @custom:ghost
+mapping(address => uint) expectedBalances;
+
+/// @custom:preghost function deposit
+expectedBalances[msg.sender] += amount;
+
+/// @custom:preghost function withdraw
+expectedBalances[msg.sender] -= amount;
+
+/// @custom:invariant
+function invariant(address a) public {
+    assert(expectedBalances[a] == balances[a]);
+}
+```
+
+Noto che devo rifare la groundtruth. Ma l'altro problema ovviamente è che in v13 c'è un errore di tipo.
+
+Semplice cast, approccio molto semplice.
+
+```Solidity
+/// @custom:ghost
+mapping(address => uint) expectedBalances;
+
+/// @custom:preghost function deposit
+if(amount > 0) expectedBalances[msg.sender] += uint(amount);
+else expectedBalances[msg.sender] -= uint(-amount);
+
+/// @custom:preghost function withdraw
+if(amount > 0) expectedBalances[msg.sender] -= uint(amount);
+else expectedBalances[msg.sender] += uint(-amount);
+
+/// @custom:invariant
+function invariant(address a) public {
+    assert(expectedBalances[a] == uint(balances[a]));
+}
+```
+
+Ovviamente non basta, bisogna effettivamente gestire i bilanci negativi.
+
+Con molto trial and error, sono arrivato a questa soluzione:
+
+```Solidity
+/// @custom:ghost
+mapping(address => uint) expectedBalances;
+mapping(address => bool) expectedBalanceIsNegative;
+
+function absv(uint n) internal pure returns (uint) {return n;}
+function absv(int n) internal pure returns (uint) {return n<0 ? uint(-n) : uint(n);}
+
+/// @custom:preghost function deposit
+if(amount >= 0) {
+    if(!expectedBalanceIsNegative[msg.sender]) {
+        expectedBalances[msg.sender] += absv(amount);
+    } else {
+        if(expectedBalances[msg.sender] > absv(amount)) {
+            expectedBalances[msg.sender] -= absv(amount);
+        } else {
+            expectedBalances[msg.sender] = absv(amount) - expectedBalances[msg.sender];
+            expectedBalanceIsNegative[msg.sender] = false;
+        }
+    }
+} else {
+    if(expectedBalanceIsNegative[msg.sender]) {
+        expectedBalances[msg.sender] += absv(amount);
+    } else {
+        if(expectedBalances[msg.sender] > absv(amount)) {
+            expectedBalances[msg.sender] -= absv(amount);
+        } else {
+            expectedBalances[msg.sender] = absv(amount) - expectedBalances[msg.sender];
+            expectedBalanceIsNegative[msg.sender] = true;
+        }
+    }
+}
+
+/// @custom:preghost function withdraw
+if(amount < 0) {
+    if(!expectedBalanceIsNegative[msg.sender]) {
+        expectedBalances[msg.sender] += absv(amount);
+    } else {
+        if(expectedBalances[msg.sender] > absv(amount)) {
+            expectedBalances[msg.sender] -= absv(amount);
+        } else {
+            expectedBalances[msg.sender] = absv(amount) - expectedBalances[msg.sender];
+            expectedBalanceIsNegative[msg.sender] = false;
+        }
+    }
+} else {
+    if(expectedBalanceIsNegative[msg.sender]) {
+        expectedBalances[msg.sender] += absv(amount);
+    } else {
+        if(expectedBalances[msg.sender] > absv(amount)) {
+            expectedBalances[msg.sender] -= absv(amount);
+        } else {
+            expectedBalances[msg.sender] = absv(amount) - expectedBalances[msg.sender];
+            expectedBalanceIsNegative[msg.sender] = true;
+        }
+    }
+}
+
+/// @custom:invariant
+function invariant(address a) public {
+    assert(expectedBalances[a] == absv(balances[a]));
+    assert(!expectedBalanceIsNegative[a] || balances[a] < 0);
+}
+```
+
+È molto lento e v1 non passa. Il problema sembra essere l'esistenza di $-0$. DeepSeek consiglia di usare semplicemente variabili con segno nel test, ma ci sarebbe un semplice controesempio.
+
+Dopo un po' di correzioni, ha generato questo:
+
+```Solidity
+/// @custom:ghost
+mapping(address => uint) expectedBalanceMagnitude;
+mapping(address => bool) expectedBalanceIsNegative; // false whenever magnitude == 0
+
+// Signed -> (magnitude, negative). Handles int256 min without overflow.
+function magOf(uint n) internal pure returns (uint, bool) { return (n, false); }
+function magOf(int  n) internal pure returns (uint, bool) {
+    if (n >= 0) return (uint(n), false);
+    if (n == type(int).min) return (uint(1) << 255, true);
+    return (uint(-n), true);
+}
+
+// (mag, neg) + (d, dNeg), zero-normalized.
+function sAdd(uint mag, bool neg, uint d, bool dNeg) internal pure returns (uint, bool) {
+    if (neg == dNeg) return (mag + d, neg);
+    if (mag > d)     return (mag - d, neg);
+    if (mag == d)    return (0, false);   // exact zero -> non-negative
+    return (d - mag, dNeg);
+}
+// sSub(mag,neg,d,dNeg) == sAdd(mag,neg,d,!dNeg)
+
+function _apply(address who, uint d, bool dNeg, bool subtract) internal {
+    (expectedBalanceMagnitude[who], expectedBalanceIsNegative[who]) =
+        sAdd(expectedBalanceMagnitude[who], expectedBalanceIsNegative[who], d, subtract ? !dNeg : dNeg);
+}
+
+function _recordDeposit(address who, uint amount) internal { _apply(who, amount, false, false); }
+function _recordDeposit(address who, int  amount) internal { (uint d, bool n) = magOf(amount); _apply(who, d, n, false); }
+function _recordWithdraw(address who, uint amount) internal { _apply(who, amount, false, true); }
+function _recordWithdraw(address who, int  amount) internal { (uint d, bool n) = magOf(amount); _apply(who, d, n, true); }
+
+/// @custom:preghost function deposit
+_recordDeposit(msg.sender, amount);
+
+/// @custom:preghost function withdraw
+_recordWithdraw(msg.sender, amount);
+
+/// @custom:invariant
+function invariant(address a) public {
+    (uint am, bool an) = magOf(balances[a]);
+    assert(expectedBalanceMagnitude[a] == am);
+    assert(expectedBalanceMagnitude[a] == 0 || expectedBalanceIsNegative[a] == an);
+}
+```
+
+Ovviamente non mi piace. Mi aspettavo che ci mettesse un sacco a girare, invece finisce subito ma dà `N` su v1.
+
+Non so se c'è una soluzione. Potrebbe essere un errore mio e di DeepSeek, potrebbe essere che il solver non gestisce bene questa cosa.
+
+Ehhhh. Io ho riprovato a fare una cosa semplice.
+
+```Solidity
+/// @custom:ghost
+mapping(address => uint) expectedBalances;
+mapping(address => int) expectedBalancesSigned;
+bool balancesSigned;
+bool balancesUnsigned;
+
+function checkSigned(int) internal {balancesSigned = true;}
+function checkSigned(uint) internal {balancesUnsigned = true;}
+
+/// @custom:preghost function deposit
+expectedBalances[msg.sender] += amount;
+
+/// @custom:preghost function withdraw
+expectedBalances[msg.sender] -= amount;
+
+/// @custom:invariant
+function invariant(address a) public {
+    checkSigned(balances[a]);
+    if(balancesSigned) assert(balances[a] > 0 && expectedBalances[a] == uint(balances[a])); // todo: balances[a]>0 is wrong
+    if(balancesUnsigned) assert(expectedBalances[a] == uint(balances[a]));
+}
+```
+
+Ci sono molti falsi negativi:
+
+* v9: errore nella ground truth
+* v10: errore nella ground truth
+* v11: errore nella ground truth
+* v12: errore nella ground truth
+* v13: `balances[a] > 0`
+* v15: errore nella ground truth
+* v16: ho interpretato male la proprietà
+* v18: ho interpretato male la proprietà
+* v20: ho interpretato male la proprietà
+* v22: errore nella ground truth
+
+Da fare domani: update alla ground truth, gestione di bilanci negativi, e capire come interpretare la proprietà (in caso chiedo a Bartoletti).
