@@ -55,8 +55,11 @@ Quindi vediamo che versioni fare:
 * Tutti i metodi revertano sempre e non hanno altro codice.
 * Tutti i metodi non fanno niente, ma revertano quando dovrebbero.
 * Tutti i metodi sono non-rientranti.
-* `balances` contiene la serie di Fibonacci, `deposit` e `withdraw` calcolano il prossimo termine, `balanceOf` e `totalBalance` restituiscono la stima corrente moltiplicata per $10^{18}.
+* `balances` contiene la serie di Fibonacci, `deposit` e `withdraw` calcolano il prossimo termine, `balanceOf` e `totalBalance` restituiscono la stima corrente moltiplicata per $10^{18}$.
 
 L'ultima non so se metterla.
 
 Ignorando l'ultima, passerebbe da 7 versioni a 21. Farò più avanti la ground truth.
+
+---
+
