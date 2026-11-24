@@ -63,3 +63,19 @@ Ignorando l'ultima, passerebbe da 7 versioni a 21. Farò più avanti la ground t
 
 ---
 
+Vediamo cosa posso definire in SolCMC:
+* ==🟠**always-bal-inc**: non credo, perché il controesempio è una revert.==
+* ==🟠**always-bal-to-max**: stessa cosa.==
+* ==🟡**always-wd-all-many**: non credo, forse posso provare a usare un loop ma non ha senso.==
+* ==🟡**always-wd-all-one**: boh forse.==
+* ==🟢**bal-dec-onlyif-wd**: in teoria sì ma è aggirabile.==
+* ==🟢**bal-inc-onlyif-dep**: stessa cosa.==
+* ==🟢**bal-sum-dep-wd**: semplice.==
+* ==🟢**cbal-eq-sum-bal**: semplice.==
+* ==🔴**dep-not-revert**: mi sa di no.==
+* ==🔴**frontrun-many**: non si possono modellare utenti diversi.==
+* ==🔴**frontrun-one**: stessa cosa.==
+* ==🟢**sum-wd-le-sum-dep**: semplice.==
+* ==🔴**wd-not-revert**: no.==
+
+Per **bal-sum-dep** lo faccio dopo perché non so come devo organizzare l'overloading per il mismatch dei tipi tra `amount` di wd, `amount` di dep e bilanci.
