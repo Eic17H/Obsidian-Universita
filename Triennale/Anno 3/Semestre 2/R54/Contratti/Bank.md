@@ -431,3 +431,122 @@ function invariant(address a) public {
 Tra l'altro avevo dimenticato di togliere `expectedBalancesSigned`.
 
 Oddio funziona. Oddio funziona. È così stupido. Che schifo. È un linguaggio che non ti permette di confrontare un indirizzo e un uint ma ti permette comunque di fare queste schifezze bitwise per fare contento il typechecker.
+
+---
+
+Devo aggiustare **cbal-eq-sum-bal**.sol. Il problema è che è troppo lento. Il modo più stupido di farlo è come segue:
+
+```Solidity
+function invariant() public {
+    uint bals = 0;
+    uint160 a;
+    for(a = 0; a<type(uint160).max; a++) {
+            bals += balances[address(a)];
+    }
+    assert(bals == contract_balance);
+}
+```
+
+Ci sono tre problemi principali:
+* Itera su $2^{160}$ valori, troppo lento.
+* L'overflow su `bals` conta come positivo.
+* Non è compatibile con v13.
+
+Vorrei applicare la stessa logica dell'altro per gestire i negativi.
+
+Figo, carino. Grazie DeepSeek. Io voglio una lista in cui posso fare `push(addr)`, e *se l'indirizzo non è già nella lista*, viene aggiunto alla lista. Ma per sapere se l'indirizzo c'è già, dovrei leggere tutta la lista e controllare se c'è. E invece no, uso una mappa `address => bool`, falsa di default, vera se l'indirizzo è già stato messo.
+
+```Solidity
+mapping (address => bool) hasInteracted;
+address[] interacted;
+function interact(address addr) public {
+    if(!hasInteracted[addr]) {
+        hasInteracted[addr] = true;
+        interacted.push(addr);
+    }
+}
+```
+
+La gestione dei tipi è uguale all'altro, se i due bilanci totali hanno lo stesso tipo.
+
+```Solidity
+if( balSigned &&  cbalSigned) assert( int(balsi) ==  int(contract_balance));
+if(!balSigned && !cbalSigned) assert(uint(balsu) == uint(contract_balance));
+```
+
+Come gestiamo il caso in cui i tipi sono diversi? Se il bilancio del contratto è senza segno ma la somma è uscita negativa, sicuramente è un problema. Al contrario invece, l'unico problema che può esserci è che la somma sia più del massimo `int`.
+
+```Solidity
+if( balSigned && !cbalSigned) assert(balsi >= 0 && uint(balsi) == uint(contract_balance));
+if(!balSigned &&  cbalSigned) assert(balsu <= uint(type(int).max) && int(balsu) == int(contract_balance));
+```
+
+E ci siamo quasi. Manca solo la protezione dall'overflow.
+
+```Solidity
+function overflows(uint n, uint m) public returns (bool) {return m > type(uint).max - n;}
+function overflows( int n,  int m) public returns (bool) {return m > type( int).max - n;}
+...
+overflow = overflows(balsu, uint(balances[a]);
+if(!overflow) balsu += uint(balances[a]);
+...
+```
+
+In totale (e ricordandomi che devo iterare sulla lista di indirizzi):
+
+```Solidity
+// `contract_balance` is always equal to the sum of the balance entries.
+
+/// @custom:ghost
+
+mapping (address => bool) hasInteracted;
+address[] interacted;
+function interact(address addr) public {
+    if(!hasInteracted[addr]) {
+        hasInteracted[addr] = true;
+        interacted.push(addr);
+    }
+}
+
+function isSigned(uint n) public returns (bool) {return false;}
+function isSigned( int n) public returns (bool) {return true;}
+function overflows(uint n, uint m) public returns (bool) {return m > type(uint).max - n;}
+function overflows( int n,  int m) public returns (bool) {return m > type( int).max - n;}
+
+/// @custom:preghost function deposit
+interact(msg.sender);
+
+/// @custom:preghost function withdraw
+interact(msg.sender);
+
+/// @custom:invariant
+function invariant() public {
+    require(interacted.length > 0);
+    uint balsu;
+    int balsi;
+    uint i;
+    bool balSigned = isSigned(balances[interacted[0]]);
+    bool cbalSigned = isSigned(contract_balance);
+    bool overflow;
+    if(balSigned) {
+        for(i = 0; i<interacted.length && !overflow; i++) {
+            overflow = overflows(balsu, uint(balances[interacted[i]]));
+            if(!overflow) balsu += uint(balances[interacted[i]]);
+        }
+    } else {
+        for(i = 0; i<interacted.length && !overflow; i++) {
+            overflow = overflows(balsi, int(balances[interacted[i]]));
+            if(!overflow) balsi += int(balances[interacted[i]]);
+        }
+    }
+    assert(!overflow);
+    if( balSigned &&  cbalSigned) assert( int(balsi) ==  int(contract_balance));
+    if(!balSigned && !cbalSigned) assert(uint(balsu) == uint(contract_balance));
+    if( balSigned && !cbalSigned) assert(balsi >= 0 && uint(balsi) == uint(contract_balance));
+    if(!balSigned &&  cbalSigned) assert(balsu <= uint(type(int).max) && int(balsu) == int(contract_balance));
+}
+```
+
+ È comunque troppo lento. Mi sa tanto che ci serve $O(1)$ per tutti i test. Inoltre, non passa. Ovviamente non passa.
+
+Mi sa che conviene riricominciare da zero, facendo la versione più semplice possibile *senza considerare v13*.
