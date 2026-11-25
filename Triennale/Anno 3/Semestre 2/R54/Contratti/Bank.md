@@ -637,3 +637,104 @@ function invariant() public {
 Ok adesso non passa v13. Che caso è v13? `!csigned && signed`, che nell'espressione booleana chiaramente si inverte perché è un'implicazione e diventa il quarto caso. Che è proprio quello su cui non ero sicuro.
 
 Non capisco.
+
+La cosa divertente è che prima funzionava. Cos'è cambiato?
+
+Prima facevo così:
+
+```Solidity
+int(contract_balance) == expectedBalSigned
+```
+
+E ora faccio così:
+
+```Solidity
+uint(contract_balance) == uint(expectedBalSigned)
+```
+
+Lo rimetto com'era prima, con l'aggiunta.
+
+```Solidity
+contract_balance < uint(type(int).max) && int(contract_balance) == expectedBalSigned)
+```
+
+Vediamo. Niente. Però mettendo esattamente l'originale. Ah certo, perché dovrebbe essere `<=`. Neanche. Certo perché ovviamente non ha senso.
+
+Allora dovrei solo cambiare come aggiorno la somma. Perché la somma dovrebbe avere il tipo del contratto del bilancio.
+
+Vedo se posso mettere una postghost al costruttore. Sembra di no. Ok però posso mettere direttamente questo nella ghost:
+
+```Solidity
+bool signed = isSigned(balances[msg.sender]);
+bool csigned = isSigned(contract_balance);
+```
+
+La cosa che c'è da fare è gestire il tipo di `balances[]` negli aggiornamenti di `expectedBal`.
+
+Una cosa del genere:
+```Solidity
+/// @custom:preghost function deposit
+if(balances[msg.sender] < 0) addThis = uint(balances[msg.sender]);
+else subThis = uint(balances[msg.sender]);
+
+/// @custom:postghost function deposit
+if(balances[msg.sender] < 0) subThis += uint(balances[msg.sender]);
+else addThis += uint(balances[msg.sender]);
+if(csigned) expectedBal = expectedBal + addThis - subThis;
+else expectedBalSigned = expectedBalSigned + int(addThis) - int(subThis);
+```
+
+È lento. Ma funziona per v1. FP su v3, come.
+
+La cosa simpatica è che devo fare una cosa del tipo `a-b+c`, stando attento al fatto che deve valutare prima `a-b` che può fare underflow, anche se `a-b+c` è positivo.
+
+Ok io ci provo:
+
+```Solidity
+function addsub(uint add1, uint add2, uint sub1, uint sub2) internal pure returns (uint add, uint sub, bool overflow, bool underflow) {
+    uint addp1;
+    uint subp1;
+    uint addp2;
+    uint subp2;
+
+    if(add1>sub1) addp1 = add1-sub1;
+    else subp1 = sub1-add1;
+
+    if(add2>sub2) addp2 = add2-sub2;
+    else subp2 = sub2-add2;
+
+    if(addp1>0 && addp2>0) {
+        if(addp1 > type(uint).max-addp2) overflow = true;
+        else add = addp1 + addp2;
+    } else if(subp1>0 && subp2>0) {
+        if(subp1 > type(uint).max-subp2) underflow = true;
+        else sub = subp1 + subp2;
+    } else if(addp1>0 && subp2>0) {
+        if(addp1>subp2) add = addp1-subp2;
+        else sub = subp2-addp1;
+    } else if(addp2>0 && subp1>0) {
+        if(addp2>subp1) add = addp2-subp1;
+        else sub = subp1-addp2;
+    } else {
+        add = addp1+addp2;
+        sub = subp1+subp2;
+    }
+}
+```
+
+```Solidity
+/// @custom:preghost function deposit
+if(balances[msg.sender] < 0) add1 = uint(balances[msg.sender]);
+else sub1 = uint(balances[msg.sender]);
+
+/// @custom:postghost function deposit
+if(balances[msg.sender] < 0) sub2 = uint(balances[msg.sender]);
+else add2 = uint(balances[msg.sender]);
+(toAdd, toSub, doesOverflow, doesUnderflow) = addsub(add1, add2, sub1, sub2);
+if(!doesUnderflow && !doesOverflow){
+    if(csigned) expectedBal = expectedBal + toAdd - toSub;
+    else expectedBalSigned = expectedBalSigned + int(toAdd) - int(toSub);
+}
+```
+
+Però è comunque incompleto e come minimo sarà lentissimo.
