@@ -550,3 +550,90 @@ function invariant() public {
  È comunque troppo lento. Mi sa tanto che ci serve $O(1)$ per tutti i test. Inoltre, non passa. Ovviamente non passa.
 
 Mi sa che conviene riricominciare da zero, facendo la versione più semplice possibile *senza considerare v13*.
+
+Un modo per eliminare il loop può essere di spostare il carico su `interact`.
+
+```Solidity
+/// @custom:ghost
+uint expectedBal;
+
+/// @custom:preghost function deposit
+expectedBal -= balances[msg.sender];
+
+/// @custom:postghost function deposit
+expectedBal += balances[msg.sender];
+
+/// @custom:preghost function withdraw
+expectedBal -= balances[msg.sender];
+
+/// @custom:postghost function withdraw
+expectedBal += balances[msg.sender];
+
+/// @custom:invariant
+function invariant() public {
+    assert(contract_balance == expectedBal);
+}
+```
+
+Ora dà tutto corretto, tranne v13 e v14 che danno `ERR`. Ed è velocissimo. Aggiungiamo il fix per i tipi:
+
+```Solidity
+/// @custom:ghost
+uint expectedBal;
+int expectedBalSigned;
+function isSigned(uint n) private pure returns (bool) {return false;}
+function isSigned( int n) private pure returns (bool) {return true;}
+
+/// @custom:preghost function deposit
+expectedBal -= uint(balances[msg.sender]);
+expectedBalSigned -= int(balances[msg.sender]);
+
+/// @custom:postghost function deposit
+expectedBal += uint(balances[msg.sender]);
+expectedBalSigned += int(balances[msg.sender]);
+
+/// @custom:preghost function withdraw
+expectedBal -= uint(balances[msg.sender]);
+expectedBalSigned -= int(balances[msg.sender]);
+
+/// @custom:postghost function withdraw
+expectedBal += uint(balances[msg.sender]);
+expectedBalSigned += int(balances[msg.sender]);
+
+/// @custom:invariant
+function invariant() public {
+    if(!isSigned(balances[msg.sender])) assert(uint(contract_balance) == expectedBal);
+    else assert(int(contract_balance) == expectedBalSigned);
+}
+```
+
+È un po' più lento. Magari posso renderlo più veloce sostituendo il condizionale con un'espressione booleana.
+
+```Solidity
+bool signed = isSigned(balances[msg.sender]);
+assert((signed || uint(contract_balance) == expectedBal) && (!signed || int(contract_balance) == expectedBalSigned))
+```
+
+Non è veloce come quello normale ma è un po' più veloce.
+
+Funziona con tutte le versioni fatte finora, ma è facilmente ingannabile: non c'è la protezione dall'overflow. E come si fa? Non so, mi arrendo.
+
+L'altra cosa che manca è che non controllo il tipo di `contract_balance`.
+
+```Solidity
+/// @custom:invariant
+function invariant() public {
+    bool signed = isSigned(balances[msg.sender]);
+    bool csigned = isSigned(contract_balance);
+    assert(
+        ( csigned ||  signed || uint(contract_balance) == expectedBal)
+    &&  (!csigned || !signed ||  int(contract_balance) == expectedBalSigned)
+    &&  (!csigned ||  signed || expectedBal >= 0 && uint(contract_balance) == uint(expectedBal))
+    &&  ( csigned || !signed || expectedBalSigned >= 0 && uint(contract_balance) == uint(expectedBalSigned))
+    );
+}
+```
+
+Ok adesso non passa v13. Che caso è v13? `!csigned && signed`, che nell'espressione booleana chiaramente si inverte perché è un'implicazione e diventa il quarto caso. Che è proprio quello su cui non ero sicuro.
+
+Non capisco.
