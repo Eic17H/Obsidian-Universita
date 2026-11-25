@@ -399,3 +399,35 @@ Ci sono molti falsi negativi:
 * v22: errore nella ground truth
 
 Da fare domani: update alla ground truth, gestione di bilanci negativi, e capire come interpretare la proprietà (in caso chiedo a Bartoletti).
+
+Come posso risolvere quella cosa di v13? Tecnicamente potrei. È brutto, ma potrei:
+
+```Solidity
+/// @custom:ghost
+mapping(address => uint) expectedBalances;
+mapping(address => int) expectedBalancesSigned;
+bool balancesSigned;
+bool balancesUnsigned;
+
+function checkSigned(int) internal {balancesSigned = true;}
+function checkSigned(uint) internal {balancesUnsigned = true;}
+
+/// @custom:preghost function deposit
+expectedBalances[msg.sender] += uint(amount);
+expectedBalancesSigned[msg.sender] += int(amount);
+
+/// @custom:preghost function withdraw
+expectedBalances[msg.sender] -= uint(amount);
+expectedBalancesSigned[msg.sender] -= int(amount);
+
+/// @custom:invariant
+function invariant(address a) public {
+    checkSigned(balances[a]);
+    if(balancesSigned) assert(expectedBalancesSigned[a] == int(balances[a]));
+    if(balancesUnsigned) assert(expectedBalances[a] == uint(balances[a]));
+}
+```
+
+Tra l'altro avevo dimenticato di togliere `expectedBalancesSigned`.
+
+Oddio funziona. Oddio funziona. È così stupido. Che schifo. È un linguaggio che non ti permette di confrontare un indirizzo e un uint ma ti permette comunque di fare queste schifezze bitwise per fare contento il typechecker.
