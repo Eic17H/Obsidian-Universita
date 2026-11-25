@@ -553,4 +553,33 @@ v8 dà molto `UNK`.
 
 Non so che altro fare con questo contratto. Metto i commenti alla ground truth e provo con un altro.
 
+---
 
+Dopo quanto emerso dal colloquio con Bartoletti, ora so che posso aggiungere proprietà a casi d'uso che mi sembrano sottospecificati. Questo è esattamente il caso per Social Recovery Wallet, che ha sei versioni con la stessa ground truth di v1. Queste sono:
+* v6: Tutti gli indirizzi sono trattati come guardiani.
+* v7: Tutti gli indirizzi sono trattati come proprietari.
+* v8: Il proprietario è sempre considerato un guardiano.
+* v9: Dopo la recovery, il vecchio proprietario sostituisce il guardiano che ha iniziato la recovery.
+* v18: `executeExternalTx` è rientrante.
+* v21: quando il contratto controlla se un indirizzo è un guardiano, quell'indirizzo diventa un guardiano.
+
+Che proprietà posso aggiungere che evidenziano le differenze nel comportamento di queste versioni rispetto a v1?
+* Solo un indirizzo è il proprietario.
+* Almeno un indirizzo è il proprietario.
+* Il proprietario non è un guardiano?
+* Prima e dopo la recovery, la lista dei guardiani è uguale.
+* Solo la rimozione di un guardiano cambia la lista dei guardiani.
+
+La cosa simpatica di quella per v9 è che non devo controllare l'intera lista. Mi basta usare un indirizzo come parametro, e dire che $\forall a : Addr,\ a \in G_{before} \leftrightarrow a \in G_{after}$. Quel $\forall a : Addr$ significa `invariant (address a)` o `address a;`. Stessa cosa quella per v21.
+
+Pensiamoci bene:
+* **only-one-owner**: if no recovery happens between two transactions, if an address behaves as the owner in the first transaction, then no other address must behave as an owner in the second transaction.
+* **owner-exists**: at any given time, at least one address behaves as the guardian.
+* **owner-not-guardian**: if an address behaves as the owner, it doesn't behave as a guardian.
+* **recov-not-change-guardians**: if and only if an address `a` is a guardian before `executeRecovery` is called, then `a` is a guardian after `executeRecovery` is called.
+* **guardian-change-implies-removal**: if an address `a` is a guardian before a transaction and isn't a guardian after it, or `a` isn't a guardian before a transaction and is a guardian after it, then the transaction is a call to `executeGuardianRemoval`.
+L'ultima è una versione più generale della penultima.
+
+Non so se **owner-not-guardian** deve esistere.
+
+Tra l'altro **recov-succeeds**.sol non so bene come farla. Deve per forza essere in negate, non so come faccia a trovare un esempio che funziona.
