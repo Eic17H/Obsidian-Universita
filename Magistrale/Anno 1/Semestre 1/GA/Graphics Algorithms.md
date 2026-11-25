@@ -13,6 +13,8 @@ cssclasses:
 	* [[KDE Tree]]
 	* [[Range tree]]
 * [[Point location]]
+	* [[Slab]]
+	* [[Trapezoidal map]]
 
 Teams: `7ty3rx1`
 
