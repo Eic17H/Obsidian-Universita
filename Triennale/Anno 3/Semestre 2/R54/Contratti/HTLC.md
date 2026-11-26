@@ -427,4 +427,20 @@ Rivediamo il comportamento di questi metodi con `isCommitted` in tutte le versio
 | 19  | require    | require    | 1            | 1      |
 In poche parole l'unica sbagliata era la v7. Quindi correggo.
 
-Non capisco la giustificazione dello 0 di **reveal-transfer**. `selfdestruct` è un problema se vogliamo un limite massimo a un bilancio, ma qui vogliamo un limite minimo. Stessa cosa **timeout-transfer**. Questi sono gli ultimi due problemi rimasti con 
+Non capisco la giustificazione dello 0 di **reveal-transfer**. `selfdestruct` è un problema se vogliamo un limite massimo a un bilancio, ma qui vogliamo un limite minimo. Stessa cosa **timeout-transfer**. Questi sono gli ultimi due problemi rimasti con HTLC.
+
+Ragioniamoci:
+- **reveal-transfer**: If a `reveal` transaction does not revert, `owner`'s balance must increase by at least the balance of the contract.`
+- **timeout-transfer**: If a `timeout` transaction does not revert, `verifier`'s balance must increase by at least the balance of the contract.
+
+Certo, perché può essere un contratto che redirige i soldi.
+
+Ah no, c'è anche **sent-le-init-bal**.spec. Provo con `persistent ghost`. Niente. Tra l'altro:
+
+```log
+[pool-1-thread-7] WARN SMTLIBUTILS - failed to parse counter example value from solver:
+```
+
+Però questo è molto potente. Certora si rende conto che il contratto può ricevere soldi da una `selfdestruct`. Non sono capace a usarlo bene però.
+
+Direi che ho finito.
