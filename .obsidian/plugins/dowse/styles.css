@@ -1,0 +1,207 @@
+/* Dowse in Obsidian: Dowse's design tokens (its wall and tags use them) taken from the Obsidian theme in use, so the
+   views follow any theme, light or dark, and its accent. Then the views' own layout. */
+
+.dowse-view {
+  --floor: var(--background-primary);
+  --floor-raised: var(--background-secondary);
+  --floor-sunk: var(--background-secondary-alt);
+  --ink: var(--text-normal);
+  --ink-2: var(--text-muted);
+  --ink-3: var(--text-faint);
+  --hairline: var(--background-modifier-border);
+  --found: var(--interactive-accent);
+  --focus: var(--interactive-accent);
+  --search-match: var(--interactive-accent);
+  --search-match-ink: var(--text-accent);
+  --search-other: var(--background-modifier-hover);
+  --search-other-ink: var(--text-muted);
+  --tag: var(--background-secondary);
+  --tag-ink: var(--text-muted);
+  --tag-found: var(--interactive-accent);
+  --rail: cubic-bezier(0.2, 0, 0, 1);   /* Dowse's easing (its tokens.css), not a colour */
+  --steel: var(--interactive-normal);
+  --steel-raised: var(--interactive-hover);
+  --steel-ink: var(--text-normal);
+  --steel-ink-2: var(--text-muted);
+  --face-ui: var(--font-interface);
+  --face-sign: var(--font-interface);
+  --face-data: var(--font-monospace);
+  --text-xs: var(--font-ui-smaller);
+  --text-sm: var(--font-ui-small);
+  --text-md: var(--font-ui-medium);
+  --text-lg: var(--font-ui-large);
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --r-field: var(--radius-s);
+  --r-steel: var(--radius-m);
+  --lift-1: var(--shadow-s);
+  --lift-2: var(--shadow-l);
+  --t-rail: 140ms;   /* (Dowse's; the easing is --rail) */
+}
+
+.dowse-view.view-content { padding: 0; overflow: hidden; }
+
+.dowse-panel { display: flex; flex-direction: column; height: 100%; min-height: 0; }
+
+.dowse-head { display: flex; flex-direction: column; gap: var(--s-2); padding: var(--s-3) var(--s-4) var(--s-2);
+  border-bottom: 1px solid var(--hairline); }
+
+/* The search, and beside it how results show: always there, in the same place */
+.dowse-search-row { display: flex; align-items: center; gap: var(--s-2); }
+.dowse-search-row .dowse-search { flex: 1; min-width: 0; }
+.dowse-search { display: flex; align-items: center; gap: var(--s-2); padding: 0 var(--s-3);
+  border: 1px solid var(--background-modifier-border); border-radius: var(--radius-m);
+  background: var(--background-modifier-form-field); color: var(--text-muted); }
+.dowse-search:focus-within { border-color: var(--interactive-accent); box-shadow: 0 0 0 2px var(--background-modifier-border-focus); }
+.dowse-search input[type="search"] { flex: 1; min-width: 0; height: 40px; border: none; background: none;
+  font-size: var(--font-ui-large); color: var(--text-normal); box-shadow: none; padding: 0; }
+.dowse-search input[type="search"]:focus { box-shadow: none; }
+
+.dowse-bar { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); flex-wrap: wrap; }
+.dowse-filter-controls, .dowse-filter-chips { display: flex; gap: var(--s-2); flex-wrap: wrap; }
+.dowse-filter-picker { position: relative; font-size: var(--font-ui-small); }
+.dowse-filter-picker summary { display: flex; align-items: center; gap: 4px; cursor: pointer; padding: 4px 8px;
+  border: 1px solid var(--background-modifier-border); border-radius: var(--radius-s); }
+.dowse-folder-options, .dowse-date-options { position: absolute; right: 0; top: 100%; z-index: 20;
+  background: var(--background-primary); border: 1px solid var(--background-modifier-border); border-radius: var(--radius-s);
+  box-shadow: var(--shadow-s); padding: 10px; min-width: 230px; max-height: 280px; overflow: auto;
+  display: flex; flex-direction: column; gap: 8px; }
+.dowse-folder-options label, .dowse-date-options label { display: flex; align-items: center; gap: 6px; }
+.dowse-folder-options span { overflow-wrap: anywhere; }
+.dowse-quick-status { flex: none; padding: 8px 20px 4px; color: var(--text-muted);
+  font-size: var(--font-ui-smaller); line-height: 1.4; }
+.dowse-search-error { margin: 0; color: var(--text-error); font-size: var(--font-ui-small); }
+.dowse-media-moments { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; margin: 4px 0;
+  font-size: var(--font-ui-smaller); color: var(--text-muted); }
+.dowse-media-moments > span { margin-right: 3px; }
+.dowse-moment { display: inline-flex; align-items: center; gap: 4px; height: auto; padding: 3px 7px; box-shadow: none;
+  font-size: var(--font-ui-smaller); font-variant-numeric: tabular-nums; border-radius: var(--radius-s); }
+.dowse-moment.is-best { color: var(--text-accent); }
+.dowse-result.is-virtual .dowse-media-moments { flex-wrap: nowrap; overflow: hidden; }
+.dowse-result.is-virtual .dowse-moment { flex: none; }
+.dowse-kinds { display: flex; gap: var(--s-1); flex-wrap: wrap; }
+.dowse-grouping { display: flex; align-items: center; gap: var(--s-2); font-size: var(--font-ui-small); color: var(--text-muted); }
+.dowse-chip { height: auto; padding: 3px 10px; border-radius: var(--radius-l); font-size: var(--font-ui-small);
+  background: var(--background-secondary); color: var(--text-muted); box-shadow: none; border: 1px solid transparent; }
+.dowse-chip.is-active { background: var(--interactive-accent); color: var(--text-on-accent); }
+.dowse-layout { display: flex; gap: 2px; }
+.dowse-layout .is-active { color: var(--interactive-accent); background: var(--background-modifier-hover); }
+.dowse-summary { min-height: 1.4em; font-size: var(--font-ui-smaller); color: var(--text-muted); }
+.dowse-summary:empty { display: none; }   /* (the reading strip says it all meanwhile) */
+
+.dowse-body { flex: 1; min-height: 0; position: relative; overflow: auto; }
+.dowse-body.dowse-floor { overflow: hidden; }
+
+.dowse-results { display: flex; flex-direction: column; padding: var(--s-1) var(--s-2); }
+/* The end of a list clear of Obsidian's status bar, which floats over the bottom of a view */
+.dowse-body > .dowse-results:last-child, .dowse-sidebar .dowse-similar { padding-bottom: 40px; }
+.dowse-more { display: block; margin: 0 var(--s-4) 40px; height: auto; padding: 4px 10px; font-size: var(--font-ui-small);
+  color: var(--text-muted); background: none; box-shadow: none; border: 1px solid var(--background-modifier-border); }
+.dowse-more:hover { color: var(--text-normal); background: var(--background-modifier-hover); }
+.dowse-result { display: flex; gap: var(--s-2); padding: 6px var(--s-2); border-radius: var(--radius-s); cursor: pointer; }
+.dowse-result.is-virtual { box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
+.dowse-result:hover { background: var(--background-modifier-hover); }
+.dowse-result:focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: -2px; }
+.dowse-result.is-selected { background: var(--background-modifier-active-hover); }
+.dowse-result[aria-disabled="true"] { opacity: .65; cursor: progress; }
+.dowse-result-icon { color: var(--text-faint); padding-top: 2px; }
+.dowse-result-text { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.dowse-result-title { color: var(--text-normal); font-weight: var(--font-semibold); overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; }
+.dowse-result-line { font-size: var(--font-ui-smaller); color: var(--text-muted); overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; }
+.dowse-result-excerpt { font-size: var(--font-ui-small); color: var(--text-muted); line-height: 1.45; max-width: 72ch;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dowse-result-excerpt mark, .dowse-suggestion mark { background: var(--highlight-background, var(--text-highlight-bg)); color: var(--text-normal);
+  border-radius: 2px; padding: 0 1px; }
+.dowse-results.compact .dowse-result { padding: 4px var(--s-2); }
+/* Said to a screen reader, not shown */
+.dowse-unseen { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; white-space: nowrap; }
+
+/* What's only close, after a search's matches: set apart, quieter */
+.dowse-results-divider, .dowse-suggestion-divider { font-size: var(--font-ui-smaller); color: var(--text-muted);
+  letter-spacing: 0.01em; }
+.dowse-results-divider { margin: var(--s-2) var(--s-2) 2px; padding-top: var(--s-2);
+  border-top: 1px solid var(--background-modifier-border); }
+.dowse-suggestion-divider { margin: -2px 0 4px; }
+.dowse-result.is-close .dowse-result-title, .dowse-suggestion.is-close .dowse-result-title { color: var(--text-muted);
+  font-weight: var(--font-normal); }
+
+.dowse-suggestion { display: flex; flex-direction: column; gap: 1px; min-width: 0; white-space: normal; }
+
+.dowse-empty { padding: var(--s-4); color: var(--text-muted); font-size: var(--font-ui-small); }
+
+.dowse-off { max-width: 32rem; margin: 15vh auto 0; padding: 0 var(--s-4); display: flex; flex-direction: column; gap: var(--s-3); }
+.dowse-off h2 { margin: 0; }
+.dowse-off p { margin: 0; color: var(--text-muted); line-height: 1.5; }
+.dowse-off .dowse-quiet { font-size: var(--font-ui-smaller); color: var(--text-muted); }
+.dowse-off button { align-self: flex-start; }
+.dowse-steps { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: var(--s-2);
+  color: var(--text-muted); line-height: 1.5; }
+.dowse-steps b { color: var(--text-normal); font-weight: var(--font-semibold); }
+
+/* The first screen's parts of the model, offered */
+.dowse-parts { display: flex; flex-direction: column; gap: var(--s-2); padding: var(--s-3); border-radius: var(--radius-m);
+  background: var(--background-secondary); color: var(--text-normal); }
+.dowse-parts label { display: flex; align-items: baseline; gap: var(--s-2); cursor: pointer; line-height: 1.4; }
+.dowse-parts input { flex: none; margin: 0; transform: translateY(2px); }
+
+/* Files only found by name while their part of the model is off: said where they're looked for */
+.dowse-unread { display: flex; align-items: center; gap: var(--s-3); padding: var(--s-2) var(--s-3);
+  border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border); font-size: var(--font-ui-small);
+  color: var(--text-muted); }
+.dowse-unread span { flex: 1; min-width: 0; }
+.dowse-unread button { flex: none; }
+
+/* Reading a lot: how far, how long is left, pause */
+.dowse-strip { position: relative; display: flex; align-items: center; gap: var(--s-3); padding: var(--s-2) var(--s-3);
+  border-radius: var(--radius-m); background: var(--background-secondary); overflow: hidden; }
+.dowse-strip-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; font-size: var(--font-ui-small);
+  color: var(--text-normal); font-variant-numeric: tabular-nums; }
+.dowse-strip-text .dowse-quiet { font-size: var(--font-ui-smaller); color: var(--text-muted); }
+.dowse-strip button { flex: none; }
+.dowse-strip-bar { position: absolute; left: 0; bottom: 0; height: 2px; width: calc(var(--part) * 100%);
+  background: var(--interactive-accent); transition: width 400ms ease; }
+
+/* "Like this note": whether each is linked yet, and linking it */
+.dowse-similar-filter { display: flex; gap: var(--s-1); padding: var(--s-2) var(--s-3) 0; }
+.dowse-result-aside { margin-left: auto; align-self: center; flex: none; display: flex; color: var(--text-faint); }
+.dowse-result .dowse-link-button { opacity: 0; height: auto; padding: 2px 6px; font-size: var(--font-ui-smaller);
+  box-shadow: none; }
+.dowse-result:hover .dowse-link-button, .dowse-result.is-selected .dowse-link-button,
+.dowse-result:focus-within .dowse-link-button,
+.dowse-link-button:focus-visible { opacity: 1; }
+
+/* The map's numbered results, named, over the floor's left edge */
+.dowse-rail { position: absolute; left: var(--s-4); top: 44px; z-index: 3; margin: 0; padding: var(--s-1); list-style: none;
+  max-width: min(280px, 45%); background: var(--background-primary); border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m); box-shadow: var(--shadow-s); }
+.dowse-rail button { display: flex; align-items: center; gap: var(--s-2); width: 100%; height: auto; padding: 4px var(--s-2);
+  background: none; box-shadow: none; font-size: var(--font-ui-small); color: var(--text-normal); justify-content: flex-start; }
+.dowse-rail button:hover, .dowse-rail button.is-on { background: var(--background-modifier-hover); }
+.dowse-rail-rank { flex: none; min-width: 1.4em; height: 1.4em; display: grid; place-items: center; border-radius: var(--radius-s);
+  border: 1px solid var(--interactive-accent); color: var(--text-normal); font-size: var(--font-ui-smaller);
+  font-variant-numeric: tabular-nums; }
+.dowse-rail-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* A file dragged from the wall or the map into a note */
+.dowse-drag-ghost { position: fixed; top: -100px; left: 0; padding: 4px 10px; border-radius: var(--radius-s);
+  background: var(--background-primary); color: var(--text-normal); border: 1px solid var(--background-modifier-border);
+  box-shadow: var(--shadow-s); font-size: var(--font-ui-small); white-space: nowrap; pointer-events: none; }
+
+.dowse-similar { display: flex; flex-direction: column; }
+.dowse-similar-head { padding: var(--s-2) var(--s-3) 0; font-size: var(--font-ui-smaller); color: var(--text-muted);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dowse-sidebar.view-content { overflow: auto; }
+
+.dowse-settings-top { display: flex; align-items: center; gap: var(--size-4-3); padding: var(--size-4-2) var(--size-4-3);
+  border-radius: var(--radius-m); background: var(--background-secondary); }
+.dowse-settings-status { flex: 1; margin: 0; }
+.dowse-status { cursor: pointer; }
+
+.dowse-settings-content { display: block; border: 0; padding: 0; }
+
+/* The components' styles */
+.dowse-icon.svelte-adg0rq{display:inline-grid;place-items:center;flex:none;line-height:0}.dowse-icon.svelte-adg0rq svg{width:100%;height:100%}.preparing.svelte-38qu2f{position:absolute;inset:0;display:grid;place-content:center;color:var(--ink-2);pointer-events:none;z-index:1}.gallery.svelte-38qu2f{display:grid;grid-template-rows:auto minmax(0,1fr);width:100%;height:100%;min-height:0}.wall.svelte-38qu2f{position:relative;width:100%;height:100%;overflow:hidden;cursor:grab;touch-action:none}.wall.svelte-38qu2f canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.tags.svelte-38qu2f{position:absolute;inset:0;pointer-events:none}.relevance-key.svelte-38qu2f{display:flex;align-items:center;flex-wrap:wrap;min-height:56px;gap:var(--s-3);padding:var(--s-2) var(--s-4);pointer-events:none;font-size:var(--text-xs);color:var(--ink-2)}.relevance-key.svelte-38qu2f span:where(.svelte-38qu2f){display:flex;align-items:center;gap:var(--s-2)}.relevance-key.svelte-38qu2f span:where(.svelte-38qu2f):before{content:"";width:8px;height:8px;border-radius:2px}.relevance-key.svelte-38qu2f .match:where(.svelte-38qu2f):before{background:var(--search-match)}.relevance-key.svelte-38qu2f .closest:where(.svelte-38qu2f):before{background:var(--ink-3)}.relevance-key.svelte-38qu2f .other:where(.svelte-38qu2f):before{background:var(--search-other)}.relevance-key.svelte-38qu2f .match:where(.svelte-38qu2f){color:var(--ink)}.relevance-key.svelte-38qu2f .other:where(.svelte-38qu2f){color:var(--search-other-ink)}.relevance-key.svelte-38qu2f .size-note:where(.svelte-38qu2f):before{display:none}.relevance-key.svelte-38qu2f .navigation:where(.svelte-38qu2f):before{display:none}.zoom-controls.svelte-38qu2f{position:absolute;right:var(--s-4);bottom:calc(var(--s-4) + 32px);z-index:1;display:flex;align-items:center;padding:var(--s-1);border:1px solid var(--hairline);border-radius:var(--r-field);background:var(--floor-raised);box-shadow:var(--lift-1);cursor:default}.zoom-controls.svelte-38qu2f button:where(.svelte-38qu2f){display:grid;place-items:center;width:32px;height:32px;border-radius:var(--r-steel)}.zoom-controls.svelte-38qu2f button:where(.svelte-38qu2f):hover:not(:disabled){background:var(--floor-sunk)}.zoom-controls.svelte-38qu2f output:where(.svelte-38qu2f){width:48px;text-align:center;color:var(--ink-2)}.zoom-controls.svelte-38qu2f .reset:where(.svelte-38qu2f){margin-left:var(--s-1);border-left:1px solid var(--hairline);border-radius:0}.tags.svelte-38qu2f .tag{position:absolute;left:0;top:0;max-width:240px;display:grid;gap:1px;padding:5px 9px;background:var(--tag);color:var(--tag-ink);border-radius:var(--r-steel);box-shadow:var(--lift-1);opacity:0;transition:opacity var(--t-rail) var(--rail);will-change:transform}.tags.svelte-38qu2f .tag.dowse-visible{opacity:1}.tags.svelte-38qu2f .tag b{font:600 var(--text-sm) / 1.25 var(--face-ui);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tags.svelte-38qu2f .tag span{font:400 11.5px / 1.3 var(--face-data);font-variant-numeric:tabular-nums;color:var(--tag-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tags.svelte-38qu2f .tag.big{max-width:340px;padding:7px 12px}.tags.svelte-38qu2f .tag.big b{font:620 var(--text-lg) / 1.2 var(--face-sign);font-variation-settings:"wdth" 108}.tags.svelte-38qu2f .tag.on{box-shadow:var(--lift-2),inset 0 -2px 0 var(--found)}.tags.svelte-38qu2f .tag i{font:500 11px / 1.3 var(--face-data);font-style:normal;font-variant-numeric:tabular-nums;color:var(--tag-found);margin-right:6px}.tags.svelte-38qu2f .tag.number{padding:2px 7px;border-radius:3px;box-shadow:inset 0 -2px 0 var(--found)}.tags.svelte-38qu2f .tag.number i{margin:0;color:var(--tag-ink)}.tags.svelte-38qu2f .tag[data-relevance=match]{background:color-mix(in srgb,var(--search-match) 14%,var(--tag));box-shadow:var(--lift-1),inset 0 -2px 0 var(--search-match)}.tags.svelte-38qu2f .tag[data-relevance=match].on{box-shadow:var(--lift-2),inset 0 -3px 0 var(--search-match)}.tags.svelte-38qu2f .tag[data-relevance=match] i{color:color-mix(in srgb,var(--search-match) 55%,var(--tag-ink))}.tags.svelte-38qu2f .tag[data-relevance=closest]{box-shadow:var(--lift-1)}.tags.svelte-38qu2f .tag[data-relevance=closest].on{box-shadow:var(--lift-2),inset 0 -2px 0 var(--focus)}.tags.svelte-38qu2f .tag[data-relevance=closest] i{color:var(--tag-ink)}.map-view.svelte-4sqdwa{display:grid;grid-template-rows:auto minmax(0,1fr);min-height:0;height:100%}.map-view.svelte-4sqdwa>.relevance-key:where(.svelte-4sqdwa){order:-1}.floor.svelte-4sqdwa{position:relative;width:100%;height:100%;overflow:hidden;cursor:grab;touch-action:none}.floor.svelte-4sqdwa.dowse-pointer{cursor:pointer}.map-controls.svelte-4sqdwa{position:absolute;right:var(--s-4);bottom:calc(var(--s-4) + 32px);z-index:2;display:flex;align-items:center;padding:var(--s-1);border:1px solid var(--hairline);border-radius:var(--r-field);background:var(--floor-raised);box-shadow:var(--lift-1);cursor:default}.map-controls.svelte-4sqdwa button:where(.svelte-4sqdwa){display:grid;place-items:center;width:32px;height:32px;border-radius:var(--r-steel)}.map-controls.svelte-4sqdwa button:where(.svelte-4sqdwa):hover{background:var(--floor-sunk)}.map-controls.svelte-4sqdwa .whole:where(.svelte-4sqdwa){margin-left:var(--s-1);border-left:1px solid var(--hairline);border-radius:0}.floor.svelte-4sqdwa canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.signs.svelte-4sqdwa,.tags.svelte-4sqdwa,.ranks.svelte-4sqdwa{position:absolute;inset:0;pointer-events:none}.relevance-key.svelte-4sqdwa{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2) var(--s-3);padding:var(--s-2) var(--s-4);color:var(--ink-2);font-size:var(--text-xs);pointer-events:none}.relevance-key.svelte-4sqdwa span:where(.svelte-4sqdwa){display:flex;align-items:center;gap:var(--s-2)}.relevance-key.svelte-4sqdwa span:where(.svelte-4sqdwa):before{content:"";width:8px;height:8px;border-radius:2px}.relevance-key.svelte-4sqdwa .match:where(.svelte-4sqdwa){color:var(--ink)}.relevance-key.svelte-4sqdwa .closest:where(.svelte-4sqdwa){color:var(--ink-2)}.relevance-key.svelte-4sqdwa .other:where(.svelte-4sqdwa){color:var(--search-other-ink)}.relevance-key.svelte-4sqdwa .match:where(.svelte-4sqdwa):before{background:var(--search-match)}.relevance-key.svelte-4sqdwa .closest:where(.svelte-4sqdwa):before{background:var(--ink-3)}.relevance-key.svelte-4sqdwa .other:where(.svelte-4sqdwa):before{background:var(--search-other)}.relevance-key.svelte-4sqdwa .size-note:where(.svelte-4sqdwa):before{display:none}.ranks.svelte-4sqdwa .rank-badge{position:absolute;left:0;top:0;min-width:23px;height:23px;padding:1px 5px;background:var(--tag);border:1px solid var(--ink-3);border-radius:var(--r-steel);color:var(--tag-ink);font:600 var(--text-xs) / 1 var(--face-data);font-variant-numeric:tabular-nums;box-shadow:var(--lift-1)}.ranks.svelte-4sqdwa .rank-badge[data-relevance=match]{border-color:var(--search-match);color:var(--search-match-ink)}.ranks.svelte-4sqdwa .rank-badge[aria-pressed=true]{outline:2px solid var(--focus);outline-offset:2px}.signs.svelte-4sqdwa .aisle-sign{position:absolute;left:0;top:0;pointer-events:auto;height:auto;line-height:normal;display:grid;justify-items:start;gap:1px;padding:6px 12px 7px;background:var(--steel);color:var(--steel-ink);border-radius:var(--r-steel);box-shadow:var(--lift-2),inset 0 1px #ffffff14;transition:opacity var(--t-rail) var(--rail),background var(--t-rail) var(--rail);white-space:nowrap}.signs.svelte-4sqdwa .aisle-sign:hover{background:var(--steel-raised)}.signs.svelte-4sqdwa .aisle-sign b{font:620 var(--text-md) / 1.15 var(--face-sign);font-variation-settings:"wdth" 112}.signs.svelte-4sqdwa .aisle-sign span{font:400 11.5px / 1.3 var(--face-data);color:var(--steel-ink-2)}.tags.svelte-4sqdwa .case-tag{position:absolute;left:0;top:0;display:grid;gap:1px;max-width:260px;padding:5px 9px;background:var(--tag);color:var(--tag-ink);border-radius:var(--r-steel);box-shadow:var(--lift-1);opacity:0;transition:opacity var(--t-rail) var(--rail)}.tags.svelte-4sqdwa .case-tag.dowse-visible{opacity:1}.tags.svelte-4sqdwa .case-tag b{font:600 var(--text-sm) / 1.25 var(--face-ui);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tags.svelte-4sqdwa .case-tag span{font:400 11.5px / 1.3 var(--face-data);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tags.svelte-4sqdwa .case-tag[data-relevance=match]{box-shadow:var(--lift-1),inset 0 -2px 0 var(--search-match)}.tags.svelte-4sqdwa .case-tag[data-relevance=closest].selected{box-shadow:var(--lift-2),inset 0 -2px 0 var(--focus)}.tags.svelte-4sqdwa .case-tag[data-relevance=other]{box-shadow:var(--lift-1),inset 0 -2px 0 var(--search-other)}

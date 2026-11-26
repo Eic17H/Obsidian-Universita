@@ -1,0 +1,9 @@
+{
+  "on": true,
+  "off": [],
+  "images": true,
+  "sound": false,
+  "graphicsHinted": false,
+  "batteryPause": true,
+  "device": "auto"
+}
