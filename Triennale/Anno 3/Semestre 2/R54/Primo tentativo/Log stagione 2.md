@@ -52,3 +52,7 @@ La prossima volta (tra due settimane):
 * Chiedere meglio cosa fare per VW perché in effetti ho capito che devo fare i controesempi con Forge ma non ho capito se correggere la ground truth (anche se a questo punto mi sembra di sì).
 
 L'altra cosa importante è che posso aggiungere nuove proprietà ai contratti se mi serve. Quindi se vedo che posso fare una versione che non funziona ma verifica tutte le proprietà, posso aggiungere proprietà.
+
+### 26 novembre
+
+L'altra cosa che devo chiedere a Bartoletti è se posso usare `/// @custom:nondef`.

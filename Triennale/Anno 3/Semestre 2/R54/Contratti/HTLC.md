@@ -385,3 +385,46 @@ Ok, mi tengo l'ERR.
 
 Che brutta esperienza.
 
+---
+
+Ritorno con molta molta più esperienza.
+
+**reveal-timeout-after-isCommitted**. Effettivamente sì.
+
+> A `reveal` or `timeout` transaction won't revert only if contract is in a committed state.
+
+Questo, come abbiamo visto, significa:
+
+> $((reveal \lor timeout) \land \lnot revert) \to isCommitted$
+
+Vale a dire:
+
+> $reveal \lor timeout \vdash ¬ isCommitted \to revert$
+
+Rivediamo il comportamento di questi metodi con `isCommitted` in tutte le versioni.
+
+
+| v   | reveal     | timeout    | ground truth | realtà |
+| --- | ---------- | ---------- | ------------ | ------ |
+| 1   | require    | require    | 1            | 1      |
+| 2   | **niente** | **niente** | 0            | 0      |
+| 3   | require    | require    | 1            | 1      |
+| 4   | require    | require    | 1            | 1      |
+| 5   | require    | require    | 1            | 1      |
+| 6   | require    | require    | 1            | 1      |
+| 7   | require    | require    | 0            | 1      |
+| 8   | require    | require    | 1            | 1      |
+| 9   | require    | require    | 1            | 1      |
+| 10  | require    | require    | 1            | 1      |
+| 11  | require    | require    | 1            | 1      |
+| 12  | require    | require    | 1            | 1      |
+| 13  | require    | require    | 1            | 1      |
+| 14  | require    | require    | 1            | 1      |
+| 15  | require    | require    | 1            | 1      |
+| 16  | require    | require    | 1            | 1      |
+| 17  | **niente** | **niente** | 0            | 0      |
+| 18  | require    | require    | 1            | 1      |
+| 19  | require    | require    | 1            | 1      |
+In poche parole l'unica sbagliata era la v7. Quindi correggo.
+
+Non capisco la giustificazione dello 0 di **reveal-transfer**. `selfdestruct` è un problema se vogliamo un limite massimo a un bilancio, ma qui vogliamo un limite minimo. Stessa cosa **timeout-transfer**. Questi sono gli ultimi due problemi rimasti con 
