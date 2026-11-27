@@ -444,3 +444,5 @@ Ah no, c'è anche **sent-le-init-bal**.spec. Provo con `persistent ghost`. Nient
 Però questo è molto potente. Certora si rende conto che il contratto può ricevere soldi da una `selfdestruct`. Non sono capace a usarlo bene però.
 
 Direi che ho finito.
+
+Prima di committare devo aggiustare il parser python, perché dà errore una funzione solo per un timeout. O provo a eseguirlo dall'altro computer.
