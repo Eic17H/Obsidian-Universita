@@ -3,7 +3,7 @@ cssclasses:
   - r54
 ---
 ## `ERR` eccessivi
-
+	
 Quando ho un errore del tipo:
 
 ```log
@@ -81,7 +81,7 @@ Non lo so.
 
 Potrei mettere che riconosce come violazione qualunque `Violated`, ma potrebbe riconoscere come violate certe proprietà che è giusto che non lo siano. Dubito, dovrò fare test.
 
-Ma credo che il vero problema sia il time out.
+Ma credo che il vero problema sia il time out. Credo che venga da Certora, o da ciò che lo esegue.
 
 ## `assert` e `satisfy`
 
@@ -109,7 +109,7 @@ Qui ho tre opzioni:
 
 Di sicuro però devo risolvere il problema di `assertionBoolean`.
 
-Credo che questo funzioni:
+Scelgo la seconda. Credo che questo funzioni:
 
 ```Python
 has_assert_and_satisfy = re.search('{[^}]*[^}a-zA-Z0-9_]assert[^}a-zA-        has_assert_and_satisfy = re.search('{[^}]*[^}a-zA-Z0-9_]assert[^}a-zA-Z0-9_][^}]*[^}a-zA-Z0-9_]satisfy[^}a-zA-Z0-9_][^}]*}', spec_no_comments)

@@ -53,6 +53,9 @@ La prossima volta (tra due settimane):
 
 L'altra cosa importante è che posso aggiungere nuove proprietà ai contratti se mi serve. Quindi se vedo che posso fare una versione che non funziona ma verifica tutte le proprietà, posso aggiungere proprietà.
 
-### 26 novembre
+## 26 novembre
 
 L'altra cosa che devo chiedere a Bartoletti è se posso usare `/// @custom:nondef`.
+
+## 27 novembre
+
