@@ -203,3 +203,11 @@ Eh ma comunque questo approccio considera valida una step function come quella c
         // Find the least timestamp greater than timestamp2 such that its releasable ...
     }
 ```
+
+---
+
+Tutto questo casino per niente mi sa tanto. Cambio la ground truth. Tanto la descrizione parla chiaro:
+
+> releasable grows linearly between the start of the vesting scheme and its expiration: two successful consequent calls to `releasable` differ by c\*t, where t is the timestamp difference between the two calls, and c is a fixed constant for the contract
+
+Questo non può essere vero, perché è arrotondato. Semplifico tantissimo le spec e cambio la ground truth.
