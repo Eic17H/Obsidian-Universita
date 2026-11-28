@@ -11,6 +11,7 @@ cssclasses:
 * [[Inferno]]
 * [[Triennale/Anno 1/Semestre 1/PR1/Modulo I/Complessità|Complessità]]
 * [[Triennale/Anno 1/Semestre 1/PR1/Modulo II/Lab|Laboratorio]] (WIP)
+* [Progetto](https://github.com/Eic17H/Happy-Little-Students)
 
 ## Introduzione
 

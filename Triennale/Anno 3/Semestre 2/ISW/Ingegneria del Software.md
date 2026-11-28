@@ -37,5 +37,8 @@ Argomenti del secondo parziale:
 	* Moduli e package
 	* Lamba expression
 	* Regex
+
 Consigli per il terzo parziale: Studia bene i diagrammi, sono incomprensibili, il resto puoi andare un po' a logica
+
+[Progetto di vibecoding](https://github.com/Eic17H/isw-qubo-classification-G42) (sì lo scopo era davvero di vedere come vibecodiamo).
 #materia
