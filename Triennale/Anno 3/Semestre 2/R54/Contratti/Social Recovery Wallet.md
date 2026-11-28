@@ -684,3 +684,76 @@ Migliorerei comunque la v1 per comodità di modifica. In particolare:
 * Stati?
 
 E poi vorrei rifare anche la descrizione perché è brutta, ma la mia implementazione a sua volta si basa sulla descrizione, quindi non ha molto senso cambiarla.
+
+---
+
+Io a questo punto faccio una cosa particolare. Faccio una nuova branch in cui SRW è rifatto da capo, e metto lì le nuove proprietà e tutte le nuove versioni.
+
+Un problema che sto notando è lo stesso che c'era prima: cosa significa "essere il proprietario" o "essere il guardiano"? Sono il proprietario se lo dice la variabile `owner` o se lo dicono i fatti?
+
+Sembra lecito creare due versioni per ogni proprietà:
+- Essere proprietario/guardiano per la variabile;
+- Essere proprietario/guardiano nei fatti.
+
+Quindi avremmo:
+
+- **can-change-guardian**: If an address `a` has behaved as a guardian, it might not behave as a guardian now.
+- **can-change-guardian-variable**: If an address `a` was in the guardian list, it might not be in the guardian list now.
+- **can-change-owner**: If an address `a` has behaved as an owner, it might not behave as an owner now.
+- **can-change-owner-variable**: The value of the variable `owner` can change.
+- **recov-can-cancel**: If a call to `cancelRecovery()` is followed by `executeRecovery()` with no in-between calls, if an address `a` behaved as the owner before `executeRecovery()` then it must behave as the owner immediately afterwards.
+- **recov-can-cancel-variable**: If a call to `cancelRecovery()` is followed by `executeRecovery()` with no in-between calls, the content of the variable `owner` before `executeRecovery()`must be the same as its content immediately afterwards.
+- **recov-can-happen**: If `supportRecovery()` was called successfully at least the number of times specified by the `threshold` parameter of the constructor and `cancelRecovery()` wasn't called, then the address that behaves as the owner must be different before and after the call to `executeRecovery()`.
+- **recov-can-happen-variable**: If `supportingGuardianCount` for the current round is at least `guardianThreshold` and the contract is in the `inRecovery` state, then the content of the `owner` variable must be different before and after the call to `executeRecovery()`.
+- **recov-requires-guardian**: ???
+- **recov-requires-guardian-variable**: ???
+- **recov-succeeds**: Same as **recov-can-happen**?
+- **recov-succeeds-variable**: Same as **recov-can-happen-variable**?
+- **recov-threshold**: Reverse **recov-can-happen**?
+- **recov-threshold-variable**: Reverse **recov-can-happen-variable**?
+- **removal-can-cancel**: Variation of **recov-can-cancel**.
+- **removal-can-cancel-variable**: Variation of **recov-can-cancel-variable**.
+- **removal-can-happen**: Variation of **recov-can-happen**.
+- **removal-can-happen-variable**: Variation of **recov-can-happen-variable**.
+- **removal-requires-owner**: Guardian behavior changes if owner behavior.
+- **removal-requires-owner-variable**: Guardian list changes if owner variable.
+
+Ti dirò. È complicato. È complicato soprattutto scrivere le descrizioni delle proprietà in modo preciso ma che non sia fastidioso da leggere. E soprattutto i test SolCMC per qualche motivo girano lentissimi (probabilmente perché il contratto è molto lungo).
+
+Ma sono molto contento di aver scritto un contratto di più di 100 righe quasi da zero. È una cosa semplice ma almeno mi sento di fare qualcosa di utile per il progetto.
+
+Scrivo meglio le proprietà in modo che siano comprensibili per me, ricordando implicitamente che ci sono anche le variazioni:
+
+- **can-change-guardian**: Guardian status of an address can change.
+- **can-change-owner**: Owner status of an address can change.
+- **recov-can-cancel**: Owner stays the same if recovery is canceled.
+- **recov-can-happen**: Owner changes if recovery conditions are met.
+- **recov-requires-guardian**: If the recovery state changes, the caller is a guardian.
+- **recov-succeeds**: ???
+- **recov-threshold**: Owner stays the same if recovery threshold isn't met.
+- **removal-can-cancel**: Guardian list stays the same if removal is canceled.
+- **removal-can-happen**: Guardian list changes if conditions are met.
+- **removal-requires-owner**: If the guardian list changes, the caller is the owner.
+
+Così è molto semplice. Diventa una cosa del genere:
+
+```Solidity
+assert(wasGuardian != isGuardian);
+assert(wasOwner != isOwner);
+cancelRecovery(); assert(wasOwner == isOwner);
+executeRecovery(); assert(wasOwner != isOwner);
+assert((oldState == newState) || isGuardian(msg.sender));
+/* */
+assert(count >= threshold || wasOwner == isOwner);
+cancelRemoval(); assert(wasGuardian == isGuardian);
+executeRemoval(); assert(wasGuardian != isGuardian);
+assert(wasGuardian == isGuardian || isOwner(msg.sender));
+```
+
+A seconda della variazione (variabile o effettivo), la definizione di "was" e "is" cambia.
+
+La cosa simpatica che posso fare con questa cosa è far vedere che se ci basiamo troppo sulle variabili, una versione che maliziosamente ignora le variabili e usa delle altre variabili nascoste o cose del genere può eludere il controllo. E così vengono a galla i limiti di SolCMC e Certora: viene male sondare indipendentemente il contratto in più condizioni diverse.
+
+Per questo è anche importante fare proprietà che richiedono che gli identificatori siano utilizzati correttamente. E soprattutto scrivere gli identificatori nelle specifiche, cosa completamente assente da questo contratto. Però è anche interessante vedere fino a dove ti puoi spingere con queste limitazioni.
+
+Per esempio nelle specifiche non c'è scritto da nessuna parte che `cancelRecovery()` deve esistere. E magari posso anche fare una versione che non lo usa, ma annulla implicitamente una recovery se ne viene iniziata un'altra.
