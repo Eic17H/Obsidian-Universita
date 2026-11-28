@@ -583,3 +583,104 @@ L'ultima è una versione più generale della penultima.
 Non so se **owner-not-guardian** deve esistere.
 
 Tra l'altro **recov-succeeds**.sol non so bene come farla. Deve per forza essere in negate, non so come faccia a trovare un esempio che funziona.
+
+---
+
+Ho avuto un'idea all'improvviso. La mia soluzione per sapere se il mittente è un guardiano è stata di chiamare un metodo e vedere se reverta. Questo è perché quel metodo reverta se il mittente non è un guardiano.
+
+Posso implementare il contratto in modo equivalente rimuovendo questa cosa.
+
+Semplicemente la lista di guardiani a supporto della recovery può essere aggiornata o non aggiornata a seconda di chi è il mittente. Se il mittente non è un guardiano, la lista non viene aggiornata.
+
+Posso risolvere considerando come fallito il metodo non solo se reverta ma anche se non cambia niente. Ma anche lì, sicuramente posso fare anche altro.
+
+Molto semplice tra l'altro:
+
+```Solidity
+modifier onlyGuardian {
+	if(isGuardian[keccak256(abi.encodePacked(msg.sender))]){
+		_;
+	}
+}
+```
+
+ll problema è che SolCMC è lentissimo con questo contratto.
+
+Provo a implementare l'intero contratto da capo.
+
+> This wallet can be used by the owner to make transactions by calling the
+`executeExternalTx()` function, by providing the desired recipient
+contract/externally owned account (EOA), an ether value, and arbitrary data.
+
+Tecnicamente tutto quello che viene menzionato è questo:
+
+```Solidity
+contract SocialRecoveryWallet {
+
+    address owner;
+
+    function executeExternalTx(address recipient, bytes memory data) public payable {
+        (bool success,) = recipient.call{value: msg.value}(data);
+        require(success);
+    }
+}
+```
+
+Poi c'è questo:
+
+> In case of lost private key, a recovery process can be initiated by a guardian.
+
+Tecnicamente non so cosa sia una *private key*, ma immagino sia una cosa di Ethereum e non una cosa del contratto. Sembra di sì. Quindi significa "se hai perso l'account".
+
+La mia implementazione è molto diversa da quella originale. Soprattutto perché essendo vecchissima (è di Franco Sainas) contiene rimasugli delle vecchie versioni del progetto. In particolare il contratto contiene molte variabili che chiaramente esistono solo per rendere possibili i test.
+
+Poi sorge un altro problema: se reimplementi il contratto così come dicono le specifiche, i test si aspettano nomi specifici per le variabili, ma le specifiche non li specificano. Quindi i test esistenti non sono compatibili con la mia implementazione.
+
+Alla fine, la mia implementazione tecnicamente funziona. In teoria.
+
+La domanda adesso è: come implementerei i test perché siano compatibili con la mia versione?
+* **no-recov**: Semplice ok.
+* **owner-cannot-change**: Salvati il proprietario una volta, asserisci che non cambi (ignorando la descrizione corrente brutta).
+* **recov-fails**: Semplice con una postghost con SolCMC, invece non so con Certora.
+* **recov-implies-guardian**: Stesso metodo.
+* **recov-succeeds**: Aggiungi una conta di guardiani con una postghost (con Certora non so).
+
+E che proprietà aggiungerei?
+* **owner-not-guardian**: The owner is not a guardian.
+* **removal-succeeds**
+* **can-cancel-removal**: If a call to `cancelGuardianRemoval(a)` is followed by `executeGuardianRemoval(a, b)` with no in-between calls, `a` should still be a guardian immediately afterwards.
+* **recov-implies-current-guardian**
+* **removal-implies-owner**
+* **removal-can-happen**: Quello che facevo con **owner-cannot-change**
+
+Come modificherei quelle presenti?
+* **no-recov** diventa **can-recov** con una negate.
+* **owner-cannot-change** diventa **owner-can-change**
+* **recov-not-implies-guardian** magari
+
+Praticamente non mi piace che ce ne siano false di default, rende meno leggibili i risultati e la ground truth quando devi tenere a mente quali proprietà sono buone e quali cattive. La negate esiste, usiamola.
+
+Quindi la lista finale sarebbe:
+* **recov-can-happen**
+* **recov-threshold**
+* **recov-requires-guardian**
+* **recov-succeeds**
+* **recov-can-cancel**
+* **removal-can-happen**
+* **removal-requires-owner**
+* **removal-can-cancel**
+* **can-change-owner**
+* **can-change-guardian**
+
+Mi sa che lo sto praticamente rifacendo da capo. Che va benissimo visto che fa schifo, era abbandonato per un buon motivo e Bartoletti voleva eliminarlo.
+
+Non mi dispiace.
+
+A questo punto rifarei la lista di versioni, visto che stiamo praticamente ripartendo da 1.
+
+Migliorerei comunque la v1 per comodità di modifica. In particolare:
+* Mettere in ordine.
+* Trasformare require in modificatori.
+* Stati?
+
+E poi vorrei rifare anche la descrizione perché è brutta, ma la mia implementazione a sua volta si basa sulla descrizione, quindi non ha molto senso cambiarla.
